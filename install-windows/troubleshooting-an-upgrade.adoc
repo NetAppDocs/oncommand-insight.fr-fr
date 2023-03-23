@@ -1,0 +1,44 @@
+---
+permalink: install-windows/troubleshooting-an-upgrade.html 
+sidebar: sidebar 
+keywords:  
+summary: Si vous rencontrez des problèmes après une mise à niveau de OnCommand Insight, il peut vous être utile de consulter les informations de dépannage relatives à certains problèmes possibles. 
+---
+= Dépannage d'une mise à niveau
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous rencontrez des problèmes après une mise à niveau de OnCommand Insight, il peut vous être utile de consulter les informations de dépannage relatives à certains problèmes possibles.
+
+
+
+== Impossible de démarrer Cognos à partir du menu Démarrer de Windows
+
+L'existence d'un espace avant `\SANscreen\cognos` dans le nom du chemin est un problème. Pour plus d'informations, consultez les documents suivants dans la communauté NetApp Customer Success : https://forums.netapp.com/thread/62721[].
+
+
+
+== Message d'erreur ""pas une application win32 valide""
+
+Il s'agit d'un problème avec Microsoft Windows. Pour résoudre ce problème, vous devez placer des guillemets autour du chemin d'accès de l'image dans le registre. Pour plus d'informations, reportez-vous à la documentation suivante : https://support.microsoft.com/en-us/kb/812486/en-us[].
+
+
+
+== Les annotations ne sont pas présentes
+
+Lorsqu'un travail ETL d'entrepôt de données demande des annotations à partir d'une instance Insight, il reçoit parfois une réponse vide (résultat 0) par erreur. Cette erreur entraîne des annotations pour certains objets se déplaçant entre l'état « présent » et « absent » dans l'entrepôt de données. Pour plus d'informations, reportez-vous aux sections suivantes : https://forums.netapp.com/docs/DOC-44167[]
+
+
+
+== Différences de valeurs affichées dans les rapports
+
+Avant 7.0, les rapports étaient basés sur des nombres entiers. Elles sont désormais basées sur des décimales. Par conséquent, après la mise à niveau, vous pouvez remarquer une augmentation ou une diminution de l'affichage des valeurs.
+
+
+
+== Les données ne s'affichent pas dans les rapports
+
+Dans la version 7.0.1, plusieurs noms de modèles ont été modifiés (par exemple, Symmetrix VMAX a été changé). Par conséquent, si un rapport contient un filtre pour « symmetrix », vous ne verrez aucune donnée lorsque vous exécutez le rapport. Pour modifier le rapport, vous devez ouvrir le rapport avec l'Explorateur de requêtes dans Report Studio, rechercher le nom du modèle, le remplacer par le nouveau nom du modèle et enregistrer le rapport.

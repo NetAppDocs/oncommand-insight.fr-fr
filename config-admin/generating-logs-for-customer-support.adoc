@@ -1,0 +1,33 @@
+---
+permalink: config-admin/generating-logs-for-customer-support.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Si le support client le demande, générez un journal serveur, d"acquisition ou distant à des fins de dépannage.' 
+---
+= Génération de journaux pour le support client
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si le support client le demande, générez un journal serveur, d'acquisition ou distant à des fins de dépannage.
+
+
+
+== Description de la tâche
+
+Si le support client NetApp le demande, utilisez cette option pour générer les journaux.
+
+
+
+== Étapes
+
+. Dans la barre d'outils Insight, cliquez sur *Admin* et sélectionnez *Dépannage*.
+. En bas de la page dans la zone autres tâches, cliquez sur *Dépannage avancé*.
+. Sur la page suivante du menu Avancé, cliquez sur le lien *Dépannage*.
+. Cliquez sur l'onglet *Logs* et sélectionnez le fichier journal à télécharger.
++
+Une boîte de dialogue s'ouvre pour vous permettre d'ouvrir le journal ou de l'enregistrer localement.
+
+

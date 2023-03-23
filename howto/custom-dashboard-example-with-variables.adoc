@@ -1,0 +1,137 @@
+---
+permalink: howto/custom-dashboard-example-with-variables.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Créez un tableau de bord personnalisé pour Storage Analysis contenant des variables pour le stockage, le pool de stockage, le nœud, le niveau, l"utilisation et la latence.' 
+---
+= Exemple de tableau de bord d'utilisation des nœuds de stockage avec des variables
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Créez un tableau de bord personnalisé pour Storage Analysis contenant des variables pour le stockage, le pool de stockage, le nœud, le niveau, l'utilisation et la latence.
+
+
+
+== Avant de commencer
+
+Une connaissance approfondie des tableaux de bord dans Insight est recommandée, mais pas obligatoire.
+
+
+
+== Description de la tâche
+
+La procédure suivante crée un tableau de bord Storage Analysis Overview personnalisé qui utilise des variables pour le stockage, le pool de stockage, le nœud, le niveau, l'utilisation et la latence. Les variables de l'exemple ci-dessous seront utilisées pour filtrer les actifs ou les mesures affichés dans un ou plusieurs widgets disponibles sur le tableau de bord. Les widgets qui utilisent ces variables comme filtres seront mis à jour avec du contenu filtré à la demande en fonction des valeurs saisies dans les champs de variable du tableau de bord, ce qui vous permet de filtrer rapidement plusieurs graphiques et graphiques pour accéder à une zone d'intérêt spécifique.
+
+En suivant les étapes de cet exemple, vous allez créer un tableau de bord comme suit. Vous pouvez modifier ces widgets ou ajouter un nombre quelconque de widgets supplémentaires pour mettre en surbrillance les données de votre choix.
+
+image::../media/node-dashboard-example-2.gif[exemple de tableau de bord de nœud 2]
+
+
+
+== Étapes
+
+. Créez un nouveau tableau de bord et nommez-le « analyse : présentation du stockage » ou un élément tout aussi descriptif.
+. Cliquez sur le menu déroulant *variable* et sélectionnez *texte* type de variable. Par défaut, la variable est nommée _$var1_. Cliquez sur _$var1_ pour modifier le nom et le remplacer par _$Storage_, puis cochez la case pour enregistrer la variable. Répétez l'opération pour créer des variables de texte pour _$node_, _$pool_ et _$volume_.
+. Répétez le processus ci-dessus pour créer des variables de type *Number* nommées _$utilisation_ et _$latence_.
+. Cliquez sur le menu déroulant *variable* et recherchez l'annotation _Tier_. Sélectionnez-la pour créer une variable nommée _$Tier_.
++
+Vous pouvez ajouter des variables à tout moment, mais il est plus facile de les créer à l'avance et donc de les rendre disponibles pour tous les widgets au fur et à mesure que vous les créez.
+
+. Ajoutez un widget en cliquant sur le menu déroulant *widget* et en sélectionnant soit un **graphique ** soit un widget *graphique*. Nommez le widget « utilisation des nœuds ». Cliquez sur le type de ressource *Storage* et remplacez-le par *Storage Node*. Sélectionnez *utilisation - Total* pour les données du graphique.
+. Cliquez sur le bouton *Filtrer par +* pour ajouter un filtre. Recherchez et sélectionnez *Storage*, puis cliquez sur *Any* et sélectionnez la variable _$Storage_.
+. Cliquez sur le bouton**+**pour ajouter un autre filtre pour *Name*. Définissez la variable sur _$node_.
++
+Différentes variables peuvent être affectées au filtre de nom d'annotation. Utilisez la paire nom/variable au niveau le plus bas en fonction de l'objet dans le widget. Par exemple :
+
++
+** Vous pouvez affecter la variable _$node_ au filtre *Name* pour un widget centré sur le nœud.
+** Vous pouvez attribuer la variable _$pool_ au filtre *Name* pour un widget axé sur la piscine.
+
+
+. Cliquez sur le bouton**+**pour ajouter un autre filtre pour *Utilization - Total (%)*. Définissez la variable sur _>= $Utilization_.
+. Cliquez sur le champ *X* après la** Roll UP** pour réduire le champ.
+. Sélectionnez *Afficher les 5 premiers* et cliquez sur *Enregistrer* pour enregistrer le widget et revenir à votre tableau de bord.
++
+Votre widget devrait ressembler à ceci :
+
++
+image::../media/widget-node-util-1.gif[util. nœud widget 1]
+
+. Ajoutez un autre widget de graphique de ligne ou de zone à votre tableau de bord. Sélectionnez *noeud de stockage* comme type d'actif et *latence - Total* comme mesure à tracer.
+. Cliquez sur le bouton *Filtrer par +* pour ajouter des filtres pour *stockage: $Storage* et *Nom: $node*.
+. Ajoutez un filtre pour *latence - Total* et sélectionnez la variable *$latence*.
+. Nommez le widget « Node Latency » et enregistrez-le.
+. Vous pouvez ajouter des tables de support pour afficher plus de détails sur les graphiques que vous avez créés, par exemple, utilisation maximale ou moyenne des nœuds. Ajoutez un widget *Table* au tableau de bord et sélectionnez *Storage Node* comme type de ressource, puis créez des filtres pour *Storage: $Storage*, *Name: $Node*, et *Utilization - Total: $Utilization*.
+. Ajoutez des colonnes à la table pour *Utilization - Max*, *Utilization - Total* ou toute autre colonne souhaitée.
+. Nommez le widget « Node Peak and Avg Utilization » et enregistrez-le.
++
+image::../media/nodeutiltablesettings.gif[tables de noeuds]
+
+. Répétez les étapes pour créer une table pour la latence de nœud, avec *latence - Max*, *latence - Total* ou d'autres colonnes, selon vos besoins.
+. Pour compléter votre tableau de bord, vous pouvez ajouter des widgets de tableau et de graphique supplémentaires pour certains ou tous les éléments suivants :
+
+
+|===
+
+
+| Graphique | Tableau 
+
+
+ a| 
+Utilisation du pool de stockage
+ a| 
+Pic et utilisation moyenne du pool de stockage
+
+
+
+ a| 
+Débit du pool de stockage
+ a| 
+Débit moyen et maximal du pool de stockage
+
+
+
+ a| 
+Latence du volume
+ a| 
+Pic de volume et latence moyenne
+
+
+
+ a| 
+IOPS du volume
+ a| 
+IOPS maximales et moyennes du volume
+
+|===
+. Vous pouvez déplacer et redimensionner les widgets à l'emplacement de votre choix sur votre tableau de bord. Lorsque vous avez terminé, assurez-vous de *Enregistrer* le tableau de bord.
++
+Voici un aperçu de votre tableau de bord final :
+
++
+image::../media/node-dashboard-example-2.gif[exemple de tableau de bord de nœud 2]
+
+. Ces variables peuvent être utilisées pour donner la priorité à des ressources spécifiques de votre tableau de bord. Lorsque vous entrez des valeurs dans les champs de variables, vos widgets sont mis à jour automatiquement pour refléter ces variables. Par exemple, en entrant « 15 » dans le champ de variable $usage, les widgets qui utilisent cette variable sont mis à jour pour afficher uniquement les actifs avec une utilisation totale >= 15 %.
++
+Widget d'utilisation des nœuds affichant les 5 principaux nœuds :
+
++
+image::../media/nodeutil-unfiltered.gif[noduutil non filtré]
+
++
+Widget d'utilisation des nœuds affichant les nœuds avec un taux d'utilisation d'au moins 15 % :
+
++
+image::../media/nodeutil-filtered.gif[noduutil filtré]
+
+. Gardez à l'esprit les points suivants lorsque vous créez vos widgets :
++
+** La variable $Tier n'aura d'impact que sur les ressources annotées avec l'annotation *Tier*.
+** Tous les filtres n'auront pas d'impact sur tous les widgets, selon que le widget est conçu pour accepter la ou les variable(s) spécifiée(s).
+** Les variables numériques sont appliquées comme « supérieur ou égal à » la valeur spécifiée. Notez que n'importe quelle variable peut être utilisée comme filtre sur n'importe quel widget à n'importe quel niveau d'une hiérarchie de stockage, tant que la variable est valide pour l'actif sur lequel le widget est exécuté. Lorsque vous passez d'un niveau nœud à un pool de stockage en un widget Volume, d'autres variables peuvent être affectées en tant que filtres. Par exemple, au niveau du widget nœud de stockage, les variables _Storage_ et _Name_ peuvent être affectées comme filtres. Au niveau du pool de stockage, _Storage_, _Nodes_, _Storage pools_ et _Name_ sont tous disponibles. Attribuez vos variables selon les besoins et utilisez la variable $name au niveau le plus bas de la pile. Cela permettra à votre variable $NAME de filtrer le nom réel de l'actif sur lequel le widget est exécuté.
+
+
+

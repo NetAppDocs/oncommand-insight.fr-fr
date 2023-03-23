@@ -1,0 +1,16 @@
+---
+permalink: dwh/what-to-do-with-failing-historical-build-points.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez créer à partir de l"historique, en omettant les builds échoués en activant l"option Ignorer les échecs de construction de l"historique.' 
+---
+= Que faire si les points de construction historiques échouent
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez construire à partir de l'historique, en omettant les builds échoués en activant l'option *Ignorer les échecs de construction de l'historique*.
+
+Si vous le faites, la génération à partir de l'historique continue. Si une construction échoue et que cette option est activée, Data Warehouse continue à se construire et ignore les builds défaillants. Dans ce cas, il n'y a pas de point de données dans les données historiques pour les builds ignorés. Si vous n'activez pas cette option et que la création échoue, tous les travaux suivants sont interrompus.

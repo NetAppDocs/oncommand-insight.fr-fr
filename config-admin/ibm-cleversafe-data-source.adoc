@@ -1,0 +1,79 @@
+---
+permalink: config-admin/ibm-cleversafe-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Cette source de données collecte les données d"inventaire et de performances d"IBM Cleversafe.' 
+---
+= Source de données IBM Cleversafe
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cette source de données collecte les données d'inventaire et de performances d'IBM Cleversafe.
+
+
+
+== De formation
+
+La configuration de cette source de données est requise pour :
+
+* Adresse IP ou nom d'hôte du gestionnaire
+* Un nom d'utilisateur et un mot de passe identiques
+* Orifice 9440
+
+
+
+
+== Configuration
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Gestionnaire Cleversafe Nom d'hôte ou adresse IP
+ a| 
+Adresse IP de l'hôte du dispositif CleverSafe
+
+
+
+ a| 
+Nom d'utilisateur
+ a| 
+Nom utilisé pour se connecter au Cleversafe
+
+
+
+ a| 
+Mot de passe
+ a| 
+Mot de passe utilisé pour se connecter au Cleversafe
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+La valeur par défaut est 60 minutes
+
+
+
+ a| 
+Délai de connexion HTTP)
+ a| 
+La valeur par défaut est 60 secondes
+
+|===

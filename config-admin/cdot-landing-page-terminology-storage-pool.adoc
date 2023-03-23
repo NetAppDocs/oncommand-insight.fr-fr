@@ -1,0 +1,33 @@
+---
+permalink: config-admin/cdot-landing-page-terminology-storage-pool.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Termes s"appliquant aux objets ou aux références figurant sur les pages d"accueil des ressources du pool de stockage NetApp clustered Data ONTAP.' 
+---
+= Pool de stockage clustered Data ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Termes s'appliquant aux objets ou aux références figurant sur les pages d'accueil des ressources du pool de stockage NetApp clustered Data ONTAP.
+
+
+
+== Terminologie relative au pool de stockage clustered Data ONTAP
+
+Les termes suivants s'appliquent aux objets ou aux références disponibles sur les pages d'accueil des ressources de pool de stockage NetApp clustered Data ONTAP. Un grand nombre de ces termes s'appliquent également à d'autres collecteurs de données.
+
+* Stockage : sur quelle baie de stockage ce pool réside. Obligatoire.
+* Type -- valeur descriptive d'une liste de possibilités énumérées. Il s'agit le plus souvent de « agrégat » ou de « groupe RAID ».
+* Nœud : si l'architecture de cette baie de stockage est telle que les pools appartiennent à un nœud de stockage spécifique, son nom sera vu ici comme un lien hypertexte vers sa propre page d'accueil.
+* Utilise Flash Pool -- valeur Oui/non -- certains disques SSD sont-ils utilisés pour l'accélération de la mise en cache dans ce pool basé sur SATA/SAS ?
+* Redondance -- niveau RAID ou schéma de protection. RAID_DP est la double parité, RAID_TP est la triple parité.
+* Capacité -- les valeurs ici sont la capacité logique utilisée, la capacité utilisable et la capacité totale logique, ainsi que le pourcentage utilisé dans ces valeurs.
+* Capacité sur-allouée : si vous avez alloué une somme totale de capacités de volume ou de volume interne supérieure à la capacité logique du pool de stockage à l'aide de technologies d'efficacité, la valeur de pourcentage ici sera supérieure à 0 %.
+* Snapshot -- capacités de snapshot utilisées et totales, si votre architecture de pool de stockage consacre une partie de sa capacité à segmente des zones exclusivement pour les snapshots. Les configurations ONTAP dans MetroCluster sont susceptibles de présenter ce problème, alors que d'autres configurations ONTAP le sont moins.
+* Utilisation -- valeur en pourcentage indiquant le pourcentage le plus élevé d'occupation de disque de n'importe quel disque contribuant à ce pool de stockage. L'utilisation des disques n'a pas nécessairement une forte corrélation avec les performances de la baie : l'utilisation peut être élevée en raison des reconstructions des disques, des activités de déduplication, etc. En l'absence de charges de travail basées sur l'hôte. Par ailleurs, les implémentations de réplication de nombreuses baies peuvent favoriser l'utilisation des disques sans s'afficher en tant que charge de travail de volume ou de volume interne.
+* IOPS : somme des IOPS de tous les disques qui fournissent la capacité à ce pool de stockage.
+* Débit : somme du débit de tous les disques contribuant à la capacité de ce pool de stockage.
+

@@ -1,0 +1,16 @@
+---
+permalink: config-admin/pruning-of-inventory-history.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Depuis la version 7.3.2, Insight conserve l"historique des modifications de l"inventaire \(fondation\) pendant 90 jours. Les versions précédentes d"Insight conservaient tous les historiques des modifications d"inventaire à partir du moment de l"installation. Après une mise à niveau d"une ancienne version d"Insight, l"historique des stocks est réduit à, puis conservé à 90 jours.' 
+---
+= Élagage de l'historique des stocks
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+À partir de la version 7.3.2, Insight conserve l'historique des modifications d'inventaire (base) pendant 90 jours. Les versions précédentes d'Insight conservaient tous les historiques des modifications d'inventaire à partir du moment de l'installation. Après une mise à niveau d'une ancienne version d'Insight, l'historique des stocks est réduit à, puis conservé à 90 jours.
+
+Après la mise à niveau vers la version actuelle de OnCommand Insight, l'histoire est élagué aux 90 derniers jours. Insight coupe l'histoire en morceaux de 30 jours se produisant une fois par jour, en commençant par les plus anciens, jusqu'à ce que 90 jours de l'histoire reste. Ensuite, l'histoire est élagué quotidiennement, pour ne garder que 90 jours de l'historique des changements d'inventaire.

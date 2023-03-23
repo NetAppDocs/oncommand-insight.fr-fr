@@ -1,0 +1,154 @@
+---
+permalink: config-admin/infinidat-infinibox-http-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La source de données Infinidat InfiniBox \(HTTP\) est utilisée pour recueillir des informations à partir du stockage Infinidat InfiniBox. Vous devez avoir accès au nœud de gestion de l"InfiniBox.' 
+---
+= Source de données Infinidat InfiniBox
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La source de données Infinidat InfiniBox (HTTP) est utilisée pour recueillir des informations à partir du stockage Infinidat InfiniBox. Vous devez avoir accès au nœud de gestion de l'InfiniBox.
+
+
+
+== Terminologie
+
+OnCommand Insight acquiert les informations d'inventaire suivantes à partir de la source de données de l'InfiniBox. Pour chaque type de ressource acquis par Insight, la terminologie la plus courante utilisée pour cette ressource est indiquée. Lors de l'affichage ou du dépannage de cette source de données, gardez à l'esprit la terminologie suivante :
+
+|===
+
+
+| Terme du fournisseur/modèle | Terme Insight 
+
+
+ a| 
+Lecteur
+ a| 
+Disque
+
+
+
+ a| 
+InfiniBox
+ a| 
+Stockage
+
+
+
+ a| 
+Nœud
+ a| 
+Nœud de stockage
+
+
+
+ a| 
+Piscine
+ a| 
+Pool de stockage
+
+
+
+ a| 
+Volumétrie
+ a| 
+Volumétrie
+
+
+
+ a| 
+Port FC
+ a| 
+Port
+
+
+
+ a| 
+Système de fichiers
+ a| 
+Volume interne
+
+
+
+ a| 
+Système de fichiers
+ a| 
+Fileshare
+
+
+
+ a| 
+Exportations des systèmes de fichiers
+ a| 
+Partagez
+
+|===
+[NOTE]
+====
+Il s'agit uniquement de mappages terminologiques courants et peuvent ne pas représenter tous les cas pour cette source de données.
+
+====
+
+
+== Configuration
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Hôte InfiniBox
+ a| 
+Adresse IP ou nom de domaine complet du nœud de gestion InfiniBox
+
+
+
+ a| 
+Nom d'utilisateur
+ a| 
+Nom d'utilisateur du nœud de gestion InfiniBox
+
+
+
+ a| 
+Mot de passe
+ a| 
+Mot de passe du noeud de gestion de l'InfiniBox
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Port TCP
+ a| 
+Port TCP utilisé pour se connecter au serveur InfiniBox (par défaut 443 )
+
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+Intervalle entre les sondages d'inventaire (60 minutes par défaut)
+
+
+
+ a| 
+Délai de connexion dépassé
+ a| 
+Délai d'expiration de la connexion (par défaut : 60 secondes)
+
+|===

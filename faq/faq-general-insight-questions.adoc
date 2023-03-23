@@ -1,0 +1,86 @@
+---
+permalink: faq/faq-general-insight-questions.html 
+sidebar: sidebar 
+keywords: redhat,Linux 
+summary: Cette FAQ répond aux questions générales les plus courantes sur OnCommand Insight. 
+---
+= Questions générales
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cette FAQ répond aux questions générales les plus courantes sur OnCommand Insight.
+
+
+
+== Quand OnCommand Insight (OCI) a-t-il été introduit ?
+
+OCI est l'un des produits de surveillance d'infrastructure les plus matures du secteur, avec plus de dix ans d'expérience en développement actif. Anciennement Onaro ou SANscreen, le nom SANscreen a été modifié en rejoignant la gamme de produits OnCommand et est désormais désigné sous le nom de OnCommand Insight, ou plus communément Insight ou OCI.
+
+
+
+== Combien de temps le déploiement d'OCI dans mon environnement prendra-t-il ?
+
+OCI n'est qu'un téléchargement de logiciel. Le logiciel est installé sur deux serveurs virtuels ou physiques dédiés. Les installations classiques peuvent être réalisées en seulement 2 heures, et les données sur les stocks, la capacité et les performances commencent à être fournies presque immédiatement. Toute autre politique supplémentaire en matière de performances, de bonnes pratiques, d'annotation utilisateur et de sensibilisation aux coûts requiert des discussions de planification supplémentaires.
+
+
+
+== OCI requiert-il des agents, des collecteurs ou des sondes ?
+
+OCI est 100 % sans agent et ne nécessite pas d'agents, de robinets ou de sondes. Toutes les découvertes de périphériques sont en lecture seule, effectuées hors bande et sur IP.
+
+
+
+== Comment OCI détecte-t-il et se connecte-t-il aux appareils ?
+
+La configuration d'OCI exploite les API et protocoles natifs déjà présents dans l'environnement de data Center, sans nécessiter d'agents ou de sondes. SSH, HTTP, SMIS et CLI en sont quelques exemples. Lorsque des gestionnaires d'éléments de périphérique existent déjà (comme Unisphere d'EMC, par exemple), OCI communique avec le ou les gestionnaires d'éléments pour capturer les données environnementales existantes. La plupart des découvertes de périphériques nécessitent uniquement une adresse IP et un nom d'utilisateur et un mot de passe en lecture seule. Ces découvertes de périphériques peuvent être « un-à-plusieurs », par exemple avec la source de données VMware d'OCI. En découvrant VMware vCenter, OCI découvre à son tour tous ses hôtes ESXi et les machines virtuelles associées, le tout avec une adresse IP et des informations d'identification uniques.
+
+
+
+== OCI nécessite-t-il des services professionnels ? Est-ce disponible, et que proposent-ils ?
+
+Pour les environnements de taille moyenne, nous recommandons des services professionnels pour le déploiement, la configuration et les intégrations, ainsi que de nombreuses possibilités de reporting personnalisé et de validation des données. Afin d'identifier les services qui vous seront les plus utiles, n'ayez pas à discuter avec l'équipe OCI et avec votre responsable de mission de compte.
+
+
+
+== Quelle est la fréquence des mises à jour d'OCI pour les nouvelles fonctionnalités et améliorations ?
+
+Les mises à jour de produits et les Service Packs sont disponibles pour plusieurs versions d'OCI. Les versions majeures ou mineures sont généralement fournies tous les quelques mois, les Service Packs incluant la prise en charge des nouveaux périphériques et les micrologiciels étant publiés plus fréquemment. Les deux sont disponibles sur le site de téléchargement support.netapp.com. Certaines mises à jour, telles que les nouveaux modèles de disques qui proviennent le plus souvent des fabricants, sont envoyées automatiquement au logiciel OCI. En outre, la collecte de dispositifs source de données OCI peut être corrigée sur site immédiatement après une correction ou une mise à jour du développement.
+
+
+
+== Comment l'équipe de gestion du logiciel OCI hiérarchise-t-elle les demandes de nouvelles sources de données ?
+
+L'équipe de gestion des produits d'OCI effectue un suivi actif de toutes les demandes d'amélioration des clients et de fonctionnalités d'interopérabilité (IFR). Chaque demande est détaillée, évaluée en fonction de sa faisabilité et classée par ordre de priorité en fonction de la demande du client et de son impact stratégique global. Une fois acceptées, les demandes sont dimensionnées en fonction du niveau d'effort et sont planifiées pour un développement futur. La nature agile du processus de développement des OCI permet régulièrement la mise à disposition de nouvelles sources de données en dehors des cycles de publication planifiés. Les représentants NetApp peuvent vous aider à répondre aux demandes des clients et à soumettre de nouvelles demandes en votre nom. Les sources de données peuvent être corrigées sur site, sans avoir à mettre à niveau OCI.
+
+
+
+== Mon entreprise fonctionne entièrement sous Linux. OCI fonctionnera-t-il sous Linux ?
+
+Oui, OCI prend en charge plusieurs versions de Linux et de Windows. Notez que Cognos (l'outil de création de rapports d'IBM utilisé par OCI conjointement avec Data Warehouse) n'est pris en charge que sous Windows. Par conséquent, si vous utilisez OCI pour créer des rapports, vous devez exécuter l'outil de création de rapports sur un serveur Windows. Le Guide d'installation d'OCI répertorie les configurations serveur requises et les systèmes d'exploitation pris en charge pour chaque composant d'OCI.
+
+
+
+== OCI convient-il aux environnements sécurisés sans accès à Internet ?
+
+Oui, OCI est utilisé par les 10 principales entreprises figurant au classement Fortune 500 et par de grandes agences bancaires, de santé, de recherche et gouvernementales à l'heure actuelle dans le monde. OCI prend en charge les cartes d'accès commun militaires (CAC) des États-Unis et propose des solutions pour des environnements dispersés géographiquement ou fortement pare-feu.
+
+
+
+== J'ai toujours entendu dire que OnCommand Unified Manager (OCUM) est la solution de gestion pour cdot. Pouvez-vous m'aider à comprendre pourquoi j'utiliserais également OCI ?
+
+OnCommand Unified Manager fonctionne au niveau de la couche de « gestion des périphériques » de la baie de stockage, offrant une analyse approfondie basée sur les incidents et les événements des baies clustered Data ONTAP (cdot) et de leurs interconnexions de cluster. OCI fournit une vue globale des environnements sur site et dispersés géographiquement, composés de 7-mode, de clustered Data ONTAP et d'autres baies tierces. Sa visibilité de bout en bout, des machines virtuelles aux piles de disques, permet d'établir des historiques et de prévoir la capacité, les performances et la modélisation des coûts, ce qui favorise une approche proactive de la qualité de service dans la gestion des data centers.
+
+
+
+== Qu'est-ce que le CÉC secondaire OnCommand Insight est mentionné sur la boutique d'automatisation ?
+
+L'exigence ETL secondaire référencée dans certains téléchargements de rapports OnCommand Insight Automation Storefront fait référence à une implémentation de services professionnels développée utilisée pour invoquer des ETL (extraction, transformation et chargement) supplémentaires de données capturées, pour les placer dans l'entrepôt de données OnCommand Insight.
+
+L'objectif principal du processus ETL secondaire est de prérécupérer les données de « lot », ce qui permet aux rapports plus complexes de générer plus rapidement ou d'être planifiés pour une exécution quotidienne.
+
+Ce CÉC secondaire est en plus du CÉC recommandé « une fois par jour » décrit dans le guide d'administration de l'entrepôt de données OnCommand Insight.
+
+Les services professionnels NetApp sont qualifiés pour configurer les scripts ETL secondaires afin d'éviter toute incidence sur les planifications de rapports OnCommand Insight existants, les sauvegardes automatisées, l'évolutivité ou d'autres activités relatives aux performances du système. Pour plus d'informations sur les besoins de réalisation de scripts ETL ou de validation de données, contactez votre ingénieur commercial NetApp et discutez de la manière dont les services professionnels de NetApp peuvent vous aider.

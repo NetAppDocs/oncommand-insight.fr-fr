@@ -1,0 +1,18 @@
+---
+permalink: reporting/variations-due-to-installed-licenses.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les données des rapports OnCommand Insight sont basées sur les licences OnCommand Insight que vous avez achetées. Par exemple, sans la licence Plan, vous obtenez les données de point dans le temps \(aujourd"hui\) dans le datamart d"inventaire pour la capacité et les performances, mais vous n"avez pas la possibilité de faire le suivi \(rapport sur une période \\) des données de capacité ou de performances d"un périphérique.' 
+---
+= Variations dues aux licences installées
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les données des rapports OnCommand Insight sont basées sur les licences OnCommand Insight que vous avez achetées. Par exemple, sans la licence Plan, vous obtenez les données de capacité et de performances du point de vue de l'inventaire (aujourd'hui), mais vous n'avez pas la possibilité de faire une tendance (rapport sur une période) des données de capacité ou de performances d'un périphérique.
+
+L'absence d'une licence Plan supprime la possibilité de créer de nouveaux rapports ou de modifier des rapports existants. Il est possible que vous voyiez des différences entre les rapports disponibles dans votre système OnCommand Insight et les illustrations de la documentation. Ces variations sont dues à des différences entre les licences installées sur votre système et les licences du système utilisées pour créer les illustrations.
+
+Pour plus d'informations sur les licences, reportez-vous au guide d'installation de OnCommand Insight.

@@ -1,0 +1,201 @@
+---
+permalink: config-admin/hp-eva-storage-sssu-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Pour la configuration, la source de données EVA Storage \(SSSU\) requiert l"adresse IP du serveur Command View \(CV\) ainsi qu"un nom d"utilisateur et un mot de passe en lecture seule pour le logiciel CV. L"utilisateur doit être défini dans le logiciel CV.' 
+---
+= Source de données HP EVA Storage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour la configuration, la source de données EVA Storage (SSSU) requiert l'adresse IP du serveur Command View (CV), ainsi qu'un nom d'utilisateur et un mot de passe _read-only_ pour le logiciel CV. L'utilisateur doit être défini dans le logiciel CV.
+
+
+
+== Terminologie
+
+OnCommand Insight acquiert les informations d'inventaire suivantes à partir de la source de données HP EVA. Pour chaque type de ressource acquis par Insight, la terminologie la plus courante utilisée pour cette ressource est indiquée. Lors de l'affichage ou du dépannage de cette source de données, gardez à l'esprit la terminologie suivante :
+
+|===
+
+
+| Terme du fournisseur/modèle | Terme Insight 
+
+
+ a| 
+Disque
+ a| 
+Disque
+
+
+
+ a| 
+Groupe de disques
+ a| 
+Groupe de disques (non modélisé)
+
+
+
+ a| 
+Cellule de stockage
+ a| 
+Stockage
+
+
+
+ a| 
+Disque virtuel
+ a| 
+Pool de stockage
+
+
+
+ a| 
+Disque virtuel
+ a| 
+Volumétrie
+
+|===
+[NOTE]
+====
+Il s'agit uniquement de mappages terminologiques courants et peuvent ne pas représenter tous les cas pour cette source de données.
+
+====
+
+
+== Exigences d'inventaire
+
+* Adresse IP du serveur CV
+* Nom d'utilisateur et mot de passe en lecture seule pour le logiciel CV. L'utilisateur doit être défini dans le logiciel CV.
+* Logiciel tiers installé sur le serveur OnCommand Insight/RAU : `sssu.exe`. Le `sssu.exe` La version doit correspondre à la version CV.
+* Validation de l'accès : exécution `sssu.exe` commandes utilisant le nom d'utilisateur et le mot de passe.
+
+
+
+
+== Exigences en matière de performances
+
+La suite logicielle HP StorageWorks Command View EVA doit être installée sur le serveur OnCommand Insight. Vous pouvez également installer une unité d'acquisition à distance (RAU) sur le serveur EVA :
+
+. Installez la suite logicielle HP StorageWorks Command View EVA sur le serveur OnCommand Insight ou installez une unité d'acquisition distante sur le serveur Command View EVA.
+. Localisez le `evaperf.exe` commande. Par exemple : `c:\Program Files\Hewlett-Packard\EVA Performance Monitor\`
+. À l'aide de l'adresse IP du serveur Command View, effectuez les opérations suivantes :
++
+.. Exécutez cette commande où 860 est le port par défaut `Evaperf.exe server <Command View Server IP\> 860 <username\>`
+.. Entrez le mot de passe du serveur Command View à l'invite de mot de passe.
++
+Cela devrait renvoyer une invite de ligne de commande et rien d'autre.
+
+
+
+. Vérifiez la configuration en exécutant `evaperf.exe ls`.
++
+Vous devriez voir une liste des matrices ou des contrôleurs gérés par le serveur Command View. Chaque ligne affiche un contrôleur sur une baie EVA.
+
+
+
+
+
+== Configuration
+
+|===
+
+
+| *Champ* | *Description* 
+
+
+ a| 
+Serveur COMMANDVIEW
+ a| 
+Adresse IP ou nom de domaine complet d'EVA Storage Manager
+
+
+
+ a| 
+Nom d'utilisateur
+ a| 
+Nom d'utilisateur du Gestionnaire de vues de commandes. Le nom doit être défini dans la vue des commandes.
+
+
+
+ a| 
+Mot de passe
+ a| 
+Mot de passe utilisé pour le gestionnaire Command View.
+
+
+
+ a| 
+Nom d'utilisateur de performance
+ a| 
+Pour les performances, le nom d'utilisateur du Gestionnaire Command View. Le nom doit être défini dans la vue des commandes.
+
+
+
+ a| 
+Mot de passe de performance
+ a| 
+Pour les performances, le mot de passe utilisé pour le Gestionnaire de vues de commandes.
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| *Champ* | *Description* 
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+Intervalle entre les sondages d'inventaire (40 minutes par défaut)
+
+
+
+ a| 
+Accueil CLI
+ a| 
+Chemin d'accès complet au répertoire racine de la CLI où `sssu.exe` est situé
+
+
+
+ a| 
+Périphériques d'exclusion d'inventaire
+ a| 
+Liste des noms de périphériques à inclure, séparés par des virgules
+
+
+
+ a| 
+Intervalle d'interrogation des performances (s)
+ a| 
+Intervalle entre les sondages de performances (300 secondes par défaut)
+
+
+
+ a| 
+Accueil de la CLI des performances
+ a| 
+Pour Array Performance, chemin d'accès complet au répertoire principal de l'interface de ligne de commande où se trouve le fichier sssu.exe. Pour valider l'accès, exécutez `sssu.exe`
+
+
+
+ a| 
+Délai de commande (s)
+ a| 
+`evaperf` délai d'attente de commande (par défaut 600 secondes)
+
+
+
+ a| 
+Performances exclure les périphériques
+ a| 
+Liste de noms de périphériques séparés par des virgules à exclure de la collecte des données de performances
+
+|===

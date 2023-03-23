@@ -1,0 +1,48 @@
+---
+permalink: config-admin/assigning-business-entities-to-assets.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez affecter une entité métier à un actif \( hôte, port, stockage, commutateur, machine virtuelle, qtree, share, volume, or internal volume\) sans avoir associé l"entité business à une application ; cependant, les entités business sont affectées automatiquement à une ressource si cette ressource est associée à une application associée à une entité business.' 
+---
+= Affectation d'entités commerciales à des actifs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez attribuer une entité métier à une ressource ( hôte, port, stockage, commutateur, machine virtuelle, qtree, share, volume, or internal volume) sans avoir associé l'entité business à une application. cependant, les entités business sont attribuées automatiquement à une ressource si cette ressource est associée à une application associée à une entité business.
+
+
+
+== Avant de commencer
+
+Vous devez avoir déjà créé une entité métier.
+
+
+
+== Description de la tâche
+
+Bien que vous puissiez affecter des entités métier directement à des actifs, il est recommandé d'affecter des applications à des actifs, puis d'affecter des entités métier à des actifs.
+
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur Web de OnCommand Insight.
+. Recherchez la ressource à laquelle vous souhaitez appliquer l'entité commerciale en effectuant l'une des actions suivantes :
++
+** Cliquez sur la ressource dans le tableau de bord des ressources.
+** Cliquez sur image:../media/icon-sanscreen-magnifying-glass-gif.gif[""] Dans la barre d'outils pour afficher la zone *Rechercher des actifs*, tapez le nom de la ressource, puis sélectionnez la ressource dans la liste.
+
+
+. Dans la section *données utilisateur* de la page de la ressource, placez votre curseur sur *aucune* en regard de *entités commerciales*, puis cliquez sur image:../media/pencil-icon-landing-page-be.gif[""].
++
+La liste des entités commerciales disponibles s'affiche.
+
+. Saisissez la case *Rechercher* pour filtrer la liste d'une entité spécifique ou faites défiler la liste vers le bas ; sélectionnez une entité métier dans la liste.
++
+Si l'entité métier que vous choisissez est associée à une application, le nom de l'application s'affiche. Dans ce cas, le mot « sérived » apparaît à côté du nom de l'entité commerciale. Si vous souhaitez maintenir l'entité uniquement pour l'actif et non pour l'application associée, vous pouvez remplacer manuellement l'affectation de l'application.
+
+. Pour remplacer une application dérivée d'une entité commerciale, placez votre curseur sur le nom de l'application et cliquez sur image:../media/trash-can-query.gif[""], sélectionnez une autre entité métier et sélectionnez une autre application dans la liste.
+

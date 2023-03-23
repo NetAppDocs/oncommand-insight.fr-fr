@@ -1,0 +1,18 @@
+---
+permalink: howto/examining-the-server-volume.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La page d"accueil du volume affiche le même pic d"IOPS que celui connu dans ses ressources corrélées.' 
+---
+= Examen du volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La page d'accueil du volume affiche le même pic d'IOPS que celui connu dans ses ressources corrélées.
+
+image::../media/server-vol-lp.gif[vol. serveur lp]
+
+Dans la section des ressources, la machine virtuelle de l'application réservation de voyage est identifiée. Cliquez sur le lien VM pour afficher la page d'accueil VM.

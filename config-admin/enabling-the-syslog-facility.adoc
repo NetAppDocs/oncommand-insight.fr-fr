@@ -1,0 +1,56 @@
+---
+permalink: config-admin/enabling-the-syslog-facility.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez identifier un emplacement pour le journal des violations OnCommand Insight et des alertes de performances, ainsi que des messages d"audit, et activer le processus de journalisation.' 
+---
+= Activation de la fonction syslog
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez identifier un emplacement pour le journal des violations OnCommand Insight et des alertes de performances, ainsi que des messages d'audit, et activer le processus de journalisation.
+
+
+
+== Avant de commencer
+
+* Vous devez disposer de l'adresse IP du serveur sur lequel stocker le journal système.
+* Vous devez connaître le niveau de l'établissement correspondant au type de programme qui enregistre le message, tel QUE LOCAL1 ou USER.
+
+
+
+
+== Description de la tâche
+
+Le syslog comprend les types d'informations suivants :
+
+* Messages de violation
+* Alertes de performance
+* Éventuellement, messages du journal d'audit
+
+
+Les unités suivantes sont utilisées dans le syslog :
+
+* Mesures d'utilisation : pourcentage
+* Mesures de trafic : Mo
+* Débit de trafic : Mo/s.
+
+
+
+
+== Étapes
+
+. Dans la barre d'outils Insight, cliquez sur *Admin* et sélectionnez *Notifications*.
+. Faites défiler jusqu'à la section *Syslog* de la page.
+. Cochez la case *Activer syslog*.
+. Si vous le souhaitez, cochez la case *Envoyer audit*. Les nouveaux messages du journal d'audit seront envoyés à syslog en plus d'être affichés sur la page Audit. Notez que les messages du journal d'audit déjà existants ne seront pas envoyés à syslog ; seuls les nouveaux messages de journal seront envoyés.
+. Dans le champ *Server*, entrez l'adresse IP du serveur de journaux.
++
+Vous pouvez spécifier un port personnalisé en l'ajoutant après deux-points à la fin de l'adresse IP du serveur (par exemple serveur:port). Si le port n'est pas spécifié, le port syslog par défaut de 514 est utilisé.
+
+. Dans le champ *Facility*, sélectionnez le niveau de l'établissement correspondant au type de programme qui enregistre le message.
+. Cliquez sur *Enregistrer*.
+

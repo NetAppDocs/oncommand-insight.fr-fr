@@ -1,0 +1,18 @@
+---
+permalink: config-admin/user-data.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La section données utilisateur d"une page de ressource s"affiche et vous permet de modifier les données définies par l"utilisateur telles que les applications, les entités commerciales et les annotations.' 
+---
+= Données utilisateur
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La section données utilisateur d'une page de ressource s'affiche et vous permet de modifier les données définies par l'utilisateur telles que les applications, les entités commerciales et les annotations.
+
+Voici un exemple de ce qui peut s'afficher dans la section données utilisateur d'une page de ressource de machine virtuelle lorsqu'une application, une entité métier et une annotation sont affectées à la ressource :
+
+image::../media/user-data-section.bmp[section des données utilisateur]

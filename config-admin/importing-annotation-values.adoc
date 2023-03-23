@@ -1,0 +1,171 @@
+---
+permalink: config-admin/importing-annotation-values.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Si vous conservez des annotations sur des objets SAN \(tels que le stockage, les hôtes et les machines virtuelles\) dans un fichier CSV, vous pouvez importer ces informations dans OnCommand Insight. Vous pouvez importer des applications, des entités commerciales ou des annotations telles que des niveaux et des constructions.' 
+---
+= Importation de valeurs d'annotation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous conservez des annotations sur des objets SAN (tels que le stockage, les hôtes et les machines virtuelles) dans un fichier CSV, vous pouvez importer ces informations dans OnCommand Insight. Vous pouvez importer des applications, des entités commerciales ou des annotations telles que des niveaux et des constructions.
+
+
+
+== Description de la tâche
+
+Les règles suivantes s'appliquent :
+
+* Si une valeur d'annotation est vide, cette annotation est supprimée de l'objet.
+* Lors de l'annotation de volumes ou de volumes internes, le nom de l'objet est une combinaison du nom du stockage et du nom du volume utilisant le séparateur tiret et flèche (\->) :
++
+[listing]
+----
+<storage_name>-><volume_name>
+----
+* Lorsque le stockage, les commutateurs ou les ports sont annotés, la colonne application est ignorée.
+* Les colonnes tenant, Line_of_Business, Business_Unit et Project constituent une entité métier.
++
+Toutes les valeurs peuvent rester vides. Si une application est déjà associée à une entité métier différente des valeurs d'entrée, elle est affectée à la nouvelle entité métier.
+
+
+
+L'utilitaire d'importation prend en charge les types d'objet et les clés suivants :
+
+|===
+
+
+| Type | Clé 
+
+
+ a| 
+Hôte
+ a| 
+`+id-><id>+` ou `<Name>` ou `<IP>`
+
+
+
+ a| 
+VM
+ a| 
+`+id-><id>+` ou `<Name>`
+
+
+
+ a| 
+Pool de stockage
+ a| 
+`+id-><id>+` ou `<Storage_name>`\->``<Storage_Pool_name>``
+
+
+
+ a| 
+Volume interne
+ a| 
+`+id-><id>+` ou `<Storage_name>`\->``<Internal_volume_name>``
+
+
+
+ a| 
+Volumétrie
+ a| 
+`+id-><id>+` ou `<Storage_name>`\->``<Volume_name>``
+
+
+
+ a| 
+Stockage
+ a| 
+`+id-><id>+` ou `<Name>` ou `<IP>`
+
+
+
+ a| 
+Commutateur
+ a| 
+`+id-><id>+` ou `<Name>` ou `<IP>`
+
+
+
+ a| 
+Port
+ a| 
+`+id-><id>+` ou `<WWN>`
+
+
+
+ a| 
+Partagez
+ a| 
+`+id-><id>+` ou `+<Storage Name>-><Internal Volume Name>-><Share Name>-><Protocol>+` [`+-><Qtree Name >+`]`<Qtree>` est facultatif s'il existe un qtree par défaut.
+
+
+
+ a| 
+Qtree
+ a| 
+`+id-><id>+` ou `+<Storage Name>-><Internal Volume Name>-><Qtree Name>+`
+
+|===
+Le fichier CSV doit utiliser le format suivant :
+
+[listing]
+----
+, , <Annotation Type> [, <Annotation Type> ...]
+[, Application] [, Tenant] [, Line_Of_Business] [,
+Business_Unit] [, Project]
+
+<Object Type Value 1>, <Object Key 1>, <Annotation Value> [,
+<Annotation Value> ...] [, <Application>] [, <Tenant>] [,
+<Line_Of_Business>] [, <Business_Unit>] [, <Project>]
+
+...
+
+<Object Type Value N>, <Object Key N>, <Annotation Value> [,
+<Annotation Value> ...] [, <Application>] [, <Tenant>] [,
+<Line_Of_Business>] [, <Business_Unit>] [, <Project>]
+----
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur Web Insight.
+. Cliquez sur *Admin* et sélectionnez *Dépannage*.
++
+La page Dépannage s'affiche.
+
+. Dans la section *autres tâches* de la page, cliquez sur le lien *Portail OnCommand Insight*.
+. Cliquez sur *API Insight Connect*.
+. Connectez-vous au portail.
+. Cliquez sur *Utilitaire d'importation d'annotations*.
+. Enregistrez le `.zip` fichier, décompressez-le et lisez le `readme.txt` pour obtenir des informations et des exemples supplémentaires.
+. Placez le fichier CSV dans le même dossier que le `.zip` fichier.
+. Dans la fenêtre de ligne de commande, entrez les informations suivantes :
++
+[listing]
+----
+java -jar rest-import-utility.jar [-uusername] [-ppassword]
+[-aserver name or IP address] [-bbatch size] [-ccase sensitive:true/false]
+[-lextra logging:true/false] csv filename
+----
++
+L'option -l, qui active la journalisation supplémentaire, et l'option -c, qui active la sensibilité à la casse, sont définies sur false par défaut. Par conséquent, vous devez les spécifier uniquement lorsque vous voulez utiliser les fonctions.
+
++
+[NOTE]
+====
+Il n'y a pas d'espace entre les options et leurs valeurs.
+
+====
++
+[NOTE]
+====
+Les mots-clés suivants sont réservés et empêchent les utilisateurs de les spécifier comme noms d'annotation : - application - priorité_application - locataire - ligne_de_métier - unité_commerciale - des erreurs de projet sont générées si vous essayez d'importer un type d'annotation à l'aide d'un des mots-clés réservés. Si vous avez créé des noms d'annotations à l'aide de ces mots clés, vous devez les modifier pour que l'utilitaire d'importation fonctionne correctement.
+
++
+
+====
+

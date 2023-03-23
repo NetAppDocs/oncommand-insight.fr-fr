@@ -1,0 +1,26 @@
+---
+permalink: config-admin/finding-ghost-data-sources.html 
+sidebar: sidebar 
+keywords:  
+summary: Si vous avez supprimé un périphérique mais que les données du périphérique restent, vous pouvez localiser les sources de données fantômes afin de pouvoir les supprimer. 
+---
+= Recherche de sources de données fantômes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous avez supprimé un périphérique mais que les données du périphérique restent, vous pouvez localiser les sources de données fantômes afin de pouvoir les supprimer.
+
+
+
+== Étapes
+
+. Dans l'interface utilisateur Web, cliquez sur *Admin* et sélectionnez *Dépannage*.
+. En bas de la page dans la zone autres tâches, cliquez sur le lien *Dépannage avancé*.
+. Dans l'onglet *Rapports*, cliquez sur le lien *sources de données fantômes*.
++
+OnCommand Insight produit une liste d'émetteurs avec les informations de leur appareil.
+
+

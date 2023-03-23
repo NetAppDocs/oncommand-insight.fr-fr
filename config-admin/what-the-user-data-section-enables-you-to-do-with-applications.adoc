@@ -1,0 +1,37 @@
+---
+permalink: config-admin/what-the-user-data-section-enables-you-to-do-with-applications.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez attribuer des applications exécutées dans votre environnement à certains actifs \(hôte, machines virtuelles, volumes, volumes internes et hyperviseurs\). La section données utilisateur vous permet de modifier l"application affectée à une ressource ou d"affecter une application ou des applications supplémentaires à une ressource.' 
+---
+= Utilisation de la section données utilisateur pour attribuer ou modifier des applications
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez attribuer des applications exécutées dans votre environnement à certains actifs (hôte, machines virtuelles, volumes, volumes internes et hyperviseurs). La section données utilisateur vous permet de modifier l'application affectée à une ressource ou d'affecter une application ou des applications supplémentaires à une ressource.
+
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur Web de OnCommand Insight.
+. Recherchez une page de ressources en procédant de l'une des façons suivantes :
++
+** Dans la barre d'outils Insight, cliquez sur image:../media/icon-sanscreen-magnifying-glass-gif.gif[""], saisissez le nom de la ressource, puis sélectionnez la ressource dans la liste.
+** Cliquez sur *tableaux de bord*, sélectionnez *tableau de bord*, localisez un nom de ressource, puis cliquez dessus. La page ASSET s'affiche.
+
+
+. Vous pouvez effectuer les opérations suivantes :
++
+** Pour afficher la page d'inventaire de l'application, cliquez sur le nom de l'application.
+** Pour modifier l'application affectée ou pour attribuer une application ou des applications supplémentaires, placez votre curseur sur le nom de l'application, si une application est affectée, ou sur *None*, si aucune application n'est attribuée, cliquez sur image:../media/pencil-icon-landing-page-be.gif[""], tapez pour rechercher une application ou sélectionnez-en une dans la liste, puis cliquez sur image:../media/check-box-ok.gif[""].
++
+Si vous choisissez une application associée à une entité métier, celle-ci est automatiquement affectée à la ressource. Dans ce cas, lorsque vous placez votre curseur sur le nom de l'entité métier, le mot _derived_ s'affiche. Si vous souhaitez maintenir l'entité uniquement pour l'actif et non pour l'application associée, vous pouvez remplacer manuellement l'affectation de l'application.
+
+** Pour supprimer une application, cliquez sur image:../media/trash-can-query.gif[""].
+
+
+

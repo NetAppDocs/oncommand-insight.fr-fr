@@ -1,0 +1,42 @@
+---
+permalink: config-admin/assets-used-in-queries-and-dashboards.html 
+sidebar: sidebar 
+keywords: queryable,Data Store,objects,custom landing page 
+summary: Les requêtes Insight et les widgets de tableau de bord peuvent être utilisés avec un large éventail de types de ressources 
+---
+= Ressources utilisées dans les requêtes et les tableaux de bord
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les requêtes Insight et les widgets de tableau de bord peuvent être utilisés avec un large éventail de types de ressources
+
+Les types de ressources suivants peuvent être utilisés dans les requêtes, les widgets de tableau de bord et les pages de ressources personnalisées. Les champs et compteurs disponibles pour les filtres, les expressions et l'affichage varient selon les types d'actifs. Toutes les ressources ne peuvent pas être utilisées dans tous les types de widget.
+
+* Client supplémentaire
+* Datastore
+* Disque
+* Structure
+* Périphérique générique
+* Hôte
+* Volume interne
+* Session iSCSI
+* Portail réseau iSCSI
+* Chemin
+* Port
+* Qtree
+* Quota
+* Partagez
+* Stockage
+* Nœud de stockage
+* Pool de stockage
+* Commutateur
+* Bande
+* VMDK
+* Ordinateur virtuel
+* Volumétrie
+* Zone
+* Membre de la zone
+

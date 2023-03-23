@@ -1,0 +1,134 @@
+---
+permalink: config-admin/hitachi-content-platform-hcp-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Ce collecteur de données prend en charge Hitachi Content Platform \(HCP\) à l"aide de l"API HCP Management.' 
+---
+= Source de données Hitachi Content Platform (HCP)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ce collecteur de données prend en charge la plate-forme de contenu Hitachi (HCP) à l'aide de l'API de gestion HCP.
+
+
+
+== Terminologie
+
+OnCommand Insight acquiert les informations d'inventaire suivantes à partir de la source de données HCP. Pour chaque type de ressource acquis par Insight, la terminologie la plus courante utilisée pour cette ressource est indiquée. Lors de l'affichage ou du dépannage de cette source de données, gardez à l'esprit la terminologie suivante :
+
+|===
+
+
+| Terme du fournisseur/modèle | Terme Insight 
+
+
+ a| 
+Groupe HCP
+ a| 
+Stockage
+
+
+
+ a| 
+Locataire
+ a| 
+Pool de stockage
+
+
+
+ a| 
+Espace de noms
+ a| 
+Volume interne
+
+
+
+ a| 
+Nœud
+ a| 
+Nœud
+
+|===
+[NOTE]
+====
+Il s'agit uniquement de mappages terminologiques courants et peuvent ne pas représenter tous les cas pour cette source de données.
+
+====
+
+
+== Exigences d'inventaire
+
+* Adresse IP du serveur HCP
+* Nom d'utilisateur et mot de passe en lecture seule pour le logiciel HCP et les privilèges homologues
+
+
+
+
+== Configuration
+
+|===
+
+
+| *Champ* | *Description* 
+
+
+ a| 
+Hôte HCP
+ a| 
+Adresse IP ou nom de domaine complet de l'hôte HCP
+
+
+
+ a| 
+Port HCP
+ a| 
+La valeur par défaut est 9090
+
+
+
+ a| 
+ID utilisateur HCP
+ a| 
+Nom d'utilisateur de l'hôte HCP
+
+
+
+ a| 
+Mot de passe HCP
+ a| 
+Mot de passe utilisé pour l'hôte HCP
+
+
+
+ a| 
+Type d'authentification HCP
+ a| 
+Choisissez HCP_LOCAL ou ACTIVE_DIRECTORY
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+Intervalle entre les sondages d'inventaire (60 minutes par défaut)
+
+
+
+ a| 
+Intervalle d'interrogation des performances (en secondes)
+ a| 
+Intervalle entre les sondages de performance (par défaut 900 secondes)
+
+|===

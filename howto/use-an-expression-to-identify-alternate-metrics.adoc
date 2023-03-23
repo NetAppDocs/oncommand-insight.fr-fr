@@ -1,0 +1,43 @@
+---
+permalink: howto/use-an-expression-to-identify-alternate-metrics.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez utiliser des expressions pour afficher les mesures non fournies par l"interface utilisateur Web, telles que les IOPS générées par la surcharge du système.' 
+---
+= Utilisez une expression pour identifier d'autres mesures
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser des expressions pour afficher les mesures non fournies par l'interface utilisateur Web, telles que les IOPS générées par la surcharge du système.
+
+
+
+== Description de la tâche
+
+Utilisez une expression pour afficher le nombre total d'IOPS générées par des opérations non-lecture ou non-écriture, telles que les opérations de surcharge pour un volume interne.
+
+
+
+== Étapes
+
+. Ajoutez un widget au tableau de bord. Choisissez *diagramme de zone*.
+. Définissez le périphérique par défaut sur Volume interne : cliquez sur *stockage* > *Volume interne* > *écriture d'IOPS*
+. Cliquez sur le bouton *convertir en expression*.
+. La métrique *IOPS - Write* se trouve maintenant dans le champ de variable alphabétique "`*a*`".
+. Dans le champ de variable "`*b*`", cliquez sur *Select* et choisissez *IOPS - Read*.
+. Dans le champ *expression*, tapez *a + b*. Dans la section *Affichage*, choisissez ** diagramme de zone** pour l'expression.
+. Dans le champ *Filtrer par*, entrez le nom du volume interne que vous analysez.
+. Le champ *Label* identifie l’expression. Remplacez le libellé par un élément significatif tel que « R + W IOPS ».
+. Cliquez sur **+Ajouter ** pour ajouter une ligne pour le nombre total d'IOPS au widget.
+. Réglez le périphérique par défaut sur Volume interne : cliquez sur *stockage* > *Volume interne* > *nombre total d'IOPS*
+. Dans le champ *Filtrer par*, entrez le nom du volume interne que vous analysez.
++
+image::../media/expression-anl-how-to.gif[expression anl comment]
+
++
+Le graphique affiche le nombre total d'IOPS sous forme de ligne, le graphique représentant la combinaison d'IOPS de lecture et d'écriture en bleu. L'écart entre 9:30 et 9:45 montre des opérations d'E/S non-lecture et non-écriture (overhead).
+
+

@@ -1,0 +1,153 @@
+---
+permalink: config-admin/brocade-sphereon-intrepid-switch-snmp-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight utilise la source de données Brocade Sphereon/Intrepid Switch \(SNMP\) pour découvrir l"inventaire des commutateurs Brocade Sphereon ou Intrepid.' 
+---
+= Source de données Brocade Sphereon/Intrepid Switch
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight utilise la source de données Brocade Sphereon/Intrepid Switch (SNMP) pour découvrir l'inventaire des commutateurs Brocade Sphereon ou Intrepid.
+
+
+
+== De formation
+
+[NOTE]
+====
+Ce collecteur de données n'est pas disponible à partir de OnCommand Insight 7.3.11.
+
+====
+* Il doit y avoir une connectivité IP à tous les commutateurs de la structure. Si vous cochez la case détecter tous les switchs dans la structure, OCI identifie tous les switchs de la structure. Toutefois, il nécessite une connectivité IP pour les découvrir.
+* Chaîne de communauté en lecture seule en cas d'utilisation de SNMP V1 ou SNMP V2.
+* Accès HTTP au commutateur pour obtenir des informations de zoning.
+* Accéder à la validation en exécutant `snmpwalk` utilitaire vers le commutateur (voir `<install_path\>\bin\)`.
+
+
+
+
+== Configuration
+
+|===
+
+
+| *Champ* | *Description* 
+
+
+ a| 
+Commutateur Sphereon
+ a| 
+Adresse IP ou nom de domaine complet du commutateur
+
+
+
+ a| 
+Version SNMP
+ a| 
+Version SNMP
+
+
+
+ a| 
+Communauté SNMP
+ a| 
+Chaîne de communauté en lecture seule SNMP utilisée pour accéder au commutateur
+
+
+
+ a| 
+Nom d'utilisateur
+ a| 
+Nom d'utilisateur SMI-S du commutateur (SNMP v3 uniquement)
+
+
+
+ a| 
+Mot de passe
+ a| 
+Mot de passe SMI-S pour le commutateur (SNMP v3 uniquement)
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| *Champ* | *Description* 
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+Intervalle entre les sondages d'inventaire (15 minutes par défaut)
+
+
+
+ a| 
+Protocole d'autorisation SNMP
+ a| 
+Protocole d'authentification SNMP (SNMPv3 uniquement)
+
+
+
+ a| 
+Protocole de confidentialité SNMP
+ a| 
+Protocole SNMP Privacy (SNMPv3 uniquement)
+
+
+
+ a| 
+Mot de passe de confidentialité SNMP
+ a| 
+Mot de passe de confidentialité SNMP
+
+
+
+ a| 
+Nombre de tentatives SNMP
+ a| 
+Nombre de tentatives de tentative SNMP
+
+
+
+ a| 
+Délai d'expiration SNMP (ms)
+ a| 
+SNMP timeout (5000 ms par défaut)
+
+
+
+ a| 
+Nom de la structure
+ a| 
+Nom de la structure à signaler par la source de données. Laissez vide pour signaler le nom de la structure comme WWN.
+
+
+
+ a| 
+Activer le recouvrement
+ a| 
+Sélectionnez cette option pour activer l'acquisition lors de la réception d'une interruption SNMP à partir du périphérique. Si vous sélectionnez Activer le recouvrement, vous devez également activer SNMP.
+
+
+
+ a| 
+Temps minimum entre les traps (secondes)
+ a| 
+Temps minimum entre les tentatives d'acquisition déclenchées par des interruptions (10 secondes par défaut)
+
+
+
+ a| 
+Intervalle d'interrogation des performances (s)
+ a| 
+Intervalle entre les sondages de performances (300 secondes par défaut)
+
+|===

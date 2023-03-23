@@ -1,0 +1,50 @@
+---
+permalink: howto/configuring-the-aws-cloud-cost-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous configurez la source de données de coût du cloud AWS comme vous le feriez pour n"importe quelle source de données Insight.' 
+---
+= Configuration de la source de données de coût du cloud AWS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous configurez la source de données de coût du cloud AWS comme vous le feriez pour n'importe quelle source de données Insight.
+
+
+
+== Avant de commencer
+
+Votre compte Amazon AWS doit être déjà configuré et préparé pour la collecte de données Insight, et vous devez disposer des informations suivantes.
+
+* Nom du rapport
+* Nom du compartiment S3
+* Région AWS où réside votre compartiment S3.
+* Préfixe du chemin du rapport
+
+
+
+
+== Description de la tâche
+
+Une fois que votre compte AWS est prêt et que les autorisations appropriées sont définies, vous êtes prêt à configurer OnCommand Insight pour la collecte des données de rapport de facturation.
+
+[NOTE]
+====
+Vous devez ajouter une source de données de coût AWS Cloud distincte pour chaque utilisateur/compte facturable à partir duquel vous souhaitez récupérer les données de facturation.
+
+====
+
+
+== Étapes
+
+. Connectez-vous à OnCommand Insight en tant qu'administrateur.
+. Cliquez sur *Admin* > *sources de données* pour ouvrir la page Source de données Insight.
+. Cliquez sur *+Ajouter* pour ajouter une nouvelle source de données. Choisissez *Amazon* et sélectionnez *AWS Cloud Cost*.
+. Dans la section *Configuration*, remplissez les champs _Nom du rapport_, _Nom du compartiment S3, _région S3_ (doit être la région où réside votre compartiment S3), _préfixe du chemin du rapport_, _ID de la clé d'accès IAM AWS_ et _clé d'accès secrète IAM AWS_. Si vous n'êtes pas sûr de l'un de ces éléments, vérifiez auprès de votre fournisseur cloud ou du détenteur de votre compte AWS.
+. Cochez la case pour vérifier que vous comprenez qu'AWS vous facturera les requêtes d'API et les transferts de données effectués par la source de données Insight.
+. Dans *Advanced Configuration*, entrez la connexion HTTP et le délai d'expiration du socket. La valeur par défaut est 300 secondes.
+. Cliquez sur *Enregistrer*.
+

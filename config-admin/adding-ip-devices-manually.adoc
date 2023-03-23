@@ -1,0 +1,34 @@
+---
+permalink: config-admin/adding-ip-devices-manually.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez ajouter manuellement un périphérique IP à OnCommand Insight à l"aide de la fonction d"ajout manuel disponible dans l"écran d"identification IP.' 
+---
+= Ajout manuel de périphériques IP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez ajouter manuellement un périphérique IP à OnCommand Insight à l'aide de la fonction d'ajout manuel disponible dans l'écran d'identification IP.
+
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur Web Insight.
+. Cliquez sur *gérer* > *résolution du périphérique*
+. Cliquez sur l'onglet *IP Identify*.
+. Cliquez sur le bouton Ajouter.
++
+La boîte de dialogue Ajouter un périphérique s'affiche
+
+. Entrez l'adresse, l'adresse IP et un nom de périphérique unique.
+
+
+
+
+== Résultats
+
+Le périphérique que vous entrez est ajouté à la liste des périphériques dans l'onglet IP identifier.

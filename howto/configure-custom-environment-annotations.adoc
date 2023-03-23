@@ -1,0 +1,62 @@
+---
+permalink: howto/configure-custom-environment-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"annotation Environnement est une annotation personnalisée permettant d"associer des actifs à leur emplacement ou à leur utilisation respectifs dans l"environnement, par exemple, Lab, R&D, production, etc En créant l"annotation Environnement et en la configurant sur ces ressources, vous pouvez facilement trouver, filtrer et générer des rapports sur vos actifs de laboratoire indépendamment de vos actifs de production, par exemple.' 
+---
+= Configurer les annotations d'environnement personnalisées
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'annotation Environnement est une annotation personnalisée permettant d'associer des actifs à leur emplacement ou à leur utilisation respectifs dans l'environnement, par exemple, Lab, R&D, production, etc En créant l'annotation Environnement et en la configurant sur ces ressources, vous pouvez facilement trouver, filtrer et générer des rapports sur vos actifs de laboratoire indépendamment de vos actifs de production, par exemple.
+
+Étapes :
+
+* Sélectionnez *gérer* > *Annotations*.
+* Cliquez sur le bouton *+Ajouter* en haut de la page.
+* Pour *Nom*, entrez '`*Environnement*'.
+* Pour *Description*, entrez '`*Type d'environnement d'actif*'.
+* Pour *Type*, sélectionnez *liste*. De nouveaux champs s'affichent pour vous permettre de créer votre liste.
+* Pour l'instant, ne cochez pas *Ajouter de nouveaux actifs à la volée*. Vous cochez cette case si vous voulez pouvoir ajouter de nouveaux environnements à la liste de choix en même temps que vous les associez à des ressources.
+* Entrez le nom et la description de votre premier environnement.
+* Cliquez sur *+Ajouter* et faites de même pour vos autres environnements.
+* Lorsque vous avez terminé, cliquez sur *Enregistrer*.
+
+
+Exemples d'annotations d'environnement :
+
+|===
+
+
+| Nom | Description 
+
+
+ a| 
+Lab
+ a| 
+Lab
+
+
+
+ a| 
+Dév
+ a| 
+Développement
+
+
+
+ a| 
+PRD
+ a| 
+Production
+
+
+
+ a| 
+...
+ a| 
+
+|===

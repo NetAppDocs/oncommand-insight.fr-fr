@@ -1,0 +1,130 @@
+---
+permalink: install-windows/data-warehouse-and-reporting-server-requirements.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous devez exécuter l"entrepôt de données et le serveur de rapports sur un ordinateur compatible avec les exigences matérielles et logicielles établies, en vous assurant que le serveur Web Apache ou le logiciel de génération de rapports n"est pas déjà installé sur cet ordinateur.' 
+---
+= Exigences relatives à l'entrepôt de données et au serveur de rapports
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez exécuter l'entrepôt de données et le serveur de rapports sur un ordinateur compatible avec les exigences matérielles et logicielles établies, en vous assurant que le serveur Web Apache ou le logiciel de génération de rapports n'est pas déjà installé sur cet ordinateur.
+
+[NOTE]
+====
+Le dimensionnement de OnCommand Insight inclut plusieurs dépendances, telles que le nombre de ressources de votre environnement, la quantité de données historiques conservées, etc. Les exemples de dimensionnement d'entrepôt de données suivants sont fournis à titre indicatif uniquement. Ils représentent certains des environnements dans lesquels Insight a été testé. La modification de ces facteurs ou d'autres facteurs dans l'environnement peut modifier les exigences de dimensionnement pour Insight.
+
+====
+Il est recommandé de contacter votre ingénieur commercial pour obtenir des conseils détaillés sur le dimensionnement avant d'installer ou de mettre à niveau Insight.
+
+*Exemples :*
+
+|===
+
+
+| Facteurs environnementaux : | Espace disque, processeurs et mémoire testés : 
+
+
+ a| 
+18 baies de stockage, 3 400 machines virtuelles
+
+4,500 ports de commutateurs
+ a| 
+Disques durs de 200 Go 8 cœurs
+
+32 GO DE RAM
+
+
+
+ a| 
+110 baies de stockage, 11 500 machines virtuelles
+
+14,500 ports de commutateurs
+ a| 
+Disques durs de 300 Go 8 cœurs
+
+48 GO DE RAM
+
+|===
+*Exigences :*
+
+|===
+
+
+| Composant | Obligatoire 
+
+
+ a| 
+Système d'exploitation
+ a| 
+Ordinateur exécutant Microsoft Windows Server 2012, 2012 R2, 2016 ou 2019 64 bits avec le dernier Service Pack.
+
+
+
+ a| 
+Machine virtuelle (VM)
+ a| 
+Ce composant peut s'exécuter dans un environnement virtuel, à condition que les ressources CPU et mémoire de votre instance soient réservées.
+
+
+
+ a| 
+CPU
+ a| 
+8 à 40 cœurs de processeurs
+
+
+
+ a| 
+Mémoire
+ a| 
+32 Go - 2 To de RAM meilleure pratique : il est fortement recommandé de définir la taille du fichier de pagination sur « Windows Managed ». De petits fichiers de pagination de taille fixe peuvent interférer avec le stockage réussi des données de performances Insight.
+
+
+
+ a| 
+Espace disque disponible
+ a| 
+200 Go - 2 To d'espace disque l'installation nécessite un minimum de 20 Go d'espace libre sur le lecteur C:.
+
+
+NOTE: Sous Windows, Insight Data Warehouse avec Reporting nécessite que la prise en charge de la création de noms 8dot3 soit activée sur le lecteur d'installation avant l'installation. Le lecteur C: Est généralement activé par défaut. Vous pouvez valider si la création de nom 8dot3 est activée sur le lecteur d'installation cible en exécutant la commande suivante (remplacez D: Par le lecteur d'installation cible) :
+
+Fsutil 8dot3name requête D :
+
+Pour activer la création de noms 8dot3, exécutez la commande suivante (remplacez D: Par le lecteur d'installation cible) :
+
+Fsutil 8dot3name Set D: 0
+
+
+
+ a| 
+Le réseau
+ a| 
+* Connexion Ethernet 100 Mbit/s ou 1 Gbit/s.
+* Adresse IP statique
+* Le port 50000 doit être disponible avant d'installer Data Warehouse avec Reporting sous Windows
+* Pour le processus serveur OnCommand Insight DWH, ports 80, 443, 1098, 1099, 3873, 8083 et 4444 à 4446
+* Pour le moteur de génération de rapports, ports 1527, 9362, 9300 et 9399
+* Pour MySQL, port 3306
+* Assurez-vous que le DNS fonctionne correctement en effectuant une `nslookup` contre l'hôte
+
+
+
+
+ a| 
+Analyse antivirus
+ a| 
+Pendant l'installation de ce composant OnCommand Insight, vous devez désactiver complètement tous les antivirus. Après l'installation, les chemins d'accès utilisés par le composant Insight (chemins d'installation, de sauvegarde et d'archivage) et tous les chemins d'installation des composants DWH (chemins SANscreen, DB2 et de sauvegarde) doivent être exclus de l'analyse antivirus.
+
+
+
+ a| 
+Visual Studio
+ a| 
+Visual Studio 2019 https://docs.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist["redistribuables"] Doit être installé avant l'installation de Data Warehouse avec Reporting sous Windows.
+
+|===

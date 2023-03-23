@@ -1,0 +1,31 @@
+---
+permalink: config-admin/what-the-topology-section-enables-you-to-do.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La section topologie vous permet de visualiser la façon dont les ressources de votre réseau sont connectées les unes aux autres et d"afficher des informations sur les ressources associées.' 
+---
+= Utilisation de la section topologie
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La section topologie vous permet de visualiser la façon dont les ressources de votre réseau sont connectées les unes aux autres et d'afficher des informations sur les ressources associées.
+
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur Web de OnCommand Insight.
+. Recherchez une page de ressources en procédant de l'une des façons suivantes :
++
+** Dans la barre d'outils Insight, cliquez sur image:../media/icon-sanscreen-magnifying-glass-gif.gif[""], saisissez le nom de la ressource, puis sélectionnez la ressource dans la liste.
+** Cliquez sur *tableaux de bord*, sélectionnez *tableau de bord*, localisez un nom de ressource, puis cliquez dessus. La page ASSET s'affiche. La section topologie se trouve dans le coin supérieur droit de la page de la ressource.
+
+
++
+Si la topologie de la ressource est plus grande que celle qui l'est dans la section, cliquez sur le lien *click pour afficher le lien hypertexte topologie*.
+
+. Pour afficher plus d'informations sur les ressources associées de l'actif de base, placez votre curseur sur une ressource associée dans la topologie et cliquez sur son nom, qui affiche sa page d'inventaire.
+

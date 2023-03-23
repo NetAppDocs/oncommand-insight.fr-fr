@@ -1,0 +1,28 @@
+---
+permalink: config-admin/insight-data-source-management.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les sources de données constituent le composant le plus important utilisé pour la maintenance d"un environnement OnCommand Insight. Comme il s"agit de la principale source d"informations pour Insight, il est impératif que les sources de données soient opérationnelles.' 
+---
+= Gestion des sources de données Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les sources de données constituent le composant le plus important utilisé pour la maintenance d'un environnement OnCommand Insight. Comme il s'agit de la principale source d'informations pour Insight, il est impératif que les sources de données soient opérationnelles.
+
+Vous pouvez surveiller les sources de données de votre réseau en sélectionnant une source de données pour vérifier les événements liés à son état et en notant toute modification susceptible d'avoir causé des problèmes.
+
+Outre l'examen d'une source de données individuelle, vous pouvez effectuer les opérations suivantes :
+
+* Clonez une source de données pour créer de nombreuses sources de données similaires dans Insight
+* Modifier les informations de la source de données
+* Modifier les informations d'identification
+* Contrôle de l'interrogation
+* Supprimez la source de données
+* Installez les correctifs de source de données
+* Installez une nouvelle source de données à partir d'un correctif
+* Préparer un rapport d'erreur pour le support client NetApp
+

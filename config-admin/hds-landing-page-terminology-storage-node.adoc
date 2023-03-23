@@ -1,0 +1,24 @@
+---
+permalink: config-admin/hds-landing-page-terminology-storage-node.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Termes s"appliquant aux objets ou aux références figurant sur les pages d"accueil des ressources des nœuds de stockage HDS.' 
+---
+= Nœud de stockage HDS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Termes s'appliquant aux objets ou aux références figurant sur les pages d'accueil des ressources des nœuds de stockage HDS.
+
+
+
+== Terminologie du nœud de stockage HDS
+
+Les termes suivants s'appliquent aux objets ou aux références que vous trouverez sur les pages d'accueil des ressources des nœuds de stockage HDS. Un grand nombre de ces termes s'appliquent également à d'autres collecteurs de données.
+
+* Nom -- le nom du directeur frontal (FED) ou de l'adaptateur de canal sur les matrices monolithiques, ou le nom du contrôleur sur une baie modulaire. Une baie HDS donnée possède au moins 2 nœuds de stockage
+* Volumes -- la table Volume affiche tout volume mappé à un port appartenant à ce nœud de stockage
+

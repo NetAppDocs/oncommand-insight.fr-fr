@@ -1,0 +1,14 @@
+---
+permalink: config-admin/asset-page-sections.html 
+sidebar: sidebar 
+keywords:  
+summary: Une page de ressource affiche plusieurs sections contenant des informations relatives à la ressource. Les sections que vous voyez dépendent du type de ressource. 
+---
+= Sections de la page d'inventaire
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Une page de ressource affiche plusieurs sections contenant des informations relatives à la ressource. Les sections que vous voyez dépendent du type de ressource.

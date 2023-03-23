@@ -1,0 +1,48 @@
+---
+permalink: howto/defining-applications-how-to-chargeback.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Pour suivre les données de coût associées à des applications spécifiques s"exécutant dans votre environnement, vous devez d"abord définir les applications.' 
+---
+= Définition des applications à utiliser avec la refacturation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour suivre les données de coût associées à des applications spécifiques s'exécutant dans votre environnement, vous devez d'abord définir les applications.
+
+
+
+== Avant de commencer
+
+Si vous souhaitez associer une application à une entité métier, vous devez avoir déjà créé l'entité métier.
+
+[NOTE]
+====
+Cet exemple n'associe aucune application à des entités métier.
+
+====
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur Web de OnCommand Insight.
+. Cliquez sur *gérer* > *application*
++
+Après avoir défini une application, la page applications affiche le nom de l'application, sa priorité et, le cas échéant, l'entité métier associée à l'application.
+
+. Cliquez sur **Ajouter**
++
+La boîte de dialogue Ajouter une application s'affiche.
+
+. Entrez un nom unique pour l'application dans la zone Nom. Saisissez les applications identifiées dans le rapport : visites africaines, ventes commerciales APAC, etc.
+. Cliquez sur *priorité* et sélectionnez la priorité (critique, élevée, moyenne ou faible) de l'application dans votre environnement.
+. Si vous prévoyez d'utiliser cette application avec une entité métier, cliquez sur *entité métier* et sélectionnez l'entité dans la liste.
+. Vous n'utiliserez pas le partage de volume, cliquez pour effacer la case de partage de volume *Valider*.
+. Cliquez sur *Enregistrer*.
++
+Les applications s'affichent dans la page applications. Si vous cliquez sur le nom de l'application, Insight affiche la page de ressources de l'application. Après avoir défini une application, vous pouvez accéder à une page de ressources pour l'hôte, la machine virtuelle, le volume, le volume interne ou l'hyperviseur afin d'affecter une application à une ressource.
+
+

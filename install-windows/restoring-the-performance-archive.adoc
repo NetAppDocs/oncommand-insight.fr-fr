@@ -1,0 +1,31 @@
+---
+permalink: install-windows/restoring-the-performance-archive.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Pour les systèmes exécutant un archivage performant, le processus de mise à niveau ne restaure que sept jours de données archivées. Vous pouvez restaurer les données d"archive restantes après la mise à niveau.' 
+---
+= Restauration de l'archive de performance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour les systèmes exécutant un archivage performant, le processus de mise à niveau ne restaure que sept jours de données archivées. Vous pouvez restaurer les données d'archive restantes après la mise à niveau.
+
+
+
+== Description de la tâche
+
+Pour restaurer l'archive de performances, procédez comme suit.
+
+
+
+== Étapes
+
+. Dans la barre d'outils, cliquez sur *Admin* > *Dépannage*
+. Dans la section Restaurer, sous *Charger l'archive de performances*, cliquez sur *Charger*.
++
+Le chargement de l'archive est géré en arrière-plan. Le chargement de l'archive complète peut prendre beaucoup de temps car les données de performances archivées de chaque jour sont renseignées dans Insight. L'état du chargement de l'archive s'affiche dans la section archive de cette page.
+
+

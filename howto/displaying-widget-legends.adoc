@@ -1,0 +1,24 @@
+---
+permalink: howto/displaying-widget-legends.html 
+sidebar: sidebar 
+keywords:  
+summary: Les widgets des tableaux de bord peuvent être affichés avec ou sans légendes. 
+---
+= Affichage des légendes des widgets
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les widgets des tableaux de bord peuvent être affichés avec ou sans légendes.
+
+Les légendes des widgets peuvent être activées ou désactivées sur un tableau de bord de l'une des deux méthodes suivantes :
+
+. Lorsque vous créez ou modifiez le widget lui-même, cochez la case légendes et enregistrez le widget.
+. Le tableau de bord étant en mode Édition, cliquez sur le bouton Options du widget et cochez la case légendes dans le menu.
+
+
+Lorsque vous modifiez les données affichées dans le widget, la légende de ce widget est mise à jour de façon dynamique.
+
+Lorsque des légendes sont affichées, si la page d'accueil de la ressource indiquée par la légende peut être navigué vers, la légende s'affiche sous forme de lien vers cette page de ressources.

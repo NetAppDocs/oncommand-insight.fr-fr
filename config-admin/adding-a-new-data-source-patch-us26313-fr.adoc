@@ -1,0 +1,33 @@
+---
+permalink: config-admin/adding-a-new-data-source-patch-us26313-fr.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les nouvelles sources de données sont publiées sous forme de fichiers correctifs qui peuvent être chargés sur le système à l"aide du processus de correction. Ce processus permet de mettre à disposition de nouvelles sources de données entre les versions planifiées de OnCommand Insight.' 
+---
+= Ajout d'une nouvelle source de données par correctif
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les nouvelles sources de données sont publiées sous forme de fichiers correctifs qui peuvent être chargés sur le système à l'aide du processus de correction. Ce processus permet de mettre à disposition de nouvelles sources de données entre les versions planifiées de OnCommand Insight.
+
+
+
+== Avant de commencer
+
+Vous devez avoir téléchargé le fichier correctif que vous souhaitez installer.
+
+
+
+== Étapes
+
+. Dans la barre d'outils Insight, cliquez sur *Admin*.
+. Sélectionnez *Patches*.
+. Sélectionnez *actions* > *installer le service pack ou le correctif*.
+. Dans la boîte de dialogue *installer le Service Pack ou le correctif*, cliquez sur *Parcourir* pour localiser et sélectionner le fichier correctif que vous avez téléchargé.
+. Cliquez sur *Suivant* dans la boîte de dialogue *Patch Summary*.
+. Passez en revue les informations *Lisez-moi* et cliquez sur *Suivant* pour continuer.
+. Dans la boîte de dialogue *Install*, cliquez sur *Finish*.
+

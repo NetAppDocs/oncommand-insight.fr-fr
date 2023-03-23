@@ -1,0 +1,20 @@
+---
+permalink: howto/custom-dashboard-override-dashboard-time.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez remplacer le paramètre de durée du tableau de bord principal dans des widgets individuels. Ces widgets affichent des données en fonction de leur période définie, et non pas de l"heure du tableau de bord.' 
+---
+= Remplacement du temps du tableau de bord pour les widgets individuels
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez remplacer le paramètre de durée du tableau de bord principal dans des widgets individuels. Ces widgets affichent des données en fonction de leur période définie, et non pas de l'heure du tableau de bord.
+
+Pour annuler l'heure du tableau de bord et forcer un widget à utiliser sa propre période, dans le mode d'édition du widget, définissez *Override Dashboard Time* sur *On*, puis sélectionnez une période pour le widget. *Enregistrer* le widget du tableau de bord.
+
+Le widget affichera ses données en fonction de la période définie, quelle que soit la période sélectionnée sur le tableau de bord lui-même.
+
+La période que vous définissez pour un widget n'affectera pas les autres widgets du tableau de bord.

@@ -1,0 +1,57 @@
+---
+permalink: install-windows/downloading-the-installation-packages.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous devez télécharger les packages d"installation pour Insight, Data Warehouse et l"unité d"acquisition à distance \(le cas échéant\) avant la date de votre choix de mise à niveau. Les temps de téléchargement des paquets \(.msi files\) varient en fonction de la bande passante disponible.' 
+---
+= Téléchargement des packages d'installation OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez télécharger les packages d'installation pour Insight, Data Warehouse et l'unité d'acquisition à distance (le cas échéant) avant la date de votre choix de mise à niveau. Temps de téléchargement des packages (`.msi` fichiers) varient en fonction de la bande passante disponible.
+
+
+
+== Description de la tâche
+
+Vous pouvez télécharger les packages d'installation à l'aide de l'interface utilisateur Web Insight ou en accédant au lien OnCommand Insight approprié à l'adresse http://support.netapp.com/NOW/cgi-bin/software[].
+
+Pour télécharger le pack d'installation depuis le serveur Insight, procédez comme suit :
+
+
+
+== Étapes
+
+. Ouvrez l'interface utilisateur web d'Insight en ouvrant un navigateur web et en saisissant l'une des informations suivantes :
++
+** Sur le serveur Insight : `+https://localhost+`
+** Depuis n'importe quel endroit : `+https://IP Address:port or fqdn:port+`
++
+Le numéro de port est 443 ou le port configuré lors de l'installation du serveur Insight. Le numéro de port par défaut est 443 si vous ne spécifiez pas le numéro de port dans l'URL.
+
+
+
+. Connectez-vous à Insight.
+. Cliquez sur l'icône aide et sélectionnez *Rechercher les mises à jour*.
+. Si une version plus récente est détectée, suivez les instructions de la boîte de message.
++
+Vous serez redirigé vers la page InsightDescription pour la version la plus récente.
+
+. Sur la page *Description*, cliquez sur *Continuer*.
+. Lorsque le contrat de licence de l'utilisateur final (CLUF) s'affiche, cliquez sur *accepter*.
+. Cliquez sur le lien du package d'installation pour chaque composant (serveur Insight, entrepôt de données, unité d'acquisition distante), etc.) et cliquez sur *Enregistrer sous* pour enregistrer le package d'installation.
++
+Avant de procéder à la mise à niveau, vous devez vous assurer de copier les packages d'installation Data Warehouse et Remote acquisition Unit sur des disques locaux de leurs serveurs respectifs.
+
+. Cliquez sur *CHECKSUM* et notez les valeurs numériques associées à chaque package d'installation.
+. Vérifiez que les modules d'installation sont complets et sans erreur après les avoir téléchargés.
++
+Des transferts de fichiers incomplets peuvent causer des problèmes avec le processus de mise à niveau.
+
++
+Pour générer des valeurs de hachage MD5 pour les packages d'installation, vous pouvez utiliser un utilitaire tiers tel que celui de Microsoftlink:HTTP://SUPPORT.MICROSOFT.COM/KB/841290["Vérification des fichiers vérificateur d'intégrité"] informatique.
+
+

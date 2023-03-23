@@ -1,0 +1,16 @@
+---
+permalink: install-windows/verifying-that-business-intelligence-tools-are-running.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Le cas échéant, vous devez vérifier que vos outils de veille stratégique sont en cours d"exécution et récupérer les données après la mise à niveau.' 
+---
+= Vérification de l'exécution des outils de veille stratégique
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le cas échéant, vous devez vérifier que vos outils de veille stratégique sont en cours d'exécution et récupérer les données après la mise à niveau.
+
+Vérifier que les outils de veille stratégique tels que BMC Atrium et ServiceNow sont en cours d'exécution et en mesure de récupérer les données. Cela inclut le connecteur BMC et les solutions qui exploitent REST.

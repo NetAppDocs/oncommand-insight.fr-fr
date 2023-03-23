@@ -1,0 +1,23 @@
+---
+permalink: reporting/what-you-need-to-do-before-you-design-your-report.html 
+sidebar: sidebar 
+keywords:  
+summary: Avant de concevoir votre rapport personnalisé, vous devez effectuer certaines tâches préalables. Si vous ne les remplissez pas, les rapports peuvent être imprécis ou incomplets. 
+---
+= Ce que vous devez faire avant de concevoir votre rapport
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de concevoir votre rapport personnalisé, vous devez effectuer certaines tâches préalables. Si vous ne les remplissez pas, les rapports peuvent être imprécis ou incomplets.
+
+Par exemple, si vous n'avez pas terminé le processus d'identification du périphérique, vos rapports de capacité ne seront pas précis. Si vous n'avez pas terminé de définir des annotations (niveaux, unités commerciales et data centers, par exemple), vos rapports personnalisés risquent de ne pas générer de rapports précis sur les données de votre domaine et d'afficher « N/A » pour certains points de données.
+
+Avant de concevoir vos rapports, effectuez les tâches suivantes :
+
+* Configurer toutes les sources de données. Pour plus d'informations, reportez-vous au _Guide de configuration et d'administration de OnCommand Insight_.
+* Entrez des annotations (telles que les niveaux, les data centers et les entités) sur les terminaux et les ressources de votre environnement. Il est avantageux d'avoir des annotations stables avant de générer des rapports, car l'entrepôt de données OnCommand Insight collecte des informations historiques.
+* Configurez l'entrepôt de données OnCommand Insight pour qu'il accepte les données du serveur OnCommand Insight dans le processus d'extraction, de transformation et de chargement (ETL).
+

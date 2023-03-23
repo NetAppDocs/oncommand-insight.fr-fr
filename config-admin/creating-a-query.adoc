@@ -1,0 +1,74 @@
+---
+permalink: config-admin/creating-a-query.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez créer une requête pour effectuer des recherches granulaires sur les ressources de votre environnement. Les requêtes vous permettent de découper les données en ajoutant des filtres, puis en triant les résultats pour afficher les données d"inventaire et de performances dans une seule vue.' 
+---
+= Création d'une requête
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez créer une requête pour effectuer des recherches granulaires sur les ressources de votre environnement. Les requêtes vous permettent de découper les données en ajoutant des filtres, puis en triant les résultats pour afficher les données d'inventaire et de performances dans une seule vue.
+
+
+
+== Description de la tâche
+
+Par exemple, vous pouvez créer une requête pour des volumes, ajouter un filtre pour rechercher des stockages particuliers associés au volume sélectionné, ajouter un filtre pour rechercher une annotation particulière, telle que Tier 1, sur les stockages sélectionnés, Enfin, ajoutez un autre filtre pour rechercher tous les stockages avec les E/S (IOPS) supérieures à 25. Lorsque les résultats sont affichés, vous pouvez trier les colonnes d'informations associées à la requête dans l'ordre croissant ou décroissant.
+
+Lors de l'ajout d'une nouvelle source de données qui acquiert des ressources ou des affectations d'annotation ou d'application, vous pouvez interroger ces ressources, annotations ou applications après l'indexation des requêtes, qui se produit à un intervalle planifié régulier.
+
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur Web de OnCommand Insight.
+. Cliquez sur *requêtes* et sélectionnez *+ Nouvelle requête*.
+. Cliquez sur *Sélectionner le type de ressource* et sélectionnez un type d'actif.
++
+Lorsqu'une ressource est sélectionnée pour une requête, un certain nombre de colonnes par défaut s'affichent automatiquement ; vous pouvez supprimer ces colonnes ou en ajouter de nouvelles à tout moment.
+
+. Dans la zone de texte *Nom*, tapez le nom de la ressource ou une partie du texte à filtrer par les noms de la ressource.
++
+Vous pouvez utiliser l'une des options suivantes, seule ou combinée, pour affiner votre recherche dans n'importe quelle zone de texte de la page Nouvelle requête :
+
++
+** Un astérisque vous permet de rechercher tout. Par exemple : `vol*rhel` affiche toutes les ressources commençant par « vol » et se terminant par « rhel ».
+** Le point d'interrogation permet de rechercher un nombre spécifique de caractères. Par exemple : `BOS-PRD??-S12` Affiche BOS-PRD12-S12, BOS-PRD13-S12, etc.
+** L'opérateur OU vous permet de spécifier plusieurs entités. Par exemple : `FAS2240 OR CX600 OR FAS3270` identification des nombreux modèles de stockage
+** L'opérateur NOT permet d'exclure du texte des résultats de la recherche. Par exemple : `NOT EMC*` Trouve tout ce qui ne commence pas par « EMC ». Vous pouvez utiliser `NOT *` pour afficher les champs ne contenant aucune valeur.
+
+
+. Cliquez sur image:../media/check-box-ok.gif[""] pour afficher les actifs.
+. Pour ajouter un critère, cliquez sur image:../media/more-button.gif[""]et effectuez l'une des opérations suivantes :
++
+** Tapez pour rechercher un critère spécifique, puis sélectionnez-le.
+** Faites défiler la liste et sélectionnez un critère.
+** Entrez une plage de valeurs si vous choisissez une mesure de performance comme IOPS - lecture (E/S). Les annotations par défaut fournies par Insight sont indiquées par image:../media/annotation-icon.gif[""]; il est possible d'avoir des annotations avec des noms en double.
+
+
++
+Une colonne est ajoutée à la liste des résultats de la requête pour les critères et les résultats de la requête dans la liste sont mis à jour.
+
+. Vous pouvez également cliquer sur image:../media/remove-criteria-button.gif[""] pour supprimer une annotation ou une mesure de performance des résultats de la requête.
++
+Par exemple, si votre requête affiche la latence maximale et le débit maximal pour les datastores et que vous souhaitez afficher uniquement la latence maximale dans la liste des résultats de la requête, cliquez sur ce bouton et décochez la case *débit - Max*. La colonne débit - maximum (Mo/s) est supprimée de la liste des résultats de la requête.
+
++
+[NOTE]
+====
+Selon le nombre de colonnes affichées dans le tableau des résultats de la requête, il se peut que vous ne puissiez pas afficher d'autres colonnes ajoutées. Vous pouvez supprimer une ou plusieurs colonnes jusqu'à ce que les colonnes souhaitées deviennent visibles.
+
+====
+. Cliquez sur *Enregistrer*, entrez un nom pour la requête, puis cliquez à nouveau sur *Enregistrer*.
++
+Si vous disposez d'un compte avec un rôle d'administrateur, vous pouvez créer des tableaux de bord personnalisés. Un tableau de bord personnalisé peut comprendre n'importe lequel des widgets de la bibliothèque de widgets, dont plusieurs, vous permettent de représenter les résultats de la requête dans un tableau de bord personnalisé. Pour plus d'informations sur les tableaux de bord personnalisés, reportez-vous au _Guide de mise en route OnCommand Insight_.
+
+
+
+*Informations connexes*
+
+link:importing-and-exporting-user-data.md#["Importation et exportation des données utilisateur"]

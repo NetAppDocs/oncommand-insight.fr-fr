@@ -1,0 +1,45 @@
+---
+permalink: install-windows/restoring-custom-data-warehouse-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Le cas échéant, vous pouvez restaurer manuellement tous les rapports personnalisés que vous avez sauvegardés avant la mise à niveau ; cependant, vous n"avez besoin de le faire que si vous perdez des rapports sur s"ils sont corrompus.' 
+---
+= Restauration des rapports Data Warehouse personnalisés
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le cas échéant, vous pouvez restaurer manuellement tous les rapports personnalisés que vous avez sauvegardés avant la mise à niveau ; cependant, vous n'avez besoin de le faire que si vous perdez des rapports sur s'ils sont corrompus.
+
+
+
+== Étapes
+
+. Ouvrez votre rapport à l'aide d'un éditeur de texte, puis sélectionnez et copiez son contenu.
+. Connectez-vous au portail de rapports à l'adresse `+https://fqdn/reporting+`.
+. Dans la barre d'outils Data Warehouse, cliquez sur image:../media/oci-reporting-portal-icon.gif[""] Pour ouvrir le portail Insight Reporting.
+. Dans le menu Démarrer, sélectionnez *Report Studio*.
+. Sélectionnez n'importe quel package.
++
+Report Studio s'affiche.
+
+. Cliquez sur *Créer nouveau*.
+. Sélectionnez *liste*.
+. Dans le menu Outils, sélectionnez *Ouvrir le rapport à partir du presse-papiers*.
++
+La boîte de dialogue *Ouvrir le rapport à partir du presse-papiers* s'affiche.
+
+. Dans le menu fichier, sélectionnez *Enregistrer sous* et enregistrez le rapport dans le dossier Rapports personnalisés.
+. Ouvrez le rapport pour vérifier qu'il a été importé.
++
+Répétez cette tâche pour chaque rapport.
+
++
+[NOTE]
+====
+Vous pouvez voir une « erreur d'analyse syntaxique de l'expression » lorsque vous chargez un rapport. Cela signifie que la requête contient une référence à au moins un objet qui n'existe pas, ce qui signifie qu'aucun package n'est sélectionné dans la fenêtre Source pour valider le rapport. Dans ce cas, cliquez avec le bouton droit de la souris sur une dimension de magasin de données dans la fenêtre Source, sélectionnez ensemble de rapports, Puis sélectionnez le package associé au rapport (par exemple, le package d'inventaire s'il s'agit d'un rapport d'inventaire ou l'un des packages de performances s'il s'agit d'un rapport de performances) afin que Report Studio puisse le valider et que vous puissiez l'enregistrer.
+
+====
+

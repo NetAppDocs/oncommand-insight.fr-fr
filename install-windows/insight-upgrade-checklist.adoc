@@ -1,0 +1,148 @@
+---
+permalink: install-windows/insight-upgrade-checklist.html 
+sidebar: sidebar 
+keywords: 6.4 
+summary: 'Vous pouvez utiliser les listes de contrôle fournies pour enregistrer votre progression au fur et à mesure que vous vous préparez à la mise à niveau. L"objectif de ces tâches est de limiter les risques d"échec de mise à niveau et d"accélérer les efforts de restauration et de restauration.' 
+---
+= Checklist de mise à niveau de OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser les listes de contrôle fournies pour enregistrer votre progression au fur et à mesure que vous vous préparez à la mise à niveau. L'objectif de ces tâches est de limiter les risques d'échec de mise à niveau et d'accélérer les efforts de restauration et de restauration.
+
+
+
+== Liste de contrôle pour la préparation de la mise à niveau (obligatoire)
+
+|===
+
+
+| Condition | Terminé ? 
+
+
+ a| 
+Assurez-vous que vous disposez des autorisations d'administrateur local Windows requises pour effectuer le processus de mise à niveau sur tous les serveurs Insight.
+ a| 
+
+
+
+ a| 
+Si vos serveurs Insight, Data Warehouse ou Remote acquisition Unit résident sur des plateformes 32 bits, vous devez mettre à niveau vos serveurs vers des plateformes 64 bits. À partir d'Insight 7.x, les mises à niveau ne sont disponibles que pour les plateformes 64 bits.
+ a| 
+
+
+
+ a| 
+Vérifiez que vous disposez des autorisations nécessaires pour modifier ou désactiver le logiciel antivirus sur tous les serveurs de votre environnement. Pour éviter un échec de mise à niveau dû à un logiciel antivirus actif, vous devez exclure le répertoire d'installation d'Insight (`disk drive:\install directory\sanscreen` de l'accès à l'analyse antivirus pendant la mise à niveau. Après avoir mis à niveau tous les composants, vous pouvez réactiver le logiciel antivirus en toute sécurité. Cependant, assurez-vous de configurer le scan pour toujours exclure tous les éléments du répertoire d'installation d'Insight.
+
+En outre, vous devez également exclure le dossier IBM/DB2 (par exemple _C:\Program Files\IBM\DB2_) de l'analyse antivirus après l'installation.
+ a| 
+
+|===
+
+
+== Liste de contrôle pour la préparation de la mise à niveau (meilleure pratique)
+
+|===
+
+
+| Condition | Terminé ? 
+
+
+ a| 
+Planifiez la mise à niveau en tenant compte du fait que la plupart des mises à niveau prennent au moins 4 à 8 heures ; les grandes entreprises prendront plus de temps. Les délais de mise à niveau peuvent varier en fonction des ressources disponibles (architecture, processeur et mémoire), de la taille de vos bases de données et du nombre d'objets surveillés dans votre environnement.
+ a| 
+
+
+
+ a| 
+Contactez votre ingénieur commercial pour connaître vos plans de mise à niveau et fournir la version d'Insight que vous avez installée ainsi que la version vers laquelle vous souhaitez effectuer la mise à niveau.
+ a| 
+
+
+
+ a| 
+Assurez-vous que les ressources actuellement allouées aux unités Insight, Data Warehouse et Remote acquisition sont toujours conformes aux spécifications recommandées. Reportez-vous aux instructions de dimensionnement recommandées pour tous les serveurs.vous pouvez également contacter votre représentant de compte pour discuter des instructions de dimensionnement.
+ a| 
+
+
+
+ a| 
+Assurez-vous que vous disposez de suffisamment d'espace disque pour le processus de sauvegarde et de restauration de la base de données. Les processus de sauvegarde et de restauration nécessitent environ cinq fois l'espace disque utilisé par le fichier de sauvegarde sur les serveurs Insight et Data Warehouse. Par exemple, une sauvegarde de 50 Go nécessite 250 à 300 Go d'espace disque disponible.
+ a| 
+
+
+
+ a| 
+Assurez-vous d'avoir accès à Firefox® ou au navigateur Chrome™ lorsque vous sauvegardez les bases de données Insight et Data Warehouse. Internet Explorer n'est pas recommandé, car il rencontre des problèmes lors du téléchargement de fichiers de plus de 4 Go.
+ a| 
+
+
+
+ a| 
+Supprimez le `.tmp` Sur le serveur Insight, vous trouverez des fichiers à l'emplacement suivant : `<install directory>\SANscreen\wildfly\standalone\tmp`.
+ a| 
+
+
+
+ a| 
+Supprimez les sources de données dupliquées et les sources de données désaffectées du client Insight. La suppression des sources de données mises hors service ou dupliquées réduit le temps nécessaire à la mise à niveau et limite l'opportunité de corruption des données.
+ a| 
+
+
+
+ a| 
+Si vous avez modifié l'un des rapports par défaut fournis avec Insight, vous devez enregistrer les rapports sous un nom différent, puis les enregistrer dans le dossier Customer Reports afin de ne pas perdre votre rapport modifié lorsque vous mettez à niveau ou restaurez le système.
+ a| 
+
+
+
+ a| 
+Si vous avez créé des rapports Data Warehouse personnalisés ou modifiés par vous-même ou par des services professionnels, créez une sauvegarde de ces rapports en les exportant vers XML, puis en les déplaçant vers le dossier Customer Reports. Assurez-vous que la sauvegarde ne se trouve pas sur le serveur Data Warehouse. Si vous ne déplacez pas vos rapports dans les dossiers recommandés, il se peut que ces rapports ne soient pas sauvegardés par le processus de mise à niveau. Pour les versions antérieures d'Insight, l'impossibilité de localiser les rapports dans les dossiers appropriés peut entraîner la perte de rapports personnalisés et modifiés.
+ a| 
+
+
+
+ a| 
+Enregistrez tous les paramètres dans l'utilitaire de configuration IBM Cognos, car ils ne sont pas inclus dans la sauvegarde de l'entrepôt de données ; vous devez reconfigurer ces paramètres après la mise à niveau. L'utilitaire se trouve dans le `disk drive:\install directory\SANscreen\cognos\c10_64\bin64` Sur le serveur Data Warehouse et vous l'exécutez à l'aide de `cogconfigw` Command.vous pouvez également effectuer une sauvegarde complète de Cognos, puis importer tous vos paramètres. Pour plus d'informations, reportez-vous à la documentation IBM Cognos.
+ a| 
+
+|===
+
+
+== Liste de contrôle pour la préparation de la mise à niveau (le cas échéant)
+
+|===
+
+
+| Condition | Terminé ? 
+
+
+ a| 
+Si vous avez remplacé les certificats auto-signés créés par l'installation d'Insight en raison d'avertissements de sécurité du navigateur par des certificats signés par votre autorité de certification interne, sauvegardez votre fichier de stockage de clés, situé à l'emplacement suivant : `disk drive:\install directory\SANscreen\wildfly\standalone\configuration` et restaurez-le après la mise à niveau. Cela remplace les certificats auto-signés créés par Insight avec vos certificats signés.
+ a| 
+
+
+
+ a| 
+Si l'une de vos sources de données a été modifiée pour votre environnement et que vous n'êtes pas sûr que ces modifications soient disponibles dans la version Insight vers laquelle vous effectuez la mise à niveau, faites une copie du répertoire suivant, ce qui vous aidera à résoudre les problèmes de restauration : `disk drive:\install directory\SANscreen\wildfly\standalone\deployments\datasources.war`.
+ a| 
+
+
+
+ a| 
+Sauvegardez toutes les tables et vues de base de données personnalisées à l'aide du `mysqldump` Outil de ligne de commande.la restauration de tables de base de données personnalisées nécessite un accès privilégié à la base de données. Contactez le support technique pour obtenir de l'aide sur la restauration de ces tables.
+ a| 
+
+
+
+ a| 
+Assurez-vous qu'aucun script d'intégration personnalisé, composant tiers requis pour les sources de données Insight, les sauvegardes ou toutes les données requises ne sont stockés dans le `disk drive:\install directory\sanscreen` Le répertoire, car le contenu de ce répertoire est supprimé par le processus de mise à niveau.Assurez-vous de déplacer l'un de ces éléments depuis le `\sanscreen` répertoire vers un autre emplacement. Par exemple, si votre environnement contient des scripts d'intégration personnalisés, veillez à copier le fichier suivant dans un répertoire autre que le `\sanscreen` répertoire :
+
+`\install_dir\SANscreen\wildfly\standalone\deployments\datasources.war\new_disk_models.txt`.
+ a| 
+
+|===

@@ -1,0 +1,32 @@
+---
+permalink: install-windows/verifying-the-extract-transform-and-load-process.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Après la mise à niveau, vous devez vous assurer que le processus extraction, transformation et chargement \(ETL\) récupère les données des bases de données OnCommand Insight, les transforme et les enregistre dans les magasins de données.' 
+---
+= Vérification de la planification d'extraction, de transformation et de chargement
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Après la mise à niveau, vous devez vous assurer que le processus ETL (extraction, transformation et chargement) récupère les données des bases de données OnCommand Insight, les transforme et les enregistre dans les magasins de données.
+
+
+
+== Étapes
+
+. Connectez-vous au portail Data Warehouse à l'adresse `+https://fqdn/dwh+`.
+. Dans le volet de navigation de gauche, cliquez sur *Agenda*.
+. Cliquez sur *Modifier le programme*.
+. Sélectionnez *quotidien* ou *hebdomadaire* dans la liste *Type*.
++
+Il est recommandé de planifier l'exécution du CÉC une fois par jour.
+
+. Vérifiez que l'heure sélectionnée correspond à l'heure à laquelle vous souhaitez que le travail s'exécute.
++
+Cela permet de s'assurer que le travail de création s'exécute automatiquement.
+
+. Cliquez sur *Enregistrer*.
+

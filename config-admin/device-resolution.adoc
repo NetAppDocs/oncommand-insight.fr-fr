@@ -1,0 +1,50 @@
+---
+permalink: config-admin/device-resolution.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous devez découvrir tous les périphériques que vous souhaitez surveiller avec OnCommand Insight. Une découverte est nécessaire pour effectuer un suivi précis des performances et des stocks dans votre environnement. En général, la majorité des périphériques de votre environnement sont détectés par la résolution automatique des périphériques. 
+---
+= Résolution du périphérique
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez découvrir tous les périphériques que vous souhaitez surveiller avec OnCommand Insight. Une découverte est nécessaire pour effectuer un suivi précis des performances et des stocks dans votre environnement. En général, la majorité des périphériques de votre environnement sont détectés par la résolution automatique des périphériques.
+
+[NOTE]
+====
+Si vous effectuez une mise à niveau et que des règles de résolution automatique sont inactives dans le système à partir duquel vous effectuez la mise à niveau, ces règles seront supprimées pendant la mise à niveau. Pour conserver les règles de résolution automatique inactives, activez les règles (cochez la case) avant d'effectuer la mise à niveau.
+
+====
+Une fois que vous avez installé et configuré les sources de données, les périphériques de votre environnement, y compris les commutateurs, les baies de stockage et votre infrastructure virtuelle d'hyperviseurs et de machines virtuelles, sont identifiés. Toutefois, cela ne permet pas d'identifier 100 % des périphériques de votre environnement.
+
+Une fois les périphériques de type source de données configurés, il est recommandé d'utiliser les règles de résolution des périphériques pour identifier les périphériques inconnus restants dans votre environnement. La résolution de périphérique peut vous aider à résoudre les périphériques inconnus comme étant les types de périphériques suivants :
+
+* hôtes physiques
+* et hybrides de stockage
+* bandes
+* commutateurs
+
+
+Les périphériques qui restent « inconnus » après la résolution des périphériques sont considérés comme des périphériques génériques, que vous pouvez également afficher dans les requêtes et sur les tableaux de bord.
+
+Les règles créées à leur tour identifieront automatiquement les nouveaux périphériques ayant des attributs similaires au fur et à mesure qu'ils sont ajoutés à votre environnement. Dans certains cas, la résolution du périphérique permet également l'identification manuelle en contournant les règles de résolution du périphérique pour les périphériques non détectés dans Insight.
+
+Une identification incomplète des périphériques peut entraîner des problèmes, notamment :
+
+* Chemins incomplets
+* Connexions à chemins d'accès multiples non identifiées
+* L'incapacité à regrouper les applications
+* Vues topologiques inexactes
+* Données inexactes dans l'entrepôt de données et les rapports
+
+
+La fonction de résolution du périphérique (*gérer* > *résolution du périphérique*) comprend les onglets suivants, chacun jouant un rôle dans la planification de la résolution du périphérique et l'affichage des résultats :
+
+* « FC Identify » contient une liste des WWN et des informations de port des périphériques Fibre Channel qui n'ont pas été résolus par la résolution automatique des périphériques. L'onglet identifie également le pourcentage de périphériques qui ont été identifiés.
+* « IP identifier » contient une liste des dispositifs accédant à des partages CIFS et NFS qui n'ont pas été identifiés par la résolution automatique des périphériques. L'onglet identifie également le pourcentage de périphériques qui ont été identifiés.
+* « Règles de résolution automatique » contient la liste des règles qui sont exécutées lors de la résolution des périphériques Fibre Channel. Il s'agit de règles que vous créez pour résoudre les périphériques Fibre Channel non identifiés.
+* ""Préférences"" fournit les options de configuration que vous utilisez pour personnaliser la résolution des périphériques en fonction de votre environnement.
+

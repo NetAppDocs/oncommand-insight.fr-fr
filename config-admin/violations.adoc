@@ -1,0 +1,18 @@
+---
+permalink: config-admin/violations.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez utiliser la section violations d"une page de ressources pour voir les violations, le cas échéant, qui se produisent dans votre environnement à la suite d"une stratégie de performances attribuée à un actif. Les stratégies de performances surveillent les seuils de votre réseau et vous permettent de détecter immédiatement une violation d"un seuil, d"identifier les implications et d"analyser l"impact et la cause profonde du problème de manière à permettre une correction rapide et efficace.' 
+---
+= Violations
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser la section violations d'une page de ressources pour voir les violations, le cas échéant, qui se produisent dans votre environnement à la suite d'une stratégie de performances attribuée à un actif. Les stratégies de performances surveillent les seuils de votre réseau et vous permettent de détecter immédiatement une violation d'un seuil, d'identifier les implications et d'analyser l'impact et la cause profonde du problème de manière à permettre une correction rapide et efficace.
+
+L'exemple suivant montre la section aViolations qui s'affiche sur une page d'actif pour un hyperviseur :
+
+image::../media/violations-section.gif[section violations]

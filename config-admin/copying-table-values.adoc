@@ -1,0 +1,31 @@
+---
+permalink: config-admin/copying-table-values.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez copier des valeurs dans des tableaux pour les utiliser dans des zones de recherche ou d"autres applications.' 
+---
+= Copie des valeurs de table
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez copier des valeurs dans des tableaux pour les utiliser dans des zones de recherche ou d'autres applications.
+
+
+
+== Description de la tâche
+
+Vous pouvez utiliser deux méthodes pour copier des valeurs à partir de tables ou de résultats de requête.
+
+
+
+== Étapes
+
+. Méthode 1 : mettez en surbrillance le texte souhaité à l'aide de la souris, copiez-le et collez-le dans des champs de recherche ou dans d'autres applications.
+. Méthode 2 : pour les champs à valeur unique dont la longueur dépasse la largeur de la colonne du tableau, indiquée par des points de suspension (...), passez la souris sur le champ et cliquez sur l'icône du presse-papiers. La valeur est copiée dans le presse-papiers pour être utilisée dans les champs de recherche ou dans d'autres applications.
++
+Notez que seules les valeurs qui sont des liens vers des ressources peuvent être copiées. Notez également que seuls les champs contenant des valeurs uniques (c'est-à-dire des non-listes) ont l'icône de copie.
+
+

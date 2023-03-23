@@ -1,0 +1,35 @@
+---
+permalink: dwh/monitoring-data-warehouse-health.html 
+sidebar: sidebar 
+keywords: suppress 
+summary: 'L"entrepôt de données \(DWH\) inclut un moniteur d"intégrité qui affiche des informations sur l"état de DWH. Les messages d"alarme sont affichés sur les pages connecteurs et travaux du DWH, ainsi que envoyés au serveur Insight connecté, où ils sont affichés sur la page Admin \> Health.' 
+---
+= Surveillance de l'intégrité de l'entrepôt de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'entrepôt de données (DWH) inclut un moniteur d'intégrité qui affiche des informations sur l'état de DWH. Les messages d'alarme sont affichés sur les pages *Connectors* et *Jobs* du DWH, ainsi qu'envoyés au serveur Insight connecté, où ils sont affichés sur la page *Admin* > *Health*.
+
+DWH collecte des mesures toutes les dix minutes et affiche une alarme dans les conditions suivantes :
+
+* La connexion au serveur Insight est interrompue
+* L'utilisation du disque est supérieure à 90 %
+* Le service de reporting (Cognos) est indisponible
+* Une requête conserve un verrou sur n'importe quelle table pendant une période prolongée
+* Une tâche de maintenance est désactivée
+* La sauvegarde automatique est désactivée
+* Risque de sécurité : clés de chiffrement par défaut détectées
+
+
+Les avertissements de contrôle de l'état dans l'entrepôt de données peuvent être supprimés pendant 30 jours maximum.
+
+Lorsque la notification par e-mail est activée, ces événements sont également signalés par e-mail. Notez que l'e-mail ne contient aucune pièce jointe.
+
+Ces incidents sont consignés dans le `dwh_troubleshoot.log` classez-les aux emplacements suivants :
+
+* Windows : `<install dir>\SANscreen\Wildfly\Standalone\Logs`
+* Linux : `/var/log/netapp/oci/wildfly/`
+

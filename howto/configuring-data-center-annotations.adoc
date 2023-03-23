@@ -1,0 +1,73 @@
+---
+permalink: howto/configuring-data-center-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"annotation Data Center est généralement utilisée pour associer une baie de stockage, un commutateur ou un actif d"hôte physique à un emplacement de data Center. Vous pouvez également associer l"annotation du data Center à d"autres ressources de votre environnement.' 
+---
+= Configuration des annotations Data Center
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'annotation Data Center est généralement utilisée pour associer une baie de stockage, un commutateur ou un actif d'hôte physique à un emplacement de data Center. Vous pouvez également associer l'annotation du data Center à d'autres ressources de votre environnement.
+
+Étapes :
+
+* Connectez-vous à Insight en tant qu'utilisateur avec des autorisations d'administration.
+* Sélectionnez *gérer* > *Annotations*.
+* Choisissez l'annotation *Data Center* et cliquez sur l'icône *Edit*.
+* Cliquez sur *+Ajouter* et ajoutez le nom et la description de votre premier centre de données à la liste des annotations.
+* Procédez de même pour vos autres data centers.
+* Lorsque vous avez terminé, cliquez sur *Enregistrer*.
+
+
+Exemples d'annotations de data Center :
+
+|===
+
+
+| Nom | Description 
+
+
+ a| 
+DC1_SVL
+ a| 
+Sunnyvale, Bldg 1
+
+
+
+ a| 
+DC2_SVLb3
+ a| 
+SVL Bldg3 FRE
+
+
+
+ a| 
+DC3_NY
+ a| 
+New York
+
+
+
+ a| 
+DC4_Londres
+ a| 
+Londres
+
+
+
+ a| 
+...
+ a| 
+
+|===
+Insight est livré avec plusieurs types d'annotations prêts à l'emploi qui permettent aux utilisateurs de définir ou de modifier des valeurs en fonction de leurs besoins. Ces types d'annotations par défaut seront toujours disponibles pour l'interface utilisateur Web Insight ainsi que pour les rapports. Les annotations personnalisées récemment créées sont visibles dans l'interface utilisateur Web d'Insight, mais des mesures supplémentaires sont nécessaires pour les rendre disponibles au reporting. Pour plus d'informations sur l'inclusion d'annotations personnalisées dans les rapports. Contactez votre représentant du support client NetApp.
+
+[NOTE]
+====
+Certains utilisateurs peuvent être enclins à utiliser l'annotation de pays pour définir l'emplacement des ressources, par opposition à l'annotation du data Center ou en association avec celle-ci. Toutefois, n'oubliez pas que l'annotation pays est traitée comme un type d'annotation personnalisé dans l'entrepôt de données Insight et qu'elle ne peut donc pas s'afficher dans le reporting à la même granularité que le data Center.
+
+====

@@ -1,0 +1,14 @@
+---
+permalink: config-admin/related-assets.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Le cas échéant, une page d"inventaire affiche une section d"actifs connexes. Par exemple, une page de ressource de volume peut afficher des informations sur des ressources telles que les pools de stockage, les ports de commutateur connectés et les ressources de calcul. Chaque section comprend un tableau qui répertorie les ressources associées de cette catégorie, avec des liens vers leurs pages de ressources respectives, ainsi que plusieurs statistiques de performances associées à l"actif.' 
+---
+= Ressources associées
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le cas échéant, une page d'inventaire affiche une section d'actifs connexes. Par exemple, une page de ressource de volume peut afficher des informations sur des ressources telles que les pools de stockage, les ports de commutateur connectés et les ressources de calcul. Chaque section comprend un tableau qui répertorie les ressources associées de cette catégorie, avec des liens vers leurs pages de ressources respectives, ainsi que plusieurs statistiques de performances associées à l'actif.

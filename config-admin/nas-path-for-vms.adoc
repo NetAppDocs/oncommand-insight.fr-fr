@@ -1,0 +1,43 @@
+---
+permalink: config-admin/nas-path-for-vms.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight 7.3 prend en charge les chemins NAS pour les ordinateurs virtuels vers les partages de stockage. Ces chemins sont similaires aux chemins NAS pour les hôtes vers les partages de stockage. Lorsque l"adresse IP d"une machine virtuelle est autorisée à accéder à un partage, un chemin NAS est créé.' 
+---
+= Chemin NAS pour les machines virtuelles
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 7.3 prend en charge les chemins NAS pour les ordinateurs virtuels vers les partages de stockage. Ces chemins sont similaires aux chemins NAS pour les hôtes vers les partages de stockage. Lorsque l'adresse IP d'une machine virtuelle est autorisée à accéder à un partage, un chemin NAS est créé.
+
+Les chemins NAS des machines virtuelles sont affichés sur la page d'accueil des volumes internes. Cette page contient un widget Ressources de stockage montées sur l'invité qui identifie les volumes internes auxquels les VM ont accès.
+
+* Les chemins NAS sont créés lorsque les machines virtuelles ont accès aux partages back-end. Il n'y a pas d'accusé de réception indiquant si les machines virtuelles accèdent ou non aux partages.
+* Le calcul de la corrélation est basé sur les latences et les IOPS, et n'inclut pas les cas où les VM ont des chemins NAS vers le stockage back-end.
+* L'utilisateur peut interroger le partage par adresse IP de l'initiateur, mais l'interrogation par chemin n'est pas prise en charge.
+
+
+Le tableau Ressources de calcul du volume interne affiche désormais également les machines virtuelles avec des chemins NAS. Des données relatives à l'utilisation et aux performances sont fournies pour chaque machine virtuelle, au processeur et à la mémoire.
+
+
+
+== Impact sur l'entrepôt de données
+
+Les modifications apportées à l'entrepôt de données après la mise à niveau vers OnCommand Insight 7.3 incluent les éléments suivants :
+
+* La table dwh_Inventory.nas_Logical est supprimée du magasin de données Inventory et remplacée par une vue.
++
+Tous les rapports Insight 7.2.x contenant la table des chemins NFS sont conservés.
+
+* La table dwh_Inventory.nas_cr_Logical est ajoutée au magasin de données Inventory et comprend les éléments suivants :
++
+** Ressources de calcul
+** Volume interne
+** Stockage
+** Partage NAS
+
+
+

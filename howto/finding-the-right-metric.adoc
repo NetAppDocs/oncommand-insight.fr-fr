@@ -1,0 +1,116 @@
+---
+permalink: howto/finding-the-right-metric.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight acquiert des compteurs et des metrics à l"aide de noms qui diffèrent parfois d"une source de données à une autre.' 
+---
+= Meilleure pratique : trouver la bonne mesure
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight acquiert des compteurs et des metrics à l'aide de noms qui diffèrent parfois d'une source de données à une autre.
+
+Lorsque vous recherchez la mesure ou le compteur adéquat pour votre widget tableau de bord, gardez à l'esprit que la mesure souhaitée peut être sous un nom différent de celui que vous pensez. Bien que les listes déroulantes dans OnCommand Insight soient généralement alphabétiques, il arrive parfois qu'un terme ne s'affiche pas dans la liste où vous pensez qu'il devrait. Par exemple, les termes « capacité brute » et « capacité utilisée » n'apparaissent pas dans la plupart des listes.
+
+Meilleure pratique : utilisez la fonction de recherche dans des champs tels que *Filtrer par* ou des endroits comme le sélecteur de colonne image:../media/column-picker-button.gif[""] pour trouver ce que vous recherchez. Par exemple, une recherche portant sur « Cap » affichera tous les indicateurs dont le nom contient « capacité », quel que soit l'endroit où ils se produisent. Vous pouvez ensuite sélectionner facilement les mesures que vous souhaitez dans cette courte liste.
+
+Voici quelques phrases alternatives que vous pouvez essayer lors de la recherche de mesures :
+
+|===
+
+
+| Quand vous voulez trouver : | Essayez également de rechercher : 
+
+
+ a| 
+CPU
+ a| 
+Processeur
+
+
+
+ a| 
+Puissance
+ a| 
+Capacité utiliséscapacité brute
+
+Capacité provisionnée
+
+Capacité des pools de stockage
+
+capacité <other asset type>
+
+Capacité écrite
+
+
+
+ a| 
+Vitesse du disque
+ a| 
+Vitesse de disque la plus faible vitesse de disque le type de disque le plus performant
+
+
+
+ a| 
+Hôte
+ a| 
+Visorvistes
+
+
+
+ a| 
+Hyperviseur
+ a| 
+Hyperviseur HostIs
+
+
+
+ a| 
+Microcode
+ a| 
+Micrologiciel
+
+
+
+ a| 
+Nom
+ a| 
+Nom de l'hyperviseur AliasHypervisor
+
+Nom du stockage
+
+nom de la <other asset type>
+
+Nom simple
+
+Nom de la ressource
+
+Alias de la structure
+
+
+
+ a| 
+Lecture / écriture
+ a| 
+Écritures partielles R/WPending
+
+IOPS - écriture
+
+Capacité écrite
+
+Latence - lecture
+
+Utilisation du cache - lecture
+
+
+
+ a| 
+Ordinateur virtuel
+ a| 
+VMI virtuels
+
+|===
+Cette liste n'est pas exhaustive. Voici quelques exemples de termes de recherche possibles uniquement.

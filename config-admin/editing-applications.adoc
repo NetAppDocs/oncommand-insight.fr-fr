@@ -1,0 +1,46 @@
+---
+permalink: config-admin/editing-applications.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez modifier la priorité d"une application, l"entité métier associée à une application ou l"état du partage de volumes.' 
+---
+= Modification d'applications
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez modifier la priorité d'une application, l'entité métier associée à une application ou l'état du partage de volumes.
+
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur Web de OnCommand Insight.
+. Cliquez sur *gérer* et sélectionnez *applications*.
+. Placez le curseur sur l'application que vous souhaitez modifier et cliquez sur image:../media/edit-recipient-icon.gif[""].
++
+La boîte de dialogue Modifier l'application s'affiche.
+
+. Effectuez l'une des opérations suivantes :
++
+** Cliquez sur *priorité* et sélectionnez une autre priorité.
++
+[NOTE]
+====
+Vous ne pouvez pas modifier le nom de l'application.
+
+====
+** Cliquez sur *entité commerciale* et sélectionnez une autre entité commerciale à associer à l'application ou sélectionnez *aucune* pour supprimer l'association de l'application à l'entité métier.
+** Cliquez pour effacer ou sélectionner *Valider le partage de volume*.
++
+[NOTE]
+====
+Cette option n'est disponible que si vous disposez de la licence assure.
+
+====
+
+
+. Cliquez sur *Enregistrer*.
+

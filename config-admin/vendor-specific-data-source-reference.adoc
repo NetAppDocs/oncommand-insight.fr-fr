@@ -1,0 +1,16 @@
+---
+permalink: config-admin/vendor-specific-data-source-reference.html 
+sidebar: sidebar 
+keywords:  
+summary: Les détails de la configuration varient en fonction du fournisseur et du modèle de la source de données ajoutée. 
+---
+= Référence de source de données propre au fournisseur
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les détails de la configuration varient en fonction du fournisseur et du modèle de la source de données ajoutée.
+
+Si la source de données d'un fournisseur nécessite des instructions de configuration Advanced Insight, telles que des exigences spéciales et des commandes spécifiques, ces informations sont incluses dans cette section.

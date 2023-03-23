@@ -1,0 +1,39 @@
+---
+permalink: dwh/scheduling-daily-backups.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Bien que vous puissiez sauvegarder manuellement Data Warehouse à tout moment à l"aide du contrôle Backup/Restore, il est recommandé de planifier des sauvegardes automatiques, en définissant quand et à quelle fréquence sauvegarder la base de données Data Warehouse et le magasin de contenu Cognos. Les sauvegardes offrent une protection contre la perte de données, ce qui vous permet de restaurer la base de données de l"entrepôt de données si nécessaire. Vous utilisez également une sauvegarde lors de la migration vers un nouveau serveur Data Warehouse ou lors de la mise à niveau vers une nouvelle version Data Warehouse.' 
+---
+= Planification de sauvegardes quotidiennes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bien que vous puissiez sauvegarder manuellement Data Warehouse à tout moment à l'aide du contrôle Backup/Restore, il est recommandé de planifier des sauvegardes automatiques, en définissant quand et à quelle fréquence sauvegarder la base de données Data Warehouse et le magasin de contenu Cognos. Les sauvegardes offrent une protection contre la perte de données, ce qui vous permet de restaurer la base de données de l'entrepôt de données si nécessaire. Vous utilisez également une sauvegarde lors de la migration vers un nouveau serveur Data Warehouse ou lors de la mise à niveau vers une nouvelle version Data Warehouse.
+
+
+
+== Description de la tâche
+
+La planification de sauvegardes pendant les périodes où le serveur Data Warehouse n'est pas occupé améliore les performances de sauvegarde et réduit l'impact sur les utilisateurs.
+
+
+
+== Étapes
+
+. Connectez-vous au portail Data Warehouse à l'adresse `+https://hostname/dwh+`, où `hostname` Est le nom du système sur lequel l'entrepôt de données OnCommand Insight est installé.
+. Dans le volet de navigation de gauche, cliquez sur *Agenda*.
+. Dans la boîte de dialogue *Programme de sauvegarde*, cliquez sur *Modifier* pour ajouter un nouveau programme.
++
+image::../media/oci-dwh-admin-schedule-backup.gif[sauvegarde du planning admin oci dwh]
+
+. Pour activer les sauvegardes planifiées, sélectionnez *sauvegarde activée*.
+. Spécifiez l'emplacement où vous souhaitez stocker les fichiers de sauvegarde.
+. Spécifiez les données à sauvegarder.
+. Spécifiez le ou les jours où vous souhaitez que la sauvegarde soit effectuée.
+. Spécifiez l'heure de début de la sauvegarde.
+. Spécifiez le nombre de copies de sauvegarde antérieures à conserver.
+. Cliquez sur *Enregistrer*.
+

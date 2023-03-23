@@ -1,0 +1,42 @@
+---
+permalink: config-admin/configuring-anomaly-detection-for-applications.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous devez activer la détection des anomalies pour surveiller tout comportement anormal dans l"infrastructure d"une application. La surveillance de la détection des anomalies est activée ou désactivée pour les applications uniquement.' 
+---
+= Configuration des applications pour la détection des anomalies
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez activer la détection des anomalies pour surveiller tout comportement anormal dans l'infrastructure d'une application. La surveillance de la détection des anomalies est activée ou désactivée pour les applications uniquement.
+
+
+
+== Avant de commencer
+
+* Vous devez avoir installé et configuré le moteur de détection des anomalies.
+* Vous devez avoir attribué une application à la ressource de calcul (machine virtuelle ou hôte) pour toutes les ressources pour lesquelles vous souhaitez obtenir des informations de détection des anomalies. Insight découvre automatiquement le reste des ressources.
+
+
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur OnCommand Insigtweb.
+. Cliquez sur *gérer* et sélectionnez *applications*.
+. Localisez l'application affectée à la ressource de calcul.
+. Dans la section *anomalies*, assurez-vous que le boîtier de contrôle *Monitor* en haut à droite de la section affiche *ON* au lieu de *OFF*; sinon, cliquez n'importe où dans le boîtier de contrôle *Monitor* pour activer *ON*.
++
+Vous pouvez surveiller simultanément jusqu'à 48 applications pour détecter d'éventuelles anomalies.
+
++
+L'état de la section affiche « apprentissage » pendant au moins une heure. Le moteur de détection des anomalies précharge jusqu'à 14 jours de données de performances existantes afin que le moteur puisse apprendre le comportement de votre environnement. Une fois que le serveur Insight a effectué la première interrogation des ressources de votre environnement, le moteur de détection des anomalies calcule et renvoie un score pour l'application dans ce délai.
+
+
+
+*Informations connexes*
+
+link:assigning-applications-to-assets.md#["Affectation d'applications aux ressources"]

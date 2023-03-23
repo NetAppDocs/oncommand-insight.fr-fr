@@ -1,0 +1,44 @@
+---
+permalink: config-admin/performance-policy-management.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight vous permet de créer des règles de performance afin de surveiller votre réseau et d"augmenter les alertes lorsque ces seuils sont franchis. Les règles de performances vous permettent de détecter immédiatement une violation d"un seuil, d"identifier les implications et d"analyser l"impact et la cause profonde du problème de manière à permettre une correction rapide et efficace.' 
+---
+= Gestion des règles de performance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight vous permet de créer des règles de performance afin de surveiller votre réseau et d'augmenter les alertes lorsque ces seuils sont franchis. Les règles de performances vous permettent de détecter immédiatement une violation d'un seuil, d'identifier les implications et d'analyser l'impact et la cause profonde du problème de manière à permettre une correction rapide et efficace.
+
+Une règle de performances vous permet de définir des seuils sur tous les objets (datastore, disque, hyperviseur, volume interne, port, Stockage, nœud de stockage, pool de stockage, VMDK, machine virtuelle, Et volume) avec des compteurs de performances rapportés (par exemple, IOPS totales). Lorsqu'une violation d'un seuil se produit, Insight le détecte et le signale dans la page de ressources associée, en affichant un cercle rouge continu, une alerte par e-mail, si elle est configurée, et dans le tableau de bord des violations ou tout tableau de bord personnalisé signalant des violations.
+
+Insight fournit des règles de performances par défaut, que vous pouvez modifier ou supprimer si elles ne sont pas applicables à votre environnement, pour les objets suivants :
+
+* Hyperviseur
++
+Il existe des règles d'échange ESX et d'utilisation ESX.
+
+* Volume et volume internes
++
+Il existe deux règles de latence pour chaque ressource, l'une annotée pour le niveau 1 et l'autre pour le niveau 2.
+
+* Port
++
+Il existe une politique pour le crédit BB zéro.
+
+* Nœud de stockage
++
+Une règle d'utilisation des nœuds est définie.
+
+* Ordinateur virtuel
++
+Il existe des règles relatives à la permutation des ordinateurs virtuels et à l'UC et à la mémoire ESX.
+
+* Volumétrie
++
+La latence est constatée par Tier et les règles de volume sont mal alignées.
+
+

@@ -1,0 +1,16 @@
+---
+permalink: howto/introduction-to-minimizing-risk-in-thin-provisioning.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Dans les data centers IT hybrides actuels, les administrateurs sont contraints d"étendre l"utilisation des ressources au-delà des limites physiques, en utilisant des technologies d"efficacité des capacités, telles que le provisionnement fin, pour contrôler l"allocation et exploiter les capacités qui n"étaient auparavant pas disponibles.' 
+---
+= Introduction à la réduction des risques liés au provisionnement fin
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dans les data centers INFORMATIQUES hybrides actuels, les administrateurs sont contraints d'étendre l'utilisation des ressources au-delà des limites physiques en utilisant des technologies d'efficacité des capacités, telles que le provisionnement fin, pour contrôler l'allocation et exploiter les capacités qui n'étaient auparavant pas disponibles.
+
+OnCommand Insight fournit des informations historiques sur l'utilisation et l'utilisation de la capacité en temps quasi réel sur plusieurs couches de provisionnement fin au sein de la pile de services INFORMATIQUES. Le fait de ne pas gérer correctement les risques de sursouscription peut entraîner des temps d'indisponibilité inopportuns pour l'entreprise.

@@ -1,0 +1,25 @@
+---
+permalink: howto/compare-metrics-a-against-metrics-b-to-show-categories-and-anomalies.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez utiliser un diagramme de dispersion pour afficher deux ensembles de données pour chaque objet. Par exemple, vous pouvez spécifier les valeurs d"IOPS en lecture et de latence totale à afficher pour chaque objet. Ce tableau vous permet d"identifier l"objet à considérer comme gênant, en fonction des IOPS et de la latence combinées.' 
+---
+= Comparez les mesures A et B pour afficher les catégories et les anomalies
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser un diagramme de dispersion pour afficher deux ensembles de données pour chaque objet. Par exemple, vous pouvez spécifier les valeurs d'IOPS en lecture et de latence totale à afficher pour chaque objet. Ce tableau vous permet d'identifier l'objet à considérer comme gênant, en fonction des IOPS et de la latence combinées.
+
+
+
+== Étapes
+
+. Ajoutez un widget avec un diagramme de dispersion au nouveau tableau de bord : *widget* > *diagramme de dispersion*
+. Définissez le périphérique par défaut sur machine virtuelle : cliquez sur *Storage* > *Virtual machine* > *latence totale* > *IOPS Read*
++
+Le système affiche un tracé de diffusion similaire à ce qui suit : image:../media/guid-a2c666db-f53d-42b8-82ef-62743b8b0fe2.gif[""]
+
+

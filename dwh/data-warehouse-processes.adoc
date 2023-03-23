@@ -1,0 +1,28 @@
+---
+permalink: dwh/data-warehouse-processes.html 
+sidebar: sidebar 
+keywords:  
+summary: Data Warehouse exécute de nombreux types de processus. 
+---
+= Processus d'entrepôt de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Data Warehouse exécute de nombreux types de processus.
+
+* *Processus ETL*
++
+Le processus ETL (extraire la transformation et charger) récupère les données de plusieurs bases de données OnCommand Insight, les transforme et les enregistre dans le magasin de données. Le processus de création de l'entrepôt de données est un processus ETL.
+
+* *Emplois*
++
+Data Warehouse effectue et crée des rapports sur les tâches suivantes : inventaire, dimensions, capacité, capacité des ports, capacité des ordinateurs virtuels, utilisation du système de fichiers, performances, efficacité de la capacité, licences, historique de création, Annotations dynamiques, suppression de connecteur, construction ignorée, option ASUP et tâches de maintenance.
+
+* *Processus de consolidation*
++
+L'entrepôt de données prend en charge la consolidation de plusieurs serveurs OnCommand Insight dans la même base de données d'entrepôt de données. Dans de nombreuses configurations, il peut arriver que le même objet soit signalé à partir de plusieurs connecteurs (c'est-à-dire que le même commutateur existe dans deux instances OnCommand Insight). Dans ce cas, Data Warehouse consolide les objets multiples en un seul (un connecteur principal est choisi et les données de l'objet sont prises à partir de ce connecteur uniquement).
+
+

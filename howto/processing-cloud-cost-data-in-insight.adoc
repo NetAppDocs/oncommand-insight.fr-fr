@@ -1,0 +1,22 @@
+---
+permalink: howto/processing-cloud-cost-data-in-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Insight collecte des données de votre rapport de facturation AWS une fois par mois pour le mois précédent et reflète le coût cloud finalisé pour ce mois-ci. 
+---
+= Traitement des données de coût du cloud AWS dans Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insight collecte des données de votre rapport de facturation AWS une fois par mois pour le mois précédent et reflète le coût cloud finalisé pour ce mois-ci.
+
+Après avoir configuré votre ou vos source(s) de données de coût AWS Cloud, si vous aviez déjà généré des rapports de facturation vers S3, vous obtenez jusqu'à trois mois de données antérieures immédiatement après la première interrogation de la source de données.
+
+Insight collecte les données « finales » AWS une fois par mois. Cette collecte a lieu quelques jours après la clôture du mois précédent, ce qui permet à AWS de finaliser les données réelles.
+
+Les données de facturation AWS sont envoyées à l'entrepôt de données d'Insight pour être utilisées dans le reporting.
+
+N'oubliez pas que chaque source de données doit être configurée pour un seul compte/utilisateur facturable.

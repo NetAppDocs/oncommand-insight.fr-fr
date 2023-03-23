@@ -1,0 +1,16 @@
+---
+permalink: config-admin/replacing-licenses-for-older-insight-versions.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Si vous avez acheté une nouvelle version d"Insight qui n"est pas rétrocompatible avec votre ancienne version du produit, vous devez remplacer les anciennes licences par les nouvelles.' 
+---
+= Remplacement des licences des anciennes versions d'Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous avez acheté une nouvelle version d'Insight qui n'est pas rétrocompatible avec votre ancienne version du produit, vous devez remplacer les anciennes licences par les nouvelles.
+
+Lorsque vous installez les nouvelles licences, vous devez sélectionner l'opération *Replace* avant d'enregistrer le texte de la clé de licence.

@@ -1,0 +1,25 @@
+---
+permalink: reporting/tips-for-designing-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: Plusieurs conseils peuvent être utiles lors de la conception de rapports. 
+---
+= Conseils pour concevoir des rapports
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Plusieurs conseils peuvent être utiles lors de la conception de rapports.
+
+* Déterminez si vous devez utiliser des données actuelles ou historiques.
++
+La plupart des rapports ne doivent faire état que des dernières données disponibles dans l'entrepôt de données.
+
+* Data Warehouse fournit des informations historiques sur la capacité et les performances, mais pas sur l'inventaire.
+* Chacun voit l'ensemble des données. Cependant, vous devrez peut-être limiter ces données à des publics spécifiques.
++
+Pour segmenter les informations des différents utilisateurs, vous pouvez créer des rapports et définir des autorisations d'accès.
+
+

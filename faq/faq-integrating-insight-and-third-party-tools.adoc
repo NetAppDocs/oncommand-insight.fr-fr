@@ -1,0 +1,74 @@
+---
+permalink: faq/faq-integrating-insight-and-third-party-tools.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Cette FAQ répond aux questions les plus courantes sur l"intégration de OnCommand Insight avec d"autres outils.' 
+---
+= Intégration d'Insight avec d'autres outils
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cette FAQ répond aux questions les plus courantes sur l'intégration de OnCommand Insight avec d'autres outils.
+
+
+
+== OCI peut-il s'intégrer avec d'autres outils et quels sont les points d'intégration disponibles ?
+
+Oui. OCI est une solution extensible (large ouverture) qui permet des intégrations avec des systèmes tiers d'orchestration, de gestion de l'activité, de contrôle des changements et de gestion des tickets, ainsi que des intégrations CMDB personnalisées. L'API RESTful entièrement publiée du logiciel OCI et les points d'intégration principaux de la base de données MySQL permettent un déplacement simple et efficace des données et un accès transparent à celles-ci.
+
+La documentation de l'API swagger d'Insight se trouve dans le produit sous *(?) Aide > Documentation de L'API REST*.
+
+
+
+== Qu'est-ce que le connecteur Insight BMC ?
+
+Le connecteur OnCommand Insight pour BMC intègre l'entrepôt de données OnCommand Insight (DWH) et la base de données de gestion de la configuration BMC Atrium (CMDB). Insight Connector pour BMC mappe les données stockées physiques et logiques sur les systèmes de stockage réseau (par exemple, les unités de stockage, les services de stockage hôte, VS Storage Service et VM Storage Service) et leurs relations avec les périphériques (hôtes, commutateurs de stockage, Et les bandes) et les importe dans BMC CMDB en tant qu'éléments de configuration et relations. Pour plus d'informations sur OnCommand Insight Connector for BMC, consultez le site de support NetApp.
+
+
+
+== OCI fonctionne-t-il avec SCOM ou les VROPs ?
+
+Oui, OCI est une solution complémentaire à plusieurs solutions de gestion métier et est considéré comme une source autorisée pour les informations relatives au stockage, au calcul, à l'hyperviseur et à la structure du data Center. Les clients d'OCI utilisent l'API RESTful et la base de données MySQL extensible d'OCI pour améliorer de nombreuses applications telles que Remedy, ServiceNow, SCOM, Vrops et Splunk, pour n'en citer que quelques-uns. OCI étend les intégrations en important les informations provenant de presque toutes les sources d'enregistrement et/ou en envoyant les metrics environnementaux capturés aux systèmes tiers de surveillance, d'émission, de facturation et d'orchestration CMDB les plus courants.
+
+
+
+== OCI peut-il fonctionner avec des services cloud que j'utilise déjà ou que je envisage d'utiliser ?
+
+Oui, la gestion du logiciel OCI des environnements classiques sur site et de cloud hybride agile vous permet de déterminer avec une grande visibilité les plateformes les plus économiques pour vos services métier. OCI peut être utilisé pour l'analyse de la pré et de la post-migration, ce qui permet d'identifier les workloads adaptés au cloud. L'historique des tendances en matière de capacité, de performances et de coûts est tout nécessaire pour sélectionner le service cloud approprié. Les ateliers de conception de services qui exploitent la densité des E/S et d'autres metrics du logiciel OCI peuvent également vous aider à répondre aux questions, par exemple si vous optimisez votre environnement et si le cloud est judicieux. OCI continue d'étendre sa couverture avec la prise en charge de NetApp Private Storage, Cloud ONTAP, Amazon S3 et OpenStack KVM. OCI continue de jouer un rôle essentiel dans la campagne de gestion cloud de NetApp, en particulier dans les domaines où la visibilité sur la planification de la capacité, les performances, la qualité de service et la refacturation est importante.
+
+
+
+== OCI peut-il ouvrir des incidents dans notre solution de gestion des incidents ?
+
+Oui, les événements de violation OCI peuvent être déclenchés et envoyés via SNMP en tant qu'interruption ou via Syslog à un serveur, et certains via l'API RESTful. Les détails contenus dans les événements fournis peuvent être interprétés par de nombreuses solutions tierces de gestion des incidents et de billetterie.
+
+
+
+== Pouvez-vous allouer des ressources à une unité commerciale ou à des services ?
+
+Oui, OCI intègre une méthode de balisage des métadonnées appelée Annotations. Il est possible d'affecter des entités commerciales, des secteurs d'activité, des locataires et des projets aux ressources du data Center pour enrichir le contexte métier autour des ressources, de la planification de la capacité, du dépannage et du reporting.
+
+
+
+== OCI fonctionne-t-il avec Work Flow Automator (WFA) ?
+
+Les fonctionnalités d'intégration d'OCI avec les technologies CMDB, de facturation et d'orchestration tierces sont un atout majeur de sa réussite, et WFA ne fait pas exception. Les services professionnels de NetApp ont mené à bien un certain nombre d'intégrations, existantes avec les workflows WFA et OCI . Un connecteur WFA est disponible au téléchargement pour OCI sur NetApp Automation Storefront.
+
+
+
+== Combien de temps durent la conservation des données de performance dans OCI ?
+
+Le serveur OCI contient 90 jours de performances en temps quasi réel ainsi que l'inventaire actuel (constructions logiques et physiques).
+
+Les intervalles d'interrogation des performances OCI sont configurables par l'utilisateur. La plupart des fournisseurs configurent les performances du stockage toutes les 5 minutes. Chaque jour, les données de performance/inventaire sont envoyées à l'entrepôt de données OCI (DWH) pour les rapports historiques et les prévisions à long terme. DWH transforme ces données en données résumées (données de cumul horaire, quotidien, mensuel). Notre capacité à suivre les « changements », par exemple l'historique environnemental contrôlé pour le stockage/le calcul/la configuration/les mappages de la structure, n'a pas de limite définie actuellement.
+
+Data Warehouse conserve les données historiques en fonction des magasins de données et de la granularité des données.
+
+
+
+== Existe-t-il des rapports de planification des performances ?
+
+Oui, plusieurs rapports sont fournis avec OCI et de nombreux autres sont disponibles dans notre catalogue des services professionnels, selon le cas d'utilisation. Le module Data Warehouse est également fourni avec une suite d'outils de création de rapports Cognos qui permettent aux utilisateurs de créer leurs propres rapports. Une suite de modèles de reporting créés par la communauté et d'autres téléchargements sont également disponibles sur NetApp Automation Storefront.

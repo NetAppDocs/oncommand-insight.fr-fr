@@ -1,0 +1,16 @@
+---
+permalink: reporting/managing-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Pour chaque rapport, vous pouvez sélectionner le lien plus dans la colonne actions et accéder à toutes les opérations de rapport, telles que la définition des propriétés de rapport, la planification de rapports ou l"envoi de rapports par courrier électronique. Les administrateurs disposent de plus d"options de gestion que les autres utilisateurs.' 
+---
+= Gestion des rapports
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour chaque rapport, vous pouvez sélectionner le lien *plus* dans la colonne actions et accéder à toutes les opérations de rapport, telles que la définition des propriétés de rapport, la planification de rapports ou l'envoi de rapports par courrier électronique. Les administrateurs disposent de plus d'options de gestion que les autres utilisateurs.
+
+Les administrateurs peuvent définir des autorisations pour d'autres utilisateurs de rapports en fonction de leurs rôles OnCommand Insight.

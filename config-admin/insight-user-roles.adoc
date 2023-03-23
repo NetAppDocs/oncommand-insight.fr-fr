@@ -1,0 +1,21 @@
+---
+permalink: config-admin/insight-user-roles.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Chaque compte utilisateur se voit attribuer l"un des trois niveaux d"autorisation possibles.' 
+---
+= Rôles d'utilisateur Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Chaque compte utilisateur se voit attribuer l'un des trois niveaux d'autorisation possibles.
+
+* Le client vous permet de vous connecter à Insight et d'afficher les différentes pages. Ce type de compte ne vous permet pas d'effectuer des actions telles que l'identification de périphériques génériques et la définition des stratégies dans l'interface utilisateur Java.
+* L'utilisateur autorise tous les privilèges de niveau invité, ainsi que l'accès aux opérations Insight, telles que la définition de règles et l'identification d'appareils génériques. Le type de compte utilisateur ne vous permet pas d'effectuer des opérations de source de données, ni d'ajouter ou de modifier des comptes utilisateur autres que le vôtre.
+* Administrator vous permet d'effectuer n'importe quelle opération, y compris l'ajout de nouveaux utilisateurs et la gestion des sources de données.
+
+
+*Meilleure pratique :* Limitez le nombre d'utilisateurs disposant d'autorisations d'administrateur en créant la plupart des comptes pour les utilisateurs ou les invités.

@@ -1,0 +1,124 @@
+---
+permalink: config-admin/qlogic-fc-switch-snmp-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Pour la configuration, la source de données QLogic FC Switch \(SNMP\) requiert l"adresse réseau du commutateur FC, spécifiée comme adresse IP, et une chaîne de communauté SNMP en lecture seule utilisée pour accéder au périphérique.' 
+---
+= Source de données du commutateur FC QLogic
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour la configuration, la source de données du commutateur FC QLogic (SNMP) requiert l'adresse réseau du commutateur FC, spécifiée comme adresse IP, et une chaîne de communauté SNMP _lecture seule_ utilisée pour accéder au périphérique.
+
+
+
+== Configuration
+
+|===
+
+
+| *Champ* | *Description* 
+
+
+ a| 
+Commutateur SANsurfer
+ a| 
+Adresse IP ou nom de domaine complet pour le commutateur SANSurfer
+
+
+
+ a| 
+Version SNMP
+ a| 
+Version SNMP
+
+
+
+ a| 
+Communauté SNMP
+ a| 
+Chaîne de communauté SNMP
+
+
+
+ a| 
+Nom d'utilisateur
+ a| 
+Nom d'utilisateur du commutateur SANSurfer
+
+
+
+ a| 
+Mot de passe
+ a| 
+Mot de passe du commutateur SANSurfer
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| *Champ* | *Description* 
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+Intervalle entre les sondages d'inventaire (15 minutes par défaut)
+
+
+
+ a| 
+Protocole d'autorisation SNMP
+ a| 
+Protocole d'authentification SNMP (SNMPv3 uniquement)
+
+
+
+ a| 
+Nouvelles tentatives SNMP
+ a| 
+Nombre de tentatives de tentative SNMP
+
+
+
+ a| 
+Délai d'expiration SNMP (ms)
+ a| 
+SNMP timeout (5000 ms par défaut)
+
+
+
+ a| 
+Activer le recouvrement
+ a| 
+Sélectionnez pour activer le recouvrement
+
+
+
+ a| 
+Temps minimum entre les recouvrements (s)
+ a| 
+Temps minimum entre les tentatives d'acquisition déclenchées par des interruptions (10 secondes par défaut)
+
+
+
+ a| 
+Nom de la structure
+ a| 
+Nom de la structure à signaler par la source de données. Laissez vide pour signaler le nom de la structure comme WWN.
+
+
+
+ a| 
+Intervalle d'interrogation des performances (s)
+ a| 
+Intervalle entre les sondages de performances (300 secondes par défaut)
+
+|===

@@ -1,0 +1,66 @@
+---
+permalink: howto/creating-policies-and-thresholds-for-storage-pools.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous pouvez créer des stratégies de performances qui déclenchent des alertes pour vous avertir lorsque les seuils des actifs du pool de stockage ont été dépassés. 
+---
+= Création de règles de performances pour les pools de stockage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez créer des stratégies de performances qui déclenchent des alertes pour vous avertir lorsque les seuils des actifs du pool de stockage ont été dépassés.
+
+
+
+== Avant de commencer
+
+Cette procédure suppose que vous avez provisionné le pool de stockage à l'aide de l'allocation dynamique.
+
+
+
+== Description de la tâche
+
+Vous souhaitez créer des stratégies qui surveillent et signalent les modifications d'un pool de stockage susceptibles de provoquer des pannes. Pour le pool de stockage physique à provisionnement fin, vous devez contrôler la capacité physique et le taux de surengagement.
+
+
+
+== Étapes
+
+. Ouvrez OnCommand Insight dans votre navigateur.
+. Sélectionnez *gérer* > *politiques de performances*
++
+La page règles de performance s'affiche. Les règles sont organisées par objet et sont évaluées dans l'ordre dans lequel elles apparaissent dans la liste. Si les notifications sont activées (*Admin* > *Notifications*), vous pouvez configurer Insight pour envoyer des e-mails lorsque les stratégies de performances sont enfreintes.
+
+. Cliquez sur **+Ajouter ** pour créer une nouvelle stratégie.
+. Dans *Policy Name*, entrez un nom de stratégie pour le pool de stockage.
+. Dans *appliquer aux objets de type*, sélectionnez Pool de stockage.
+. Dans *appliquer après la fenêtre de*, entrez première occurrence.
+. Dans *avec gravité*, entrez critique
+. Configurez les destinataires de l'e-mail que vous souhaitez notifier lorsque les seuils sont atteints.
++
+Par défaut, les alertes par e-mail relatives aux violations de stratégie sont envoyées aux destinataires de la liste de diffusion globale. Vous pouvez remplacer ces paramètres afin que les alertes d'une stratégie donnée soient envoyées à des destinataires spécifiques.
+
++
+Cliquez sur le lien pour ouvrir la liste des destinataires, puis cliquez sur le bouton + pour ajouter des destinataires. Les alertes de violation pour cette stratégie seront envoyées à tous les destinataires de la liste.
+
+. Dans *Créer une alerte si l'une des conditions suivantes est vraie*, entrez le ratio de capacité - utilisé > 85 %
+
+
+
+
+== Résultats
+
+Cette configuration entraîne l'envoi par le système d'un message d'avertissement critique lorsque plus de 85 % de la capacité physique du pool de stockage est utilisée. L'utilisation de 100 % de la mémoire physique entraînera une défaillance des applications.
+
+
+
+== Créez des règles de pool de stockage supplémentaires
+
+
+
+=== Description de la tâche
+
+Créez une règle supplémentaire « Rapport de capacité - utilisé » qui affiche un message d'avertissement lorsque la capacité du pool de stockage utilisée dépasse 75 %. Si les notifications sont activées (*Admin* > *Notifications*), vous pouvez configurer Insight pour envoyer des e-mails lorsque les stratégies de performances sont enfreintes.

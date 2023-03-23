@@ -1,0 +1,33 @@
+---
+permalink: config-admin/updating-expired-licenses.html 
+sidebar: sidebar 
+keywords:  
+summary: Si une ou plusieurs de vos licences Insight ont expiré, vous pouvez les mettre à jour rapidement en suivant la même procédure que pour installer les licences initialement. 
+---
+= Mise à jour des licences expirées
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si une ou plusieurs de vos licences Insight ont expiré, vous pouvez les mettre à jour rapidement en suivant la même procédure que pour installer les licences initialement.
+
+
+
+== Étapes
+
+. Dans un éditeur de texte, comme le Bloc-notes, ouvrez le nouveau fichier de licence que vous avez reçu du support NetApp et copiez le texte de la clé de licence dans le presse-papiers Windows.
+. Ouvrez OnCommand Insight dans votre navigateur.
+. Cliquez sur *Admin* dans la barre d'outils.
+. Cliquez sur *Configuration*.
+. Cliquez sur l'onglet *licences*.
+. Cliquez sur *mettre à jour la licence*.
+. Copiez le texte de la clé de licence dans la zone de texte *License*.
+. Sélectionnez l'opération *Update (le plus courant)*.
++
+Cette opération ajoute vos nouvelles licences à toutes les licences Insight actuellement actives.
+
+. Cliquez sur *Enregistrer*.
+. Si vous utilisez le modèle de licence Insight Consumption, vous devez cocher la case *Activer l'envoi des informations d'utilisation à NetApp* dans la section utilisation. Le proxy doit être correctement configuré et activé pour votre environnement.
+

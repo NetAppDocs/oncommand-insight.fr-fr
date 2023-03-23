@@ -1,0 +1,31 @@
+---
+permalink: dwh/viewing-the-data-warehouse-database-schema.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez afficher le schéma de base de données pour comprendre comment utiliser les données dans une autre API ou développer des requêtes SQL. L"option schema répertorie toutes les bases de données, tables et colonnes du schéma. Vous pouvez également consulter les diagrammes de schéma de base de données montrant les relations de table.' 
+---
+= Affichage du schéma de la base de données Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez afficher le schéma de base de données pour comprendre comment utiliser les données dans une autre API ou développer des requêtes SQL. L'option schema répertorie toutes les bases de données, tables et colonnes du schéma. Vous pouvez également consulter les diagrammes de schéma de base de données montrant les relations de table.
+
+
+
+== Étapes
+
+. Connectez-vous au portail Data Warehouse à l'adresse `+https://hostname/dwh+`, où `hostname` Est le nom du système sur lequel l'entrepôt de données OnCommand Insight est installé.
+. Cliquez sur image:../media/oci-7-help-icon-gif.gif[""] Dans la barre d'outils Data Warehouse, et sélectionnez *Documentation*.
+. Sélectionnez *Schéma de base de données*.
+. Par exemple, dans le volet *Databases*, cliquez sur *DWH_INVENTORY*.
+. Dans le volet *toutes les tables*, faites défiler jusqu'à la section *DWH_INVENTORY* et cliquez sur la table *annotation_Value*.
++
+image::../media/oci-dwh-databaseschema-inventory-annotation-gif.gif[Table des valeurs d'annotation du magasin de données d'inventaire]
+
++
+La table dwh_Inventory.annotation apparaît.
+
+

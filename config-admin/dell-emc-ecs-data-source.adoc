@@ -1,0 +1,123 @@
+---
+permalink: config-admin/dell-emc-ecs-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Ce collecteur de données acquiert les données d"inventaire et de performance des systèmes de stockage EMC ECS. Pour la configuration, le collecteur de données nécessite une adresse IP du serveur ECS et un compte de domaine de niveau administratif.' 
+---
+= Source de données Dell EMC ECS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ce collecteur de données acquiert les données d'inventaire et de performance des systèmes de stockage EMC ECS. Pour la configuration, le collecteur de données nécessite une adresse IP du serveur ECS et un compte de domaine de niveau administratif.
+
+
+
+== Terminologie
+
+OnCommand Insight acquiert les informations d'inventaire suivantes à partir de la source de données EMC ECS. Pour chaque type de ressource acquis par Insight, la terminologie la plus courante utilisée pour cette ressource est indiquée. Lors de l'affichage ou du dépannage de cette source de données, gardez à l'esprit la terminologie suivante :
+
+|===
+
+
+| Terme du fournisseur/modèle | Terme Insight 
+
+
+ a| 
+Cluser
+ a| 
+Stockage
+
+
+
+ a| 
+Locataire
+ a| 
+Pool de stockage
+
+
+
+ a| 
+Godet
+ a| 
+Volume interne
+
+
+
+ a| 
+Disque
+ a| 
+Disque
+
+|===
+[NOTE]
+====
+Il s'agit uniquement de mappages terminologiques courants et peuvent ne pas représenter tous les cas pour cette source de données.
+
+====
+
+
+== De formation
+
+* Une adresse IP de la console de gestion ECS
+* Compte de domaine de niveau administratif pour le système ECS
+* Port 443 (HTTPS). Nécessite une connectivité sortante vers le port TCP 443 du système ECS.
+* Pour des performances optimales, le nom d'utilisateur et le mot de passe en lecture seule pour l'accès ssh/scp.
+* Pour les performances, le port 22 est requis.
+
+
+
+
+== Configuration
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Hôte ECS
+ a| 
+Adresses IP ou noms de domaine complets du système ECS
+
+
+
+ a| 
+Port hôte ECS
+ a| 
+Port utilisé pour la communication avec l'hôte ECS
+
+
+
+ a| 
+ID fournisseur ECS
+ a| 
+ID fournisseur pour ECS
+
+
+
+ a| 
+Mot de passe
+ a| 
+Mot de passe utilisé pour ECS
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Intervalle d'interrogation des stocks (minutes)
+ a| 
+Intervalle entre les sondages d'inventaire. La valeur par défaut est 360 minutes.
+
+|===

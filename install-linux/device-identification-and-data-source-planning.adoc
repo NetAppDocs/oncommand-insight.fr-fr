@@ -1,0 +1,31 @@
+---
+permalink: install-linux/device-identification-and-data-source-planning.html 
+sidebar: sidebar 
+keywords:  
+summary: Dans le cadre de votre planification de déploiement, vous devez recueillir des informations sur les périphériques de votre environnement. 
+---
+= Identification des appareils et planification de la source de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dans le cadre de votre planification de déploiement, vous devez recueillir des informations sur les périphériques de votre environnement.
+
+Vous avez besoin des logiciels, de la connectivité et des informations suivants sur chaque périphérique de votre environnement :
+
+* Adresse IP ou nom d'hôte pouvant être résolu par le serveur OCI
+* Nom de connexion et mot de passe
+* Type d'accès au périphérique, par exemple contrôleur et station de gestion
++
+[NOTE]
+====
+L'accès en lecture seule est suffisant pour la plupart des périphériques, mais certains requièrent des autorisations d'administrateur.
+
+====
+* Connectivité du port au périphérique en fonction des exigences de port de la source de données
+* Pour les commutateurs, chaîne de communauté SNMP en lecture seule (ID utilisateur ou mot de passe permettant d'accéder aux commutateurs)
+* Tout logiciel tiers requis sur le périphérique, par exemple Solutions Enabler.
+* Pour plus d'informations sur les autorisations et les exigences relatives aux sources de données, reportez-vous à la section « référence des sources de données spécifiques au fournisseur » dans l'aide de l'interface utilisateur Web ou dans le _Guide de configuration et d'administration de OnCommand Insight.
+

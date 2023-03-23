@@ -1,0 +1,26 @@
+---
+permalink: install-linux/planning-the-installation.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Pour garantir la réussite du déploiement, vous devez tenir compte de certains éléments système avant d"installer OnCommand Insight.' 
+---
+= Planification du déploiement
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour garantir la réussite du déploiement, vous devez tenir compte de certains éléments système avant d'installer OnCommand Insight.
+
+
+
+== Description de la tâche
+
+La planification de votre déploiement Insight inclut la prise en compte des éléments système suivants :
+
+* Architecture d'Insight
+* Vos composants réseau à surveiller
+* Conditions préalables à l'installation de Insight et configuration serveur requise
+* Navigateurs Web Insight requis
+

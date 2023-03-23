@@ -1,0 +1,16 @@
+---
+permalink: install-linux/missing-licenses.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Différentes licences sont requises pour les différentes fonctionnalités OnCommand Insight. Ce que vous voyez dans OnCommand Insight est contrôlé par vos licences installées. Pour plus d"informations sur les fonctionnalités contrôlées par chaque licence, reportez-vous à la section licences OnCommand Insight.' 
+---
+= Licences manquantes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Différentes licences sont requises pour les différentes fonctionnalités OnCommand Insight. Ce que vous voyez dans OnCommand Insight est contrôlé par vos licences installées. Pour plus d'informations sur les fonctionnalités contrôlées par chaque licence, reportez-vous à la section licences OnCommand Insight.
+
+Pour plus d'informations sur les fonctionnalités contrôlées par chaque licence, reportez-vous à la section licences OnCommand Insight.

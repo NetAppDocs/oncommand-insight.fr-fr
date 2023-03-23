@@ -1,0 +1,77 @@
+---
+permalink: dwh/setting-up-multiple-tenancy-in-reporting.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"entrepôt de données OnCommand Insight s"adapte aux locations multiples \(souvent raccourcies à la « colocation » ou à la « colocation »\) dans le reporting en vous permettant d"associer des utilisateurs à une ou plusieurs entités commerciales. Grâce à cette fonction, les administrateurs peuvent séparer les données ou les rapports en fonction des attributs d"utilisateur ou de l"affiliation des utilisateurs.' 
+---
+= Configuration de plusieurs services de création de rapports
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'entrepôt de données OnCommand Insight s'adapte aux différentes architectures (souvent raccourcies à la « colocation » ou à la « colocation ») dans le reporting en vous permettant d'associer des utilisateurs à une ou plusieurs entités commerciales. Grâce à cette fonction, les administrateurs peuvent séparer les données ou les rapports en fonction des attributs d'utilisateur ou de l'affiliation des utilisateurs.
+
+Les entités commerciales utilisent une hiérarchie pour la refacturation des capacités en utilisant les valeurs suivantes :
+
+* Locataire : principalement utilisé par les fournisseurs de services pour associer des ressources à un client, par exemple NetApp.
+* Secteur d'activité : entité commerciale au sein d'une entreprise, par exemple « matériel » ou « logiciels ».
+* Unité commerciale : unité commerciale traditionnelle telle que « ventes » ou « Marketing ».
+* Projet : projet auquel vous pouvez attribuer un refacturation de la capacité.
+
+
+Le processus de configuration de plusieurs unités de location implique les étapes principales suivantes :
+
+* Configurez un compte utilisateur Data Warehouse.
+* Créez un groupe dans Reporting Portal.
+* Attribuez des utilisateurs à un ou plusieurs groupes, qui représentent des entités métier.
+* Attribuez des utilisateurs à une ou plusieurs entités commerciales. Par exemple, les utilisateurs associés à « NetApp » peuvent accéder à toutes les entités de l'entreprise qui ont « NetApp » en tant que locataire.
+* Vérifiez que les utilisateurs ne voient que les rapports qu'ils doivent voir.
+
+
+Les points suivants résument la façon dont les utilisateurs accèdent aux données de reporting :
+
+* Un utilisateur, qui n'est affecté à aucun groupe, accède à toutes les données.
+* Un utilisateur, affecté à un groupe, ne pourra pas accéder aux enregistrements sans entité métier.
+
+
+Par exemple, vous pouvez avoir les services suivants et vous devez séparer les rapports pour les utilisateurs de ces services.
+
+|===
+
+
+| Utilisateur | Ingénierie | Assistance | Finances | Légal 
+
+
+ a| 
+Utilisateur1
+ a| 
+X
+ a| 
+X
+ a| 
+ a| 
+
+
+
+ a| 
+Utilisateur2
+ a| 
+ a| 
+ a| 
+X
+ a| 
+X
+
+
+
+ a| 
+Utilisateur3
+ a| 
+ a| 
+X
+ a| 
+ a| 
+
+|===

@@ -1,0 +1,27 @@
+---
+permalink: config-admin/deleting-a-user-account.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Tout utilisateur disposant de privilèges d"administrateur peut supprimer un compte d"utilisateur, soit lorsqu"il n"est plus utilisé \(pour une définition d"utilisateur local\), soit forcer OnCommand Insight à redécouvrir les informations d"utilisateur lors de la prochaine connexion de l"utilisateur \(pour un utilisateur LDAP\).' 
+---
+= Suppression d'un compte utilisateur
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Tout utilisateur disposant de privilèges d'administrateur peut supprimer un compte utilisateur, soit lorsqu'il n'est plus utilisé (pour une définition d'utilisateur local), soit pour forcer OnCommand Insight à redécouvrir les informations utilisateur la prochaine fois que l'utilisateur se connecte (pour un utilisateur LDAP).
+
+
+
+== Étapes
+
+. Connectez-vous à OnCommand Insight avec des privilèges d'administrateur.
+. Dans la barre d'outils Insight, cliquez sur *Admin*.
+. Cliquez sur *Configuration*.
+. Cliquez sur l'onglet *utilisateurs*.
+. Recherchez la ligne qui affiche le compte utilisateur que vous souhaitez supprimer.
+. À droite des informations utilisateur, cliquez sur l'icône *Supprimer le compte utilisateur* "*x*".
+. Cliquez sur *Enregistrer*.
+

@@ -1,0 +1,156 @@
+---
+permalink: config-admin/emc-celerra-ssh-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La source de données Celerra \(SSH\) collecte les informations d"inventaire à partir du stockage Celerra. Pour la configuration, cette source de données nécessite l"adresse IP des processeurs de stockage ainsi qu"un nom d"utilisateur et un mot de passe en lecture seule.' 
+---
+= Source de données EMC Celerra
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La source de données Celerra (SSH) collecte les informations d'inventaire à partir du stockage Celerra. Pour la configuration, cette source de données nécessite l'adresse IP des processeurs de stockage ainsi qu'un nom d'utilisateur et un mot de passe _read-only_.
+
+
+
+== Terminologie
+
+OnCommand Insight acquiert les informations d'inventaire suivantes à partir de la source de données EMC Celerra. Pour chaque type de ressource acquis par Insight, la terminologie la plus courante utilisée pour cette ressource est indiquée. Lors de l'affichage ou du dépannage de cette source de données, gardez à l'esprit la terminologie suivante :
+
+|===
+
+
+| Terme du fournisseur/modèle | Terme Insight 
+
+
+ a| 
+Serveur réseau Celerra
+ a| 
+Stockage
+
+
+
+ a| 
+Meta Volume Celerra/pool de stockage Celerra
+ a| 
+Pool de stockage
+
+
+
+ a| 
+Système de fichiers
+ a| 
+Volume interne
+
+
+
+ a| 
+Data Mover
+ a| 
+Contrôleur
+
+
+
+ a| 
+Système de fichiers monté sur un Data Mover
+ a| 
+Partage de fichiers
+
+
+
+ a| 
+Exports CIFS et NFS
+ a| 
+Partagez
+
+
+
+ a| 
+Volume de disque
+ a| 
+LUN interne
+
+|===
+[NOTE]
+====
+Il s'agit uniquement de mappages terminologiques courants et peuvent ne pas représenter tous les cas pour cette source de données.
+
+====
+
+
+== De formation
+
+* L'adresse IP du processeur de stockage
+* Nom d'utilisateur et mot de passe en lecture seule
+* Port SSH 22
+
+
+
+
+== Configuration
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Adresse de Celerra
+ a| 
+Adresse IP ou nom de domaine complet du périphérique Celerra
+
+
+
+ a| 
+Nom d'utilisateur
+ a| 
+Nom utilisé pour se connecter au périphérique Celerra
+
+
+
+ a| 
+Mot de passe
+ a| 
+Mot de passe utilisé pour se connecter au périphérique Celerra
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Intervalle d'interrogation des stocks (minutes)
+ a| 
+Intervalle entre les sondages d'inventaire (20 minutes par défaut)
+
+
+
+ a| 
+Délai d'attente du processus SSH (s)
+ a| 
+Délai d'expiration du processus SSH (600 secondes par défaut)
+
+
+
+ a| 
+Nombre de tentatives
+ a| 
+Nombre de tentatives d'inventaire
+
+
+
+ a| 
+Délai d'attente de bannière SSH (s)
+ a| 
+Délai d'attente de bannière SSH (20 secondes par défaut)
+
+|===

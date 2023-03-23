@@ -1,0 +1,48 @@
+---
+permalink: howto/custom-dashboard-concepts.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les tableaux de bord et widgets personnalisés offrent une grande flexibilité dans l"affichage des données. Voici quelques concepts qui vous aideront à tirer le meilleur parti de vos tableaux de bord personnalisés. Chaque concept est expliqué plus en détail dans les sections suivantes.' 
+---
+= Concepts de tableau de bord personnalisé
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les tableaux de bord et widgets personnalisés offrent une grande flexibilité dans l'affichage des données. Voici quelques concepts qui vous aideront à tirer le meilleur parti de vos tableaux de bord personnalisés. Chaque concept est expliqué plus en détail dans les sections suivantes.
+
+*Variables*
+
+Les variables vous permettent de modifier simultanément les données affichées dans certains ou tous les widgets d'un tableau de bord. En configurant chaque widget pour qu'il utilise une variable commune, les modifications apportées à un endroit entraînent la mise à jour automatique des données affichées dans chaque widget.
+
+*Requêtes et/ou expressions multiples*
+
+Chaque widget de séries chronologiques (graphiques de ligne, de spline, de zone ou de zone empilée) peut avoir jusqu'à cinq requêtes et/ou expressions pour déterminer quelles données afficher, ce qui vous permet de comparer différents ensembles de données sur un seul graphique. Par exemple, vous pouvez afficher un graphique en courbes indiquant les IOPS pour le stockage et les machines virtuelles, ou un graphique unique comparant le débit et la latence pour tous les pools de stockage.
+
+*Cumul et regroupement*
+
+Les données affichées dans chaque widget sont regroupées à partir des points de données collectés. Vous pouvez choisir de faire rouler ces données de plusieurs façons :
+
+* AVG : fait défiler les données en tant que moyenne des données sous-jacentes
+* Max : fait défiler les données jusqu'au maximum des données sous-jacentes
+* Min : fait défiler les données jusqu'au minimum des données sous-jacentes
+* Somme : fait défiler les données sous forme de somme des données sous-jacentes
+
+
+Par défaut, toutes les données sous-jacentes sont rassemblées en une seule entrée (toutes) sur le graphique ou le tableau. Vous pouvez choisir de regrouper les données d'un attribut spécifique, comme Data Center ou Tier, pour distribuer les données sous-jacentes dans les groupes souhaités. Votre widget affichera uniquement les données des attributs sélectionnés.
+
+Vous pouvez regrouper des données dans un widget de tableau en fonction de l'attribut que vous choisissez. Par exemple, vous pouvez choisir de grouper votre table par data Center. Les groupes peuvent être développés ou réduits à volonté. Les données de performances d'une table sont rassemblées dans l'en-tête du groupe selon la méthode de cumul définie dans le widget (moyenne, max, min ou somme).
+
+Les widgets de tableau peuvent être triés par colonne et les colonnes peuvent être déplacées ou redimensionnées selon les besoins.
+
+*Haut / Bas*
+
+Utilisez cette option pour limiter le jeu de résultats dans les widgets de graphique, pour choisir d'afficher les N résultats supérieurs dans votre widget ou les N résultats inférieurs. Vous pouvez choisir cette option lorsque les données ne sont pas cumulées ou sont cumulées par un attribut spécifique.
+
+*Remplacer le temps du tableau de bord*
+
+Par défaut, la plupart des widgets que vous ajoutez à un tableau de bord affichent les données en fonction de la plage horaire définie dans le tableau de bord (3h, 24h, 3d, 7d, 30d ou plage personnalisée). Cependant, vous pouvez remplacer ce paramètre de temps dans des widgets individuels pour les forcer à afficher des données dans un contexte temporel spécifique, quel que soit le réglage de l'heure du tableau de bord.
+
+Ces concepts sont expliqués plus en détail dans la section suivante.

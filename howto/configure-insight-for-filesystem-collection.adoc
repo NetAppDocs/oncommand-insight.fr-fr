@@ -1,0 +1,79 @@
+---
+permalink: howto/configure-insight-for-filesystem-collection.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Pour configurer Insight en vue de la collecte des données d"utilisation du système de fichiers, vous devez installer la licence Host Utilization Pack et configurer la source de données Host and VM File Systems de NetApp.' 
+---
+= Configurez Insight pour la collecte de systèmes de fichiers
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour configurer Insight en vue de la collecte des données d'utilisation du système de fichiers, vous devez installer la licence Host Utilization Pack et configurer la source de données Host and VM File Systems de NetApp.
+
+
+
+== Avant de commencer
+
+Si ce n'est pas déjà fait, installez la licence Host Utilization Pack. Vous pouvez vérifier la licence dans la page *Admin* > *Setup*, sous l'onglet *Licenses*.
+
+La source de données des systèmes de fichiers hôte et machine virtuelle ne signale que l'utilisation du système de fichiers et les métadonnées du système de fichiers pour les ressources de calcul connues *Compute Resources* (hôtes et machines virtuelles) actuellement collectées ou découvertes dans Insight :
+
+* Les machines virtuelles sont collectées par des sources de données d'hyperviseur telles que Hyper-V et VMware.
+* Les hôtes sont détectés via la résolution des périphériques.
+
+
+Les annotations de niveau appropriées doivent être présentes sur les ressources de stockage appropriées.
+
+Les périphériques de stockage en mode bloc connectés suivants sont pris en charge :
+
+* NetApp clustered Data ONTAP (cdot)
+* NetApp 7-mode
+* CLARiiON
+* Windows : disques virtuels VMware (VMDK) pour FC, iSCSI
+* Linux : VMDK VMware (iSCSI et FC non pris en charge)
+
+
+Un *Compute Resource Group* est une annotation qui permet de regrouper des hôtes et/ou des machines virtuelles qui partagent des informations d'identification administratives communes.
+
+
+
+== Étapes
+
+. Tout d'abord, annotez les hôtes et/ou les machines virtuelles à inclure dans votre *Compute Resource Group*. Accédez à *requêtes* > *+Nouvelle requête* et recherchez _Virtual machine_ Assets.
++
+Vous devrez répéter ces étapes pour les ressources _Host_.
+
+. Cliquez sur le sélecteur de colonne à droite du tableau et sélectionnez la colonne *Compute Resource Group* pour l'afficher dans le tableau des résultats de la requête.
+. Sélectionnez les machines virtuelles que vous souhaitez ajouter au groupe de ressources de calcul souhaité. Vous pouvez utiliser un filtre pour rechercher des actifs spécifiques.
+. Cliquez sur le bouton *actions* et choisissez *Modifier l'annotation*.
+. Sélectionnez l'annotation _Compute Resource Group_, puis choisissez le nom du groupe de ressources souhaité dans le champ _Value_.
++
+L'annotation du groupe de ressources est ajoutée aux VM sélectionnées. Le nom du groupe de ressources doit correspondre au nom que vous configurerez ultérieurement dans la source de données Host et VM File Systems.
+
+. Pour configurer la source de données Host et VM File Systems pour un groupe de ressources de calcul, cliquez sur *Admin* > *Data sources* et *Add* la source de données _NetApp Host and VM File Systems_.
++
+image::../media/hostutil-dsconfig.gif[hostutil dsconfig]
+
+. Dans la section *Configuration*, entrez un *Nom d'utilisateur* et un *Mot de passe* pour un utilisateur du système d'exploitation disposant des droits appropriés pour récupérer les données du système de fichiers. Pour les utilisateurs du système d'exploitation Windows, ce préfixe de domaine doit être inclus si votre environnement Windows l'utilise.
++
+Notez qu'une unité d'acquisition Insight (au) installée sur Linux peut générer des rapports sur les ressources de calcul Linux, tandis qu'un au installé sur Windows peut communiquer avec les ressources de calcul Linux ou Windows.
+
+. Entrez le nom du *Compute Resource Group* pour les actifs à partir desquels vous souhaitez collecter les données d'utilisation du système de fichiers. Ce nom doit correspondre au nom du groupe de ressources que vous avez utilisé pour annoter les ressources ci-dessus.
++
+Si vous ne renseignez pas le champ Groupe de ressources de calcul, la source de données collectera les données des hôtes ou des machines virtuelles qui n'ont pas d'annotation Groupe de ressources de calcul.
+
+. Dans la section **Configuration avancée **, entrez l'intervalle d'interrogation souhaité pour cette source de données. La valeur par défaut de 6 heures est généralement suffisante.
+. Il est recommandé de *tester* la connexion de la source de données avant de l'enregistrer. Un résultat de connexion réussi indique également le nombre de cibles de ressources de calcul contenues dans le groupe.
+. Cliquez sur *Enregistrer*. La source de données Host et VM File Systems commence à collecter les données lors de la prochaine interrogation.
+. Une fois les données du système de fichiers collectées, vous pouvez les afficher sur la page de ressources de l'hôte ou de la machine virtuelle, dans le widget système de fichiers :
++
+image::../media/hostutil-vmlpfstable.gif[hostutil vmlpfstable]
+
+. Répétez ces étapes pour chaque groupe de ressources de calcul que vous aurez. Chaque groupe de ressources de calcul doit être associé à sa propre source de données Host et VM File Systems.
++
+Notez que les informations relatives au système de fichiers seront collectées pour les hôtes et les machines virtuelles qui sont déjà acquis par les sources de données VMware ou Hyper-V traditionnelles de votre environnement.
+
+

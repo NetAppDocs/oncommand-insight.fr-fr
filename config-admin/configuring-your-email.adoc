@@ -1,0 +1,14 @@
+---
+permalink: config-admin/configuring-your-email.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous devez configurer OnCommand Insight pour qu"il accède à votre système de messagerie de sorte que le serveur OnCommand Insight puisse utiliser votre messagerie pour générer des rapports auxquels vous êtes abonné, et transporter les informations de support à des fins de dépannage vers le support technique NetApp.' 
+---
+= Configuration de votre courrier électronique
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez configurer OnCommand Insight pour qu'il accède à votre système de messagerie de sorte que le serveur OnCommand Insight puisse utiliser votre messagerie pour générer des rapports auxquels vous êtes abonné, et transporter les informations de support à des fins de dépannage vers le support technique NetApp.

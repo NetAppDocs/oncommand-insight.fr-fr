@@ -1,0 +1,50 @@
+---
+permalink: config-admin/setting-up-weekly-backups-for-your-oci-database.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous pouvez configurer des sauvegardes hebdomadaires automatiques pour votre base de données Insight afin de protéger vos données. Ces sauvegardes automatiques écrasent les fichiers du répertoire de sauvegarde spécifié. 
+---
+= Configuration de sauvegardes hebdomadaires de votre base de données Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez configurer des sauvegardes hebdomadaires automatiques pour votre base de données Insight afin de protéger vos données. Ces sauvegardes automatiques écrasent les fichiers du répertoire de sauvegarde spécifié.
+
+
+
+== Description de la tâche
+
+*Meilleure pratique* : lorsque vous configurez la sauvegarde hebdomadaire de la base de données OCI, vous devez stocker les sauvegardes sur un serveur différent de celui utilisé par Insight, en cas de défaillance du serveur. Ne stockez pas de sauvegardes manuelles dans le répertoire de sauvegarde hebdomadaire car chaque sauvegarde hebdomadaire écrase les fichiers du répertoire.
+
+Le fichier de sauvegarde contient les éléments suivants :
+
+* Données d'inventaire
+* Jusqu'à 7 jours de données de performances
+
+
+
+
+== Étapes
+
+. Dans la barre d'outils Insight, cliquez sur *Admin* > *Setup*.
+. Cliquez sur l'onglet *sauvegarde et archivage*.
+. Dans la section sauvegarde hebdomadaire, sélectionnez *Activer la sauvegarde hebdomadaire*.
+. Entrez le chemin d'accès à l'emplacement *Backup*. Il peut se trouver sur le sur le serveur Insight local ou sur un serveur distant accessible à partir du serveur Insight.
++
+[NOTE]
+====
+Le paramètre d'emplacement de sauvegarde est inclus dans la sauvegarde elle-même. Si vous restaurez la sauvegarde sur un autre système, sachez que l'emplacement du dossier de sauvegarde peut être incorrect sur le nouveau système. Vérifiez les paramètres de votre emplacement de sauvegarde après la restauration d'une sauvegarde.
+
+====
+. Sélectionnez l'option *Cleanup* pour conserver les deux dernières sauvegardes ou les cinq dernières.
+. Cliquez sur *Enregistrer*.
+
+
+
+
+== Résultats
+
+Vous pouvez également accéder à *Admin* > *Troubleshooting* pour créer une sauvegarde à la demande.

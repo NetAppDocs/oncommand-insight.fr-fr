@@ -1,0 +1,70 @@
+---
+permalink: config-admin/client-configuration-for-smart-card-and-certificate-login.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les ordinateurs clients nécessitent un middleware et des modifications aux navigateurs pour permettre l"utilisation des cartes à puce et la connexion au certificat. Les clients qui utilisent déjà des cartes à puce ne doivent pas nécessiter de modifications supplémentaires sur leurs ordinateurs clients.' 
+---
+= Configuration d'un client pour prendre en charge la connexion par carte à puce et certificat
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les ordinateurs clients nécessitent un middleware et des modifications aux navigateurs pour permettre l'utilisation des cartes à puce et la connexion au certificat. Les clients qui utilisent déjà des cartes à puce ne doivent pas nécessiter de modifications supplémentaires sur leurs ordinateurs clients.
+
+
+
+== Avant de commencer
+
+[NOTE]
+====
+Pour obtenir les instructions les plus récentes sur les cartes CAC et les certificats, consultez les articles suivants de la base de connaissances (connexion au support requise) :
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight["Comment configurer l'authentification CAC (Common Access Card) pour OnCommand Insight"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight_DataWarehouse["Comment configurer l'authentification CAC (Common Access Card) pour l'entrepôt de données OnCommand Insight"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_and_import_a_Certificate_Authority_(CA)_signed_certificate_into_OCI_and_DWH_7.3.X["Comment créer et importer un certificat signé d'autorité de certification dans OnComand Insight et l'entrepôt de données OnCommand Insight 7.3.x."]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_a_Self_Signed_Certificate_within_OnCommand_Insight_7.3.X_installed_on_a_Windows_Host["Comment créer un certificat auto-signé dans OnCommand Insight 7.3.X installé sur un hôte Windows"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_import_a_Cognos_Certificate_Authority_(CA)_signed_certificate_into_DWH_7.3.3_and_later["Importation d'un certificat signé par l'autorité de certification Cognos dans l'entrepôt de données OnCommand 7.3.3 et versions ultérieures"]
+
+
+====
+
+
+== Description de la tâche
+
+Les exigences de configuration client courantes sont les suivantes :
+
+* Installation d'un middleware de carte à puce, tel qu'ActivClient (voir http://militarycac.com/activclient.htm)[]
+* Modification du navigateur IE (voir http://militarycac.com/files/Making_AKO_work_with_Internet_Explorer_color.pdf)[]
+* Modification du navigateur Firefox (voir https://militarycac.com/firefox2.htm)[]
+
+
+Les étapes de configuration supplémentaires incluent les éléments suivants :
+
+
+
+== Étapes
+
+. Désactivez les fenêtres contextuelles de dialogue inutiles lors du lancement du client Java :
++
+.. Ouvrez le panneau de configuration « Java ».
+.. Sélectionnez l'onglet « Avancé ».
+.. Sélectionnez « Paramètres de sécurité avancés ».
+.. Désactivez l'option ""utiliser les certificats et les clés dans le magasin de clés du navigateur".
+
+
+. Importer des certificats logiciels dans les certificats personnels d'un utilisateur à l'aide du navigateur Chrome :
++
+.. Accédez à « Paramètres avancés ».
+.. Sélectionnez « gérer les certificats ».
+.. Sélectionnez l'onglet « certificats personnels ».
+.. Sélectionnez « Importer... ».
+.. Choisissez le fichier .p12.
+.. Complétez l'assistant en vous assurant de remplir le champ de mot de passe avec le mot de passe utilisé pour créer le certificat.
+
+
++
+Des étapes similaires sont requises pour configurer les navigateurs Internet Explorer et Firefox.
+
+

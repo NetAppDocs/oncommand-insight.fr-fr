@@ -1,0 +1,14 @@
+---
+permalink: config-admin/assigning-annotations-to-assets-using-annotation-rules.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Pour attribuer automatiquement des annotations aux ressources en fonction des critères que vous définissez, vous devez configurer des règles d"annotation. OnCommand Insight affecte les annotations aux ressources en fonction de ces règles. Insight propose également deux règles d"annotation par défaut que vous pouvez modifier en fonction de vos besoins ou supprimer si vous ne souhaitez pas les utiliser.' 
+---
+= Affectation d'annotations à des actifs à l'aide de règles d'annotation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour attribuer automatiquement des annotations aux ressources en fonction des critères que vous définissez, vous devez configurer des règles d'annotation. OnCommand Insight affecte les annotations aux ressources en fonction de ces règles. Insight propose également deux règles d'annotation par défaut que vous pouvez modifier en fonction de vos besoins ou supprimer si vous ne souhaitez pas les utiliser.

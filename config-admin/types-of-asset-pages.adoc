@@ -1,0 +1,44 @@
+---
+permalink: config-admin/types-of-asset-pages.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les pages d"actifs résument l"état actuel d"un bien et contiennent des liens vers des informations supplémentaires sur le bien et ses actifs connexes.' 
+---
+= Types de pages de ressources
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les pages d'actifs résument l'état actuel d'un bien et contiennent des liens vers des informations supplémentaires sur le bien et ses actifs connexes.
+
+OnCommand Insight fournit des pages de documents pour les ressources suivantes :
+
+* Ordinateur virtuel
+* Volumétrie
+* Volume interne
+* Hôte physique
+* Pool de stockage
+* Stockage
+* Datastore
+* Hyperviseur
+* Client supplémentaire
+* Nœud de stockage
+* Qtree
+* Disque
+* VMDK
+* Port
+* Commutateur
+* Structure
+* Stockage objet (par exemple, Atmos, Centera, Amazon S3)
+* Zone
+
+
+Les informations de mappage et de masquage peuvent être affichées dans les tableaux des pages zone, volume, VM et hôte/hyperviseur.
+
+[NOTE]
+====
+Les informations récapitulatives sont disponibles pour les actifs de stockage objet. Toutefois, vous ne pouvez accéder à ces informations qu'à partir de la page de détails sources de données.
+
+====

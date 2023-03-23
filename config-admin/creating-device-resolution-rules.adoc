@@ -1,0 +1,159 @@
+---
+permalink: config-admin/creating-device-resolution-rules.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous créez des règles de résolution de périphériques pour identifier les hôtes, le stockage et les bandes qui ne sont pas automatiquement identifiés actuellement par OnCommand Insight. Les règles que vous créez identifient les périphériques actuellement dans votre environnement et identifient également les périphériques similaires ajoutés à votre environnement. 
+---
+= Création de règles de résolution de périphérique
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous créez des règles de résolution de périphériques pour identifier les hôtes, le stockage et les bandes qui ne sont pas automatiquement identifiés actuellement par OnCommand Insight. Les règles que vous créez identifient les périphériques actuellement dans votre environnement et identifient également les périphériques similaires ajoutés à votre environnement.
+
+
+
+== Description de la tâche
+
+Lorsque vous créez des règles, vous commencez par identifier la source des informations sur lesquelles la règle s'exécute, la méthode utilisée pour extraire des informations et si la recherche DNS est appliquée aux résultats de la règle.
+
+|===
+
+
+ a| 
+Source utilisée pour identifier le périphérique
+
+
+
+ a| 
+* Alias SRM pour les hôtes
+* Alias de stockage contenant un nom d'hôte ou de bande intégré
+* Alias de commutateur contenant un nom d'hôte ou de bande intégré
+* Noms de zone contenant un nom d'hôte intégré
+
+
+
+
+ a| 
+Méthode utilisée pour extraire le nom du périphérique de la source
+
+
+
+ a| 
+* En l'état (extraire un nom d'un SRM)
+* Délimiteurs
+* Expressions régulières
+
+
+
+
+ a| 
+Recherche DNS
+
+
+
+ a| 
+Indique si vous utilisez DNS pour vérifier le nom d'hôte.
+
+|===
+Vous créez des règles dans l'onglet règles de résolution automatique. Les étapes suivantes décrivent le processus de création de règles.
+
+
+
+== Étapes
+
+. Cliquez sur *gérer* > *résolution du périphérique*
+. Dans l'onglet *règles de résolution automatique*, cliquez sur *+Ajouter*
++
+L'écran Nouvelle règle s'affiche.
+
++
+[NOTE]
+====
+L'écran Nouvelle règle comprend une icône * ?*, qui fournit de l'aide et des exemples pour créer des expressions régulières.
+
+====
+. Dans la liste *Type*, sélectionnez le périphérique à identifier.
++
+Vous pouvez sélectionner hôte ou bande.
+
+. Dans la liste *Source*, sélectionnez la source à utiliser pour identifier l'hôte.
++
+Selon la source choisie, Insight affiche la réponse suivante :
+
++
+** Les zones répertorie les zones et le WWN devant être identifiés par Insight.
+** SRM répertorie les alias non identifiés qui doivent être identifiés par Insight
+** Les alias de stockage répertorient les alias de stockage et le WWN qui doivent être identifiés par Insight
+** L'alias de commutateur répertorie les alias de commutateur qui doivent être identifiés par Insight
+
+
+. Dans la liste *méthode*, sélectionnez la méthode à utiliser pour identifier l'hôte.
++
+|===
+
+
+| Source | Méthode 
+
+
+ a| 
+SRM
+ a| 
+« En l'état », « délimiteurs », « expressions régulières »
+
+
+
+ a| 
+Alias de stockage
+ a| 
+"Delimiters", ou "expressions régulières"
+
+
+
+ a| 
+Changer d'alias
+ a| 
+"Delimiters", ou "expressions régulières"
+
+
+
+ a| 
+Zones
+ a| 
+"Delimiters", ou "expressions régulières"
+
+|===
++
+** Les règles utilisant "`Définition de`" nécessitent les délimiteurs et la longueur minimale du nom d'hôte.
++
+La longueur minimale du nom d'hôte est le nombre de caractères qu'Insight doit utiliser pour identifier un hôte. Insight effectue des recherches DNS uniquement pour les noms d'hôte qui sont aussi longs ou plus longs.
+
++
+Pour les règles utilisant des délimitateurs, la chaîne d'entrée est tokenisée par le délimiteur et une liste de candidats de noms d'hôte est créée en faisant plusieurs combinaisons du jeton adjacent. La liste est ensuite triée, la plus grande à la plus petite. Par exemple, pour vipsnq03_hba3_emc3_12ep0, la liste donne les résultats suivants :
+
++
+*** vipsnq03_hba3_emc3_12ep0
+*** vipsnq03_hba3_emc3
+*** hba3 emc3_12ep0
+*** vipsnq03_hba3
+*** emc3_12ep0
+*** hba3_emc3
+*** vipsnq03
+*** 12ep0
+*** emc3
+*** hba3
+
+
+** Les règles utilisant « expression régulière » exigent une expression régulière, le format et la sélection de la sensibilité des cas.
+
+
+. Cliquez sur image:../media/runar.gif[""] Pour exécuter toutes les règles, ou cliquez sur la flèche vers le bas du bouton pour exécuter la règle que vous avez créée (et toutes les autres règles qui ont été créées depuis la dernière exécution complète de AR).
+
+
+
+
+== Résultats
+
+Les résultats de l'exécution de la règle s'affichent dans l'onglet FC Identify.

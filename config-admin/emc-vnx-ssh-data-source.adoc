@@ -1,0 +1,105 @@
+---
+permalink: config-admin/emc-vnx-ssh-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Pour la configuration, la source de données EMC VNX \(SSH\) requiert l"adresse IP de la station pilote ainsi qu"un nom d"utilisateur et un mot de passe en lecture seule.' 
+---
+= Source de données EMC VNX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour la configuration, la source de données EMC VNX (SSH) requiert l'adresse IP de la station pilote ainsi qu'un nom d'utilisateur et un mot de passe _read-only_.
+
+
+
+== Configuration
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+IP VNX
+ a| 
+Adresse IP ou nom de domaine complet de la station de contrôle VNX
+
+
+
+ a| 
+Nom d'utilisateur VNX
+ a| 
+Nom d'utilisateur de la station de contrôle VNX
+
+
+
+ a| 
+Mot de passe VNX
+ a| 
+Mot de passe de la station pilote VNX
+
+|===
+
+
+== De formation
+
+* Adresse IP de la station pilote
+* Nom d'utilisateur et mot de passe en lecture seule.
+* Validation de l'accès : vérification de l'accès SSH via PuTTY.
+
+
+
+
+== Configuration avancée
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+Intervalle entre les sondages d'inventaire (40 minutes par défaut)
+
+
+
+ a| 
+Délai d'attente du processus VNX SSH (s)
+ a| 
+Délai d'expiration du processus VNX SSH (600 secondes par défaut)
+
+
+
+ a| 
+Tentatives de nouvelle tentative de commande Celerra
+ a| 
+Nombre de tentatives de nouvelle tentative de commande Celerra
+
+
+
+ a| 
+Délai d'expiration du processus externe CLARiiON pour le stock (s)
+ a| 
+Délai d'expiration du processus externe CLARiiON pour l'inventaire (1800 secondes par défaut)
+
+
+
+ a| 
+Intervalle d'interrogation des performances (s)
+ a| 
+Intervalle entre les sondages de performances (300 secondes par défaut)
+
+
+
+ a| 
+Délai d'attente du processus externe CLARiiON pour les performances (s)
+ a| 
+Délai d'expiration du processus externe CLARiiON pour les performances (1800 secondes par défaut)
+
+|===

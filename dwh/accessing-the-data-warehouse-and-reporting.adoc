@@ -1,0 +1,22 @@
+---
+permalink: dwh/accessing-the-data-warehouse-and-reporting.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Le portail Data Warehouse permet d"accéder aux options d"administration. À partir du portail Data Warehouse, vous pouvez également accéder au portail Reporting.' 
+---
+= Accès au portail Data Warehouse and Reporting
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le portail Data Warehouse permet d'accéder aux options d'administration. À partir du portail Data Warehouse, vous pouvez également accéder au portail Reporting.
+
+
+
+== Étapes
+
+. Connectez-vous en tant qu'administrateur au portail Data Warehouse à l'adresse `+https://hostname/dwh+`, où `hostname` Est le nom du système sur lequel l'entrepôt de données OnCommand Insight est installé.
+. Dans la barre d'outils Data Warehouse, cliquez sur image:../media/oci-reporting-portal-icon.gif[""] Pour ouvrir le portail de rapports.
+

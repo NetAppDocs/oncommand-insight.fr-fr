@@ -1,0 +1,22 @@
+---
+permalink: reporting/data-model-fact-and-dimension-tables.html 
+sidebar: sidebar 
+keywords:  
+summary: Chaque modèle de données comprend à la fois des tables de faits et de dimensions. 
+---
+= Tableaux de faits et de dimensions des modèles de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Chaque modèle de données comprend à la fois des tables de faits et de dimensions.
+
+* Tableaux de faits : contiennent des données mesurées, par exemple la quantité, la capacité brute et utilisable. Contiennent des clés étrangères pour les tables de cotes.
+* Tables de dimensions : contiennent des informations descriptives sur les faits, par exemple, les centres de données et les business units. Une dimension est une structure, souvent composée de hiérarchies, qui catégorise les données. Les attributs dimensionnels permettent de décrire les valeurs dimensionnelles.
+
+
+À l'aide d'attributs de cotes différents ou multiples (vus comme des colonnes dans les rapports), vous créez des rapports qui accèdent aux données pour chaque dimension décrite dans le modèle de données.
+
+Pour obtenir des explications sur tous les éléments de données utilisés dans la création de rapports, reportez-vous au glossaire des données.

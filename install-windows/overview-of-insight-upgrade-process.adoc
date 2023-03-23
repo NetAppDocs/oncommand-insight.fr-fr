@@ -1,0 +1,44 @@
+---
+permalink: install-windows/overview-of-insight-upgrade-process.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Avant de commencer à mettre à niveau Insight, il est important de comprendre le processus de mise à niveau. Le processus de mise à niveau est le même pour la plupart des versions d"Insight.' 
+---
+= Présentation du processus de mise à niveau de OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de commencer à mettre à niveau Insight, il est important de comprendre le processus de mise à niveau. Le processus de mise à niveau est le même pour la plupart des versions d'Insight.
+
+Le processus de mise à niveau d'Insight inclut les tâches générales suivantes :
+
+* Téléchargement des packages d'installation
+* Sauvegarde de la base de données Data Warehouse
++
+Pour éviter tout risque d'erreur dans le reporting des données, vous devez sauvegarder la base de données de l'entrepôt de données avant de sauvegarder la base de données Insight.
+
+* Sauvegarde de la base de données Insight
++
+La base de données Insight est automatiquement sauvegardée lorsque vous effectuez la mise à niveau sur place. Il est recommandé de sauvegarder la base de données avant la mise à niveau et de placer la sauvegarde dans un emplacement autre que celui du serveur Insight. Insight ne collecte pas de nouvelles données au cours du processus de mise à niveau. Pour réduire la quantité de données non collectées, vous devez démarrer la sauvegarde de la base de données dans une heure ou deux de la mise à niveau planifiée.
+
+* Sauvegardez la configuration de sécurité Data Warehouse et Remote acquisition Unit si la configuration par défaut a été modifiée.
++
+La configuration de sécurité autre que celle par défaut doit être restaurée dans l'entrepôt de données et le serveur RAU une fois la mise à niveau terminée et avant la restauration de la base de données Data Warehouse dans le système.
+
+* Sauvegarde de tous les rapports Data Warehouse personnalisés
++
+Lorsque vous sauvegardez la base de données Data Warehouse, des rapports personnalisés sont inclus. Le fichier de sauvegarde est créé sur le serveur Data Warehouse. Il est recommandé de sauvegarder les rapports personnalisés dans un emplacement autre que le serveur Data Warehouse.
+
+* Désinstallation du logiciel Data Warehouse et de l'unité d'acquisition distante, le cas échéant
++
+Le serveur Insight dispose d'une mise à niveau sans déplacement ; vous n'avez pas besoin de désinstaller le logiciel. La mise à niveau sur place sauvegarde la base de données, désinstalle le logiciel, installe la nouvelle version, puis restaure la base de données.
+
+* Mise à niveau du logiciel sur le serveur Insight, l'entrepôt de données et les unités d'acquisition à distance
++
+Toutes les licences précédemment appliquées restent dans le registre ; vous n'avez pas besoin de les réappliquer.
+
+* Exécution des tâches post-mise à niveau
+

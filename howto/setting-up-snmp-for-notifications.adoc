@@ -1,0 +1,30 @@
+---
+permalink: howto/setting-up-snmp-for-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Insight peut envoyer des notifications SNMP en cas d"événements déclencheurs, tels que des violations ou lorsque les seuils des sources de données sont dépassés.' 
+---
+= Configuration de SNMP pour les notifications
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insight peut envoyer des notifications SNMP en cas d'événements déclencheurs, tels que des violations ou lorsque les seuils des sources de données sont dépassés.
+
+
+
+== Description de la tâche
+
+Pour configurer SNMP dans Insight, procédez comme suit :
+
+
+
+== Étapes
+
+. Cliquez sur *Admin* > *Notifications* et allez à la section *SNMP*.
+. Cliquez sur *actions* et sélectionnez *Ajouter une source d'interruption*.
+. Dans la boîte de dialogue *Ajouter des destinataires de trap SNMP*, entrez l'adresse *IP* et le *Port* auxquels vous souhaitez envoyer les messages de trap SNMP. Pour *Community String*, utilisez « public » pour les messages d'interruption SNMP.
+. Cliquez sur *Enregistrer*.
+

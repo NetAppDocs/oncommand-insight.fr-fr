@@ -1,0 +1,45 @@
+---
+permalink: config-admin/committing-a-data-source-patch.html 
+sidebar: sidebar 
+keywords:  
+summary: Utilisez les informations du résumé des correctifs pour déterminer si le correctif fonctionne comme prévu, puis validez le correctif sur votre réseau. 
+---
+= Validation d'un correctif de source de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilisez les informations du résumé des correctifs pour déterminer si le correctif fonctionne comme prévu, puis validez le correctif sur votre réseau.
+
+
+
+== Avant de commencer
+
+Vous avez installé un correctif et devez décider si celui-ci a réussi et doit être approuvé.
+
+
+
+== Étapes
+
+. Dans la barre d'outils Insight, cliquez sur *Admin*.
+. Cliquez sur *Patches*.
++
+Si aucun correctif n'est en cours d'installation, les correctifs actuellement en cours de révision sont vides.
+
+. Dans *patches actuellement en cours de révision*, vérifiez l'état des patches de source de données actuellement appliqués.
+. Pour examiner les détails associés à un patch spécifique, cliquez sur le nom lié du patch.
+. Dans les informations récapitulatives des correctifs, présentées dans cet exemple, cochez les cases *Recommandation* et *Commentaires* pour évaluer la progression du correctif.
++
+image::../media/oci-7-patch-approval-gif.gif[boîte de dialogue d'approbation de correctif]
+
+. Consultez le tableau *sources de données concernées* pour voir l'état de chaque source de données affectée avant et après le correctif.
++
+Si vous craignez qu'il y ait un problème avec l'une des sources de données en cours de correction, cliquez sur le nom lié dans le tableau sources de données concernées.
+
+. Si vous concluez que le correctif doit être appliqué à ce type de source de données, cliquez sur *Approve*.
++
+Les sources de données sont modifiées et le correctif est supprimé des correctifs actuellement en cours de révision.
+
+

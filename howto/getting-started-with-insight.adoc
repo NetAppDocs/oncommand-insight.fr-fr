@@ -1,0 +1,23 @@
+---
+permalink: howto/getting-started-with-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Une fois OnCommand Insight installé et correctement sous licence, vous devez effectuer un certain nombre de tâches pour préparer votre environnement à la présentation des données importantes pour vous. 
+---
+= Mise en route d'Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Une fois OnCommand Insight installé et correctement sous licence, vous devez effectuer un certain nombre de tâches pour préparer votre environnement à la présentation des données importantes pour vous.
+
+Certaines des tâches effectuées dans un environnement standard sont les suivantes :
+
+. *Annoter vos actifs* pour les préparer à des requêtes et à des rapports. Les annotations initiales utiles incluent généralement le data Center, le niveau et le niveau de service.
+. **Création de requêtes** pour afficher des données importantes et aider au dépannage
+. *Affectation d'applications* et de *entités commerciales* à des actifs
+. *Création de politiques de performances* et *alertes* pour les violations de ces politiques
+. *Création de tableaux de bord personnalisés* pour mettre en évidence les données en fonction des besoins ou du rôle de l'utilisateur
+

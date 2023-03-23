@@ -1,0 +1,14 @@
+---
+permalink: install-windows/performing-the-software-upgrade.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Une fois toutes les tâches préalables terminées, vous pouvez mettre à niveau tous les composants d"Insight vers une nouvelle version en téléchargeant et en exécutant le package d"installation applicable sur chaque serveur.' 
+---
+= Exécution de la mise à niveau logicielle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Une fois toutes les tâches préalables terminées, vous pouvez mettre à niveau tous les composants d'Insight vers une nouvelle version en téléchargeant et en exécutant le package d'installation applicable sur chaque serveur.

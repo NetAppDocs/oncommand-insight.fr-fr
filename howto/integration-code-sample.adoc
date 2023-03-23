@@ -1,0 +1,126 @@
+---
+permalink: howto/integration-code-sample.html 
+sidebar: sidebar 
+keywords:  
+summary: Le fichier Integration.json identifie la charge utile . 
+---
+= Informations sur le fichier Integration.json
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le fichier Integration.json identifie la charge utile .
+
+L'illustration suivante fournit une représentation codée en couleur d'un simple fichier Integration.json. La table d'accompagnement identifie la fonction des objets dans le fichier.
+
+image::../media/color-code-example.gif[exemple de code couleur]
+
+
+
+== A propos des fichiers Integration.json
+
+Chaque champ a les caractéristiques suivantes :
+
+* La section "identificateurs" forme une clé composée unique pour créer un nouvel "objet" dans Insight
+* Les « attributs » fournissent des métadonnées de support sur l'objet.
++
+Dans les deux cas, seule la valeur du dernier rapport pour cet objet (identifiée par les identificateurs) est conservée.
+
+* Les « points de données » sont des données de séries chronologiques et doivent être des valeurs numériques. Insight conserve chaque valeur rapportée ici pendant 90 jours (par défaut) et les lie à l'objet identifié.
+
+
+
+
+== Expressions numériques
+
+Par défaut, toutes les expressions de valeur sont signalées comme chaînes dans la charge utile d'intégration. les « identificateurs » et les « attributs » peuvent uniquement définir des valeurs de chaîne. Les « points de données » peuvent définir des chaînes ou des valeurs numériques. Les valeurs numériques sont définies à l'aide de l'une des touches de modification suivantes :
+
+* num : nombre total d'octets reçus depuis la dernière initialisation du compteur
+* delta : nombre d'octets reçus pendant l'intervalle d'interrogation
+* rate : taux de réception moyen au cours de l'intervalle d'interrogation, en octets par seconde
++
+Un taux de réception moyen au cours de l'intervalle d'interrogation en mégaoctets par seconde peut être obtenu en utilisant une combinaison d'opérations de taux et de mathématiques
+
+
+
+
+
+== Opérations mathématiques
+
+Le `integration.json` le fichier prend en charge les opérations mathématiques suivantes : ajouter, soustraire, multiplier, diviser. L'exemple suivant montre les opérations de multiplication, de division et de somme dans un fichier JSON.
+
+image::../media/net-util-rhel.gif[rhel util. net]
+
+
+
+== Mots-clés
+
+Un mot clé de pack d'intégration, chaîne, est implémenté pour forcer les chaînes D'OCTETS ou les types propriétaires dérivés D'UNE CHAÎNE D'OCTETS qui seraient normalement rendus au format hexadécimal pour être rendus en tant que caractères ASCII.
+
+Souvent, les chaînes D'OCTETS contiennent des données binaires, par exemple les adresses MAC et les WWN :
+
+[listing]
+----
+        "interface_mac": {
+                  "mibModuleName":      "IF-MIB",
+                  "objectName":         "ifPhysAddress"
+                 }
+----
+IfPhysAddress est de type PhysAddress, qui est juste une CHAÎNE D'OCTETS :
+
+[listing]
+----
+  PhysAddress ::= TEXTUAL-CONVENTION
+                DISPLAY-HINT "1x:"
+                STATUS       current
+                DESCRIPTION
+                                "Represents media- or physical-level addresses."
+                SYNTAX       OCTET STRING
+----
+Lorsque ifPhysAddress est rendu comme hex par défaut, le résultat est :
+
+[listing]
+----
+"interface_mac": "00:50:56:A2:07:E7"
+----
+Cependant, si vous avez une CHAÎNE D'OCTETS ou un type propriétaire dérivé DE LA CHAÎNE D'OCTETS que vous voulez interpréter comme ASCII, vous pouvez utiliser le mot clé "string" :
+
+[listing]
+----
+        "string_test_1": {
+          "string": {
+            "mibModuleName":      "IF-MIB",
+            "objectName":         "ifPhysAddress"
+          }
+        },
+
+        "string_test_2": {
+          "string": [
+            {
+              "mibModuleName":      "IF-MIB",
+              "objectName":         "ifPhysAddress"
+            },
+            {
+              "const": "JSD"
+            },
+            {
+              "mibModuleName":      "IF-MIB",
+              "objectName":         "ifPhysAddress"
+            }
+          ]
+        }
+----
+Le mot clé suit les règles de concaténation de chaînes existantes, en insérant un espace unique entre les termes dans l'exemple suivant :
+
+[listing]
+----
+      "string_test_1": "PV¢ç",
+              "string_test_2": "PV¢ç JSD PV¢ç"
+----
+Le mot clé "string" agit sur un seul terme ou sur une liste de termes, mais pas sur des expressions imbriquées. Les expressions imbriquées ne sont prises en charge que pour les expressions de point de données. Si vous essayez d'utiliser une expression « chaîne » dans une expression de point de données, une erreur similaire à la suivante se produit :
+
+_Java.lang.IllegalArgumentException : pack d'intégration 'GenericSwitch32' index 'nmp_generic_interface_32' section 'daPointss' key 'tring_test_3' expression numérique JSON non prise en charge '{« string »:{« mibModuleName »:« IF-MIB »,« objectName »}« ifPhysifAddress »
+
+Certains types DE CHAÎNE D'OCTETS dérivés tels que DisplayString, SnmpAdminString ont la priorité codée en dur par rapport au mot-clé "string". C'est parce que SnmpAdminString est spécifiquement codé en UTF-8, et nous voulons le traiter correctement, alors que le mot clé "string" force la représentation de chaîne par défaut renvoyée par snmp_Framework, qui suppose des points de code ascii à un octet par caractère.

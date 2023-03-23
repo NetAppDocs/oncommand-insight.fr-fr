@@ -1,0 +1,24 @@
+---
+permalink: config-admin/your-business-entities-hierarchy.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous pouvez définir des entités métier pour assurer le suivi des données de votre environnement et générer des rapports à un niveau plus granulaire. 
+---
+= La hiérarchie de vos entités commerciales
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez définir des entités métier pour assurer le suivi des données de votre environnement et générer des rapports à un niveau plus granulaire.
+
+Dans OnCommand Insight, la hiérarchie des entités métier contient les niveaux suivants :
+
+* *Tenant* est principalement utilisé par les fournisseurs de services pour associer des ressources à un client, par exemple NetApp.
+* *Secteur d'activité (LOB)* est un secteur d'activité ou une gamme de produits au sein d'une entreprise, par exemple, le stockage de données.
+* *Unité commerciale* représente une unité commerciale traditionnelle telle que juridique ou Marketing.
+* *Le projet* est souvent utilisé pour identifier un projet spécifique au sein d'une unité commerciale pour lequel vous souhaitez une refacturation de capacité. Par exemple, « brevets » peut être un nom de projet pour l'unité commerciale juridique et « événements de vente » peut être un nom de projet pour l'unité commerciale Marketing. Notez que les noms de niveau peuvent inclure des espaces.
+
+
+Vous n'êtes pas tenu d'utiliser tous les niveaux dans la conception de votre hiérarchie d'entreprise.

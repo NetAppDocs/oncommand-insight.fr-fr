@@ -1,0 +1,63 @@
+---
+permalink: reporting/creating-a-report-cognos-11.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La création de rapports avec Cognos 11 diffère des versions précédentes de Cognos. Utilisez cette procédure pour créer un rapport à l"aide des rapports OnCommand Insight prédéfinis.' 
+---
+= Création d'un rapport à l'aide de Cognos 11
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La création de rapports avec Cognos 11 diffère des versions précédentes de Cognos. Utilisez cette procédure pour créer un rapport à l'aide des rapports OnCommand Insight prédéfinis.
+
+
+
+== Description de la tâche
+
+Procédez comme suit pour générer un simple rapport sur la capacité physique des pools de stockage et de stockage dans plusieurs data centers.
+
+
+
+== Étapes
+
+. Dans la barre d'outils, cliquez sur image:../media/new-report.gif[""]
+. Cliquez sur *Rapport*
+. Cliquez sur *modèles* > *Vierge*
+. Cliquez sur *Thèmes* > *Bleu froid* > *OK*
++
+Les onglets Source et données s'affichent
+
+. Cliquez sur *Source* > *image:../media/new-report.gif[""]*
+. Dans la boîte de dialogue Ouvrir le fichier, cliquez sur *contenu de l'équipe* > *Packages*
++
+La liste des packages disponibles s'affiche.
+
+. Cliquez sur *capacité de stockage et de pool de stockage* > *Ouvrir*
+. Cliquez sur image:../media/new-report.gif[""]
++
+Les styles disponibles pour votre rapport sont affichés.
+
+. Cliquez sur *liste*
++
+Ajoutez des noms appropriés pour la liste et la requête
+
+. Cliquez sur *OK*
+. Développez *capacité physique*
+. Développez jusqu'au niveau le plus bas de *Data Center*
+. Faire glisser image:../media/data-center.gif[""] Au palais des rapports.
+. Développez *capacité (Mo)*
+. Faites glisser *Capacity (MB)* vers le palais des rapports.
+. Faites glisser *Used Capacity (MB)* vers le palais des rapports.
+. Exécutez le rapport en cliquant sur image:../media/run-report.gif[""] et sélection d'un type de sortie.
+
+
+
+
+== Résultats
+
+Un rapport similaire à ce qui suit est créé :
+
+image::../media/cognos-11-report.gif[rapport cognos 11]

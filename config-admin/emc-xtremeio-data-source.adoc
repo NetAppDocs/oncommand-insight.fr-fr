@@ -1,0 +1,149 @@
+---
+permalink: config-admin/emc-xtremeio-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Pour configurer la source de données EMC XtremIO \(HTTP\), vous devez disposer de l"adresse hôte du serveur de gestion XtremIO \(XMS\) et d"un compte disposant de privilèges d"administrateur.' 
+---
+= Source de données EMC XtremIO
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour configurer la source de données EMC XtremIO (HTTP), vous devez disposer de l'adresse d'hôte du serveur de gestion XtremIO (XMS) et d'un compte disposant de privilèges d'administrateur.
+
+
+
+== Terminologie
+
+OnCommand Insight acquiert les informations d'inventaire suivantes à partir de la source de données EMC XtremIO. Pour chaque type de ressource acquis par Insight, la terminologie la plus courante utilisée pour cette ressource est indiquée. Lors de l'affichage ou du dépannage de cette source de données, gardez à l'esprit la terminologie suivante :
+
+|===
+
+
+| Terme du fournisseur/modèle | Terme Insight 
+
+
+ a| 
+Disque (SSD)
+ a| 
+Disque
+
+
+
+ a| 
+Cluster
+ a| 
+Stockage
+
+
+
+ a| 
+Contrôleur
+ a| 
+Nœud de stockage
+
+
+
+ a| 
+Volumétrie
+ a| 
+Volumétrie
+
+
+
+ a| 
+Mappage de LUN
+ a| 
+Carte de volume
+
+
+
+ a| 
+Initiateur, cible
+ a| 
+Masque de volume
+
+|===
+[NOTE]
+====
+Il s'agit uniquement de mappages terminologiques courants et peuvent ne pas représenter tous les cas pour cette source de données.
+
+====
+
+
+== De formation
+
+* Adresse IP de chaque serveur de gestion XtremIO
+* Un compte avec des privilèges d'administrateur
+* Accès au port 443 (HTTPS)
+
+
+
+
+== Configuration
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Hôte XMS
+ a| 
+Adresse IP ou nom de domaine complet du serveur de gestion XtremIO
+
+
+
+ a| 
+Nom d'utilisateur
+ a| 
+Nom d'utilisateur du serveur de gestion XtremIO
+
+
+
+ a| 
+Mot de passe
+ a| 
+Mot de passe du serveur de gestion XtremIO
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Port TCP
+ a| 
+Port TCP utilisé pour se connecter au serveur de gestion XTremIO (par défaut 443 )
+
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+Intervalle entre les sondages d'inventaire (60 minutes par défaut)
+
+
+
+ a| 
+Délai de connexion (s)
+ a| 
+Délai d'expiration de la connexion (par défaut : 60 secondes)
+
+
+
+ a| 
+Intervalle(s) d'interrogation de performance
+ a| 
+Intervalle entre les sondages de performances (300 secondes par défaut)
+
+|===

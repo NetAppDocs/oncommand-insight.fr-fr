@@ -1,0 +1,23 @@
+---
+permalink: dwh/generating-a-manual-data-warehouse-build.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Après avoir forcé une mise à jour des annotations \(exécution de données transitoires\) dans OnCommand Insight, vous devez lancer une construction d"entrepôt de données. Vous pouvez attendre la prochaine génération planifiée ou lancer une génération maintenant.' 
+---
+= Génération manuelle d'une génération d'entrepôt de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Après avoir forcé une mise à jour des annotations (exécutant des données transitoires) dans OnCommand Insight, vous devez lancer une construction d'entrepôt de données. Vous pouvez attendre la prochaine génération planifiée ou lancer une génération maintenant.
+
+
+
+== Étapes
+
+. Connectez-vous en tant qu'administrateur à Data Warehouse Portal à l'adresse `+https://hostname/dwh+`, où `hostname` Est le nom du système sur lequel l'entrepôt de données OnCommand Insight est installé.
+. Dans le volet de navigation de gauche, cliquez sur *Agenda*.
+. Cliquez sur *construire maintenant*.
+

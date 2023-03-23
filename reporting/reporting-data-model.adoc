@@ -1,0 +1,28 @@
+---
+permalink: reporting/reporting-data-model.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Votre entreprise peut bénéficier des données découvertes et stockées dans l"entrepôt de données OnCommand Insight. L"entrepôt de données OnCommand Insight est un référentiel centralisé qui stocke les données provenant de plusieurs sources d"information et les transforme en un modèle de données multidimensionnel commun pour des requêtes et des analyses efficaces.' 
+---
+= Modèle de données de reporting
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Votre entreprise peut bénéficier des données découvertes et stockées dans l'entrepôt de données OnCommand Insight. L'entrepôt de données OnCommand Insight est un référentiel centralisé qui stocke les données provenant de plusieurs sources d'information et les transforme en un modèle de données multidimensionnel commun pour des requêtes et des analyses efficaces.
+
+À partir de ce référentiel, vous pouvez générer des rapports personnalisés tels que la facturation interne, l'analyse de consommation et les rapports de prévision qui répondent à des questions telles que :
+
+* Quel inventaire ai-je à faire ?
+* Où est mon inventaire?
+* Qui utilise nos ressources ?
+* Quelle est la refacturation du stockage alloué à une unité commerciale ?
+* Quelle marge ai-je sur les ports des commutateurs ?
+* Combien de temps me faut-il pour acquérir de la capacité de stockage supplémentaire ?
+* Les unités commerciales sont-elles alignées sur les niveaux de stockage appropriés ?
+* Dans quelle mesure les allocations de stockage sont-elles changeantes en un mois, un trimestre ou une année ?
+
+
+À l'aide du modèle de données fourni avec les rapports OnCommand Insight, vous pouvez utiliser les outils de création de rapports pour concevoir et planifier des rapports.

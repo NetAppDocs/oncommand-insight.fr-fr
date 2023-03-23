@@ -1,0 +1,64 @@
+---
+permalink: config-admin/opening-the-violations-dashboard.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Lorsque Insight génère des violations en raison des seuils définis dans les règles de performance, vous pouvez les afficher à l"aide du tableau de bord des violations. Le tableau de bord répertorie toutes les violations qui se produisent sur votre réseau et vous permet de localiser et de résoudre les problèmes.' 
+---
+= Surveillance des violations de votre réseau
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsque Insight génère des violations en raison des seuils définis dans les règles de performance, vous pouvez les afficher à l'aide du tableau de bord des violations. Le tableau de bord répertorie toutes les violations qui se produisent sur votre réseau et vous permet de localiser et de résoudre les problèmes.
+
+
+
+== Étapes
+
+. Ouvrez OnCommand Insight dans votre navigateur.
+. Dans la barre d'outils Insight, cliquez sur *tableaux de bord* et sélectionnez *Tableau de bord des violations*.
++
+Le tableau de bord des violations s'affiche.
+
+. Vous pouvez utiliser le graphique à secteurs *violations by Policies* de la manière suivante :
++
+** Vous pouvez placer votre curseur sur n'importe quelle tranche d'un graphique pour afficher le pourcentage de violations totales survenues pour une règle ou une mesure particulière.
+** Vous pouvez cliquer sur une tranche d'un graphique pour « l'agrandir », ce qui vous permet de mettre en évidence et d'étudier plus soigneusement cette tranche en la déplaçant hors du reste du graphique.
+** Vous pouvez cliquer sur image:../media/oci-widget-open-full-screen.gif[""] dans le coin supérieur droit pour afficher le graphique à secteurs en mode plein écran, puis cliquez sur image:../media/oci-restore-size-icon.gif[""] encore une fois pour réduire le graphique à secteurs. Un graphique à secteurs peut contenir un maximum de cinq coupes. Par conséquent, si vous disposez de six règles générant des violations, Insight combine les cinquième et sixième tranches en une tranche « autres ». Insight attribue le plus grand nombre de violations à la première coupe, la seconde la plus grande violation à la deuxième coupe, etc.
+
+
+. Vous pouvez utiliser le tableau *Historique des violations* de la manière suivante :
++
+** Vous pouvez positionner le curseur sur le graphique pour afficher le nombre total de violations survenues à une heure donnée et le nombre de violations survenues en dehors du total pour chaque mesure spécifiée.
+** Vous pouvez cliquer sur une étiquette de légende pour supprimer les données associées à la légende du graphique.
++
+Cliquez sur la légende pour afficher à nouveau les données.
+
+** Vous pouvez cliquer sur image:../media/oci-widget-open-full-screen.gif[""] dans le coin supérieur droit pour afficher la carte en mode plein écran, puis cliquez sur image:../media/oci-restore-size-icon.gif[""] encore une fois pour réduire le graphique à secteurs.
+
+
+. Vous pouvez utiliser la table *violations* de la manière suivante :
++
+** Vous pouvez cliquer sur image:../media/oci-widget-open-full-screen.gif[""] dans le coin supérieur droit pour afficher le tableau en mode plein écran, puis cliquez sur image:../media/oci-restore-size-icon.gif[""] encore une fois pour réduire le graphique à secteurs.
++
+Si la taille de votre fenêtre est trop petite, le tableau des violations n'affiche que trois colonnes ; cependant, lorsque vous cliquez sur image:../media/oci-widget-open-full-screen.gif[""], affichage de colonnes supplémentaires (jusqu'à sept).
+
+** Vous pouvez afficher les violations pour une période donnée (*1h*, *3h*, *24h*, *3d*, *7d*, Et *30d*), avec Insight indiquant un nombre maximum de 1000 violations pour la période sélectionnée.
+** Vous pouvez utiliser la zone *filter* pour afficher uniquement les violations que vous voulez.
+** Vous pouvez modifier l'ordre de tri des colonnes d'un tableau en ordre croissant (flèche vers le haut) ou décroissant (flèche vers le bas) en cliquant sur la flèche dans l'en-tête de colonne ; pour revenir à l'ordre de tri par défaut, cliquez sur n'importe quel autre en-tête de colonne.
++
+Par défaut, le tableau affiche les violations dans l'ordre décroissant.
+
+** Vous pouvez cliquer sur une violation dans la colonne ID pour afficher la page d'inventaire pendant la durée de la violation.
+** Vous pouvez cliquer sur les liens de ressources (par exemple, pool de stockage et volume de stockage) dans la colonne Description pour afficher les pages d'actifs associées à ces ressources.
+** Vous pouvez cliquer sur le lien de la stratégie de performances dans la colonne Stratégie pour afficher la boîte de dialogue Modifier la stratégie.
++
+Vous pouvez ajuster les seuils d'une règle si vous estimez qu'elle génère trop ou trop peu de violations.
+
+** Vous pouvez cliquer sur un numéro de page pour parcourir les données par page s'il y a plus de données que ne tient sur une seule page.
+** Vous pouvez cliquer sur image:../media/oci-delete-policy-threshold-icon.gif[""] pour rejeter la violation.
+
+
+

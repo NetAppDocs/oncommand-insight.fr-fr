@@ -1,0 +1,40 @@
+---
+permalink: config-admin/hds-landing-page-terminology-storage-pool.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Termes s"appliquant aux objets ou aux références figurant sur les pages d"accueil des ressources du pool de stockage HDS.' 
+---
+= Pool de stockage HDS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Termes s'appliquant aux objets ou aux références figurant sur les pages d'accueil des ressources du pool de stockage HDS.
+
+
+
+== Terminologie du pool de stockage HDS
+
+Les termes suivants s'appliquent aux objets ou références que vous pouvez trouver sur les pages d'accueil des ressources du pool de stockage HDS. Un grand nombre de ces termes s'appliquent également à d'autres collecteurs de données.
+
+* Type : la valeur ici sera l'une des suivantes :
++
+** RÉSERVÉ : si ce pool est dédié à d'autres fins que les volumes de données, c'est-à-dire la journalisation, les snapshots
+** Provisionnement fin -- s'il s'agit d'un pool HDP
+** RAID Group -- vous ne les verrez probablement pas pour quelques raisons :
++
+OCI constitue une solution efficace pour éviter de doubler les capacités à tous les coûts. Sur les solutions HDS, il faut généralement construire des groupes RAID à partir des disques, créer des volumes de pool sur ces groupes RAID et construire des pools (souvent HDP, mais un usage spécial) à partir de ces volumes de pool. Si OCI a signalé à la fois les groupes RAID sous-jacents tels qu'ils sont, ainsi que les pools, la somme de leur capacité brute dépasserait largement la somme des disques.
+
++
+Le collecteur de données HDS HiCommand d'OCI réduit arbitrairement la taille des groupes RAID par la capacité des volumes du pool. Dans ce cas, OCI ne signale pas du tout le groupe RAID. De plus, tous les groupes RAID résultants sont marqués d'une manière telle qu'ils ne sont pas visibles dans l'interface utilisateur Web OCI, mais ils circulent dans l'entrepôt de données OCI (DWH). L'objectif de ces décisions est d'éviter l'encombrement de l'interface utilisateur pour des éléments qui ne sont pas importants pour la plupart des utilisateurs.- si votre baie HDS dispose de groupes RAID de 50 Mo libres, vous ne pouvez probablement pas utiliser cet espace libre pour des résultats significatifs.
+
+
+
+* Node : N/A, car les pools HDS ne sont liés à aucun nœud spécifique
+* Redondance : niveau RAID du pool. Il est possible que plusieurs valeurs pour un pool HDP comprennent plusieurs types RAID
+* Capacity % : pourcentage utilisé par le pool pour l'utilisation des données, avec les Go utilisés et la taille totale des Go logiques du pool
+* Capacité sur-engagée - valeur dérivée indiquant « la capacité logique de ce pool est sursouscrite par ce pourcentage en raison de la somme des volumes logiques dépassant la capacité logique du pool de ce pourcentage »
+* Snapshot : affiche la capacité réservée à l'utilisation des snapshots sur ce pool
+

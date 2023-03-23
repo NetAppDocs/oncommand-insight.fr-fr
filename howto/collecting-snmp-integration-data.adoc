@@ -1,0 +1,48 @@
+---
+permalink: howto/collecting-snmp-integration-data.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La source de données SNMP d"intégration vous permet de collecter des données SNMP génériques dans OnCommand Insight.' 
+---
+= Collecte des données d'intégration SNMP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La source de données SNMP d'intégration vous permet de collecter des données SNMP génériques dans OnCommand Insight.
+
+
+
+== Packs d'intégration
+
+La source de données d'intégration SNMP utilise un « pack d'intégration » pour définir les valeurs d'intégration collectées et les objets SNMP qui fournissent ces valeurs.
+
+Un pack d'intégration comprend :
+
+* Fichier de configuration JSON (Integration.json) définissant le contenu de la charge utile d'intégration en termes d'objets SNMP d'un type de périphérique spécifique (switch, router, etc.).
+* Liste des fichiers MIB dont dépend le pack d'intégration.
+
+
+Un pack d'intégration peut définir plusieurs types de données. Par exemple, lors de l'intégration d'un hôte RHEL, un type de données peut être défini pour les informations système générales telles que la disponibilité, le nombre d'utilisateurs et le nombre de processus en cours d'exécution. Un second type de données peut être défini pour les données relatives à l'utilisation de la mémoire et du système de fichiers. En général, chaque type de données doit être « plat » et ne peut pas contenir de données imbriquées.
+
+Un pack d'intégration unique ne doit pas définir plus de 24 types de données. Insight limite la quantité de données d'intégration collectées. Une tentative d'acquisition de plus de 24 rapports sur une période d'une minute entraîne une erreur de taux.
+
+Les noms des types d'intégration doivent respecter les règles suivantes :
+
+* Le nom ne peut pas commencer par les caractères suivants : _, - ou,+
+* Le nom ne peut pas contenir les caractères suivants : #, \, /, *, ?, ", <, >, |, ' , `,
+* Ne peut pas dépasser 100 octets encodés UTF-8
+* Ne peut pas être nommé . ou ..
+
+
+
+
+== Format de fichier d'intégration
+
+Un pack d'intégration est un fichier ZIP qui contient un fichier de configuration JSON (Integration.json) définissant le contenu de la charge utile d'intégration en termes d'objets SNMP. Il contient également un dossier MIB qui contient tous les fichiers MIB et leurs dépendances MIB.
+
+Le `integration.json` Le fichier doit exister au niveau supérieur du fichier ZIP et les fichiers MIB doivent exister dans le sous-répertoire "resources/mibs" du fichier ZIP. Le fichier ZIP peut également contenir des fichiers, tels qu'un fichier « readme.txt », si vous le souhaitez. Voici un exemple de structure ZIP d'intégration :
+
+image::../media/integration-zip.gif[zip d'intégration]

@@ -1,0 +1,63 @@
+---
+permalink: install-linux/insight-architecture.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Une installation typique de OnCommand Insight comprend l"acquisition de données et l"entreposage de données avec des rapports, tous facilement accessibles à partir d"une interface utilisateur Web. Pour des environnements plus sécurisés, l"acquisition peut s"effectuer via une unité d"acquisition à distance.' 
+---
+= Architecture d'Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Une installation typique de OnCommand Insight comprend l'acquisition de données et l'entreposage de données avec des rapports, tous facilement accessibles à partir d'une interface utilisateur Web. Pour des environnements plus sécurisés, l'acquisition peut s'effectuer via une unité d'acquisition à distance.
+
+Le diagramme suivant présente les principaux composants de l'architecture Insight :
+
+image::../media/oci-architecture-2022.gif[architecture d'oci 2022]
+
+* *Serveur OnCommand Insight*
++
+Le serveur OnCommand Insight contient le référentiel de données principal et les principaux composants d'analyse. Le serveur construit en permanence une topologie de bout en bout de l'environnement, analyse l'environnement et génère des alertes lorsqu'un incident ou une violation est détecté.
+
+* *Acquisition*
++
+Le moteur de collecte Insight est basé sur une ou plusieurs unités d'acquisition. Chaque serveur Insight contient une unité d'acquisition locale et peut prendre en charge les unités d'acquisition à distance. Chaque unité est un service exécuté sur le réseau qui accède (via des modules appelés _sources de données_) et collecte les données des périphériques du centre de données. Les informations collectées par les unités d'acquisition sont ensuite envoyées au serveur pour analyse.
+
++
+Le moteur de collecte est conçu pour être hautement modulaire et facile à corriger.
+
+* *API d'intégration*
++
+Une API permet la collecte de données à partir d'agents externes. Les données d'intégration peuvent être affichées dans l'interface utilisateur Web à l'aide de requêtes et de widgets. Les tableaux de bord peuvent contenir des données Insight natives et des données d'intégration. Vous pouvez appliquer des filtres, des regroupements et des regroupements aux données de ces tableaux de bord.
+
+* *Interface utilisateur Web*
++
+L'interface utilisateur Web HTML5 pour Insight vous permet de configurer les sources de données et votre environnement de surveillance, notamment les stratégies, seuils et alertes. Vous utilisez ensuite le tableau de bord et les pages de ressources Web de UIAsset pour identifier et rechercher les problèmes potentiels. Vous pouvez créer des tableaux de bord personnalisés à l'aide de divers widgets, chacun offrant une grande flexibilité d'affichage, d'analyse et de transcription de vos données.
+
+* *Détection d'anomalie*
++
+Les anomalies sont des événements de changement de performance au sein de l'infrastructure applicative qui ne sont pas conformes aux modèles observés auparavant et attendus. La détection des anomalies cible l'infrastructure qui assure le service d'une application, et identifie les changements dans les modèles et les comportements de traitement. Ces modèles de traitement cycliques incluent l'historique des flux et des abbbs dans les performances d'une charge de travail pendant les heures d'activité et en dehors de l'entreprise.
+
+* *Entrepôt de données*
++
+L'entrepôt de données OnCommand Insight est un référentiel centralisé qui stocke les données de plusieurs serveurs Insight et transforme les données en un modèle de données multidimensionnel commun pour les requêtes et les analyses.
+
++
+L'entrepôt de données OnCommand Insight permet d'accéder à une base de données ouverte composée de plusieurs magasins de données qui vous permettent de générer des rapports personnalisés sur les performances et la capacité, tels que des rapports de refacturation, des rapports sur les tendances avec des données historiques, des analyses de consommation et des rapports de prévision.
+
++
+L'entrepôt de données consolide et prépare les données pour la création de rapports pour une ou plusieurs installations d'Insight. Les données incluent l'historique, les tendances, l'inventaire, la refacturation, la présentation et les présentations de données pour faciliter la planification à long terme de l'infrastructure du data Center.
+
+* *Cognos*
++
+Cognos est le moteur de reporting d'Insight, un outil de business intelligence IBM qui vous permet d'afficher des rapports prédéfinis ou de créer des rapports personnalisés. Les rapports Insight génèrent des rapports à partir des données de l'entrepôt de données.
+
++
+[NOTE]
+====
+Si vous installez Insight sur un serveur Linux, vous ne pouvez utiliser Cognos que si Data Warehouse est installé sur un serveur Windows. Pour plus d'informations sur l'installation de l'entrepôt de données sous Windows, reportez-vous au _Guide d'installation de OnCommand Insight pour Microsoft Windows_.
+
+====
+

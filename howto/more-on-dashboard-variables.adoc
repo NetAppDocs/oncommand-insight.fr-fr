@@ -1,0 +1,76 @@
+---
+permalink: howto/more-on-dashboard-variables.html 
+sidebar: sidebar 
+keywords:  
+summary: Les variables de tableau de bord peuvent être utilisées entre différents champs et doivent respecter les règles de nommage. Ces concepts sont expliqués ici. 
+---
+= Plus d'informations sur les variables du tableau de bord
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les variables de tableau de bord peuvent être utilisées entre différents champs et doivent respecter les règles de nommage. Ces concepts sont expliqués ici.
+
+
+
+== Types de variables
+
+Une variable peut être de l'un des types suivants :
+
+*Texte* : chaîne alphanumérique. Il s'agit du type de variable par défaut.
+
+*Numérique*: Un nombre ou une plage de nombres.
+
+*Boolean* : à utiliser pour les champs avec des valeurs True/False, Yes/No, 0/1, etc Pour la variable booléenne, les choix sont _Yes_, _No_, _None_, _any_.
+
+*Date* : une date ou une plage de dates.
+
+
+
+== Variables « génériques »
+
+Vous pouvez définir une variable générique ou universelle en cliquant sur le bouton *variable* et en sélectionnant l'un des types répertoriés ci-dessus. Ces types sont toujours affichés en haut de la liste déroulante. La variable reçoit un nom par défaut, par exemple "`$var1`", et n'est pas liée à une annotation ou à un attribut spécifique.
+
+La configuration d'une variable générique vous permet d'utiliser cette variable dans les widgets pour filtrer _any_ field de ce type. Par exemple, si vous avez un widget de table affichant _Name_, _alias_ et _Vendor_ (qui sont tous des attributs de type texte) et que "`$var1`" est une variable de type texte, vous pouvez définir des filtres pour chacun de ces champs du widget pour utiliser la variable $var1. Vous pouvez configurer d'autres widgets pour qu'ils utilisent $var1 pour ces champs ou pour n'importe quel champ de texte.
+
+Sur la page de votre tableau de bord, le fait de définir $var1 sur une valeur (par exemple « NetApp ») filtre _all_ des champs des widgets _all_ qui sont définis pour utiliser cette variable. De cette façon, vous pouvez mettre à jour plusieurs widgets à la fois pour mettre en évidence les données du tableau de bord que vous choisissez à volonté.
+
+Comme des variables génériques peuvent être utilisées pour n'importe quel champ de ce type, vous pouvez modifier le nom d'une variable générique sans modifier sa fonctionnalité.
+
+[NOTE]
+====
+Toutes les variables sont traitées comme des variables « génériques », même celles que vous créez pour un attribut spécifique, car toutes les variables configurées d'un type sont affichées lorsque vous définissez un filtre pour les attributs ou les annotations de ce type. Cependant, la meilleure pratique consiste à créer une variable générique lorsque vous l'utiliserez pour filtrer une valeur dans plusieurs champs, comme dans l'exemple _Nom/alias/fournisseur_ ci-dessus.
+
+====
+
+
+== Dénomination des variables
+
+Noms des variables :
+
+* Doit toujours être préfixé avec un "`$`". Cette option est automatiquement ajoutée lorsque vous configurez une variable.
+* Ne peut pas contenir de caractères spéciaux ; seules les lettres a-z et les chiffres 0-9 sont autorisés.
+* Ne peut pas comporter plus de 20 caractères, y compris le symbole «`$` ».
+* Ne sont pas sensibles à la casse : $cityname et $cityname sont la même variable.
+* Ne peut pas être identique à un nom de variable existant.
+* Ne peut pas être uniquement le symbole "`$`".
+
+
+
+
+== Widgets qui utilisent des variables
+
+Les variables peuvent être utilisées avec les widgets suivants :
+
+* Graphique de zone
+* Graphique à barres
+* Diagramme de tracé de boîte
+* Graphique linéaire
+* Diagramme de dispersion
+* Widget valeur unique
+* Graphique de spline
+* Graphique de surface empilée
+* Widget de tableau
+

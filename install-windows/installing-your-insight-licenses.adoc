@@ -1,0 +1,46 @@
+---
+permalink: install-windows/installing-your-insight-licenses.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Après avoir reçu le fichier de licence contenant les clés de licence Insight de NetApp, vous pouvez utiliser les fonctionnalités d"installation pour installer toutes vos licences en même temps.' 
+---
+= Installation de vos licences Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Après avoir reçu le fichier de licence contenant les clés de licence Insight de NetApp, vous pouvez utiliser les fonctionnalités d'installation pour installer toutes vos licences en même temps.
+
+
+
+== Description de la tâche
+
+Les clés de licence Insight sont stockées dans un `.txt` ou `.lcn` fichier.
+
+
+
+== Étapes
+
+. Ouvrez le fichier de licence dans un éditeur de texte et copiez le texte.
+. Ouvrez Insight dans votre navigateur.
+. Dans la barre d'outils Insight, cliquez sur *Admin*.
+. Cliquez sur *Configuration*.
+. Cliquez sur l'onglet *licences*.
+. Cliquez sur *mettre à jour la licence*.
+. Copiez le texte de la clé de licence dans la zone de texte *License*.
+. Sélectionnez l'opération *Update (le plus courant)*.
+. Cliquez sur *Enregistrer*.
+. Si vous utilisez le modèle de licence Insight Consumption, vous devez cocher la case *Activer l'envoi des informations d'utilisation à NetApp* dans la section *Envoyer les informations d'utilisation*. Le proxy doit être correctement configuré et activé pour votre environnement.
+
+
+
+
+== Une fois que vous avez terminé
+
+Après avoir installé les licences, vous pouvez effectuer les tâches de configuration suivantes :
+
+* Configurer les sources de données.
+* Créez des comptes utilisateur OnCommand Insight.
+

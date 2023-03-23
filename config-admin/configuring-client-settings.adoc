@@ -1,0 +1,39 @@
+---
+permalink: config-admin/configuring-client-settings.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez configurer les options du client d"interface utilisateur Java OnCommand Insight sur le serveur.' 
+---
+= Configuration des paramètres du client
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez configurer les options du client d'interface utilisateur Java OnCommand Insight sur le serveur.
+
+
+
+== Étapes
+
+. Dans la barre d'outils Insight, cliquez sur *Admin* et sélectionnez *Dépannage*.
+. En bas de la page dans la zone autres tâches, cliquez sur le lien *Dépannage avancé*.
+. Dans le menu Avancé de la page suivante, cliquez sur l'onglet *Paramètres avancés*.
+. Dans *acquisition Dynamic Attributes*, entrez le nombre d'heures pour ignorer les changements d'attributs dynamiques.
+. Dans *configurer les paramètres du client*, entrez les informations suivantes.
++
+** *Taille initiale du tas* est la taille du tas créé lorsque la machine virtuelle (machine virtuelle) est démarrée pour exécuter le client. Ce numéro est utilisé pour construire le``-Xms<size>`` paramètre à `java`. La diminution de ce nombre signifie que Java prend moins de mémoire au démarrage. (Cependant, il est plus probable que Java ait besoin de réattribuer le segment de mémoire lorsqu'il dépasse ce nombre, ce qui est une opération coûteuse, donc vous ne voulez pas que ce nombre soit trop petit.)
+** *Max Heap Size* est la plus grande taille que Java permettra au segment de mémoire de croître dans la machine virtuelle qui exécute le client. Ce numéro est utilisé pour construire le``-Xmx<size>`` paramètre à `java`.
+** Le niveau de journalisation contrôle la quantité de détails générée dans les journaux client. Il existe deux valeurs possibles :
++
+*** INFO - génère une quantité « normale » d'informations.
+*** DÉBOGAGE - génère des informations plus détaillées dans le journal du client pour faciliter le débogage.
+
+
+
+
+. Configurez vos alertes de source de données.
+. Configurez le message d'avertissement de connexion affiché par le client.
+. Cliquez sur *Enregistrer*.
+

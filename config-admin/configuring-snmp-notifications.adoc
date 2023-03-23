@@ -1,0 +1,60 @@
+---
+permalink: config-admin/configuring-snmp-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight prend en charge les notifications SNMP en cas de modification de la configuration et des règles de chemin global ainsi que de violation. Par exemple, des notifications SNMP sont envoyées lorsque les seuils des sources de données sont dépassés. 
+---
+= Configuration des notifications SNMP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight prend en charge les notifications SNMP en cas de modification de la configuration et des règles de chemin global ainsi que de violation. Par exemple, des notifications SNMP sont envoyées lorsque les seuils des sources de données sont dépassés.
+
+
+
+== Avant de commencer
+
+Les éléments suivants doivent avoir été remplis :
+
+* Identification de l'adresse IP du serveur qui consolide les interruptions pour chaque type d'événement.
++
+Vous devrez peut-être consulter votre administrateur système pour obtenir ces informations.
+
+* Identification du numéro de port par lequel la machine désignée obtient des interruptions SNMP, pour chaque type d'événement.
++
+Le port par défaut des interruptions SNMP est 162.
+
+* Compilation de la MIB sur votre site.
++
+La base MIB propriétaire est fournie avec le logiciel d'installation pour prendre en charge les interruptions OnCommand Insight. La MIB NetApp est compatible avec tous les logiciels de gestion SNMP standard et peut être trouvée sur le serveur Insight dans `<install dir>\SANscreen\MIBS\sanscreen.mib`.
+
+
+
+
+
+== Étapes
+
+. Cliquez sur *Admin* et sélectionnez *Notifications*.
+. Faites défiler jusqu'à la section *SNMP* de la page.
+. Cliquez sur *actions* et sélectionnez *Ajouter une source d'interruption*.
+. Dans la boîte de dialogue *Ajouter des destinataires de trap SNMP*, entrez les valeurs suivantes :
++
+** *IP*
++
+Adresse IP à laquelle OnCommand Insight envoie des messages d'interruption SNMP.
+
+** *Port*
++
+Numéro de port auquel OnCommand Insight envoie des messages d'interruption SNMP.
+
+** *Chaîne de communauté*
++
+Utilisez « public » pour les messages d'interruption SNMP.
+
+
+
+. Cliquez sur *Enregistrer*.
+

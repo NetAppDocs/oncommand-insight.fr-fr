@@ -1,0 +1,56 @@
+---
+permalink: howto/observe-an-objects-behavior-over-time.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez observer le comportement d"un seul objet pour déterminer si celui-ci fonctionne dans les niveaux opérationnels attendus.' 
+---
+= Observez le comportement d'un objet au fil du temps
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez observer le comportement d'un seul objet pour déterminer si celui-ci fonctionne dans les niveaux opérationnels attendus.
+
+
+
+== Étapes
+
+. Utilisez une requête pour identifier la machine virtuelle qui fera l'objet de l'analyse : *Query* > *+ Nouvelle requête* > *machine virtuelle* > *"nom"*
++
+Si vous ne renseignez pas le champ de nom, toutes les machines virtuelles sont renvoyées. Sélectionnez la machine virtuelle que vous souhaitez utiliser dans cet exercice. Vous pouvez le sélectionner en faisant défiler la liste des machines virtuelles.
+
+. Créez un nouveau tableau de bord pour les informations que vous souhaitez collecter. Dans la barre d'outils, cliquez sur *tableaux de bord* > *+Nouveau tableau de bord*.
+. Dans le nouveau tableau de bord, sélectionnez *variable* > *texte*.
++
+.. Ajoutez le nom de la machine virtuelle de votre requête en tant que``$var1`` valeur.
+.. Cochez la case.
+
+
++
+La variable est utilisée pour permuter facilement entre les différents ensembles d'objets que vous souhaitez analyser. Dans d'autres étapes de votre analyse, vous pouvez réutiliser cette variable pour une analyse supplémentaire par rapport à la machine virtuelle sélectionnée initialement. Les variables deviennent plus utiles lors de l'identification de plusieurs objets.
+
+. Ajoutez un widget graphique linéaire au nouveau tableau de bord : *widget* > *graphique linéaire*.
++
+.. Remplacez le type d'actif par défaut par la machine virtuelle : cliquez sur *machine virtuelle* > *latence-Total*.
+.. Cliquez sur *Filtrer par* > *Nom* > *$var1*.
+.. Modifier la période sur le tableau de bord : *remplacer l'heure du tableau de bord* > *activé* > *7 jours*.
+
+
++
+Vous pouvez modifier la durée de l'affichage à l'aide de l'une des sélections prédéfinies ou en spécifiant une plage horaire personnalisée.
+
++
++ le tableau de bord affiche le *IOPS-Total* de la machine virtuelle pour la période que vous spécifiez.
+
+. Attribuez un nom au widget et enregistrez le widget.
+
+
+
+
+== Résultats
+
+Votre widget doit contenir des données similaires aux suivantes : image:../media/guid-e7ea8edf-7fcc-4fc8-bd87-d8030e85a988.gif[""]
+
+La machine virtuelle affiche une période de latence anormalement élevée pendant une courte période dans les 7 jours qui s'affichent.

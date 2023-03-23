@@ -1,0 +1,69 @@
+---
+permalink: install-linux/remote-acquisition-unit-server-requirements.html 
+sidebar: sidebar 
+keywords: redhat 
+summary: 'Vous devez installer une unité d"acquisition à distance \(RAU\) pour acquérir des informations à partir de périphériques SAN situés derrière un pare-feu, sur un site distant, sur un réseau privé ou dans des segments de réseau différents. Avant d"installer le RAU, assurez-vous que votre environnement est conforme aux exigences du système d"exploitation RAU, du processeur, de la mémoire et de l"espace disque.' 
+---
+= Configuration requise pour le serveur de l'unité d'acquisition à distance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez installer une unité d'acquisition à distance (RAU) pour acquérir des informations à partir de périphériques SAN situés derrière un pare-feu, sur un site distant, sur un réseau privé ou dans différents segments de réseau. Avant d'installer le RAU, assurez-vous que votre environnement est conforme aux exigences du système d'exploitation RAU, du processeur, de la mémoire et de l'espace disque.
+
+|===
+
+
+| Composant | Conditions requises 
+
+
+ a| 
+Système d'exploitation
+ a| 
+Un ordinateur exécutant une version sous licence de l'une des versions suivantes, qui n'exécute aucun autre logiciel au niveau de l'application :
+
+* Red Hat Enterprise Linux 7.3, 7.4, 7.5, 7.6, 7.7 7.8, 7.9, 8.1, 8.2, 8.3, 8.4, 8.5
+* CentOS 7.2, 7.5, 7.6, 7.7, 7.8, 7.9, CentOS 8 flux
+* Oracle Enterprise Linux 7.5, 7.6, 7.7, 7.8, 7.9 8.1, 8.2, 8.3, 8.4, 8.5
+
+
+Un serveur dédié est recommandé.
+
+
+
+ a| 
+CPU
+ a| 
+4 cœurs de processeurs
+
+
+
+ a| 
+Mémoire
+ a| 
+16 GO DE RAM
+
+
+
+ a| 
+Espace disque disponible
+ a| 
+40 GO
+
+
+
+ a| 
+Le réseau
+ a| 
+Connexion Ethernet 100 Mbit/s /1 Gbit/s, adresse IP statique, connectivité IP à tous les périphériques FC et port requis au serveur OnCommand Insight (80 ou 443).
+
+
+
+ a| 
+Autorisations
+ a| 
+Autorisations sudo sur le serveur RAU
+
+|===

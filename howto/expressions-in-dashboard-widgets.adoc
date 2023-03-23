@@ -1,0 +1,16 @@
+---
+permalink: howto/expressions-in-dashboard-widgets.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les expressions des widgets de séries chronologiques vous permettent d"afficher des données basées sur des calculs avec des mesures de votre choix.' 
+---
+= Expressions dans les widgets du tableau de bord
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les expressions des widgets de séries chronologiques vous permettent d'afficher des données basées sur des calculs avec des mesures de votre choix.
+
+Dans un tableau de bord, chaque widget de séries chronologiques (ligne, spline, zone, zone empilée) vous permet de créer des expressions à partir des mesures que vous choisissez et d'afficher le résultat de ces expressions dans un seul graphique. Les exemples suivants utilisent des expressions pour résoudre des problèmes spécifiques. Dans le premier exemple, nous souhaitons afficher les IOPS en lecture sous forme de pourcentage du nombre total d'IOPS pour l'ensemble des ressources de stockage de notre environnement. Le deuxième exemple nous permet de connaître le système ou les IOPS qui se produisent dans notre environnement, à savoir les IOPS qui ne sont pas lues ou écrites.

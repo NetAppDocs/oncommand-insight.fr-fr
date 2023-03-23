@@ -1,0 +1,24 @@
+---
+permalink: config-admin/calculating-the-number-of-database-objects.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Pour déterminer le nombre d"objets dans la base de données OnCommand Insight, utilisez la fonction calculer l"échelle.' 
+---
+= Calcul du nombre d'objets de base de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour déterminer le nombre d'objets dans la base de données OnCommand Insight, utilisez la fonction calculer l'échelle.
+
+
+
+== Étapes
+
+. Dans la barre d'outils Insight, cliquez sur *Admin* et sélectionnez *Dépannage*.
+. En bas de la page dans la zone autres tâches, cliquez sur le lien *Dépannage avancé*.
+. Sur la page Dépannage avancé, cliquez sur l'onglet *Rapports*.
+. Cliquez sur *Echelle calculée*.
+

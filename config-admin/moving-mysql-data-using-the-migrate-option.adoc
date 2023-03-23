@@ -1,0 +1,33 @@
+---
+permalink: config-admin/moving-mysql-data-using-the-migrate-option.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez utiliser migrer le répertoire de données MySQL vers un autre répertoire. Vous pouvez conserver le répertoire de données actuel. Vous pouvez utiliser l"option migrer du menu Dépannage ou la ligne de commande. Cette procédure explique comment utiliser l"option Dépannage \> migrer les données MySQL.' 
+---
+= Déplacement des données MySQL à l'aide de l'option migrer
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser migrer le répertoire de données MySQL vers un autre répertoire. Vous pouvez conserver le répertoire de données actuel. Vous pouvez utiliser l'option migrer du menu Dépannage ou la ligne de commande. Cette procédure décrit comment utiliser l'option *Troubleshooting* > *Migrate MySQL data*.
+
+
+
+== Description de la tâche
+
+Si vous conservez le répertoire de données actuel, il sera conservé en tant que sauvegarde et renommé.
+
+
+
+== Étapes
+
+. Dans l'interface utilisateur Web, cliquez sur *Admin* et sélectionnez *Dépannage*.
+. Cliquez sur *Dépannage avancé*.
+. Sélectionnez l'onglet *actions*
+. Sélectionnez *migrer les données MySQL*.
+. Indiquez le chemin vers lequel vous souhaitez migrer les données.
+. Pour conserver le répertoire de données existant, cochez *conserver le répertoire de données existant.*
+. Cliquez sur *migrer*.
+

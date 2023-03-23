@@ -1,0 +1,40 @@
+---
+permalink: config-admin/cloning-a-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La fonction de clonage permet d"ajouter rapidement une source de données dotée des mêmes identifiants et attributs qu"une autre source de données. Le clonage vous permet de configurer facilement plusieurs instances d"un même type de périphérique.' 
+---
+= Clonage d'une source de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La fonction de clonage permet d'ajouter rapidement une source de données dotée des mêmes identifiants et attributs qu'une autre source de données. Le clonage vous permet de configurer facilement plusieurs instances d'un même type de périphérique.
+
+
+
+== Étapes
+
+. Dans la barre d'outils Insight, cliquez sur *Admin*.
++
+La liste sources de données s'ouvre.
+
+. Mettez en surbrillance la source de données contenant les informations de configuration que vous souhaitez utiliser pour votre nouvelle source de données.
+. À droite de la source de données en surbrillance, cliquez sur l'icône *Clone*.
++
+La boîte de dialogue Cloner cette source de données répertorie les informations que vous devez fournir pour la source de données sélectionnée, comme indiqué dans cet exemple pour une source de données NetApp :
+
++
+image::../media/oci-7-clone-gif.gif[Boîte de dialogue Cloner cette source de données]
+
+. Entrez les informations requises dans les champs ; ces informations ne peuvent pas être copiées à partir de la source de données existante.
+. Cliquez sur *Clone*.
+
+
+
+
+== Résultats
+
+L'opération de clonage copie tous les autres attributs et paramètres pour créer la nouvelle source de données.

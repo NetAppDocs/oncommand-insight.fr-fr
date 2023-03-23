@@ -1,0 +1,25 @@
+---
+permalink: install-windows/locating-ibm-cognos-documentation.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Pour obtenir des informations de base telles que le démarrage et l"arrêt du logiciel de portail de reporting, consultez la documentation IBM Cognos installée avec le produit. Vous pouvez effectuer une recherche à l"aide d"un navigateur Web pour obtenir des informations sur les produits de reporting IBM Cognos, tels que Query Studio, Report Studio, Business Insight ou Business Insight Advanced sur le site Web IBM des centres d"information de ces produits logiciels.' 
+---
+= Localisation de la documentation IBM Cognos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour obtenir des informations de base telles que le démarrage et l'arrêt du logiciel de portail de reporting, consultez la documentation IBM Cognos installée avec le produit. Vous pouvez effectuer une recherche à l'aide d'un navigateur Web pour obtenir des informations sur les produits de reporting IBM Cognos, tels que Query Studio, Report Studio, Business Insight ou Business Insight Advanced sur le site Web IBM des centres d'information de ces produits logiciels.
+
+
+
+== Étapes
+
+. Pour localiser la documentation IBM Cognos installée avec OnCommand Insight, accédez à ce répertoire.
++
+`<install_dir\>\cognos\c10_64\webcontent\documentation\help_docs.html`
+
+. Vous pouvez également afficher des rubriques décrivant des fenêtres IBM Cognos individuelles utilisées dans le portail de rapports OnCommand Insight. Cliquez sur l'icône *?* dans la barre d'outils de la fenêtre.
+

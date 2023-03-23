@@ -1,0 +1,231 @@
+---
+permalink: config-admin/metric-definitions.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La section vue Expert d"une page ressource affiche plusieurs mesures en fonction de la période sélectionnée pour l"actif. Chaque mesure est affichée dans son propre graphique de performances. Vous pouvez ajouter ou supprimer des mesures et des ressources associées dans les graphiques en fonction des données que vous souhaitez consulter.' 
+---
+= Définition des mesures dans la vue Expert
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La section vue Expert d'une page ressource affiche plusieurs mesures en fonction de la période sélectionnée pour l'actif. Chaque mesure est affichée dans son propre graphique de performances. Vous pouvez ajouter ou supprimer des mesures et des ressources associées dans les graphiques en fonction des données que vous souhaitez consulter.
+
+|===
+
+
+| Métrique | Description 
+
+
+ a| 
+BB crédit zéro Rx, Tx
+ a| 
+Nombre de fois que le nombre de crédits de la mémoire tampon de réception/transmission est passé à zéro pendant la période d'échantillonnage. Cette mesure représente le nombre de fois que le port connecté a dû cesser de transmettre car ce port était en dehors des crédits à fournir.
+
+
+
+ a| 
+BB crédit zéro durée Tx
+ a| 
+Temps en millisecondes pendant lequel le crédit BB de transmission était égal à zéro pendant l'intervalle d'échantillonnage.
+
+
+
+ a| 
+Taux d'accès au cache (total, lecture, écriture) %
+ a| 
+Pourcentage de demandes ayant des résultats dans le cache. Plus le nombre d'accès au volume est élevé, plus les performances sont élevées. Cette colonne est vide pour les matrices de stockage qui ne collectent pas les informations d'accès au cache.
+
+
+
+ a| 
+Utilisation du cache (total) %
+ a| 
+Pourcentage total de demandes de cache qui entraînent des taux d'accès au cache
+
+
+
+ a| 
+Discards de classe 3
+ a| 
+Nombre de cartes de transport de données Fibre Channel classe 3.
+
+
+
+ a| 
+Taux d'utilisation du processeur (total) %
+ a| 
+Quantité de ressources CPU utilisées activement, en pourcentage du total disponible (sur l'ensemble des processeurs virtuels).
+
+
+
+ a| 
+Erreur CRC
+ a| 
+Nombre d'images avec vérifications cycliques de redondance non valides (CRCS) détectées par le port pendant la période d'échantillonnage
+
+
+
+ a| 
+Fréquence d'image
+ a| 
+Vitesse d'image de transmission en images par seconde (FPS)
+
+
+
+ a| 
+Taille moyenne des trames (Rx, Tx)
+ a| 
+Rapport entre le trafic et la taille de la trame. Cette mesure vous permet de déterminer s'il existe des cadres en hauteur dans le tissu.
+
+
+
+ a| 
+Taille du châssis trop longue
+ a| 
+Nombre de trames de transmission de données Fibre Channel trop longues.
+
+
+
+ a| 
+Taille du cadre trop courte
+ a| 
+Nombre de trames de transmission de données Fibre Channel trop courtes.
+
+
+
+ a| 
+Densité des E/S (Total, lecture, écriture)
+ a| 
+Nombre d'IOPS divisé par la capacité utilisée (tel qu'acquise lors de l'enquête d'inventaire la plus récente de la source de données) pour le volume, le volume interne ou l'élément de stockage. Mesures réalisées en nombre d'opérations d'E/S par seconde et par To.
+
+
+
+ a| 
+IOPS (total, lecture, écriture)
+ a| 
+Nombre de demandes de service d'E/S en lecture/écriture qui passent par le canal d'E/S ou une partie de ce canal par unité de temps (mesuré en E/S par seconde)
+
+
+
+ a| 
+Débit IP (total, lecture, écriture)
+ a| 
+Total : taux agrégé auquel les données IP ont été transmises et reçues en mégaoctets par seconde. Read: IP Throughput (Receive) : débit moyen de réception des données IP en mégaoctets par seconde.
+
+Write: IP Throughput (transmission) : débit moyen de transmission des données IP en mégaoctets par seconde.
+
+
+
+ a| 
+Latence (total, lecture, écriture)
+ a| 
+Latence (R&W) : vitesse à laquelle les données sont lues ou écrites sur les machines virtuelles dans un délai fixe. La valeur est mesurée en mégaoctets par seconde.
+
+Latence : temps de réponse moyen des machines virtuelles d'un datastore.
+
+Latence supérieure : temps de réponse le plus élevé des machines virtuelles d'un magasin de données.
+
+
+
+ a| 
+Échec de la liaison
+ a| 
+Nombre d'échecs de liaison détectés par le port pendant la période d'échantillonnage.
+
+
+
+ a| 
+Link reset Rx, Tx
+ a| 
+Nombre de réinitialisations de liaison de réception ou de transmission pendant la période d'échantillonnage. Cette mesure représente le nombre de réinitialisations de liaison émises par le port connecté à ce port.
+
+
+
+ a| 
+Utilisation de la mémoire (totale) %
+ a| 
+Seuil de mémoire utilisé par l'hôte.
+
+
+
+ a| 
+R/W partiel (total) %
+ a| 
+Nombre total de fois qu'une opération de lecture/écriture franchit une limite de bande sur un module de disque dans un LUN RAID 5, RAID 1/0 ou RAID 0 en général, les croisements de bandes ne sont pas bénéfiques, car chacun nécessite une E/S supplémentaire Un pourcentage faible indique une taille d'élément de bande efficace et indique un alignement incorrect d'un volume (ou d'une LUN NetApp).
+
+Pour CLARiiON, cette valeur correspond au nombre de croisements de bandes divisé par le nombre total d'IOPS.
+
+
+
+ a| 
+Erreurs de port
+ a| 
+Rapport des erreurs de port sur la période d'échantillonnage/période donnée.
+
+
+
+ a| 
+Décompte des pertes de signal
+ a| 
+Nombre d'erreurs de perte de signal. Si une erreur de perte de signal se produit, il n'y a pas de connexion électrique et il existe un problème physique.
+
+
+
+ a| 
+Taux de swap (taux total, taux d'entrée, taux de sortie)
+ a| 
+Vitesse à laquelle la mémoire est échangée en entrée, en sortie ou les deux du disque vers la mémoire active pendant la période d'échantillonnage. Ce compteur s'applique aux machines virtuelles.
+
+
+
+ a| 
+Synchroniser le nombre de pertes
+ a| 
+Nombre d'erreurs de perte de synchronisation. Si une erreur de perte de synchronisation se produit, le matériel ne peut pas détecter le trafic ou le verrouiller. Il est possible que tous les équipements n'utilisent pas le même débit de données, ou que les câbles optiques ou les connexions physiques soient de mauvaise qualité. Le port doit resynchroniser après chaque erreur, ce qui a un impact sur la performance du système. Mesurée en Ko/s.
+
+
+
+ a| 
+Débit (total, lecture, écriture)
+ a| 
+Vitesse à laquelle les données sont transmises, reçues ou les deux en un temps fixe en réponse aux demandes de service d'E/S (mesurée en Mo par seconde).
+
+
+
+ a| 
+Délai d'expiration des trames - Tx
+ a| 
+Nombre de trames de transmission rejetées causées par le délai d'attente.
+
+
+
+ a| 
+Débit de trafic (total, lecture, écriture)
+ a| 
+Trafic transmis, reçu ou les deux reçu pendant la période d'échantillonnage, en mébioctets par seconde.
+
+
+
+ a| 
+Utilisation du trafic (total, lecture, écriture)
+ a| 
+Rapport entre le trafic reçu/transmis/total et la capacité de réception/transmission/totale pendant la période d'échantillonnage.
+
+
+
+ a| 
+Taux d'utilisation (total, lecture, écriture) %
+ a| 
+Pourcentage de bande passante disponible utilisée pour la transmission (Tx) et la réception (Rx).
+
+
+
+ a| 
+Écriture en attente (total)
+ a| 
+Nombre de demandes de service d'écriture d'E/S en attente.
+
+|===

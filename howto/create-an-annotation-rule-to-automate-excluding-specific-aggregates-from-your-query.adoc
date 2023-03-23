@@ -1,0 +1,40 @@
+---
+permalink: howto/create-an-annotation-rule-to-automate-excluding-specific-aggregates-from-your-query.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Au lieu d"appliquer manuellement des annotations à des ressources individuelles, vous pouvez appliquer automatiquement des annotations à plusieurs ressources à l"aide de règles d"annotation. Les règles d"annotation sont basées sur les requêtes que vous créez et lorsqu"elles sont exécutées sur le système, elles ajoutent de nouvelles ressources à des ensembles de ressources existants. Lorsque ces ensembles d"actifs sont exclus d"un rapport, les nouveaux actifs sont également automatiquement exclus.' 
+---
+= Créez une règle d'annotation pour automatiser l'exclusion des agrégats spécifiques de votre rapport de densité d'E/S.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Au lieu d'appliquer manuellement des annotations à des ressources individuelles, vous pouvez appliquer automatiquement des annotations à plusieurs ressources à l'aide de règles d'annotation. Les règles d'annotation sont basées sur les requêtes que vous créez et lorsqu'elles sont exécutées sur le système, elles ajoutent de nouvelles ressources à des ensembles de ressources existants. Lorsque ces ensembles d'actifs sont exclus d'un rapport, les nouveaux actifs sont également automatiquement exclus.
+
+
+
+== Avant de commencer
+
+Vous devez avoir créé et enregistré une requête qui identifie les agrégats racine NetApp que vous avez identifiés dans votre environnement.
+
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur Web de OnCommand Insight.
+. Cliquez sur *gérer* > *règles d'annotation*
+. Cliquez sur *Ajouter*
++
+La boîte de dialogue Ajouter une règle s'affiche.
+
+. Procédez comme suit :
++
+.. Dans la zone Nom, entrez un nom unique qui décrit la règle : « RootAggrExclude »
+.. Cliquez sur requête et sélectionnez la requête que Insight doit utiliser pour appliquer la règle d'annotation à :"` Aggregate0`"
+.. Cliquez sur Annotation et sélectionnez « Root agg exclude ».
+.. Cliquez sur valeur et entrez vrai
+
+
+

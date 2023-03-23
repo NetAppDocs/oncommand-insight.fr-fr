@@ -1,0 +1,66 @@
+---
+permalink: config-admin/examining-network-performance.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez examiner les performances de votre environnement de stockage, identifier les ressources sous-utilisées et sur-utilisées, et identifier les risques avant qu"ils ne se transforment en problèmes.' 
+---
+= Examen des performances du réseau
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez examiner les performances de votre environnement de stockage, identifier les ressources sous-utilisées et sur-utilisées, et identifier les risques avant qu'ils ne se transforment en problèmes.
+
+Insight vous aide à résoudre ou à éviter les problèmes de performances et de disponibilité qui apparaissent via les données de stockage collectées.
+
+Vous pouvez utiliser Insight pour effectuer les tâches de gestion des performances suivantes :
+
+* Surveillez les performances dans l'ensemble de votre environnement
+* Identifier les ressources qui influent sur les performances des autres appareils
+
+
+
+
+== L'importance des ports
+
+Le serveur Insight Server and Data Warehouse (DWH) peut nécessiter la libération de plusieurs ports TCP pour fonctionner de manière fiable. Certains de ces ports ne sont utilisés que pour les processus liés à l'adaptateur localhost (127.0.0.1), mais sont toujours nécessaires pour que les services de base fonctionnent de manière fiable. Le nombre de ports requis est un superset des ports utilisés sur le réseau.
+
+
+
+== Ports du serveur Insight
+
+Des pare-feu logiciels peuvent être installés sur les serveurs Insight. Les « trous » qui doivent être ouverts sont décrits ci-dessous.
+
+*HTTPS 443* entrant - en supposant que l'interface utilisateur Web Insight s'exécute sur TCP 443, vous devez exposer que pour permettre à tous les clients suivants :
+
+* Utilisateurs Insight de l'interface utilisateur Web
+* Unités d'acquisition à distance cherchant à se connecter au serveur Insight
+* Serveurs OCI DWH avec connecteurs sur ce serveur Insight.
+* Toutes les interactions de programmation avec l'API REST Insight
+* Moteur de détection des anomalies cherchant à obtenir les données de performances Insight pour le rendu des informations d'anomalie
+
+
+Nous recommandons à tous ceux qui souhaitent implémenter le pare-feu au niveau de l'hôte Insight Server d'autoriser l'accès HTTPS à tous les blocs IP du réseau d'entreprise.
+
+*MySQL entrant (TCP 3306)*. Ce port doit uniquement être exposé à tout serveur Insight DWH doté d'un connecteur
+
+Bien que Insight dispose de dizaines de collecteurs de données, ils sont tous basés sur des sondages - Insight va forcer ses unités d'acquisition (AUS) à initier la communication sortante vers divers périphériques. Tant que votre pare-feu basé sur l'hôte est « dynamique » de sorte qu'il autorise le trafic de retour via le pare-feu, les pare-feu basés sur l'hôte sur Insight Server ne doivent pas affecter l'acquisition des données.
+
+
+
+== Ports d'entrepôt de données
+
+Pour les serveurs Insight DWH :
+
+*HTTPS 443* entrant - en supposant que l'interface utilisateur Web Insight s'exécute sur TCP 443, vous devez l'exposer pour permettre aux clients suivants :
+
+* Utilisateurs administratifs Insight du portail d'administration DWH
+
+
+*HTTPS entrant (TCP 9300)* - il s'agit de l'interface de génération de rapports Cognos. Si des utilisateurs interagissent avec l'interface de reporting Cognos, ils doivent être exposés à distance.
+
+Nous pouvons imaginer des environnements où le DWH n'a pas besoin d'être exposé - peut-être les auteurs de rapports font simplement des connexions RDP au serveur DWH, et d'élaborer et de planifier des rapports là-bas, tout en ayant tous les rapports devant être livrés via SMTP, ou écrits dans un système de fichiers distant.
+
+*MySQL entrant (TCP 3306)*. Ce port doit être exposé uniquement si votre entreprise dispose d'intégrations MySQL avec des données DWH : extrayez les données des différents magasins de données DWH pour les ingérer dans d'autres applications telles que les CMDB, les systèmes de refacturation, etc

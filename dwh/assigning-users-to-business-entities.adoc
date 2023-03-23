@@ -1,0 +1,43 @@
+---
+permalink: dwh/assigning-users-to-business-entities.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous devez effectuer une série d"étapes pour affecter des utilisateurs à des entités métier. Data Warehouse s"adapte à plusieurs locations \(souvent raccourcies à la « colocation » ou à la « colocation »\) dans le reporting, ce qui vous permet d"associer des utilisateurs à une ou plusieurs entités commerciales. Cela permet aux administrateurs de séparer les données ou les rapports en fonction des attributs d"utilisateur ou de l"affiliation des utilisateurs.' 
+---
+= Affectation d'utilisateurs à des entités commerciales
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez effectuer une série d'étapes pour affecter des utilisateurs à des entités métier. Data Warehouse s'adapte aux différentes architectures (souvent raccourcies à la « colocation » ou « colocation ») dans le reporting en vous permettant d'associer des utilisateurs à une ou plusieurs entités commerciales. Cela permet aux administrateurs de séparer les données ou les rapports en fonction des attributs d'utilisateur ou de l'affiliation des utilisateurs.
+
+
+
+== Étapes
+
+. Connectez-vous au portail Data Warehouse Portal en tant qu'administrateur à l'adresse `+https://hostname/dwh+`, où `hostname` Est le nom du système sur lequel l'entrepôt de données OnCommand Insight est installé.
+. Dans la barre d'outils Data Warehouse, cliquez sur image:../media/oci-reporting-portal-icon.gif[""] Pour ouvrir le portail de rapports.
+. Entrez votre nom d'utilisateur et votre mot de passe, puis cliquez sur *connexion*.
+. Dans le menu Démarrer, sélectionnez *IBM Cognos Administration*.
+. Cliquez sur l'onglet *sécurité* :
+. Dans le répertoire, sélectionnez *Cognos*.
+. Créez un nouveau sous-dossier dans le dossier Cognos appelé « BES » pour les entités métier.
+. Ouvrez le dossier BES.
+. Cliquez sur l'icône *Nouveau groupe* pour ajouter des groupes correspondant à différents niveaux d'autorisation.
++
+Ces niveaux d'autorisation peuvent être le nom complet de l'entité business (par exemple, NetApp.N/A) ou un préfixe (par exemple, NetApp.N/A.Finance). Ces deux formats permettent d'accéder à tous les projets de l'entité business (NetApp.N/A.Finance).
+
++
+L'assistant Nouveau groupe s'affiche.
+
+. Complétez les pages de l'assistant.
+. Sélectionnez une entité métier et cliquez sur *plus*.
+. Cliquez sur *définir les membres*.
+. Cliquez sur *Ajouter*.
+. Sélectionnez le répertoire SANscreen.
+. Dans la liste des utilisateurs, sélectionnez chaque utilisateur que vous souhaitez inclure dans l'entité métier et ajoutez l'utilisateur à la zone entrées sélectionnées.
+. Cliquez sur *OK*.
+. Répétez le processus d'ajout de membres à chacun des groupes d'entités métiers.
+

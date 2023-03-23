@@ -1,0 +1,195 @@
+---
+permalink: config-admin/openstack-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La source de données OpenStack \(REST API / KVM\) collecte des informations sur les instances matérielles OpenStack. Cette source de données collecte les données d"inventaire de toutes les instances OpenStack et, éventuellement, les données de performances des machines virtuelles.' 
+---
+= Source de données OpenStack
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La source de données OpenStack (REST API / KVM) collecte des informations sur les instances matérielles OpenStack. Cette source de données collecte les données d'inventaire de toutes les instances OpenStack et, éventuellement, les données de performances des machines virtuelles.
+
+
+
+== De formation
+
+Voici la configuration requise pour la configuration de la source de données OpenStack.
+
+* Adresse IP du contrôleur OpenStack
+* Les identifiants de rôle d'administrateur OpenStack et l'accès sudo à l'hyperviseur Linux KVM sont recommandés.
++
+[NOTE]
+====
+Si vous n'utilisez pas de compte d'administrateur ou de privilèges équivalents d'administrateur, vous pouvez toujours acquérir des données à partir de la source de données. Vous devez modifier le fichier de configuration de stratégie (par exemple, etc/nova/policy.json) pour permettre aux utilisateurs ayant un rôle non-admin d'appeler l'API :
+
+====
++
+** « os_compute_api:os-availability-zone:detail » : « »
+** « os_compute_api:os-hyperviseurs » : « »
+** os_compute_api:serveurs:detail:get_all_tenants": ""
+
+
+* Pour la collecte des performances, le module OpenStack Ceilometer doit être installé et configuré. La configuration du Ceilometer s'effectue en modifiant le `nova.conf` Pour chaque hyperviseur, puis redémarrez le service Nova Compute sur chaque hyperviseur. Modifications du nom de l'option dans les différentes versions d'OpenStack :
++
+** Icehouse
+** Juno
+** Kilo
+** La liberté
+** Mitaka
+** Newton
+** Ocata
+
+
+* Pour les statistiques CPU, « Compute_monitors=ComputeDriverCPUMonitor » doit être activé dans /etc/nova/nova.conf sur les nœuds de calcul.
+* Configuration requise pour les ports :
++
+** 5000 pour http et 13000 pour https, pour le service Keystone
+** 22 pour KVM SSH
+** 8774 pour le service de calcul Nova
+** 8776 pour le service de blocs Cinder
+** 8777 pour le service de performance du Ceilometer
+** 9292 pour le service d'image Glance
++
+[NOTE]
+====
+Le port se lie au service spécifique et le service peut s'exécuter sur le contrôleur ou un autre hôte dans des environnements plus grands.
+
+====
+
+
+
+
+
+
+== Configuration
+
+|===
+
+
+| *Champ* | *Description* 
+
+
+ a| 
+Adresse IP du contrôleur OpenStack
+ a| 
+Adresse IP ou nom de domaine complet du contrôleur OpenStack
+
+
+
+ a| 
+Administrateur OpenStack
+ a| 
+Nom d'utilisateur d'un administrateur OpenStack
+
+
+
+ a| 
+Mot de passe OpenStack
+ a| 
+Mot de passe utilisé pour l'administrateur OpenStack
+
+
+
+ a| 
+Locataire Administrateur OpenStack
+ a| 
+Locataire Administrateur OpenStack
+
+
+
+ a| 
+Utilisateur KVM sudo
+ a| 
+Nom d'utilisateur de sudo KVM
+
+
+
+ a| 
+Choisissez « Mot de passe » ou « fichier de clé OpenSSH » pour spécifier le type d'informations d'identification
+ a| 
+Type d'informations d'identification utilisé pour se connecter au périphérique via SSH
+
+
+
+ a| 
+Chemin complet vers la clé privée d'inventaire
+ a| 
+Chemin complet vers la clé privée d'inventaire
+
+
+
+ a| 
+Mot de passe KVM sudo
+ a| 
+Mot de passe KVM sudo
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| *Champ* | *Description* 
+
+
+ a| 
+Activer la découverte d'inventaire des hyperviseurs via SSH
+ a| 
+Cochez cette case pour activer la détection d'inventaire des hyperviseurs via SSH
+
+
+
+ a| 
+Port d'URL d'administration OpenStack
+ a| 
+Port d'URL d'administration OpenStack
+
+
+
+ a| 
+Utiliser HTTPS
+ a| 
+Vérifiez que vous utilisez le protocole HTTP sécurisé
+
+
+
+ a| 
+Délai d'expiration de la connexion HTTP (sec)
+ a| 
+Délai d'attente pour la connexion HTTP (300 secondes par défaut)
+
+
+
+ a| 
+Port SSH
+ a| 
+Port utilisé pour SSH
+
+
+
+ a| 
+Délai d'attente du processus SSH (s)
+ a| 
+Délai d'expiration du processus SSH (30 secondes par défaut)
+
+
+
+ a| 
+Nouvelles tentatives de traitement SSH
+ a| 
+Nombre de tentatives d'inventaire
+
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+Intervalle entre les sondages d'inventaire (20 minutes par défaut)
+
+|===

@@ -1,0 +1,20 @@
+---
+permalink: config-admin/advanced-troubleshooting.html 
+sidebar: sidebar 
+keywords: Legacy portal 
+summary: 'Pour terminer la configuration de OnCommand Insight, vous devez utiliser les outils de dépannage avancés. Ces outils s"exécutent dans le navigateur et sont ouverts à partir de la page Admin \> Dépannage.' 
+---
+= Dépannage avancé
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour terminer la configuration de OnCommand Insight, vous devez utiliser les outils de dépannage avancés. Ces outils s'exécutent dans le navigateur et sont ouverts à partir de la page *Admin* > *Dépannage*.
+
+Pour ouvrir les outils de dépannage avancés dans le navigateur, cliquez sur le lien *Dépannage avancé* en bas de la page.
+
+Les outils de dépannage avancés vous permettent d'afficher divers rapports, informations système, packages installés et journaux, ainsi que d'effectuer de nombreuses actions telles que le redémarrage du serveur ou des unités d'acquisition, la mise à jour des annotations DWH et l'importation des annotations.
+
+Reportez-vous à la page Dépannage avancé pour connaître toutes les options disponibles.

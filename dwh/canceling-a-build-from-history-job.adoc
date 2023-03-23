@@ -1,0 +1,23 @@
+---
+permalink: dwh/canceling-a-build-from-history-job.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez annuler tous les travaux planifiés. L"état du travail devient « abandonné ».' 
+---
+= Annulation d'un travail de génération à partir de l'historique
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez annuler tous les travaux planifiés. Le statut du travail devient « abandonné ».
+
+
+
+== Étapes
+
+. Connectez-vous au portail Data Warehouse à l'adresse `+https://hostname/dwh+`, où `hostname` Est le nom du système sur lequel l'entrepôt de données OnCommand Insight est installé.
+. Dans le volet de navigation de gauche, cliquez sur *construire à partir de l'historique*.
+. Cliquez sur *Annuler*.
+

@@ -1,0 +1,38 @@
+---
+permalink: reporting/importing-existing-reports-to-cognos-11.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous pouvez ouvrir une spécification de rapport qui a été précédemment copiée dans le presse-papiers. 
+---
+= Ouverture de rapports (xml) à partir du presse-papiers
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez ouvrir une spécification de rapport qui a été précédemment copiée dans le presse-papiers.
+
+
+
+== Description de la tâche
+
+Vous accédez à l'interface utilisateur de génération de rapports en créant un nouveau rapport ou en ouvrant un rapport existant
+
+
+
+== Étapes
+
+. Ouvrez le portail de rapports Cognos 11 : https://server-name:9300/bi/[]
+. Dans la barre d'outils, cliquez sur image:../media/new-report.gif[""]
+. Cliquez sur *Rapport*
+. Cliquez sur l'icône *pages*image:../media/pages-icon.gif[""]
++
+L'icône *Rapport* image:../media/report-icon.gif[""] s'affiche
+
+. Cliquez avec le bouton gauche de la souris sur l'icône *Rapport*
++
+Les options de rapport s'affichent.
+
+. Cliquez sur *Ouvrir le rapport à partir du presse-papiers*.
+

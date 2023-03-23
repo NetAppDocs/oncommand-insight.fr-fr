@@ -1,0 +1,29 @@
+---
+permalink: dwh/accessing-the-data-warehouse-portal.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Le portail entrepôt de données OnCommand Insight est une interface utilisateur Web que vous pouvez utiliser pour mettre à jour les informations du connecteur, afficher les files d"attente des tâches, planifier les builds quotidiens, sélectionner les annotations, configurer les notifications par e-mail, afficher les informations système, créer la base de données, réinitialiser l"entrepôt de données, sauvegarder et restaurer la base de données, résoudre les problèmes, Gérer les comptes d"utilisateur du portail Data Warehouse et Reporting et accéder à la documentation et aux schémas.' 
+---
+= Accès au portail Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le portail entrepôt de données OnCommand Insight est une interface utilisateur Web que vous pouvez utiliser pour mettre à jour les informations du connecteur, afficher les files d'attente des tâches, planifier les builds quotidiens, sélectionner les annotations, configurer les notifications par e-mail, afficher les informations système, créer la base de données, réinitialiser l'entrepôt de données, sauvegarder et restaurer la base de données, résoudre les problèmes, Gérer les comptes d'utilisateur du portail Data Warehouse et Reporting et accéder à la documentation et aux schémas.
+
+
+
+== Étapes
+
+. Connectez-vous au portail Data Warehouse à l'adresse `+https://hostname/dwh+`, où `hostname` Est le nom du système sur lequel l'entrepôt de données OnCommand Insight est installé.
+. Entrez votre nom d'utilisateur et votre mot de passe.
+. Cliquez sur *connexion*.
++
+Le portail Data Warehouse s'ouvre :
+
++
+image::../media/oci-dwh-admin-login-gif.gif[Connexion On Command Insight DWH]
+
+

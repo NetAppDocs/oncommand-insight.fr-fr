@@ -1,0 +1,35 @@
+---
+permalink: config-admin/modifying-performance-policies.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez modifier les règles de performance existantes et par défaut pour modifier la façon dont Insight surveille les conditions qui vous intéressent sur votre réseau. Par exemple, vous pouvez modifier le seuil d"une règle.' 
+---
+= Modification des règles de performances
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez modifier les règles de performance existantes et par défaut pour modifier la façon dont Insight surveille les conditions qui vous intéressent sur votre réseau. Par exemple, vous pouvez modifier le seuil d'une règle.
+
+
+
+== Étapes
+
+. Ouvrez Insight dans votre navigateur.
+. Dans le menu *gérer*, sélectionnez *politiques de performances*.
++
+La page règles de performance s'affiche.
+
+. Placez le curseur de la souris sur le nom d'une règle dans la liste des règles de performances d'un objet.
+. Cliquez sur image:../media/oci-edit-threshold-policy-icon.gif[""].
++
+La boîte de dialogue Modifier la stratégie s'affiche.
+
+. Apportez les modifications requises.
++
+Si vous modifiez une option autre que le nom de la règle, Insight supprime toutes les violations existantes pour cette règle.
+
+. Cliquez sur *Enregistrer.*
+

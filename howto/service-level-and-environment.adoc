@@ -1,0 +1,23 @@
+---
+permalink: howto/service-level-and-environment.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Ajoutez des annotations de niveau de service et d"environnement aux ressources appropriées en suivant les étapes et concepts que vous avez appris.' 
+---
+= Annotations de niveau de service et d'environnement
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ajoutez des annotations de niveau de service et d'environnement aux ressources appropriées en suivant les étapes et concepts que vous avez appris.
+
+Pour ajouter des annotations de niveau de service et d'environnement aux ressources appropriées de votre environnement, suivez les étapes indiquées ci-dessus en choisissant les ressources souhaitées ainsi que les annotations de niveau de service ou d'environnement appropriées. Plusieurs annotations peuvent être associées aux mêmes ressources. Cette pratique vous permet en effet d'améliorer la flexibilité de gestion de votre environnement grâce à Insight.
+
+Maintenant que vous avez créé des requêtes pour annoter vos ressources, vous pouvez utiliser ces annotations de différentes façons, par exemple :
+
+* Règles de performance pour vous avertir lorsque des événements se produisent sur les ressources souhaitées
+* Tableaux de bord et widgets personnalisés pour surveiller l'activité
+* Création de rapports
+

@@ -1,0 +1,120 @@
+---
+permalink: config-admin/netapp-e-series-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La source de données NetApp E-Series collecte des informations sur l"inventaire et les performances. Il existe deux configurations possibles \(firmware 6.x et firmware 7.x+\), toutes deux ayant les mêmes valeurs.' 
+---
+= Source de données NetApp E-Series
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La source de données NetApp E-Series collecte des informations sur l'inventaire et les performances. Il existe deux configurations possibles (firmware 6.x et firmware 7.x+), et elles ont toutes les deux les mêmes valeurs.
+
+
+
+== Terminologie
+
+OnCommand Insight acquiert les informations d'inventaire suivantes à partir de la source de données NetApp E-Series. Pour chaque type de ressource acquis par Insight, la terminologie la plus courante utilisée pour cette ressource est indiquée. Lors de l'affichage ou du dépannage de cette source de données, gardez à l'esprit la terminologie suivante :
+
+|===
+
+
+| Terme du fournisseur/modèle | Terme Insight 
+
+
+ a| 
+Lecteur
+ a| 
+Disque
+
+
+
+ a| 
+Groupe de volumes
+ a| 
+Groupe de disques
+
+
+
+ a| 
+Baie de stockage
+ a| 
+Stockage
+
+
+
+ a| 
+Contrôleur
+ a| 
+Nœud de stockage
+
+
+
+ a| 
+Groupe de volumes
+ a| 
+Pool de stockage
+
+
+
+ a| 
+Volumétrie
+ a| 
+Volumétrie
+
+|===
+[NOTE]
+====
+Il s'agit uniquement de mappages terminologiques courants et peuvent ne pas représenter tous les cas pour cette source de données.
+
+====
+
+
+== De formation
+
+* L'adresse IP de chaque contrôleur de la baie
+* Port requis 2463
+
+
+
+
+== Configuration
+
+|===
+
+
+| *Champ* | *Description* 
+
+
+ a| 
+Liste des adresses IP de contrôleur de matrice SANtricity séparées par une virgule
+ a| 
+Adresses IP et/ou noms de domaine complets pour les contrôleurs de matrice
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| *Champ* | *Description* 
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+Intervalle entre les sondages d'inventaire (30 minutes par défaut)
+
+
+
+ a| 
+Intervalle d'interrogation des performances (jusqu'à 3600 secondes)
+ a| 
+Intervalle entre les sondages de performances (300 secondes par défaut)
+
+|===

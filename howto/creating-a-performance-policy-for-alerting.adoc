@@ -1,0 +1,57 @@
+---
+permalink: howto/creating-a-performance-policy-for-alerting.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les règles de performance vous permettent de surveiller et d"envoyer des alertes lorsque des conditions spécifiques sont remplies.' 
+---
+= Création de règles de performance pour les alertes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les règles de performance vous permettent de surveiller et d'envoyer des alertes lorsque des conditions spécifiques sont remplies.
+
+
+
+== Description de la tâche
+
+Maintenant que nous avons annoté nos ressources, créons une règle de performance que nous pouvons utiliser pour nous avertir lorsque la latence est supérieure à 2 ms dans n'importe quelle baie de stockage de notre data Center de Sunnyvale (DC1_SVL). Lorsque ces conditions se produisent, nous enverrons un e-mail aux destinataires sélectionnés.
+
+
+
+== Étapes
+
+. Sélectionnez *gérer* > *politiques de performances*.
++
+La page règles de performance s'ouvre. Plusieurs stratégies par défaut sont déjà définies, que vous pouvez modifier en fonction de vos besoins. Nous allons toutefois créer une nouvelle politique.
+
+. Cliquez sur le bouton *+Ajouter*.
++
+La boîte de dialogue *Ajouter une stratégie* s'ouvre.
+
+. Dans le champ *Policy name*, entrez « `SLV Data Center Latency policy' ».
++
+Vous devez utiliser un nom différent de tous les autres noms de stratégie pour l'objet. Par exemple, vous ne pouvez pas avoir deux politiques nommées « latence » pour un volume interne. Vous pouvez cependant disposer d'une règle de « latence » pour un volume interne et d'une autre règle de « latence » pour un volume différent. La meilleure pratique consiste à toujours utiliser un nom unique pour n'importe quelle règle, quel que soit le type d'objet.
+
+. Pour *appliquer aux objets de type*, sélectionnez *stockage*.
+. Dans le champ *avec annotation*, sélectionnez *Data Center* est "`DC1_SVL`" (ou choisissez le nom du centre de données de votre choix ici).
+. Appliquer après une fenêtre de *première occurrence* .
++
+L'option première occurrence déclenche une alerte lorsqu'un seuil est dépassé sur le premier échantillon de données. Toutes les autres options déclenchent une alerte lorsque le seuil est franchi une fois et est traversé en continu pendant au moins la durée spécifiée.
+
+. Dans la liste *avec gravité*, sélectionnez *Avertissement*.
+. Sous *destinataires du courrier électronique*, cliquez sur pour remplacer la liste de destinataires globale. Cliquez sur**+**pour ajouter l'adresse e-mail du premier destinataire d'alerte souhaité, puis cliquez sur *OK*. Répétez l'opération pour tous les destinataires supplémentaires souhaités.
+. Laissez le choix par défaut de Créer une alerte si *l'un* des éléments suivants est vrai. Ceci envoie une alerte si l'un des seuils définis est atteint. Vous pouvez également choisir d'alerter uniquement si *tous* des seuils définis sont atteints.
+. Pour définir votre premier seuil, sélectionnez *latence - Total* dans la liste déroulante et définissez-le sur plus de 2 ms.
+. Si vous le souhaitez, ajoutez des seuils supplémentaires à l'alerte en cliquant sur le bouton *Ajouter un seuil*. Lorsque la stratégie est personnalisée comme vous le souhaitez, cliquez sur *Enregistrer*.
+. Vous pouvez également choisir *Arrêter le traitement d'autres stratégies si une alerte est générée*. Les alertes de stratégie supplémentaires seront interrompues si les conditions de cette stratégie sont remplies.
+. Vous pouvez ajouter autant de nouvelles règles que vous le souhaitez, en définissant des alertes pour d'autres destinataires en fonction de conditions différentes, selon les besoins de l'entreprise. Toute stratégie configurée sans destinataires spécifiques envoie des alertes à la liste globale des destinataires définie dans la page *Admin* > *Notifications*
+
+
+
+
+== Une fois que vous avez terminé
+
+Chaque nouvelle stratégie est automatiquement activée lorsqu'elle est enregistrée et les destinataires reçoivent des alertes lorsque les conditions de la police sont remplies (connues sous le nom de _violation_). Vous pouvez également surveiller ces violations dans le tableau de bord *tableaux de bord* > *violations Dashboard*.

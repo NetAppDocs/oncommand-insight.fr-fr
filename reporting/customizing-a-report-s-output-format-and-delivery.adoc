@@ -1,0 +1,37 @@
+---
+permalink: reporting/customizing-a-report-s-output-format-and-delivery.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous pouvez personnaliser le format et la méthode de diffusion des rapports. 
+---
+= Personnalisation du format de sortie et de l'envoi d'un rapport
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez personnaliser le format et la méthode de diffusion des rapports.
+
+
+
+== Étapes
+
+. Ouvrez le portail de rapports OnCommand Insight et sélectionnez le rapport que vous souhaitez personnaliser, puis cliquez sur *[...]*.
++
+image::../media/run-report.gif[exécuter le rapport]
+
+. Cliquez sur *Propriétés* > *Programme*
++
+image::../media/email-report.gif[rapport par e-mail]
+
+. Vous pouvez définir les options suivantes :
++
+** *Planifier* lorsque vous souhaitez que les rapports s'exécutent.
+** *Format* la sortie du rapport.
+** *Livraison* imprimez, enregistrez ou envoyez le rapport par courriel.
+** *Langues* définir la langue dans laquelle le rapport est livré.
+
+
+. Cliquez sur *Créer* pour produire le rapport en utilisant les sélections que vous avez faites.
+

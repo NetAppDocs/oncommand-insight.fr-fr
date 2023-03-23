@@ -1,0 +1,46 @@
+---
+permalink: config-admin/what-the-user-data-section-enables-you-to-do-with-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Lorsque vous personnalisez OnCommand Insight pour suivre les données en fonction des besoins de votre entreprise, vous pouvez définir des notes spécialisées, appelées annotations, et les affecter à vos ressources. La section données utilisateur d"une page ressource affiche les annotations affectées à un bien et vous permet également de modifier les annotations affectées à ce bien.' 
+---
+= Utilisation de la section données utilisateur pour attribuer ou modifier des annotations
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsque vous personnalisez OnCommand Insight pour suivre les données en fonction des besoins de votre entreprise, vous pouvez définir des notes spécialisées, appelées _annotations_, et les affecter à vos ressources. La section données utilisateur d'une page ressource affiche les annotations affectées à un bien et vous permet également de modifier les annotations affectées à ce bien.
+
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur Web de OnCommand Insight.
+. Recherchez une page de ressources en procédant de l'une des façons suivantes :
++
+** Dans la barre d'outils Insight, cliquez sur image:../media/icon-sanscreen-magnifying-glass-gif.gif[""], saisissez le nom de la ressource, puis sélectionnez la ressource dans la liste.
+** Cliquez sur *tableaux de bord*, sélectionnez *tableau de bord*, localisez un nom de ressource, puis cliquez dessus. La page ASSET s'affiche.
+
+
+. Dans la section *données utilisateur* de la page de la ressource, cliquez sur image:../media/add-annotation-icon.gif[""].
++
+La boîte de dialogue Ajouter une annotation s'affiche.
+
+. Cliquez sur *Annotation* et sélectionnez une annotation dans la liste.
+. Cliquez sur *valeur* et effectuez l'une des opérations suivantes, selon le type d'annotation sélectionné :
++
+** Si le type d'annotation est liste, date ou booléen, sélectionnez une valeur dans la liste.
+** Si le type d'annotation est texte, saisissez une valeur.
+
+
+. Cliquez sur *Enregistrer*.
++
+L'annotation est attribuée à la ressource. Vous pouvez filtrer ultérieurement les ressources par annotation à l'aide d'une requête. Si vous souhaitez regrouper des actifs par annotations, vous devez utiliser l'interface utilisateur Java.
+
+. Si vous souhaitez modifier la valeur de l'annotation après l'avoir attribuée, cliquez sur image:../media/change-annotation-value.gif[""] et sélectionnez une autre valeur.
++
+Si l'annotation est de type liste pour laquelle l'option *Ajouter des valeurs dynamiquement lors de l'affectation d'annotation* est sélectionnée, vous pouvez taper pour ajouter une nouvelle valeur en plus de sélectionner une valeur existante.
+
+

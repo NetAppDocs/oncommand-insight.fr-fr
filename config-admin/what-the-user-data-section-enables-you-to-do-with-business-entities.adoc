@@ -1,0 +1,39 @@
+---
+permalink: config-admin/what-the-user-data-section-enables-you-to-do-with-business-entities.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez définir des entités métier pour assurer le suivi des données de votre environnement et générer des rapports à un niveau plus granulaire. La section données utilisateur d"une page de ressource vous permet de modifier l"entité métier affectée à un actif ou de supprimer une entité métier d"un actif.' 
+---
+= Utilisation de la section données utilisateur pour affecter ou modifier des entités métier
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez définir des entités métier pour assurer le suivi des données de votre environnement et générer des rapports à un niveau plus granulaire. La section données utilisateur d'une page de ressource vous permet de modifier l'entité métier affectée à un actif ou de supprimer une entité métier d'un actif.
+
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur Web de OnCommand Insight.
+. Recherchez une page de ressources en procédant de l'une des façons suivantes :
++
+** Dans la barre d'outils Insight, cliquez sur image:../media/icon-sanscreen-magnifying-glass-gif.gif[""], saisissez le nom de la ressource, puis sélectionnez la ressource dans la liste.
+** Cliquez sur *tableaux de bord*, sélectionnez *tableau de bord*, localisez un nom de ressource, puis cliquez dessus. La page ASSET s'affiche.
+
+
+. Vous pouvez effectuer les opérations suivantes :
++
+** Pour modifier l'entité affectée ou pour affecter une entité, cliquez sur image:../media/pencil-icon-landing-page-be.gif[""] et sélectionnez une entité dans la liste.
+** Pour supprimer une entité métier, cliquez sur image:../media/trash-can-query.gif[""].
++
+[NOTE]
+====
+Vous ne pouvez pas supprimer une entité dérivée d'une application affectée à l'actif.
+
+====
+
+
+

@@ -1,0 +1,41 @@
+---
+permalink: howto/create-dashboards-to-monitor-thin-provisioned-environments.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les options flexibles de widget de tableau de bord de OnCommand Insight permettent une analyse approfondie de l"utilisation et de l"utilisation de la capacité ainsi que des informations stratégiques pour réduire les risques au sein des infrastructures de data Center à provisionnement fin.' 
+---
+= Créez des tableaux de bord pour surveiller les environnements à provisionnement fin
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les options flexibles de conception de widgets de tableau de bord de OnCommand Insight permettent une analyse approfondie de l'utilisation et de l'utilisation de la capacité, ainsi que des informations stratégiques pour réduire les risques au sein des infrastructures de data Center à provisionnement fin.
+
+Vous pouvez créer des tableaux de bord qui donnent accès aux informations du datastore et du pool de stockage que vous souhaitez contrôler.
+
+
+
+== Utilisation des tableaux de bord pour accéder aux informations de datastore
+
+Vous pouvez créer des tableaux de bord qui fournissent un accès rapide aux données que vous souhaitez surveiller dans votre infrastructure virtuelle. Un tableau de bord peut inclure des widgets similaires aux éléments suivants pour identifier les 10 principaux datastores en fonction de leur % de stockage excessif et d'un widget affichant les données de capacité des datastores. Les tableaux de bord utilisent des variables pour mettre en évidence les datastores sur lesquels plus de 150 % sont surchargés et les datastores qui ont dépassé les 80 % de la capacité utilisée.
+
+image::../media/new-dashboard-thin.gif[nouvelle fin de tableau de bord]
+
+image::../media/new-dashboard-thin-2.gif[nouveau tableau de bord fin 2]
+
+Les widgets supplémentaires pouvant être utilisés pour surveiller votre environnement de provisionnement fin peuvent inclure certaines des informations suivantes :
+
+* Capacités VMDK corrélées aux datastores
+* Capacités des machines virtuelles
+* Tendance de la capacité utilisée du magasin de données
+
+
+
+
+== Utilisation des tableaux de bord pour accéder aux informations du pool de stockage
+
+Un tableau de bord peut inclure des widgets similaires à ce qui suit, identifiant la capacité de stockage physique utilisée ou identifiant la capacité surallouée d'un pool de stockage.
+
+image::../media/aggr3c64.gif[aggr3c64]

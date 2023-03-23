@@ -1,0 +1,207 @@
+---
+permalink: config-admin/3par-inserv-firmware-ssh-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight utilise la source de données 3PAR InServ \(Firmware 2.2.2+, SSH\) pour détecter l"inventaire des baies de stockage HP 3PAR StoreServ.' 
+---
+= Source de données 3PAR InServ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight utilise la source de données 3PAR InServ (Firmware 2.2.2+, SSH) pour détecter l'inventaire des baies de stockage HP 3PAR StoreServ.
+
+
+
+== Terminologie
+
+OnCommand Insight acquiert les informations d'inventaire suivantes à partir de la source de données 3PAR InServ. Pour chaque type de ressource acquis par Insight, la terminologie la plus courante utilisée pour cette ressource est indiquée. Lors de l'affichage ou du dépannage de cette source de données, gardez à l'esprit la terminologie suivante :
+
+|===
+
+
+| Terme du fournisseur/modèle | Terme Insight 
+
+
+ a| 
+Disque physique
+ a| 
+Disque
+
+
+
+ a| 
+System de stockage
+ a| 
+Stockage
+
+
+
+ a| 
+Nœud contrôleur
+ a| 
+Nœud de stockage
+
+
+
+ a| 
+Groupe de provisionnement commun
+ a| 
+Pool de stockage
+
+
+
+ a| 
+Volume virtuel
+ a| 
+Volumétrie
+
+|===
+[NOTE]
+====
+Il s'agit uniquement de mappages terminologiques courants et peuvent ne pas représenter tous les cas pour cette source de données.
+
+====
+
+
+== De formation
+
+* Adresse IP ou FQDN du cluster InServ
+* Pour l'inventaire, nom d'utilisateur et mot de passe en lecture seule pour le serveur InServ.
+* Pour des performances optimales, lisez-écrivez le nom d'utilisateur et le mot de passe sur le serveur InServ.
+* Exigences en matière de ports : 22 (collecte de l'inventaire), 5988 ou 5989 (collecte des performances) [Remarque : les performances de 3PAR sont prises en charge pour InServ OS 3.x+]
+* Pour la collecte des performances, vérifiez que SMI-S est activé en vous connectant à la baie 3PAR via SSH.
+
+
+
+
+== Configuration
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+IP de cluster
+ a| 
+Adresse IP ou nom de domaine complet du cluster InServ
+
+
+
+ a| 
+Nom d'utilisateur
+ a| 
+Nom d'utilisateur du serveur InServ
+
+
+
+ a| 
+Mot de passe
+ a| 
+Mot de passe utilisé pour le serveur InServ
+
+
+
+ a| 
+ADRESSE IP DE L'HÔTE SMI-S.
+ a| 
+Adresse IP de l'hôte SMI-S Provider
+
+
+
+ a| 
+Nom d'utilisateur SMI-S.
+ a| 
+Nom d'utilisateur pour l'hôte SMI-S Provider
+
+
+
+ a| 
+Mot de passe SMI-S.
+ a| 
+Mot de passe utilisé pour l'hôte SMI-S Provider
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+Intervalle entre les sondages d'inventaire (40 minutes par défaut)
+
+
+
+ a| 
+Exclure les périphériques
+ a| 
+Liste des adresses IP de périphérique à exclure, séparées par des virgules
+
+
+
+ a| 
+Délai d'attente du processus SSH (s)
+ a| 
+Délai d'expiration du processus SSH (60 secondes par défaut)
+
+
+
+ a| 
+Nombre de tentatives SSH
+ a| 
+Nombre de tentatives SSH
+
+
+
+ a| 
+Délai d'attente de bannière SSH (s)
+ a| 
+Délai d'attente de bannière SSH (20 secondes par défaut)
+
+
+
+ a| 
+Port SMI-S.
+ a| 
+Port utilisé par SMI-S Provider Host
+
+
+
+ a| 
+Protocole
+ a| 
+Protocole utilisé pour la connexion au fournisseur SMI-S.
+
+
+
+ a| 
+Espace de noms SMI-S.
+ a| 
+Espace de noms SMI-S.
+
+
+
+ a| 
+Intervalle d'interrogation des performances (s)
+ a| 
+Intervalle entre les sondages de performances (300 secondes par défaut)
+
+
+
+ a| 
+Nombre de tentatives de connexion SMI-S.
+ a| 
+Nombre de tentatives de connexion SMI-S
+
+|===

@@ -1,0 +1,20 @@
+---
+permalink: config-admin/email-configuration-prerequisites.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Avant de configurer OnCommand Insight pour accéder à votre système de messagerie, vous devez détecter le nom d"hôte ou l"adresse IP pour identifier le serveur de messagerie \(SMTP ou Exchange\) et attribuer un compte de messagerie pour les rapports OnCommand Insight.' 
+---
+= Configuration de la messagerie requise
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de configurer OnCommand Insight pour accéder à votre système de messagerie, vous devez détecter le nom d'hôte ou l'adresse IP pour identifier le serveur de messagerie (SMTP ou Exchange) et attribuer un compte de messagerie pour les rapports OnCommand Insight.
+
+Demandez à votre administrateur de messagerie de créer un compte de messagerie pour OnCommand Insight. Vous aurez besoin des informations suivantes :
+
+* Nom d'hôte ou adresse IP permettant d'identifier le serveur de messagerie (SMTP ou Exchange) utilisé par votre organisation. Vous trouverez ces informations dans l'application que vous utilisez pour lire votre courrier électronique. Dans Microsoft Outlook, par exemple, vous pouvez trouver le nom du serveur en affichant la configuration de votre compte : Outils - comptes de messagerie - Afficher ou modifier le compte de messagerie existant.
+* Nom du compte de messagerie par lequel OnCommand Insight enverra des rapports réguliers. Le compte doit être une adresse e-mail valide dans votre organisation. (La plupart des systèmes de messagerie n'envoient pas de messages à moins qu'ils ne soient envoyés par un utilisateur valide.) Si le serveur de messagerie a besoin d'un nom d'utilisateur et d'un mot de passe pour envoyer du courrier, demandez ces informations à votre administrateur système.
+

@@ -1,0 +1,65 @@
+---
+permalink: config-admin/exporting-query-results-to-a-csv-file.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez exporter les résultats d"une requête dans un fichier .CSV pour importer les données dans une autre application.' 
+---
+= Exportation des résultats de la requête dans un fichier .CSV
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez exporter les résultats d'une requête dans un fichier .CSV pour importer les données dans une autre application.
+
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur Web de OnCommand Insight.
+. Cliquez sur *requêtes* et sélectionnez *Afficher toutes les requêtes*.
++
+La page requêtes s'affiche.
+
+. Cliquez sur une requête.
+. Cliquez sur image:../media/export-to-csv.gif[""] pour exporter les résultats de la requête vers un``.CSV`` fichier.
+. Effectuez l'une des opérations suivantes :
++
+** Cliquez sur *Ouvrir avec*, puis sur *OK* pour ouvrir le fichier avec Microsoft Excel et enregistrer le fichier à un emplacement spécifique.
+** Cliquez sur *Enregistrer le fichier*, puis sur *OK* pour enregistrer le fichier dans votre dossier Téléchargements. Seuls les attributs des colonnes affichées seront exportés. Certaines colonnes affichées, en particulier celles faisant partie de relations imbriquées complexes, ne sont pas exportées.
+
+
++
+[NOTE]
+====
+Lorsqu'une virgule apparaît dans un nom de ressource, l'exportation entre guillemets le nom de la ressource et le format .csv approprié.
+
+====
++
++ lors de l'exportation des résultats de la requête, n'oubliez pas que *toutes les* lignes de la table de résultats seront exportées, pas seulement celles sélectionnées ou affichées à l'écran, jusqu'à un maximum de 10,000 lignes.
+
++
++
+
++
+[NOTE]
+====
+Lors de l'ouverture d'un fichier .CSV exporté avec Excel, si vous avez un nom d'objet ou un autre champ au format NN:NN (deux chiffres suivis d'un deux-points suivi de deux autres chiffres), Excel interprète parfois ce nom comme un format d'heure, au lieu du format texte. Cela peut entraîner l'affichage dans Excel de valeurs incorrectes dans ces colonnes. Par exemple, un objet nommé "81:45" s'affichera dans Excel comme "81:45:00". Pour contourner ce problème, importez le fichier .CSV dans Excel en procédant comme suit :
+
++
+
+....
+-   Open a new sheet in Excel.
+-   On the "Data" tab, choose "From Text".
+-   Locate the desired .CSV file and click "Import".
+-   In the Import wizard, choose "Delimited" and click Next.
+-   Choose "Comma" for the delimiter and click Next.
+-   Select the desired columns and choose "Text" for the column data format.
+-   Click Finish.
+Your objects should show in Excel in the proper format.
+....
++
+
+====
+

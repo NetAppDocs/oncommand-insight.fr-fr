@@ -1,0 +1,33 @@
+---
+permalink: config-admin/restarting-the-oncommand-insight-server-or-acquisition-unit.html 
+sidebar: sidebar 
+keywords:  
+summary: Lorsque vous redémarrez le serveur OnCommand Insight, actualisez la page et reconnectez-vous au portail OnCommand Insight. 
+---
+= Redémarrage du serveur OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsque vous redémarrez le serveur OnCommand Insight, actualisez la page et reconnectez-vous au portail OnCommand Insight.
+
+
+
+== Description de la tâche
+
+[NOTE]
+====
+Ces deux options doivent uniquement être utilisées sur demande par le support client NetApp. Il n'y a pas de confirmation avant le redémarrage.
+
+====
+
+
+== Étapes
+
+. Dans la barre d'outils Insight, cliquez sur *Admin* et sélectionnez *Dépannage*.
+. En bas de la page dans la zone autres tâches, cliquez sur le lien *Dépannage avancé*.
+. Sur la page suivante du menu Avancé, cliquez sur l'onglet *actions*.
+. Cliquez sur *redémarrer le serveur*.
+

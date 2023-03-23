@@ -1,0 +1,242 @@
+---
+permalink: config-admin/predefined-annotation-types.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommandInsight fournit certains types d"annotations par défaut. Ces annotations peuvent être utilisées pour filtrer ou regrouper des données et filtrer les rapports de données.' 
+---
+= Types d'annotation par défaut
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommandInsight fournit certains types d'annotations par défaut. Ces annotations peuvent être utilisées pour filtrer ou regrouper des données et filtrer les rapports de données.
+
+Vous pouvez associer des ressources à des types d'annotation par défaut tels que :
+
+* Le cycle de vie des actifs, comme l'anniversaire, le coucher du soleil ou la fin de vie
+* Informations de localisation sur un appareil, comme un centre de données, un bâtiment ou un sol
+* Classification des actifs, par exemple par qualité (niveaux), par périphériques connectés (niveau du commutateur) ou par niveau de service
+* État, comme les données fortement sollicitées (utilisation élevée)
+
+
+Le tableau suivant répertorie les types d'annotation par défaut. Vous pouvez modifier n'importe lequel de ces noms d'annotation en fonction de vos besoins.
+
+|===
+
+
+| Types d'annotation | Description | Type 
+
+
+ a| 
+Alias
+ a| 
+Nom convivial d'une ressource.
+ a| 
+Texte
+
+
+
+ a| 
+Anniversaire
+ a| 
+Date à laquelle le périphérique a été ou sera mis en ligne.
+ a| 
+Date
+
+
+
+ a| 
+Bâtiment
+ a| 
+Emplacement physique de l'hôte, du stockage, du commutateur et des ressources sur bande.
+ a| 
+Liste
+
+
+
+ a| 
+Ville
+ a| 
+Emplacement municipal des ressources d'hôte, de stockage, de commutateur et de bande.
+ a| 
+Liste
+
+
+
+ a| 
+Calculer le groupe de ressources
+ a| 
+Affectation de groupe utilisée par la source de données Host et VM Filesystems.
+ a| 
+Liste
+
+
+
+ a| 
+Continent américain
+ a| 
+Emplacement géographique de l'hôte, du stockage, des commutateurs et des bandes
+ a| 
+Liste
+
+
+
+ a| 
+Pays
+ a| 
+Emplacement national des ressources d'hôte, de stockage, de commutateur et de bande.
+ a| 
+Liste
+
+
+
+ a| 
+Data Center
+ a| 
+Emplacement physique de la ressource et disponible pour les hôtes, les baies de stockage, les commutateurs et les bandes.
+ a| 
+Liste
+
+
+
+ a| 
+Directement attaché
+ a| 
+Indique (Oui ou non) si une ressource de stockage est connectée directement aux hôtes.
+ a| 
+Booléen
+
+
+
+ a| 
+Fin de vie
+ a| 
+Date à laquelle un périphérique sera mis hors ligne, par exemple, si le bail a expiré ou si le matériel est retiré.
+ a| 
+Date
+
+
+
+ a| 
+Alias de la structure
+ a| 
+Nom convivial d'un tissu.
+ a| 
+Texte
+
+
+
+ a| 
+Plancher
+ a| 
+Emplacement d'un dispositif sur un étage d'un bâtiment. Peut être défini pour les hôtes, les baies de stockage, les commutateurs et les bandes.
+ a| 
+Liste
+
+
+
+ a| 
+Chaud
+ a| 
+Appareils déjà utilisés régulièrement ou au seuil de capacité.
+ a| 
+Booléen
+
+
+
+ a| 
+Remarque
+ a| 
+Commentaires que vous souhaitez associer à une ressource.
+ a| 
+Texte
+
+
+
+ a| 
+Rack
+ a| 
+Rack dans lequel réside la ressource.
+ a| 
+Texte
+
+
+
+ a| 
+Chambre
+ a| 
+Salle dans un bâtiment ou autre emplacement des ressources hôte, de stockage, de commutateur et de bande.
+ a| 
+Liste
+
+
+
+ a| 
+SAN
+ a| 
+Partition logique du réseau. Disponible sur les hôtes, les baies de stockage, les bandes, les commutateurs et les applications.
+ a| 
+Liste
+
+
+
+ a| 
+Niveau de service
+ a| 
+Un ensemble de niveaux de service pris en charge que vous pouvez attribuer aux ressources. Le fournit une liste d'options ordonnée pour les volumes internes, qtree et volumes. Modifiez les niveaux de service pour définir des règles de performances adaptées à différents niveaux.
+ a| 
+Liste
+
+
+
+ a| 
+État/province
+ a| 
+État ou province dans lequel la ressource est située.
+ a| 
+Liste
+
+
+
+ a| 
+Coucher de soleil
+ a| 
+Seuil défini après lequel aucune nouvelle attribution ne peut être effectuée à ce périphérique. Utile pour les migrations planifiées et autres modifications réseau en attente.
+ a| 
+Date
+
+
+
+ a| 
+Niveau du commutateur
+ a| 
+Inclut des options prédéfinies pour la configuration de catégories pour les commutateurs. En général, ces désignations restent pour la durée de vie de l'appareil, bien que vous puissiez les modifier, si nécessaire. Disponible uniquement pour les commutateurs.
+ a| 
+Liste
+
+
+
+ a| 
+Niveau
+ a| 
+Peut être utilisé pour définir différents niveaux de service au sein de votre environnement. Les niveaux peuvent définir le type de niveau, comme la vitesse nécessaire (par exemple, Gold ou Silver). Cette fonctionnalité est disponible uniquement sur les volumes internes, les qtrees, les baies de stockage, les pools de stockage et les volumes.
+ a| 
+Liste
+
+
+
+ a| 
+Gravité de la violation
+ a| 
+Classer (par exemple, majeur) d'une violation (par exemple, ports hôtes manquants ou redondance manquante), dans une hiérarchie de la plus haute à la plus faible importance.
+ a| 
+Liste
+
+|===
+[NOTE]
+====
+Alias, Data Center, données actives, niveau de service, coucher de soleil, Switch Level, Service Level, Tier et violation Severity sont des annotations au niveau du système, que vous ne pouvez pas supprimer ou renommer ; vous pouvez modifier uniquement les valeurs qui leur sont attribuées.
+
+====

@@ -1,0 +1,20 @@
+---
+permalink: config-admin/topology.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La section topologie, s"il s"agit d"une application à une ressource, vous permet de voir comment une ressource de base est connectée à ses ressources associées.' 
+---
+= Topologie
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La section topologie, si applicable à une ressource, vous permet de voir comment une ressource de base est connectée à ses ressources associées.
+
+Voici un exemple de ce qui peut s'afficher dans la section topologie d'une page d'inventaire de machine virtuelle.
+
+image::../media/topology-section.gif[section topologie]
+
+Si la topologie de l'actif est plus grande que celle qui l'est dans la section, le lien *Click pour voir le lien hypertexte topologie* s'affiche à la place.

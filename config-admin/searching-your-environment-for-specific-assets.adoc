@@ -1,0 +1,30 @@
+---
+permalink: config-admin/searching-your-environment-for-specific-assets.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez trouver des informations sur des ressources spécifiques à l"aide de la fonction de recherche. Par exemple, si un utilisateur système contacte l"administrateur de stockage pour une plainte concernant un serveur particulier, l"administrateur peut rechercher le nom du serveur et afficher une page de ressources résumant l"état et fournissant des informations liées supplémentaires.' 
+---
+= Recherche de ressources spécifiques dans votre environnement
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez trouver des informations sur des ressources spécifiques à l'aide de la fonction de recherche. Par exemple, si un utilisateur système contacte l'administrateur de stockage pour une plainte concernant un serveur particulier, l'administrateur peut rechercher le nom du serveur et afficher une page de ressources résumant l'état et fournissant des informations liées supplémentaires.
+
+
+
+== Étapes
+
+. Ouvrez l'interface utilisateur OnCommand Insigtweb.
+. Dans la barre d'outils, cliquez sur image:../media/search-assets-icon.gif[""].
++
+La zone *Rechercher des actifs* s'affiche.
+
+. Entrez le nom d'une ressource ou une partie du nom.
+. Sélectionnez la ressource souhaitée dans les résultats de la recherche.
++
+La page d'inventaire de cette ressource s'affiche.
+
+

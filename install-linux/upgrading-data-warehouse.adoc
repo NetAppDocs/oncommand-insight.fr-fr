@@ -1,0 +1,38 @@
+---
+permalink: install-linux/upgrading-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Après la mise à niveau du logiciel Insight Server, vous devez mettre à niveau votre logiciel d"entrepôt de données.' 
+---
+= Mise à niveau du logiciel Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Après la mise à niveau du logiciel Insight Server, vous devez mettre à niveau votre logiciel d'entrepôt de données.
+
+
+
+== Étapes
+
+. Connectez-vous au serveur d'entrepôt de données (DWH) à l'aide d'un compte avec des privilèges sudo.
+. Téléchargez le logiciel Insight DWH sur le site du support NetApp.
+. Accédez au répertoire de téléchargement et tapez la commande suivante :
++
+`unzip oci-dwh-<version>-linux-x86_64.zip`
+
++
+Vérifiez que vous disposez du numéro de version correct du fichier d'installation.
+
+. Vous pouvez afficher la syntaxe, les arguments de commande et l'utilisation des paramètres pour `oci-install.sh` :
++
+`sudo ./oci-dwh-<version>-linux-x86_64/oci-install.sh --help`
+
+. Exécutez le script d'installation :
++
+`sudo ./oci-dwh-<version>-linux-x86_64/oci-install.sh`
+
+. Acceptez le contrat de licence et suivez les invites.
+

@@ -1,0 +1,22 @@
+---
+permalink: dwh/viewing-the-data-warehouse-documentation.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous pouvez consulter les informations de schéma de la base de données Data Warehouse. 
+---
+= Affichage de la documentation relative au schéma de la base de données Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez consulter les informations de schéma de la base de données Data Warehouse.
+
+
+
+== Étapes
+
+. Connectez-vous au portail Data Warehouse à l'adresse `+https://hostname/dwh+`, où `hostname` Est le nom du système sur lequel l'entrepôt de données OnCommand Insight est installé.
+. Dans la barre d'outils Data Warehouse, cliquez sur image:../media/oci-7-help-icon-gif.gif[""] Et sélectionnez *Schéma*.
+

@@ -1,0 +1,16 @@
+---
+permalink: howto/using-queries-to-annotate-your-assets.html 
+sidebar: sidebar 
+keywords:  
+summary: Maintenant que vous avez créé vos annotations initiales, voyons comment les associer à des ressources spécifiques. 
+---
+= Utilisation de requêtes pour annoter vos ressources
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Maintenant que vous avez créé vos annotations initiales, voyons comment associer ces annotations à des ressources spécifiques.
+
+Dans les exemples qui suivent, nous appliquerons ces annotations à des ressources spécifiques. Par exemple, nous créerons une requête pour répertorier toutes les baies de stockage qui résident dans un data Center spécifique et marquer celles-ci avec l'annotation appropriée. Nous ferons de même pour les ressources appartenant à un niveau et à un niveau de service spécifiques.

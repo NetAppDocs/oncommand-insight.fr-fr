@@ -1,0 +1,12 @@
+---
+permalink: faq/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Foire aux questions
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+

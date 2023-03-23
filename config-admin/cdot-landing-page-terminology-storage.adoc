@@ -1,0 +1,31 @@
+---
+permalink: config-admin/cdot-landing-page-terminology-storage.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Termes s"appliquant aux objets ou aux références figurant sur les pages d"accueil des ressources de stockage NetApp clustered Data ONTAP.' 
+---
+= Le stockage clustered Data ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Termes s'appliquant aux objets ou aux références figurant sur les pages d'accueil des ressources de stockage NetApp clustered Data ONTAP.
+
+
+
+== Terminologie du stockage clustered Data ONTAP
+
+Les termes suivants s'appliquent aux objets ou aux références disponibles sur les pages d'accueil des ressources de stockage NetApp clustered Data ONTAP. Un grand nombre de ces termes s'appliquent également à d'autres collecteurs de données.
+
+* Modèle -- liste séparée par des virgules des noms de modèles de nœuds uniques et discrets de ce cluster. Si tous les nœuds des clusters sont du même type de modèle, un seul nom de modèle apparaît.
+* Fournisseur -- même nom de fournisseur que vous pouvez voir si vous avez configuré une nouvelle source de données.
+* Numéro de série -- le numéro de série de la matrice. Sur les systèmes de stockage d'architecture en cluster comme NetApp clustered Data ONTAP, ce numéro de série peut être moins utile que les numéros de série individuels des « nœuds de stockage ».
+* IP -- est généralement le(s) IP(s) ou le(s) nom(s) d'hôte(s) configuré(s) dans la source de données.
+* Version du microcode -- micrologiciel.
+* Capacité brute -- somme de base 2 de tous les disques physiques du système, quel que soit leur rôle.
+* Latence : représentation de l'hôte face aux workloads, en lecture et en écriture. Dans l'idéal, OCI utilise cette valeur directement, mais ce n'est souvent pas le cas. À la place de la baie qui propose ce type de stockage, OCI effectue généralement un calcul pondéré par IOPS, dérivé des statistiques des volumes internes individuels.
+* Débit -- agrégé à partir de volumes internes.
+* Gestion -- il peut contenir un lien hypertexte pour l'interface de gestion du périphérique. Créé par programmation par la source de données Insight dans le cadre du reporting d'inventaire.
+

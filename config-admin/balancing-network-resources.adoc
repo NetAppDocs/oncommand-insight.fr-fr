@@ -1,0 +1,28 @@
+---
+permalink: config-admin/balancing-network-resources.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Pour résoudre les problèmes d"équilibrage, utilisez les pages de ressources pour identifier les problèmes et identifier les volumes de grande capacité sous-utilisés.' 
+---
+= Équilibrer les ressources réseau
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour résoudre les problèmes d'équilibrage, utilisez les pages de ressources pour identifier les problèmes et identifier les volumes de grande capacité sous-utilisés.
+
+
+
+== Étapes
+
+. Ouvrez le tableau de bord des ressources dans votre navigateur.
+. Dans la carte thermique des IOPS des machines virtuelles, vous remarquez le nom d'une machine virtuelle en impression très volumineuse qui signale souvent des problèmes.
+. Cliquez sur le nom de la machine virtuelle pour afficher la page de la ressource.
+. Vérifiez les messages d'erreur dans le résumé.
+. Consultez les graphiques de performances, en particulier les ressources les plus corrélées pour localiser les volumes susceptibles d'être en conflit.
+. Ajoutez des volumes au graphique de performances pour comparer les modèles d'activité et afficher davantage de pages d'actifs pour les autres ressources impliquées dans le problème.
+. Faites défiler la page vers le bas pour afficher la liste de toutes les ressources associées à la machine virtuelle. Notez les VMDK qui s'exécutent à haute capacité. Cela est probablement à l'origine du conflit.
+. Pour résoudre le problème d'équilibrage, identifiez une ressource sous-utilisée pour recevoir la charge d'une ressource surutilisée ou supprimez une application moins exigeante de la ressource largement utilisée.
+

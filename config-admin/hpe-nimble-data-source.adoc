@@ -1,0 +1,144 @@
+---
+permalink: config-admin/hpe-nimble-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Le collecteur de données HPE Nimble prend en charge les données d"inventaire et de performances des baies de stockage HPE Nimble.' 
+---
+= Source de données HPE Nimble
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le collecteur de données HPE Nimble prend en charge les données d'inventaire et de performances des baies de stockage HPE Nimble.
+
+
+
+== Terminologie
+
+OnCommand Insight acquiert les informations d'inventaire suivantes à partir de la source de données HPE Nimble. Pour chaque type de ressource acquis par Insight, la terminologie la plus courante utilisée pour cette ressource est indiquée. Lors de l'affichage ou du dépannage de cette source de données, gardez à l'esprit la terminologie suivante :
+
+|===
+
+
+| Terme du fournisseur/modèle | Terme Insight 
+
+
+ a| 
+Baie
+ a| 
+Stockage
+
+
+
+ a| 
+Disque
+ a| 
+Disque
+
+
+
+ a| 
+Piscine
+ a| 
+Pool de stockage
+
+
+
+ a| 
+Volumétrie
+ a| 
+Volumétrie
+
+
+
+ a| 
+Initiateur
+ a| 
+Alias de l'hôte de stockage
+
+
+
+ a| 
+Contrôleur
+ a| 
+Nœud de stockage
+
+
+
+ a| 
+Interface Fibre Channel
+ a| 
+Contrôleur
+
+|===
+[NOTE]
+====
+Il s'agit uniquement de mappages terminologiques courants et peuvent ne pas représenter tous les cas pour cette source de données.
+
+====
+
+
+== De formation
+
+* La baie doit être installée et configurée, et accessible depuis le client via son nom de domaine complet (FQDN) ou son adresse IP de gestion de baie.
+* La baie doit exécuter NimbleOS 2.3.x ou une version ultérieure.
+* Vous devez disposer d'un nom d'utilisateur et d'un mot de passe valides pour la matrice.
+* Le port 5392 doit être ouvert sur la matrice.
+
+
+
+
+== Configuration
+
+|===
+
+
+| *Champ* | *Description* 
+
+
+ a| 
+Adresse IP de gestion de baie
+ a| 
+Nom de domaine complet (FQDN) ou adresse IP de gestion de baie.
+
+
+
+ a| 
+Nom d'utilisateur
+ a| 
+Nom d'utilisateur de la baie Nimble
+
+
+
+ a| 
+Mot de passe
+ a| 
+Mot de passe de la baie Nimble
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| *Champ* | *Description* 
+
+
+ a| 
+Port
+ a| 
+Port utilisé par l'API REST Nimble. La valeur par défaut est 5392.
+
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+Intervalle entre les sondages d'inventaire (60 minutes par défaut)
+
+|===
+Remarque : l'intervalle d'interrogation par défaut est de 300 secondes et ne peut pas être modifié. Il s'agit du seul intervalle pris en charge par Nimble.

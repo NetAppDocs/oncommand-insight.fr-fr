@@ -1,0 +1,25 @@
+---
+permalink: install-windows/verifying-data-warehouse-has-historical-data.html 
+sidebar: sidebar 
+keywords:  
+summary: Après avoir restauré vos rapports personnalisés, vous devez vérifier que Data Warehouse collecte des données historiques en affichant vos rapports personnalisés. 
+---
+= Vérification que Data Warehouse contient des données historiques
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Après avoir restauré vos rapports personnalisés, vous devez vérifier que Data Warehouse collecte des données historiques en affichant vos rapports personnalisés.
+
+
+
+== Étapes
+
+. Connectez-vous au portail Data Warehouse à l'adresse `+https://fqdn/dwh+`.
+. Dans la barre d'outils Data Warehouse, cliquez sur image:../media/oci-reporting-portal-icon.gif[""] Pour ouvrir le portail Insight Reporting et vous connecter.
+. Ouvrez le dossier contenant vos rapports personnalisés (par exemple, Rapports personnalisés).
+. Cliquez sur image:../media/run-with-options.gif[""] pour ouvrir les options de format de sortie de ce rapport.
+. Sélectionnez les options de votre choix et cliquez sur *Exécuter* pour vous assurer qu'elles sont remplies de données d'historique de stockage, de calcul et de commutation.
+

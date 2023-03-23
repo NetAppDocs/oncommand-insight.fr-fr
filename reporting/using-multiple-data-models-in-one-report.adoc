@@ -1,0 +1,18 @@
+---
+permalink: reporting/using-multiple-data-models-in-one-report.html 
+sidebar: sidebar 
+keywords:  
+summary: Généralement, vous utilisez un modèle de données par rapport. Toutefois, vous pouvez écrire un rapport qui combine des données de plusieurs modèles de données. 
+---
+= Utilisation de plusieurs modèles de données dans un rapport
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Généralement, vous utilisez un modèle de données par rapport. Toutefois, vous pouvez écrire un rapport qui combine des données de plusieurs modèles de données.
+
+Pour écrire un rapport qui combine des données de plusieurs modèles de données, choisissez l'un des modèles de données à utiliser comme base, puis écrivez des requêtes SQL pour accéder aux données à partir des magasins de données supplémentaires. Vous pouvez utiliser la fonction jonction SQL pour combiner les données des différentes requêtes dans une seule requête que vous pouvez utiliser pour écrire le rapport.
+
+Imaginons par exemple que vous souhaitiez disposer de la capacité actuelle de chaque baie de stockage et que vous souhaitez capturer des annotations personnalisées sur les baies. Vous pouvez créer le rapport à l'aide du modèle de données capacité de stockage. Vous pouvez utiliser les éléments des tables capacité et dimension actuelles et ajouter une requête SQL séparée pour accéder aux informations d'annotations dans le modèle de données Inventory. Enfin, vous pouvez combiner les données en reliant les données de stockage d'inventaire à la table dimension de stockage à l'aide du nom de stockage et des critères de jointure.

@@ -1,0 +1,18 @@
+---
+permalink: config-admin/asset-pages.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les pages d"actifs fournissent des données de dépannage des performances et présentent des informations récapitulatives sur une ressource de base \(telle qu"une machine virtuelle ou un volume\) et les ressources associées qu"elle utilise \(telles que les pools de stockage, les nœuds de stockage et les ports de commutateur connectés\), avec des liens vers des informations supplémentaires.' 
+---
+= Données de la page d'inventaire
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les pages d'actifs fournissent des données de dépannage des performances et présentent des informations récapitulatives sur une ressource de base (telle qu'une machine virtuelle ou un volume) et les ressources associées qu'elle utilise (telles que les pools de stockage, les nœuds de stockage et les ports de commutateurs connectés), avec des liens vers des informations supplémentaires.
+
+À partir de OnCommand Insight 7.3.1, toutes les pages d'inventaire ont une page *main* et une page *Additional data*. Sur la page principale, vous trouverez un résumé de la ressource et des sections différentes pour les graphiques, la topologie et d'autres informations. La page *données supplémentaires* vous permet de configurer une page de tableau de bord personnalisable pour le type d'actif actuel.
+
+Un cercle rouge continu à côté d'une ligne ou d'un message sur l'onglet principal de la page d'inventaire indique des problèmes potentiels avec l'environnement surveillé.

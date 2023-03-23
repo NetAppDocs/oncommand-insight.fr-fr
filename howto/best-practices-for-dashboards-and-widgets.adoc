@@ -1,0 +1,14 @@
+---
+permalink: howto/best-practices-for-dashboards-and-widgets.html 
+sidebar: sidebar 
+keywords:  
+summary: Conseils et astuces pour vous aider à tirer le meilleur parti des fonctionnalités puissantes des tableaux de bord et des widgets. 
+---
+= Meilleures pratiques pour les tableaux de bord et les widgets
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Conseils et astuces pour vous aider à tirer le meilleur parti des fonctionnalités puissantes des tableaux de bord et des widgets.

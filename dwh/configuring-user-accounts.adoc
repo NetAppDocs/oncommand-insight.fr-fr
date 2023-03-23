@@ -1,0 +1,23 @@
+---
+permalink: dwh/configuring-user-accounts.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous devez effectuer plusieurs étapes pour configurer les comptes d"utilisateur.' 
+---
+= Configuration des comptes utilisateur
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez effectuer plusieurs étapes pour configurer les comptes d'utilisateur.
+
+
+
+== Étapes
+
+. Connectez-vous au portail Data Warehouse à l'adresse `+https://hostname/dwh+`, où `hostname` Est le nom du système sur lequel l'entrepôt de données OnCommand Insight est installé.
+. Dans le volet de navigation de gauche, cliquez sur *gestion des utilisateurs*.
+. Configurez chaque compte utilisateur.
+

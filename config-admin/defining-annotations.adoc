@@ -1,0 +1,24 @@
+---
+permalink: config-admin/defining-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Lors de la personnalisation de OnCommand Insight pour suivre les données selon les exigences de votre entreprise, vous pouvez définir les annotations spécialisées nécessaires pour obtenir une vue d"ensemble de vos données : par exemple, la fin de vie des ressources, le data Center, l"emplacement du bâtiment, le niveau de stockage ou le volume des ressources, et le niveau de service du volume interne.' 
+---
+= Définition des annotations
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lors de la personnalisation de OnCommand Insight pour suivre les données selon les exigences de votre entreprise, vous pouvez définir les annotations spécialisées nécessaires pour obtenir une vue d'ensemble de vos données : par exemple, la fin de vie des ressources, le data Center, l'emplacement du bâtiment, le niveau de stockage ou le volume des ressources, et le niveau de service du volume interne.
+
+
+
+== Étapes
+
+. Répertoriez toute terminologie de l'industrie à laquelle les données d'environnement doivent être associées.
+. Répertoriez la terminologie de l'entreprise à laquelle les données d'environnement doivent être associées, qui n'est pas déjà suivie à l'aide des entités métier.
+. Identifiez tout type d'annotation par défaut que vous pouvez utiliser.
+. Identifiez les annotations personnalisées que vous devez créer.
+

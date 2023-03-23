@@ -1,0 +1,29 @@
+---
+permalink: config-admin/changes-causing-data-collection-problems.html 
+sidebar: sidebar 
+keywords:  
+summary: Si vous rencontrez des problèmes de collecte de données dans OnCommand Insight, les modifications de votre environnement sont une cause probable. En règle générale de maintenance, vous devez également tenir compte des modifications apportées à votre environnement dans Insight. 
+---
+= Modifications entraînant des problèmes de collecte de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous rencontrez des problèmes de collecte de données dans OnCommand Insight, les modifications de votre environnement sont une cause probable. En règle générale de maintenance, vous devez également tenir compte des modifications apportées à votre environnement dans Insight.
+
+Vous pouvez utiliser cette liste de contrôle pour identifier les modifications de votre réseau susceptibles de causer des problèmes :
+
+* Avez-vous modifié des mots de passe ? Ces mots de passe ont-ils été modifiés dans Insight ?
+* Avez-vous supprimé un périphérique de votre réseau ? Vous devez également retirer le périphérique de OnCommand Insight pour l'empêcher d'être redécouvert et réintroduit.
+* Avez-vous mis à niveau des logiciels d'infrastructure (tels que HP CommandView EVA ou EMC Solutions Enabler) ?
++
+Assurez-vous que les versions appropriées des outils client sont installées sur l'unité d'acquisition. Si les pannes de source de données persistent, vous devez contacter le support technique pour demander de l'aide et éventuellement un correctif de source de données.
+
+* Toutes vos unités d'acquisition OnCommand Insight utilisent-elles la même version OnCommand Insight ? Si les unités d'acquisition à distance et l'unité d'acquisition locale exécutent différentes versions de OnCommand Insight, installez la même version sur toutes les unités pour corriger le problème de collecte des données.
++
+Si vous devez installer une nouvelle version de OnCommand Insight sur toutes les unités d'acquisition, rendez-vous sur le site de support et téléchargez la version correcte.
+
+* Avez-vous modifié des noms de domaine ou ajouté un nouveau domaine ? Vous devez mettre à jour vos méthodes de résolution de périphérique (anciennement résolution automatique).
+

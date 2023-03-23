@@ -1,0 +1,23 @@
+---
+permalink: howto/introduction-to-root-volume-isolation.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Sur les systèmes de stockage NetApp, l"agrégat root contient le volume root. Le volume root contient des répertoires spéciaux et des fichiers de configuration pour la gestion et le contrôle du système de stockage. Les opérations de gestion et de contrôle peuvent entraîner une grande quantité d"activité au sein de l"agrégat racine. Lorsque vous interrogez le système Insight sur les 10 principaux volumes internes présentant la densité d"E/S la plus élevée, vos résultats peuvent inclure des agrégats racine NetApp dans le top 10.' 
+---
+= Les rapports de densité d'E/S décrivent uniquement les volumes de données internes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sur les systèmes de stockage NetApp, l'agrégat root contient le volume root. Le volume root contient des répertoires spéciaux et des fichiers de configuration pour la gestion et le contrôle du système de stockage. Les opérations de gestion et de contrôle peuvent entraîner une grande quantité d'activité au sein de l'agrégat racine. Lorsque vous interrogez le système Insight sur les 10 principaux volumes internes présentant la densité d'E/S la plus élevée, vos résultats peuvent inclure des agrégats racine NetApp dans le top 10.
+
+Lors de la surveillance de votre environnement, il est plus important de déterminer quels volumes de données internes produisent des chiffres de densité d'E/S élevés. Pour identifier avec précision uniquement les volumes de données, vous devez isoler les volumes internes NetApp des requêtes utilisées pour surveiller la densité des E/S.
+
+Ce guide explique comment identifier facilement les agrégats racine NetApp, les isoler des résultats des requêtes de volume internes et créer des règles qui excluent tous les nouveaux agrégats racine NetApp lors de leur ajout au système. Les fonctionnalités Insight suivantes assurent que vos rapports de densité des E/S sont dérivés des volumes de données internes.
+
+* Une requête est créée afin d'identifier tous les agrégats racine NetApp surveillés par Insight.
+* Une annotation est attribuée à chacun des agrégats racines NetApp.
+* Une règle d'annotation est créée pour exclure les agrégats NetApp
+

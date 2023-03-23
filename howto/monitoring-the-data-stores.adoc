@@ -1,0 +1,44 @@
+---
+permalink: howto/monitoring-the-data-stores.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La page d"accueil du datastore identifie les taux de sursouscription, l"utilisation des LUN et des disques, établit une corrélation entre les ressources et montre les failles et les violations de règles qui se sont produites avec le datastore.' 
+---
+= Surveillance des datastores
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La page d'accueil du datastore identifie les taux de sursouscription, l'utilisation des LUN et des disques, établit une corrélation entre les ressources et montre les failles et les violations de règles qui se sont produites avec le datastore.
+
+Utilisez cette page d'accueil pour identifier les problèmes liés à votre infrastructure virtuelle. Vous pouvez suivre les tendances en matière de capacité et de ratio de capacité pour anticiper les modifications de votre capacité.
+
+* *Résumé*
++
+Utilisez cette section pour comprendre :
+
++
+** Informations sur la capacité du datastore, y compris la capacité physique et la capacité surallouée.
+** Pourcentage de capacité surallouée.
+** Metrics de latence, d'IOPS et de débit.
+
+
+* *VMDK*
++
+La section VMDK présente la capacité et les performances des disques virtuels.
+
+* *Ressources de stockage*
++
+Cette section présente la capacité utilisée et les mesures de performances pour le volume interne corrélé avec le datastore.
+
+* *Ressources*
++
+Utilisez cette section pour comprendre la corrélation entre les VMDK et les LUN, et pour comprendre le chemin d'application du stockage vers les machines virtuelles.
+
+* *Section des violations*
++
+La section violations identifie toute violation des règles de performances définies pour le datastore.
+
+

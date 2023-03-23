@@ -1,0 +1,55 @@
+---
+permalink: install-linux/installing-oncommand-insight-data-warehouse-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"installation est autonome et inclut les éléments nécessaires à l"exécution et à l"exploitation de l"entrepôt de données OnCommand Insight \(DWH\).' 
+---
+= Installation de l'entrepôt de données OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'installation est autonome et inclut les éléments nécessaires à l'exécution et à l'exploitation de l'entrepôt de données OnCommand Insight (DWH).
+
+
+
+== Avant de commencer
+
+Vous devez avoir terminé toutes les conditions préalables à l'installation.
+
+
+
+== Description de la tâche
+
+Data Warehouse dispose de fonctionnalités de création de rapports Cognos. Toutefois, si vous installez Insight sur un serveur Linux, vous pouvez utiliser ces fonctionnalités uniquement si vous installez Data Warehouse sur un serveur Windows. Pour plus d'informations sur l'installation de l'entrepôt de données sur les fonctionnalités de création de rapports Windows et Cognos, reportez-vous au _Guide d'installation de OnCommand Insight pour Microsoft Windows_.
+
+
+
+== Étapes
+
+. Connectez-vous au serveur Data Warehouse à l'aide d'un compte avec des privilèges sudo.
+. Accédez au répertoire du serveur où se trouvent les fichiers d'installation et saisissez la commande suivante :
++
+`unzip oci-dwh-<version>-linux-x86_64.zip`
+
++
+Vérifiez le numéro de version du fichier d'installation ; le numéro de version peut être différent de celui indiqué dans la commande.
+
+. Vous pouvez afficher la syntaxe, les arguments de commande et l'utilisation des paramètres pour `oci-install.sh` avant de commencer l'installation :
++
+`sudo ./oci-dwh-<version>-linux-x86_64/oci-install.sh --help`
+
+. Exécutez le script d'installation :
++
+`sudo ./oci-dwh-<version>-linux-x86_64/oci-install.sh`
+
+. Lisez le contrat de licence, acceptez-le et suivez les invites.
+
+
+
+
+== Résultats
+
+Après avoir répondu à toutes les invites, l'installation commence et devrait prendre environ 10 minutes, selon les applications installées.

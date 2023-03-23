@@ -1,0 +1,123 @@
+---
+permalink: howto/configuring-business-entities-for-your-company.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La compréhension des éléments de votre structure d"entreprise vous aide à suivre l"utilisation des actifs et à générer des rapports sur les coûts. Nous allons configurer ici les entités commerciales de votre entreprise.' 
+---
+= Configuration des entités commerciales de votre société
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La compréhension des éléments de votre structure d'entreprise vous aide à suivre l'utilisation des actifs et à générer des rapports sur les coûts. Nous allons configurer ici les entités commerciales de votre entreprise.
+
+
+
+== Description de la tâche
+
+OnCommand Insight vous permet de définir des entités métier dans une hiérarchie incluant jusqu'à quatre niveaux de granularité.
+
+* *Locataire*
++
+Principalement utilisé par les fournisseurs de services pour associer des ressources à un client. Le niveau locataire est nécessaire si votre entreprise est un fournisseur de services Internet et que vous souhaitez suivre l'utilisation des ressources par les clients.
+
+* *Secteur d'activité (LOB)*
++
+Secteur d'activité ou gamme de produits au sein d'une entreprise, par exemple stockage de données. Le secteur d'activité est nécessaire dans la hiérarchie si les données des différentes gammes de produits doivent être suivies.
+
+* *Unité commerciale*
++
+Représente une unité commerciale traditionnelle telle que juridique ou Marketing. L'unité commerciale est requise si vous devez effectuer le suivi des données de différents services. Ce niveau de la hiérarchie est souvent utile pour séparer une ressource qu'un ministère utilise et que les autres ministères n'utilisent pas.
+
+* *Projet*
++
+Il est souvent utilisé pour identifier un projet spécifique au sein d'une business unit pour lequel vous souhaitez un refacturation de la capacité. Par exemple, « brevets » peut être un nom de projet pour l'unité commerciale juridique et « événements commerciaux » peut être un nom de projet pour l'unité commerciale Marketing. Notez que les noms de niveau peuvent inclure des espaces.
+
+
+
+Voici un exemple de hiérarchie d'entités métier :
+
+image::../media/businessentitieshierarchyexample.gif[exemple de hiérarchie d'entreprise]
+
+Meilleure pratique : créez un tableau avec chaque ligne affichant une entité métier complète dans votre hiérarchie :
+
+|===
+
+
+| Locataire | Secteur d'activité | Unité commerciale | Projet 
+
+
+ a| 
+NetApp Inc
+ a| 
+Stockage des données
+ a| 
+Légal
+ a| 
+Brevets
+
+
+
+ a| 
+NetApp Inc
+ a| 
+Stockage des données
+ a| 
+Marketing
+ a| 
+Événements commerciaux
+
+
+
+ a| 
+S/O
+ a| 
+S/O
+ a| 
+Sécurité et sûreté
+ a| 
+S/O
+
+
+
+ a| 
+...
+ a| 
+ a| 
+ a| 
+
+|===
+[NOTE]
+====
+Vous n'êtes pas tenu d'utiliser tous les niveaux dans la conception de votre hiérarchie d'entreprise. Vous pouvez choisir « N/A » pour les niveaux que vous n'utilisez pas.
+
+====
+Pour créer une hiérarchie d'entités métier dans Insight :
+
+
+
+== Étapes
+
+. Connectez-vous à Insight en tant qu'utilisateur avec des autorisations d'administration.
+. Sélectionnez *gérer* > *entités commerciales*.
+. Cliquez sur le bouton *+Ajouter*
+. Cliquez dans la zone *tenant* et saisissez votre nom de locataire.
++
+Si vous avez déjà saisi des locataires pour votre environnement, une liste des locataires existants s'affiche à partir de laquelle vous pouvez choisir. Vous pouvez également choisir N/A si le locataire ne s'applique pas à cette entité commerciale.
+
+. Répétez cette procédure pour *secteur d'activité*, *unité commerciale* et *projet*.
+. Cliquez sur *Enregistrer*
+
+
+
+
+== Une fois que vous avez terminé
+
+Meilleures pratiques :
+
+* Organisez votre hiérarchie dans un tableau et vérifiez que les noms de la hiérarchie sont explicites dans les vues et rapports Insight.
+* Créez vos entités commerciales dans Insight avant de créer des applications.
+* Identifier et répertorier toutes les applications qui seront associées à chaque entité métier.
+

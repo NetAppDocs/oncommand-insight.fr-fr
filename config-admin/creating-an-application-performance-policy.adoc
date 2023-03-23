@@ -1,0 +1,140 @@
+---
+permalink: config-admin/creating-an-application-performance-policy.html 
+sidebar: sidebar 
+keywords: anomaly score 
+summary: 'Vous pouvez créer une règle de performance applicative en fonction du score d"anomalie attribué à l"application. Le dépassement de seuils déclenche des alertes qui vous informent des problèmes liés aux ressources de votre application.' 
+---
+= Création d'une règle de performances d'application
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez créer une règle de performance applicative en fonction du score d'anomalie attribué à l'application. Le dépassement de seuils déclenche des alertes qui vous informent des problèmes liés aux ressources de votre application.
+
+
+
+== Avant de commencer
+
+Le moteur de détection des anomalies doit être en cours d'exécution sur votre serveur Insight afin de surveiller les seuils définis dans une règle de performances des applications.
+
+
+
+== Description de la tâche
+
+Créez des règles qui génèrent des alertes sur les différents types de scores d'anomalie que vous souhaitez surveiller :
+
+* Pour identifier les pics d'anomalie, créez une règle qui vous alerte lors de la première occurrence, avec un seuil défini sur un score d'anomalie élevé (> 90).
+* Pour identifier un changement de comportement au fil du temps, créez une règle qui émet des alertes au bout d'une heure avec un score d'anomalie moyen-élevé. Cette règle fournit une alerte basée sur 3 scores consécutifs de détection des anomalies.
+
+
+
+
+== Étapes
+
+. Ouvrez OnCommand Insight dans votre navigateur.
+. Cliquez sur *gérer* > *politiques de performances*
++
+La page règles de performance s'affiche.
+
+. Cliquez sur *+Ajouter*.
++
+La boîte de dialogue Ajouter une stratégie s'affiche.
+
+. Entrez un nom de stratégie unique dans le champ *Policy Name*.
++
+Vous devez utiliser un nom différent de tous les autres noms de stratégie pour l'objet.
+
+. Dans la liste *appliquer aux objets de type*, sélectionnez application.
+. Sélectionnez la priorité de l'application dans la liste *priorité de l'application*.
+. Dans la liste *appliquer après une fenêtre de*, sélectionnez lorsqu'une alerte est émise pour indiquer une violation de seuil.
++
+L'option première occurrence déclenche une alerte lorsqu'un seuil est franchi sur le premier score. Toutes les autres options déclenchent une alerte lorsque le seuil est franchi une fois et est traversé en continu pendant au moins la durée spécifiée.
+
++
+Le score d'anomalie est fourni par intervalles de 30 minutes (à 5 minutes après l'heure et 35 minutes après l'heure). Par conséquent, seules les périodes divisibles par 30 doivent être sélectionnées.
+
++
+|===
+
+
+| Appliquer après la fenêtre de | Nombre de godets requis pour rejeter la violation 
+
+
+ a| 
+Première occurrence
+ a| 
+1
+
+
+
+ a| 
+5 minutes
+ a| 
+2
+
+
+
+ a| 
+10 minutes
+ a| 
+2
+
+
+
+ a| 
+15 minutes
+ a| 
+2
+
+
+
+ a| 
+30 minutes
+ a| 
+2
+
+
+
+ a| 
+45 minutes
+ a| 
+3
+
+
+
+ a| 
+1 heure
+ a| 
+3
+
+
+
+ a| 
+2 heures
+ a| 
+4
+
+|===
+. Dans la liste *Avertissement*, sélectionnez critique ou Avertissement
+. Configurez l'option E-mail si vous souhaitez modifier la méthode de notification par e-mail par défaut.
+. Dans la section *Créer une alerte IF*, sélectionnez un opérateur, puis entrez une valeur pour créer un seuil. Le score d'anomalie est le seul compteur de performances utilisé pour les règles de performance des applications.
++
+Vous pouvez créer un ensemble d'alertes à l'aide de plages similaires à celles suivantes :
+
++
+** 0-20 alerte d'avertissement
+** 21-50 alerte d'avertissement
+** 51-80 alerte d'avertissement
+** > 80 alerte critique
+
+
+. Cochez la case *Arrêter le traitement d'autres stratégies si une alerte est générée* si vous souhaitez que la stratégie arrête le traitement lorsqu'une alerte se produit.
+
+
+
+
+== Résultats
+
+Les notifications ne sont pas le seul moyen d'afficher les violations. Les violations sont affichées sur la page d'accueil de l'application et sur le tableau de bord des violations, où vous pouvez les filtrer. Vous pouvez également créer un tableau de bord, ajouter un widget de tableau de violation et filtrer le nom de votre stratégie de performances pour identifier les violations d'application.

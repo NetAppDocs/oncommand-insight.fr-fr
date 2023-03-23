@@ -1,0 +1,56 @@
+---
+permalink: howto/preparing-aws-for-insight-collection.html 
+sidebar: sidebar 
+keywords:  
+summary: Votre compte AWS doit être correctement configuré pour permettre à Insight de collecter des données de coût cloud. 
+---
+= Préparation de la collecte de données dans AWS pour Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Votre compte AWS doit être correctement configuré pour permettre à Insight de collecter des données de coût cloud.
+
+
+
+== Description de la tâche
+
+Les étapes suivantes sont effectuées via votre compte AWS. Pour plus d'informations, consultez la documentation Amazon : https://docs.aws.amazon.com["http://docs.aws.amazon.com"]. Si vous ne connaissez pas encore la configuration d'un compte cloud AWS, contactez votre fournisseur cloud pour obtenir de l'aide.
+
+[NOTE]
+====
+Ces étapes sont fournies ici à titre de courtoisie et sont jugées correctes au moment de la publication. NetApp ne garantit en rien l'exactitude de ces étapes. Pour plus d'informations ou d'aide sur la configuration de votre compte AWS, contactez votre fournisseur cloud ou votre responsable de compte AWS.
+
+====
+Bonne pratique : Insight vous recommande de créer un utilisateur IAM principal sur le même compte qui possède le compartiment S3 dans lequel les rapports de facturation sont téléchargés, et de l'utiliser pour configurer et collecter les données de facturation AWS.
+
+Pour configurer votre compte AWS de manière à permettre à Insight de collecter des données, effectuez les opérations suivantes :
+
+
+
+== Étapes
+
+. Connectez-vous à votre compte AWS en tant qu'utilisateur IAM (Identity Access Management). Pour une collecte correcte, connectez-vous au compte IAM principal, plutôt qu'à un compte IAM de groupe.
+. Accédez à *Amazon S3* pour créer votre compartiment. Entrez un nom de compartiment unique et vérifiez la région correcte.
+. Activez votre rapport de coût et d'utilisation Amazon. Voir https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-reports-gettingstarted-turnonreports.html[] pour plus d'informations.
++
+.. Rendez-vous sur le tableau de bord AWS **facturation et gestion des coûts **et choisissez *Rapports*.
+.. Cliquez sur *Créer un rapport* et entrez le nom du rapport. Pour *unité de temps*, choisissez quotidien. Cochez la case pour inclure *Resource ID*, puis cliquez sur *Next*.
+.. Cliquez sur le lien *exemple de politique* dans la page Sélectionner les options de livraison. Copiez le texte exemple de stratégie dans la zone dans le presse-papiers. Cliquez sur *Fermer*.
+.. Retournez au compartiment S3 créé, cliquez sur l'onglet *autorisations* et sélectionnez le bouton *Stratégie de compartiment*.
+.. Collez le texte de l'exemple de stratégie et remplacez-le `<bucketname>` avec votre nom de compartiment réel dans chaque ligne contenant les éléments suivants : `"Resource": "arn:aws:s3:: <bucketname>"`. *Enregistrer* la politique.
+.. Retournez à l'écran Créer un rapport, entrez dans votre compartiment S3 et cliquez sur le bouton *vérifier*. Cliquez sur *Suivant*.
+.. Vérifiez vos informations et cliquez sur *revoir et terminer*.
+
+
+. Vous devez accorder des autorisations pour qu'Insight puisse collecter des données à partir d'AWS. Le lien suivant fournit des détails sur la façon d'accorder des autorisations à *Lister toutes les rubriques* (étape 4.1) et de définir des autorisations sur les objets du dossier (étape 5.2) : https://docs.aws.amazon.com/AmazonS3/latest/dev/walkthrough1.html[].
+. Dans la console IAM, accédez à *Policies* et cliquez sur *Create policy*.
+. Entrez un nom dans le champ *Policy Name* et cliquez sur *Create policy* en bas de l'écran.
+. Dans la console IAM, sélectionnez votre utilisateur, puis sélectionnez *Ajouter une stratégie en ligne* en bas de l'écran.
+. Cliquez sur *Choisissez un service* et sélectionnez S3.
+. Accédez à l'onglet *JSON*. Copiez l'exemple de texte JSON à partir de l'étape 5.1.2.g de la procédure AWS dans la zone JSON.
+. Remplacez les champs _companybucket_ et _Development_ du JSON par vos informations S3.
+. Cliquez sur *revoir la stratégie* pour consulter les paramètres de votre stratégie.
+

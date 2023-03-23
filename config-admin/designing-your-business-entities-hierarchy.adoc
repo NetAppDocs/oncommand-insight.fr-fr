@@ -1,0 +1,31 @@
+---
+permalink: config-admin/designing-your-business-entities-hierarchy.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous devez comprendre les éléments de votre structure d"entreprise et ce qui doit être représenté dans les entités commerciales car ils deviennent une structure fixe dans votre base de données OnCommand Insight. Vous pouvez utiliser les informations suivantes pour configurer vos entités commerciales. N"oubliez pas que vous n"avez pas besoin d"utiliser tous les niveaux hiérarchiques pour collecter des données dans ces catégories.' 
+---
+= Conception de la hiérarchie de vos entités commerciales
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez comprendre les éléments de votre structure d'entreprise et ce qui doit être représenté dans les entités commerciales car ils deviennent une structure fixe dans votre base de données OnCommand Insight. Vous pouvez utiliser les informations suivantes pour configurer vos entités commerciales. N'oubliez pas que vous n'avez pas besoin d'utiliser tous les niveaux hiérarchiques pour collecter des données dans ces catégories.
+
+
+
+== Étapes
+
+. Examinez chaque niveau de la hiérarchie des entités métier pour déterminer si ce niveau doit être inclus dans la hiérarchie des entités métiers de votre entreprise :
++
+** *Le niveau locataire* est nécessaire si votre entreprise est un FAI et que vous voulez suivre l'utilisation des ressources par le client.
+** *Secteur d'activité (LOB)* est nécessaire dans la hiérarchie si les données des différentes gammes de produits doivent être suivies.
+** *L'unité commerciale* est requise si vous devez effectuer le suivi des données pour différents services. Ce niveau de la hiérarchie est souvent utile pour séparer une ressource qu'un ministère utilise et que les autres ministères n'utilisent pas.
+** *Le niveau projet* peut être utilisé pour le travail spécialisé au sein d'un ministère. Ces données peuvent être utiles pour déterminer, définir et surveiller les besoins technologiques d'un projet distinct par rapport à d'autres projets d'une entreprise ou d'un service.
+
+
+. Créez un graphique montrant chaque entité commerciale avec les noms de tous les niveaux au sein de l'entité.
+. Vérifiez les noms dans la hiérarchie pour vous assurer qu'ils seront explicites dans les vues et rapports OnCommand Insight.
+. Identifiez toutes les applications associées à chaque entité business.
+

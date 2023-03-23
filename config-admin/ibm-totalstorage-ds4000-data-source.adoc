@@ -1,0 +1,62 @@
+---
+permalink: config-admin/ibm-totalstorage-ds4000-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Cette source de données collecte des informations sur l"inventaire et les performances. Il existe deux configurations possibles \(firmware 6.x et 7.x+\), toutes deux ayant les mêmes valeurs. L"API collecte les statistiques de données de volume.' 
+---
+= Source de données IBM TotalStorage DS4000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cette source de données collecte des informations sur l'inventaire et les performances. Il existe deux configurations possibles (firmware 6.x et 7.x+), toutes deux ayant les mêmes valeurs. L'API collecte les statistiques de données de volume.
+
+
+
+== Configuration
+
+|===
+
+
+| *Champ* | *Description* 
+
+
+ a| 
+Liste séparée par des virgules des adresses IP des contrôleurs SANtricity de baie
+ a| 
+Adresses IP ou noms de domaine complets des contrôleurs, séparés par des virgules
+
+|===
+
+
+== De formation
+
+* Adresse IP de chaque baie DS5 ou FAStT
+* Validation de l'accès : envoyez une requête ping à l'adresse IP des deux contrôleurs de chaque baie.
+
+
+
+
+== Configuration avancée
+
+|===
+
+
+| *Champ* | *Description* 
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+Intervalle entre les sondages d'inventaire (30 minutes par défaut)
+
+
+
+ a| 
+Intervalle d'interrogation des performances (jusqu'à 3600 secondes)
+ a| 
+Intervalle entre les sondages de performances (300 secondes par défaut)
+
+|===

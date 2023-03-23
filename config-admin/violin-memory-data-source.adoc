@@ -1,0 +1,153 @@
+---
+permalink: config-admin/violin-memory-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La source de données Violin 6000-Series Flash Memory Array \(HTTP\) collecte des informations réseau à des fins d"analyse et de validation à partir des baies de mémoire Flash Violin 6000-Series.' 
+---
+= Source de données de la baie de mémoire Flash Violin
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La source de données Violin 6000-Series Flash Memory Array (HTTP) collecte des informations réseau à des fins d'analyse et de validation auprès des baies mémoire Flash Violin 6000-Series.
+
+
+
+== Terminologie
+
+[NOTE]
+====
+Ce collecteur de données n'est plus disponible depuis OnCommand Insight 7.3.11.
+
+====
+OnCommand Insight acquiert les informations d'inventaire suivantes à partir de la source de données de la baie de mémoire Flash Violin 6000-Series. Pour chaque type de ressource acquis par Insight, la terminologie la plus courante utilisée pour cette ressource est indiquée. Lors de l'affichage ou du dépannage de cette source de données, gardez à l'esprit la terminologie suivante :
+
+|===
+
+
+| Terme du fournisseur/modèle | Terme Insight 
+
+
+ a| 
+Module mémoire intelligent (VIMM) de Violin
+ a| 
+Disque
+
+
+
+ a| 
+Conteneur
+ a| 
+Stockage
+
+
+
+ a| 
+Passerelle mémoire
+ a| 
+Nœud de stockage
+
+
+
+ a| 
+LUN
+ a| 
+Volumétrie
+
+
+
+ a| 
+Initiateur, Groupe initiateur, cible
+ a| 
+Carte de volume, masque de volume
+
+|===
+[NOTE]
+====
+Il s'agit uniquement de mappages terminologiques courants et peuvent ne pas représenter tous les cas pour cette source de données.
+
+====
+
+
+== De formation
+
+* Vous avez besoin d'un nom d'utilisateur et d'un mot de passe en lecture seule pour le stockage.
+* Validez l'accès avec un navigateur Web en utilisant l'adresse IP de stockage.
+
+
+
+
+== Configuration
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Adresse IP ou FQDN de la passerelle principale de la baie de mémoire Violin
+ a| 
+Adresse IP ou nom de domaine complet de la passerelle principale de la baie de mémoire Violin Memory
+
+
+
+ a| 
+Nom d'utilisateur
+ a| 
+Nom d'utilisateur de la passerelle principale de la baie de mémoire Violin
+
+
+
+ a| 
+Mot de passe
+ a| 
+Mot de passe de la passerelle principale de la baie de mémoire Violin Memory
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Port de communication
+ a| 
+Port utilisé pour la communication avec la baie Violin
+
+
+
+ a| 
+HTTPS activé
+ a| 
+Sélectionnez pour utiliser HTTPS
+
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+Intervalle entre les sondages d'inventaire (20 minutes par défaut)
+
+
+
+ a| 
+Délai de connexion (s)
+ a| 
+Délai d'expiration de la connexion (par défaut : 60 secondes)
+
+
+
+ a| 
+Intervalle d'interrogation des performances (s)
+ a| 
+Intervalle entre les sondages de performances (300 secondes par défaut)
+
+|===

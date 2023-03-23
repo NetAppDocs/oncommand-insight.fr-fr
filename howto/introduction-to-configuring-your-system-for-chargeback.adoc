@@ -1,0 +1,27 @@
+---
+permalink: howto/introduction-to-configuring-your-system-for-chargeback.html 
+sidebar: sidebar 
+keywords:  
+summary: Les rapports de refacturation fournissent des informations de facturation interne et de responsabilisation en matière de capacité de stockage par les hôtes, les applications et les entités commerciales, et incluent des données actuelles et historiques. 
+---
+= Configuration de votre système pour générer des rapports sur les données de refacturation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les rapports de refacturation fournissent des informations de facturation interne et de responsabilisation en matière de capacité de stockage par les hôtes, les applications et les entités commerciales, et incluent des données actuelles et historiques.
+
+Ce guide explique comment configurer Insight pour générer un rapport de facturation interne permettant de responsabiliser les coûts de niveau de service et le coût d'utilisation du stockage. L'objectif de ce guide est de fournir les étapes nécessaires à la création d'un rapport de refacturation simple et de familiariser les utilisateurs d'Insight avec les options disponibles lors de la configuration de la refacturation dans leur environnement unique.
+
+Pour chaque application, l'exemple de rapport identifie les ressources provisionnées et le coût des ressources. La sortie du rapport est créée en définissant les données suivantes dans Insight
+
+* Niveaux de stockage
+* Coûts associés à chaque niveau de stockage
+* Capacité de stockage provisionnée
+* Niveaux de services
+* Coût par niveau de services
+
+
+Les sections suivantes décrivent les étapes requises pour configurer ces données afin qu'elles soient accessibles par Insight Reporting.

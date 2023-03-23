@@ -1,0 +1,51 @@
+---
+permalink: howto/using-performance-policies-to-reduce-risk-in-thin-provisioning.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous devez créer des stratégies de performances pour générer des alertes lorsque les seuils de votre infrastructure virtuelle ont été violés. Les alertes vous permettent de répondre aux modifications de votre environnement avant qu"elles ne provoquent des interruptions ou des interruptions des opérations.' 
+---
+= Utilisation de règles de performances pour réduire le risque lié au provisionnement fin
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez créer des stratégies de performances pour générer des alertes lorsque les seuils de votre infrastructure virtuelle ont été violés. Les alertes vous permettent de répondre aux modifications de votre environnement avant qu'elles ne provoquent des interruptions ou des interruptions des opérations.
+
+Les stratégies qui facilitent la surveillance de l'infrastructure virtuelle sont les suivantes :
+
+* *Datastore*
++
+Vous pouvez utiliser les stratégies suivantes sur le datastore :
+
++
+** Ratio de capacité - surallouer
+** Rapport de capacité - utilisé
+** Capacité - utilisée
+** Capacité - Total
+
+
+* *Pool de stockage*
++
+Dans les environnements à provisionnement fin, les règles suivantes peuvent vous protéger contre les pannes de capacité de stockage :
+
++
+** Capacité provisionnée
+** Capacité utilisée
+** Ratio de capacité - surallouer
+** Rapport de capacité - utilisé
+
+
+
+
+Vous pouvez développer ces stratégies pour surveiller la capacité de l'infrastructure virtuelle, notamment :
+
+* Volumes internes
+* LUN
+* Disques
+* VMDK
+* VM
+
+
+Vous pouvez configurer des règles à l'aide d'annotations. Vous attribuez la même annotation aux actifs spécifiques qui prennent en charge une application. Par exemple, vous pouvez attribuer des annotations aux datastores et aux pools de stockage d'une application à provisionnement fin. Vous pouvez avoir des annotations nommées production pour l'environnement de production, développement pour l'environnement de développement, etc. Vous pouvez modifier les seuils et le degré de criticité des avertissements en fonction du type d'application pris en charge par les ressources. Par exemple, une violation d'un seuil pour le stock de données d'une application de production peut soulever un _avertissement critique_, tandis que la même violation pour un environnement de développement ne peut soulever qu'un _avertissement_. L'intégration d'annotations à des règles définies peut contribuer à réduire davantage le nombre d'alertes indésirables pour les ressources non stratégiques.

@@ -1,0 +1,106 @@
+---
+permalink: dwh/viewing-oncommand-insight-logs.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez afficher divers journaux d"entrepôt de données et de Cognos dans OnCommand Insight.' 
+---
+= Affichage des journaux OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez afficher divers journaux d'entrepôt de données et de Cognos dans OnCommand Insight.
+
+
+
+== Description de la tâche
+
+Vous pouvez examiner les informations de dépannage et d'état dans les fichiers journaux Cognos et Data Warehouse.
+
+
+
+== Étapes
+
+. Connectez-vous au portail Data Warehouse à l'adresse `+https://hostname/dwh+`, où `hostname` Est le nom du système sur lequel l'entrepôt de données OnCommand Insight est installé.
+. Dans le volet de navigation de gauche, cliquez sur *Dépannage*.
+. Dans la section *journaux*, cliquez sur *fichiers journaux*.
++
+Les fichiers journaux suivants s'affichent :
+
++
+|===
+
+
+ a| 
+dwh.log
+
+
+
+ a| 
+Répertorie l'état des travaux Data Warehouse
+
+
+
+ a| 
+wildfly.log
+
+
+
+ a| 
+Fournit des informations sur le serveur d'applications WildFly
+
+
+
+ a| 
+dwh_upgrade log
+
+
+
+ a| 
+Fournit des informations sur la mise à niveau dans Data Warehouse
+
+
+
+ a| 
+ldap.log
+
+
+
+ a| 
+Consigne les messages relatifs à l'authentification LDAP
+
+
+
+ a| 
+dwh_troubleshoot.log
+
+
+
+ a| 
+Consigne les messages pouvant aider à résoudre les problèmes DWH
+
+
+
+ a| 
+sanscreenap.log
+
+
+
+ a| 
+Fournit des informations sur la connexion au serveur, l'authentification et l'accès au référentiel Cognos, ainsi que des informations sur d'autres processus
+
+
+
+ a| 
+cognosserver.log
+
+
+
+ a| 
+Journal Cognos
+
+|===
+. Cliquez sur le nom du fichier journal que vous souhaitez afficher.
+

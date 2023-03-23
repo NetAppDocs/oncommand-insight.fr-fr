@@ -1,0 +1,20 @@
+---
+permalink: reporting/data-model-overview.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight propose plusieurs modèles de données à utiliser dans le développement de rapports. Chaque modèle de données est une agrégation qui résume les données pour qu"elles puissent être interrogées et recherchées. Par exemple, les rapports sur la planification de la capacité utilisent le modèle de données capacité.' 
+---
+= Présentation du modèle de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight propose plusieurs modèles de données à utiliser dans le développement de rapports. Chaque modèle de données est une agrégation qui résume les données pour qu'elles puissent être interrogées et recherchées. Par exemple, les rapports sur la planification de la capacité utilisent le modèle de données capacité.
+
+Les modèles de données de reporting d'entreprise OnCommand Insight fournissent des éléments de données et des relations interactives entre les éléments de données, ce qui donne une vue commerciale des données. En utilisant les éléments de données et les relations, vous pouvez créer des rapports à l'aide des outils de génération de rapports IBM Cognos Analytics recommandés par NetApp.
+
+OnCommand Insight fournit également des magasins de données qui peuvent être utilisés pour développer vos propres requêtes SQL. Il existe une distinction entre ces magasins de données de requête SQL et les modèles de données utilisés dans le reporting. Les différents modèles de données de rapport OnCommand Insight utilisent le schéma de base de données OnCommand Insight sous-jacent fourni dans les magasins de données ; cependant, les modèles de données utilisent des tables supplémentaires et parfois de nouveaux éléments dans les tables. Par exemple, le modèle de données inclut une table de données capacité mensuelle dans le modèle de données capacité de stockage qui est basée sur la table de données capacité du schéma de base de données et du magasin de données. Le modèle de données filtre les valeurs de la table de schéma de base de données pour n'afficher que les informations sur le mois.
+
+Un autre exemple de différence entre le schéma de base de données utilisé dans les magasins de données et le modèle de données se trouve dans la table de violation et dans la colonne Type de violation. Le modèle de données traduit les valeurs programmatiques dans la base de données pour correspondre au texte affiché dans l'interface utilisateur Web de OnCommand Insight.

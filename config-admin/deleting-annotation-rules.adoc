@@ -1,0 +1,36 @@
+---
+permalink: config-admin/deleting-annotation-rules.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez supprimer une règle d"annotation lorsque celle-ci n"est plus nécessaire pour surveiller les objets de votre réseau.' 
+---
+= Suppression de règles d'annotation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez supprimer une règle d'annotation lorsque celle-ci n'est plus nécessaire pour surveiller les objets de votre réseau.
+
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur OnCommand Insigtweb.
+. Cliquez sur *gérer* et sélectionnez *règles d'annotation*.
++
+La page règles d'annotation affiche la liste des règles d'annotation existantes.
+
+. Recherchez la règle à supprimer :
++
+** Sur la page règles d'annotation, vous pouvez filtrer les règles d'annotation en entrant une valeur dans la zone de filtre.
+** Cliquez sur un numéro de page pour parcourir les règles d'annotation par page s'il y a plus de règles que d'ajustement sur une seule page.
+
+
+. Pointez le curseur sur la règle à supprimer, puis cliquez sur image:../media/trash-can-query.gif[""].
++
+Un message de confirmation s'affiche, vous invitant à supprimer la règle.
+
+. Cliquez sur *OK*.
+

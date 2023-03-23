@@ -1,0 +1,14 @@
+---
+permalink: install-windows/uninstalling-the-insight-software.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous devez désinstaller les anciennes versions du logiciel Data Warehouse et Remote acquisition pour installer les nouvelles versions. Vous devez le faire avant de tenter de mettre à niveau l"un de ces composants. Le logiciel du serveur Insight est désinstallé lors de la mise à niveau sur place.' 
+---
+= Désinstallation du logiciel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez désinstaller les anciennes versions du logiciel Data Warehouse et Remote acquisition pour installer les nouvelles versions. Vous devez le faire avant de tenter de mettre à niveau l'un de ces composants. Le logiciel du serveur Insight est désinstallé lors de la mise à niveau sur place.

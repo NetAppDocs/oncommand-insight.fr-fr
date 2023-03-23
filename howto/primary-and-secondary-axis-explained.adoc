@@ -1,0 +1,44 @@
+---
+permalink: howto/primary-and-secondary-axis-explained.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"axe secondaire facilite l"affichage des données de deux ensembles de valeurs différents utilisant des unités de mesure différentes.' 
+---
+= Explication des axes primaire et secondaire
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'axe secondaire facilite l'affichage des données de deux ensembles de valeurs différents utilisant des unités de mesure différentes.
+
+
+
+== Description de la tâche
+
+Les différentes mesures utilisent différentes unités de mesure pour les données qu'elles indiquent dans un graphique. Par exemple, dans le cas des IOPS, l'unité de mesure correspond au nombre d'opérations d'E/S par seconde de temps (E/S), tandis que la latence mesure uniquement le temps (millisecondes, microsecondes, secondes, etc.). Lors de la transcription des deux mesures sur un graphique à ligne unique à l'aide d'un ensemble unique de valeurs a pour l'axe y, les nombres de latence (en général quelques millisecondes) sont transcrits sur la même échelle avec les IOPS (généralement la numérotation des milliers) et la ligne de latence est perdue à cette échelle.
+
+Mais il est possible de tracer les deux ensembles de données sur un seul graphique significatif, en définissant une unité de mesure sur l'axe y principal (côté gauche) et l'autre unité de mesure sur l'axe y secondaire (côté droit). Chaque mesure est saisie à sa propre échelle.
+
+
+
+== Étapes
+
+. Créez ou ouvrez un tableau de bord. Ajoutez un widget *graphique linéaire*, *graphique spline*, *graphique de surface* ou *graphique de surface empilée* au tableau de bord.
+. Sélectionnez un type de ressource (par exemple *Storage*) et choisissez *IOPS - Total* pour votre première mesure. Définissez les filtres que vous souhaitez et choisissez une méthode de déploiement si vous le souhaitez.
++
+La ligne IOPS s'affiche sur le tableau, avec son échelle affichée à gauche.
+
+. Cliquez sur *+Ajouter* pour ajouter une deuxième ligne au graphique. Pour cette ligne, choisissez *latence - Total* pour la mesure.
++
+Notez que la ligne est affichée à plat en bas du graphique. En effet, elle est dessinée à la même échelle que la ligne d'IOPS.
+
+. Dans la requête latence, sélectionnez *axe y : secondaire*.
++
+La ligne latence est maintenant tracée à sa propre échelle, qui est affichée à droite du graphique.
+
++
+image::../media/secondary-axis-example.gif[exemple d'axe secondaire]
+
+

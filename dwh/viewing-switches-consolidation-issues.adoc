@@ -1,0 +1,67 @@
+---
+permalink: dwh/viewing-switches-consolidation-issues.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les données signalées pour les commutateurs sont dérivées du magasin de données d"inventaire. Pour tous les commutateurs, il y a une ligne pour chaque connecteur qui indique sur eux, ainsi que le connecteur principal à partir duquel chaque commutateur est pris.' 
+---
+= Affichage des problèmes de consolidation des commutateurs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les données signalées pour les commutateurs sont dérivées du magasin de données d'inventaire. Pour tous les commutateurs, il y a une ligne pour chaque connecteur qui indique sur eux, ainsi que le connecteur principal à partir duquel chaque commutateur est pris.
+
+
+
+== Étapes
+
+. Connectez-vous au portail Data Warehouse à l'adresse `+https://hostname/dwh+`, où `hostname` Est le nom du système sur lequel l'entrepôt de données OnCommand Insight est installé.
+. Dans le volet de navigation de gauche, cliquez sur **Dépannage**.
+. Dans la section *consolidation du châssis*, cliquez sur *commutateurs SAN*.
+. Vous pouvez également filtrer les données dans cette vue en tapant une partie du texte et en cliquant sur *Filtrer*. Pour effacer le filtre, décochez la case filtre et cliquez sur *filtre*. Vous pouvez filtrer par nom de commutateur, IP de commutateur, modèle de fournisseur ou ID d'objet OnCommand Insight.
++
+Le filtre est sensible à la casse.
+
+. Passez en revue les données suivantes :
++
+** *GUID*
++
+Identificateur unique global pour ce type de périphérique consolidé (baie de stockage)
+
+** *Nom*
++
+Nom de la matrice de stockage consolidée telle qu'elle apparaît dans l'entrepôt de données
+
+** *IP*
++
+Adresse IP de la matrice de stockage consolidée
+
+** *Fournisseur et modèle*
++
+Nom du fournisseur qui vend la baie de stockage consolidée et numéro de modèle du fabricant
+
+** *WWN*
++
+WWN pour le commutateur de consolidation
+
+** *Connecteur principal*
++
+Nom du connecteur OnCommand Insight qui était la source réelle des données
+
+** *Connecteurs disponibles*
++
+Tous les connecteurs OnCommand Insight sur lesquels réside la matrice de stockage consolidée
+
+** *ID Insight*
++
+ID de la matrice de stockage consolidée sur le châssis OnCommand Insight où réside le connecteur principal
+
+** *Insight change Time*
++
+Lorsqu'une mise à jour s'est produite dans OnCommand Insight pour la matrice de stockage et lorsque la même matrice de stockage a été mise à jour dans d'autres serveurs OnCommand Insight
+
+
+
+

@@ -1,0 +1,62 @@
+---
+permalink: config-admin/importing-ip-identification-from-a-csv-file.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez importer manuellement des identifications de périphériques IP dans la fonction résolution de périphériques à l"aide d"une liste d"identifications de périphériques dans un fichier CSV.' 
+---
+= Importation de l'identification de périphérique IP à partir d'un fichier CSV
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez importer manuellement des identifications de périphériques IP dans la fonction résolution de périphériques à l'aide d'une liste d'identifications de périphériques dans un fichier CSV.
+
+
+
+== Avant de commencer
+
+Vous devez disposer d'un fichier CSV correctement formaté pour pouvoir importer les identifications de périphériques. Le fichier CSV pour les périphériques IP nécessite les informations suivantes :
+
+|===
+
+
+ a| 
+Adresse
+
+
+
+ a| 
+IP
+
+
+
+ a| 
+Nom
+
+|===
+[NOTE]
+====
+Il est recommandé d'exporter d'abord les informations IP Identify dans un fichier CSV, d'apporter les modifications souhaitées dans ce fichier, puis de réimporter le fichier dans IP Identify. Cela permet de s'assurer que les colonnes attendues sont présentes et dans le bon ordre.
+
+====
+Pour importer des informations d'identification IP :
+
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur Web Insight.
+. Cliquez sur *gérer* > *résolution du périphérique*
+. Sélectionnez l'onglet *IP Identify*.
+. Cliquez sur *identifier* > *identifier à partir du fichier*
+. 
++
+.. Accédez au dossier contenant vos fichiers CSV à importer et sélectionnez le fichier souhaité.
+
+
++
+Les périphériques que vous entrez sont ajoutés à la liste des périphériques dans l'onglet IP identifier.
+
+

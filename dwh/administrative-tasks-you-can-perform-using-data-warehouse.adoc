@@ -1,0 +1,30 @@
+---
+permalink: dwh/administrative-tasks-you-can-perform-using-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"entrepôt de données OnCommand Insight est une interface utilisateur Web qui permet aux utilisateurs de configurer et de dépanner des données dans l"entrepôt de données OnCommand Insight et de configurer des calendriers pour récupérer des données à partir de OnCommand Insight.' 
+---
+= Tâches administratives que vous pouvez effectuer à l'aide de Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'entrepôt de données OnCommand Insight est une interface utilisateur Web qui permet aux utilisateurs de configurer et de dépanner des données dans l'entrepôt de données OnCommand Insight et de configurer des calendriers pour récupérer des données à partir de OnCommand Insight.
+
+Le portail Data Warehouse vous permet d'effectuer les tâches administratives suivantes :
+
+* Vérifiez l'état des tâches ou des requêtes en cours d'exécution
+* Gérer les annotations
+* Configurez les notifications par e-mail
+* Créez des rapports personnalisés
+* Consultez la documentation de Data Warehouse et le schéma de base de données
+* Modifiez le nom du site
+* Identifier la version de Data Warehouse et l'historique des mises à niveau
+* Créez les données de l'entrepôt de données à partir de l'historique
+* Réinitialisez la base de données Data Warehouse
+* Sauvegardez et restaurez la base de données Data Warehouse
+* Résolvez les problèmes liés à l'entrepôt de données et consultez les journaux OnCommand Insight
+* Gérez les comptes utilisateurs
+

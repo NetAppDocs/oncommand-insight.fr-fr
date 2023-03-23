@@ -1,0 +1,100 @@
+---
+permalink: dwh/data-retention-and-time-periods.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"entrepôt de données OnCommand Insight conserve les données obtenues à partir du processus d"extraction, de transformation et de chargement \(ETL\) pour différentes périodes en fonction des différents magasins de données et de la granularité temporelle des données.' 
+---
+= Conservation des données, ETL et périodes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'entrepôt de données OnCommand Insight conserve les données obtenues à partir du processus ETL (extraction, transformation et chargement) pour différentes périodes en fonction des différents magasins de données et de la granularité temporelle des données.
+
+
+
+== Marts de performances et granularité horaire pour les volumes et les volumes internes
+
+L'entrepôt de données OnCommand Insight enregistre les moyennes horaires, les valeurs maximales horaires et le bit d'accès pour chaque heure de la journée (24 points de données) pendant 14 jours. Le bit d'accès est une valeur booléenne qui est vraie si le volume est accédé ou fausse si le volume n'est pas accessible pendant l'intervalle horaire. Les 24 points de données de la journée précédente sont obtenus au cours du premier processus de CÉC de la journée.
+
+Vous n'avez pas besoin d'exécuter un processus ETL par heure pour recueillir les points de données horaires. L'exécution de processus ETL supplémentaires au cours de la journée n'obtient aucune information sur les performances des serveurs OnCommand Insight.
+
+
+
+== Marts de performances et granularité quotidienne pour les volumes et les volumes internes
+
+Chaque jour où le CÉC est traité, les moyennes quotidiennes du jour précédent sont calculées et renseignées dans l'entrepôt de données. La moyenne quotidienne est un résumé des 24 points de données de la journée précédente. Les marts de données de performance conservent des résumés quotidiens des volumes et des volumes internes pendant 13 mois.
+
+
+
+== Capacités et granularité quotidienne
+
+Les marts de capacité fournissent des mesures quotidiennes pour divers faits de capacité sur une base quotidienne pendant une période de 13 mois. Les données de capacité de l'entrepôt de données sont à jour au moment de la dernière acquisition de la source de données pour l'appareil avant l'ETL.
+
+
+
+== Différence de capacité et granularité mensuelle
+
+Data Warehouse conserve les données de capacité quotidiennes pendant 13 mois. Une fois le seuil de 13 mois atteint, les données de capacité sont résumées sur une base mensuelle. Les données mensuelles sont basées sur les valeurs reflétées par la date qui est la date représentative du mois.
+
+Le tableau suivant indique les données mensuelles incluses dans le récapitulatif mensuel :
+
+|===
+
+
+| Date | Est la valeur représentant mois | Capacité allouée 
+
+
+ a| 
+1er janvier
+ a| 
+1 (vrai)
+ a| 
+50 TO
+
+
+
+ a| 
+2 janvier
+ a| 
+0 (Faux)
+ a| 
+52 TO
+
+
+
+ a| 
+...
+ a| 
+...
+ a| 
+...
+
+
+
+ a| 
+Janvier 31
+ a| 
+0 (Faux)
+ a| 
+65 TO
+
+
+
+ a| 
+1er février
+ a| 
+1 (vrai)
+ a| 
+65 TO
+
+|===
+Selon le tableau, un rapport mensuel indiquerait 50 TB alloués pour janvier et 65 TB alloués pour février. Toutes les autres valeurs de capacité pour janvier ne seraient pas incluses dans le résumé mensuel.
+
+
+
+== Magasin d'inventaire
+
+Le magasin de données d'inventaire n'est pas historique. Chaque fois qu'un processus ETL est exécuté, le magasin d'inventaire est effacé et reconstruit. Par conséquent, les rapports générés à partir du magasin d'inventaire ne reflètent pas la configuration de l'historique d'inventaire.

@@ -1,0 +1,111 @@
+---
+permalink: install-linux/anomaly-detection-requirements.html 
+sidebar: sidebar 
+keywords: redhat 
+summary: 'Le logiciel de détection des anomalies requiert un système d"exploitation spécifique, des quantités de mémoire, des cœurs de processeur et de l"espace disque. Vous devez respecter certaines exigences pour installer correctement le logiciel de détection des anomalies.' 
+---
+= Exigences en matière de détection des anomalies
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le logiciel de détection des anomalies requiert un système d'exploitation spécifique, des quantités de mémoire, des cœurs de processeur et de l'espace disque. Vous devez respecter certaines exigences pour installer correctement le logiciel de détection des anomalies.
+
+|===
+
+
+| Composant | Obligatoire 
+
+
+ a| 
+Système d'exploitation
+ a| 
+Un ordinateur exécutant une version sous licence de l'une des versions suivantes, qui n'exécute aucun autre logiciel au niveau de l'application :
+
+* Red Hat Enterprise Linux 7.3, 7.4, 7.5, 7.6, 7.7 7.8, 7.9, 8.1, 8.2, 8.3, 8.4, 8.5
+* CentOS 7.5, 7.6, 7.7, 7.8, 7.9, Flux CentOS 8
+* Oracle Enterprise Linux 7.5, 7.6, 7.7, 7.8, 7.9 8.1, 8.2, 8.3, 8.4, 8.5
+* SUSE Enterprise Linux 15.1, 15.2 et 15.3
+* OpenSUSE 15.1, 15.2, 15.3
+
+
+Une version sous licence garantit que les dépendances requises pour l'installation sont résolues automatiquement par le système d'exploitation.
+
+Un serveur dédié est recommandé.
+
+
+
+ a| 
+Machine virtuelle (VM)
+ a| 
+La détection des anomalies peut s'exécuter dans un environnement virtuel, à condition que les ressources processeur et mémoire de votre instance soient réservées.
+
+
+
+ a| 
+Processeur et mémoire
+ a| 
+Un noyau 8. Serveur de mémoire de 64 Go.
+
+
+
+ a| 
+Espace disque disponible
+ a| 
+Le serveur nécessite 200 Go d'espace disque disponible partitionné comme suit :
+
+* 150 Go en `/var/lib`
+* 25 Go en `/var/log`
+* 25 Go en `/opt`
+
+
+L'installation du logiciel nécessite l'espace disque suivant :
+
+* 5 Go en `/var/lib`
+* 25 Go en `/var/log`
+* 25 Go en `/opt`
+
+
+Le montage est une bonne pratique ``/opt``et sur des disques distincts du système de fichiers racine (`/`).
+
+
+
+ a| 
+Autorisations
+ a| 
+Les autorisations sudo sont requises pour installer le logiciel de détection des anomalies.
+
+
+
+ a| 
+Le réseau
+ a| 
+Le serveur Insight sur lequel vous souhaitez installer le logiciel de détection des anomalies doit résider sur le même réseau, ou au moins sur le même site ou dans le même data Center, que le serveur exécutant le moteur de détection des anomalies. Le logiciel de détection des anomalies ne prend pas en charge la configuration dans un réseau étendu (WAN).
+
+Les ports TCP 8080 et 9200 doivent être ouverts sur la machine virtuelle.
+
+
+
+ a| 
+Prérequis
+ a| 
+Vous devez disposer d'une licence Perform valide.vous devez disposer de l'adresse IP du serveur Insight sur lequel vous souhaitez installer le logiciel de détection des anomalies.
+
+Si vous n'acceptez pas le port par défaut, vous devez disposer d'un autre numéro de port sur le serveur Insight.
+
+Les ports TCP 8080 et 9200 doivent être ouverts sur la machine virtuelle.
+
+Vous devez disposer d'un nom d'utilisateur et d'un mot de passe pour un compte disposant de privilèges d'administrateur sur la machine virtuelle.
+
+Vous devez entrer deux barres obliques inverses (société\\utilisateur) pour un nom d'utilisateur contenant une barre oblique inverse unique (société\utilisateur).
+
+Un nom d'utilisateur ne peut pas contenir un « t » à la suite d'une barre oblique inverse (société\\tom).
+
+|===
+[NOTE]
+====
+Vous devez discuter et valider toutes les recommandations de dimensionnement avec un conseiller NetApp.
+
+====

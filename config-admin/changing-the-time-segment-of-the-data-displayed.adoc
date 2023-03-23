@@ -1,0 +1,69 @@
+---
+permalink: config-admin/changing-the-time-segment-of-the-data-displayed.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Par défaut, une page d"inventaire affiche les 24 dernières heures de données ; cependant, vous pouvez modifier le segment de données affiché en sélectionnant une autre heure fixe ou une plage de temps personnalisée pour afficher moins de données ou plus.' 
+---
+= Modification de la plage horaire des données affichées
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Par défaut, une page d'inventaire affiche les 24 dernières heures de données ; cependant, vous pouvez modifier le segment de données affiché en sélectionnant une autre heure fixe ou une plage de temps personnalisée pour afficher moins de données ou plus.
+
+
+
+== Description de la tâche
+
+Vous pouvez modifier le segment de temps des données affichées à l'aide d'une option située sur chaque page de ressource, quel que soit le type de ressource.
+
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur OnCommand Insigtweb.
+. Recherchez une page de ressources en procédant de l'une des façons suivantes :
++
+** Dans la barre d'outils Insight, cliquez sur image:../media/search-assets-icon.gif[""], saisissez le nom de la ressource, puis sélectionnez la ressource dans la liste.
+** Cliquez sur *tableaux de bord*, sélectionnez *tableau de bord*, localisez un nom de ressource, puis cliquez dessus. La page ASSET s'affiche.
+
+
+. Dans le coin supérieur gauche de la page, cliquez sur l'une des icônes d'heure suivantes pour modifier le segment de données affiché :
++
+** *3h*
++
+Affiche les trois dernières heures de données.
+
+** *24h*
++
+Affiche les 24 dernières heures de données.
+
+** *3d*
++
+Affiche les trois derniers jours de données.
+
+** *7d*
++
+Affiche les sept derniers jours de données.
+
+** *30d*
++
+Affiche les trente derniers jours de données.
+
+** *Personnalisé*
++
+Affiche une boîte de dialogue qui vous permet de choisir une plage de temps personnalisée. Vous pouvez afficher jusqu'à 31 jours de données à la fois.
+
+
+
+. Si vous avez choisi *personnalisé*, procédez comme suit :
++
+.. Cliquez sur le champ de date et sélectionnez un mois, un jour et une année pour la date de début.
+.. Cliquez sur la liste heure et sélectionnez une heure de début.
+.. Répétez les deux étapes a et b pour les données de fin et l'heure.
+.. Cliquez sur image:../media/check-box-ok.gif[""].
+
+
+

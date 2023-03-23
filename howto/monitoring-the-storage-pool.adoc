@@ -1,0 +1,43 @@
+---
+permalink: howto/monitoring-the-storage-pool.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Chaque page d"accueil de pool de stockage offre des taux de sur-abonnement, identifie les ressources corrélées, l"utilisation des LUN et des disques, ainsi que les violations de stratégie et les violations qui se sont produites avec le pool de stockage.' 
+---
+= Surveillance du pool de stockage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Chaque page d'accueil de pool de stockage offre des taux de sur-abonnement, identifie les ressources corrélées, l'utilisation des LUN et des disques, ainsi que les violations de stratégie et les violations qui se sont produites avec le pool de stockage.
+
+Utilisez la page d'accueil du pool de stockage pour identifier tout problème potentiel au niveau des ressources physiques qui prennent en charge votre infrastructure virtuelle. Vous pouvez suivre l'évolution des rapports de capacité et de capacité sur 30 jours ou utiliser une période personnalisée. Faites attention aux données des sections suivantes pour surveiller l'état du pool de stockage.
+
+* *Résumé*
++
+Utilisez cette section pour comprendre :
+
++
+** Informations sur la capacité du pool de stockage, y compris la capacité physique et la capacité surallouée.
+** Indique si l'agrégat est sursouscrit, et par combien.
+** Toute violation de politique qui s'est produite.
+
+
+* *Sections Ressources de stockage et disques*
++
+La section des ressources de stockage affiche l'utilisation des LUN.
+
++
+La section disques affiche les disques individuels qui constituent le pool de stockage.
+
+* *Ressources*
++
+Utilisez cette section pour comprendre la corrélation entre les VMDK et les LUN et pour comprendre le chemin d'application du stockage vers les machines virtuelles.
+
+* *Section des violations*
++
+La section violations identifie toute violation des règles de performances définies pour le pool de stockage.
+
+

@@ -1,0 +1,36 @@
+---
+permalink: config-admin/modifying-queries.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous pouvez modifier les critères qui sont associés à une requête lorsque vous voulez modifier les critères de recherche des ressources que vous interrogez. 
+---
+= Modification des requêtes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez modifier les critères qui sont associés à une requête lorsque vous voulez modifier les critères de recherche des ressources que vous interrogez.
+
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur Insigtweb.
+. Cliquez sur *requêtes* et sélectionnez *Afficher toutes les requêtes*.
++
+La page requêtes s'affiche.
+
+. Cliquez sur le nom de la requête.
+. Pour supprimer un critère de la requête, cliquez sur image:../media/trash-can-query.gif[""].
+. Pour ajouter un critère à la requête, cliquez sur image:../media/more-button.gif[""], et sélectionnez un critère dans la liste.
+. Effectuez l'une des opérations suivantes :
++
+** Cliquez sur *Enregistrer* pour enregistrer la requête avec le nom qui a été utilisé initialement.
+** Cliquez sur *Enregistrer sous* pour enregistrer la requête sous un autre nom.
+** Cliquez sur *Renommer* pour modifier le nom de la requête que vous avez utilisée initialement.
+** Cliquez sur *Revert* pour redéfinir le nom de la requête sur celui que vous avez utilisé initialement.
+
+
+

@@ -1,0 +1,33 @@
+---
+permalink: config-admin/configuring-performance-policy-precedence.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Par défaut, Insight évalue les règles d"un objet de manière séquentielle. Vous pouvez configurer l"ordre dans lequel Insight évalue les règles de performances. Par exemple, si une règle est configurée pour arrêter le traitement en cas de violation de stockage de niveau Gold, vous pouvez placer cette règle en premier dans la liste et éviter de voir d"autres violations génériques pour le même actif de stockage.' 
+---
+= Modification de la priorité d'une règle de performances
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Par défaut, Insight évalue les règles d'un objet de manière séquentielle. Vous pouvez configurer l'ordre dans lequel Insight évalue les règles de performances. Par exemple, si une règle est configurée pour arrêter le traitement en cas de violation de stockage de niveau Gold, vous pouvez placer cette règle en premier dans la liste et éviter de voir d'autres violations génériques pour le même actif de stockage.
+
+
+
+== Étapes
+
+. Ouvrez Insight dans votre navigateur.
+. Dans le menu *gérer*, sélectionnez *politiques de performances*.
++
+La page règles de performance s'affiche.
+
+. Placez le curseur de la souris sur le nom d'une règle dans la liste des règles de performances d'un type d'objet.
++
+Les flèches de priorité apparaissent à droite de la règle.
+
+. Pour déplacer une stratégie vers le haut de la liste, cliquez sur la flèche vers le haut ; pour la déplacer vers le bas de la liste, cliquez sur la flèche vers le bas.
++
+Par défaut, les nouvelles règles sont ajoutées séquentiellement à la liste des règles d'un objet.
+
+

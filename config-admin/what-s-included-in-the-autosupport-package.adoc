@@ -1,0 +1,55 @@
+---
+permalink: config-admin/what-s-included-in-the-autosupport-package.html 
+sidebar: sidebar 
+keywords:  
+summary: Le package AutoSupport contient la sauvegarde de la base de données ainsi que des informations détaillées. 
+---
+= Éléments inclus dans le pack AutoSupport (ASUP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le package AutoSupport contient la sauvegarde de la base de données ainsi que des informations détaillées.
+
+Le pack AutoSupport comprend les éléments suivants :
+
+* Données d'inventaire
+* Données de performance (si sélectionnées pour inclusion dans ASUP)
+* Sources de données et paramètres de source de données
+* Packs d'intégration
+* Unités d'acquisition à distance
+* Unités de surveillance Ethernet
+* Paramètres ASUP/proxy
+* Paramètres d'emplacement de sauvegarde
+* Paramètres d'emplacement d'archivage
+* Paramètres de notification
+* Scores et dispositifs de détection des anomalies
+* Paramètres de l'application de détection des anomalies
+* Utilisateurs
+* Règles de performance
+* Entités commerciales et applications
+* Règles et paramètres de résolution du périphérique
+* Tableaux de bord et widgets
+* Tableaux de bord et widgets personnalisés de la page des ressources
+* Requêtes
+* Annotations et règles d'annotation
+* Journaux
+* Licences
+* État de la source d'acquisition/de données
+* Statut MySQL
+* Informations système
+
+
+Le package AutoSupport n'inclut pas :
+
+* Paramètres de l'outil de sécurité/informations du coffre-fort (sauvegardés via un processus CLI distinct)
+* Données de performance (si cette option n'est pas sélectionnée pour être incluse dans ASUP)
+
+
+[NOTE]
+====
+Si vous choisissez d'inclure les données de performances dans ASUP, elles incluent les sept derniers jours de données. Les données restantes seront dans l'archive si cette fonction est activée. ASUP n'inclut pas les données d'archive.
+
+====

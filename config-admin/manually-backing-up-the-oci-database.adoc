@@ -1,0 +1,25 @@
+---
+permalink: config-admin/manually-backing-up-the-oci-database.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Si vous avez activé des sauvegardes hebdomadaires pour la base de données OnCommand Insight, vous générez automatiquement des copies que vous pouvez utiliser pour restaurer la base de données, si nécessaire. Si vous devez créer une sauvegarde avant une opération de restauration ou pour obtenir de l"aide du support technique NetApp, vous pouvez créer manuellement un fichier .zip de sauvegarde.' 
+---
+= Sauvegarde manuelle de la base de données OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous avez activé des sauvegardes hebdomadaires pour la base de données OnCommand Insight, vous générez automatiquement des copies que vous pouvez utiliser pour restaurer la base de données, si nécessaire. Si vous devez créer une sauvegarde avant une opération de restauration ou pour demander de l'aide au support technique NetApp, vous pouvez créer une sauvegarde `.zip` fichier manuellement.
+
+
+
+== Étapes
+
+. Dans la barre d'outils Insight, cliquez sur *Admin*.
+. Cliquez sur *Dépannage*.
+. Dans la section Envoyer/collecter des données, cliquez sur *Sauvegarder*.
+. Cliquez sur *Enregistrer le fichier*.
+. Cliquez sur *OK*.
+

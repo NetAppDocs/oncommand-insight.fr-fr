@@ -1,0 +1,12 @@
+---
+permalink: reporting/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Guide de génération de rapports pour OnCommand Insight 7.3.3 et versions ultérieures
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+

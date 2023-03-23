@@ -1,0 +1,23 @@
+---
+permalink: config-admin/capacity-as-time-series.html 
+sidebar: sidebar 
+keywords:  
+summary: Avec OnCommand Insight 7.3.1, les informations de capacité sont rapportées et saisies sous forme de données de séries chronologiques. 
+---
+= Capacité en série chronologique
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avec OnCommand Insight 7.3.1, les informations de capacité sont rapportées et saisies sous forme de données de séries chronologiques.
+
+Auparavant, les informations de capacité acquises à partir de sources de données étaient exclusivement des données « ponctuelles » (PIT), ce qui signifie qu'elles ne pouvaient pas être utilisées dans les graphiques comme données de séries chronologiques. Désormais, les valeurs de capacité des actifs peuvent être utilisées comme données de séries chronologiques de l'une des manières suivantes :
+
+* Graphique sous forme de tableaux, widgets, vues d'experts et tout emplacement où les données de séries chronologiques sont affichées
+* Appliqué aux seuils de performances avec des violations à l'aide de la sémantique existante
+* Utilisé dans les expressions avec d'autres compteurs de performances, le cas échéant
+
+
+Notez que si vous effectuez une mise à niveau à partir d'une version précédente d'Insight, les valeurs de capacité PIT précédentes utilisées dans des requêtes ou dans des filtres pour des tableaux de bord personnalisés seront remplacées par des données de capacité de série chronologique. Cela peut entraîner de légères modifications dans la façon dont les données de capacité sont rapportées ou filtrées par rapport aux données équivalentes dans les versions précédentes d'Insight.

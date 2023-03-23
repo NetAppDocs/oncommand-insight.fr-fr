@@ -1,0 +1,155 @@
+---
+section: install-windows
+title: Installation pour Microsoft Windows
+entries:
+- title: Conditions préalables à l'installation
+  url: "/install-windows/installation-prerequisites.html"
+  entries:
+  - title: Planification du déploiement
+    url: "/install-windows/planning-the-installation.html"
+    entries:
+    - title: Informations de prise en charge de la source de données
+      url: "/install-windows/data-source-support-information.html"
+    - title: Identification des appareils et planification de la source de données
+      url: "/install-windows/device-identification-and-data-source-planning.html"
+    - title: Trafic réseau généré par OnCommand Insight
+      url: "/install-windows/network-traffic-generated-by-oncommand-insight.html"
+  - title: Désactivation du logiciel d'analyse antivirus
+    url: "/install-windows/disable-virus-scan-software.html"
+  - title: Configuration requise pour Insight Server
+    url: "/install-windows/insight-server-requirements.html"
+  - title: Exigences relatives à l'entrepôt de données et au serveur de rapports
+    url: "/install-windows/data-warehouse-and-reporting-server-requirements.html"
+  - title: Configuration requise pour le serveur de l'unité d'acquisition à distance
+    url: "/install-windows/remote-acquisition-unit-server-requirements.html"
+  - title: Exigences en matière de détection des anomalies
+    url: "/install-windows/anomaly-detection-requirements.html"
+  - title: Configuration requise pour l'interface utilisateur Java Insight
+    url: "/install-windows/insight-java-ui-requirements.html"
+  - title: Navigateurs pris en charge par OnCommand Insight
+    url: "/install-windows/insight-browser-support.html"
+- title: Instructions d'installation de Insight
+  url: "/install-windows/oncommand-insight-installation-instructions.html"
+  entries:
+  - title: Téléchargement du programme d'installation de OnCommand Insight
+    url: "/install-windows/downloading-the-oncommand-insight-installer.html"
+  - title: Installation du serveur OnCommand Insight
+    url: "/install-windows/installing-the-oncommand-insight-server.html"
+  - title: Installation de l'entrepôt de données et des rapports OnCommand Insight
+    url: "/install-windows/installing-the-oncommand-insight-data-warehouse-and-reporting.html"
+    entries:
+    - title: Localisation de la documentation IBM Cognos
+      url: "/install-windows/locating-ibm-cognos-documentation.html"
+    - title: Vérification de l'installation Data Warehouse et Reporting
+      url: "/install-windows/verifying-the-data-warehouse-and-reporting-installation.html"
+  - title: Installation d'une unité d'acquisition à distance (RAU)
+    url: "/install-windows/installing-a-remote-acquisition-unit-rau.html"
+    entries:
+    - title: Vérification du service de l'unité d'acquisition à distance
+      url: "/install-windows/verifying-the-rau-service.html"
+    - title: Validation de l'installation de l'unité d'acquisition distante
+      url: "/install-windows/validating-the-rau-installation.html"
+  - title: Installation du logiciel de détection des anomalies
+    url: "/install-windows/installing-the-anomaly-detection-software.html"
+  - title: Installation d'une unité de surveillance Ethernet
+    url: "/install-windows/installing-an-ethernet-monitoring-unit-linux.html"
+  - title: Vérification de l'installation
+    url: "/install-windows/checking-the-installation.html"
+    entries:
+    - title: Vérification des nouveaux services Insight
+      url: "/install-windows/verifying-new-oncommand-insight-services.html"
+    - title: Journaux Insight
+      url: "/install-windows/insight-logs.html"
+    - title: Accès à l'interface utilisateur Web
+      url: "/install-windows/opening-insight.html"
+    - title: Installation de vos licences Insight
+      url: "/install-windows/installing-your-insight-licenses.html"
+      entries:
+      - title: Licences OnCommand Insight
+        url: "/install-windows/oncommand-insight-licenses.html"
+  - title: Dépannage des installations
+    url: "/install-windows/troubleshooting-installations.html"
+    entries:
+    - title: Licences manquantes
+      url: "/install-windows/missing-licenses.html"
+    - title: Soumission d'une demande d'assistance technique en ligne
+      url: "/install-windows/submitting-an-online-technical-support-request.html"
+- title: Mise à niveau de OnCommand Insight
+  url: "/install-windows/upgrade-insight.html"
+  entries:
+  - title: Mise à niveau d'Insight vers la version 7.3.12 ou ultérieure - Windows
+    url: "/install-windows/upgrading-insight-to-version-7-3-12-or-later-windows.html"
+  - title: Présentation du processus de mise à niveau de OnCommand Insight
+    url: "/install-windows/overview-of-insight-upgrade-process.html"
+    entries:
+    - title: Checklist de mise à niveau de OnCommand Insight
+      url: "/install-windows/insight-upgrade-checklist.html"
+  - title: Téléchargement des packages d'installation OnCommand Insight
+    url: "/install-windows/downloading-the-installation-packages.html"
+  - title: Sauvegarde des bases de données
+    url: "/install-windows/backing-up-databases.html"
+    entries:
+    - title: Sauvegarde de la base de données Data Warehouse
+      url: "/install-windows/backing-up-the-data-warehouse-database.html"
+    - title: Sauvegarde de la base de données OnCommand Insight
+      url: "/install-windows/backing-up-the-insight-server-database.html"
+  - title: Sauvegarde de la configuration de sécurité
+    url: "/install-windows/backing-up-the-security-configuration.html"
+  - title: Sauvegarde des rapports Data Warehouse personnalisés
+    url: "/install-windows/backing-up-custom-data-warehouse-reports.html"
+  - title: Exécution de la mise à niveau logicielle
+    url: "/install-windows/performing-the-software-upgrade.html"
+    entries:
+    - title: Mise à niveau d'Insight
+      url: "/install-windows/upgrading-insight.html"
+    - title: Mise à niveau de Data Warehouse
+      url: "/install-windows/upgrading-data-warehouse.html"
+      entries:
+      - title: Conservation des paramètres Cognos personnalisés lors d'une mise à
+          niveau de Data Warehouse
+        url: "/install-windows/preserving-custom-settings-when-upgrading-data-warehouse.html"
+    - title: Sauvegarde de la configuration de sécurité
+      url: "/install-windows/back-up-the-security-configuration.html"
+    - title: Mise à niveau des serveurs d'unités d'acquisition à distance
+      url: "/install-windows/upgrading-remote-acquisition-servers.html"
+    - title: Mise à niveau du moteur de détection des anomalies
+      url: "/install-windows/upgrading-the-anomaly-detection-engine.html"
+  - title: Exécution des tâches post-mise à niveau
+    url: "/install-windows/completing-post-upgrade-tasks.html"
+    entries:
+    - title: Installation des correctifs de source de données
+      url: "/install-windows/installing-data-source-patches.html"
+    - title: Remplacement d'un certificat après la mise à niveau de OnCommand Insight
+      url: "/install-windows/replacing-a-certificate-after-upgrading.html"
+    - title: Augmentation de la mémoire Cognos
+      url: "/install-windows/increasing-cognos-memory.html"
+    - title: Restauration de la base de données Data Warehouse
+      url: "/install-windows/restoring-the-data-warehouse-database.html"
+    - title: Restauration des rapports Data Warehouse personnalisés
+      url: "/install-windows/restoring-custom-data-warehouse-reports.html"
+    - title: Vérification que Data Warehouse contient des données historiques
+      url: "/install-windows/verifying-data-warehouse-has-historical-data.html"
+    - title: Restauration de l'archive de performance
+      url: "/install-windows/restoring-the-performance-archive.html"
+    - title: Test des connecteurs
+      url: "/install-windows/testing-the-connectors.html"
+    - title: Vérification de la planification d'extraction, de transformation et de
+        chargement
+      url: "/install-windows/verifying-the-extract-transform-and-load-process.html"
+    - title: Mise à jour des modèles de disque
+      url: "/install-windows/updating-disk-models.html"
+    - title: Vérification de l'exécution des outils de veille stratégique
+      url: "/install-windows/verifying-that-business-intelligence-tools-are-running.html"
+  - title: Dépannage d'une mise à niveau
+    url: "/install-windows/troubleshooting-an-upgrade.html"
+- title: Désinstallation du logiciel
+  url: "/install-windows/uninstalling-the-insight-software.html"
+  entries:
+  - title: Désinstallation du serveur OnCommand Insight
+    url: "/install-windows/uninstalling-insight.html"
+  - title: Désinstallation du logiciel Data Warehouse
+    url: "/install-windows/uninstalling-the-data-warehouse-software.html"
+  - title: Désinstallation du logiciel de l'unité d'acquisition distante
+    url: "/install-windows/uninstalling-the-remote-acquisition-unit-software.html"
+  - title: Désinstallation du moteur de détection des anomalies
+    url: "/install-windows/uninstalling-the-anomaly-detection-engine-linux.html"

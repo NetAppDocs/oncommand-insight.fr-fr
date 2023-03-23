@@ -1,0 +1,152 @@
+---
+permalink: config-admin/microsoft-hyper-v-wmi-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Pour la configuration, la source de données Microsoft Hyper-V requiert l"adresse IP ou le nom DNS résolveur pour l"hôte physique \(hyperviseur\). Cette source de données utilise PowerShell \(WMI précédemment utilisé\).' 
+---
+= Source de données Microsoft Hyper-V.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour la configuration, la source de données Microsoft Hyper-V requiert l'adresse IP ou le nom DNS résolveur pour l'hôte physique (hyperviseur). Cette source de données utilise PowerShell (anciennement WMI).
+
+
+
+== Terminologie
+
+OnCommand Insight acquiert les informations d'inventaire suivantes à partir de la source de données Hyper-V. Pour chaque type de ressource acquis par Insight, la terminologie la plus courante utilisée pour cette ressource est indiquée. Lors de l'affichage ou du dépannage de cette source de données, gardez à l'esprit la terminologie suivante :
+
+|===
+
+
+| Terme du fournisseur/modèle | Terme Insight 
+
+
+ a| 
+Disque dur virtuel
+ a| 
+Disque virtuel
+
+
+
+ a| 
+Hôte
+ a| 
+Hôte
+
+
+
+ a| 
+Ordinateur virtuel
+ a| 
+Ordinateur virtuel
+
+
+
+ a| 
+CSV (Cluster Shared volumes), Volume de partitions
+ a| 
+Datastore
+
+
+
+ a| 
+Périphérique SCSI Internet, LUN SCSI Multi Path
+ a| 
+LUN
+
+
+
+ a| 
+Port Fibre Channel
+ a| 
+Port
+
+|===
+[NOTE]
+====
+Il s'agit uniquement de mappages terminologiques courants et peuvent ne pas représenter tous les cas pour cette source de données.
+
+====
+
+
+== De formation
+
+* Hyper-V requiert l'ouverture du port 5985 pour la collecte de données et l'accès/la gestion à distance.
+* Adresse IP du nœud du groupe de clusters
+* Utilisateur de l'administrateur local et mot de passe sur l'hyperviseur
+* Compte utilisateur de niveau administratif
+* Configuration requise pour le port : ports 135 et ports TCP dynamiques affectés à 1024-65535 pour Windows 2003 et versions antérieures et à 49152-65535 pour Windows 2008.
+* La résolution DNS doit réussir, même si le collecteur de données est pointé uniquement à une adresse IP.
+* La « mesure des ressources » doit être activée pour chaque hyperviseur Hyper-V sur chaque machine virtuelle, sur chaque hôte. Cela permet à chaque hyperviseur de disposer de plus de données pour Cloud Insights sur chaque invité. Si ce paramètre n'est pas défini, moins de mesures de performance sont acquises pour chaque client. Pour plus d'informations sur le dosage des ressources, consultez la documentation microsoft :
++
+https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831661(v=ws.11)["Présentation de la mesure des ressources Hyper-V"]
+
++
+https://docs.microsoft.com/en-us/powershell/module/hyper-v/enable-vmresourcemetering?view=win10-ps["Activer-VMResourceMetering"]
+
+
+
+
+
+== Configuration
+
+|===
+
+
+| *Champ* | *Description* 
+
+
+ a| 
+Adresse IP de l'hôte physique
+ a| 
+Adresse IP ou nom de domaine complet de l'hôte physique (hyperviseur)
+
+
+
+ a| 
+Nom d'utilisateur
+ a| 
+Le nom d'utilisateur de l'administrateur ne concerne pas l'hyperviseur
+
+
+
+ a| 
+Mot de passe
+ a| 
+Mot de passe de l'hyperviseur
+
+
+
+ a| 
+Domaine NT
+ a| 
+Nom DNS utilisé par les nœuds du cluster
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| *Champ* | *Description* 
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+Intervalle entre les sondages d'inventaire (20 minutes par défaut)
+
+
+
+ a| 
+Délai de connexion (ms)
+ a| 
+Délai d'expiration de la connexion (par défaut : 60000 ms)
+
+|===

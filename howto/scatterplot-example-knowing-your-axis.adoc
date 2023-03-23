@@ -1,0 +1,53 @@
+---
+permalink: howto/scatterplot-example-knowing-your-axis.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La modification de l"ordre des compteurs dans un widget de nuage de points modifie les axes sur lesquels les données sont affichées.' 
+---
+= Exemple de nuage de points : connaître votre axe
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La modification de l'ordre des compteurs dans un widget de nuage de points modifie les axes sur lesquels les données sont affichées.
+
+
+
+== Description de la tâche
+
+Cet exemple va créer un tracé de dispersion qui vous permettra de voir des VM sous-performants présentant une latence élevée par rapport à un nombre d'opérations d'entrée/sortie par seconde faible.
+
+
+
+== Étapes
+
+. Créez ou ouvrez un tableau de bord en mode édition et ajoutez un widget graphique graphique graphique * Scatter.
+. Sélectionnez un type de ressource, par exemple *Virtual machine*.
+. Sélectionnez le premier compteur à tracer. Pour cet exemple, sélectionnez *latence - Total*.
++
+_Latence - Total_ est transcrit le long de l'axe X du graphique.
+
+. Sélectionnez le second compteur à tracer. Pour cet exemple, sélectionnez *IOPS - Total*.
++
+_IOPS - Total_ est transcrit le long de l'axe y dans le graphique. Les machines virtuelles avec latence plus élevée s'affichent à droite du graphique. Seules les 100 machines virtuelles à latence la plus élevée sont affichées, car le paramètre *Top by X-AXIS* est actuel.
+
++
+image::../media/scatterplot1.gif[diffuseur 1]
+
+. Inversez maintenant l'ordre des compteurs en définissant le premier compteur sur *IOPS - Total* et le second sur *latence - Total*.
++
+_Iatency- Total_ est maintenant saisi le long de l'axe y dans le graphique, et__IOPS - Tota__l le long de l'axe X. Les machines virtuelles dont les IOPS sont plus élevées s'affichent à droite du tableau.
+
++
+Notez que, étant donné que nous n'avons pas modifié le paramètre *Top by X-Axis*, le widget affiche désormais les 100 meilleures machines virtuelles IOPS, car c'est ce qui est actuellement tracé le long de l'axe X.
+
++
+image::../media/scatterplot2.gif[diffuseur 2]
+
+. Vous pouvez choisir d'afficher le N supérieur par axe X, le N supérieur par axe y, le N inférieur par axe X ou le N inférieur par axe Y. Dans notre dernier exemple, le graphique présente les 100 principales machines virtuelles qui ont le _total d'IOPS_ le plus élevé. Si nous le passons à Top by y-axis, le graphique affichera de nouveau les 100 principales machines virtuelles qui ont la latence _totale_ la plus élevée.
++
+Notez que dans un graphique de diagramme de dispersion, vous pouvez cliquer sur un point pour ouvrir la page d'actif de cette ressource.
+
+

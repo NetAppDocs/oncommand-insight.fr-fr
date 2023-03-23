@@ -1,0 +1,35 @@
+---
+permalink: config-admin/controlling-data-source-polling.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Après avoir apporté une modification à une source de données, vous pouvez l"interroger immédiatement pour vérifier vos modifications, ou vous pouvez reporter la collecte de données sur une source de données pendant un, trois ou cinq jours pendant que vous travaillez sur un problème.' 
+---
+= Contrôle de l'interrogation des sources de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Après avoir apporté une modification à une source de données, vous pouvez l'interroger immédiatement pour vérifier vos modifications, ou vous pouvez reporter la collecte de données sur une source de données pendant un, trois ou cinq jours pendant que vous travaillez sur un problème.
+
+
+
+== Étapes
+
+. Cliquez sur *Admin* et naviguez jusqu'à la liste des sources de données
+. Sélectionnez la source de données pour laquelle vous souhaitez contrôler l'interrogation.
+. Cliquez sur le lien du nom de la source de données.
+. Sur la page de résumé de la source de données, vérifiez les informations et cliquez sur l'une des deux options d'interrogation suivantes :
++
+** *Interroger à nouveau* pour forcer la source de données à collecter immédiatement des données.
+** *Reporter* et sélectionner la durée du délai de vote de 3, 7 ou 30 jours.
+
+
+
+
+
+
+== Une fois que vous avez terminé
+
+Si vous avez reporté la collecte de données sur une source de données et que vous souhaitez redémarrer la collecte, cliquez sur *reprendre* sur la page de résumé.

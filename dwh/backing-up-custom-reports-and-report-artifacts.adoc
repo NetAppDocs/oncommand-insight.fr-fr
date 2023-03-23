@@ -1,0 +1,22 @@
+---
+permalink: dwh/backing-up-custom-reports-and-report-artifacts.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Si vous avez créé des rapports personnalisés dans une version d"Insight antérieure à 7.0 et que vous souhaitez effectuer une mise à niveau vers la dernière version d"Insight, vous devez sauvegarder vos rapports et artéfacts de rapport avant l"installation de la mise à niveau, puis les restaurer après l"installation de la mise à niveau. Vous devez également faire attention aux dossiers que vous utilisez pour stocker les artefacts de rapport.' 
+---
+= Sauvegarde des rapports personnalisés et des artéfacts de rapport
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous avez créé des rapports personnalisés dans une version d'Insight antérieure à 7.0 et que vous souhaitez effectuer une mise à niveau vers la dernière version d'Insight, vous devez sauvegarder vos rapports et artéfacts de rapport avant l'installation de la mise à niveau, puis les restaurer après l'installation de la mise à niveau. Vous devez également faire attention aux dossiers que vous utilisez pour stocker les artefacts de rapport.
+
+
+
+== Description de la tâche
+
+Si vous avez apporté des modifications aux rapports prédéfinis, créez vos propres copies de ces rapports dans un dossier distinct. De cette façon, lorsque vous mettez à jour les artefacts préconçus, vous n'écrasez pas vos modifications.
+
+Si vous avez des rapports dans la zone Mes dossiers, vous devez les copier dans les dossiers Rapports personnalisés afin qu'ils ne soient pas perdus.

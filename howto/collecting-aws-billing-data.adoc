@@ -1,0 +1,22 @@
+---
+permalink: howto/collecting-aws-billing-data.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La source de données de coût d"Amazon AWS Cloud importe les données d"intégration générées par Amazon dans Insight AS pour les rendre disponibles à l"entrepôt de données à des fins de reporting.' 
+---
+= Collecte et reporting des données de facturation AWS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La source de données de coût d'Amazon AWS Cloud importe les données d'intégration générées par Amazon dans Insight AS pour les rendre disponibles à l'entrepôt de données à des fins de reporting.
+
+Trois parties sont nécessaires pour rendre les données de facturation dans le cloud disponibles à Insight :
+
+Vérification des informations de votre compte AWS
+
+Configuration de la source de données de coût AWS Cloud dans Insight pour la collecte des données
+
+Envoi des données à l'entrepôt de données via ETL pour utilisation dans les rapports.

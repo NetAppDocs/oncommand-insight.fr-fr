@@ -1,0 +1,14 @@
+---
+permalink: howto/preparing-assets-annotating.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"annotation vous permet d"associer des étiquettes ou des étiquettes spécifiques aux actifs que vous choisissez, ce qui facilite la gestion et la création de rapports sur ces actifs.' 
+---
+= Préparation des actifs : annotation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'annotation vous permet d'associer des étiquettes ou des étiquettes spécifiques aux actifs que vous choisissez, ce qui facilite la gestion et la création de rapports sur ces actifs.

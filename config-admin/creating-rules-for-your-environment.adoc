@@ -1,0 +1,59 @@
+---
+permalink: config-admin/creating-rules-for-your-environment.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"utilisation de règles pour identifier les périphériques dans votre environnement est généralement un processus itératif qui nécessite une analyse approfondie de votre environnement et la création de plusieurs règles pour identifier autant de périphériques que possible. Le meilleur scénario consiste à définir un objectif pour identifier 100 % des périphériques de votre environnement.' 
+---
+= Planification des règles de résolution des périphériques pour votre environnement
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'utilisation de règles pour identifier les périphériques dans votre environnement est généralement un processus itératif qui nécessite une analyse approfondie de votre environnement et la création de plusieurs règles pour identifier autant de périphériques que possible. Le meilleur scénario consiste à définir un objectif pour identifier 100 % des périphériques de votre environnement.
+
+L'ordre le plus efficace pour les règles est de placer les règles les plus restrictives en premier, ce qui entraîne une plupart des entrées qui ne correspondent pas à des modèles, le processus passant à des règles moins restrictives. Cela permet à Insight d'appliquer plus de motifs à chaque entrée, ce qui augmente la possibilité de correspondance de motifs et d'identification positive de l'hôte.
+
+Lorsque vous créez des règles, votre objectif doit être de créer des règles qui traitent le plus grand nombre possible de périphériques non identifiés. Par exemple, la création de règles qui suivent un modèle de couverture semblable à ce qui suit est beaucoup plus efficace que la création de 30 règles avec des pourcentages inférieurs de couverture :
+
+|===
+
+
+| Règle | Pourcentage de couverture 
+
+
+ a| 
+Règle 1
+ a| 
+60 %
+
+
+
+ a| 
+Règle 2
+ a| 
+25 %
+
+
+
+ a| 
+Règle 3
+ a| 
+8 %
+
+
+
+ a| 
+Règle 4
+ a| 
+4 %
+
+
+
+ a| 
+Règle 5
+ a| 
+1 %
+
+|===

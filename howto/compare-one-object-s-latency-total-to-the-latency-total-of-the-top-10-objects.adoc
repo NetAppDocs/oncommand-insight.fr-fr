@@ -1,0 +1,51 @@
+---
+permalink: howto/compare-one-object-s-latency-total-to-the-latency-total-of-the-top-10-objects.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La procédure suivante compare le total de latence d"une seule machine virtuelle aux machines virtuelles ayant pour résultat le Top 10 de latence totale dans l"ensemble de l"infrastructure virtuelle.' 
+---
+= Comparez la latence totale d'un objet à la latence totale des 10 principaux objets
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les étapes suivantes comparent le total de latence d'une seule machine virtuelle aux machines virtuelles qui indiquent le total de latence du Top 10 dans l'ensemble de l'infrastructure virtuelle.
+
+
+
+== Étapes
+
+. Ajoutez un widget avec un graphique linéaire au nouveau tableau de bord : *widget* > *graphique linéaire*
++
+.. Définissez le périphérique par défaut sur machine virtuelle : cliquez sur *Storage* > *Virtual machine* > *latence-total*
++
+Le widget affiche la latence totale, pour toutes les VM, pour les 24 heures par défaut dans un graphique à secteurs.
+
+.. Créez un deuxième affichage dans ce widget qui affiche la moyenne totale de latence pour toutes les machines virtuelles : *widget* > *graphique linéaire*
+.. Définissez le périphérique par défaut sur machine virtuelle : cliquez sur *Storage* > *Virtual machine* > *Latency-Total*
++
+Le widget affiche le total de latence pour la période de temps par défaut de 24 heures à l'aide d'un graphique en courbes.
+
+.. Cliquez sur *X* dans la barre *Roll up* et sélectionnez *Afficher* > *Top* > *10*
+
+
++
+Le système affiche les 10 principales VM basées sur latence - Total. image:../media/guid-7fe726e3-d15f-438a-9d1f-b02fb2daffe9.gif[""]
+
+. Ajoutez la machine virtuelle que vous souhaitez comparer au Top 10 :
++
+.. Cliquez sur *+Ajouter*
+.. Définissez le périphérique par défaut sur machine virtuelle : cliquez sur *Storage* > *Virtual machine* > *latence total*
+.. Cliquez sur *Filtrer par* > *Nom* > *$var1*
+
+
+. Cliquez sur *Afficher la légende*
+
+
+
+
+== Résultats
+
+Une légende identifie chaque machine virtuelle analysée. Vous pouvez facilement identifier VM_Exchange_1 et déterminer s'il connaît une latence similaire aux dix principales machines virtuelles de l'environnement.

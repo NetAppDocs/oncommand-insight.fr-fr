@@ -1,0 +1,68 @@
+---
+permalink: reporting/accessing-the-oncommand-insight-reporting-portal.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez accéder au portail de rapports OnCommand Insight directement depuis un navigateur Web, depuis l"entrepôt de données ou depuis le serveur Insight . Vous utilisez le portail de création de rapports pour accéder à des rapports prédéfinis ou pour créer vos propres rapports à l"aide des données de l"entrepôt de données.' 
+---
+= Accès au portail de rapports OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez accéder au portail de rapports OnCommand Insight directement depuis un navigateur Web, depuis l'entrepôt de données ou depuis le serveur Insight . Vous utilisez le portail de création de rapports pour accéder à des rapports prédéfinis ou pour créer vos propres rapports à l'aide des données de l'entrepôt de données.
+
+
+
+== Accédez au portail de rapports à partir d'un navigateur Web
+
+
+
+=== Étapes
+
+. Ouvrez un navigateur Web.
+. Saisissez l'URL suivante : `+https://server-name:9300/bi+`
++
+9300 représente le port par défaut qui a été spécifié lors de l'installation. Si un autre port a été spécifié, vous devez le modifier.
+
+. Entrez votre nom d'utilisateur et votre mot de passe, puis cliquez sur *OK*.
+
+
+
+
+== Accès au portail de rapports à partir du serveur Insight
+
+
+
+=== Étapes
+
+. Ouvrez un navigateur Web.
+. Entrez l'URL suivante pour accéder au serveur Insight : `+https://server-name+`
+. Entrez votre nom d'utilisateur et votre mot de passe, puis cliquez sur *OK*.
+. Dans la barre d'outils Insight, cliquez sur image:../media/oci-reporting-portal-icon.gif[""].
+. Dans la page de connexion qui s'affiche, entrez votre nom d'utilisateur et votre mot de passe, puis cliquez sur *OK*.
+
+
+
+
+== Accès au portail de génération de rapports à partir de l'entrepôt de données
+
+
+
+=== Étapes
+
+. Ouvrez un navigateur Web.
+. Saisissez l'URL suivante pour accéder à l'entrepôt de données : `+https://server-name/dwh+`
+. Entrez votre nom d'utilisateur et votre mot de passe, puis cliquez sur *OK*.
+. Dans la barre d'outils Data Warehouse, cliquez sur image:../media/oci-reporting-portal-icon.gif[""].
+. Dans la page de connexion qui s'affiche, entrez votre nom d'utilisateur et votre mot de passe, puis cliquez sur *OK*.
+
+
+
+
+=== Résultats
+
+La page d'accueil IBM Cognos Analytics s'affiche. Il s'agit de la page d'accueil par défaut du portail de reporting OnCommand Insight.
+
+image::../media/cognos-welcome.gif[bienvenue à cognos]

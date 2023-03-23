@@ -1,0 +1,22 @@
+---
+permalink: dwh/managing-data-warehouse-and-reporting-user-accounts.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les comptes utilisateur, l"authentification utilisateur et l"autorisation utilisateur pour les outils de génération de rapports OnCommand Insight sont définis et gérés à partir de l"entrepôt de données \(DWH\). En fonction de ces configurations, les utilisateurs et les administrateurs ont accès à tout ou partie des rapports OnCommand Insight disponibles.' 
+---
+= Gestion des comptes utilisateur Data Warehouse et Reporting
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les comptes utilisateur, l'authentification utilisateur et l'autorisation utilisateur pour les outils de création de rapports OnCommand Insight sont définis et gérés à partir de l'entrepôt de données (DWH). En fonction de ces configurations, les utilisateurs et les administrateurs ont accès à tout ou partie des rapports OnCommand Insight disponibles.
+
+L'accès à la gestion des utilisateurs dans l'entrepôt de données nécessite un compte disposant des privilèges d'administrateur système. Les points suivants sont notamment :
+
+* Fonctionnalités administratives complètes pour l'entrepôt de données
+* Configuration et maintenance de tous les comptes utilisateur
+* Accès en lecture à la base de données
+* Possibilité de configurer des connecteurs dans l'ETL, de planifier des travaux d'entrepôt de données, de réinitialiser la base de données, d'attribuer ou de modifier des rôles et d'ajouter ou de supprimer des comptes d'utilisateur
+

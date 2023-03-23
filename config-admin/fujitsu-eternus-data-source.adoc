@@ -1,0 +1,128 @@
+---
+permalink: config-admin/fujitsu-eternus-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La source de données Fujitsu ETERNUS requiert l"adresse IP du stockage. Il ne peut pas être délimité par des virgules.' 
+---
+= Source de données ETERNUS de Fujitsu
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La source de données Fujitsu ETERNUS requiert l'adresse IP du stockage. Il ne peut pas être délimité par des virgules.
+
+
+
+== Terminologie
+
+OnCommand Insight acquiert les informations d'inventaire suivantes à partir de la source de données ETERNUS de Fujitsu. Pour chaque type de ressource acquis par Insight, la terminologie la plus courante utilisée pour cette ressource est indiquée. Lors de l'affichage ou du dépannage de cette source de données, gardez à l'esprit la terminologie suivante :
+
+|===
+
+
+| Terme du fournisseur/modèle | Terme Insight 
+
+
+ a| 
+Disque
+ a| 
+Disque
+
+
+
+ a| 
+Stockage
+ a| 
+Stockage
+
+
+
+ a| 
+Pool fin, pool de niveau flexible,
+
+Groupe RAID
+ a| 
+Pool de stockage
+
+
+
+ a| 
+Volume standard, volume de données aimanté (SDV),
+
+Volume du pool de données Snap (SDPV)
+
+Volume de provisionnement fin (TPV)
+ a| 
+Volumétrie
+
+|===
+[NOTE]
+====
+Il s'agit uniquement de mappages terminologiques courants et peuvent ne pas représenter tous les cas pour cette source de données.
+
+====
+
+
+== De formation
+
+* Adresse IP du stockage ETERNUS, qui ne peut pas être délimitée par des virgules
+* Nom d'utilisateur et mot de passe SSH Administration
+* Orifice 22
+* Assurez-vous que le défilement de page est désactivé. (clienv-show-more-scroll désactivé)
+
+
+
+
+== Configuration
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Adresse IP du stockage ETERNUS
+ a| 
+Adresse IP du stockage ETERNUS
+
+
+
+ a| 
+Nom d'utilisateur
+ a| 
+Nom d'utilisateur pour le stockage ETERNUS
+
+
+
+ a| 
+Mot de passe
+ a| 
+Mot de passe utilisé pour le sternus
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+Intervalle entre les sondages d'inventaire (20 minutes par défaut)
+
+
+
+ a| 
+Délai d'attente du processus SSH (s)
+ a| 
+Délai d'expiration du processus SSH (600 secondes par défaut)
+
+|===

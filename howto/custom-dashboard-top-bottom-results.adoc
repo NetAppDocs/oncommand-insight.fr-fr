@@ -1,0 +1,32 @@
+---
+permalink: howto/custom-dashboard-top-bottom-results.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Dans un widget graphique d"un tableau de bord personnalisé, vous pouvez afficher les résultats supérieurs ou inférieurs des données cumulées, puis choisir le nombre de résultats affichés. Dans un widget de tableau, vous pouvez sélectionner le nombre de lignes affichées et les trier par colonne.' 
+---
+= Affichage des résultats supérieurs/inférieurs dans les widgets du tableau de bord
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dans un widget graphique d'un tableau de bord personnalisé, vous pouvez afficher les résultats supérieurs ou inférieurs des données cumulées, puis choisir le nombre de résultats affichés. Dans un widget de tableau, vous pouvez sélectionner le nombre de lignes affichées et les trier par colonne.
+
+
+
+== Haut/bas du widget graphique
+
+Dans un widget graphique, lorsque vous choisissez de regrouper des données par un attribut spécifique, vous avez la possibilité d'afficher les résultats N du haut ou N du bas. Notez que vous ne pouvez pas choisir les résultats supérieurs ou inférieurs lorsque vous choisissez de faire un cumul par attributs _All_.
+
+Vous pouvez choisir les résultats à afficher en choisissant *Haut* ou *Bas* dans le champ *Afficher* de la requête et en sélectionnant une valeur dans la liste fournie.
+
+
+
+== Le widget de tableau affiche les entrées
+
+Dans un widget tableau, vous pouvez sélectionner le nombre de résultats affichés dans le tableau des résultats. Vous pouvez choisir entre 5, 10, 20 ou 50 résultats. Vous n'avez pas la possibilité de choisir les résultats supérieurs ou inférieurs car le tableau vous permet de trier les résultats par ordre croissant ou décroissant en fonction d'une colonne à la demande.
+
+Vous pouvez choisir le nombre de résultats à afficher dans la table du tableau de bord en sélectionnant une valeur dans le champ *Afficher les entrées* de la requête.
+
+Notez que plus vous choisissez d'afficher de résultats, plus votre widget sera grand lorsque vous l'enregistrez dans le tableau de bord. Vous ne pourrez pas redimensionner le widget plus petit que le nombre de lignes affichées.

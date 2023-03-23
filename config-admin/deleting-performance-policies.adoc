@@ -1,0 +1,31 @@
+---
+permalink: config-admin/deleting-performance-policies.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez supprimer une règle de performances si vous pensez qu"elle ne s"applique plus à la surveillance des objets de votre réseau.' 
+---
+= Suppression des règles de performance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez supprimer une règle de performances si vous pensez qu'elle ne s'applique plus à la surveillance des objets de votre réseau.
+
+
+
+== Étapes
+
+. Ouvrez Insight dans votre navigateur.
+. Dans le menu *gérer*, sélectionnez *politiques de performances*.
++
+La page règles de performance s'affiche.
+
+. Positionnez le curseur de votre souris sur le nom d'une règle dans la liste des règles de performances d'un objet.
+. Cliquez sur image:../media/oci-delete-policy-threshold-icon.gif[""].
++
+Un message s'affiche, vous demandant si vous souhaitez supprimer la stratégie.
+
+. Cliquez sur *OK*.
+

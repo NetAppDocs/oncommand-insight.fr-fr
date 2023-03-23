@@ -1,0 +1,33 @@
+---
+permalink: dwh/forcing-an-update-of-annotations-for-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez lancer une mise à jour des annotations de OnCommand Insight vers l"entrepôt de données.' 
+---
+= Forcer une mise à jour des annotations pour Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez lancer une mise à jour des annotations de OnCommand Insight vers l'entrepôt de données.
+
+
+
+== Description de la tâche
+
+Vous pouvez mettre à jour les annotations à l'aide de l'une des deux options suivantes :
+
+* Inclure les objets supprimés : inclut les données relatives aux périphériques qui n'existent plus, tels que les hôtes, les matrices de stockage ou les commutateurs qui ont été supprimés. Cette opération est nécessaire si vous souhaitez créer des données d'entrepôt de données avec des points de données historiques.
+* Sans inclure les objets supprimés : sélectionnez cette option si vous souhaitez exclure les objets supprimés.
+
+
+
+
+== Étapes
+
+. Connectez-vous au portail OnCommand Insight en tant qu'administrateur `+https://hostname+`, où `hostname` Est le nom du système sur lequel OnCommand Insight est installé.
+. Cliquez sur *Admin* > *Dépannage*. Au bas de la page, cliquez sur *Dépannage avancé*.
+. Dans l'onglet *actions*, cliquez sur *mettre à jour les annotations DWH (inclure supprimé)*.
+

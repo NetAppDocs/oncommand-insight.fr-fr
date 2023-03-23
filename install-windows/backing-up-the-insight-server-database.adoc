@@ -1,0 +1,30 @@
+---
+permalink: install-windows/backing-up-the-insight-server-database.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Sauvegardez la base de données Insight pour vous assurer que vous disposez d"une sauvegarde récente si un problème survient après la mise à niveau. Lors de la phase de sauvegarde et de restauration, les données de performances ne seront pas collectées. La sauvegarde doit donc se dérouler aussi près que possible du délai de mise à niveau.' 
+---
+= Sauvegarde de la base de données OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sauvegardez la base de données Insight pour vous assurer que vous disposez d'une sauvegarde récente si un problème survient après la mise à niveau. Lors de la phase de sauvegarde et de restauration, les données de performances ne seront pas collectées. La sauvegarde doit donc se dérouler aussi près que possible du délai de mise à niveau.
+
+
+
+== Étapes
+
+. Ouvrez Insight dans votre navigateur.
+. Cliquez sur *Admin* > *Dépannage*.
+. Sur la page *Dépannage*, cliquez sur *sauvegarde*.
++
+Le temps de sauvegarde de la base de données peut varier en fonction de vos ressources disponibles (architecture, processeur et mémoire), de la taille de votre base de données et du nombre d'objets surveillés dans votre environnement.
+
++
+Une fois la sauvegarde terminée, vous êtes invité à télécharger le fichier.
+
+. Téléchargez le fichier de sauvegarde.
+

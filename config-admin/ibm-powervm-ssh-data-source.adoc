@@ -1,0 +1,154 @@
+---
+permalink: config-admin/ibm-powervm-ssh-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La source de données IBM PowerVM \(SSH\) collecte des informations sur les partitions virtuelles exécutées sur des instances matérielles IBM POWER gérées par une console de gestion du matériel \(HMC\). Pour la configuration, cette source de données requiert le nom d"utilisateur pour se connecter à la console HMC via SSH et l"autorisation de niveau vue sur les configurations HMC.' 
+---
+= Source de données IBM PowerVM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La source de données IBM PowerVM (SSH) collecte des informations sur les partitions virtuelles s'exécutant sur des instances IBM POWER Hardware gérées par une console de gestion du matériel (HMC). Pour la configuration, cette source de données requiert le nom d'utilisateur pour se connecter à la console HMC via SSH et l'autorisation de niveau vue sur les configurations HMC.
+
+
+
+== Terminologie
+
+OnCommand Insight acquiert les informations d'inventaire suivantes à partir de la source de données IBM PowerVM. Pour chaque type de ressource acquis par Insight, la terminologie la plus courante utilisée pour cette ressource est indiquée. Lors de l'affichage ou du dépannage de cette source de données, gardez à l'esprit la terminologie suivante :
+
+|===
+
+
+| Terme du fournisseur/modèle | Terme Insight 
+
+
+ a| 
+hdisque
+ a| 
+Disque virtuel
+
+
+
+ a| 
+Système géré
+ a| 
+Hôte
+
+
+
+ a| 
+LPAR, serveur VIO
+ a| 
+Ordinateur virtuel
+
+
+
+ a| 
+Groupe de volumes
+ a| 
+Datastore
+
+
+
+ a| 
+Volume physique
+ a| 
+LUN
+
+|===
+[NOTE]
+====
+Il s'agit uniquement de mappages terminologiques courants et peuvent ne pas représenter tous les cas pour cette source de données.
+
+====
+
+
+== De formation
+
+* Adresse IP de la console de gestion du matériel (HMC)
+* Nom d'utilisateur et mot de passe permettant l'accès à la console HMC via SSH
+* Port requis SSH-22
+* Afficher les autorisations sur tous les systèmes de gestion et les domaines de sécurité des partitions logiques
++
+L'utilisateur doit également disposer de l'autorisation Afficher sur les configurations HMC et de la possibilité de collecter des informations VPD pour le regroupement de sécurité de la console HMC. L'utilisateur doit également être autorisé à accéder aux commandes Virtual IO Server sous le regroupement de sécurité de partition logique. Il est recommandé de commencer par un rôle d'opérateur, puis de supprimer tous les rôles. Les utilisateurs en lecture seule de la console HMC ne disposent pas des privilèges nécessaires pour exécuter des commandes proxy sur les hôtes AIX.
+
+* La meilleure pratique d'IBM consiste à faire contrôler les appareils par deux ou plusieurs NCSM. Sachez que OnCommand Insight peut signaler les périphériques dupliqués. Il est donc fortement recommandé d'ajouter des périphériques redondants à la liste « exclure les périphériques » de la configuration avancée pour ce collecteur de données.
+
+
+
+
+== Configuration
+
+|===
+
+
+| *Champ* | *Description* 
+
+
+ a| 
+Adresse de la console HMC (Hardware Management Console)
+ a| 
+Adresse IP ou nom de domaine complet de la console PowerVM Hardware Management Console
+
+
+
+ a| 
+Utilisateur HMC
+ a| 
+Nom d'utilisateur de la console de gestion du matériel
+
+
+
+ a| 
+Mot de passe
+ a| 
+Mot de passe utilisé pour la console de gestion du matériel
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| *Champ* | *Description* 
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+Intervalle entre les sondages d'inventaire (20 minutes par défaut)
+
+
+
+ a| 
+Port SSH
+ a| 
+Port utilisé pour SSH vers PowerVM
+
+
+
+ a| 
+Délai d'attente du processus SSH (s)
+ a| 
+Délai d'expiration du processus SSH (600 secondes par défaut)
+
+
+
+ a| 
+Nombre de tentatives
+ a| 
+Nombre de tentatives d'inventaire
+
+
+
+ a| 
+Exclure les périphériques
+ a| 
+Liste séparée par des virgules d'ID de périphérique ou de noms d'affichage à exclure
+
+|===

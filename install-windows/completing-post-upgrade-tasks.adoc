@@ -1,0 +1,14 @@
+---
+permalink: install-windows/completing-post-upgrade-tasks.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous devez effectuer des tâches supplémentaires après la mise à niveau vers la dernière version d"Insight.' 
+---
+= Exécution des tâches post-mise à niveau
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez effectuer des tâches supplémentaires après la mise à niveau vers la dernière version d'Insight.

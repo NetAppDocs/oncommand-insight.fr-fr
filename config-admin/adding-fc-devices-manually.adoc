@@ -1,0 +1,46 @@
+---
+permalink: config-admin/adding-fc-devices-manually.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez ajouter manuellement un périphérique Fibre Channel à OnCommand Insight à l"aide de la fonction d"ajout manuel disponible dans l"onglet résolution de périphérique FC Identify. Ce processus peut être utilisé pour la pré-identification d"un périphérique qui devrait être découvert à l"avenir.' 
+---
+= Ajout manuel d'un périphérique Fibre Channel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez ajouter manuellement un périphérique Fibre Channel à OnCommand Insight à l'aide de la fonction d'ajout manuel disponible dans l'onglet résolution de périphérique FC Identify. Ce processus peut être utilisé pour la pré-identification d'un périphérique qui devrait être découvert à l'avenir.
+
+
+
+== Avant de commencer
+
+Pour ajouter une identification de périphérique au système, vous devez connaître l'adresse WWN ou IP et le nom du périphérique.
+
+
+
+== Description de la tâche
+
+Vous pouvez ajouter manuellement un hôte, un stockage, une bande ou un périphérique Fibre Channel inconnu.
+
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur Web Insight
+. Cliquez sur *gérer* > *résolution du périphérique*
+. Cliquez sur l'onglet *FC Identify*.
+. Cliquez sur le bouton Ajouter.
++
+La boîte de dialogue Ajouter un périphérique s'affiche
+
+. Entrez le WWN ou l'adresse IP, le nom du périphérique et sélectionnez le type de périphérique.
+
+
+
+
+== Résultats
+
+Le périphérique que vous entrez est ajouté à la liste des périphériques dans l'onglet FC Identify. La « règle » est identifiée comme étant manuelle.

@@ -1,0 +1,247 @@
+---
+permalink: config-admin/ibm-svc-ssh-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La source de données IBM SVC collecte les données d"inventaire et de performances à l"aide de SSH, prenant en charge divers périphériques exécutant le système d"exploitation SVC. La liste des périphériques pris en charge comprend des modèles tels que le SVC, le v7000, le v5000 et le v3700. Consultez le tableau de prise en charge des sources de données Insight pour connaître les modèles et versions de firmware pris en charge.' 
+---
+= Source de données IBM SVC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La source de données IBM SVC collecte les données d'inventaire et de performances à l'aide de SSH, prenant en charge divers périphériques exécutant le système d'exploitation SVC. La liste des périphériques pris en charge comprend des modèles tels que le SVC, le v7000, le v5000 et le v3700. Consultez le tableau de prise en charge des sources de données Insight pour connaître les modèles et versions de firmware pris en charge.
+
+
+
+== Terminologie
+
+OnCommand Insight acquiert les informations d'inventaire suivantes à partir de la source de données IBM SVC. Pour chaque type de ressource acquis par Insight, la terminologie la plus courante utilisée pour cette ressource est indiquée. Lors de l'affichage ou du dépannage de cette source de données, gardez à l'esprit la terminologie suivante :
+
+|===
+
+
+| Terme du fournisseur/modèle | Terme Insight 
+
+
+ a| 
+Lecteur
+ a| 
+Disque
+
+
+
+ a| 
+Cluster
+ a| 
+Stockage
+
+
+
+ a| 
+Nœud
+ a| 
+Nœud de stockage
+
+
+
+ a| 
+Groupe Mdisk
+ a| 
+Pool de stockage
+
+
+
+ a| 
+Disque virtuel
+ a| 
+Volumétrie
+
+
+
+ a| 
+Disque Mdisk
+ a| 
+LUN interne
+
+|===
+[NOTE]
+====
+Il s'agit uniquement de mappages terminologiques courants et peuvent ne pas représenter tous les cas pour cette source de données.
+
+====
+
+
+== Exigences d'inventaire
+
+* Adresse IP de chaque cluster SVC
+* Port 22 disponible
+* Paire de clés publique et privée que vous générez soit avec Insight, soit en réutilisant un keyair déjà utilisé sur votre SVC
++
+Si vous réutilisez un fichier keyair existant, vous devez les convertir du format Putty au format OpenSSH.
+
+* Clé publique installée sur le cluster SVC
+* La clé privée doit être identifiée dans la source de données
+* Validation de l'accès : ouvrir `ssh` Session sur le cluster SVC à l'aide de la clé privée
+
+
+[NOTE]
+====
+Aucun logiciel tiers n'a besoin d'être installé.
+
+====
+
+
+== Exigences en matière de performances
+
+* Console SVC, obligatoire pour tout cluster SVC et requise pour le package de base de découverte SVC.
+* Niveau d'accès administratif requis uniquement pour la copie des fichiers de données de performances des nœuds de cluster vers le nœud de configuration.
++
+[NOTE]
+====
+Comme ce niveau d'accès n'est pas requis pour le package de découverte de base SVC, l'utilisateur de base SVC risque de ne pas fonctionner correctement.
+
+====
+* Port 22 requis
+* Une clé SSH privée et publique doit être générée pour cet utilisateur, ainsi que la clé privée stockée pour être accessible à partir de l'unité d'acquisition. Si l'utilisateur de la base SVC dispose des autorisations appropriées, le même utilisateur et la même clé fonctionnent. La même clé SSH peut être utilisée pour les données d'inventaire et de performances.
+* Activez la collecte de données en vous connectant au cluster SVC par SSH et en exécutant : `svctask startstats -interval 1`
++
+[NOTE]
+====
+Vous pouvez également activer la collecte de données à l'aide de l'interface utilisateur de gestion du SVC.
+
+====
+
+
+
+
+== Numéro de série parent expliqué
+
+Insight est généralement capable de communiquer le numéro de série de la baie de stockage ou les numéros de série de chaque nœud de stockage. Cependant, certaines architectures de baies de stockage ne s'alignent pas proprement sur cette configuration. Un cluster SVC peut comprendre 1-4 appliances et chaque appliance dispose de 2 nœuds. Si l'appliance elle-même possède un numéro de série, ce numéro ne correspond ni au numéro de série du cluster, ni aux nœuds.
+
+L'attribut « Numéro de série parent » sur l'objet de nœud de stockage est renseigné de manière appropriée pour les baies IBM SVC lorsque les nœuds individuels se trouvent dans une appliance/boîtier intermédiaire qui fait uniquement partie d'un cluster plus grand.
+
+
+
+== Configuration
+
+|===
+
+
+| *Champ* | *Description* 
+
+
+ a| 
+IP du/des cluster
+ a| 
+Adresse IP du nom de domaine complet pour le stockage SVC
+
+
+
+ a| 
+Choisissez « Mot de passe » ou « fichier de clé OpenSSH » pour spécifier le type d'informations d'identification
+ a| 
+Type d'informations d'identification utilisé pour se connecter au périphérique via SSH
+
+
+
+ a| 
+Nom de l'utilisateur de stock
+ a| 
+Nom d'utilisateur pour l'interface de ligne de commande du CSPR
+
+
+
+ a| 
+Mot de passe d'inventaire
+ a| 
+Mot de passe pour l'interface CLI du CSPR
+
+
+
+ a| 
+Chemin complet vers la clé privée d'inventaire
+ a| 
+Chemin complet vers le fichier de clé privée d'inventaire
+
+
+
+ a| 
+Nom d'utilisateur de performance
+ a| 
+Nom d'utilisateur de l'interface de ligne de commande du CSPR pour la collecte des performances
+
+
+
+ a| 
+Mot de passe de performance
+ a| 
+Mot de passe de l'interface de ligne de commande du CSPR pour la collecte des performances
+
+
+
+ a| 
+Chemin complet vers la clé privée performances
+ a| 
+Chemin complet du fichier de clé privée Performance
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| *Champ* | *Description* 
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+Intervalle entre les sondages d'inventaire (40 minutes par défaut)
+
+
+
+ a| 
+Exclure les périphériques
+ a| 
+Liste d'ID de périphérique séparés par une virgule à exclure de la collection d'inventaire
+
+
+
+ a| 
+Délai d'attente du processus SSH (s)
+ a| 
+Délai d'expiration du processus SSH (200 secondes par défaut)
+
+
+
+ a| 
+Intervalle d'interrogation des performances (s)
+ a| 
+Intervalle entre les sondages de performances (300 secondes par défaut)
+
+
+
+ a| 
+Performances exclure les périphériques
+ a| 
+Liste séparée par des virgules des ID de périphériques à exclure de la collection de performances
+
+
+
+ a| 
+Délai d'attente du processus SSH de performance (s)
+ a| 
+Délai d'expiration du processus SSH (200 secondes par défaut)
+
+
+
+ a| 
+Pour nettoyer les fichiers de statistiques sous-évaluées
+ a| 
+Sélectionnez cette option pour nettoyer les fichiers de statistiques vidés
+
+|===

@@ -1,0 +1,16 @@
+---
+permalink: dwh/welcome-to-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"entrepôt de données OnCommand Insight est un référentiel centralisé qui stocke les données de plusieurs serveurs OnCommand Insight et transforme les données en un modèle de données multidimensionnel commun pour les requêtes et les analyses.' 
+---
+= Bienvenue dans l'entrepôt de données OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'entrepôt de données OnCommand Insight est un référentiel centralisé qui stocke les données de plusieurs serveurs OnCommand Insight et transforme les données en un modèle de données multidimensionnel commun pour les requêtes et les analyses.
+
+L'entrepôt de données OnCommand Insight permet d'accéder à une base de données ouverte composée de plusieurs magasins de données qui vous permettent de générer des rapports personnalisés sur les performances et la capacité, tels que des rapports de refacturation, des rapports sur les tendances avec des données historiques, des analyses de consommation et des rapports de prévision.

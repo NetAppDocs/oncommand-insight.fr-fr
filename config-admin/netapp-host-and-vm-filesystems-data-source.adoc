@@ -1,0 +1,119 @@
+---
+permalink: config-admin/netapp-host-and-vm-filesystems-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez utiliser la source de données des systèmes de fichiers d"hôte et de machine virtuelle NetApp pour récupérer les détails du système de fichiers et les mappages des ressources de stockage pour tous les systèmes de fichiers de l"hôte Microsoft Windows et de la machine virtuelle \(machine virtuelle\), ainsi que pour toutes les machines virtuelles Linux prises en charge \(celles qui sont virtuellement mappées uniquement\). Existant dans le serveur Insight annoté avec le groupe de ressources de calcul configuré \(CRG\).' 
+---
+= Source de données systèmes de fichiers d'hôtes NetApp et de machines virtuelles
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser la source de données des systèmes de fichiers d'hôte et de machine virtuelle NetApp pour récupérer les détails du système de fichiers et les mappages des ressources de stockage pour tous les systèmes de fichiers d'hôte et de machine virtuelle (VM) Microsoft Windows, ainsi que pour toutes les machines virtuelles Linux prises en charge (celles qui sont virtuellement mappées uniquement). Existant dans le serveur Insight annoté avec le groupe de ressources de calcul (CRG) configuré.
+
+
+
+== Exigences générales
+
+* Cette fonction doit être achetée séparément.
++
+Vous pouvez contacter votre représentant Insight pour obtenir de l'aide.
+
+* Consultez la matrice de prise en charge d'Insight pour vérifier que votre système d'exploitation hôte ou machine virtuelle est pris en charge.
++
+Pour vérifier que les liens entre les systèmes de fichiers et les ressources de stockage sont créés, vérifiez que le type et la version du fournisseur de stockage ou de virtualisation appropriés indiquent les données d'identification de volume ou de disque virtuel requises.
+
+
+
+
+
+== Configuration Microsoft Windows requise
+
+* Cette source de données utilise les structures de données WMI (Window Management Instrumentation) pour extraire des données.
++
+Ce service doit être opérationnel et disponible à distance. En particulier, le port 135 doit être accessible et doit être ouvert s'il se trouve derrière un pare-feu.
+
+* Les utilisateurs du domaine Windows doivent disposer des autorisations appropriées pour accéder aux structures WMI.
+* Les autorisations d'administrateur sont requises.
+* Ports TCP dynamiques affectés 1024-65535 pour Windows 2003 et versions antérieures
+* Ports 49152-65535 pour Windows 2008
+
+
+[NOTE]
+====
+En règle générale, lorsque vous essayez d'utiliser un pare-feu entre Insight, un au et cette source de données, vous devez consulter votre équipe Microsoft pour identifier les ports qui, selon vous, seront nécessaires.
+
+====
+
+
+== Configuration Linux requise
+
+* Cette source de données utilise une connexion SSH (Secure Shell) pour exécuter des commandes sur les machines virtuelles Linux.
++
+Le service SSH doit être opérationnel et disponible à distance. En particulier, le port 22 doit être accessible et doit être ouvert s'il se trouve derrière un pare-feu.
+
+* Les utilisateurs SSH doivent disposer des autorisations sudo pour exécuter des commandes en lecture seule sur les machines virtuelles Linux.
++
+Vous devez utiliser le même mot de passe pour vous connecter à SSH et répondre à toute demande de mot de passe sudo.
+
+
+
+
+
+== Recommandations d'utilisation
+
+* Vous devez annoter un groupe d'hôtes et de machines virtuelles qui ont des informations d'identification communes au système d'exploitation à l'aide de la même annotation Compute Resource Group.
++
+Chaque groupe dispose d'une instance de cette source de données qui découvre les détails du système de fichiers à partir de ces hôtes et machines virtuelles.
+
+* Si vous disposez d'une instance de cette source de données pour laquelle le taux de réussite est faible (par exemple, OnCommand Insight découvre les détails du système de fichiers pour seulement 50 des 1000 hôtes et machines virtuelles d'un groupe), Vous devez déplacer les hôtes et les machines virtuelles pour lesquels la découverte a réussi dans un groupe de ressources de calcul distinct.
+
+
+
+
+== Configuration
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Nom d'utilisateur
+ a| 
+Utilisateur du système d'exploitation disposant des droits appropriés pour récupérer les données du système de fichiers pour les utilisateurs du système d'exploitation Windows, ce dernier doit inclure le préfixe de domaine.
+
+
+
+ a| 
+Mot de passe
+ a| 
+Mot de passe de l'utilisateur du système d'exploitation
+
+
+
+ a| 
+Calculer le groupe de ressources
+ a| 
+La valeur d'annotation utilisée pour marquer les machines virtuelles et hôtes de la source de données détecte les systèmes de fichiers.Une valeur vide indique que la source de données découvre les systèmes de fichiers de tous les hôtes et machines virtuelles qui ne sont actuellement pas annotés avec un groupe de ressources de calcul.
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+Intervalle entre les sondages d'inventaire (360 minutes par défaut)
+
+|===

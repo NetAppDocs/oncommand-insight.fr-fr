@@ -1,0 +1,45 @@
+---
+permalink: howto/assigning-applications-using-a-query.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous attribuez une application à une ressource afin de pouvoir identifier les ressources de la ressource utilisée par l"application. Si un actif comporte un coût, vous pouvez identifier le coût engagé par l"application et si la ressource est mesurée par sa taille, vous pouvez déterminer si la ressource doit être réapprovisionnée.' 
+---
+= Affectation d'applications à une ressource à l'aide d'une requête
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous attribuez une application à une ressource afin de pouvoir identifier les ressources de la ressource utilisée par l'application. Si un actif comporte un coût, vous pouvez identifier le coût engagé par l'application et si la ressource est mesurée par sa taille, vous pouvez déterminer si la ressource doit être réapprovisionnée.
+
+
+
+== Description de la tâche
+
+Vous pouvez simplifier l'affectation de plusieurs ressources à une application à l'aide d'une requête.
+
+
+
+== Étapes
+
+. Créez une nouvelle requête pour identifier les ressources auxquelles vous souhaitez affecter une application. Par exemple, si vous souhaitez l'affecter à un hôte portant un nom spécifique lié à un emplacement géographique, cliquez sur *requêtes* > *+Nouvelle requête*
+. Cliquez sur *hôte*
+. Dans le champ *Nom*, entrez `Chicago`
++
+Le système affiche tous les hôtes avec `Chicago` en tant que partie si leur nom. image:../media/new-query.gif[""]
+
+. Sélectionnez un ou plusieurs hôtes identifiés par votre requête.
+. Cliquez sur *actions* > *Ajouter une application*
++
+image::../media/application-assign.gif[affectation d'applications]
+
++
+Le système affiche la boîte de dialogue attribuer une application.
+
+. Sélectionnez l'application que vous souhaitez affecter à l'hôte et cliquez sur image:../media/check-box-ok.gif[""]
+. Cliquez sur *Enregistrer*
++
+Le nom de l'application apparaît dans la section données utilisateur.
+
+

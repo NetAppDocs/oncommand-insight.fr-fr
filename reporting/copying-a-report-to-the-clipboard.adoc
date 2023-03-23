@@ -1,0 +1,32 @@
+---
+permalink: reporting/copying-a-report-to-the-clipboard.html 
+sidebar: sidebar 
+keywords:  
+summary: Utilisez ce processus pour copier un rapport dans le presse-papiers. 
+---
+= Copie d'un rapport dans le presse-papiers
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilisez ce processus pour copier un rapport dans le presse-papiers.
+
+
+
+== Étapes
+
+. Ouvrez le portail de rapports Cognos 11 : https://server-name:9300/bi/[]
+. Dans la barre d'outils, cliquez sur image:../media/new-report.gif[""]
+. Cliquez sur *Rapport*
+. Cliquez sur l'icône *pages*image:../media/pages-icon.gif[""]
++
+L'icône *Rapport* image:../media/report-icon.gif[""] s'affiche
+
+. Cliquez avec le bouton gauche de la souris sur l'icône *Rapport*
++
+Les options de rapport s'affichent.
+
+. Cliquez sur *Copier le rapport dans le presse-papiers*.
+

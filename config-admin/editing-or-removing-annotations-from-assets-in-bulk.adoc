@@ -1,0 +1,51 @@
+---
+permalink: config-admin/editing-or-removing-annotations-from-assets-in-bulk.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous pouvez modifier plusieurs annotations pour les ressources ou supprimer plusieurs annotations des ressources en utilisant une requête au lieu de les modifier ou de les supprimer manuellement. 
+---
+= Modification ou suppression de plusieurs annotations des actifs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez modifier plusieurs annotations pour les ressources ou supprimer plusieurs annotations des ressources en utilisant une requête au lieu de les modifier ou de les supprimer manuellement.
+
+
+
+== Avant de commencer
+
+Vous devez avoir déjà créé une requête qui trouve tous les actifs que vous souhaitez modifier.
+
+
+
+== Étapes
+
+. Cliquez sur *requêtes* et sélectionnez *Afficher toutes les requêtes*.
++
+La page requêtes s'affiche.
+
+. Cliquez sur le nom de la requête qui trouve les ressources.
++
+La liste des actifs associés à la requête s'affiche.
+
+. Sélectionnez les ressources souhaitées dans la liste ou cliquez sur image:../media/select-assets.gif[""] Pour sélectionner *tout*.
++
+Le bouton *actions* s'affiche.
+
+. Pour ajouter une annotation aux actifs ou modifier la valeur d'une annotation affectée aux actifs, cliquez sur image:../media/actions-button.gif[""], Et sélectionnez *Modifier l'annotation*.
++
+.. Cliquez sur *Annotation* et sélectionnez une annotation pour laquelle vous souhaitez modifier la valeur, ou sélectionnez une nouvelle annotation pour l'affecter à tous les actifs.
+.. Cliquez sur *valeur* et sélectionnez une valeur pour l'annotation.
+.. Cliquez sur *Enregistrer*.
+
+
+. Pour supprimer une annotation affectée aux actifs, cliquez sur image:../media/actions-button.gif[""], Et sélectionnez *Supprimer une annotation*.
++
+.. Cliquez sur *Annotation* et sélectionnez l'annotation que vous souhaitez supprimer des actifs.
+.. Cliquez sur *Supprimer*.
+
+
+

@@ -1,0 +1,37 @@
+---
+permalink: config-admin/deleting-inactive-devices.html 
+sidebar: sidebar 
+keywords:  
+summary: La suppression de périphériques inactifs permet de préserver la propreté de vos données et de faciliter leur navigation. 
+---
+= Suppression des périphériques inactifs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La suppression de périphériques inactifs permet de préserver la propreté de vos données et de faciliter leur navigation.
+
+
+
+== Description de la tâche
+
+Pour supprimer des périphériques inactifs d'Insight, procédez comme suit :
+
+
+
+== Étapes
+
+. Créez une nouvelle requête ou ouvrez une requête existante.
+. Choisissez le type de ressource _generic device_, _host_, _Storage_,_switch_ ou _tape_.
+. Ajoutez un filtre pour *est actif* et définissez le filtre sur *non*.
++
+Le tableau des résultats affiche uniquement les actifs qui ne sont pas actifs.
+
+. Sélectionnez les périphériques à supprimer.
+. Cliquez sur le bouton *actions* et sélectionnez *Supprimer les périphériques inactifs*.
++
+Vos périphériques inactifs sont supprimés et ne seront plus affichés dans Insight.
+
+

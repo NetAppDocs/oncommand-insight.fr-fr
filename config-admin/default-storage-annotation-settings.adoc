@@ -1,0 +1,28 @@
+---
+permalink: config-admin/default-storage-annotation-settings.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Pour accélérer l"affectation des annotations de stockage à vos ressources, OnCommand Insight inclut 21 règles d"annotation par défaut, qui associent un niveau de Tier à un modèle de hiérarchisation du stockage. Toutes vos ressources de stockage sont automatiquement associées à un niveau lors de l"acquisition des ressources de votre environnement.' 
+---
+= Règles d'annotation de stockage par défaut
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour accélérer l'affectation des annotations de stockage à vos ressources, OnCommand Insight inclut 21 règles d'annotation par défaut, qui associent un niveau de Tier à un modèle de hiérarchisation du stockage. Toutes vos ressources de stockage sont automatiquement associées à un niveau lors de l'acquisition des ressources de votre environnement.
+
+Les règles d'annotation par défaut appliquent les annotations de niveau de la manière suivante :
+
+* Niveau 1, qualité du stockage
++
+L'annotation de niveau 1 est appliquée aux fournisseurs suivants et à leurs familles spécifiées : EMC (Symmetrix), HDS (HDS9500V, HDS9900, HDS9900V, R600, R700, USP r, USP V), IBM (DS8000), NetApp (FAS6000 ou FAS6200) et Violin (mémoire).
+
+* Niveau 2, qualité du stockage
++
+L'annotation de niveau 2 s'applique aux fournisseurs suivants et à leurs familles spécifiques : HP (3PAR StoreServ ou EVA), EMC (CLARiiON), HDS (AMS ou D800), IBM (XIV) et NetApp (FAS3000, FAS3100 et FAS3200).
+
+
+
+Vous pouvez modifier les paramètres par défaut de ces règles pour les adapter à vos exigences de niveau, ou vous pouvez les supprimer si vous n'en avez pas besoin.

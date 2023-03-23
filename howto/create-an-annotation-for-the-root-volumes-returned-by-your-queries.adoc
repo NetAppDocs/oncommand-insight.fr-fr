@@ -1,0 +1,35 @@
+---
+permalink: howto/create-an-annotation-for-the-root-volumes-returned-by-your-queries.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les annotations sont des notes spécialisées que vous attribuez à vos ressources, ce qui vous permet de filtrer les ressources par leurs annotations. Cette annotation vous permettra d"identifier les agrégats NetApp racine dans votre environnement et de vérifier qu"ils ne sont pas inclus dans un rapport spécifique.' 
+---
+= Créez une annotation pour les volumes racine renvoyés par vos requêtes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les annotations sont des notes spécialisées que vous attribuez à vos ressources, ce qui vous permet de filtrer les ressources par leurs annotations. Cette annotation vous permettra d'identifier les agrégats NetApp racine dans votre environnement et de vérifier qu'ils ne sont pas inclus dans un rapport spécifique.
+
+
+
+== Avant de commencer
+
+Vous devez avoir identifié tous les agrégats racine que vous souhaitez exclure du rapport « densité d'E/S élevée ».
+
+
+
+== Étapes
+
+. Créez une annotation pour associer tous les agrégats racine NetApp que vous avez identifiés à des requêtes : *Manage* > *Annotations*
+. Cliquez sur *Ajouter*
++
+.. Entrez le nom de l'annotation : *RootAggr*
+.. Entrez une description de l'annotation : *Supprimer l'agrégat racine du rapport "densité d'E/S élevée"*
+.. Saisissez le type d'annotation : *Boolean*
+
+
+. Cliquez sur *Enregistrer*
+

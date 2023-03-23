@@ -1,0 +1,88 @@
+---
+permalink: config-admin/configuring-sso.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"authentification unique \(SSO\) permet aux utilisateurs de votre organisation d"utiliser OnCommand Insight sans avoir besoin d"un compte spécial.' 
+---
+= Configuration de l'authentification unique (SSO)
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'authentification unique (SSO) permet aux utilisateurs de votre organisation d'utiliser OnCommand Insight sans avoir besoin d'un compte spécial.
+
+Les administrateurs peuvent configurer le serveur OnCommand Insight pour l'accès à *Single Sign-On* (SSO) pour les utilisateurs de leur domaine d'entreprise. Une fois SSO configuré, tout utilisateur disposant de l'adresse e-mail du domaine peut se connecter à Insight à l'aide de ses informations d'identification d'entreprise. OnCommand Insight prend en charge le protocole OIDC (OpenID Connect) pour SSO.
+
+[NOTE]
+====
+SSO est disponible pour l'interface utilisateur Web Insight Server uniquement. SSO n'est pas disponible pour les composants Data Warehouse, Reporting ou Java client UI.
+
+====
+
+
+== Procédure de configuration de SSO
+
+* Accédez au menu:Admin[Paramètres > utilisateurs]
+* Entrez l'URL de configuration SSO pour remplir automatiquement les champs de configuration (également appelés "OpenID-configuration"). Il s'agit d'un URI qui fournit un JSON décrivant la configuration d'un fournisseur d'identités.
+* Vous pouvez également saisir manuellement les URL de configuration SSO pour les ressources suivantes du fournisseur d'identité. Vous trouverez des liens vers des informations supplémentaires sur ces ressources dans la section informations connexes au bas de cette page.
++
+** *Noeud final d'autorisation* : ressource de fournisseur d'identité qui invite l'utilisateur à fournir des informations d'identification. En cas de succès, l'identité accorde une autorisation à OnCommand Insight qui lui permet d'effectuer des actions au nom de l'utilisateur.
+** *JWK Set URI* : fournit les clés publiques utilisées pour signer les jetons JWT. Cela permet au client de vérifier que les jetons JWT ont été effectivement émis par le fournisseur d'identité et non par un tiers.
+** *Token Endpoint* : ressource de fournisseur d'identité dans laquelle le client traite son octroi d'autorisation pour les jetons JWT. Le client doit également fournir l'ID client et le secret client (voir ci-dessous). Le jeton JWT utilisé par Insight est le « jeton d'identité », qui indique le nom d'utilisateur et les rôles de l'utilisateur.
+** *End session Endpoint* : fourni par le fournisseur d'identité auquel le client (OCI) fait rediriger le navigateur et, à son tour, le fournisseur d'identité invalide la session de l'utilisateur avec le fournisseur d'identité. Cela signifie qu'à la prochaine connexion, l'utilisateur devra saisir des informations d'identification.
+
+
+* *ID client* : identifie de manière unique le client (OCI) et le différencie des autres clients connus par le fournisseur d'identité. Le fournisseur d'identité génère l'ID client lorsqu'une application est créée pour elle et le client doit connaître l'ID client, car il le présente dans le cadre de la demande de jeton.
+* *Secret client* : chaîne aléatoire connue uniquement du fournisseur d'identité et du client qui authentifie le client auprès du fournisseur d'identité, prouvant que le client est l'application qu'il prétend être et non un tiers malveillant. Avec l'ID client, le secret client est transmis au fournisseur d'identité dans le cadre de la demande de jeton. Le secret client est généré par le fournisseur d'identité. Avec Azure Active Directory, plusieurs secrets clients sont autorisés.
+* *JWT revendication pour le nom d'utilisateur*: La réclamation dans le jeton d'identité JWT qui identifie le nom d'utilisateur de l'utilisateur. Un sinistre est une paire clé-valeur dans la charge utile JSON du jeton JWT. La "réclamation JTW pour nom d'utilisateur" configurée est le nom de la clé, et pour chaque jeton d'identité, la valeur est le nom d'utilisateur de l'utilisateur authentifié. Le nom de la clé peut varier d'un fournisseur d'identité à un fournisseur d'identité. Pour Azure Active Directory, le nom de la demande est généralement « nom_utilisateur_préféré ».
+* *Réclamation JWT pour les rôles* : comme ci-dessus sauf que la valeur de cette réclamation est une liste de rôles OCI, c'est-à-dire "invité", "utilisateur", "admin". Pour Azure Active Directory, cette clé est nommée « rôles ».
+
+
+
+
+== Gérer les certificats SSL
+
+Vous devez importer le certificat racine de la chaîne de certificats SSL de votre fournisseur d'identité. Pour ce faire, téléchargez le certificat racine associé au nom d'hôte du noeud final du jeton. (login.microsoftonline.com pour Azure Active Directory) et enregistrez-le dans un fichier. Cliquez ensuite sur le bouton « certificats » et, à l'aide de l'onglet « Manuel », sélectionnez le fichier et fournissez un alias tel que « `Sso-root' » pour l'importer.
+
+Si l'authentification unique est déjà activée et que vous avez importé un nouveau certificat, vous devez redémarrer le service SANscreen.
+
+
+
+== Activation de SSO dans le système d'exploitation
+
+Pour activer SSO sur le système actuel et préserver la propriété système ssoAuth lors de la mise à niveau, vous devez effectuer les opérations suivantes.
+
+Pour activer SSO sous Windows, accédez à _HKEY_LOCAL_MACHINE\SOFTWARE\NetApp\SANscreen_ dans le Registre. Modifiez la valeur de ssoAuth de FALSE à TRUE. Cette valeur est lue pendant la mise à niveau et utilisée pour définir la propriété système ssoAuth pour le système mis à niveau. Cela n'a aucun effet sur l'instance actuelle ; vous devez également mettre à jour ssoAuth dans _HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Apache Software Foundation\Procrun 2.0\SANscreen Server\Parameters\Java Options_.
+
+Pour activer SSO sur Linux, accédez à _/opt/netapp/OCI/conf/_ et ouvrez le fichier _wildfly.properties_. Modifiez la valeur de _SSO_AUTH_ENABLED_ de FALSE à TRUE.
+
+Une fois la connexion SSO active, redémarrez le service SANscreen.
+
+
+
+== Résolution des problèmes SSO
+
+Si vous recevez une erreur « non autorisé », consultez le site server.log pour plus de détails. Cette erreur peut s'afficher si Insight signale que l'autorisation échoue mais que le fournisseur d'identité a authentifié l'utilisateur correctement.
+
+Si les utilisateurs ne peuvent pas se connecter avec SSO, connectez-vous en tant qu'utilisateur non SSO avec les autorisations Administrateur et corrigez la configuration SSO. Pour ce faire, entrez __<Your Insight URL>**/uiserver/login.html#**__dans une fenêtre de navigateur.
+
+*Informations connexes*
+
+https://ldapwiki.com/wiki/Openid-configuration[]
+
+https://ldapwiki.com/wiki/Authorization_endpoint[]
+
+https://ldapwiki.com/wiki/JWK%20Set[]
+
+https://ldapwiki.com/wiki/Token_endpoint[]
+
+https://ldapwiki.com/wiki/End_session_endpoint[]
+
+https://ldapwiki.com/wiki/Client_id[]
+
+https://ldapwiki.com/wiki/Client%20Secret[]
+
+https://ldapwiki.com/wiki/Identity%20Token[]

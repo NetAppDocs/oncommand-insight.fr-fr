@@ -1,0 +1,24 @@
+---
+permalink: dwh/troubleshooting-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous pouvez effectuer diverses tâches liées au dépannage de Data Warehouse. 
+---
+= Dépannage de l'entrepôt de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez effectuer diverses tâches liées au dépannage de Data Warehouse.
+
+* Utilisez ASUP OnCommand Insight.
+* Afficher les journaux OnCommand Insight
+* Résoudre les problèmes liés aux mises à niveau et aux entités commerciales.
+* Résoudre les problèmes liés à la consolidation de plusieurs serveurs OnCommand Insight.
+
+
+Vous pouvez consolider plusieurs serveurs OnCommand Insight dans la même base de données d'entrepôt de données. De nombreuses configurations peuvent signaler le même objet à partir de plusieurs connecteurs (c'est-à-dire que le même commutateur existe dans deux instances OnCommand Insight). Dans ce cas, Data Warehouse consolide les objets multiples en un seul (un connecteur principal est choisi et les données de l'objet sont extraites de ce connecteur uniquement).
+
+L'administrateur du stockage peut utiliser la page Dépannage pour résoudre les problèmes liés aux problèmes de consolidation.

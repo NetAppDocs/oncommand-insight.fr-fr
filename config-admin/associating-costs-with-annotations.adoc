@@ -1,0 +1,35 @@
+---
+permalink: config-admin/associating-costs-with-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Avant d"exécuter des rapports sur les coûts, vous devez associer les coûts aux annotations au niveau du système niveau de service, niveau de commutateur et niveau. Cela permet de refacturer les utilisateurs du stockage en fonction de leur utilisation réelle de la capacité de production et répliquée. Par exemple, pour le niveau, vous pouvez avoir des valeurs de niveau Gold et Silver et attribuer un coût plus élevé au niveau Gold que au niveau Silver.' 
+---
+= Association de coûts à des annotations
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'exécuter des rapports sur les coûts, vous devez associer les coûts aux annotations au niveau du système niveau de service, niveau de commutateur et niveau. Cela permet de refacturer les utilisateurs du stockage en fonction de leur utilisation réelle de la capacité de production et répliquée. Par exemple, pour le niveau, vous pouvez avoir des valeurs de niveau Gold et Silver et attribuer un coût plus élevé au niveau Gold que au niveau Silver.
+
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur Insigtweb.
+. Cliquez sur gérer et sélectionnez *Annotations*.
++
+La page Annotation s'affiche.
+
+. Placez le curseur sur l'annotation niveau de service, niveau de commutation ou niveau, puis cliquez sur image:../media/edit-annotation-icon.gif[""].
++
+La boîte de dialogue Editer l'annotation s'affiche.
+
+. Entrez les valeurs de tous les niveaux existants dans le champ *coût*.
++
+Les annotations de niveau et de niveau de service ont respectivement des valeurs de hiérarchisation automatique et de stockage objet que vous ne pouvez pas supprimer.
+
+. Cliquez sur image:../media/edit-annotation-add-icon.gif[""] pour ajouter des niveaux supplémentaires.
+. Cliquez sur *Enregistrer* lorsque vous avez terminé.
+

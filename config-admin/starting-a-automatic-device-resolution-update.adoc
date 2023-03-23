@@ -1,0 +1,24 @@
+---
+permalink: config-admin/starting-a-automatic-device-resolution-update.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Une mise à jour de la résolution du périphérique valide les modifications manuelles qui ont été ajoutées depuis la dernière exécution de la résolution automatique complète du périphérique. L"exécution d"une mise à jour peut être utilisée pour valider et exécuter uniquement les nouvelles entrées manuelles apportées à la configuration de résolution de périphérique. Aucune résolution complète du périphérique n"est exécutée.' 
+---
+= Démarrage d'une mise à jour automatique de la résolution des périphériques
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Une mise à jour de la résolution du périphérique valide les modifications manuelles qui ont été ajoutées depuis la dernière exécution de la résolution automatique complète du périphérique. L'exécution d'une mise à jour peut être utilisée pour valider et exécuter uniquement les nouvelles entrées manuelles apportées à la configuration de résolution de périphérique. Aucune résolution complète du périphérique n'est exécutée.
+
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur Web Insight.
+. Cliquez sur *gérer* > *résolution du périphérique*
+. Dans l'écran *Device Resolution*, cliquez sur la flèche vers le bas du bouton *Run AR*.
+. Cliquez sur *Update* pour lancer la mise à jour.
+

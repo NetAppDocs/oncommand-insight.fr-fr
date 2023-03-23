@@ -1,0 +1,60 @@
+---
+permalink: config-admin/understanding-this-variables.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les variables spéciales de la page personnalisable « données supplémentaires » d"une ressource vous permettent de présenter facilement des informations supplémentaires directement liées à la ressource actuelle.' 
+---
+= Présentation des variables «$this »
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les variables spéciales de la page personnalisable « données supplémentaires » d'une ressource vous permettent de présenter facilement des informations supplémentaires directement liées à la ressource actuelle.
+
+
+
+== Description de la tâche
+
+Pour utiliser les variables "`$this`" dans les widgets de la page d'accueil personnalisable de votre ressource, suivez les étapes ci-dessous. Dans cet exemple, nous allons ajouter un widget de tableau.
+
+[NOTE]
+====
+les variables "`$this`" ne sont valables que pour la page d'accueil personnalisable d'un actif. Elles ne sont pas disponibles pour les autres tableaux de bord Insight. Les variables "`$this`" disponibles varient en fonction du type d'actif.
+
+====
+
+
+== Étapes
+
+. Accédez à une page de ressources pour trouver un atout de votre choix. Dans cet exemple, sélectionnons une page de ressources de machine virtuelle (VM). Recherchez ou recherchez une machine virtuelle, puis cliquez sur le lien pour accéder à la page de ressources de cette machine virtuelle.
++
+La page de ressource de la machine virtuelle s'ouvre.
+
+. Cliquez sur la liste déroulante *Modifier la vue :* > *données supplémentaires de la machine virtuelle* pour accéder à la page d'accueil personnalisable de cette ressource.
+. Cliquez sur le bouton *widget* et choisissez *widget Table*.
++
+Le widget Table s'ouvre pour être modifié. Par défaut, tous les stockages sont affichés dans le tableau.
+
+. Nous voulons afficher toutes les machines virtuelles. Cliquez sur le sélecteur d'actifs et remplacez *Storage* par *Virtual machine*.
++
+Toutes les machines virtuelles sont maintenant affichées dans le tableau.
+
+. Cliquez sur le bouton *Sélecteur de colonne*image:../media/column-picker-button.gif[""]et ajoutez le champ *nom de l'hyperviseur* à la table.
++
+Le nom de l'hyperviseur s'affiche pour chaque machine virtuelle dans le tableau.
+
+. Nous nous soucions uniquement de l'hyperviseur qui héberge la machine virtuelle actuelle. Cliquez sur le bouton**+**du champ *Filtrer par* et sélectionnez *nom de l'hyperviseur*.
+. Cliquez sur *Any* et sélectionnez la variable *$this.host.name*. Cliquez sur la case à cocher pour enregistrer le filtre.
++
+image::../media/variable-this-example-1.gif[variable cet exemple 1]
+
+. Le tableau répertorie désormais toutes les machines virtuelles hébergées par l'hyperviseur de la machine virtuelle actuelle. Cliquez sur *Enregistrer*.
+
+
+
+
+== Résultats
+
+Le tableau que vous avez créé pour cette page d'inventaire de machine virtuelle s'affiche pour toute page d'inventaire de machine virtuelle que vous affichez. L'utilisation de la variable *$this.host.name* dans le widget signifie que seules les machines virtuelles appartenant à l'hyperviseur des actifs actuels seront affichées dans le tableau.

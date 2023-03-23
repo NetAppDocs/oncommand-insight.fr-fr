@@ -1,0 +1,28 @@
+---
+permalink: config-admin/determining-data-source-acquisition-status.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les sources de données étant la principale source d"informations pour Insight, vous devez impérativement vous assurer qu"elles restent opérationnelles.' 
+---
+= Détermination de l'état d'acquisition de la source de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les sources de données étant la principale source d'informations pour Insight, vous devez impérativement vous assurer qu'elles restent opérationnelles.
+
+La possibilité de voir l'état d'acquisition de la source de données est disponible sur chaque page d'actif pour tous les actifs directement acquis. L'un des scénarios d'acquisition suivants peut se produire, dans lequel l'état est affiché dans le coin supérieur droit de la page d'inventaire :
+
+* Acquisition réussie à partir de la source de données
++
+Affiche l'état « acquis `xxxx``", where `xxxx` indique le temps d'acquisition le plus récent des sources de données de l'actif.
+
+* Une erreur d'acquisition s'est produite.
++
+Affiche l'état « acquis `xxxx``", where `xxxx` indique la durée d'acquisition la plus récente d'une ou plusieurs sources de données de l'actif avec image:../media/acquisition-icon.gif[""]. Lorsque vous cliquez sur image:../media/acquisition-icon.gif[""], une fenêtre affiche chaque source de données pour l'actif, l'état de la source de données et la dernière fois que les données ont été acquises. Cliquez sur une source de données pour afficher la page détaillée de la source de données.
+
+
+
+Si un actif n'est pas acquis directement, aucun état n'est affiché.

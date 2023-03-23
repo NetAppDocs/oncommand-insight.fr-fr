@@ -1,0 +1,46 @@
+---
+permalink: config-admin/scrubbing-data-for-transfer-to-support-webui.html 
+sidebar: sidebar 
+keywords:  
+summary: Les clients qui ont des environnements sécurisés doivent communiquer avec le service client NetApp pour résoudre les problèmes qui surviennent sans compromettre les informations de leur base de données. Les utilitaires OnCommand Insight Scrub vous permettent de configurer un dictionnaire complet de mots-clés et de modèles afin que vous puissiez « nettoyer » les données sensibles et envoyer des fichiers de nettoyage au support client. 
+---
+= Nettoyage des données pour transfert vers le support
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les clients qui ont des environnements sécurisés doivent communiquer avec le service client NetApp pour résoudre les problèmes qui surviennent sans compromettre les informations de leur base de données. Les utilitaires OnCommand Insight Scrub vous permettent de configurer un dictionnaire complet de mots-clés et de modèles afin que vous puissiez « nettoyer » les données sensibles et envoyer des fichiers de nettoyage au support client.
+
+
+
+== Étapes
+
+. Dans l'interface utilisateur Web, cliquez sur *Admin* et sélectionnez *Dépannage*.
+. Au bas de la page dans la zone autres tâches, cliquez sur le lien *Scrub Utilities*.
++
+Il existe plusieurs sections de nettoyage : recherche dans Dictionnaire, données de nettoyage et dictionnaire de construction, mots clés personnalisés et expressions régulières.
+
+. 
++
+.. Dans la section **recherche dans le dictionnaire**, entrez un code pour afficher la valeur qu'il remplace ou entrez une valeur pour voir le code qui le remplace. Remarque : avant de pouvoir effectuer une recherche, vous devez *construire* le dictionnaire pour identifier les valeurs à nettoyer à partir des données de support.
+
+
+. Pour ajouter vos propres mots-clés à nettoyer à partir des données de support, dans la section *mots-clés personnalisés*, cliquez sur menu:actions[Ajouter mot-clé personnalisé]. Entrez un mot clé et cliquez sur *Enregistrer*. Le mot clé est ajouté au dictionnaire.
+. Développez *patterns (regexp)*. Cliquez sur *Ajouter* pour afficher la boîte de dialogue permettant d'entrer un nouveau motif.
+. Pour utiliser une expression régulière pour identifier des mots ou des expressions à nettoyer, entrez un motif ou des motifs dans la section *expressions régulières*. Cliquez sur menu:actions[Ajouter une expression régulière], entrez un Nom pour le motif et l'expression régulière dans les champs et cliquez sur *Enregistrer*. Les informations ont été ajoutées au dictionnaire.
++
+[NOTE]
+====
+Les motifs doivent être englobés par des parenthèses rondes pour identifier un groupe de capture d'expression régulière.
+
+====
+. Dans la section ** construire le dictionnaire**, cliquez sur *construire* pour lancer la compilation du dictionnaire de tous les mots identifiés comme sensibles à partir de la base de données OnCommand Insight.
++
+Une fois terminé, une invite s'affiche pour vous informer que le dictionnaire révisé est disponible. La description de la base de données comprend une ligne indiquant le nombre de mots clés dans le dictionnaire. Vérifiez l'exactitude de vos mots-clés dans le dictionnaire. Si vous rencontrez des problèmes et souhaitez reconstruire le dictionnaire, cliquez sur *Réinitialiser* dans le bloc base de données pour supprimer tous les mots clés collectés dans la base de données OnCommand Insight du dictionnaire. Comme l'invite l'indique, aucun autre mot-clé ne sera supprimé. Revenez aux utilitaires Scrub et entrez de nouveau vos mots-clés personnalisés.
+
+. Après avoir créé un dictionnaire Scrub, vous pouvez l'utiliser pour nettoyer un journal, un fichier XML ou un autre fichier texte afin de rendre les données anonymes.
+. Pour nettoyer un fichier journal, XML ou autre fichier texte, dans la section *Scrub data*, recherchez le fichier et cliquez sur *Scrub file*.
+

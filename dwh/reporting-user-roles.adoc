@@ -1,0 +1,195 @@
+---
+permalink: dwh/reporting-user-roles.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Un rôle est attribué à chaque compte d"utilisateur avec un ensemble d"autorisations. Le nombre d"utilisateurs est limité par le nombre de licences Reporting associées à chaque rôle.' 
+---
+= Création de rapports sur les rôles d'utilisateur
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un rôle est attribué à chaque compte d'utilisateur avec un ensemble d'autorisations. Le nombre d'utilisateurs est limité par le nombre de licences Reporting associées à chaque rôle.
+
+Chaque rôle peut effectuer les actions suivantes :
+
+* *Destinataire*
++
+Affiche les rapports du portail de rapports OnCommand Insight et définit les préférences personnelles telles que celles des langues et des fuseaux horaires.
+
++
+[NOTE]
+====
+Les destinataires ne peuvent pas créer de rapports, exécuter des rapports, planifier des rapports, exporter des rapports ni effectuer des tâches administratives.
+
+====
+* *Consommateur d'entreprise*
++
+Exécute les rapports et exécute toutes les options destinataire.
+
+* *Auteur d'entreprise*
++
+Permet d'afficher des rapports planifiés, d'exécuter des rapports de manière interactive, de créer des articles, en plus d'exécuter toutes les options client professionnel.
+
+* *Pro auteur*
++
+Crée des rapports, crée des packages et des modules de données, en plus d'exécuter toutes les options Business Author.
+
+* *Administrateur*
++
+Effectue des tâches administratives de création de rapports telles que l'importation et l'exportation de définitions de rapports, la configuration de rapports, la configuration des sources de données et l'arrêt et le redémarrage des tâches de génération de rapports.
+
+
+
+Le tableau suivant indique les privilèges et le nombre maximum d'utilisateurs autorisés pour chaque rôle :
+
+|===
+
+
+| Fonction | Destinataire | Consommateur d'entreprise | Auteur commercial | Auteur professionnel | Admin 
+
+
+ a| 
+Afficher les rapports dans l'onglet contenu de l'équipe
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Exécuter des rapports
+ a| 
+Non
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Planifier des rapports
+ a| 
+Non
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Téléchargez des fichiers externes
+ a| 
+Non
+ a| 
+Non
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Créez des histoires
+ a| 
+Non
+ a| 
+Non
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Créer des rapports
+ a| 
+Non
+ a| 
+Non
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Créer des modules de données et des modules de données
+ a| 
+Non
+ a| 
+Non
+ a| 
+Non
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Effectuer des tâches administratives
+ a| 
+Non
+ a| 
+Non
+ a| 
+Non
+ a| 
+Non
+ a| 
+Oui.
+
+
+
+ a| 
+Nombre d'utilisateurs
+ a| 
+Nombre d'utilisateurs OnCommand Insight
+ a| 
+20
+ a| 
+2
+ a| 
+1
+ a| 
+1
+
+|===
+Lorsque vous ajoutez un nouvel utilisateur Data Warehouse et Reporting, si vous dépassez la limite dans un rôle, l'utilisateur est ajouté comme "supprimé," et vous devez désactiver ou supprimer un autre utilisateur avec ce rôle pour donner une nouvelle appartenance à un utilisateur.
+
+[NOTE]
+====
+Les fonctionnalités de création de rapports nécessitent une licence Insight Plan. Vous pouvez ajouter des utilisateurs Business Author et Pro Author supplémentaires en achetant le module ARAP (module de création de rapports supplémentaires). Contactez votre représentant OnCommand Insight pour obtenir de l'aide.
+
+====
+Ces rôles d'utilisateur de reporting n'affectent pas l'accès direct à la base de données. Ces rôles d'utilisateur de génération de rapports n'ont pas d'impact sur votre capacité à créer des requêtes SQL à l'aide des magasins de données.

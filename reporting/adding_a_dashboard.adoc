@@ -1,0 +1,24 @@
+---
+permalink: reporting/adding_a_dashboard.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez afficher un groupe de rapports de tableau de bord dans un onglet pour y accéder facilement. Vous pouvez ajouter l"onglet à partir des Préférences utilisateur.' 
+---
+= Ajout d'un tableau de bord à partir des Préférences utilisateur
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez afficher un groupe de rapports de tableau de bord dans un onglet pour y accéder facilement. Vous pouvez ajouter l'onglet à partir des Préférences utilisateur.
+
+.Étapes
+. Ouvrez le portail de rapports OnCommand Insight.
+. En haut à droite, cliquez sur l'icône personne pour afficher un menu déroulant.
+. Sélectionnez Mes préférences.
+. Dans la vue définir les préférences, cliquez sur l'onglet onglets du portail.
+. Dans l'onglet onglets du portail, cliquez sur le lien Ajouter.
+. Dans le dossier dossiers publics et Tableau de bord, localisez le tableau de bord que vous souhaitez sous forme d'onglet et cochez-le.
+. Cliquez sur la flèche pour la déplacer dans la zone entrées sélectionnées, puis cliquez sur OK.
+

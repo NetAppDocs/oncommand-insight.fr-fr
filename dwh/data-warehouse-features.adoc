@@ -1,0 +1,28 @@
+---
+permalink: dwh/data-warehouse-features.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"entrepôt de données OnCommand Insight est une base de données indépendante constituée de plusieurs magasins de données.' 
+---
+= Fonctions d'entrepôt de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'entrepôt de données OnCommand Insight est une base de données indépendante constituée de plusieurs magasins de données.
+
+Data Warehouse inclut les fonctionnalités suivantes :
+
+* Données de configuration et d'inventaire actuelles et historiques qui vous permettent de créer des rapports de tendances utiles pour la prévision et la planification
+* Plusieurs magasins de données historiques multidimensionnels et un magasin de données d'inventaire supplémentaire uniquement actuel
+* Base de données optimisée pour les requêtes prédéfinies ou les requêtes définies par l'utilisateur
+* Plate-forme d'intégration aux moteurs de reporting et de veille stratégique tiers, notamment :
++
+** Bases de données de gestion de la configuration
+** Systèmes de comptabilité financière
+** Systèmes de gestion des ressources
+
+
+

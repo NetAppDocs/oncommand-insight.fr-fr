@@ -1,0 +1,24 @@
+---
+permalink: config-admin/performance-policy-precedence.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La page règles de performance regroupe les règles par type d"objet et Insight évalue les règles dans l"ordre dans lequel elles apparaissent dans la liste des règles de performance de l"objet. Vous pouvez modifier l"ordre dans lequel Insight évalue les stratégies afin d"afficher les informations les plus importantes pour vous sur votre réseau.' 
+---
+= Priorité de l'évaluation de la politique de performances
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La page règles de performance regroupe les règles par type d'objet et Insight évalue les règles dans l'ordre dans lequel elles apparaissent dans la liste des règles de performance de l'objet. Vous pouvez modifier l'ordre dans lequel Insight évalue les stratégies afin d'afficher les informations les plus importantes pour vous sur votre réseau.
+
+Insight évalue toutes les règles applicables à un objet de manière séquentielle lorsque des échantillons de données de performance sont prélevés dans le système pour cet objet. Cependant, en fonction des annotations, toutes les règles ne s'appliquent pas à un groupe d'objets. Par exemple, supposons que le volume interne possède les règles suivantes :
+
+* Règle 1 (la règle par défaut fournie par Insight)
+* Règle 2 (avec une annotation de « niveau de service = Silver » avec l'option *Arrêter le traitement d'autres stratégies si une alerte est générée*
+* Politique 3 (avec une annotation de « niveau de service = Gold »)
+* Politique 4
+
+
+Pour un niveau de volume interne avec une annotation Gold, Insight évalue la règle 1, ignore la règle 2, puis évalue la règle 3 et la règle 4. Pour un niveau non annoté, Insight évalue par ordre des règles. Ainsi, Insight n'évalue que la règle 1 et la règle 4. Pour un niveau de volume interne avec une annotation Silver, Insight évalue la règle 1 et la règle 2 ; Toutefois, si une alerte est déclenchée lorsque le seuil de la règle est franchi une fois et est continuellement franchi pour la fenêtre de temps spécifiée dans la règle, Insight n'évalue plus les autres règles de la liste pendant qu'il évalue les compteurs actuels de l'objet. Lorsque Insight capture l'ensemble suivant d'exemples de performances pour l'objet, il commence à nouveau à évaluer les règles de performance pour l'objet par filtrage, puis par ordre.

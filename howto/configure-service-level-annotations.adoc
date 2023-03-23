@@ -1,0 +1,66 @@
+---
+permalink: howto/configure-service-level-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"annotation de niveau de service est utilisée pour associer les ressources à leurs niveaux de service respectifs.' 
+---
+= Configurer les annotations de niveau de service
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'annotation de niveau de service est utilisée pour associer les ressources à leurs niveaux de service respectifs.
+
+Les annotations de niveau de service sont généralement définies uniquement dans les environnements des clients qui utilisent la hiérarchisation automatique. Dans le data warehouse Insight, Tier est recommandé. Cependant, il est recommandé d'utiliser le niveau de service lorsque vous voulez détailler le coût provisionné par rapport à Coût pour le client. Lorsque les deux sont présents dans l'entrepôt de données, le niveau de service remplace le niveau.
+
+Étapes :
+
+* Choisissez l'annotation *Service Level* et cliquez sur l'icône *Edit*.
+* Cliquez sur *+Ajouter* et ajoutez le Nom et la Description de votre premier niveau de service à la liste des annotations.
+* Procédez de même pour vos autres niveaux de service.
+* Lorsque vous avez terminé, cliquez sur *Enregistrer*.
+
+
+Exemples d'annotations de niveau de service :
+
+|===
+
+
+| Nom | Description | Coût par Go 
+
+
+ a| 
+Niveau de service 1
+ a| 
+Contrôleurs FAS avec FC ou SAS, miroir local et distant et bande
+ a| 
+0.93
+
+
+
+ a| 
+Niveau de service 2
+ a| 
+Contrôleurs FAS avec FC ou SAS, miroirs locaux et distants
+ a| 
+0.85
+
+
+
+ a| 
+Niveau de service 3
+ a| 
+Contrôleurs FAS avec SATA et miroir local
+ a| 
+0.48
+
+
+
+ a| 
+...
+ a| 
+ a| 
+
+|===

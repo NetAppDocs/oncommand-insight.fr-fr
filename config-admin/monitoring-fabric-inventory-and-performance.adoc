@@ -1,0 +1,26 @@
+---
+permalink: config-admin/monitoring-fabric-inventory-and-performance.html 
+sidebar: sidebar 
+keywords:  
+summary: 'À l"aide des pages de ressources Fibre Channel de OnCommand Insight, vous pouvez surveiller les performances et l"inventaire des fabrics de votre environnement et identifier les changements susceptibles d"entraîner des problèmes.' 
+---
+= Surveillance de l'environnement Fibre Channel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+À l'aide des pages de ressources Fibre Channel de OnCommand Insight, vous pouvez surveiller les performances et l'inventaire des fabrics de votre environnement et connaître les changements susceptibles d'entraîner des problèmes.
+
+
+
+== Pages de ressources Fibre Channel
+
+Les pages de ressources d'Insight présentent des informations récapitulatives sur la ressource, sa topologie (le périphérique et ses connexions), des graphiques de performances et des tableaux des ressources associées. Vous pouvez utiliser les pages de ressources de la structure, du commutateur et du port pour surveiller votre environnement Fibre Channel. Le tableau des performances de chaque ressource de port est particulièrement utile pour le dépannage d'un problème Fibre Channel, qui indique le trafic pour le port contributeur supérieur sélectionné. De plus, vous pouvez afficher des metrics de crédit tampon à tampon et des erreurs de port dans ce graphique, Insight affichant un graphique de performances distinct pour chaque mesure.
+
+
+
+== Règles de performances pour les metrics de port
+
+Insight vous permet de créer des règles de performance afin de surveiller votre réseau et d'émettre des alertes lorsque ces seuils sont dépassés. Vous pouvez créer des stratégies de performances pour les ports en fonction des metrics de port disponibles. Lorsqu'une violation d'un seuil se produit, Insight le détecte et le signale dans la page de ressources associée en affichant un cercle rouge continu, une alerte par e-mail, si elle est configurée, et dans le tableau de bord des violations ou tout tableau de bord personnalisé signalant des violations.

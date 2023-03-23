@@ -1,0 +1,87 @@
+---
+permalink: config-admin/generic-emc-ecc-storagescope-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Le périphérique EMC ECC StorageScope possède trois types de sources de données : 5.x, 6.0 et 6.1.' 
+---
+= Source de données EMC ECC StorageScope
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le périphérique EMC ECC StorageScope possède trois types de sources de données : 5.x, 6.0 et 6.1.
+
+
+
+== Configuration
+
+[NOTE]
+====
+Ce collecteur de données n'est plus disponible depuis OnCommand Insight 7.3.11.
+
+====
+|===
+
+
+| *Champ* | *Description* 
+
+
+ a| 
+Serveur ECC
+ a| 
+Adresse IP ou nom de domaine complet du serveur ECC
+
+
+
+ a| 
+Nom d'utilisateur
+ a| 
+Nom d'utilisateur du serveur ECC
+
+
+
+ a| 
+Mot de passe
+ a| 
+Mot de passe r le serveur ECC
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| *Champ* | *Description* 
+
+
+ a| 
+Port ECC
+ a| 
+Port utilisé pour le serveur ECC
+
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+Intervalle entre les sondages d'inventaire (30 minutes par défaut)
+
+
+
+ a| 
+Protocole de connexion à la base de données
+ a| 
+Protocole utilisé pour se connecter à la base de données
+
+
+
+ a| 
+Informations sur le système de fichiers de requête
+ a| 
+Sélectionnez cette option pour récupérer les détails des alias WWN et des systèmes de fichiers.
+
+|===

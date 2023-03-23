@@ -1,0 +1,87 @@
+---
+permalink: config-admin/emc-recoverpoint-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La source de données EMC RecoverPoint collecte les informations d"inventaire à partir du stockage EMC RecoverPoint. Pour la configuration, la source de données requiert l"adresse IP des processeurs de stockage ainsi qu"un nom d"utilisateur et un mot de passe en lecture seule.' 
+---
+= Source de données EMC RecoverPoint
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La source de données EMC RecoverPoint collecte les informations d'inventaire à partir du stockage EMC RecoverPoint. Pour la configuration, la source de données requiert l'adresse IP des processeurs de stockage ainsi qu'un nom d'utilisateur et un mot de passe _read-only_.
+
+La source de données EMC RecoverPoint rassemble les relations de réplication volume à volume coordonnées par RecoverPoint sur les autres baies de stockage. OnCommand Insight affiche une baie de stockage pour chaque cluster RecoverPoint et collecte les données d'inventaire pour les nœuds et les ports de stockage sur ce cluster. Aucune donnée de volume ou de pool de stockage n'est collectée.
+
+
+
+== De formation
+
+* Adresse IP ou nom de domaine complet du processeur de stockage
+* Nom d'utilisateur et mot de passe en lecture seule
+* Accès à l'API REST via le port 443
+* Accès SSH via PuTTY
+
+
+
+
+== Configuration
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Adresse de RecoverPoint
+ a| 
+Adresse IP ou nom de domaine complet du cluster RecoverPoint
+
+
+
+ a| 
+Nom d'utilisateur
+ a| 
+Nom d'utilisateur du cluster RecoverPoint
+
+
+
+ a| 
+Mot de passe
+ a| 
+Mot de passe du cluster RecoverPoint
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Port TCP
+ a| 
+Port TCP utilisé pour se connecter au cluster RecoverPoint
+
+
+
+ a| 
+Intervalle d'interrogation des stocks (minutes)
+ a| 
+Intervalle entre les sondages d'inventaire (20 minutes par défaut)
+
+
+
+ a| 
+Clusters exclus
+ a| 
+Liste séparée par des virgules d'ID ou de noms de cluster à exclure lors de l'interrogation
+
+|===

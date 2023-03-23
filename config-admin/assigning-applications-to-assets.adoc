@@ -1,0 +1,40 @@
+---
+permalink: config-admin/assigning-applications-to-assets.html 
+sidebar: sidebar 
+keywords: bulk edit 
+summary: Après avoir défini des applications avec ou sans entités métier, vous pouvez les associer à des ressources. 
+---
+= Affectation d'applications aux ressources
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Après avoir défini des applications avec ou sans entités métier, vous pouvez les associer à des ressources.
+
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur Web de OnCommand Insight.
+. Recherchez la ressource (hôte, machine virtuelle, volume ou volume interne) à laquelle vous souhaitez appliquer l'application en effectuant l'une des opérations suivantes :
++
+** Cliquez sur *Tableau de bord*, sélectionnez *Tableau de bord des actifs*, puis cliquez sur la ressource.
+** Cliquez sur image:../media/icon-sanscreen-magnifying-glass-gif.gif[""] Dans la barre d'outils pour afficher la zone *Rechercher des actifs*, tapez le nom de la ressource, puis sélectionnez la ressource dans la liste.
+
+
+. Dans la section *données utilisateur* de la page de ressource, placez votre curseur sur le nom de l'application actuellement affectée à l'actif (si aucune application n'est affectée, *aucune* s'affiche à la place), puis cliquez sur image:../media/pencil-icon-landing-page-be.gif[""] (Modifier l'application).
++
+La liste des applications disponibles pour l'actif sélectionné s'affiche. Les applications actuellement associées à l'actif sont précédées d'une coche.
+
+. Vous pouvez taper dans la zone de recherche pour filtrer les noms d'applications ou faire défiler la liste vers le bas.
+. Sélectionnez les applications que vous souhaitez associer à la ressource.
++
+Vous pouvez attribuer plusieurs applications à l'hôte, à la machine virtuelle et au volume interne ; cependant, vous ne pouvez affecter qu'une seule application au volume.
+
+. Cliquez sur image:../media/check-box-ok.gif[""] pour affecter l'application ou les applications sélectionnées à la ressource.
++
+Les noms des applications apparaissent dans la section données utilisateur ; si l'application est associée à une entité métier, le nom de l'entité métier apparaît également dans cette section.
+
+

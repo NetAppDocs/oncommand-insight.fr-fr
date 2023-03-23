@@ -1,0 +1,60 @@
+---
+permalink: config-admin/moving-mysql-data-using-the-command-line.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez utiliser migrer le répertoire de données MySQL vers un autre répertoire. Vous pouvez conserver le répertoire de données actuel. Vous pouvez utiliser l"option migrer du menu Dépannage ou la ligne de commande. Cette procédure décrit comment utiliser la ligne de commande.' 
+---
+= Déplacement des données MySQL à l'aide de la ligne de commande
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser migrer le répertoire de données MySQL vers un autre répertoire. Vous pouvez conserver le répertoire de données actuel. Vous pouvez utiliser l'option migrer du menu Dépannage ou la ligne de commande. Cette procédure décrit comment utiliser la ligne de commande.
+
+
+
+== Description de la tâche
+
+Si vous conservez le répertoire de données actuel, il sera conservé en tant que sauvegarde et renommé.
+
+Vous pouvez utiliser l'utilitaire de migration des données MySQL ou un `java -jar mysqldatamigrator.jar` Dans le chemin OnCommand Insight de `\bin\mysqldatamigrator` lorsque les paramètres suivants doivent être utilisés :
+
+* Paramètres obligatoires
++
+** *-path*
++
+Le nouveau chemin d'accès aux données vers lequel le dossier de données sera copié.
+
+
+
+* Paramètres facultatifs
++
+** *-myCnf <my .cnf file>*
++
+Chemin du fichier .cnf. La valeur par défaut est `<install path>\mysql\my.cnf`. Utilisez cet indicateur uniquement si un MySQL non-par défaut est utilisé.
+
+** *-doBackup*
++
+Si cet indicateur est défini, le dossier de données actuel sera renommé mais pas supprimé.
+
+
+
+
+
+
+
+== Étapes
+
+. Accédez à l'outil de ligne de commande ici : `<installation path>` \bin\mysqldamagigrator\mysqldamamigrator.jar`
+
+
+
+
+== Exemple d'utilisation
+
+[listing]
+----
+java -jar mysqldatamigrator.jar -path "C:\<new path>" -doBackup
+----

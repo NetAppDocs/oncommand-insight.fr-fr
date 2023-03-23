@@ -1,0 +1,37 @@
+---
+permalink: config-admin/adding-a-missing-disk-model.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Si l"acquisition échoue en raison d"un modèle de disque inconnu, vous pouvez ajouter le modèle de disque manquant au fichier new_disk_models.txt et exécuter à nouveau l"acquisition.' 
+---
+= Ajout d'un modèle de disque manquant
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si l'acquisition échoue en raison d'un modèle de disque inconnu, vous pouvez ajouter le modèle de disque manquant au `new_disk_models.txt` classez et relancez l'acquisition.
+
+
+
+== Description de la tâche
+
+Dans le cadre d'une interrogation d'un périphérique de stockage par acquisition OnCommand Insight, les modèles de disque sur le périphérique de stockage sont lus. Si un fournisseur a ajouté de nouveaux modèles de disque à sa baie qu'Insight ne connaît pas, ou s'il y a une incompatibilité entre le numéro de modèle qu'Insight recherche et celui renvoyé par le périphérique de stockage, l'acquisition de cette source de données échouera avec une erreur. Pour éviter ces erreurs, il est nécessaire de mettre à jour les informations de modèle de disque connues d'Insight. De nouveaux modèles de disques sont ajoutés à Insight avec des mises à jour, des correctifs et des versions de maintenance. Cependant, vous pouvez décider de mettre à jour ces informations manuellement au lieu d'attendre un correctif ou une mise à jour.
+
+Étant donné que OnCommand Insight lit le fichier de modèle de disque toutes les cinq minutes, toutes les nouvelles informations de modèle de données que vous entrez sont automatiquement mises à jour. Vous n'avez pas besoin de redémarrer le serveur pour que les modifications prennent effet, mais vous pouvez choisir de redémarrer le serveur et toutes les unités d'acquisition à distance (Raus) pour que les modifications prennent effet avant la prochaine mise à jour.
+
+Les mises à jour des modèles de disque sont ajoutées au `new_disk_models.txt` fichier situé dans le``<SANScreenInstallDir>\wildfly\standalone\deployments\datasources.war`` répertoire. Comprenez les informations nécessaires pour décrire votre nouveau modèle de disque avant de mettre à jour le `new_disk_models.txt` fichier. Des informations inexactes dans le fichier produisent des données système incorrectes et peuvent entraîner l'échec de l'acquisition.
+
+Suivez ces instructions pour mettre à jour manuellement les modèles de disques Insight :
+
+
+
+== Étapes
+
+. Recherchez les informations appropriées pour votre modèle de disque.
+. A l'aide d'un éditeur de texte, ouvrez le `new_disk_models.txt` fichier.
+. Ajoutez les informations requises pour la nouvelle source de données.
+. Enregistrez le fichier dans `<SANScreenInstallDir>\wildfly\standalone\deployments\datasources.war` sur votre serveur.
+. Sauvegardez le `new_disk_models.txt` classez-les dans un endroit sûr. Lors de toute mise à niveau OnCommand Insight suivante, ce fichier sera écrasé. Si les informations relatives au modèle de disque ne figurent pas dans le fichier mis à niveau, vous devrez les saisir à nouveau.
+

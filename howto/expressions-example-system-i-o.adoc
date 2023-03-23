@@ -1,0 +1,57 @@
+---
+permalink: howto/expressions-example-system-i-o.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les expressions vous donnent la liberté de tracer des données qui peuvent être calculées à partir d"autres mesures.' 
+---
+= Expressions exemple : E/S « système »
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les expressions vous donnent la liberté de tracer des données qui peuvent être calculées à partir d'autres mesures.
+
+
+
+== Description de la tâche
+
+Exemple 2 : OnCommand Insight acquiert de nombreux metrics à partir de sources de données. Notamment les opérations de lecture, d'écriture et d'IOPS totales. Toutefois, le nombre total d'IOPS signalées par l'acquisition inclut parfois les IOPS « système », qui sont les opérations d'E/S qui ne font pas partie directe de la lecture ou de l'écriture des données. Ces E/S du système peuvent également être considérées comme des E/S « surcharges » qui sont nécessaires au bon fonctionnement du système, mais pas directement liées aux opérations de données.
+
+Pour afficher ces E/S système, vous pouvez limiter le nombre d'IOPS de lecture et d'écriture du total indiqué lors de l'acquisition. La formule peut ressembler à ceci :
+
+* IOPS du système = IOPS totales - (IOPS de lecture + IOPS d'écriture)
+
+
+Ces données peuvent ensuite être affichées dans un graphique en courbes sur votre tableau de bord. Pour ce faire, procédez comme suit :
+
+
+
+== Étapes
+
+. Créez un nouveau tableau de bord ou ouvrez un tableau de bord existant en *mode d'édition*.
+. Ajoutez un widget au tableau de bord. Choisissez *graphique de lignes*.
++
+Le widget s'ouvre en mode édition. Par défaut, une requête s'affiche avec *IOPS - Total* pour les actifs *Storage*. Si vous le souhaitez, sélectionnez un autre type d'actif.
+
+. Cliquez sur le bouton pour créer une copie de la requête.
++
+Une copie de la requête est ajoutée sous l'original.
+
+. Dans la deuxième requête, cliquez sur le bouton *convertir en expression*.
++
+La requête en cours est convertie en mode expression. Cliquez sur *revenir à la requête* si vous souhaitez revenir au mode requête à tout moment. N'oubliez pas que le passage d'un mode à l'autre réinitialise les champs à leur valeur par défaut.
+
++
+Pour l'instant, restez en mode *expression*.
+
+. La métrique *IOPS - Total* se trouve maintenant dans le champ de variable alphabétique « a ». Cliquez sur *IOPS - Total* et remplacez-le par *IOPS - lecture*. .
+. Dans le champ de variable « b », cliquez sur *Select* et choisissez *IOPS - Write*.
+. Dans le champ *expression*, vous utilisez les lettres correspondant à chaque variable pour créer votre expression. Nous écrivons notre expression simplement comme : `a + b`. Dans la section *Affichage*, choisissez ** diagramme de zone** pour cette expression.
+. Le champ *Label* identifie l’expression. Remplacez le libellé par « IOPS système », ou quelque chose de tout aussi significatif pour vous.
++
+Le graphique affiche le nombre total d'IOPS sous forme de graphique linéaire et un graphique de superficie illustrant la combinaison d'opérations d'E/S par seconde en lecture et en écriture ci-dessous. La différence entre les deux montre les IOPS qui ne sont pas directement liées aux opérations de lecture ou d'écriture de données.
+
+. Cliquez sur *Enregistrer* pour enregistrer le graphique dans votre tableau de bord.
+

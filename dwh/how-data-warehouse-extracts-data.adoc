@@ -1,0 +1,34 @@
+---
+permalink: dwh/how-data-warehouse-extracts-data.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Le processus extraction, transformation et chargement \(ETL\) récupère les données de plusieurs bases de données OnCommand Insight, les transforme et les enregistre dans les magasins de données.' 
+---
+= Comment Data Warehouse extrait les données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le processus ETL (extraction, transformation et chargement) récupère les données de plusieurs bases de données OnCommand Insight, les transforme et les enregistre dans les magasins de données.
+
+Les connecteurs OnCommand Insight invoquent une série de travaux par lots pour extraire des données de plusieurs bases de données MySQL OnCommand Insight et publier les données dans divers magasins de données, comme indiqué dans le diagramme suivant.
+
+image::../media/oci-dwh-diagram-data-marts-gif.gif[Diagramme de magasins de données]
+
+Le processus ETL comprend les processus individuels suivants :
+
+* *Extrait*
++
+Ce processus extrait les données de plusieurs bases de données OnCommand Insight, les transforme et les enregistre dans le magasin de données. Le processus est exécuté simultanément pour chaque instance OnCommand Insight. Pour garantir que le nettoyage et la déduplication des données sont effectués, il n'est pas possible de diviser le processus ETL en plusieurs opérations ETL planifiées.
+
+* *Transformation*
++
+Ce processus applique des règles ou des fonctions de logique applicative pour extraire les données de la base de données OnCommand Insight.
+
+* *Charge*
++
+Ce processus charge les données transformées en data marts publics.
+
+

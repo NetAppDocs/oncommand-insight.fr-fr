@@ -1,0 +1,54 @@
+---
+permalink: dwh/setting-email-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: Data Warehouse peut envoyer un e-mail à une adresse e-mail spécifique lorsque les tâches de Data Warehouse ne se sont pas terminées avec succès. 
+---
+= Configuration des notifications par e-mail
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Data Warehouse peut envoyer un e-mail à une adresse e-mail spécifique lorsque les tâches de Data Warehouse ne se sont pas terminées avec succès.
+
+
+
+== Étapes
+
+. Connectez-vous au portail Data Warehouse à l'adresse `+https://hostname/dwh+`, où `hostname` Est le nom du système sur lequel l'entrepôt de données OnCommand Insight est installé.
+. Dans le volet de navigation de gauche, cliquez sur *notification par e-mail*.
+. Saisissez les informations suivantes :
++
+** Adresse du serveur SMTP
++
+Spécifie le serveur qui agit en tant que serveur SMTP de votre entreprise, identifié à l'aide d'un nom d'hôte ou d'une adresse IP au format nnn.nnn.nnn.nnn. Si vous spécifiez un nom d'hôte, assurez-vous que DNS peut le résoudre.
+
+** Nom d'utilisateur et mot de passe du serveur SMTP
++
+Spécifie le nom d'utilisateur pour accéder au serveur de messagerie et est requis uniquement si votre serveur SMTP requiert qu'un utilisateur se connecte au serveur. Il s'agit du même nom d'utilisateur que celui que vous utilisez pour vous connecter à l'application et accéder à votre messagerie.
+
+** Notifications activées
++
+*Oui* active les notifications; *non* désactive les notifications.
+
+** E-mail de l'expéditeur
++
+Spécifie l'adresse e-mail utilisée pour envoyer les notifications. Cette adresse e-mail doit être valide dans votre entreprise.
+
+** E-mail du destinataire
++
+Spécifie l'adresse e-mail ou les adresses de la ou des personnes qui recevront toujours l'e-mail. Séparez les adresses par des virgules.
+
+** Objet de l'e-mail
++
+Spécifie l'objet de la notification.
+
+** Signature de l'e-mail
++
+Spécifie les informations qui s'affichent au bas de l'e-mail, par exemple le nom du service.
+
+
+
+

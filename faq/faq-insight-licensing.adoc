@@ -1,0 +1,59 @@
+---
+permalink: faq/faq-insight-licensing.html 
+sidebar: sidebar 
+keywords:  
+summary: Réponses aux questions les plus courantes sur les licences OnCommand Insight. 
+---
+= Licences OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Réponses aux questions les plus courantes sur les licences OnCommand Insight.
+
+
+
+== Présentation des licences OCI
+
+Les licences OCI sont disponibles en fonction de la capacité. Les clients doivent acheter une licence pour chaque module qu'ils souhaitent activer :
+
+*Discover* est une condition préalable à assure, Perform et Plan et n'est pas offert seul. La découverte est soumise à une licence en To de capacité gérée.
+
+*Assure* est concédé sous licence par To de capacité gérée (en tant qu'unité de facturation unique pour toute infrastructure de stockage : FC, NAS, iSCSI, FCoE).
+
+*Perform* est sous licence par To de capacité gérée.
+
+*Plan* est autorisé par TB de capacité gérée.
+
+La « capacité de gestion » est définie comme la capacité brute des disques physiques, des disques virtuels et des bandes avant le formatage. Cela s'applique à l'ensemble du stockage découvert par Insight, à la fois sur site et dans le cloud.
+
+La plupart des sources de données s'intéressent à la capacité brute de la base 2 des disques. Le rôle du disque n'est pas pris en compte, par exemple un disque de secours, un disque non attribué ou un disque RAID.
+
+Deux types de licences Insight sont disponibles : *perpétuel* et *abonnement*.
+
+*Les licences perpétuelles* vous permettent d'utiliser indéfiniment la version/version spécifique du logiciel obtenue sous réserve des conditions de licence applicables. Si vous avez acheté un programme de support logiciel (PSL), NetApp fournit un accès aux mises à jour logicielles disponibles dans le commerce via le site de support NetApp lorsque les mises à jour sont disponibles conformément aux conditions des services de support. NetApp vous donne également accès à des correctifs spéciaux tels que définis par le centre de support technique NetApp.
+
+*L'abonnement* est une licence à durée déterminée du logiciel qui accorde le droit de :
+
+* Utilisez le logiciel sur site pendant une période limitée uniquement (généralement 12 mois), sous réserve des conditions de licence applicables
+* Bénéficier du support logiciel (précédemment appelé SSP) pendant la durée de la période de validité
+* En effet, le Titulaire de Licence peut utiliser la version, la version ou la mise à jour la plus récente disponible dans le commerce, dans le cas où elles seraient mises à disposition et recevraient une assistance pour le logiciel
+
+
+À la fin de chaque période fixe (le plus souvent 12 mois), la licence peut être renouvelée pour une durée fixe supplémentaire (le plus souvent 12 mois). Si la licence n'est pas renouvelée, le Titulaire de Licence n'aura plus les droits d'utilisation du logiciel, ne pourra plus bénéficier des avantages de SSP et le Titulaire de Licence devra détruire toutes les copies du logiciel.
+
+
+
+== Informations complémentaires sur les modules de licence OCI
+
+OCI dispose de 4 modules de licence principaux pour répondre aux besoins des environnements de data Center. Ces modules sont *Discover, Perform, assure et Plan*. La découverte est le module de base et elle est requise pour tout autre achat de modules.
+
+Le module *Discover* permet à OCI de localiser les ressources dans le centre de données et de mapper dynamiquement les chemins de service du périphérique. Vous y trouverez des informations telles que la capacité, les informations sur le fournisseur, le modèle, le micrologiciel et les numéros de série.
+
+*Perform* est le module de collecte des performances d'OCI. Capture des informations relatives aux IOPS, au débit, à la latence, au processeur et à la mémoire, et analyse d'autres éléments.
+
+*Assure* est positionné vers les environnements Fibre Channel et les technologies d'efficacité. Il permet d'identifier et de gérer les risques dans les environnements Fibre Channel et iSCSI. Assure fournit également des informations sur l'identification, le mappage et l'alerte des entrées de chemin de service de masquage, de mappage et de segmentation, ainsi que des règles de bonnes pratiques d'efficacité telles que la redondance de structure, le sauts de commutateur, les ratios de fan-out et le provisionnement fin.
+
+*Plan* permet d'identifier et de prévoir les tendances dans le calcul, la structure et les différents types de stockage (cdot, 7-mode, tiers) dans des environnements hybrides sur site et de data centers dispersés à travers le monde. Elle permet des durées de conservation plus longues. L'entrepôt de données est constitué d'une intelligence intégrée qui permet de créer des rapports et évite le double comptage des metrics dans les environnements de stockage partagé d'entreprise. Il a la capacité de générer et de programmer un complément de rapports produits « prêts à l'emploi », ou de créer vos propres rapports à l'aide de ses outils de création de rapports intégrés « glisser-déposer ».

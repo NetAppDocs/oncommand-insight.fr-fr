@@ -1,0 +1,92 @@
+---
+permalink: howto/creating-performance-policies-and-thresholds-for-ports.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez créer des règles de performance avec des seuils pour les metrics associés à un port. Par défaut, les règles de performances s"appliquent à tous les périphériques du type spécifié lors de leur création. Vous pouvez créer une annotation qui n"inclut qu"un périphérique spécifique ou un ensemble de périphériques dans la règle de performance. Pour plus de simplicité, une annotation n"est pas utilisée dans cette procédure.' 
+---
+= Création de règles et de seuils de performances pour les ports
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez créer des règles de performance avec des seuils pour les metrics associés à un port. Par défaut, les règles de performances s'appliquent à tous les périphériques du type spécifié lors de leur création. Vous pouvez créer une annotation qui n'inclut qu'un périphérique spécifique ou un ensemble de périphériques dans la règle de performance. Pour plus de simplicité, une annotation n'est pas utilisée dans cette procédure.
+
+
+
+== Avant de commencer
+
+Si vous souhaitez utiliser une annotation avec cette règle de performance, vous devez la créer avant de créer la règle de performance.
+
+
+
+== Étapes
+
+. Dans la barre d'outils Insight, cliquez sur *gérer* > *stratégies de performances*
++
+Les stratégies existantes s'affichent. Si une stratégie existe pour les ports de commutateur, vous pouvez la modifier en ajoutant les nouvelles stratégies et seuils.
+
+. Modifiez une stratégie de port existante ou créez une nouvelle stratégie de port
++
+** Cliquez sur l'icône en forme de crayon à l'extrême droite de la stratégie existante. Ajouter les seuils décrits aux étapes «d» et «e».
+** Cliquez sur *+Ajouter* pour ajouter une nouvelle stratégie
++
+... Ajoutez un « Nom de la politique » : dispositif à drain lent
+... Sélectionnez le port comme type d'objet
+... Entrez la première occurrence pour « appliquer après la fenêtre » de
+... Entrez le seuil : crédit BB zéro - Rx > 1,000,000
+... Entrez le seuil : crédit BB zéro - Tx > 1,000,000
+... Cliquez sur `gérer d'autres règles de traitement si une alerte est générée`.
+... Cliquez sur « Enregistrer ».
+
+
+
+
++
+La stratégie que vous créez contrôle les seuils que vous avez définis sur une période de 24 heures. Si le seuil est dépassé, une violation est signalée.
+
+. Cliquez sur *tableaux de bord* > *Tableau de bord des violations*
++
+Le système affiche toutes les violations qui se sont produites sur le système. Rechercher ou trier les violations pour voir les violations "dispositif de vidange bas". Le tableau de bord des violations affiche tous les ports qui ont rencontré des erreurs BB Credit 0 dépassant les seuils définis dans la stratégie de performances. Chaque port de commutateur identifié dans le tableau de bord des violations est un lien mis en surbrillance vers la page d'accueil du port.
+
+. Cliquez sur un lien de port en surbrillance pour afficher la page d'accueil du port.
++
+La page d'accueil du port s'affiche et contient des informations utiles pour le dépannage de BB Credit 0 :
+
++
+** Périphériques auxquels le port est connecté
+** Identification du port signalant la violation, qui est un port de commutateur Fibre Channel.
+** La vitesse du port
+** Nom du nœud et du port associésimage:../media/port-landing-page.gif[""]
+
+
+. Faites défiler vers le bas pour afficher les mesures de port. Cliquez sur *Sélectionner les mesures à afficher* > *BB crédit zéro* pour afficher le graphique de crédit BB.
++
+image::../media/expert-port-metrics.gif[metrics de port expert]
+
+. Cliquez sur *corrélation supérieure*
++
+L'analyse des ressources corrélées supérieures montre le nœud de contrôleur connecté que le port assure en tant que ressource la plus corrélée aux performances. Cette étape compare les metrics IOPS de l'activité des ports à l'activité globale des nœuds. Les affichages affichent les mesures Tx et Rx BB Credit Zero et les IOPS du nœud du contrôleur. L'écran affiche les éléments suivants :
+
++
+** Les E/S du contrôleur sont fortement corrélées au trafic des ports
+** La règle de performances n'est pas respectée lorsque le port transmet des E/S au serveur.
+** Étant donné que la violation des performances de nos ports se produit parallèlement à une charge d'IOPS élevée sur le contrôleur de stockage, il est probable que la violation soit due à la charge de travail sur le nœud de stockage.image:../media/port-node-compare.gif[""]
+
+
+. Retournez à la page d'accueil des ports et accédez à la page d'accueil du nœud de contrôleur de stockage pour analyser les mesures de charge de travail.
++
+Le nœud présente une violation de l'utilisation et les indicateurs indiquent un niveau élevé de « lectures du cache remplacées », en corrélation avec les États de crédit zéro tampon à tampon.
+
++
+image::../media/node-landing-page.gif[page d'accueil du nœud]
+
+. Sur la page d'accueil Node, vous pouvez comparer les zéros de crédit BB en sélectionnant le port dans la liste des ressources corrélées et en sélectionnant les données d'utilisation, y compris les données d'utilisation du cache, pour notre nœud dans le menu metrics.
++
+image::../media/node-port-comparison.gif[comparaison des ports de nœud]
+
++
+Ces données montrent clairement que le taux de réussite du cache est inversement corrélé à nos autres mesures. Au lieu de pouvoir répondre à la charge du serveur à partir du cache, le nœud de stockage subit des lectures de cache élevées remplacées. Il est probable que la récupération de la plupart des données à partir du disque plutôt que du cache entraîne un retard dans la transmission des données au serveur par le port. Le problème de performance semble être à l'origine d'une modification du comportement d'E/S générée par la charge de travail, et il est à l'origine du cache de nœud et de sa configuration. Le problème peut être résolu en augmentant la taille du cache du nœud ou en modifiant le comportement de l'algorithme de mise en cache.
+
+

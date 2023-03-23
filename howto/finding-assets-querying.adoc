@@ -1,0 +1,14 @@
+---
+permalink: howto/finding-assets-querying.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez facilement trouver et afficher des ressources dans votre environnement à l"aide de requêtes puissantes.' 
+---
+= Recherche de ressources : interrogation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez facilement trouver et afficher des ressources dans votre environnement à l'aide de requêtes puissantes.

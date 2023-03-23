@@ -1,0 +1,144 @@
+---
+permalink: dwh/configuring-reporting-ldap.html 
+sidebar: sidebar 
+keywords:  
+summary: 'À partir du portail Data Warehouse, l"administrateur peut configurer l"utilisation LDAP pour Data Warehouse et Reporting.' 
+---
+= Configuration de LDAP pour la création de rapports
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+À partir du portail Data Warehouse, l'administrateur peut configurer l'utilisation LDAP pour Data Warehouse et Reporting.
+
+
+
+== Avant de commencer
+
+Vous devez vous connecter à Insight en tant qu'administrateur pour effectuer cette tâche.
+
+Pour tous les utilisateurs de Secure Active Directory (LDAPS, par exemple), vous devez utiliser le nom du serveur AD tel qu'il est défini dans le certificat. Vous ne pouvez pas utiliser l'adresse IP pour la connexion AD sécurisée.
+
+
+
+== Étapes
+
+. Connectez-vous au portail Data Warehouse à l'adresse `+https://hostname/dwh+`, où `hostname` Est le nom du système sur lequel l'entrepôt de données OnCommand Insight est installé.
+. Dans le volet de navigation de gauche, cliquez sur *gestion des utilisateurs*.
+. Cliquez sur *Configuration LDAP*.
+. Sélectionnez *Activer LDAP* pour démarrer le processus d'authentification et d'autorisation des utilisateurs LDAP.
+. Apportez les modifications nécessaires pour configurer LDAP.
++
+La majorité des champs contiennent des valeurs par défaut. Les paramètres par défaut sont valides pour Active Directory.
+
++
+** *Nom principal utilisateur attribut*
++
+Attribut qui identifie chaque utilisateur dans le serveur LDAP. La valeur par défaut est `userPrincipalName`, qui est globalement unique. OnCommand Insight tente de faire correspondre le contenu de cet attribut avec le nom d'utilisateur fourni ci-dessus.
+
+** *Attribut de rôle*
++
+Attribut LDAP qui identifie l'adéquation de l'utilisateur au sein du groupe spécifié. La valeur par défaut est `memberOf`.
+
+** *Attribut Mail*
++
+Attribut LDAP identifiant l'adresse e-mail de l'utilisateur. La valeur par défaut est `mail`. Ceci est utile si vous souhaitez vous abonner aux rapports disponibles auprès de OnCommand Insight. Insight récupère l'adresse e-mail de l'utilisateur la première fois que chaque utilisateur se connecte et ne la recherche pas après cela.
+
++
+[NOTE]
+====
+Si l'adresse e-mail de l'utilisateur change sur le serveur LDAP, veillez à la mettre à jour dans Insight.
+
+====
+** *Attribut de nom unique*
++
+Attribut LDAP identifiant le nom distinctif de l'utilisateur. la valeur par défaut est `distinguishedName`.
+
+** *Référence*
++
+Indique s'il faut suivre le chemin vers d'autres domaines s'il y a plusieurs domaines dans l'entreprise. Vous devez toujours utiliser la valeur par défaut `follow` réglage.
+
+** *Temporisation*
++
+Délai d'attente d'une réponse du serveur LDAP avant expiration, en millisecondes. la valeur par défaut est 2,000, ce qui est adéquat dans tous les cas et ne doit pas être modifié.
+
+** *Serveurs LDAP*
++
+Il s'agit de l'adresse IP ou du nom DNS permettant d'identifier le serveur LDAP. Pour identifier un port spécifique, où `ldap-server-address` Est le nom du serveur LDAP, vous pouvez utiliser le format suivant :
+
++
+[listing]
+----
+ldap://ldap-server-address:port
+----
++
+Pour utiliser le port par défaut, vous pouvez utiliser le format suivant :
+
++
+[listing]
+----
+ldap://ldap-server-address
+----
++
+[NOTE]
+====
+ When entering multiple LDAP servers in this field, separate entries with a comma, and ensure that the correct port number is used in each entry.
++ pour importer les certificats LDAP, cliquez sur *Importer les certificats* et importez ou localisez automatiquement les fichiers de certificat.
+
+====
+** *Domaine*
++
+Nœud LDAP sur lequel OnCommand Insight doit commencer à rechercher l'utilisateur LDAP. Il s'agit généralement du domaine de premier niveau de l'organisation. Par exemple :
+
++
+[listing]
+----
+DC=<enterprise>,DC=com
+----
+** *Groupe d'administrateurs de serveurs Insight*
++
+Groupe LDAP pour les utilisateurs disposant de privilèges d'administrateur Insight Server. La valeur par défaut est `insight.server.admins`.
+
+** *Groupe d'administrateurs Insight*
++
+Groupe LDAP pour les utilisateurs disposant de privilèges d'administrateur Insight. La valeur par défaut est `insight.admins`.
+
+** *Groupe d'utilisateurs Insight*
++
+Groupe LDAP pour les utilisateurs disposant de privilèges Insight User. La valeur par défaut est `insight.users`.
+
+** *Groupe d'invités Insight*
++
+Groupe LDAP pour les utilisateurs disposant de privilèges Insight Guest. La valeur par défaut est `insight.guests`.
+
+** *Groupe d'administrateurs de rapports*
++
+Groupe LDAP pour les utilisateurs disposant de privilèges d'administrateur Insight Reporting. La valeur par défaut est `insight.report.admins`.
+
+** *Groupe d'auteurs professionnels de rapports*
++
+Groupe LDAP pour les utilisateurs disposant des privilèges d'auteur Insight Reporting pro. La valeur par défaut est `insight.report.proauthors`.
+
+** *Groupe d'auteurs d'affaires de rapports*
++
+Groupe LDAP pour les utilisateurs disposant de privilèges d'auteur métier Insight Reporting. La valeur par défaut est `insight.report.business.authors`.
+
+** *Groupe de consommateurs d'entreprises déclarantes*
++
+Groupe LDAP pour les utilisateurs disposant de privilèges d'utilisateurs professionnels Insight Reporting. La valeur par défaut est `insight.report.business.consumers`.
+
+** *Groupe de destinataires des rapports*
++
+Groupe LDAP pour les utilisateurs disposant de privilèges de destinataire Insight Reporting. La valeur par défaut est `insight.report.recipients`.
+
+
+
+. Entrez des valeurs dans les champs *Directory lookup user* et *Directory lookup user password* si vous avez effectué des modifications.
++
+Si vous n'entrez pas les valeurs révisées dans ces champs, vos modifications ne sont pas enregistrées.
+
+. Saisissez à nouveau le mot de passe utilisateur de recherche de répertoire dans le champ *Confirmez le mot de passe utilisateur de recherche de répertoire*, puis cliquez sur *Valider le mot de passe* pour valider le mot de passe sur le serveur.
+. Cliquez sur *mettre à jour* pour enregistrer les modifications. Cliquez sur *Annuler* pour supprimer les modifications.
+

@@ -1,0 +1,107 @@
+---
+permalink: config-admin/microsoft-azure-compute-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insights utilise le collecteur de données de calcul Azure pour acquérir des données d"inventaire et de performance à partir d"instances de calcul Azure.' 
+---
+= Source de données de calcul Microsoft Azure
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insights utilise le collecteur de données de calcul Azure pour acquérir des données d'inventaire et de performance à partir d'instances de calcul Azure.
+
+
+
+== De formation
+
+Vous avez besoin des informations suivantes pour configurer ce collecteur de données :
+
+* Port requis : 443 HTTPS
+* IP REST Azure Management (management.azure.com)
+* ID de l'application principale du service Azure (client) (compte utilisateur)
+* Clé d'authentification principale du service Azure (mot de passe utilisateur)
+
+
+Vous devez configurer un compte Azure pour Insight Discovery. Une fois le compte correctement configuré et que vous enregistrez l'application dans Azure, vous disposez des identifiants requis pour découvrir l'instance Azure avec Insight. Le lien suivant explique comment configurer le compte pour Discovery:https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal
+
+
+
+== Configuration
+
+Entrez les données dans les champs de la source de données en fonction du tableau ci-dessous :
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Identifiant d'application principale (client) du service Azure (rôle du lecteur requis)
+ a| 
+ID de connexion à Azure. Nécessite un accès au rôle Reader.
+
+
+
+ a| 
+ID locataire Azure
+ a| 
+ID locataire Microsoft
+
+
+
+ a| 
+Clé d'authentification principale du service Azure
+ a| 
+Clé d'authentification de connexion
+
+
+
+ a| 
+J'ai bien compris que Microsoft me facture pour les demandes d'API
+ a| 
+Vérifiez que vous avez bien compris que Microsoft vous facture des demandes d'API formulées par l'interrogation Insight.
+
+|===
+
+
+== Configuration avancée
+
+Entrez les données dans les champs de la source de données en fonction du tableau ci-dessous :
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+La valeur par défaut est 60
+
+
+
+ a| 
+Choisissez exclure ou inclure pour appliquer le filtrage des VM par balises
+ a| 
+Indiquez s'il faut inclure ou exclure des VM par des étiquettes lors de la collecte de données. Si ''include`' est sélectionné, le champ clé de balise ne peut pas être vide.
+
+
+
+ a| 
+Clés de balise et valeurs sur lesquelles filtrer les machines virtuelles
+ a| 
+Cliquez sur *+ Filter Tag* pour choisir les VM (et les disques associés) à inclure/exclure en filtrant les clés et les valeurs qui correspondent aux clés et aux valeurs des balises de la VM. La clé d'étiquette est requise, la valeur d'étiquette est facultative. Lorsque la valeur de balise est vide, la machine virtuelle est filtrée tant qu'elle correspond à la clé de balise.
+
+
+
+ a| 
+Intervalle d'interrogation des performances (s)|
+ a| 
+La valeur par défaut est 300
+
+|===

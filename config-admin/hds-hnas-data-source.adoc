@@ -1,0 +1,145 @@
+---
+permalink: config-admin/hds-hnas-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La source de données HDS NAS \(HNAS\) est une source de données d"inventaire et de configuration permettant de prendre en charge la détection des clusters HDS NAS. Insight prend en charge la détection des partages NFS et CIFS, des systèmes de fichiers \(Insight Internal volumes\) et des étendues \(Insight Storage pools\).' 
+---
+= Source de données HDS NAS (HNAS)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La source de données HDS NAS (HNAS) est une source de données d'inventaire et de configuration permettant la détection des clusters HDS NAS. Insight prend en charge la découverte des partages NFS et CIFS, des systèmes de fichiers (volumes internes Insight) et des étendues (pools de stockage Insight).
+
+Cette source de données est basée sur SSH. Par conséquent, l'unité d'acquisition qui l'hébergera doit pouvoir initier des sessions SSH à TCP 22 sur le HNAS lui-même, ou l'unité de gestion des systèmes (SMU) à laquelle le cluster est connecté.
+
+
+
+== Terminologie
+
+OnCommand Insight acquiert les informations d'inventaire suivantes à partir de la source de données HNAS. Pour chaque type de ressource acquis par Insight, la terminologie la plus courante utilisée pour cette ressource est indiquée. Lors de l'affichage ou du dépannage de cette source de données, gardez à l'esprit la terminologie suivante :
+
+|===
+
+
+| Terme du fournisseur/modèle | Terme Insight 
+
+
+ a| 
+Niveau
+ a| 
+Groupe de disques
+
+
+
+ a| 
+Cluster
+ a| 
+Stockage
+
+
+
+ a| 
+Nœud
+ a| 
+Nœud de stockage
+
+
+
+ a| 
+De la plage
+ a| 
+Pool de stockage
+
+
+
+ a| 
+Système de fichiers
+ a| 
+Volume interne
+
+|===
+[NOTE]
+====
+Il s'agit uniquement de mappages terminologiques courants et peuvent ne pas représenter tous les cas pour cette source de données.
+
+====
+
+
+== De formation
+
+Voici la configuration et l'utilisation de cette source de données :
+
+* Adresse IP du périphérique
+* Port 22, protocole SSH
+* Nom d'utilisateur et mot de passe - niveau de privilège : superviseur
+* REMARQUE : ce collecteur de données est basé sur SSH, de sorte que l'au qui l'héberge doit pouvoir initier des sessions SSH à TCP 22 sur le HNAS lui-même, ou l'unité de gestion des systèmes (SMU) à laquelle le cluster est connecté.
+
+
+[NOTE]
+====
+Ce collecteur de données est basé sur SSH, de sorte que l'au qui l'héberge doit pouvoir initier des sessions SSH à TCP 22 sur le HNAS lui-même, ou l'unité de gestion des systèmes (SMU) à laquelle le cluster est connecté.
+
+====
+
+
+== Configuration
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Hôte HNAS
+ a| 
+Adresse IP ou nom de domaine complet de l'hôte de gestion HNAS
+
+
+
+ a| 
+Nom d'utilisateur
+ a| 
+Nom d'utilisateur pour l'interface de ligne de commande HNAS
+
+
+
+ a| 
+Mot de passe
+ a| 
+Mot de passe utilisé pour l'interface de ligne de commande HNAS
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+Intervalle entre les sondages d'inventaire (30 minutes par défaut)
+
+
+
+ a| 
+Délai d'attente de bannière SSH (s)
+ a| 
+Délai d'attente de bannière SSH (15 secondes par défaut)
+
+
+
+ a| 
+Délai d'expiration de la commande SSH (s)
+ a| 
+Délai d'expiration de la commande SSH (30 secondes par défaut)
+
+|===

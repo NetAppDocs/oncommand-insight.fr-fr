@@ -1,0 +1,41 @@
+---
+permalink: dwh/getting-started-with-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"entrepôt de données OnCommand Insight vous permet de configurer les options nécessaires avant de générer des rapports incluant vos données. Data Warehouse contient de nombreuses fonctionnalités ; cependant, vous n"avez besoin que de quelques-unes d"entre elles pour commencer. Pour configurer Data Warehouse, vous utilisez les options du portail Data Warehouse Portal.' 
+---
+= Mise en route de Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'entrepôt de données OnCommand Insight vous permet de configurer les options nécessaires avant de générer des rapports incluant vos données. Data Warehouse contient de nombreuses fonctionnalités ; cependant, vous n'avez besoin que de quelques-unes d'entre elles pour commencer. Pour configurer Data Warehouse, vous utilisez les options du portail Data Warehouse Portal.
+
+
+
+== Description de la tâche
+
+Pour configurer l'entrepôt de données OnCommand Insight, un administrateur de stockage doit suivre les procédures suivantes :
+
+* Accès au portail Data Warehouse
+* Connexion de l'entrepôt de données aux serveurs OnCommand Insight
+* Création de la base de données à partir de l'historique
+* Configuration des processus de sauvegarde et de restauration
+
+
+En outre, un administrateur du stockage peut souhaiter suivre les procédures suivantes.
+
+* Accès à MySQL à l'aide de l'interface de ligne de commande
+* Planification des builds quotidiens
+* Configuration de plusieurs services de création de rapports
+* Résolution des problèmes de configuration
++
+** Pourquoi ne puis-je pas voir mes annotations ?
+** Que dois-je faire en cas d'échec des points de construction historiques ?
+
+
+
+
+S'il s'agit de la première fois que vous utilisez Data Warehouse Portal, vous devez configurer Data Warehouse pour que des informations puissent apparaître sur la page travaux. Vous devez également répéter ce processus de configuration après avoir réinitialisé la base de données Data Warehouse.

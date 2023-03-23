@@ -1,0 +1,30 @@
+---
+permalink: dwh/including-the-data-warehouse-database.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Par défaut, ASUP envoie uniquement les fichiers journaux de l"entrepôt de données au support technique pour vous aider à résoudre les problèmes. Vous pouvez également choisir d"inclure une sauvegarde de la base de données de l"entrepôt de données et de sélectionner le type de données envoyé.' 
+---
+= Y compris une sauvegarde de la base de données Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Par défaut, ASUP envoie uniquement les fichiers journaux de l'entrepôt de données au support technique pour vous aider à résoudre les problèmes. Vous pouvez également choisir d'inclure une sauvegarde de la base de données de l'entrepôt de données et de sélectionner le type de données envoyé.
+
+
+
+== Étapes
+
+. Connectez-vous au portail Data Warehouse à l'adresse `+https://hostname/dwh+`, où `hostname` Est le nom du système sur lequel l'entrepôt de données OnCommand Insight est installé.
+. Dans le volet de navigation de gauche, cliquez sur *Dépannage*.
+. Pour spécifier qu'ASUP doit inclure une sauvegarde de la base de données Data Warehouse, cliquez sur la liste *inclure la sauvegarde de la base de données DWH* et sélectionnez l'une des options suivantes pour le type de données que la sauvegarde doit inclure :
++
+** Tous (y compris les performances)
+** Tous sauf Performance
+** Inventaire uniquement
+
+
+. Cliquez sur *mettre à jour*.
+

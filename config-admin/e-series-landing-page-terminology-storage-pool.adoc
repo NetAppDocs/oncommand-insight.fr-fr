@@ -1,0 +1,33 @@
+---
+permalink: config-admin/e-series-landing-page-terminology-storage-pool.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Termes s"appliquant aux objets ou aux références figurant sur les pages d"accueil des ressources du pool de stockage NetApp E-Series.' 
+---
+= Pool de stockage E-Series
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Termes s'appliquant aux objets ou aux références figurant sur les pages d'accueil des ressources du pool de stockage NetApp E-Series.
+
+
+
+== Terminologie du pool de stockage E-Series
+
+Les termes suivants s'appliquent aux objets ou aux références disponibles sur les pages d'accueil des ressources du pool de stockage NetApp E-Series. Un grand nombre de ces termes s'appliquent également à d'autres collecteurs de données.
+
+* Stockage : sur quelle baie de stockage ce pool réside. Obligatoire.
+* Type -- valeur descriptive d'une liste de possibilités énumérées. Il s'agit le plus souvent du « provisionnement fin » ou du « groupe RAID ».
+* Nœud : si l'architecture de cette baie de stockage est telle que les pools appartiennent à un nœud de stockage spécifique, son nom sera vu ici comme un lien hypertexte vers sa propre page d'accueil.
+* Utilise Flash Pool -- valeur Oui/non.
+* Redondance -- niveau RAID ou schéma de protection. E-Series rapporte « RAID 7 » pour les pools DDP.
+* Capacité -- les valeurs ici sont la capacité logique utilisée, la capacité utilisable et la capacité totale logique, ainsi que le pourcentage utilisé dans ces valeurs. Ces deux atouts incluent la capacité de « conservation » des systèmes E-Series, ce qui se traduit à la fois par des chiffres et un pourcentage supérieur à ce que peut afficher l'interface utilisateur des systèmes E-Series.
+* Capacité sur-allouée : si vous avez alloué une somme totale de capacités de volume supérieure à la capacité logique du pool de stockage à l'aide de technologies d'efficacité, la valeur de pourcentage ici sera supérieure à 0 %.
+* Snapshot -- capacités de snapshot utilisées et totales, si votre architecture de pool de stockage consacre une partie de sa capacité à segmente des zones exclusivement pour les snapshots.
+* Utilization : valeur en pourcentage indiquant le pourcentage le plus élevé d'occupation de disque de n'importe quel disque contribuant à ce pool de stockage. L'utilisation des disques n'a pas nécessairement une forte corrélation avec les performances des baies : l'utilisation peut être élevée en raison des reconstructions des disques, des activités de déduplication, etc. En l'absence de charges de travail pilotées par l'hôte. Par ailleurs, les implémentations de réplication de nombreuses baies peuvent favoriser l'utilisation des disques sans s'afficher comme une charge de travail de volume.
+* IOPS : somme des IOPS de tous les disques qui fournissent la capacité à ce pool de stockage.
+* Débit : somme du débit de tous les disques contribuant à la capacité de ce pool de stockage.
+

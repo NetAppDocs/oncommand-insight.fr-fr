@@ -1,0 +1,57 @@
+---
+permalink: install-linux/installing-a-remote-acquisition-unit-rau-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez installer une ou plusieurs unités d"acquisition à distance \(Raus\) dans votre environnement OnCommand Insight. Les unités d"acquisition s"exécutent dans le réseau qui accède à \(via des modules appelés sources de données\) et collectent des données à partir de différents périphériques du centre de données.' 
+---
+= Installation d'une unité d'acquisition distante
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez installer une ou plusieurs unités d'acquisition à distance (Raus) dans votre environnement OnCommand Insight. Les unités d'acquisition s'exécutent dans le réseau auquel accède (par le biais de modules appelés sources de données_) et collectent des données à partir de différents périphériques du centre de données.
+
+
+
+== Avant de commencer
+
+Vous devez avoir terminé toutes les conditions préalables à l'installation.
+
+Au moins un port doit être ouvert et disponible entre le serveur RAU et le serveur OnCommand Insight pour transmettre les informations de modification au serveur. Si vous n'êtes pas sûr de cela, validez-le en ouvrant un navigateur Web sur l'ordinateur RAU et en le dirigeant vers le serveur OnCommand Insight :
+
+[listing]
+----
+ https://< OnCommand Insight Server hostname >:< acquisition_port >
+----
+Le port d'acquisition par défaut est 443, mais il a peut-être été modifié lors de l'installation du serveur. Si la connexion réussit, une page de réponse OnCommand Insight s'affiche, indiquant un port ouvert et disponible entre le RAU et le serveur OnCommand Insight.
+
+Pour les environnements utilisant la traduction d'adresses réseau ou la traduction d'adresses de port (NAT/PAT : c'est-à-dire toute traduction d'adresses IP), Insight prend uniquement en charge l'insertion d'une RAU entre NAT et le périphérique.
+
+* Pris en charge : OnCommand Insight \-> NAT \-> RAU \-> périphérique
+* Non pris en charge : OnCommand Insight \-> RAU \-> NAT \-> périphérique
+
+
+
+
+== Étapes
+
+. Connectez-vous au serveur RAU à l'aide d'un compte avec des privilèges sudo.
+. Accédez au répertoire du serveur où se trouvent les fichiers d'installation et saisissez la commande suivante :
++
+`unzip oci-rau-<version>-linux-x86_64.zip`
+
+. Vous pouvez afficher la syntaxe, les arguments de commande et l'utilisation des paramètres pour `oci-install.sh`:
++
+`sudo ./oci-rau-<version>-linux-x86_64/oci-install.sh --help`
+
+. Exécutez le script d'installation :
++
+`sudo ./oci-rau-<version>-linux-x86_64/oci-install.sh`
+
+. Lisez le contrat de licence, acceptez-le, puis suivez les invites.
++
+Après avoir répondu à toutes les invites, l'installation commence et devrait prendre environ 10 minutes, selon les applications installées.
+
+

@@ -1,0 +1,30 @@
+---
+permalink: config-admin/deleting-queries.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez supprimer des requêtes lorsqu"elles ne recueillent plus d"informations utiles sur vos ressources. Vous ne pouvez pas supprimer une requête si elle est utilisée dans une règle d"annotation.' 
+---
+= Suppression de requêtes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez supprimer des requêtes lorsqu'elles ne recueillent plus d'informations utiles sur vos ressources. Vous ne pouvez pas supprimer une requête si elle est utilisée dans une règle d'annotation.
+
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur Insigtweb.
+. Cliquez sur *requêtes* et sélectionnez *Afficher toutes les requêtes*.
++
+La page requêtes s'affiche.
+
+. Placez le curseur sur la requête à supprimer et cliquez sur image:../media/trash-can-query.gif[""].
++
+Un message de confirmation s'affiche, vous demandant si vous souhaitez supprimer la requête.
+
+. Cliquez sur *OK*.
+

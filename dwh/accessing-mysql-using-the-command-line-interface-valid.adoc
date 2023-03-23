@@ -1,0 +1,71 @@
+---
+permalink: dwh/accessing-mysql-using-the-command-line-interface-valid.html 
+sidebar: sidebar 
+keywords:  
+summary: 'En plus d"accéder aux éléments de données Data Warehouse via les outils de création de rapports, vous pouvez accéder directement aux éléments de données Data Warehouse en vous connectant en tant qu"utilisateur MySQL. Vous pouvez vous connecter en tant qu"utilisateur MySQL pour utiliser les éléments de données de vos propres applications.' 
+---
+= Accès à MySQL à l'aide de l'interface de ligne de commande
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En plus d'accéder aux éléments de données Data Warehouse via les outils de création de rapports, vous pouvez accéder directement aux éléments de données Data Warehouse en vous connectant en tant qu'utilisateur MySQL. Vous pouvez vous connecter en tant qu'utilisateur MySQL pour utiliser les éléments de données de vos propres applications.
+
+
+
+== Description de la tâche
+
+Il existe de nombreuses façons de se connecter. Les étapes suivantes s'affichent dans un sens.
+
+Lorsque vous accédez à MySQL, connectez-vous à la base de données MySQL sur la machine sur laquelle Data Warehouse est installé. Le port MySQL est 3306 par défaut, mais vous pouvez le modifier lors de l'installation. Le nom d'utilisateur et le mot de passe sont dwhuser/netapp123.
+
+
+
+== Étapes
+
+. Sur la machine sur laquelle Data Warehouse est installé, ouvrez une fenêtre de ligne de commande.
+. Accédez au répertoire MySQL dans le répertoire OnCommand Insight.
+. Saisissez le nom d'utilisateur et le mot de passe suivants : `mysql -udwhuser -pnetapp123`
++
+Les informations suivantes s'affichent, selon l'emplacement d'installation de Data Warehouse :
+
++
+[listing]
+----
+c:\Program Files\SANscreen\mysql\bin> mysql -udwhuser -pnetapp123
+----
++
+[listing]
+----
+Welcome to the MySQL monitor. Commands end with ; or \g.
+Your MySQL connection id is 882
+Server version: 5.1.28-rc-community MySQL Community Server (GPL)
+----
++
+[listing]
+----
+Type 'help;' or '\h' for help. Type '\c' to clear the buffer.
+----
+. Afficher les bases de données Data Warehouse : `show databases;`
++
+Le message suivant s'affiche :
+
++
+[listing]
+----
+mysql> show databases;
++-------------------------+
+| Database                |
++-------------------------+
+| information_schema      |
+| dwh_capacity            |
+| dwh_capacity_efficiency |
+| dwh_fs_util             |
+| dwh_inventory           |
+| dwh_performance         |
+| dwh_ports               |
++-------------------------+
+----
+

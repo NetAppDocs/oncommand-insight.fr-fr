@@ -1,0 +1,20 @@
+---
+permalink: config-admin/data-source-support-information.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Dans le cadre de la planification de la configuration, vous devez vous assurer que les périphériques de votre environnement peuvent être surveillés par Insight. Pour ce faire, vous pouvez consulter la matrice de prise en charge des sources de données pour obtenir des détails sur les systèmes d"exploitation, les périphériques spécifiques et les protocoles. Certaines sources de données peuvent ne pas être disponibles sur tous les systèmes d"exploitation.' 
+---
+= Informations de prise en charge de la source de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dans le cadre de la planification de la configuration, vous devez vous assurer que les périphériques de votre environnement peuvent être surveillés par Insight. Pour ce faire, vous pouvez consulter la matrice de prise en charge des sources de données pour obtenir des détails sur les systèmes d'exploitation, les périphériques spécifiques et les protocoles. Certaines sources de données peuvent ne pas être disponibles sur tous les systèmes d'exploitation.
+
+
+
+== Emplacement de la version la plus récente de la matrice de prise en charge des sources de données
+
+La matrice de prise en charge des sources de données OnCommand Insight est mise à jour à chaque version de Service Pack. La version la plus récente du document se trouve sur le https://mysupport.netapp.com/api/content-service/staticcontents/content/products/oncommandinsight/DatasourceSupportMatrix_7.3.x.pdf["Site de support NetApp"]. .

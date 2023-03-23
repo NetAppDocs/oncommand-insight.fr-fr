@@ -1,0 +1,30 @@
+---
+permalink: install-linux/installation-prerequisites.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Avant d"installer OnCommand Insight, vous devez télécharger la version actuelle du logiciel, acquérir la licence appropriée et configurer votre environnement.' 
+---
+= Conditions préalables à l'installation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'installer OnCommand Insight, vous devez télécharger la version actuelle du logiciel, acquérir la licence appropriée et configurer votre environnement.
+
+Avant d'installer OnCommand Insight, vérifiez que vous disposez des éléments suivants :
+
+* Fichiers du logiciel OnCommand Insight dans le pack d'installation téléchargé pour la version actuelle
+* Une licence pour utiliser la version OnCommand Insight téléchargée
+* Environnement matériel et logiciel minimum
++
+Il est possible que le produit actuel consomme des ressources matérielles supplémentaires (en raison des fonctionnalités améliorées du produit OnCommand Insight) qui n'ont pas été utilisées dans les versions antérieures du produit OnCommand Insight.
+
+* Un plan de déploiement qui inclut les configurations matérielles et réseau pour le serveur OnCommand Insight, l'entrepôt de données et les rapports, ainsi que les unités d'acquisition distantes.
+* Java 8 pour l'interface utilisateur Java de OnCommand Insight.
++
+
+NOTE: OnCommand Insight inclut une licence Oracle payante pour Java se 8. Les clients n'ont pas à acheter de licences Java se 8 supplémentaires. Cette licence couvre l'utilisation de Java se 8 avec tous les composants OCI. Reportez-vous à la http://docs.netapp.com/oci-73/topic/com.netapp.ndc.notices/GUID-93BE9A1E-D79E-4A97-87A2-4DBE31372A16.html["Avis"] pour plus de détails.
+
+

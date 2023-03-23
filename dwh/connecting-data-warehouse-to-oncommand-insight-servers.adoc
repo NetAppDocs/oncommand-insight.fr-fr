@@ -1,0 +1,103 @@
+---
+permalink: dwh/connecting-data-warehouse-to-oncommand-insight-servers.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les connecteurs établissent les connexions entre l"entrepôt de données OnCommand Insight et les serveurs OnCommand Insight. Vous pouvez connecter l"entrepôt de données à un ou plusieurs serveurs OnCommand Insight. Vous pouvez ajouter ou supprimer des connexions vers ou depuis des bases de données OnCommand Insight.' 
+---
+= Connexion de l'entrepôt de données aux serveurs OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les connecteurs établissent les connexions entre l'entrepôt de données OnCommand Insight et les serveurs OnCommand Insight. Vous pouvez connecter l'entrepôt de données à un ou plusieurs serveurs OnCommand Insight. Vous pouvez ajouter ou supprimer des connexions vers ou depuis des bases de données OnCommand Insight.
+
+
+
+== Description de la tâche
+
+Data Warehouse attribue un ID unique global au connecteur utilisé conjointement avec le nom du connecteur. Après avoir ajouté un connecteur, l'entrepôt de données interroge la base de données OnCommand Insight pour obtenir le nom et la version du site OnCommand Insight.
+
+Vous pouvez choisir de vous connecter à une source de données avec ou sans SSL. Le choix de la source de données sécurisée oblige la connexion à utiliser SSL lors de la communication avec la base de données distante OnCommand Insight.
+
+Data Warehouse peut fournir une vue consolidée des données provenant de plusieurs installations OnCommand Insight. Cette base de données consolidée fournit les informations suivantes :
+
+* Identifiants globalement uniques
++
+Un ID unique global est attribué à chaque objet, indépendant des ID utilisés par les sites individuels, afin d'éviter les conflits d'ID et d'activer la détection des doublons. Ces ID sont partagés entre tous les magasins de données. Cet ID est l'ID global unique (GUID) dans la colonne Commentaire des tables du magasin de données d'inventaire.
+
+* Pas de duplication
++
+Les entités qui existent dans plusieurs bases de données OnCommand Insight ne sont enregistrées qu'une seule fois dans la base de données consolidée.
+
+* Enregistrement actuel
++
+Les données de la base de données consolidée (magasin de données d'inventaire) sont toujours les plus à jour possible.
+
+
+
+Lorsque vous ajoutez ou modifiez une connexion, vous pouvez également tester la connexion. Le test effectue les opérations suivantes :
+
+* Vérifie l'adresse IP de l'hôte, le nom d'utilisateur et le mot de passe et garantit qu'une connexion peut être établie.
++
+Les connexions non valides apparaissent en rouge.
+
+* Compare la version de OnCommand Insight à la version de l'entrepôt de données.
++
+Si les versions ne sont pas compatibles, un message d'erreur s'affiche.
+
+* Vérifie que la base de données OnCommand Insight n'a pas été modifiée ou restaurée dans une autre base de données, comme le montre le dernier traitement de l'entrepôt de données. Si une modification a été apportée, un message d'erreur s'affiche.
+
+
+
+
+== Étapes
+
+. Connectez-vous au portail Data Warehouse à l'adresse `+https://hostname/dwh+`, où `hostname` Est le nom du système sur lequel l'entrepôt de données OnCommand Insight est installé.
+. Dans le volet de navigation de gauche, cliquez sur *connecteurs*.
++
+Le tableau connecteurs apparaît d'abord vide et affiche les informations relatives aux connecteurs après l'ajout d'un connecteur.
+
+. Cliquez sur *Nouveau* pour ajouter un nouveau connecteur.
+. Saisissez les informations suivantes :
++
+** *Cryptage*
++
+Pour activer les demandes d'entrepôt de données à effectuer à l'aide du cryptage SSL, sélectionnez `Enabled`.
+
+** *Nom*
++
+Un nom de connecteur qui identifie le connecteur dans la vue connecteurs.
+
+** *Hôte*
++
+Adresse IP de l'hôte
+
+** *Nom d'utilisateur*
++
+« stock »
+
++
+[NOTE]
+====
+En utilisant ce nom d'utilisateur et ce mot de passe, vous pouvez vous connecter à la base de données OnCommand Insight distante et exécuter des requêtes sur les données.
+
+====
+** *Mot de passe*
++
+« SANscreen »
+
+
+
+. Pour spécifier le port à utiliser pour les connexions TCP à l'hôte, cliquez sur *Avancé* et entrez le numéro de port TCP.
+. Pour spécifier le port (autre que le port par défaut) à utiliser pour les connexions HTTPS à l'hôte, cliquez sur *Avancé* et entrez le numéro de port.
+. Cliquez sur *Test*.
++
+Data Warehouse teste la connexion.
+
+. Cliquez sur *Enregistrer*.
++
+Si vous entrez plusieurs connexions pour plusieurs installations, Data Warehouse invoque des processus de génération indépendants, un pour chaque base de données à partir de laquelle les données doivent être extraites. Chaque processus de construction extrait des données d'une base de données OnCommand Insight et les charge dans la base de données consolidée.
+
+

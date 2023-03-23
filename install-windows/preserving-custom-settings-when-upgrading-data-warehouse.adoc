@@ -1,0 +1,16 @@
+---
+permalink: install-windows/preserving-custom-settings-when-upgrading-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les paramètres Cognos personnalisés, tels que les paramètres de messagerie SMTP non par défaut, ne sont pas automatiquement sauvegardés dans le cadre d"une mise à niveau de Data Warehouse. Vous devez documenter manuellement, puis restaurer les paramètres personnalisés après une mise à niveau.' 
+---
+= Conservation des paramètres Cognos personnalisés lors d'une mise à niveau de Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les paramètres Cognos personnalisés, tels que les paramètres de messagerie SMTP non par défaut, ne sont pas automatiquement sauvegardés dans le cadre d'une mise à niveau de Data Warehouse. Vous devez documenter manuellement, puis restaurer les paramètres personnalisés après une mise à niveau.
+
+Avant de mettre à niveau Data Warehouse, préparez une liste de contrôle avec tous les paramètres Cognos personnalisés que vous souhaitez conserver, puis consultez la liste avant de mettre à niveau le système. Une fois la mise à niveau terminée, vous pouvez restaurer les valeurs manuellement pour les rétablir dans les paramètres de la configuration d'origine.

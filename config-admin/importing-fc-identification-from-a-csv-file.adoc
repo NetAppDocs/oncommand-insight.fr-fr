@@ -1,0 +1,67 @@
+---
+permalink: config-admin/importing-fc-identification-from-a-csv-file.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez importer manuellement l"identification de périphérique Fibre Channel dans la fonction de résolution de périphérique OnCommand Insight à l"aide d"une liste de périphériques dans un fichier CSV.' 
+---
+= Importation de l'identification de périphérique Fibre Channel à partir d'un fichier CSV
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez importer manuellement l'identification de périphérique Fibre Channel dans la fonction de résolution de périphérique OnCommand Insight à l'aide d'une liste de périphériques dans un fichier CSV.
+
+
+
+== Avant de commencer
+
+Vous devez disposer d'un fichier CSV correctement formaté pour importer les identifications de périphérique directement dans la fonction résolution de périphérique. Le fichier CSV pour les périphériques Fibre Channel requiert les informations suivantes :
+
+|===
+
+
+ a| 
+WWN
+
+
+
+ a| 
+IP
+
+
+
+ a| 
+Nom
+
+
+
+ a| 
+Type
+
+|===
+[NOTE]
+====
+Dans le cadre de la meilleure pratique, il est recommandé d'exporter d'abord les informations FC Identify dans un fichier CSV, d'apporter les modifications souhaitées dans ce fichier, puis de réimporter le fichier dans FC Identify. Cela permet de s'assurer que les colonnes attendues sont présentes et dans le bon ordre.
+
+====
+Pour importer des informations d'identification FC :
+
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur Web Insight.
+. Cliquez sur *gérer* > *résolution du périphérique*
+. Sélectionnez l'onglet *FC Identify*.
+. Cliquez sur *identifier* > *identifier à partir du fichier*
+. 
++
+.. Accédez au dossier contenant vos fichiers CSV à importer et sélectionnez le fichier souhaité.
+
+
++
+Les périphériques que vous entrez sont ajoutés à la liste des périphériques dans l'onglet FC Identify. La «règle» est désignée comme «manuelle».
+
+

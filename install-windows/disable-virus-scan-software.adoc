@@ -1,0 +1,18 @@
+---
+permalink: install-windows/disable-virus-scan-software.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Si un logiciel antivirus est actif sur votre système, l"installation de OnCommand Insight échoue. Vous pouvez éviter ce problème en désactivant le logiciel antivirus avant l"installation.' 
+---
+= Désactivation du logiciel d'analyse antivirus
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si un logiciel antivirus est actif sur votre système, l'installation de OnCommand Insight échoue. Vous pouvez éviter ce problème en désactivant le logiciel antivirus avant l'installation.
+
+Pour éviter un échec d'installation dû à un logiciel antivirus actif, vous devez désactiver complètement tous les antivirus lors de l'installation de chaque composant OnCommand Insight. Après l'installation, les chemins utilisés par le composant Insight (chemins d'installation, de sauvegarde et d'archivage) doivent être exclus de l'analyse antivirus.
+
+En outre, vous devez également exclure le dossier IBM/DB2 (par exemple _C:\Program Files\IBM\DB2_) de l'analyse antivirus après l'installation.

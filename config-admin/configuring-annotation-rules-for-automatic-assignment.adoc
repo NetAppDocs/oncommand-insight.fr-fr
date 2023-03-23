@@ -1,0 +1,57 @@
+---
+permalink: config-admin/configuring-annotation-rules-for-automatic-assignment.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Au lieu d"appliquer manuellement des annotations à des ressources individuelles, vous pouvez appliquer automatiquement des annotations à plusieurs ressources à l"aide de règles d"annotation. Les annotations définies manuellement sur une page de ressource individuelle ont priorité sur les annotations basées sur des règles lors de l"évaluation par Insight des règles d"annotation.' 
+---
+= Création de règles d'annotation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Au lieu d'appliquer manuellement des annotations à des ressources individuelles, vous pouvez appliquer automatiquement des annotations à plusieurs ressources à l'aide de règles d'annotation. Les annotations définies manuellement sur une page de ressource individuelle ont priorité sur les annotations basées sur des règles lors de l'évaluation par Insight des règles d'annotation.
+
+
+
+== Avant de commencer
+
+Vous devez avoir créé une requête pour la règle d'annotation.
+
+
+
+== Description de la tâche
+
+Bien que vous puissiez modifier les types d'annotation lors de la création des règles, vous devez avoir défini les types à l'avance.
+
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur Web de OnCommand Insight.
+. Cliquez sur *gérer* et sélectionnez *règles d'annotation*.
++
+La page règles d'annotation affiche la liste des règles d'annotation existantes.
+
+. Cliquez sur image:../media/add-annotation-icon.gif[""].
++
+La boîte de dialogue Ajouter une règle s'affiche.
+
+. Procédez comme suit :
++
+.. Dans la zone *Nom*, entrez un nom unique qui décrit la règle.
++
+Ce nom apparaît dans la page règles d'annotation.
+
+.. Cliquez sur *requête* et sélectionnez la requête que OnCommand Insight doit utiliser pour appliquer l'annotation aux actifs.
+.. Cliquez sur *Annotation* et sélectionnez l'annotation que vous souhaitez appliquer.
+.. Cliquez sur *valeur* et sélectionnez une valeur pour l'annotation.
++
+Par exemple, si vous choisissez anniversaire comme annotation, vous spécifiez une date pour la valeur.
+
+
+
+. Cliquez sur *Enregistrer*.
+. Cliquez sur *Exécuter toutes les règles* si vous souhaitez exécuter toutes les règles immédiatement ; sinon, les règles sont exécutées à un intervalle planifié régulièrement.
+

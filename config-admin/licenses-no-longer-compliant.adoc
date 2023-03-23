@@ -1,0 +1,18 @@
+---
+permalink: config-admin/licenses-no-longer-compliant.html 
+sidebar: sidebar 
+keywords:  
+summary: Si vous remarquez le message « non conforme » sur votre page de licences Insight, Insight gère plus de téraoctets que les licences de votre entreprise. 
+---
+= Les licences ne sont plus conformes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous remarquez le message « non conforme » sur votre page de licences Insight, Insight gère plus de téraoctets que les licences de votre entreprise.
+
+Le message « non conforme » signifie que votre entreprise a payé moins de téraoctets que ce qu'Insight ne gère actuellement. La différence entre les téraoctets gérés et le nombre de téraoctets sous licence est indiquée à côté du message de non-conformité.
+
+Le fonctionnement de votre système Insight n'est pas affecté, mais vous devez contacter votre représentant NetApp pour étendre la couverture de vos licences et mettre à jour la licence appropriée.

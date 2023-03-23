@@ -1,0 +1,21 @@
+---
+permalink: install-linux/upgrading-insight-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Lorsqu"une nouvelle version de OnCommand Insight est disponible, vous pouvez être amené à effectuer une mise à niveau pour bénéficier des nouvelles fonctionnalités et des correctifs apportés aux problèmes. Vous devez mettre à niveau le serveur Insight et l"entrepôt de données \(DWH\) séparément.' 
+---
+= Mise à niveau d'Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsqu'une nouvelle version de OnCommand Insight est disponible, vous pouvez être amené à effectuer une mise à niveau pour bénéficier des nouvelles fonctionnalités et des correctifs apportés aux problèmes. Vous devez mettre à niveau le serveur Insight et l'entrepôt de données (DWH) séparément.
+
+
+IMPORTANT: Vous ne devez pas stocker de sauvegardes automatiques ou manuelles dans les répertoires d'installation d'Insight, car l'intégralité du dossier d'installation est écrasée pendant le processus de mise à niveau. Si vous avez stocké des fichiers de sauvegarde dans l'un de ces répertoires, vous devez déplacer vos sauvegardes vers un autre emplacement avant d'effectuer une mise à niveau ou un processus de désinstallation.
+
+Les dernières versions d'Insight ont des exigences plus élevées en termes d'espace disque, de mémoire et de CPU. Avant de passer à la dernière version d'Insight, vérifiez les conditions requises pour l'installation. Il est vivement recommandé de contacter votre ingénieur commercial pour obtenir des conseils détaillés sur le dimensionnement avant d'installer ou de mettre à niveau Insight.
+
+Avant de mettre à niveau le logiciel Insight, il est recommandée d'effectuer une sauvegarde de sécurité et une sauvegarde de base de données.

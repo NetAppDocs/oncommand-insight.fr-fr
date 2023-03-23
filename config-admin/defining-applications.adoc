@@ -1,0 +1,64 @@
+---
+permalink: config-admin/defining-applications.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Si vous souhaitez suivre les données associées à des applications spécifiques s"exécutant dans votre environnement, vous devez définir ces applications.' 
+---
+= Définition des applications
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous souhaitez suivre les données associées à des applications spécifiques s'exécutant dans votre environnement, vous devez définir ces applications.
+
+
+
+== Avant de commencer
+
+Si vous souhaitez associer l'application à une entité métier, vous devez avoir déjà créé l'entité métier.
+
+
+
+== Description de la tâche
+
+Vous pouvez associer des applications aux ressources suivantes : hôtes, machines virtuelles, volumes, volumes internes, qtrees, les partages et les hyperviseurs.
+
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur Web de OnCommand Insight.
+. Cliquez sur *gérer* et sélectionnez *applications*.
++
+Après avoir défini une application, la page applications affiche le nom de l'application, sa priorité et, le cas échéant, l'entité métier associée à l'application.
+
++
+[NOTE]
+====
+Si le moteur de détection des anomalies est installé, la page Tableau de bord des applications affiche également un score d'anomalie pour l'application. Pour plus d'informations sur l'installation et la configuration du moteur de détection d'anomalies, reportez-vous au _Guide de configuration et d'administration de OnCommand Insight_.
+
+====
+. Cliquez sur *Ajouter*.
++
+La boîte de dialogue Ajouter une application s'affiche.
+
+. Entrez un nom unique pour l'application dans la zone *Nom*.
+. Cliquez sur *priorité* et sélectionnez la priorité (critique, élevée, moyenne ou faible) de l'application dans votre environnement.
+. Si vous prévoyez d'utiliser cette application avec une entité métier, cliquez sur *entité commerciale* et sélectionnez l'entité dans la liste.
+. *Facultatif* : si vous n'utilisez pas le partage de volume, désactivez la case *Valider le partage de volume*.
++
+Ceci nécessite la licence assure. Définissez cette option pour vous assurer que chaque hôte a accès aux mêmes volumes dans un cluster. Par exemple, les hôtes des clusters haute disponibilité doivent souvent être masqués pour les mêmes volumes afin de permettre le basculement. Cependant, les hôtes d'applications non liées n'ont généralement pas besoin d'accéder aux mêmes volumes physiques. En outre, les stratégies réglementaires peuvent vous obliger à interdire explicitement aux applications non liées d'accéder aux mêmes volumes physiques pour des raisons de sécurité.
+
+. Cliquez sur *Enregistrer*.
++
+L'application s'affiche dans la page applications. Si vous cliquez sur le nom de l'application, Insight affiche la page de ressources de l'application.
+
+
+
+
+
+== Une fois que vous avez terminé
+
+Après avoir défini une application, vous pouvez accéder à une page de ressources pour l'hôte, la machine virtuelle, le volume, le volume interne ou l'hyperviseur afin d'affecter une application à une ressource.

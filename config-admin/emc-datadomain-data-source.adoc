@@ -1,0 +1,149 @@
+---
+permalink: config-admin/emc-datadomain-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Cette source de données collecte les informations de stockage et de configuration des systèmes de stockage avec déduplication EMC Data Domain. Pour ajouter la source de données, vous devez utiliser des instructions et des commandes de configuration spécifiques et connaître les exigences relatives aux sources de données et les recommandations d"utilisation.' 
+---
+= Source de données EMC Data Domain
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cette source de données collecte les informations de stockage et de configuration des systèmes de stockage avec déduplication EMC Data Domain. Pour ajouter la source de données, vous devez utiliser des instructions et des commandes de configuration spécifiques et connaître les exigences relatives aux sources de données et les recommandations d'utilisation.
+
+
+
+== Terminologie
+
+OnCommand Insight acquiert les informations d'inventaire suivantes à partir de la source de données EMC Data Domain. Pour chaque type de ressource acquis par Insight, la terminologie la plus courante utilisée pour cette ressource est indiquée. Lors de l'affichage ou du dépannage de cette source de données, gardez à l'esprit la terminologie suivante :
+
+|===
+
+
+| Terme du fournisseur/modèle | Terme Insight 
+
+
+ a| 
+Disque
+ a| 
+Disque
+
+
+
+ a| 
+Baie
+ a| 
+Stockage
+
+
+
+ a| 
+Port
+ a| 
+Port
+
+
+
+ a| 
+Filesys
+ a| 
+Volume interne
+
+
+
+ a| 
+MTree
+ a| 
+Qtree
+
+
+
+ a| 
+Quota
+ a| 
+Quota
+
+
+
+ a| 
+Partage NFS et CIFS
+ a| 
+Fileshare
+
+|===
+[NOTE]
+====
+Il s'agit uniquement de mappages terminologiques courants et peuvent ne pas représenter tous les cas pour cette source de données.
+
+====
+
+
+== De formation
+
+* Adresse IP du périphérique Data Domain
+* Nom d'utilisateur et mot de passe en lecture seule pour le stockage Data Domain
+* Port SSH 22
+
+
+
+
+== Configuration
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Adresse IP
+ a| 
+Adresse IP ou nom de domaine complet de la baie de stockage Data Domain
+
+
+
+ a| 
+Nom d'utilisateur
+ a| 
+Nom d'utilisateur de la baie de stockage Data Domain
+
+
+
+ a| 
+Mot de passe
+ a| 
+Mot de passe de la matrice de stockage Data Domain
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+Intervalle entre les sondages d'inventaire (20 minutes par défaut)
+
+
+
+ a| 
+Délai d'attente du processus SSH (s)
+ a| 
+Délai d'expiration du processus SSH (180 secondes par défaut)
+
+
+
+ a| 
+Port SSH
+ a| 
+Port de service SSH
+
+|===

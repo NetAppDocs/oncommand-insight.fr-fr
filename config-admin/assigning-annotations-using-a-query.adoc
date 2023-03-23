@@ -1,0 +1,55 @@
+---
+permalink: config-admin/assigning-annotations-using-a-query.html 
+sidebar: sidebar 
+keywords: bulk edit 
+summary: 'L"affectation d"une annotation à un groupe de ressources vous permet d"identifier et d"utiliser plus facilement ces ressources associées dans des requêtes ou des tableaux de bord.' 
+---
+= Affectation d'annotations à plusieurs ressources à l'aide d'une requête
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'affectation d'une annotation à un groupe de ressources vous permet d'identifier et d'utiliser plus facilement ces ressources associées dans des requêtes ou des tableaux de bord.
+
+
+
+== Avant de commencer
+
+Les annotations que vous souhaitez affecter aux actifs doivent avoir été créées au préalable.
+
+
+
+== Description de la tâche
+
+Vous pouvez simplifier l'affectation d'une annotation à plusieurs actifs à l'aide d'une requête. Par exemple, si vous souhaitez attribuer une annotation d'adresse personnalisée à toutes vos baies à un emplacement de data Center spécifique.
+
+
+
+== Étapes
+
+. Créez une nouvelle requête pour identifier les actifs sur lesquels vous souhaitez affecter une annotation. Cliquez sur *requêtes* > *+Nouvelle requête*.
+. Dans la liste déroulante *Rechercher...*, choisissez *stockage*. Vous pouvez définir des filtres pour affiner davantage la liste des stockages affichés.
+. Dans la liste des stockages affichés, sélectionnez-en un ou plusieurs en cochant la case en regard du nom du stockage. Vous pouvez également sélectionner tous les stockages affichés en cliquant sur la case principale en haut de la liste.
+. Lorsque vous avez sélectionné tous les stockages souhaités, cliquez sur *actions* > *Modifier l'annotation*.
++
+Le système affiche la boîte de dialogue Ajouter une annotation.
+
+. Sélectionnez les options *Annotation* et *valeur* que vous souhaitez affecter aux stockages et cliquez sur *Enregistrer*.
++
+Si vous affichez la colonne de cette annotation, elle apparaît sur tous les stockages sélectionnés.
+
+. Vous pouvez désormais utiliser l'annotation pour filtrer les stockages dans un widget ou une requête. Dans un widget, vous pouvez effectuer les opérations suivantes :
++
+.. Créez un tableau de bord ou ouvrez-en un existant. Ajoutez une *variable* et choisissez l'annotation que vous avez définie sur les stockages ci-dessus. La variable est ajoutée au tableau de bord.
+.. Dans le champ de variable que vous venez d'ajouter, cliquez sur *Any* et entrez la valeur appropriée à filtrer. Cliquez sur la coche pour enregistrer la valeur de la variable.
+.. Ajouter un widget. Dans la requête du widget, cliquez sur le bouton **Filtrer par****+**et sélectionnez l'annotation appropriée dans la liste.
+.. Cliquez sur *Any* et sélectionnez la variable d'annotation que vous avez ajoutée ci-dessus. Les variables que vous avez créées commencent par "`$`" et sont affichées dans la liste déroulante.
+.. Définissez tous les autres filtres ou champs que vous désirez, puis cliquez sur *Enregistrer* lorsque le widget est personnalisé à votre goût.
+
+
++
+Le widget du tableau de bord affiche uniquement les données des stockages auxquels vous avez attribué l'annotation.
+
+

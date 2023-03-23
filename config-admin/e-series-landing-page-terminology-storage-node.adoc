@@ -1,0 +1,34 @@
+---
+permalink: config-admin/e-series-landing-page-terminology-storage-node.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Termes s"appliquant aux objets ou aux références figurant sur les pages d"accueil des ressources de nœuds de stockage NetApp E-Series.' 
+---
+= Nœud de stockage E-Series
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Termes s'appliquant aux objets ou aux références figurant sur les pages d'accueil des ressources de nœuds de stockage NetApp E-Series.
+
+
+
+== Terminologie relative aux nœuds de stockage E-Series
+
+Les termes suivants s'appliquent aux objets ou aux références disponibles sur les pages d'accueil des ressources du pool de stockage NetApp E-Series. Un grand nombre de ces termes s'appliquent également à d'autres collecteurs de données.
+
+* Stockage -- matrice de stockage de laquelle ce nœud fait partie. Obligatoire.
+* Partenaire HAUTE DISPONIBILITÉ : sur les plateformes sur lesquelles un nœud basculera vers un nœud et vers un autre nœud, il sera généralement visible ici.
+* State :- santé du nœud. Uniquement disponible lorsque la matrice est suffisamment saine pour être inventoriée par une source de données.
+* Model -- nom du modèle du nœud.
+* Version -- nom de version du périphérique.
+* Numéro de série -- le numéro de série du nœud.
+* Mémoire -- mémoire de base 2 si disponible.
+* Utilisation -- l'utilisation n'est pas disponible pour le moment pour les baies NetApp E-Series.
+* IOPS -- calculé en additionnant toutes les IOPS des volumes appartenant exclusivement à ce nœud.
+* Latence : nombre représentant la latence ou le temps de réponse standard de l'hôte sur ce contrôleur. Les informations exploitables calculent la moyenne pondérée en IOPS à partir des volumes appartenant exclusivement à ce nœud.
+* Débit -- nombre représentant le débit piloté par l'hôte sur ce contrôleur. Calculé en additionnant l'ensemble du débit des volumes appartenant exclusivement à ce nœud.
+* Processeurs -- nombre de processeurs.
+

@@ -1,0 +1,46 @@
+---
+permalink: howto/collecting-integration-data.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez importer des données d"intégration dans votre système OnCommand Insight. Les données peuvent être importées à l"aide de collectd, un logiciel open source qui s"exécute comme un démon pour collecter des données de performances, ou en utilisant la source de données SNMP d"intégration qui vous permet de collecter des données SNMP génériques.' 
+---
+= Collecte des données d'intégration
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez importer des données d'intégration dans votre système OnCommand Insight. Les données peuvent être importées à l'aide de collectd, un logiciel open source qui s'exécute comme un démon pour collecter des données de performances, ou en utilisant la source de données SNMP d'intégration qui vous permet de collecter des données SNMP génériques.
+
+
+
+== Flux de données pour les données d'intégration
+
+Ce qui suit s'applique à la quantité totale de données d'intégration pouvant être présentées au serveur OnCommand Insight :
+
+* Une file d'attente de 100 appels est conservée.
++
+Lorsqu'un client attend plus d'une minute dans la file d'attente, une erreur de temporisation se produit.
+
+* Le taux d'ingestion recommandé pour les données d'intégration est d'une fois par minute, par client.
+* Il existe une limite de 300 types d'objets d'intégration autorisés.
+
+
+
+
+== Accès au logiciel et à la documentation de collectd
+
+Vous pouvez accéder au logiciel du plug-in Output writer et à la documentation de collectd sur le site GitHub de NetApp : https://github.com/NetApp/OCI_collectd[]
+
+
+
+== Sauvegarde et restauration des données d'intégration
+
+La sauvegarde et la restauration des données d'intégration sont modélisées en fonction des règles de sauvegarde et de restauration des données d'entreprise d'OnCommand Insight. Lorsqu'une sauvegarde est configurée pour les données de performances, les données d'intégration sont également incluses dans la sauvegarde. Comme pour la sauvegarde de performances, les données d'intégration des sept derniers jours sont incluses dans la sauvegarde. Toutes les données d'intégration présentes dans une sauvegarde sont restaurées lors d'une opération de restauration.
+
+
+
+== Licences
+
+Une licence Perform est requise pour que les données d'intégration soient signalées. Si une licence Perform n'est pas présente, une erreur se produit avec le message « Exécuter la licence requise pour signaler les données d'intégration ».

@@ -1,0 +1,89 @@
+---
+permalink: config-admin/importing-and-exporting-user-data.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les fonctions d"importation et d"exportation vous permettent d"exporter dans un fichier des annotations, des règles d"annotation, des requêtes, des règles de performance et des tableaux de bord personnalisés. Ce fichier peut ensuite être importé sur différents serveurs OnCommand Insight.' 
+---
+= Importation et exportation des données utilisateur
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les fonctions d'importation et d'exportation vous permettent d'exporter dans un fichier des annotations, des règles d'annotation, des requêtes, des règles de performance et des tableaux de bord personnalisés. Ce fichier peut ensuite être importé sur différents serveurs OnCommand Insight.
+
+Les fonctions d'exportation et d'importation sont prises en charge uniquement entre les serveurs qui exécutent la même version de OnCommand Insight.
+
+Pour exporter ou importer des données utilisateur, cliquez sur *Admin* et sélectionnez *Setup*, puis choisissez l'onglet *Importer/Exporter des données utilisateur*.
+
+Lors de l'importation, des données sont ajoutées, fusionnées ou remplacées, en fonction des objets et des types d'objets en cours d'importation.
+
+* Types d'annotations
++
+** Ajoute une annotation si aucune annotation du même nom n'existe dans le système cible.
+** Fusionne une annotation si le type d'annotation est une liste et qu'une annotation avec le même nom existe dans le système cible.
+** Remplace une annotation si le type d'annotation est autre qu'une liste et qu'une annotation du même nom existe dans le système cible.
+
+
++
+[NOTE]
+====
+Si une annotation portant le même nom mais avec un type différent existe dans le système cible, l'importation échoue. Si les objets dépendent de l'annotation qui a échoué, ces objets peuvent afficher des informations incorrectes ou indésirables. Vous devez vérifier toutes les dépendances des annotations une fois l'opération d'importation terminée.
+
+====
+* Règles d'annotation
++
+** Ajoute une règle d'annotation si aucune règle d'annotation portant le même nom n'existe dans le système cible.
+** Remplace une règle d'annotation si une règle d'annotation portant le même nom existe dans le système cible.
+
+
++
+[NOTE]
+====
+Les règles d'annotation dépendent à la fois des requêtes et des annotations. Vous devez vérifier la précision de toutes les règles d'annotation une fois l'opération d'importation terminée.
+
+====
+* Stratégies
++
+** Ajoute une règle si aucune règle portant le même nom n'existe dans le système cible.
+** Remplace une règle si une règle portant le même nom existe dans le système cible.
+
+
++
+[NOTE]
+====
+Les politiques peuvent être hors service une fois l'opération d'importation terminée. Vous devez vérifier l'ordre des polices après l'importation. Les règles qui dépendent des annotations peuvent échouer si elles sont incorrectes. Vous devez vérifier toutes les dépendances d'annotation après l'importation.
+
++
+
+====
+* Requêtes
++
+** Ajoute une requête si aucune requête portant le même nom n'existe dans le système cible.
+** Remplace une requête si une requête portant le même nom existe dans le système cible, même si le type de ressource de la requête est différent.
+
+
++
+[NOTE]
+====
+Si le type de ressource d'une requête est différent, après l'importation, les widgets de tableau de bord qui utilisent cette requête peuvent afficher des résultats indésirables ou incorrects. Vous devez vérifier l'exactitude de tous les widgets basés sur des requêtes après l'importation. Les requêtes qui dépendent des annotations peuvent échouer si les annotations sont incorrectes. Vous devez vérifier toutes les dépendances d'annotation après l'importation.
+
++
+
+====
+* Tableaux de bord
++
+** Ajoute un tableau de bord si aucun tableau de bord portant le même nom n'existe dans le système cible.
+** Remplace un tableau de bord si un tableau de bord portant le même nom existe dans le système cible, même si le type de ressource de la requête est différent.
+
+
++
+[NOTE]
+====
+Vous devez vérifier l'exactitude de tous les widgets basés sur des requêtes dans les tableaux de bord après l'importation. Si le serveur source possède plusieurs tableaux de bord portant le même nom, ils sont tous exportés. Cependant, seul le premier sera importé vers le serveur cible. Pour éviter les erreurs lors de l'importation, vous devez vous assurer que vos tableaux de bord ont des noms uniques avant de les exporter.
+
++
+
+====
+

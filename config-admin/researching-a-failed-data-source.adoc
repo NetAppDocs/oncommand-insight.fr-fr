@@ -1,0 +1,38 @@
+---
+permalink: config-admin/researching-a-failed-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Si une source de données a le « Echec de l"inventaire ! » Ou « Echec de la performance ! » Message et impact élevé ou moyen, vous devez rechercher ce problème en utilisant la page de résumé de la source de données avec ses informations liées.' 
+---
+= Recherche d'une source de données défaillante
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si une source de données a le message "*échec de l'inventaire !*" ou "*échec de la performance !*" et un impact élevé ou moyen, vous devez rechercher ce problème en utilisant la page de résumé de la source de données avec ses informations liées.
+
+
+
+== Étapes
+
+. Cliquez sur le *Nom* lié de la source de données pour ouvrir la page Résumé.
+. Sur la page Résumé, cochez la zone *Commentaires* pour lire les notes laissées par un autre ingénieur qui pourrait également étudier cet échec.
+. Notez tous les messages de performance.
+. Si un correctif est appliqué à cette source de données, cliquez sur le lien pour vérifier la page *patch* pour voir si cela a causé le problème.
+. Déplacez le pointeur de la souris sur les segments du graphique *Chronologie des événements* pour afficher des informations supplémentaires.
+. Sélectionnez un message d'erreur pour un périphérique et affiché sous la chronologie des événements, puis cliquez sur l'icône *Détails de l'erreur* qui s'affiche à droite du message.
++
+Les détails de l'erreur incluent le texte du message d'erreur, les causes les plus probables, les informations en cours d'utilisation et les suggestions sur ce qui peut être tenté de corriger le problème.
+
+. Dans la zone des périphériques signalés par cette source de données, vous pouvez filtrer la liste pour afficher uniquement les périphériques qui vous intéressent, et vous pouvez cliquer sur le *Nom* lié d'un périphérique pour afficher la _page_ASSET_ pour ce périphérique.
+. Pour revenir aux pages affichées précédemment, utilisez l'une des techniques suivantes :
++
+** Cliquez sur la flèche de retour du navigateur.
+** Cliquez avec le bouton droit de la souris sur la flèche de retour pour afficher la liste des pages et sélectionner la page souhaitée.
+
+
+. Pour afficher des informations détaillées sur d'autres ressources, cliquez sur d'autres noms liés.
+. Lorsque vous revenez à la page de résumé de la source de données, vérifiez la zone *Changes* en bas de la page pour voir si des modifications récentes ont causé le problème.
+

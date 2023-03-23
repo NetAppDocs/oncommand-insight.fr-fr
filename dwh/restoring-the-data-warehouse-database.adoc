@@ -1,0 +1,51 @@
+---
+permalink: dwh/restoring-the-data-warehouse-database.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez restaurer une base de données Data Warehouse à l"aide du fichier .zip créé lors de la sauvegarde de cette base de données Data Warehouse.' 
+---
+= Restauration de la base de données Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez restaurer une base de données Data Warehouse à l'aide de `.zip` Fichier créé lors de la sauvegarde de la base de données Data Warehouse.
+
+
+
+== Description de la tâche
+
+Lorsque vous restaurez une base de données Data Warehouse, vous avez également la possibilité de restaurer les informations de compte utilisateur à partir de la sauvegarde. Les tables de gestion des utilisateurs sont utilisées par le moteur de rapport Data Warehouse dans une installation Data Warehouse uniquement.
+
+
+
+== Étapes
+
+. Connectez-vous au portail Data Warehouse à l'adresse `+https://hostname/dwh+`, où `hostname` Est le nom du système sur lequel l'entrepôt de données OnCommand Insight est installé.
+. Dans le volet de navigation de gauche, cliquez sur *Sauvegarder/Restaurer*.
+. Dans la section *Restaurer la base de données et les rapports*, cliquez sur *Parcourir*, puis localisez le `.zip` Fichier contenant la sauvegarde de l'entrepôt de données.
+. Si vous souhaitez restaurer des rapports ou des données de compte d'utilisateur, cochez l'une des cases suivantes ou les deux :
++
+** *Restaurer la base de données*
++
+Inclut les paramètres Data Warehouse, les magasins de données, les connexions et les informations de compte utilisateur.
+
+** *Restaurer les rapports*
++
+Inclut les rapports personnalisés, les rapports prédéfinis, les modifications apportées aux rapports prédéfinis et les paramètres de rapport que vous avez créés dans le portail de rapports.
+
++
+[NOTE]
+====
+Si votre sauvegarde de base de données contient un rapport personnalisé dont le nom comporte une barre oblique (/) ou un crochet ouvert ([) (par exemple, port de commutation du centre INFORMATIQUE américain Boston/juillet), l'opération de restauration renomme le rapport, en remplaçant la barre oblique ou le crochet ouvert par un trait de soulignement (par exemple, Port de commutation DU centre IT DES ÉTATS-UNIS Boston_juillet).
+
+====
+
+
+. Cliquez sur *Restaurer*.
++
+Une fois le processus de restauration terminé, un message s'affiche sous le bouton Restaurer. Si le processus de restauration a réussi, le message indique que le processus a réussi. Si le processus de restauration échoue, le message signale l'exception spécifique à l'origine de l'échec. Si une exception se produit et que le processus de restauration échoue, la base de données d'origine est automatiquement réinitialisée.
+
+

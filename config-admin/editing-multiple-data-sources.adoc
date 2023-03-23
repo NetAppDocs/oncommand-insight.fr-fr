@@ -1,0 +1,33 @@
+---
+permalink: config-admin/editing-multiple-data-sources.html 
+sidebar: sidebar 
+keywords: bulk edit 
+summary: 'Vous pouvez modifier la plupart des informations relatives à plusieurs sources de données du même fournisseur et du même modèle en même temps. Par exemple, si ces sources de données partagent un nom d"utilisateur et un mot de passe, vous pouvez modifier le mot de passe à un seul endroit et ainsi mettre à jour le mot de passe pour toutes les sources de données sélectionnées.' 
+---
+= Modification des informations pour plusieurs sources de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez modifier la plupart des informations relatives à plusieurs sources de données du même fournisseur et du même modèle en même temps. Par exemple, si ces sources de données partagent un nom d'utilisateur et un mot de passe, vous pouvez modifier le mot de passe à un seul endroit et ainsi mettre à jour le mot de passe pour toutes les sources de données sélectionnées.
+
+
+
+== Description de la tâche
+
+Les options que vous ne pouvez pas modifier pour les sources de données sélectionnées apparaissent grisées ou ne sont pas affichées dans la boîte de dialogue Modifier la source de données. De plus, lorsqu'une option affiche une valeur de *Mixte*, elle indique que la valeur de l'option varie entre les sources de données sélectionnées. Par exemple, si l'option *Timeout (sec)* pour deux sources de données sélectionnées est *Mixed*, une source de données peut avoir une valeur de temporisation de 60 et l'autre une valeur de 90 ; par conséquent, si vous définissez cette valeur sur 120 et que vous enregistrez les modifications apportées aux sources de données, le paramètre de temporisation pour les deux sources de données devient 120.
+
+
+
+== Étapes
+
+. Cliquez sur *Admin* et naviguez jusqu'à la liste des sources de données
+. Sélectionnez les sources de données à modifier. Les sources de données sélectionnées doivent appartenir au même fournisseur, au même modèle et à la même unité d'acquisition.
+. Cliquez sur le bouton *actions* et sélectionnez l'option *Modifier*.
+. Dans la boîte de dialogue d'édition, modifiez les *Paramètres* selon vos besoins.
+. Cliquez sur le lien *Configuration* pour modifier les options de base des sources de données.
+. Cliquez sur le lien *Configuration avancée* pour modifier les options avancées des sources de données.
+. Cliquez sur *Enregistrer*.
+

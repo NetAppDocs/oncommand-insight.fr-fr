@@ -1,0 +1,46 @@
+---
+permalink: howto/servicenow-integration-set-up-user.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous devez configurer un utilisateur ServiceNow pour qu"Insight puisse se connecter aux données et les synchroniser.' 
+---
+= Intégration ServiceNow : utilisateur configuré
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez configurer un utilisateur ServiceNow pour qu'Insight puisse se connecter aux données et les synchroniser.
+
+
+
+== Description de la tâche
+
+
+
+== Étapes
+
+. Créez un compte de services dans ServiceNow. Connectez-vous à ServiceNow et accédez à *System Security* > *Users and Groups* > *Users*. Cliquez sur *Nouveau*.
+. Entrez un nom d'utilisateur. Dans cet exemple, nous utiliserons « OCI2SNOW » comme utilisateur d'intégration. Saisissez un mot de passe pour cet utilisateur.
++
+[NOTE]
+====
+Dans ce mode d'emploi, nous utilisons un utilisateur de compte de services nommé « OCI2SNOW » dans la documentation. Vous pouvez utiliser un autre compte de services, mais assurez-vous qu'il est cohérent dans l'ensemble de votre environnement.
+
+====
+. Cliquez avec le bouton droit de la souris sur la barre de menus et cliquez sur *Enregistrer*. Cela vous permettra de rester sur cet utilisateur afin d'ajouter des rôles.
+. Cliquez sur *Modifier* et ajoutez les rôles suivants à cet utilisateur :
++
+** ressource
+** import_transformateur
+** service_rest
+
+
+. Cliquez sur *Enregistrer*.
+. Ce même utilisateur doit être ajouté à OnCommand Insight. Connectez-vous à Insight en tant qu'utilisateur disposant des autorisations d'administrateur.
+. Accédez à *Admin* > *Setup* et cliquez sur l'onglet *Users*.
+. Cliquez sur le bouton *actions* et sélectionnez *Ajouter un utilisateur*.
+. Pour nom, entrez « OCI2SNOW ». Si vous avez utilisé un autre nom d'utilisateur ci-dessus, entrez ce nom ici. Entrez le même mot de passe que celui que vous avez utilisé pour l'utilisateur ServiceNow ci-dessus. Vous pouvez laisser le champ de l'e-mail vide.
+. Attribuez à cet utilisateur le rôle *utilisateur*. Cliquez sur *Enregistrer*.
+

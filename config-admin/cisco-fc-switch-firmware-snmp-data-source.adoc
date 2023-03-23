@@ -1,0 +1,285 @@
+---
+permalink: config-admin/cisco-fc-switch-firmware-snmp-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight utilise la source de données Cisco FC Switch Firmware 2.0+ \(SNMP\) pour découvrir l"inventaire des commutateurs Cisco MDS Fibre Channel et de divers commutateurs Cisco Nexus FCoE sur lesquels le service FC est activé. De plus, vous pouvez découvrir de nombreux modèles de périphériques Cisco s"exécutant en mode NPV avec cette source de données.' 
+---
+= Source de données Cisco FC Switch Firmware (SNMP)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight utilise la source de données Cisco FC Switch Firmware 2.0+ (SNMP) pour découvrir l'inventaire des commutateurs Cisco MDS Fibre Channel et de divers commutateurs Cisco Nexus FCoE sur lesquels le service FC est activé. De plus, vous pouvez découvrir de nombreux modèles de périphériques Cisco s'exécutant en mode NPV avec cette source de données.
+
+
+
+== Terminologie
+
+OnCommand Insight acquiert les informations d'inventaire suivantes à partir de la source de données du commutateur FC Cisco. Pour chaque type de ressource acquis par Insight, la terminologie la plus courante utilisée pour cette ressource est indiquée. Lors de l'affichage ou du dépannage de cette source de données, gardez à l'esprit la terminologie suivante :
+
+|===
+
+
+| Terme du fournisseur/modèle | Terme Insight 
+
+
+ a| 
+Commutateur
+ a| 
+Commutateur
+
+
+
+ a| 
+Port
+ a| 
+Port
+
+
+
+ a| 
+VSAN
+ a| 
+Structure
+
+
+
+ a| 
+Zone
+ a| 
+Zone
+
+
+
+ a| 
+Commutateur logique
+ a| 
+Commutateur logique
+
+
+
+ a| 
+Entrée de serveur de noms
+ a| 
+Entrée de serveur de noms
+
+
+
+ a| 
+Zone IVR (Inter-VSAN Routing)
+ a| 
+Zone IVR
+
+|===
+[NOTE]
+====
+Il s'agit uniquement de mappages terminologiques courants et peuvent ne pas représenter tous les cas pour cette source de données.
+
+====
+
+
+== De formation
+
+* Adresse IP d'un commutateur dans la structure ou sur des commutateurs individuels
+* Découverte de châssis, pour activer la découverte de structure
+* Si vous utilisez SNMP V2, chaîne de communauté en lecture seule
+* Le port 161 est utilisé pour accéder au périphérique
+* Accéder à la validation à l'aide de `snmpwalk` utilitaire vers le commutateur (voir `<install_path\>\bin\`)
+
+
+
+
+== Configuration
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+IP du commutateur Cisco
+ a| 
+Adresse IP ou nom de domaine complet du commutateur
+
+
+
+ a| 
+Version SNMP
+ a| 
+SNMP version v2 ou ultérieure est requis pour l'acquisition des performances
+
+
+
+ a| 
+Chaîne de communauté SNMP
+ a| 
+Chaîne de communauté en lecture seule SNMP utilisée pour accéder au commutateur (non applicable pour SNMP v3)
+
+
+
+ a| 
+Nom d'utilisateur
+ a| 
+Nom d'utilisateur du commutateur (SNMP v3 uniquement)
+
+
+
+ a| 
+Mot de passe
+ a| 
+Mot de passe utilisé pour le commutateur (SNMPv3 uniquement)
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+Intervalle entre les sondages d'inventaire (40 minutes par défaut)
+
+
+
+ a| 
+Protocole d'autorisation SNMP
+ a| 
+Protocole d'authentification SNMP (SNMPv3 uniquement)
+
+
+
+ a| 
+Protocole de confidentialité SNMP
+ a| 
+Protocole SNMP Privacy (SNMPv3 uniquement)
+
+
+
+ a| 
+Mot de passe de confidentialité SNMP
+ a| 
+Mot de passe de confidentialité SNMP
+
+
+
+ a| 
+Nouvelles tentatives SNMP
+ a| 
+Nombre de tentatives de tentative SNMP
+
+
+
+ a| 
+Délai d'expiration SNMP (ms)
+ a| 
+SNMP timeout (5000 ms par défaut)
+
+
+
+ a| 
+Activer le recouvrement
+ a| 
+Sélectionnez pour activer le recouvrement. Si vous activez le recouvrement, vous devez également activer les notifications SNMP.
+
+
+
+ a| 
+Temps minimum entre les recouvrements (s)
+ a| 
+Temps minimum entre les tentatives d'acquisition déclenchées par des interruptions (10 secondes par défaut)
+
+
+
+ a| 
+Découvrez tous les commutateurs Fabric
+ a| 
+Sélectionnez pour découvrir tous les commutateurs de la structure
+
+
+
+ a| 
+Exclure les périphériques
+ a| 
+Liste des adresses IP des périphériques à exclure de l'interrogation, séparées par des virgules
+
+
+
+ a| 
+Inclure les périphériques
+ a| 
+Liste des adresses IP des périphériques à inclure dans l'interrogation, séparées par des virgules
+
+
+
+ a| 
+Vérifiez le type de périphérique
+ a| 
+Sélectionnez pour accepter uniquement les périphériques qui se annoncent explicitement comme périphériques Cisco
+
+
+
+ a| 
+Type d'alias principal
+ a| 
+Fournissez une première préférence pour la résolution de l'alias. Choisissez parmi les options suivantes :
+
+* *Alias de périphérique*
++
+Il s'agit d'un nom convivial pour un WWN de port (PWWN) qui peut être utilisé dans toutes les commandes de configuration, selon les besoins. Tous les commutateurs de la gamme Cisco MDS 9000 prennent en charge les services d'alias de périphérique distribués (alias de périphérique).
+
+* *Aucun*
++
+Ne signalez aucun alias
+
+* *Description du port*
++
+Description permettant d'identifier le port dans une liste de ports
+
+* *Alias de zone (tous)*
++
+Nom convivial d'un port qui ne peut être utilisé que pour la configuration de zoning
+
+* *Alias de zone (actif uniquement)*
++
+Nom convivial d'un port qui ne peut être utilisé que pour la configuration active. Il s'agit de la valeur par défaut.
+
+
+
+
+
+ a| 
+Type d'alias secondaire
+ a| 
+Fournissez une deuxième préférence pour la résolution de l'alias
+
+
+
+ a| 
+Type d'alias tertiaire
+ a| 
+Fournissez une troisième préférence pour la résolution de l'alias
+
+
+
+ a| 
+Activez la prise en charge du mode proxy SNAP
+ a| 
+Sélectionnez si votre commutateur Cisco utilise SANTap en mode proxy. Si vous utilisez EMC RecoverPoint, vous utilisez probablement SANTap.
+
+
+
+ a| 
+Intervalle d'interrogation des performances (s)
+ a| 
+Intervalle entre les sondages de performances (300 secondes par défaut)
+
+|===

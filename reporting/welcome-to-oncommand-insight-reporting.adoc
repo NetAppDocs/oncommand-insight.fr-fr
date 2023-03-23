@@ -1,0 +1,26 @@
+---
+permalink: reporting/welcome-to-oncommand-insight-reporting.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les rapports OnCommand Insight sont des outils de veille stratégique qui vous permettent d"afficher des rapports prédéfinis ou de créer des rapports personnalisés. Les rapports OnCommand Insight génèrent des rapports à partir des données de l"entrepôt de données \(DWH\).' 
+---
+= Bienvenue dans le rapport OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les rapports OnCommand Insight sont des outils de veille stratégique qui vous permettent d'afficher des rapports prédéfinis ou de créer des rapports personnalisés. Les rapports OnCommand Insight génèrent des rapports à partir des données de l'entrepôt de données (DWH).
+
+Grâce aux rapports OnCommand Insight, vous pouvez effectuer les tâches suivantes :
+
+* Exécuter un rapport prédéfini
+* Créer un rapport personnalisé
+* Personnalisez le format du rapport et la méthode de livraison
+* Planifiez l'exécution automatique des rapports
+* Rapports par e-mail
+* Utilisez des couleurs pour représenter des seuils sur les données
+
+
+Les rapports prédéfinis sont les rapports OnCommand Insight standard. Ce guide décrit les rapports prédéfinis disponibles avec toutes les licences de produit.

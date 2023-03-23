@@ -1,0 +1,34 @@
+---
+permalink: config-admin/enabling-performance-archive.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Pour activer l"archivage des données de performances, procédez comme suit.' 
+---
+= Activation de l'archivage des performances
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour activer l'archivage des données de performances, procédez comme suit.
+
+
+
+== Étapes
+
+. Dans la barre d'outils, cliquez sur *Admin* > *Setup*.
+. Sélectionnez l'onglet *sauvegarde et archivage*.
+. Dans la section Archives de performances, assurez-vous que la case **Activer l'archive de performances** est cochée.
+. Spécifiez un emplacement d'archive valide.
++
+Vous ne pouvez pas spécifier de dossier sous le dossier d'installation d'Insight.
+
++
+Meilleure pratique : ne spécifiez pas le même dossier pour l'archivage que l'emplacement de sauvegarde Insight.
+
+. Cliquez sur *Enregistrer*.
++
+Le processus d'archivage est géré en arrière-plan et n'interfère pas avec d'autres activités Insight.
+
+

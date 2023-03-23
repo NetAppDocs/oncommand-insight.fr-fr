@@ -1,0 +1,34 @@
+---
+permalink: config-admin/how-annotations-are-assigned.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez affecter des annotations manuellement ou automatiquement à l"aide des règles d"annotation. OnCommand Insight attribue également automatiquement certaines annotations lors de l"acquisition des actifs et par héritage. Toutes les annotations que vous attribuez à une ressource apparaissent dans la section données utilisateur de la page ressource.' 
+---
+= Mode d'affectation des annotations
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez affecter des annotations manuellement ou automatiquement à l'aide des règles d'annotation. OnCommand Insight attribue également automatiquement certaines annotations lors de l'acquisition des actifs et par héritage. Toutes les annotations que vous attribuez à une ressource apparaissent dans la section données utilisateur de la page ressource.
+
+Les annotations sont attribuées de la manière suivante :
+
+* Vous pouvez affecter une annotation manuellement à une ressource.
++
+Si une annotation est affectée directement à une ressource, elle apparaît sous la forme d'un texte normal sur une page de ressource. Les annotations attribuées manuellement ont toujours priorité sur les annotations héritées ou affectées par des règles d'annotation.
+
+* Vous pouvez créer une règle d'annotation pour affecter automatiquement des annotations aux actifs du même type.
++
+Si l'annotation est affectée par une règle, Insight affiche le nom de la règle en regard du nom de l'annotation sur une page de ressource.
+
+* Insight associe automatiquement un niveau à un modèle de niveau de stockage pour accélérer l'affectation des annotations de stockage à vos ressources lors de l'acquisition des ressources.
++
+Certaines ressources de stockage sont automatiquement associées à un niveau prédéfini (tiers 1 et 2). Par exemple, le niveau de stockage Symmetrix est basé sur la famille Symmetrix et VMAX et est associé au niveau 1. Vous pouvez modifier les valeurs par défaut pour les adapter à vos exigences de niveau. Si l'annotation est affectée par Insight (par exemple, Tier), vous voyez « défini par le système » lorsque vous placez votre curseur sur le nom de l'annotation sur une page d'actif.
+
+* Quelques ressources (enfants d'une ressource) peuvent dériver l'annotation de niveau prédéfinie de leur ressource (parent).
++
+Par exemple, si vous attribuez une annotation à un stockage, l'annotation de niveau est dérivée de tous les pools de stockage, des volumes internes, des volumes, des qtrees et des partages appartenant au stockage. Si une annotation différente est appliquée à un volume interne du stockage, l'annotation est ensuite dérivée de tous les volumes, qtrees et partages. "`derived`" apparaît à côté du nom de l'annotation sur une page de ressource.
+
+

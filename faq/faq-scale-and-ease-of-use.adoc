@@ -1,0 +1,46 @@
+---
+permalink: faq/faq-scale-and-ease-of-use.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Cette FAQ répond aux questions les plus courantes sur l"évolutivité et la facilité d"utilisation de OnCommand Insight.' 
+---
+= Évolutivité et facilité d'utilisation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cette FAQ répond aux questions les plus courantes sur l'évolutivité et la facilité d'utilisation de OnCommand Insight.
+
+
+
+== Comment le logiciel OCI s'adapte-t-il ?
+
+OCI est l'un des leaders en matière d'interopérabilité et de nombre d'actifs qu'il peut acquérir avec une empreinte minimale. À sa base, OCI nécessite 2 serveurs virtuels ou physiques : un pour le serveur opérationnel qui détecte toutes les ressources du data Center et un pour son data warehouse consolidé pour les rapports d'historique à long terme. La couverture haute performance d'OCI prend en charge des centaines de baies, des dizaines de milliers de machines virtuelles, 100,000 chemins Fibre Channel et plus de 10,000 ports Fibre Channel, le tout dans une seule instance de serveur.
+
+
+
+== Combien de personnes sont nécessaires pour gérer l'application OCI ?
+
+OCI peut être géré par une seule personne. Toutefois, les fonctionnalités d'OCI peuvent être utilisées par plusieurs rôles dans l'environnement métier, chacun ayant des rôles différents, chacun ayant des besoins différents en matière de reporting, de résolution de problèmes ou d'analytique. Tous les efforts sont déployés pour minimiser la maintenance des outils, depuis les menus d'état et de notification affichant des problèmes de configuration jusqu'à la détection automatique des hôtes physiques connectés à une structure. Les annotations flexibles mettent le contexte commercial aux données de l'écosystème pour tous les types d'utilisateurs. Des administrateurs du stockage, de la structure et de la virtualisation aux planificateurs de capacité, aux analystes et dirigeants d'entreprise, OCI rassemble dans une seule interface le partage d'informations entre les silos et les technologies de l'entreprise.
+
+
+
+== OCI prend-il en charge le reporting personnalisé ?
+
+Oui. OCI fournit des rapports via l'outil de veille stratégique IBM Cognos, ce qui vous permet de créer vos propres rapports entièrement personnalisés à partir des données collectées dans l'entrepôt de données d'OCI.
+
+
+
+== Est-il facile de créer des rapports personnalisés ?
+
+Le reporting OCI offre des fonctionnalités pour les utilisateurs novices et avancés. OCI propose de nombreuses fonctionnalités de création de rapports, notamment des fonctionnalités de création de rapports « glisser-déplacer » et des rapports SQL basés sur des requêtes pour une mission de service plus avancée pour les utilisateurs ou les professionnels. La solution de veille stratégique intégrée à OCI (IBM Cognos) évite les erreurs courantes, telles que la double capacité de comptage. Avec une gamme complète de rapports, widgets, requêtes et tableaux de bord prêts à l'emploi, vous disposez d'offres adaptées aux exigences de reporting de n'importe qui.
+
+Les clients peuvent également trouver des modèles de reporting téléchargeables depuis la boutique de la communauté OCI.
+
+
+
+== OCI peut-il afficher les performances et la disponibilité avec une simplicité optimale ?
+
+Oui. L'entrepôt de données OCI et les rapports permettent d'obtenir des rapports avec des améliorations de couleur, par exemple rouge/jaune/vert « style conditionnel » des valeurs. La génération d'une police de couleur ou d'un arrière-plan dans un rapport peut être mise en œuvre à la fois par les utilisateurs finaux et par les services professionnels. Les bibliothèques de widgets OCI permettent d'afficher des mesures de performance spécifiques à l'entreprise dans les tableaux de bord.

@@ -1,0 +1,35 @@
+---
+permalink: config-admin/installing-a-patch-on-all-data-sources-of-one-type.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Après avoir téléchargé un correctif de source de données, vous pouvez l"installer sur toutes les sources de données du même type.' 
+---
+= Installation d'un correctif sur un type de source de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Après avoir téléchargé un correctif de source de données, vous pouvez l'installer sur toutes les sources de données du même type.
+
+
+
+== Avant de commencer
+
+Vous devez avoir téléchargé un fichier correctif que vous souhaitez installer sur un type de source de données.
+
+
+
+== Étapes
+
+. Dans la barre d'outils Insight, cliquez sur *Admin*.
+. Cliquez sur *Patches*.
+. Dans le bouton actions, sélectionnez *appliquer patch*.
+. Dans la boîte de dialogue *Apply data source patch*, cliquez sur *Browse* pour localiser le fichier correctif téléchargé.
+. Vérifiez les sources de données *Patch name*, *Description* et *impactées*.
+. Si le correctif sélectionné est correct, cliquez sur *appliquer le correctif*.
++
+Toutes les sources de données du même type sont mises à jour avec ce correctif.
+
+

@@ -1,0 +1,32 @@
+---
+permalink: config-admin/insight-for-administrators-and-planners.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight fournit des informations essentielles pour les administrateurs, les responsables et les architectes du stockage, afin d"effectuer la résolution de problèmes et les analyses.' 
+---
+= Utilisation d'Insight par les administrateurs, les responsables et les planificateurs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight fournit des informations essentielles pour les administrateurs, les responsables et les architectes du stockage, afin d'effectuer la résolution de problèmes et les analyses.
+
+Les administrateurs de stockage expérimentés utilisent OnCommand Insight ainsi que leurs connaissances en matière de stockage réseau pour effectuer les tâches suivantes :
+
+* Gérez l'environnement SAN et NAS.
+* Travaillez avec les ingénieurs SAN sur les problèmes réseau.
+* Évaluez, testez et intégrez les nouvelles technologies de stockage dans votre environnement.
+* Résolvez les problèmes de performances, les alertes, les violations de règles, les violations et les vulnérabilités.
+
+
+Les responsables et les planificateurs réseau utilisent OnCommand Insight pour effectuer les tâches suivantes :
+
+* La planification de la capacité
+* Élaborer les budgets et les échéanciers des projets.
+* Évaluer et réviser les plans de projet pour répondre aux demandes changeantes des projets. 
+* Gérer la planification et les dépenses du projet.
+* Achat de matériel et de logiciels.
+* Fournissez des rapports commerciaux sur la gestion de la capacité, la facturation interne, le dimensionnement approprié et les accords de niveau de service.
+

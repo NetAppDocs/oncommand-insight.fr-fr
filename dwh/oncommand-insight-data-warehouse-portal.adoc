@@ -1,0 +1,32 @@
+---
+permalink: dwh/oncommand-insight-data-warehouse-portal.html 
+sidebar: sidebar 
+keywords:  
+summary: Data Warehouse Portal est une interface utilisateur Web que vous utilisez pour configurer des options et définir des calendriers fixes pour récupérer des données. À partir du portail entrepôt de données, vous pouvez également accéder au portail de création de rapports OnCommand Insight. 
+---
+= Ce que vous pouvez faire à l'aide de Data Warehouse Portal
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Data Warehouse Portal est une interface utilisateur Web que vous utilisez pour configurer des options et définir des calendriers fixes pour récupérer des données. À partir du portail entrepôt de données, vous pouvez également accéder au portail de création de rapports OnCommand Insight.
+
+À l'aide du portail Data Warehouse, vous pouvez effectuer les opérations suivantes :
+
+* Accédez au portail de création de rapports OnCommand Insight pour afficher des rapports prédéfinis ou pour créer des rapports personnalisés à l'aide d'outils de création de rapports.
+* Consolidez plusieurs bases de données OnCommand Insight.
+* Gérer les connexions aux serveurs OnCommand Insight.
+* Vérifiez l'état des tâches ou des requêtes en cours d'exécution.
+* Planification des builds d'entrepôt de données.
+* Modifiez le nom du site.
+* Afficher la version de Data Warehouse et l'historique des mises à niveau, y compris des informations spécifiques telles que les versions de module, les sites et les licences.
+* Importer des annotations.
+* Configurer une génération à partir de l'historique.
+* Afficher la documentation Data Warehouse et le schéma de base de données.
+* Réinitialisez la base de données Data Warehouse.
+* Sauvegardez et restaurez la base de données Data Warehouse.
+* Résoudre les problèmes liés à l'entrepôt de données.
+* Gestion des comptes utilisateur.
+

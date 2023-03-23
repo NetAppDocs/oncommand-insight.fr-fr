@@ -1,0 +1,16 @@
+---
+permalink: config-admin/preparing-a-special-troubleshooting-report.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Insight envoie automatiquement des informations au support client NetApp via le système ASUP que vous avez configuré après l"installation du logiciel. Cependant, vous pouvez créer un rapport de dépannage et ouvrir un dossier auprès de l"équipe de support pour un problème spécifique.' 
+---
+= Préparation d'un rapport de dépannage spécial
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insight envoie automatiquement des informations au support client NetApp via le système ASUP que vous avez configuré après l'installation du logiciel. Cependant, vous pouvez créer un rapport de dépannage et ouvrir un dossier auprès de l'équipe de support pour un problème spécifique.
+
+Vous pouvez effectuer manuellement une sauvegarde Insight, regrouper les journaux et envoyer ces informations au support client NetApp à l'aide des outils d'Insight.

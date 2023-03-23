@@ -1,0 +1,554 @@
+---
+permalink: install-linux/oncommand-insight-licenses.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight fonctionne avec des licences qui activent des fonctionnalités spécifiques sur le serveur Insight. 
+---
+= Licences OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight fonctionne avec des licences qui activent des fonctionnalités spécifiques sur le serveur Insight.
+
+* *Découverte*
++
+La fonctionnalité de découverte est la licence Insight de base qui prend en charge l'inventaire. Vous devez disposer d'une licence Discover pour utiliser OnCommand Insight et la licence Discover doit être associée à au moins une des licences assure, Perform ou Plan.
+
+* *Assure*
++
+Une licence assure prend en charge la fonctionnalité assurance, y compris les règles de chemin SAN et global, ainsi que la gestion des violations. Une licence assure vous permet également d'afficher et de gérer les vulnérabilités.
+
+* *Exécuter*
++
+Une licence Perform prend en charge la surveillance des performances sur les pages d'actifs, les widgets de tableau de bord, les requêtes, etc., ainsi que la gestion des stratégies de performances et des violations.
+
+* *Plan*
++
+Une licence Plan prend en charge les fonctions de planification, y compris l'utilisation et l'allocation des ressources.
+
+* *Host Utilization Pack*
++
+Une licence Host Utilization prend en charge l'utilisation du système de fichiers sur les hôtes et les machines virtuelles.
+
+* *Création de rapports*
++
+Une licence de création de rapports prend en charge des auteurs supplémentaires pour la création de rapports. Cette licence requiert la licence Plan.
+
+
+
+Les modules OnCommand Insight font l'objet d'une licence annuelle ou perpétuelle :
+
+* Par téraoctet de capacité surveillée pour les modules Discover, assure, Plan, Perform
+* Par nombre d'hôtes pour le pack d'utilisation d'hôte
+* Par nombre d'unités supplémentaires de Cognos pro-auteurs requises pour la création de rapports
+
+
+Les clés de licence sont un ensemble de chaînes uniques générées pour chaque client. Vous pouvez obtenir les clés de licence auprès de votre représentant OnCommand Insight.
+
+Vos licences installées contrôlent les options suivantes disponibles dans le logiciel :
+
+* *Découverte*
++
+Acquisition et gestion des stocks (base)
+
++
+Surveiller les modifications et gérer les stratégies d'inventaire
+
+* *Assure*
++
+Affichage et gestion des violations et des stratégies de chemin SAN
+
++
+Affichez et gérez les vulnérabilités
+
++
+Afficher et gérer les tâches et les migrations
+
+* *Plan*
++
+Afficher et gérer les demandes
+
++
+Afficher et gérer les tâches en attente
+
++
+Afficher et gérer les violations de réservation
+
++
+Afficher et gérer les violations de l'équilibrage des ports
+
+* *Exécuter*
++
+Surveillez les données de performances, y compris les données des widgets de tableau de bord, des pages d'actifs et des requêtes
+
++
+Affichez et gérez les règles de performances et les violations
+
+
+
+Les tableaux suivants fournissent des détails sur les fonctions disponibles avec et sans la licence Perform pour les utilisateurs admin et non-admin.
+
+|===
+
+
+| Fonctionnalité (admin) | Avec licence Perform | Sans licence Perform 
+
+
+ a| 
+Client supplémentaire
+ a| 
+Oui.
+ a| 
+Pas de données ou de graphiques de performances ; pas de widgets liés à la détection des anomalies
+
+
+
+ a| 
+Ordinateur virtuel
+ a| 
+Oui.
+ a| 
+Pas de données ou de graphiques de performances
+
+
+
+ a| 
+Hyperviseur
+ a| 
+Oui.
+ a| 
+Pas de données ou de graphiques de performances
+
+
+
+ a| 
+Hôte
+ a| 
+Oui.
+ a| 
+Pas de données ou de graphiques de performances
+
+
+
+ a| 
+Datastore
+ a| 
+Oui.
+ a| 
+Pas de données ou de graphiques de performances
+
+
+
+ a| 
+VMDK
+ a| 
+Oui.
+ a| 
+Pas de données ou de graphiques de performances
+
+
+
+ a| 
+Volume interne
+ a| 
+Oui.
+ a| 
+Pas de données ou de graphiques de performances
+
+
+
+ a| 
+Volumétrie
+ a| 
+Oui.
+ a| 
+Pas de données ou de graphiques de performances
+
+
+
+ a| 
+Pool de stockage
+ a| 
+Oui.
+ a| 
+Pas de données ou de graphiques de performances
+
+
+
+ a| 
+Disque
+ a| 
+Oui.
+ a| 
+Pas de données ou de graphiques de performances
+
+
+
+ a| 
+Stockage
+ a| 
+Oui.
+ a| 
+Pas de données ou de graphiques de performances
+
+
+
+ a| 
+Nœud de stockage
+ a| 
+Oui.
+ a| 
+Pas de données ou de graphiques de performances
+
+
+
+ a| 
+Structure
+ a| 
+Oui.
+ a| 
+Pas de données ou de graphiques de performances
+
+
+
+ a| 
+Port du commutateur
+ a| 
+Oui.
+ a| 
+Pas de données de performances ni de graphiques ; « erreurs de port » indique « N/A »
+
+
+
+ a| 
+Port de stockage
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Port NPV
+ a| 
+Oui.
+ a| 
+Pas de données ou de graphiques de performances
+
+
+
+ a| 
+Commutateur
+ a| 
+Oui.
+ a| 
+Pas de données ou de graphiques de performances
+
+
+
+ a| 
+Commutateur NPV
+ a| 
+Oui.
+ a| 
+Pas de données ou de graphiques de performances
+
+
+
+ a| 
+Qtrees
+ a| 
+Oui.
+ a| 
+Pas de données ou de graphiques de performances
+
+
+
+ a| 
+Quota
+ a| 
+Oui.
+ a| 
+Pas de données ou de graphiques de performances
+
+
+
+ a| 
+Chemin
+ a| 
+Oui.
+ a| 
+Pas de données ou de graphiques de performances
+
+
+
+ a| 
+Zone
+ a| 
+Oui.
+ a| 
+Pas de données ou de graphiques de performances
+
+
+
+ a| 
+Membre de la zone
+ a| 
+Oui.
+ a| 
+Pas de données ou de graphiques de performances
+
+
+
+ a| 
+Périphérique générique
+ a| 
+Oui.
+ a| 
+Pas de données ou de graphiques de performances
+
+
+
+ a| 
+Bande
+ a| 
+Oui.
+ a| 
+Pas de données ou de graphiques de performances
+
+
+
+ a| 
+Masquage
+ a| 
+Oui.
+ a| 
+Pas de données ou de graphiques de performances
+
+
+
+ a| 
+Sessions ISCSI
+ a| 
+Oui.
+ a| 
+Pas de données ou de graphiques de performances
+
+
+
+ a| 
+Portails réseau ICSI
+ a| 
+Oui.
+ a| 
+Pas de données ou de graphiques de performances
+
+
+
+ a| 
+Recherche
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Admin
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Tableau de bord
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Widgets
+ a| 
+Oui.
+ a| 
+Partiellement disponible (seuls les widgets ASSET, Query et admin sont disponibles)
+
+
+
+ a| 
+Tableau de bord des violations
+ a| 
+Oui.
+ a| 
+Masqué
+
+
+
+ a| 
+Tableau de bord des ressources
+ a| 
+Oui.
+ a| 
+Partiellement disponible (les widgets IOPS de stockage et IOPS de machine virtuelle sont masqués)
+
+
+
+ a| 
+Gérer les règles de performance
+ a| 
+Oui.
+ a| 
+Masqué
+
+
+
+ a| 
+Gérer les annotations
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Gérer les règles d'annotation
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Gestion des applications
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Requêtes
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Gérer les entités commerciales
+ a| 
+Oui.
+ a| 
+Oui.
+
+|===
+|===
+
+
+| Fonction | Utilisateur - avec licence Perform | Invité - avec licence Perform | Utilisateur - sans licence Perform | Invité - sans licence d'exécution 
+
+
+ a| 
+Tableau de bord des ressources
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Partiellement disponible (les widgets IOPS de stockage et IOPS de machine virtuelle sont masqués)
+ a| 
+Partiellement disponible (les widgets IOPS de stockage et IOPS de machine virtuelle sont masqués)
+
+
+
+ a| 
+Tableau de bord personnalisé
+ a| 
+Afficher uniquement (pas d'options de création, de modification ou d'enregistrement)
+ a| 
+Afficher uniquement (pas d'options de création, de modification ou d'enregistrement)
+ a| 
+Afficher uniquement (pas d'options de création, de modification ou d'enregistrement)
+ a| 
+Afficher uniquement (pas d'options de création, de modification ou d'enregistrement)
+
+
+
+ a| 
+Gérer les règles de performance
+ a| 
+Oui.
+ a| 
+Masqué
+ a| 
+Masqué
+ a| 
+Masqué
+
+
+
+ a| 
+Gérer les annotations
+ a| 
+Oui.
+ a| 
+Masqué
+ a| 
+Oui.
+ a| 
+Masqué
+
+
+
+ a| 
+Gestion des applications
+ a| 
+Oui.
+ a| 
+Masqué
+ a| 
+Oui.
+ a| 
+Masqué
+
+
+
+ a| 
+Gérer les entités commerciales
+ a| 
+Oui.
+ a| 
+Masqué
+ a| 
+Oui.
+ a| 
+Masqué
+
+
+
+ a| 
+Requêtes
+ a| 
+Oui.
+ a| 
+Afficher et modifier uniquement (pas d'option d'enregistrement)
+ a| 
+Oui.
+ a| 
+Afficher et modifier uniquement (pas d'option d'enregistrement)
+
+|===

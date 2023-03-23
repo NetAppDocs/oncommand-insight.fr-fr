@@ -1,0 +1,109 @@
+---
+permalink: config-admin/locating-required-information-for-new-disk-model.html 
+sidebar: sidebar 
+keywords:  
+summary: Pour localiser les informations relatives au modèle de disque, identifiez le fournisseur et le numéro de modèle, puis lancez une recherche Internet. 
+---
+= Recherche des informations requises pour le nouveau modèle de disque
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour localiser les informations relatives au modèle de disque, identifiez le fournisseur et le numéro de modèle, puis lancez une recherche Internet.
+
+
+
+== Description de la tâche
+
+La recherche des informations sur le modèle de disque est aussi simple que l'exécution d'une recherche sur Internet. Veillez à noter le nom du fournisseur et le numéro de modèle du disque avant de procéder à une recherche.
+
+
+
+== Étapes
+
+. Il est recommandé d'utiliser une recherche Internet avancée pour le fournisseur, le modèle et le type de document « PDF » pour trouver la fiche technique du fournisseur et/ou le guide d'installation du lecteur. Ces fiches techniques sont généralement la meilleure source d'informations sur les disques des fournisseurs.
+. Les spécifications du fournisseur ne fournissent pas toujours toutes les informations nécessaires en fonction du numéro de modèle complet. Il est souvent utile de rechercher différentes parties de la chaîne de numéro de modèle sur le site du fournisseur pour localiser toutes les informations.
+. Recherchez le nom du fournisseur du disque, le numéro de modèle complet, la taille et la vitesse du disque, ainsi que le type d'interface pour définir le nouveau modèle de disque dans OnCommand Insight. Vous pouvez utiliser le tableau suivant comme guide pour noter ces informations à mesure que vous les trouvez :
++
+|===
+
+
+| Pour ce champ : | Qui est : | Entrez ce qui suit : 
+
+
+ a| 
+Numéro de modèle (ou clé)
+ a| 
+Obligatoire
+ a| 
+
+
+
+ a| 
+Fournisseur
+ a| 
+Obligatoire
+ a| 
+
+
+
+ a| 
+Vitesse du disque (tours/min)
+ a| 
+Obligatoire
+ a| 
+
+
+
+ a| 
+Taille (en Go)
+ a| 
+Obligatoire
+ a| 
+
+
+
+ a| 
+Type d'interface (sélectionnez une option)
+ a| 
+Obligatoire
+ a| 
+ATA, SATA, SATA2, SATA3, FC, SAS, FATA, SSD, AUTRE
+
+
+
+ a| 
+Temps de recherche en ms.
+ a| 
+Facultatif
+ a| 
+
+
+
+ a| 
+Taux de transfert maximal en Mo/s.
+ a| 
+Facultatif
+ a| 
+
+
+
+ a| 
+Vitesse de transfert de l'interface en Mo/s.
+ a| 
+Facultatif
+ a| 
+
+
+
+ a| 
+Lien vers les informations sur le fournisseur/modèle
+ a| 
+Facultatif mais recommandé
+ a| 
+
+|===
+. Entrez ces informations dans le `new_disk_models.txt` fichier. Voir link:content-of-the-new-disk-models-txt-file.md#["Contenu du fichier new_disk_models.txt"] pour le format, l'ordre et les exemples.
+

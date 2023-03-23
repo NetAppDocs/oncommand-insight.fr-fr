@@ -1,0 +1,28 @@
+---
+permalink: dwh/etl-frequency.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous devez exécuter le processus extraction, transformation et chargement \(ETL\) au moins une fois par jour ; cependant, vous devez exécuter ETL plusieurs fois si nécessaire.' 
+---
+= Données de date et de fréquence ETL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez exécuter le processus d'extraction, de transformation et de chargement (ETL) au moins une fois par jour. Cependant, vous choisissez d'exécuter ETL plusieurs fois si nécessaire.
+
+Par défaut, le moteur de reporting Cognos traite tous les faits relatifs à la capacité et aux performances comme des additifs. Par conséquent, il existe un risque de double comptage des données de capacité si le processus ETL est exécuté plusieurs fois par jour sans les filtres horaires appropriés.
+
+Deux éléments de données de date dans la dimension Date sont liés au processus ETL quotidien. La dimension Date, utilisée dans plusieurs modèles de données, comprend les éléments de données suivants qui sont affectés par l'ETL :
+
+* *Est représentant de jour*
++
+L'élément de données « représentant du jour IS » est défini sur une valeur de 1 (vrai) pendant la première exécution du processus ETL au cours d'une journée donnée. Si le premier processus ETL est exécuté à 1 h 00, est Représentant de jour est réglé sur 1 pour toutes les données chargées à 1 h 00 Processus ETL. Si un deuxième CÉC est planifié plus tard (par exemple, 13 h 00), est Représentant de jour est défini sur 0 (faux) pour les données chargées pendant ce processus ETL.
+
+* *Est le plus récent*
++
+Le membre « est le plus récent » est défini sur une valeur de 1 (vrai) à la fin de chaque processus ETL. Si le premier processus ETL est exécuté à 1 h 00, est le plus récent est défini sur 1 pour toutes les données chargées à 1 h 00 Processus ETL. Si un autre processus ETL est planifié plus tard (par exemple, 13 h 00), est défini sur 1 pour les données chargées pendant 13 h. Processus ETL. Le processus du CÉC met également en place le processus de 1 h 00 Le chargement ETL est la dernière entrée à 0 (faux).
+
+

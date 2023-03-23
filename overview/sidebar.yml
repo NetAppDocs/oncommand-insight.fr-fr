@@ -1,0 +1,10 @@
+---
+section: overview
+title: Qu'est-ce que OnCommand Insight ?
+entries:
+- title: Présentation de OnCommand Insight
+  url: "/overview/oncommand-insight-overview.html"
+- title: Architecture d'Insight
+  url: "/overview/insight-architecture.html"
+- title: Utilisation d'Insight par les administrateurs, les responsables et les planificateurs
+  url: "/overview/insight-for-administrators-and-planners.html"

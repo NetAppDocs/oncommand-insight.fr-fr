@@ -1,0 +1,27 @@
+---
+permalink: config-admin/deleting-an-application.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous pouvez supprimer une application lorsque celle-ci ne répond plus à un besoin de votre environnement. 
+---
+= Suppression d'applications
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez supprimer une application lorsque celle-ci ne répond plus à un besoin de votre environnement.
+
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur Web Insight.
+. Cliquez sur *gérer* et sélectionnez *applications*.
+. Placez le curseur sur l'application à supprimer et cliquez sur image:../media/trash-can-query.gif[""].
++
+Une boîte de dialogue de confirmation s'affiche, vous demandant si vous souhaitez supprimer l'application.
+
+. Cliquez sur *OK*.
+

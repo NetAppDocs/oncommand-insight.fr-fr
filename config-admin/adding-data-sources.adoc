@@ -1,0 +1,73 @@
+---
+permalink: config-admin/adding-data-sources.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez ajouter rapidement des sources de données à l"aide de la boîte de dialogue Ajouter une source de données.' 
+---
+= Ajout de sources de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez ajouter rapidement des sources de données à l'aide de la boîte de dialogue Ajouter une source de données.
+
+
+
+== Étapes
+
+. Ouvrez OnCommand Insight dans votre navigateur et connectez-vous en tant qu'utilisateur disposant d'autorisations administratives.
+. Sélectionnez *Admin* et choisissez *sources de données*.
+. Cliquez sur le bouton *+Ajouter*.
++
+L'assistant Ajouter une source de données s'ouvre.
+
+. Dans la section *Paramètres*, entrez les informations suivantes :
++
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Nom
+ a| 
+Entrez un nom de réseau unique pour cette source de données. REMARQUE : seules les lettres, les chiffres et le caractère de soulignement (_) sont autorisés dans le nom de la source de données.
+
+
+
+ a| 
+Fournisseur
+ a| 
+Choisissez le fournisseur de la source de données dans la liste déroulante.
+
+
+
+ a| 
+Modèle
+ a| 
+Choisissez le modèle de la source de données dans la liste déroulante.
+
+
+
+ a| 
+Où exécuter
+ a| 
+Choisissez local ou choisissez une unité d'acquisition distante si les unités RAU sont configurées dans votre environnement.
+
+
+
+ a| 
+Que collecter
+ a| 
+Pour la plupart des sources de données, ces options seront Inventory and Performance. Le stock est toujours sélectionné par défaut et ne peut pas être désélectionné. Notez que certaines sources de données peuvent avoir des options différentes. Les options de collecte que vous sélectionnez modifient les champs disponibles dans les sections Configuration et Configuration avancée.
+
+|===
+. Cliquez sur le lien *Configuration* et entrez les informations de configuration de base requises pour la source de données avec le type de collecte de données sélectionné.
+. Si ce type de source de données nécessite généralement des informations plus détaillées pour la configurer sur votre réseau, cliquez sur le lien *Configuration avancée* pour entrer des informations supplémentaires.
+. Pour plus d'informations sur la configuration ou la configuration avancée requise ou disponible pour votre source de données spécifique, reportez-vous au link:vendor-specific-data-source-reference.md#["Référence de source de données propre au fournisseur"].
+. Cliquez sur le lien *Test* pour vous assurer que la source de données est correctement configurée.
+. Cliquez sur *Enregistrer*.
+

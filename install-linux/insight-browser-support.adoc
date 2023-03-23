@@ -1,0 +1,23 @@
+---
+permalink: install-linux/insight-browser-support.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"interface utilisateur OnCommand Insigtweb basée sur un navigateur peut fonctionner sur plusieurs navigateurs différents.' 
+---
+= Navigateurs pris en charge par OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'interface utilisateur OnCommand Insigtweb basée sur un navigateur peut fonctionner sur plusieurs navigateurs différents.
+
+Insight prend en charge des versions plus récentes non bêta des navigateurs suivants :
+
+* Mozilla Firefox
+* Google Chrome
+* Microsoft Edge
+
+
+Pour obtenir la liste complète des versions de navigateur compatibles avec OnCommand Insight, consultez le https://imt.netapp.com/matrix/#welcome["Matrice d'interopérabilité NetApp"].

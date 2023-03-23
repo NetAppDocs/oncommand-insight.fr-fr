@@ -1,0 +1,107 @@
+---
+permalink: config-admin/auditing-system-and-user-activities.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Si vous souhaitez localiser les modifications inattendues, vous pouvez afficher une piste d"audit du système OnCommand Insight et de ses activités utilisateur. En plus d"être affiché sur la page Audit, vous pouvez également envoyer des messages du journal d"audit à syslog.' 
+---
+= Audit des activités du système et des utilisateurs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous souhaitez localiser les modifications inattendues, vous pouvez afficher une piste d'audit du système OnCommand Insight et de ses activités utilisateur. En plus d'être affiché sur la page Audit, vous pouvez également envoyer des messages du journal d'audit à syslog.
+
+
+
+== Description de la tâche
+
+Insight génère des entrées d'audit pour toute activité utilisateur qui affecte le réseau de stockage ou sa gestion, notamment :
+
+* Connexion
+* Autorisation ou annulation de l'autorisation d'un chemin
+* Mise à jour d'un chemin autorisé
+* Définition de règles ou de seuils globaux
+* Ajout ou suppression d'une source de données
+* Démarrage ou arrêt d'une source de données
+* Mise à jour des propriétés de la source de données
+* Ajout, modification ou suppression d'une tâche
+* Suppression d'un groupe d'applications
+* Identification ou modification de l'identification d'un dispositif
+* Créer un utilisateur
+* Supprimer un utilisateur
+* Changement de rôle d'utilisateur
+* Modifier un utilisateur (invité à Admin)
+* Déconnexion d'un utilisateur (déconnexion forcée ou déconnexion manuelle)
+* Suppression d'une unité d'acquisition
+* Mettre à jour la licence
+* Activation de la sauvegarde
+* Désactivation de la sauvegarde
+* Activation d'ASUP (l'activation du proxy sur la même page est signalée dans le journal d'audit)
+* Désactivation d'ASUP (la désactivation du proxy sur la même page est signalée dans le journal d'audit)
+* Sécurité : permet de redéfinir les clés, de modifier les mots de passe système.
+* Suppression/ajout d'annotations sur les ressources
+* Connexion/déconnexion de l'utilisateur CAC
+* Expiration de la session utilisateur CAC
+
+
+
+
+== Étapes
+
+. Ouvrez Insight dans votre navigateur.
+. Cliquez sur *Admin* et sélectionnez *Audit*.
++
+La page Audit affiche les entrées d'audit dans un tableau.
+
+. Vous pouvez afficher les détails suivants dans le tableau :
++
+** *Heure*
++
+Date et heure auxquelles les modifications ont été apportées
+
+** *Utilisateur*
++
+Nom de l'utilisateur associé à l'entrée d'audit
+
+** *Rôle*
++
+Rôle du compte utilisateur, qui est invité, utilisateur ou administrateur
+
+** *IP*
++
+Adresse IP associée à l'entrée d'audit
+
+** *Action*
++
+Type d'activité dans l'entrée d'audit
+
+** *Détails*
++
+Détails de l'entrée d'audit
+
++
+Si une activité utilisateur affecte une ressource, telle qu'une source de données ou une application, les détails incluent un lien vers la page d'accueil de la ressource.
+
++
+[NOTE]
+====
+Lorsqu'une source de données est supprimée, les détails de l'activité utilisateur liés à la source de données ne contiennent plus de lien vers la page d'accueil de la source de données.
+
+====
+
+
+. Vous pouvez afficher les entrées d'audit en choisissant une période particulière (1 heure, 3 heures, 24 heures, 3 jours et 7 jours), Insight affichant un nombre maximum de 1000 violations pour la période sélectionnée.
++
+Vous pouvez cliquer sur un numéro de page sous le tableau pour parcourir les données par page s'il y a plus de données que ne tient sur une seule page.
+
+. Vous modifiez l'ordre de tri des colonnes d'un tableau en ordre croissant (flèche vers le haut) ou décroissant (flèche vers le bas) en cliquant sur la flèche dans l'en-tête de colonne ; pour revenir à l'ordre de tri par défaut, cliquez sur n'importe quel autre en-tête de colonne.
++
+Par défaut, le tableau affiche les entrées dans l'ordre décroissant.
+
+. Vous pouvez utiliser la zone *filter* pour afficher uniquement les entrées que vous voulez dans la table.
++
+Pour afficher uniquement les entrées d'audit de l'utilisateur `izzyk`, tapez `izzyk` dans la zone *filter*.
+
+

@@ -1,0 +1,32 @@
+---
+permalink: install-linux/network-traffic-generated-by-oncommand-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Le trafic réseau généré par OnCommand Insight, la quantité de données traitées traversant le réseau et la charge que OnCommand Insight place sur les terminaux diffèrent selon de nombreux facteurs. 
+---
+= Trafic réseau généré par OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le trafic réseau généré par OnCommand Insight, la quantité de données traitées traversant le réseau et la charge que OnCommand Insight place sur les terminaux diffèrent selon de nombreux facteurs.
+
+Le trafic, les données et la charge varient d'un environnement à l'autre en fonction des facteurs suivants :
+
+* Les données brutes
+* Configuration des périphériques
+* Topologie de déploiement de OnCommand Insight
+* Différents intervalles d'interrogation des sources de données d'inventaire et de performances, qui peuvent être réduits pour permettre la détection de périphériques lents ou la conservation de la bande passante
+
+
+Les données de configuration brutes recueillies par OnCommand Insight peuvent varier considérablement.
+
+L'exemple suivant montre comment les données de configuration peuvent varier et comment le trafic, les données et la charge sont affectés par de nombreux facteurs de configuration. Par exemple, deux matrices peuvent avoir chacune 1,000 disques :
+
+* Baie 1 : dispose de 1,000 disques SATA de 1 To. Les 1,000 disques sont tous dans un pool de stockage, et il y a 1,000 LUN, toutes présentées (mappées et masquées) aux 32 mêmes nœuds d'un cluster ESX.
+* Baie 2 : dispose de 400 disques de données de 2 To, de 560 600 Go de disques FC et de 40 SSD. Il existe 3 pools de stockage, mais 320 disques FC sont utilisés dans les groupes RAID traditionnels. Les LUN sculptées dans les groupes RAID utilisent un type de masquage traditionnel (symmaskdb), tandis que les LUN à provisionnement fin basés sur des pools utilisent un type de masquage plus récent (symaccés). Il y a 600 LUN présentées à 150 hôtes différents. Il existe 200 BCV (volumes de réplica de bloc complet de 200 des 600 LUN). Il existe également 200 volumes R2, des volumes de réplica distants de volumes qui existent sur une baie d'un site différent.
+
+
+Ces matrices ont chacune 1,000 disques et 1,000 volumes logiques. Elles peuvent même être physiquement identiques en termes d'espace rack utilisé dans le data Center et exécuter le même firmware, mais la configuration de la seconde baie est bien plus complexe que celle de la première baie.

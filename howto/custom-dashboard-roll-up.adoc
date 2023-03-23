@@ -1,0 +1,38 @@
+---
+permalink: howto/custom-dashboard-roll-up.html 
+sidebar: sidebar 
+keywords:  
+summary: Les données affichées dans les widgets du tableau de bord sont synthétisés à partir des points de données acquis, ce qui permet de gagner en flexibilité et en concision dans vos tableaux de bord. 
+---
+= Agrégation et agrégation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les données affichées dans les widgets du tableau de bord sont synthétisés à partir des points de données acquis, ce qui permet de gagner en flexibilité et en concision dans vos tableaux de bord.
+
+Les données affichées dans chaque widget sont regroupées à partir des points de données sous-jacents collectés au cours de l'acquisition. Par exemple, si vous avez un widget graphique en lignes qui affiche les IOPS de stockage au fil du temps, il est possible que vous souhaitiez afficher une ligne distincte pour chacun de vos data centers, afin d'obtenir une comparaison rapide. Vous pouvez choisir de faire rouler ces données de plusieurs façons :
+
+* *AVG* : affiche chaque ligne comme la _moyenne_ des données sous-jacentes.
+* *Max* : affiche chaque ligne sous la forme _maximum_ des données sous-jacentes.
+* *Min* : affiche chaque ligne comme le _minimum_ des données sous-jacentes.
+* *Somme* : affiche chaque ligne sous la forme _sum_ des données sous-jacentes.
+
+
+Pour ce faire, dans la requête de votre widget, choisissez d'abord un type de ressource (par exemple, _Storage_) et une mesure (par exemple, __IOPS - Tota__l). Pour *cumul*, choisissez une méthode de cumul (telle que _AVG_) et sélectionnez un attribut ou une annotation pour faire rouler les données (par exemple, _Data Center_). Le widget se met à jour automatiquement et affiche une ligne pour chacun de vos centres de données.
+
+Vous pouvez également choisir de faire remonter _tous_ des données sous-jacentes dans le graphique ou le tableau. Dans ce cas, vous obtiendrez une seule ligne pour chaque requête dans le widget, qui affichera la moyenne, le minimum, le maximum ou la somme de la mesure choisie pour tous les actifs sous-jacents.
+
+Si vous avez défini un filtre pour la requête, les données cumulées sont basées sur les données filtrées.
+
+Notez que lorsque vous choisissez de faire rouler un widget par n'importe quel champ (par exemple, _Model_), vous devrez *filtrer par* ce champ afin d'afficher correctement les données de ce champ sur le graphique ou le tableau.
+
+*Données d'agrégation :* vous pouvez aligner davantage vos graphiques de séries chronologiques (ligne, zone, etc.) en regroupant les points de données dans des rubriques minute, heure ou jour avant que ces données ne soient ensuite regroupées par attribut (si elles sont choisies). Vous pouvez choisir d'agréger les points de données en fonction de leur moyenne, maximale, minimale ou somme, ou par le dernier point de données collecté au cours de l'intervalle choisi. Pour choisir une méthode d'agrégation, cliquez sur *plus d'options* dans la section requête du widget.
+
+L'intervalle minimum autorisé est de dix minutes. Un petit intervalle combiné à une longue plage de temps peut entraîner un « intervalle d'agrégation entraînant un trop grand nombre de points de données ». avertissement. Vous pouvez le voir si vous avez un petit intervalle et augmenter la durée du tableau de bord à 7 jours. Dans ce cas, Insight augmente temporairement l'intervalle d'agrégation à 1 heure jusqu'à ce que vous sélectionniez une période plus petite.
+
+Vous pouvez également regrouper les données dans un widget de graphique à barres et un widget à valeur unique.
+
+La plupart des compteurs d'actifs sont regroupés par défaut à _AVG_. Par défaut, certains compteurs s'agrègent à _Max_, _min_ ou _sum_. Par exemple, les erreurs de port sont agrégées à _sum_ par défaut, où Storage IOPS agrégat à _AVG_.

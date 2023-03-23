@@ -1,0 +1,31 @@
+---
+permalink: config-admin/viewing-queries.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous pouvez afficher vos requêtes pour surveiller vos actifs et modifier la façon dont vos requêtes affichent les données associées à vos ressources. 
+---
+= Affichage des requêtes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez afficher vos requêtes pour surveiller vos actifs et modifier la façon dont vos requêtes affichent les données associées à vos ressources.
+
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur Web de OnCommand Insight.
+. Cliquez sur *requêtes* et sélectionnez *Afficher toutes les requêtes*.
+. Vous pouvez modifier l'affichage des requêtes en effectuant l'une des actions suivantes :
++
+** Vous pouvez saisir du texte dans la zone *filter* pour rechercher des requêtes spécifiques.
+** Vous pouvez modifier l'ordre de tri des colonnes dans le tableau de requêtes en croissant (flèche vers le haut) ou en descendant (flèche vers le bas) en cliquant sur la flèche dans l'en-tête de colonne.
+** Pour redimensionner une colonne, placez le curseur de la souris sur l'en-tête de la colonne jusqu'à ce qu'une barre bleue s'affiche. Placez la souris sur la barre et faites-la glisser vers la droite ou vers la gauche.
+** Pour déplacer une colonne, cliquez sur l'en-tête de colonne et faites-la glisser vers la droite ou vers la gauche.
+** Lorsque vous faites défiler les résultats de la requête, n'oubliez pas que les résultats peuvent changer car Insight interroge automatiquement vos sources de données. Cela peut entraîner l'absence de certains éléments ou l'affichage de certains éléments hors de la commande en fonction du mode de tri.
+
+
+

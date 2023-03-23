@@ -1,0 +1,118 @@
+---
+permalink: howto/configuring-applications-for-your-company.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Comprendre les applications utilisées dans l"environnement de votre entreprise vous permet de suivre l"utilisation des ressources et de générer des rapports sur les coûts. Nous allons configurer les applications de votre entreprise et les associer aux ressources appropriées.' 
+---
+= Configuration des applications de votre entreprise
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Comprendre les applications utilisées dans l'environnement de votre entreprise vous aide à suivre l'utilisation des ressources et à générer des rapports sur les coûts. Nous allons configurer les applications de votre entreprise et les associer aux ressources appropriées.
+
+
+
+== Description de la tâche
+
+Dans la section _Configuration des entités commerciales pour votre société_, nous avons créé certaines entités commerciales et nous vous avons recommandé de répertorier toutes les applications que vous associez à chaque entité métier. OnCommand Insight nous permet ensuite d'effectuer le suivi des données associées à ces applications à des fins telles que la création de rapports sur l'utilisation ou les coûts.
+
+Avant de pouvoir suivre les données associées aux applications exécutées dans votre environnement, vous devez d'abord définir ces applications et les associer aux ressources appropriées. Vous pouvez associer des applications aux ressources suivantes : hôtes, machines virtuelles, volumes, volumes internes, qtrees, les partages et les hyperviseurs.
+
+Dans cette présentation, nous souhaitons suivre l'utilisation des machines virtuelles que l'équipe marketing utilise pour sa messagerie Exchange. Vous vous souviendrez du tableau suivant que nous avons créé lors de la définition de nos entités commerciales. Ajoutons une colonne à cette feuille de calcul répertoriant les applications utilisées par chaque entité commerciale. (Ce tableau est un exemple de feuille de travail uniquement. Vous ne verrez pas de colonne « applications » dans le tableau des entités métier d'Insight.)
+
+|===
+
+
+| Locataire | Secteur d'activité | Unité commerciale | Projet | En termes de latence 
+
+
+ a| 
+NetApp
+ a| 
+Stockage des données
+ a| 
+Légal
+ a| 
+Brevets
+ a| 
+Oracle Identity Manager, Oracle On Demand, PatentWiz
+
+
+
+ a| 
+NetApp
+ a| 
+Stockage des données
+ a| 
+Marketing
+ a| 
+Événements commerciaux
+ a| 
+Exchange, base de données partagée Oracle, planificateur d'événements BlastOff
+
+
+
+ a| 
+S/O
+ a| 
+S/O
+ a| 
+Sécurité et sûreté
+ a| 
+S/O
+ a| 
+S/O
+
+
+
+ a| 
+...
+ a| 
+ a| 
+ a| 
+ a| 
+
+|===
+*Création d'applications dans Insight:*
+
+
+
+== Étapes
+
+. Connectez-vous à Insight en tant qu'utilisateur avec des autorisations d'administration.
+. Sélectionnez *gérer* > *applications*
+. Cliquez sur le bouton *+Ajouter*
+. Entrez le nom de l'application (par exemple, entrez « Exchange »)
+. Sélectionnez une priorité pour l'application
+. Si vous souhaitez associer l'application à une entité métier, sélectionnez-en une dans la liste déroulante *entité métier*. Sinon, vous pouvez laisser ceci comme « aucun ».
+. Si vous voulez vous assurer que chaque hôte a accès aux mêmes volumes dans un cluster, assurez-vous que la case *Valider le partage de volume* est cochée. Par exemple, les hôtes des clusters haute disponibilité doivent souvent être masqués pour les mêmes volumes afin de permettre le basculement. Cependant, les hôtes d'applications non liées n'ont généralement pas besoin d'accéder aux mêmes volumes physiques. En outre, les stratégies réglementaires peuvent vous obliger à interdire explicitement aux applications non liées d'accéder aux mêmes volumes physiques pour des raisons de sécurité. Si vous n'utilisez pas le partage de volume, décochez la case *Valider le partage de volume*. Ceci nécessite la licence assure.
+. Cliquez sur Enregistrer.
+. Répétez cette procédure pour toutes les autres applications de votre environnement.
+
+
+
+
+== Une fois que vous avez terminé
+
+Nous constatons que l'équipe marketing utilise l'application Exchange. Nous souhaitons connaître l'utilisation de leurs ordinateurs virtuels pour Exchange, afin de prévoir quand il nous faudra ajouter du stockage. Associons l'application Exchange à toutes les machines virtuelles du marketing. Le moyen le plus simple d'y parvenir est d'effectuer une requête.
+
+En suivant ces étapes, vous pouvez associer chacune de vos applications à leurs ressources appropriées.
+
+*Association d'applications aux actifs :*
+
+Maintenant que vous avez créé vos applications (et que vous les avez liées à des entités commerciales, comme vous le souhaitez), nous pouvons maintenant associer ces applications aux ressources de votre environnement. Dans cet exemple, nous allons associer l'application Exchange à plusieurs machines virtuelles de votre entreprise. La façon la plus simple de faire ceci est ce qu'une requête.
+
+. Sélectionnez *requêtes* > *+Nouvelle requête*.
+. Dans la liste déroulante *Select Resource Type*, choisissez _Virtual machine_
+. Nous supposerons que l'équipe Marketing nomme ses actifs avec la chaîne «`_mktg_`". Dans la zone de filtre Nom, entrez "`_mktg_ `" (sans guillemets) et cliquez sur le bouton appliquer (coche).
+. La liste de toutes les machines virtuelles avec la chaîne "`_mktg_ `"est affichée.
+. Si vous le souhaitez, cliquez sur la liste déroulante *plus* et ajoutez des filtres supplémentaires.
+. Sélectionnez la machine virtuelle utilisée pour Exchange en cliquant sur la case à cocher située en regard du nom de la machine virtuelle souhaitée ou sélectionnez toutes les machines virtuelles en cochant la case située en haut de la colonne.
+. Lorsque les VM souhaitées sont sélectionnés, cliquez sur le bouton *actions* et choisissez *Ajouter application*.
+. Dans la boîte de dialogue attribuer une application, cliquez sur la liste déroulante *application* et sélectionnez « Exchange ».
+. Cliquez sur *Enregistrer*.
+. Répétez l'opération si nécessaire pour associer l'application Exchange à d'autres ressources (hôtes, volumes, etc.)
+

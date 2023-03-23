@@ -1,0 +1,29 @@
+---
+permalink: config-admin/editing-data-source-information.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous pouvez modifier rapidement les informations de configuration de la source de données. 
+---
+= Modification des informations de source de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez modifier rapidement les informations de configuration de la source de données.
+
+
+
+== Étapes
+
+. Cliquez sur *Admin* et naviguez jusqu'à la liste des sources de données
+. Recherchez la source de données à modifier.
+. Utilisez l'une des méthodes suivantes pour commencer les modifications :
++
+** Cliquez sur *Modifier la source de données* à droite de la source de données sélectionnée.
+** Cliquez sur le nom lié de la source de données sélectionnée et cliquez sur *Modifier*. Les deux méthodes ouvrent la boîte de dialogue Modifier la source de données.
+
+
+. Effectuez les modifications souhaitées et cliquez sur *Enregistrer*.
+

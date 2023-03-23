@@ -1,0 +1,21 @@
+---
+permalink: reporting/process-of-creating-custom-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: Le processus de création de rapports ad hoc implique plusieurs tâches. 
+---
+= Processus de création de rapports
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le processus de création de rapports ad hoc implique plusieurs tâches.
+
+* Planifiez les résultats de votre rapport.
+* Identifiez les données à l'appui de vos résultats.
+* Sélectionnez le modèle de données (par exemple, le modèle de données Chargeback, le modèle de données Inventory, etc.) qui contient les données.
+* Sélectionnez les éléments de données pour le rapport.
+* Vous pouvez éventuellement formater, trier et filtrer les résultats du rapport.
+

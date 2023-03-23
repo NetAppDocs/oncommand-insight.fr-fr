@@ -1,0 +1,53 @@
+---
+permalink: config-admin/importing-data-sources-from-a-spreadsheet.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez importer plusieurs sources de données dans OnCommand Insight à partir d"une feuille de calcul. Cela peut être utile si vous avez déjà mis à jour vos périphériques de découverte dans une feuille de calcul. Ce processus ajoute de nouvelles sources de données, mais ne peut pas être utilisé pour mettre à jour les sources de données existantes.' 
+---
+= Importation de sources de données à partir d'une feuille de calcul
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez importer plusieurs sources de données dans OnCommand Insight à partir d'une feuille de calcul. Cela peut être utile si vous avez déjà mis à jour vos périphériques de découverte dans une feuille de calcul. Ce processus ajoute de nouvelles sources de données, mais ne peut pas être utilisé pour mettre à jour les sources de données existantes.
+
+
+
+== Description de la tâche
+
+OnCommand Insight comprend une feuille de calcul pour vous aider à créer des sources de données. Cette feuille de calcul a les attributs suivants :
+
+* La feuille de calcul peut être utilisée avec Microsoft Excel 2003 ou une version ultérieure.
+* Chaque onglet contient un type de source de données, par exemple, Brocade SSH/CLI.
+* Chaque ligne représente une instance d'une nouvelle source de données à créer.
+
+
+La feuille de calcul comprend une macro qui crée une nouvelle source de données dans OnCommand Insight.
+
+
+
+== Étapes
+
+. Localisez la feuille de calcul dans le `<install_directory>/SANscreen/acq/bin/acqcli/SiteSurvey_DataSourceImporter_w_Macro.zip`.
+. Dans la feuille de calcul, saisissez les informations de source de données dans les cellules en couleur.
+. Supprimer les lignes vides.
+. À partir de la feuille de calcul, exécutez le `CreateDataSources` macro pour créer les sources de données.
+. Lorsque vous y êtes invité, entrez le nom d'utilisateur et le mot de passe d'administration du serveur OnCommand Insight.
++
+Les résultats sont consignés dans le journal d'acquisition.
+
+. Une invite vous demande si OnCommand Insight est installé sur la machine en cours d'exécution de la macro.
++
+Sélectionnez l'une des options suivantes :
+
++
+** Non : sélectionnez « non » si un fichier de traitement par lot doit être créé et exécuté sur la machine OnCommand Insight. Exécutez ce fichier de commandes à partir du répertoire d'installation.
+** Oui : sélectionnez « Oui » si OnCommand Insight est déjà installé et qu'aucune étape supplémentaire n'est requise pour générer les informations relatives à la source de données.
+
+
+. Pour vérifier l'ajout des sources de données, ouvrez Insight dans votre navigateur.
+. Dans la barre d'outils Insight, cliquez sur *Admin*.
+. Consultez la liste sources de données pour connaître les sources de données que vous avez importées.
+

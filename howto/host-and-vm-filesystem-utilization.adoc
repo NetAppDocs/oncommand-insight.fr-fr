@@ -1,0 +1,26 @@
+---
+permalink: howto/host-and-vm-filesystem-utilization.html 
+sidebar: sidebar 
+keywords: filesystem 
+summary: La source de données Host et VM File Systems, combinée à la licence Host Utilization, permet de générer des rapports et de facturer au niveau du système de fichiers pour les hôtes et les machines virtuelles connus. 
+---
+= Collecte des données d'utilisation du système de fichiers de l'hôte et de la machine virtuelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La source de données Host et VM File Systems, combinée à la licence Host Utilization, permet de générer des rapports et de facturer au niveau du système de fichiers pour les hôtes et les machines virtuelles connus.
+
+OnCommand Insight collecte les données des périphériques de stockage, dont la plupart signalent leurs volumes comme des périphériques de bloc. Cela permet à Insight de générer des rapports sur l'utilisation au niveau du stockage, mais pas au niveau du système de fichiers. Les baies de stockage savent généralement sur quels blocs ont été écrits, mais pas sur quels blocs ont été libérés.
+
+Les hôtes clients et les machines virtuelles mettent en œuvre des systèmes de fichiers (ntfs, ext*...) au-dessus de ces périphériques de bloc. La plupart des systèmes de fichiers conservent une table des matières contenant des métadonnées de répertoires et de fichiers. Lorsque des fichiers sont supprimés, leurs entrées sont simplement supprimées de la table des matières. Les blocs consommés par ces fichiers peuvent désormais être réutilisés par le système de fichiers, mais la baie de stockage ne le sait pas. Pour qu'Insight puisse générer des rapports sur l'utilisation du système de fichiers, il doit être collecté depuis l'hôte du client ou le point de vue de la machine virtuelle afin d'assurer une refacturation précise.
+
+Insight permet ce niveau de collecte de données sur l'utilisation du système de fichiers via la source de données *NetApp Host et VM File System*, en association avec la licence *Host Utilization*. Les machines virtuelles doivent être annotées avec le nom *Compute Resource Group* approprié, et les baies de stockage associées doivent être annotées avec les annotations *Tier* appropriées, avec les coûts appropriés pour un reporting précis des coûts.
+
+[NOTE]
+====
+La licence d'utilisation de l'hôte est basée sur les ressources, contrairement aux autres licences Insight basées sur la capacité.
+
+====

@@ -1,0 +1,80 @@
+---
+permalink: howto/configure-tier-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"annotation de niveau est utilisée pour associer des actifs à leurs niveaux respectifs, pour une utilisation dans la comptabilité de coûts, par exemple. La solution Insight propose plusieurs annotations de niveau par défaut. Vous pouvez les modifier selon vos conventions de nom de Tiering ou créer vos propres tiers si nécessaire.' 
+---
+= Configurer les annotations de niveau
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'annotation de niveau est utilisée pour associer des actifs à leurs niveaux respectifs, pour une utilisation dans la comptabilité de coûts, par exemple. La solution Insight propose plusieurs annotations de niveau par défaut. Vous pouvez les modifier selon vos conventions de nom de Tiering ou créer vos propres tiers si nécessaire.
+
+Lorsque vous définissez des annotations de niveau, gardez à l'esprit ce qui suit :
+
+* Le coût est par gigaoctet.
+* Les niveaux 1, 2 et 3 sont des niveaux par défaut configurés au niveau de la baie de stockage, par type de disque. Cependant, de nombreux clients auront plusieurs types de disques au sein d'une baie ou sur des baies du même type.
+* Il est recommandé de créer des annotations de niveau en fonction du type de disque et/ou de la vitesse du disque. Il s'agit d'une méthodologie de niveau standard ; vos besoins peuvent varier.
+
+
+Étapes :
+
+* Choisissez l'annotation *Tier* et cliquez sur l'icône *Edit*.
+* Si vous le souhaitez, cliquez sur *+Ajouter* et ajoutez le Nom et la Description de votre premier niveau à la liste des annotations.
+* Procédez de même pour vos autres niveaux.
+* Lorsque vous avez terminé, cliquez sur *Enregistrer*.
+
+
+Exemple d'annotations de niveau :
+
+|===
+
+
+| Nom | Description | Coût par Go 
+
+
+ a| 
+Tier automatique
+ a| 
+Hiérarchisation automatique du stockage
+ a| 
+0.5
+
+
+
+ a| 
+SSD de Tier 1
+ a| 
+Baie Flash
+ a| 
+0.5
+
+
+
+ a| 
+Disques SAS de Tier 2
+ a| 
+SAS
+ a| 
+0.25
+
+
+
+ a| 
+SATA de niveau 3
+ a| 
+SATA
+ a| 
+0.1
+
+
+
+ a| 
+...
+ a| 
+ a| 
+
+|===

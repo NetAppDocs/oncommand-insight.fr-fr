@@ -1,0 +1,184 @@
+---
+permalink: config-admin/emc-vnxe-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La source de données EMC VNXe prend en charge l"inventaire des baies de stockage unifié EMC VNXe et Unity.' 
+---
+= Source de données EMC VNXe
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La source de données EMC VNXe prend en charge l'inventaire des baies de stockage unifié EMC VNXe et Unity.
+
+Cette source de données est basée sur l'interface de ligne de commande et nécessite l'installation de la CLI Unisphere for VNXe (uemcli.exe) sur l'unité d'acquisition sur laquelle réside la source de données VNXe. uemcli.exe utilise HTTPS comme protocole de transport. L'unité d'acquisition doit donc pouvoir établir des connexions HTTPS avec les baies VNXe/Unity. Vous devez disposer d'au moins un utilisateur en lecture seule à utiliser par la source de données.
+
+
+
+== Terminologie
+
+OnCommand Insight acquiert les informations d'inventaire suivantes à partir de la source de données EMC VNXe. Pour chaque type de ressource acquis par Insight, la terminologie la plus courante utilisée pour cette ressource est indiquée. Lors de l'affichage ou du dépannage de cette source de données, gardez à l'esprit la terminologie suivante :
+
+|===
+
+
+| Terme du fournisseur/modèle | Terme Insight 
+
+
+ a| 
+Disque
+ a| 
+Disque
+
+
+
+ a| 
+Baie de stockage
+ a| 
+Stockage
+
+
+
+ a| 
+Processeur
+ a| 
+Nœud de stockage
+
+
+
+ a| 
+Pool de stockage
+ a| 
+Pool de stockage
+
+
+
+ a| 
+Informations générales sur les blocs iSCSI, VMware VMFS
+ a| 
+Volumétrie
+
+
+
+ a| 
+Dossier partagé
+ a| 
+Volume interne
+
+
+
+ a| 
+Partage CIFS, partage NFS, partage à partir du datastore VMware NFS
+ a| 
+Partagez
+
+
+
+ a| 
+Réplication du système distant
+ a| 
+Synchronisation
+
+
+
+ a| 
+Nœud iSCSI
+ a| 
+Nœud cible iSCSI
+
+
+
+ a| 
+Initiateur iSCSI
+ a| 
+Initiateur cible iSCSI
+
+|===
+[NOTE]
+====
+Il s'agit uniquement de mappages terminologiques courants et peuvent ne pas représenter tous les cas pour cette source de données.
+
+====
+
+
+== De formation
+
+Voici la configuration et l'utilisation de cette source de données :
+
+* Le collecteur de données VNXe est basé sur la CLI ; vous devez installer la CLI Unisphere for VNXe (uemcli.exe) sur l'unité d'acquisition où réside votre collecteur de données VNXe.
+* La version uemcli.exe utilise HTTPS comme protocole de transport. L'unité d'acquisition doit donc pouvoir lancer des connexions HTTPS avec le VNXe.
+* Vous devez disposer d'au moins un utilisateur en lecture seule à utiliser par la source de données.
+* Adresse IP du serveur d'activation de solutions de gestion.
+* HTTPS pour le port 443 est requis
+* Le collecteur de données EMC VNXe prend en charge les protocoles NAS et iSCSI pour l'inventaire ; les volumes Fibre Channel seront découverts, mais Insight n'effectue pas de rapports sur le mappage FC, le masquage ou les ports de stockage.
+
+
+
+
+== Configuration
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Stockage VNXe
+ a| 
+Adresse IP ou nom de domaine complet du périphérique VNXe
+
+
+
+ a| 
+Nom d'utilisateur
+ a| 
+Nom d'utilisateur du périphérique VNXe
+
+
+
+ a| 
+Mot de passe
+ a| 
+Mot de passe du périphérique VNXe
+
+
+
+ a| 
+Chemin complet vers l'exécutable uemcli
+ a| 
+Chemin complet vers le `uemcli.exe` exécutable
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+Intervalle entre les sondages d'inventaire (40 minutes par défaut)
+
+
+
+ a| 
+Port CLI VNXe
+ a| 
+Port utilisé pour l'interface de ligne de commande de VNXe
+
+
+
+ a| 
+Délai d'expiration du processus externe d'inventaire (s)
+ a| 
+Délai d'expiration du processus externe (1800 secondes par défaut)
+
+|===

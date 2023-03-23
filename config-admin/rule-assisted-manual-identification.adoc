@@ -1,0 +1,57 @@
+---
+permalink: config-admin/rule-assisted-manual-identification.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Cette fonction est utilisée dans les cas particuliers où vous souhaitez exécuter une règle spécifique ou une liste de règles \(avec ou sans réorganisation ponctuelle\) pour résoudre les hôtes, le stockage et les périphériques de bande inconnus ou leur groupe.' 
+---
+= Identification manuelle assistée par règle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cette fonction est utilisée dans des cas particuliers où vous souhaitez exécuter une règle spécifique ou une liste de règles (avec ou sans réorganisation ponctuelle) pour résoudre des hôtes, des périphériques de stockage et de bande inconnus ou un groupe d'entre eux.
+
+
+
+== Avant de commencer
+
+Vous avez un certain nombre de périphériques qui n'ont pas été identifiés et vous disposez également de plusieurs règles qui ont identifié d'autres périphériques avec succès.
+
+
+
+== Description de la tâche
+
+[NOTE]
+====
+Si votre source ne contient qu'une partie d'un nom d'hôte ou de périphérique, utilisez une règle d'expression régulière et formatez-la pour ajouter le texte manquant.
+
+====
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur Web de OnCommand Insight.
+. Cliquez sur *gérer* > *résolution du périphérique*
+. Cliquez sur l'onglet *FC Identify*.
++
+Le système affiche les périphériques identifiés et non identifiés.
+
+. Sélectionnez plusieurs périphériques non identifiés.
+. Cliquez sur *identifier* > *définir la résolution de l'hôte* ou *> définir la résolution de la bande*
++
+Le système affiche l'écran identifier qui contient une liste de toutes les règles qui ont identifié les périphériques avec succès.
+
+. Modifiez l'ordre des règles en un ordre qui répond à vos besoins.
++
+L'ordre des règles est modifié dans l'écran identifier, mais ne sont pas modifiés globalement.
+
+. Sélectionnez la méthode qui répond à vos besoins.
++
+OnCommand Insight exécute le processus de résolution de l'hôte dans l'ordre dans lequel les méthodes apparaissent, en commençant par celles situées en haut.
+
++
+Lorsque des règles s'appliquent, les noms de règles s'affichent dans la colonne règles et sont identifiés comme étant manuels.
+
+

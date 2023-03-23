@@ -1,0 +1,58 @@
+---
+permalink: howto/viewing-data-on-a-dashboard-how-to.html 
+sidebar: sidebar 
+keywords:  
+summary: Maintenant que vos ressources sont annotées et que vous avez configuré des règles de performance pour vous alerter des violations, vous pouvez créer des tableaux de bord afin de mettre en évidence les données spécifiques que vous souhaitez cibler. 
+---
+= Mise en évidence des données à l'aide des tableaux de
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Maintenant que vos ressources sont annotées et que vous avez configuré des règles de performance pour vous alerter des violations, vous pouvez créer des tableaux de bord afin de mettre en évidence les données spécifiques que vous souhaitez cibler.
+
+
+
+== Description de la tâche
+
+Dans cet exemple, nous allons fournir une vue générale de la création du tableau de bord en créant un tableau de bord avec un seul widget mettant en évidence les données de performances des machines virtuelles. Vous pouvez ajouter autant de widgets que nécessaire sur un même tableau de bord et créer autant de tableaux de bord que nécessaire. Les widgets peuvent être redimensionnés et déplacés selon vos besoins.
+
+Vous trouverez plus d'informations sur les tableaux de bord et les widgets dans la documentation OnCommand Insight.
+
+
+
+== Étapes
+
+. Connectez-vous à Insight en tant qu'utilisateur avec des autorisations d'administration.
+. Dans le menu *tableaux de bord*, sélectionnez *+Nouveau tableau de bord*.
++
+La page Nouveau tableau de bord s'ouvre.
+
+. Meilleure pratique : nommez et enregistrez votre tableau de bord dès que vous le créez. Cliquez sur le bouton *Enregistrer* et entrez un nom unique pour le tableau de bord dans le champ *Nom*. Par exemple « Tableau de bord des performances des machines virtuelles ». Cliquez sur *Enregistrer*.
+. Si nécessaire, faites glisser le commutateur *Edit* sur « on » pour activer le mode Edit. Cela vous permet de commencer à ajouter des widgets à votre tableau de bord.
+. Cliquez sur le bouton *+Widgets* et sélectionnez *Table* pour ajouter un nouveau widget de tableau au tableau de bord.
++
+La boîte de dialogue Modifier le widget s'ouvre.
+
+. Dans le champ Nom, supprimez « widget 1 » et entrez « Table des performances des machines virtuelles ».
+. Cliquez sur le menu déroulant Asset type et remplacez *Storage* par *Virtual machine*.
++
+Les données du tableau changent pour afficher toutes les machines virtuelles de votre environnement.
+
+. Pour ajouter des colonnes supplémentaires à la table, cliquez sur *Columns*image:../media/column-picker-button.gif[""] Et sélectionnez les colonnes souhaitées, par exemple__Data Center__, _Storage name_ et _Tier_.vous pouvez trier la table en fonction de l'une de ces colonnes.
+. Vous pouvez définir des filtres selon les besoins pour mettre en évidence les données importantes pour vous dans ce tableau de bord. Par exemple, vous pouvez choisir d'afficher uniquement les machines virtuelles avec l'annotation « Tier 1 - SSD ». Cliquez sur le bouton "` + `"en regard de *Filtrer par* et sélectionnez__Tier__. Cliquez sur *Any* et entrez « Tier 1 - SSD ». Cliquez sur le bouton image:../media/check-box-ok.gif[""] pour enregistrer le filtre.
++
+Le tableau n'affiche désormais que les machines virtuelles du niveau « SSD ».
+
+. Vous pouvez regrouper les résultats en cliquant sur le bouton "` + `" situé en regard de *regrouper par* et en sélectionnant un champ à regrouper, tel que Data Center. Le regroupement est automatiquement appliqué à la table.
+. Lorsque vous avez personnalisé le widget à votre satisfaction, cliquez sur le bouton *Enregistrer*.
++
+Le widget de tableau de bord est enregistré dans le tableau de bord.
+
+. Vous pouvez redimensionner le widget du tableau de bord en faisant glisser le coin inférieur droit.
+. Pour ajouter d'autres widgets, cliquez sur le bouton *+widget*. Chaque widget est ajouté au tableau de bord lors de son enregistrement.
+. Lorsque vous avez effectué toutes les modifications souhaitées, assurez-vous de cliquer sur *Enregistrer* pour enregistrer le tableau de bord.
+. Vous pouvez créer des tableaux de bord supplémentaires pour mettre en évidence différentes données.
+

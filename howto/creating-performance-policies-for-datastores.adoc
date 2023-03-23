@@ -1,0 +1,51 @@
+---
+permalink: howto/creating-performance-policies-for-datastores.html 
+sidebar: sidebar 
+keywords: performance policy,Datastore 
+summary: 'Vous pouvez créer des règles de performance avec des seuils pour les metrics associés aux datastores associés aux pools de stockage que vous contrôlez. Par défaut, les règles de performances s"appliquent à tous les périphériques du type spécifié lors de leur création. Vous pouvez créer une annotation qui n"inclut qu"un périphérique spécifique ou un ensemble de périphériques dans la règle de performance.' 
+---
+= Création de politiques de performances pour les datastores
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez créer des règles de performance avec des seuils pour les metrics associés aux datastores associés aux pools de stockage que vous contrôlez. Par défaut, les règles de performances s'appliquent à tous les périphériques du type spécifié lors de leur création. Vous pouvez créer une annotation qui n'inclut qu'un périphérique spécifique ou un ensemble de périphériques dans la règle de performance.
+
+
+
+== Avant de commencer
+
+Lors de l'utilisation d'une annotation dans une règle de performance, celle-ci doit exister avant la création de la règle.
+
+
+
+== Description de la tâche
+
+Vous créez une règle de performances qui vous avertit lorsqu'un ou plusieurs datastores que vous contrôlez dépassent un seuil que vous avez défini. Il est possible que votre système contienne déjà une stratégie globale qui répond à vos besoins. Sinon, une règle utilisant des annotations peut également fonctionner si vous annotez vos datastores.
+
+
+
+== Étapes
+
+. Dans la barre d'outils Insight, sélectionnez *gérer* > *politiques de performances*
++
+La page règles de performance s'affiche. Examinez toutes les stratégies de performances existantes pour identifier les stratégies existantes qui répondent aux mesures des seuils que vous souhaitez surveiller.
+
+. Cliquez sur *+Ajouter* pour ajouter une nouvelle stratégie
+. Ajouter un « Nom de la règle »
++
+Vous devez utiliser un nom différent de tous les autres noms de stratégie pour l'objet. Par exemple, vous ne pouvez pas avoir deux règles nommées « latence » pour un volume interne. Vous pouvez toutefois disposer d'une règle de « latence » pour un volume interne et d'une autre règle de « latence » pour un magasin de données. La meilleure pratique consiste à toujours utiliser un nom unique pour n'importe quelle règle, quel que soit le type d'objet.
+
+. Sélectionnez « datastore » comme type d'objet
+. Cliquez sur « première occurrence ».
++
+L'option première occurrence déclenche une alerte lorsqu'un seuil est dépassé sur le premier échantillon de données. Toutes les autres options déclenchent une alerte lorsque le seuil est franchi une fois et est traversé en continu pendant au moins la durée spécifiée.
+
+. Cliquez sur « Avertissement ».
+. Pour ""Créer une alerte"", sélectionnez *Rapport de capacité - sur validation* et définissez la valeur sur *> 150*
++
+Vous pouvez créer des alertes relatives à la capacité supplémentaires, telles que **capacité totale **et *capacité utilisée*.
+
+

@@ -1,0 +1,20 @@
+---
+permalink: install-windows/back-up-the-security-configuration.html 
+sidebar: sidebar 
+keywords:  
+summary: Lorsque votre environnement Insight utilise une configuration de sécurité autre que celle par défaut, vous devez sauvegarder la configuration de sécurité, puis restaurer la configuration de sécurité une fois le nouveau logiciel installé. La configuration de sécurité doit être restaurée avant la restauration de la sauvegarde de la base de données Data Warehouse. 
+---
+= Sauvegarde de la configuration de sécurité
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsque votre environnement Insight utilise une configuration de sécurité autre que celle par défaut, vous devez sauvegarder la configuration de sécurité, puis restaurer la configuration de sécurité une fois le nouveau logiciel installé. La configuration de sécurité doit être restaurée avant la restauration de la sauvegarde de la base de données Data Warehouse.
+
+
+
+== Description de la tâche
+
+Vous utilisez le `securityadmin` outil permettant de créer une sauvegarde de la configuration et de restaurer la configuration enregistrée. Pour plus d'informations, recherchez `securityadmin` Dans le Centre de documentation OnCommand Insight : http://docs.netapp.com/oci-73/index.jsp[]

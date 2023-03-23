@@ -1,0 +1,68 @@
+---
+permalink: config-admin/security-management.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La version 7.3.1 de OnCommand Insight a introduit des fonctions de sécurité qui permettent aux environnements Insight de fonctionner avec une sécurité renforcée. Les fonctionnalités comprennent des améliorations au cryptage, le hachage des mots de passe et la possibilité de modifier les mots de passe et les paires de clés d"utilisateur internes qui cryptent et décryptent les mots de passe. Vous pouvez gérer ces fonctionnalités sur tous les serveurs de l"environnement Insight.' 
+---
+= Sécurité des données Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La version 7.3.1 de OnCommand Insight a introduit des fonctions de sécurité qui permettent aux environnements Insight de fonctionner avec une sécurité renforcée. Les fonctionnalités comprennent des améliorations au cryptage, le hachage des mots de passe et la possibilité de modifier les mots de passe et les paires de clés d'utilisateur internes qui cryptent et décryptent les mots de passe. Vous pouvez gérer ces fonctionnalités sur tous les serveurs de l'environnement Insight.
+
+L'installation par défaut d'Insight inclut une configuration de sécurité dans laquelle tous les sites de votre environnement partagent les mêmes clés et les mêmes mots de passe par défaut. Pour protéger vos données sensibles, NetApp vous recommande de modifier les clés par défaut et le mot de passe utilisateur acquisition après une installation ou une mise à niveau.
+
+Les mots de passe cryptés de la source de données sont stockés dans la base de données Insight Server. Le serveur dispose d'une clé publique et crypte les mots de passe lorsqu'un utilisateur les saisit dans une page de configuration de source de données WebUI. Le serveur ne dispose pas des clés privées requises pour décrypter les mots de passe de la source de données stockés dans la base de données du serveur. Seules les unités d'acquisition (LAU, RAU) possèdent la clé privée de la source de données requise pour décrypter les mots de passe de la source de données.
+
+
+
+== Génération de nouvelles clés sur les serveurs
+
+L'utilisation de clés par défaut introduit une vulnérabilité de sécurité dans votre environnement. Par défaut, les mots de passe des sources de données sont stockés et cryptés dans la base de données Insight. Elles sont chiffrées à l'aide d'une clé commune à toutes les installations d'Insight. Dans une configuration par défaut, une base de données Insight envoyée à NetApp inclut des mots de passe qui pourraient théoriquement être déchiffrés par NetApp.
+
+
+
+== Modification du mot de passe utilisateur acquisition
+
+L'utilisation du mot de passe utilisateur « acquisition » par défaut introduit une vulnérabilité de sécurité dans votre environnement. Toutes les unités d'acquisition utilisent l'utilisateur « acquisition » pour communiquer avec le serveur. Raus avec des mots de passe par défaut peut théoriquement se connecter à n'importe quel serveur Insight en utilisant des mots de passe par défaut.
+
+
+
+== Mise à niveau et installation
+
+Lorsque votre système Insight contient des configurations de sécurité autres que celles par défaut (vous avez changé ou changé de mot de passe), vous devez sauvegarder vos configurations de sécurité. L'installation de nouveaux logiciels ou, dans certains cas, la mise à niveau de logiciels restaure la configuration de sécurité par défaut de votre système. Lorsque votre système revient à la configuration par défaut, vous devez restaurer la configuration non par défaut pour que le système fonctionne correctement.
+
+
+
+== La gestion des clés dans un environnement complexe de fournisseurs de services
+
+Un fournisseur de services peut héberger plusieurs clients OnCommand Insight qui recueillent des données. Ces clés protègent les données des clients contre tout accès non autorisé par plusieurs clients sur le serveur Insight. Les données de chaque client sont protégées par des paires de clés spécifiques.
+
+Cette implémentation d'Insight peut être configurée comme indiqué dans l'illustration suivante.
+
+image::../media/serv-provider-keys.gif[clés de fournisseur de services]
+
+Vous devez créer des clés individuelles pour chaque client dans cette configuration. Le client A nécessite des clés identiques pour les deux Raus. Le client B nécessite un seul jeu de clés.
+
+Procédure à suivre pour modifier les clés de cryptage du client A :
+
+. Effectuez une connexion à distance au serveur hébergeant RAU1.
+. Démarrez l'outil d'administration de la sécurité.
+. Sélectionnez Modifier la clé de cryptage pour remplacer les clés par défaut.
+. Sélectionnez Sauvegarder pour créer un fichier zip de sauvegarde de la configuration de sécurité.
+. Effectuez une connexion à distance au serveur hébergeant RAU2.
+. Copiez le fichier zip de sauvegarde de la configuration de sécurité dans RAU2.
+. Démarrez l'outil d'administration de la sécurité.
+. Restaurez la sauvegarde de sécurité de RAU1 vers le serveur actuel.
+
+
+Procédure à suivre pour modifier les clés de cryptage du client B :
+
+. Effectuez une connexion à distance au serveur hébergeant RAU3.
+. Démarrez l'outil d'administration de la sécurité.
+. Sélectionnez Modifier la clé de cryptage pour remplacer les clés par défaut.
+. Sélectionnez Sauvegarder pour créer un fichier zip de sauvegarde de la configuration de sécurité.
+

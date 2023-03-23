@@ -1,0 +1,27 @@
+---
+permalink: config-admin/displaying-system-information.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous pouvez afficher les informations de configuration IP Microsoft Windows relatives au système sur lequel le serveur OnCommand Insight est déployé. 
+---
+= Affichage des informations système
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez afficher les informations de configuration IP Microsoft Windows relatives au système sur lequel le serveur OnCommand Insight est déployé.
+
+
+
+== Étapes
+
+. Dans la barre d'outils Insight, cliquez sur *Admin* et sélectionnez *Dépannage*.
+. En bas de la page dans la zone autres tâches, cliquez sur le lien *Dépannage avancé*.
+. Sur la page Dépannage avancé, cliquez sur l'onglet *Rapports*.
+. Cliquez sur *informations système*.
++
+La configuration IP de Windows inclut des informations telles que le nom d'hôte, le DNS, l'adresse IP, le masque de sous-réseau, les informations sur le système d'exploitation, mémoire, périphérique d'amorçage et nom de connexion.
+
+

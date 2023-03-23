@@ -1,0 +1,87 @@
+---
+permalink: config-admin/microsoft-azure-netapp-files-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Cette source de données fait l"acquisition de données d"inventaire et de performances pour Azure NetApp Files \(ANF\).' 
+---
+= Source de données Azure NetApp Files
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cette source de données fait l'acquisition de données d'inventaire et de performances pour Azure NetApp Files (ANF).
+
+
+
+== De formation
+
+La configuration de cette source de données est requise pour :
+
+* Port requis : 443 HTTPS
+* IP REST Azure Management (management.azure.com)
+* ID de l'application principale du service Azure (client) (compte utilisateur)
+* Clé d'authentification principale du service Azure (mot de passe utilisateur)
+* Vous devez configurer un compte Azure pour la découverte Cloud Insights.
++
+Une fois le compte correctement configuré et l'application enregistrée dans Azure, vous disposez des identifiants nécessaires pour découvrir l'instance Azure avec Cloud Insights. Le lien suivant explique comment configurer le compte pour la découverte :
+
++
+https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal[]
+
+
+
+
+
+== Configuration
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+ID de l'application principale du service Azure (client)
+ a| 
+ID de connexion à Azure
+
+
+
+ a| 
+ID de locataire Azure
+ a| 
+ID de locataire Azure
+
+
+
+ a| 
+Clé d'authentification principale du service Azure
+ a| 
+Clé d'authentification de connexion
+
+
+
+ a| 
+J'ai bien compris que Microsoft me facture pour les demandes d'API
+ a| 
+Vérifiez que vous avez bien compris que Microsoft vous facture des demandes d'API formulées par l'interrogation Insight.
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+La valeur par défaut est 60 minutes
+
+|===

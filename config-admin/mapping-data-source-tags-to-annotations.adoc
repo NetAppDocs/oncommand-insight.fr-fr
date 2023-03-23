@@ -1,0 +1,18 @@
+---
+permalink: config-admin/mapping-data-source-tags-to-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Lorsqu"une source de données est configurée pour interroger les données de balise, Insight définit automatiquement les valeurs d"annotation d"une annotation Insight existante portant le même nom qu"une balise.' 
+---
+= Mappage des balises de source de données avec les annotations
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsqu'une source de données est configurée pour interroger les données de balise, Insight définit automatiquement les valeurs d'annotation d'une annotation Insight existante portant le même nom qu'une balise.
+
+Lorsque l'annotation Insight existe avant que les balises ne soient activées dans la source de données, les données de balise de la source de données sont automatiquement ajoutées à l'annotation Insight.
+
+Lorsque vous créez une annotation après l'activation de la balise, l'interrogation initiale de la source de données ne met pas automatiquement à jour l'annotation. Il y a un délai dans le temps nécessaire pour remplacer ou remplir l'annotation Insight. Pour éviter ce délai, vous pouvez forcer la balise à mettre à jour l'annotation en repoussant puis en rereprenant la source de données.

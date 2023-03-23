@@ -1,0 +1,186 @@
+---
+permalink: config-admin/ibm-xiv-cli-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"inventaire des sources de données IBM XIV \(CLI\) s"effectue à l"aide de l"interface de ligne de commande XIV. Les performances XIV sont obtenues en appelant SMI-S à la baie XIV, qui exécute un fournisseur SMI-S sur le port 5989.' 
+---
+= Source de données IBM XIV
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'inventaire des sources de données IBM XIV (CLI) s'effectue à l'aide de l'interface de ligne de commande XIV. Les performances XIV sont obtenues en appelant SMI-S à la baie XIV, qui exécute un fournisseur SMI-S sur le port 5989.
+
+
+
+== Terminologie
+
+OnCommand Insight acquiert les informations d'inventaire suivantes à partir de la source de données IBM XIV. Pour chaque type de ressource acquis par Insight, la terminologie la plus courante utilisée pour cette ressource est indiquée. Lors de l'affichage ou du dépannage de cette source de données, gardez à l'esprit la terminologie suivante :
+
+|===
+
+
+| Terme du fournisseur/modèle | Terme Insight 
+
+
+ a| 
+Disque
+ a| 
+Disque
+
+
+
+ a| 
+System de stockage
+ a| 
+Stockage
+
+
+
+ a| 
+Pool de stockage
+ a| 
+Pool de stockage
+
+
+
+ a| 
+Volumétrie
+ a| 
+Volumétrie
+
+|===
+[NOTE]
+====
+Il s'agit uniquement de mappages terminologiques courants et peuvent ne pas représenter tous les cas pour cette source de données.
+
+====
+
+
+== De formation
+
+* Port requis : port TCP 7778
+* Adresse IP de l'interface de gestion XIV
+* Nom d'utilisateur et mot de passe en lecture seule
+* La CLI XIV doit être installée sur le serveur Insight ou RAU
+* Validation de l'accès : connectez-vous à l'interface utilisateur XIV à partir du serveur Insight en utilisant le nom d'utilisateur et le mot de passe.
+
+
+
+
+== Configuration
+
+|===
+
+
+| *Champ* | *Description* 
+
+
+ a| 
+Adresse IP
+ a| 
+Adresse IP ou nom de domaine complet pour le stockage XIV
+
+
+
+ a| 
+Nom d'utilisateur
+ a| 
+Nom d'utilisateur pour le stockage XIV
+
+
+
+ a| 
+Mot de passe
+ a| 
+Mot de passe pour le stockage XIV
+
+
+
+ a| 
+Chemin complet vers le répertoire XIV CLI
+ a| 
+Chemin complet vers le répertoire XIV CLI
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| *Champ* | *Description* 
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+Intervalle entre les sondages d'inventaire (40 minutes par défaut)
+
+
+
+ a| 
+Délai d'attente du processus CLI (ms)
+ a| 
+Délai d'expiration du processus CLI (7200000 ms par défaut)
+
+
+
+ a| 
+ADRESSE IP DE L'HÔTE SMI-S.
+ a| 
+Adresse IP de l'hôte SMI-S Provider
+
+
+
+ a| 
+Port SMI-S.
+ a| 
+Port utilisé par SMI-S Provider Host
+
+
+
+ a| 
+Protocole SMI-S
+ a| 
+Protocole utilisé pour la connexion au fournisseur SMI-S.
+
+
+
+ a| 
+Espace de noms SMI-S.
+ a| 
+Espace de noms SMI-S.
+
+
+
+ a| 
+Nom d'utilisateur
+ a| 
+Nom d'utilisateur pour l'hôte SMI-S Provider
+
+
+
+ a| 
+Mot de passe
+ a| 
+Mot de passe de l'hôte SMI-S Provider
+
+
+
+ a| 
+Intervalle d'interrogation des performances (s)
+ a| 
+Intervalle entre les sondages de performances (300 secondes par défaut)
+
+
+
+ a| 
+Nombre de tentatives de connexion SMI-S.
+ a| 
+Nombre de tentatives de connexion SMI-S
+
+|===

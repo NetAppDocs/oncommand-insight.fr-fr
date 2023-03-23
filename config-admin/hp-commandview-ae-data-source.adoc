@@ -1,0 +1,277 @@
+---
+permalink: config-admin/hp-commandview-ae-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les sources de données HP CommandView Advanced Edition \(AE\) et CommandView AE CLI/SMI \(AE Lite\) prennent en charge l"inventaire et les performances d"un serveur CommandView \(également appelé HiCommand\) Device Manager.' 
+---
+= Source de données HP CommandView AE
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les sources de données HP CommandView Advanced Edition (AE) et CommandView AE CLI/SMI (AE Lite) prennent en charge l'inventaire et les performances d'un serveur CommandView (également appelé HiCommand) Device Manager.
+
+
+
+== Terminologie
+
+OnCommand Insight acquiert les informations d'inventaire suivantes à partir des sources de données HP CommandView AE et AE Lite. Pour chaque type de ressource acquis par Insight, la terminologie la plus courante utilisée pour cette ressource est indiquée. Lors de l'affichage ou du dépannage de cette source de données, gardez à l'esprit la terminologie suivante :
+
+|===
+
+
+| Terme du fournisseur/modèle | Terme Insight 
+
+
+ a| 
+PDEV
+ a| 
+Disque
+
+
+
+ a| 
+Pool de journaux
+ a| 
+Groupe de disques
+
+
+
+ a| 
+Baie de stockage
+ a| 
+Stockage
+
+
+
+ a| 
+Contrôleur de port
+ a| 
+Nœud de stockage
+
+
+
+ a| 
+Groupe de baies, DP Pool
+ a| 
+Pool de stockage
+
+
+
+ a| 
+Unité logique, LDEV
+ a| 
+Volumétrie
+
+|===
+[NOTE]
+====
+Il s'agit uniquement de mappages terminologiques courants et peuvent ne pas représenter tous les cas pour cette source de données.
+
+====
+
+
+== Exigences d'inventaire
+
+* Adresse IP du serveur HiCommand Device Manager
+* Nom d'utilisateur et mot de passe en lecture seule pour le logiciel CommandView AE et les privilèges d'homologue
+* La version CommandView AE Lite du gestionnaire de périphériques ne dispose que de la licence CLI
+* Port requis : 2001
+
+
+
+
+== Exigences en matière de performances
+
+* Performances HDS USP, USP V, et VSP
++
+** Le moniteur de performances doit être sous licence.
+** L'interrupteur de surveillance doit être activé.
+** L'outil d'exportation (`Export.exe`) Doit être copié sur le serveur OnCommand Insight.
+** La version de l'outil d'exportation doit correspondre à la version du microcode de la matrice cible.
+
+
+* Performances HDS AMS
++
+** Le moniteur de performances doit être sous licence.
+** L'utilitaire CLI du navigateur de stockage modulaire 2 (SNM2) doit être installé sur le serveur OnCommand Insight.
+** Vous devez enregistrer toutes les baies de stockage AMS, WMS et SMS dont les performances doivent être acquises par OnCommand Insight à l'aide de la commande suivante :
++
+
+
+** Vous devez vous assurer que toutes les baies que vous avez enregistrées sont répertoriées dans le résultat de cette commande : `auunitref.exe`.
+
+
+
+
+
+
+== Configuration
+
+|===
+
+
+| *Champ* | *Description* 
+
+
+ a| 
+Serveur HiCommand
+ a| 
+Adresse IP ou nom de domaine complet du serveur HiCommand Device Manager
+
+
+
+ a| 
+Nom d'utilisateur
+ a| 
+Nom d'utilisateur du serveur HiCommand Device Manager.
+
+
+
+ a| 
+Mot de passe
+ a| 
+Mot de passe utilisé pour le serveur HiCommand Device Manager.
+
+
+
+ a| 
+Dispositifs - stockage USP, USP V, VSP/R600
+ a| 
+Liste des appareils pour les stockages VSP G1000 (R800), VSP (R700), HUS VM (HM700) et USP. Chaque système de stockage nécessite :
+
+* IP de la matrice : adresse IP du stockage
+* Nom d'utilisateur : nom d'utilisateur pour le stockage
+* Mot de passe : mot de passe pour le stockage
+* Dossier contenant les fichiers JAR de l'utilitaire d'exportation : dossier contenant l'utilitaire d'exportation `.jar` fichiers
+
+
+
+
+ a| 
+SNM2Devices - WMS/SMS/AMS Storages
+ a| 
+Liste des périphériques pour les stockages WMS/SMS/AMS. Chaque système de stockage nécessite :
+
+* IP de la matrice : adresse IP du stockage
+* Chemin CLI du navigateur de stockage : chemin CLI SNM2
+* Authentification de compte valide : sélectionnez cette option pour choisir une authentification de compte valide
+* Nom d'utilisateur : nom d'utilisateur pour le stockage
+* Mot de passe : mot de passe pour le stockage
+
+
+
+
+ a| 
+Choisissez Tuning Manager pour les performances
+ a| 
+Choisissez Tuning Manager pour les performances et remplacez les autres options de performances
+
+
+
+ a| 
+L'hôte de Tuning Manager
+ a| 
+Adresse IP ou nom de domaine complet du gestionnaire de réglages
+
+
+
+ a| 
+Port du gestionnaire de réglage
+ a| 
+Port utilisé pour Tuning Manager
+
+
+
+ a| 
+Nom d'utilisateur du gestionnaire de réglage
+ a| 
+Nom d'utilisateur pour Tuning Manager
+
+
+
+ a| 
+Mot de passe du gestionnaire de réglage
+ a| 
+Mot de passe pour Tuning Manager
+
+|===
+[NOTE]
+====
+Dans HDS USP, USP V et VSP, tout disque peut appartenir à plusieurs groupes de baies.
+
+====
+
+
+== Configuration avancée
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Port du serveur HiCommand
+ a| 
+Port utilisé pour HiCommand Device Manager
+
+
+
+ a| 
+HTTPS activé
+ a| 
+Sélectionnez pour activer HTTPS
+
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+Intervalle entre les sondages d'inventaire (40 minutes par défaut)
+
+
+
+ a| 
+Choisissez 'exclure' ou 'inclure' pour spécifier une liste
+ a| 
+Spécifiez si vous souhaitez inclure ou exclure la liste de tableaux ci-dessous lors de la collecte des données
+
+
+
+ a| 
+Exclure ou inclure des périphériques
+ a| 
+Liste séparée par des virgules des noms d'ID de périphérique ou de tableau à inclure ou exclure
+
+
+
+ a| 
+Gestionnaire d'hôte de requêtes
+ a| 
+Sélectionnez cette option pour interroger le gestionnaire d'hôte
+
+
+
+ a| 
+Délai HTTP (s)
+ a| 
+Délai de connexion HTTP (60 secondes par défaut)
+
+
+
+ a| 
+Intervalle d'interrogation des performances (en secondes)
+ a| 
+Intervalle entre les sondages de performances (300 secondes par défaut)
+
+
+
+ a| 
+Délai d'exportation en secondes
+ a| 
+Délai d'expiration de l'utilitaire d'exportation (300 secondes par défaut)
+
+|===

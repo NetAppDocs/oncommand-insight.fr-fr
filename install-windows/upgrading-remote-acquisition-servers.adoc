@@ -1,0 +1,53 @@
+---
+permalink: install-windows/upgrading-remote-acquisition-servers.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Une fois toutes les tâches préalables terminées, vous pouvez vous connecter au serveur d"unité d"acquisition distante et exécuter le package d"installation pour terminer la mise à niveau. Vous devez effectuer cette tâche sur tous les serveurs d"acquisition distants de votre environnement.' 
+---
+= Mise à niveau des serveurs d'unités d'acquisition à distance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Une fois toutes les tâches préalables terminées, vous pouvez vous connecter au serveur d'unité d'acquisition distante et exécuter le package d'installation pour terminer la mise à niveau. Vous devez effectuer cette tâche sur tous les serveurs d'acquisition distants de votre environnement.
+
+
+
+== Avant de commencer
+
+* Vous devez avoir mis à niveau OnCommand Insight.
+* Le package d'installation OnCommand Insight doit se trouver sur le serveur.
+
+
+
+
+== Étapes
+
+. Connectez-vous au serveur d'unité d'acquisition distant à l'aide d'un compte disposant des autorisations d'administrateur local Windows.
+. Recherchez le pack d'installation d'Insight (`RAU-x64-version_number-build_number.msi`) À l'aide de l'Explorateur Windows et double-cliquez dessus.
++
+L'assistant d'installation OnCommand Insight s'affiche.
+
+. Éloignez la fenêtre de progression de l'assistant d'installation du centre de l'écran et éloignez-la de la fenêtre de l'assistant d'installation de sorte que les erreurs générées ne soient pas masquées.
+. Suivez les invites de l'assistant d'installation.
++
+Il est recommandé de laisser toutes les valeurs par défaut sélectionnées.
+
+
+
+
+
+== Une fois que vous avez terminé
+
+* Pour vérifier si la mise à niveau a réussi ou si des erreurs sont générées, consultez le journal de mise à niveau à l'emplacement suivant : `<install directory>\SANscreen\bin\log`.
+* Utilisez le `securityadmin` pour restaurer la sécurité enregistrée
++
+configuration. Pour plus d'informations, recherchez securityadmin dans le OnCommand Insight
+
++
+Centre de documentation : http://docs.netapp.com/oci-73/index.jsp[]
+
+* Effacez le cache et l'historique de votre navigateur pour vous assurer que vous recevez les dernières données du serveur.
+

@@ -1,0 +1,58 @@
+---
+permalink: install-windows/installing-an-ethernet-monitoring-unit-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: '« Les unités de surveillance Ethernet \(emus\) inspectent les paquets réseau de votre environnement pour permettre le dépannage des performances en termes de trafic réseau entre les hôtes et les ressources de stockage.' 
+---
+= Installation d'une unité de surveillance Ethernet
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+« Les unités de surveillance Ethernet (emus) inspectent les paquets réseau de votre environnement pour permettre le dépannage des performances en termes de trafic réseau entre les hôtes et les ressources de stockage.
+
+
+
+== Avant de commencer
+
+[NOTE]
+====
+L'unité de surveillance Ethernet (EMU) n'est pas prise en charge dans OnCommand Insight version 7.3.12 et ultérieure.
+
+====
+Vous devez avoir terminé toutes les conditions préalables à l'installation.
+
+
+
+== Étapes
+
+. Connectez-vous au serveur EMU à l'aide d'un compte avec privilèges sudo.
+. Accédez au répertoire du serveur où se trouvent les fichiers d'installation et saisissez la commande suivante :
++
+`unzip oci-ethernet-<version>-linux-x86_64.zip`
+
++
+Où `<version>` est le numéro de version spécifié dans le nom de fichier que vous avez téléchargé.
+
+. Vous pouvez afficher la syntaxe, les arguments de commande et l'utilisation des paramètres pour `oci-install.sh`:
++
+`sudo ./oci-ethernet-<version>-linux-x86_64/oci-install.sh --help`
+
+. Exécutez le script d'installation :
++
+`sudo ./oci-ethernet-<version>-linux-x86_64/oci-install.sh`
+
+. Lisez le contrat de licence et acceptez-le.
+. Répondez à chacune des invites :
++
+** *OnCommand Insight* *Nom du serveur ou adresse IP* - nom d'hôte ou adresse IP permettant d'identifier le serveur OnCommand Insight. L'EMU utilise ce nom/cette adresse IP pour ouvrir une liaison de communication avec le serveur. Si vous spécifiez un nom d'hôte, assurez-vous qu'il peut être résolu via DNS.
+** *Nom de l'unité d'acquisition* - nom unique qui identifie l'EMU.
+** *OnCommand Insight Secured Remote acquisition Port (HTTPS)* - Port utilisé par l'EMU pour envoyer des informations de modification d'environnement au serveur OnCommand Insight. Ce paramètre doit correspondre à la valeur saisie lors de l'installation du serveur OnCommand Insight et doit être identique sur tous les serveurs emus.
+** *Répertoire de sortie Ethernet pas* - Entrez le dossier de sortie pas.
+** *Interfaces Ethernet pas à surveiller* - Entrez les interfaces dont vous souhaitez surveiller le trafic.
+** *Activer les paquets jumbo* - si l'environnement client utilise des paquets jumbo, EMU crée des tampons de paquets volumineux pour lire ces paquets. Sinon, EMU utilise le pool de mémoire disponible pour les paquets Ethernet standard. Après avoir répondu à toutes les invites, l'installation commence et devrait prendre environ 10 minutes, selon les applications installées.
+
+
+

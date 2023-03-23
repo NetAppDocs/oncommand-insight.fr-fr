@@ -1,0 +1,27 @@
+---
+permalink: install-windows/backing-up-custom-data-warehouse-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: Si vous avez créé des rapports personnalisés et que vous ne disposez pas des fichiers source .xml, vous devez sauvegarder ces rapports avant la mise à niveau. Vous devez ensuite les copier sur un serveur autre que le serveur Data Warehouse. 
+---
+= Sauvegarde des rapports Data Warehouse personnalisés
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous avez créé des rapports personnalisés et que vous n'avez pas le `.xml` fichiers source pour eux, vous devez sauvegarder ces rapports avant la mise à niveau. Vous devez ensuite les copier sur un serveur autre que le serveur Data Warehouse.
+
+
+
+== Étapes
+
+. Connectez-vous au portail Data Warehouse à l'adresse `+https://fqdn/dwh+`.
+. Dans la barre d'outils Data Warehouse, cliquez sur image:../media/oci-reporting-portal-icon.gif[""] Pour ouvrir le portail de rapports et vous connecter.
+. Sélectionnez *fichier* > *Ouvrir*.
+. Sélectionnez le dossier dans lequel se trouve le rapport, sélectionnez le rapport, puis cliquez sur *Ouvrir*.
+. Sélectionnez *Outils* > *Copier le rapport dans le presse-papiers*.
+. Ouvrez un éditeur de texte, collez le contenu du rapport et enregistrez le fichier sous `report_name.txt`, où `report _name` est le nom du rapport.
+. Stockez les rapports sur un serveur autre que le serveur Data Warehouse.
+

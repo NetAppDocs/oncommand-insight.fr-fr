@@ -1,0 +1,27 @@
+---
+permalink: install-linux/uninstalling-a-remote-acquisition-unit-rau.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez désinstaller une unité d"acquisition à distance lorsque vous n"en avez plus besoin.' 
+---
+= Désinstallation d'une unité d'acquisition à distance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez désinstaller une unité d'acquisition à distance lorsque vous n'en avez plus besoin.
+
+
+
+== Étapes
+
+. Connectez-vous au serveur Remote acquisition Unit à l'aide d'un compte avec privilèges sudo.
+. Assurez-vous que toutes les fenêtres OnCommand Insight sont fermées.
+. Vous pouvez afficher la syntaxe, les arguments de commande et l'utilisation des paramètres pour `uninstall.sh` en saisissant la commande suivante : `sudo /usr/bin/oci-uninstall.sh --help`
+. Tapez la commande suivante : `sudo /usr/bin/oci-uninstall.sh`
++
+Le script de désinstallation s'exécute. Suivez les invites.
+
+

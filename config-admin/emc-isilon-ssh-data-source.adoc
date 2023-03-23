@@ -1,0 +1,155 @@
+---
+permalink: config-admin/emc-isilon-ssh-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La source de données SSH Isilon collecte l"inventaire et les performances du stockage NAS scale-out EMC Isilon.' 
+---
+= Source de données EMC Isilon
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La source de données SSH Isilon collecte l'inventaire et les performances du stockage NAS scale-out EMC Isilon.
+
+
+
+== Terminologie
+
+OnCommand Insight acquiert les informations d'inventaire suivantes à partir de la source de données EMC Isilon. Pour chaque type de ressource acquis par Insight, la terminologie la plus courante utilisée pour cette ressource est indiquée. Lors de l'affichage ou du dépannage de cette source de données, gardez à l'esprit la terminologie suivante :
+
+|===
+
+
+| Terme du fournisseur/modèle | Terme Insight 
+
+
+ a| 
+Lecteur
+ a| 
+Disque
+
+
+
+ a| 
+Cluster
+ a| 
+Stockage
+
+
+
+ a| 
+Nœud
+ a| 
+Nœud de stockage
+
+
+
+ a| 
+Système de fichiers
+ a| 
+Volume interne
+
+|===
+[NOTE]
+====
+Il s'agit uniquement de mappages terminologiques courants et peuvent ne pas représenter tous les cas pour cette source de données.
+
+====
+
+
+== De formation
+
+* Autorisations d'administrateur sur le stockage Isilon
+* Accès validé par l'utilisation de `telnet` vers l'orifice 22
+
+
+
+
+== Configuration
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Adresse IP
+ a| 
+Adresse IP ou nom de domaine complet du cluster Isilon
+
+
+
+ a| 
+Nom d'utilisateur
+ a| 
+Nom d'utilisateur du cluster Isilon
+
+
+
+ a| 
+Mot de passe
+ a| 
+Mot de passe du cluster Isilon
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+Intervalle entre les sondages d'inventaire (20 minutes par défaut)
+
+
+
+ a| 
+Intervalle d'interrogation des performances (s)
+ a| 
+Intervalle entre les sondages de performances (300 secondes par défaut)
+
+
+
+ a| 
+Délai d'attente du processus SSH dépassé
+ a| 
+Délai d'expiration du processus SSH (60 secondes par défaut)
+
+
+
+ a| 
+Port SSH
+ a| 
+Port de service SSH
+
+|===
+
+
+== Exécution des commandes CLI
+
+À partir de OnCommand Insight version 7.3.11 et Service Pack 9, la source de données EMC Isilon contient une amélioration qui entraînera l'exécution d'un plus grand nombre de commandes CLI par Insight. Si vous utilisez un utilisateur non root dans votre source de données, vous aurez probablement configuré un fichier « sudoers » pour autoriser ce compte utilisateur à exécuter des commandes CLI spécifiques via SSH.
+
+Pour que Insight comprenne la fonction « zones d'accès » d'EMC, Insight exécutera désormais les nouvelles commandes CLI suivantes :
+
+* `sudo isi zone zones list --format json –verbose`
+* `sudo isi zone zones list`
+
+
+Insight analyse le résultat de ces commandes et exécute davantage d'instances de commandes existantes pour obtenir la configuration logique d'objets tels que les qtrees, les quotas et les partages/exportations NAS qui résident dans des zones d'accès non standard. Insight rapporte désormais ces objets pour les zones d'accès non par défaut à la suite de cette amélioration. Comme Insight obtient que les données en exécutant des commandes existantes (avec différentes options), aucune modification de fichier de sudoers n'est nécessaire pour que ceux-ci fonctionnent ; c'est seulement avec l'introduction des nouvelles commandes ci-dessus que la modification est nécessaire.
+
+Veuillez mettre à jour votre fichier sudoers pour permettre à votre compte de service Insight d'exécuter ces commandes avant de passer à cette version d'Insight. Dans le cas contraire, vos sources de données Isilon seront défaillantes.
+
+
+
+== Statistiques « système de fichiers »
+
+Depuis OnCommand Insight 7.3.12, le collecteur de données EMC Isilon introduit des statistiques de « système de fichiers » sur l'objet noeud pour EMC Isilon. Les statistiques de nœud existantes rapportées par OnCommand Insight sont basées sur le « disque ». En d'autres termes, pour les IOPS et le débit d'un nœud de stockage, que font les disques de ce nœud en agrégat ? Toutefois, pour les charges de travail pour lesquelles les lectures sont mises en cache en mémoire et/ou lors de la compression, la charge de travail du système de fichiers peut être considérablement plus élevée que ce qui frappe les disques. Un jeu de données avec une compression de 5:1 pourrait donc avoir une valeur de « débit de lecture du système de fichiers » 5 fois supérieure au débit de lecture du nœud de stockage, au fur et à mesure que ce dernier mesure les lectures à partir du disque, ce qui se développe 5 fois lorsque le nœud décompresse les données pour répondre à la demande de lecture du client.

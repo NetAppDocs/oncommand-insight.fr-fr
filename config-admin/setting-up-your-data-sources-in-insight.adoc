@@ -1,0 +1,25 @@
+---
+permalink: config-admin/setting-up-your-data-sources-in-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les sources de données constituent le composant le plus important lors de la tentative de maintenance d"un environnement Insight. Les sources de données découvrent les informations réseau utilisées pour l"analyse et la validation. Vous devez configurer vos sources de données dans Insight pour qu"elles puissent être surveillées au sein de votre réseau.' 
+---
+= Configuration des sources de données dans Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les sources de données constituent le composant le plus important lors de la tentative de maintenance d'un environnement Insight. Les sources de données découvrent les informations réseau utilisées pour l'analyse et la validation. Vous devez configurer vos sources de données dans Insight pour qu'elles puissent être surveillées au sein de votre réseau.
+
+Pour chaque source de données, les exigences spécifiques pour définir cette source de données dépendent du fournisseur et du modèle des dispositifs correspondants. Avant d'ajouter les sources de données, vous devez disposer d'adresses réseau, d'informations de compte et de mots de passe pour tous les périphériques, et éventuellement de ces détails supplémentaires :
+
+* Commutateurs
+* Stations de gestion de périphériques
+* Systèmes de stockage dotés d'une connectivité IP
+* Stations de gestion de stockage
+* Serveurs hôtes exécutant un logiciel de gestion pour les périphériques de stockage qui ne disposent pas d'une connectivité IP
+
+
+Pour plus d'informations sur les définitions des sources de données, reportez-vous à la section « référence des sources de données propres au fournisseur » de cette section.

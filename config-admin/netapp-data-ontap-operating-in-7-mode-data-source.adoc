@@ -1,0 +1,226 @@
+---
+permalink: config-admin/netapp-data-ontap-operating-in-7-mode-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Pour les systèmes de stockage qui utilisent le logiciel Data ONTAP 7-mode, vous devez utiliser la source de données ONTAPI, qui utilise l"interface de ligne de commandes pour obtenir des chiffres de capacité.' 
+---
+= Source de données NetApp Data ONTAP 7-mode
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour les systèmes de stockage qui utilisent le logiciel Data ONTAP 7-mode, vous devez utiliser la source de données ONTAPI, qui utilise l'interface de ligne de commandes pour obtenir des chiffres de capacité.
+
+
+
+== Terminologie
+
+OnCommand Insight acquiert les informations d'inventaire suivantes à partir de la source de données NetApp Data ONTAP 7-mode. Pour chaque type de ressource acquis par Insight, la terminologie la plus courante utilisée pour cette ressource est indiquée. Lors de l'affichage ou du dépannage de cette source de données, gardez à l'esprit la terminologie suivante :
+
+|===
+
+
+| Terme du fournisseur/modèle | Terme Insight 
+
+
+ a| 
+Disque
+ a| 
+Disque
+
+
+
+ a| 
+Groupe RAID
+ a| 
+Groupe de disques
+
+
+
+ a| 
+Fichier
+ a| 
+Stockage
+
+
+
+ a| 
+Fichier
+ a| 
+Nœud de stockage
+
+
+
+ a| 
+Agrégat
+ a| 
+Pool de stockage
+
+
+
+ a| 
+LUN
+ a| 
+Volumétrie
+
+
+
+ a| 
+Volumétrie
+ a| 
+Volume interne
+
+|===
+[NOTE]
+====
+Il s'agit uniquement de mappages terminologiques courants et peuvent ne pas représenter tous les cas pour cette source de données.
+
+====
+
+
+== De formation
+
+* Adresse IP du contrôleur de stockage FAS et du partenaire
+* Orifice 443
+* Nom d'utilisateur et mot de passe du contrôleur et du partenaire
+* Nom d'utilisateur et mot de passe personnalisés de niveau administrateur pour les contrôleurs et les contrôleurs partenaires, avec les fonctionnalités suivantes pour 7-mode :
++
+** « api-* » : utilisez-le pour permettre à OnCommand Insight d'exécuter toutes les commandes de l'API de stockage NetApp.
+** « Login-http-admin » : utilisez ce pour permettre à OnCommand Insight de se connecter au stockage NetApp via HTTP.
+** « Security-api-vfiler » : utilisez cette option pour permettre à OnCommand Insight d'exécuter les commandes de l'API de stockage NetApp et de récupérer les informations relatives à l'unité vFiler.
+** « cli-options » : permet de lire les options du système de stockage.
+** cli-lun : accédez à ces commandes pour gérer les LUN. Affiche le statut (chemin de LUN, taille, état en ligne/hors ligne et état partagé) de la LUN ou classe de LUN donnée.
+** « cli-df » : utilisez ce système pour afficher l'espace disque disponible.
+** « cli-ifconfig » : utilisez-le pour afficher les interfaces et les adresses IP.
+
+
+
+
+
+
+== Configuration
+
+|===
+
+
+| *Champ* | *Description* 
+
+
+ a| 
+Adresse du filer
+ a| 
+Adresse IP ou nom de domaine complet pour NetApp Filer
+
+
+
+ a| 
+Nom d'utilisateur
+ a| 
+Nom d'utilisateur de NetApp Filer
+
+
+
+ a| 
+Mot de passe
+ a| 
+Mot de passe de NetApp Filer
+
+
+
+ a| 
+Adresse du filer partenaire haute disponibilité dans le cluster
+ a| 
+Adresse IP ou nom de domaine complet pour le serveur de fichiers partenaire haute disponibilité
+
+
+
+ a| 
+Nom d'utilisateur de HA Partner Filer dans le cluster
+ a| 
+Nom d'utilisateur de NetApp HA Partner Filer
+
+
+
+ a| 
+Mot de passe du serveur de fichiers du partenaire HA dans le cluster
+ a| 
+Mot de passe de NetApp HA Partner Filer
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| *Champ* | *Description* 
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+Intervalle entre les sondages d'inventaire (20 minutes par défaut)
+
+
+
+ a| 
+Type de connexion
+ a| 
+Choisissez le type de connexion
+
+
+
+ a| 
+Port de connexion
+ a| 
+Port utilisé pour l'API NetApp
+
+
+
+ a| 
+Intervalle d'interrogation des performances (s)
+ a| 
+Intervalle entre les sondages de performances (300 secondes par défaut)
+
+|===
+
+
+== Connexion des systèmes de stockage
+
+Au lieu d'utiliser l'utilisateur administratif par défaut pour cette source de données, vous pouvez configurer un utilisateur disposant de droits d'administration directement sur les systèmes de stockage NetApp afin que cette source de données puisse acquérir des données provenant des systèmes de stockage NetApp.
+
+Pour se connecter aux systèmes de stockage NetApp, l'utilisateur, qui est spécifié lors de l'acquisition du filer principal (là où il existe le système de stockage), doit respecter les conditions suivantes :
+
+* L'utilisateur doit se trouver sur vfiler0 (filer racine/pFiler).
++
+Les systèmes de stockage sont acquis lors de l'acquisition du filer principal.
+
+* Les commandes suivantes définissent les fonctions de rôle utilisateur :
++
+** « api-* » : utilisez-le pour permettre à OnCommand Insight d'exécuter toutes les commandes de l'API de stockage NetApp. Cette commande est nécessaire pour utiliser le ZAPI.
+** « Login-http-admin » : utilisez ce pour permettre à OnCommand Insight de se connecter au stockage NetApp via HTTP. Cette commande est nécessaire pour utiliser le ZAPI.
+** « Security-api-vfiler » : utilisez cette option pour permettre à OnCommand Insight d'exécuter les commandes de l'API de stockage NetApp et de récupérer les informations relatives à l'unité vFiler.
+** « cli-options » : pour la commande « options » et utilisée pour les licences IP du partenaire et activées.
+** « cli-lun » : accédez à ces commandes pour gérer les LUN. Affiche le statut (chemin de LUN, taille, état en ligne/hors ligne et état partagé) de la LUN ou classe de LUN donnée.
+** « cli-df » : pour les commandes df –s », « df -r » et « df -A -r » et l'espace utilisé pour afficher l'espace disponible.
+** « cli-ifconfig » : pour la commande « ifconfig -a » et utilisée pour obtenir l'adresse IP du filer.
+** « cli-rdfile » : pour la commande « rdfile /etc/netgroup » et utilisée pour obtenir des netgroups.
+** CLI-date : pour la commande « date » et utilisée pour obtenir des dates complètes pour la copie Snapshot.
+** CLI-snap : pour la commande « snap list » et utilisée pour obtenir les copies Snapshot.
+
+
+
+
+Si vous ne disposez pas d'autorisations CLI-date ou CLI-snap, l'acquisition peut être terminée, mais les copies Snapshot ne sont pas signalées.
+
+Pour acquérir une source de données 7-mode avec succès et ne générer aucun avertissement sur le système de stockage, définissez les rôles à l'aide de l'une des chaînes de commandes suivantes. La deuxième chaîne répertoriée ici est une version simplifiée de la première :
+
+[listing]
+----
+login-http-admin,api-*,security-api-vfile,cli-rdfile,cli-options,cli-df,cli-lun,cli-ifconfig,cli-date,cli-snap,
+or
+login-http-admin,api-*,security-api-vfile,cli-*
+----

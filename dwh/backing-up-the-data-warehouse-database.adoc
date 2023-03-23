@@ -1,0 +1,262 @@
+---
+permalink: dwh/backing-up-the-data-warehouse-database.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez sauvegarder la base de données Data Warehouse, qui comprend également une sauvegarde Cognos, dans un fichier et la restaurer ultérieurement à l"aide du portail Data Warehouse. Une telle sauvegarde vous permet de migrer vers un autre serveur Data Warehouse ou de mettre à niveau vers une nouvelle version de Data Warehouse.' 
+---
+= Sauvegarde de la base de données Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez sauvegarder la base de données Data Warehouse, qui comprend également une sauvegarde Cognos, dans un fichier et la restaurer ultérieurement à l'aide du portail Data Warehouse. Une telle sauvegarde vous permet de migrer vers un autre serveur Data Warehouse ou de mettre à niveau vers une nouvelle version de Data Warehouse.
+
+
+
+== Étapes
+
+. Connectez-vous au portail Data Warehouse à l'adresse `+https://fqdn/dwh+`.
+. Dans le volet de navigation de gauche, sélectionnez *Sauvegarder/Restaurer*.
+. Cliquez sur *Backup* et sélectionnez votre configuration de sauvegarde :
++
+.. Toutes les Dataarts sauf les Datamart de performance
+.. Tous les Dataarts
+
+
++
+Cette opération peut prendre 30 minutes ou plus.
+
++
++ Data Warehouse crée un fichier de sauvegarde et affiche son nom.
+
+. Cliquez avec le bouton droit de la souris sur le fichier de sauvegarde et enregistrez-le à l'emplacement de votre choix.
++
+Vous ne souhaitez peut-être pas modifier le nom du fichier ; cependant, vous devez stocker le fichier en dehors du chemin d'installation de Data Warehouse.
+
++
+Le fichier de sauvegarde Data Warehouse inclut MySQL de l'instance DWH ; des schémas personnalisés (DB MySQL) et des tables ; une configuration LDAP ; les sources de données qui connectent Cognos à la base de données MySQL (pas les sources de données qui connectent le serveur Insight aux terminaux pour acquérir des données) ; importer et exporter des tâches qui ont importé ou exporté des rapports ; signaler des rôles de sécurité, des groupes et des espaces de noms ; comptes d'utilisateurs ; Tous les rapports de Reporting Portal modifiés et tous les rapports personnalisés, quel que soit leur emplacement de stockage, même dans le répertoire Mes dossiers. Les paramètres de configuration du système Cognos, tels que le paramètre du serveur SMTP et les paramètres de mémoire personnalisés Cognos ne sont pas sauvegardés.
+
++
+Les schémas par défaut dans lesquels les tables personnalisées sont sauvegardées sont les suivants :
+
++
+|===
+
+
+ a| 
+dwh_capacity
+
+
+
+ a| 
+dwh_capacity_staging
+
+
+
+ a| 
+dwh_dimensions
+
+
+
+ a| 
+dwh_fs_util
+
+
+
+ a| 
+dwh_inventory
+
+
+
+ a| 
+dwh_inventory_staging
+
+
+
+ a| 
+dwh_inventory_transitoire
+
+
+
+ a| 
+gestion_dwh
+
+
+
+ a| 
+dwh_performance
+
+
+
+ a| 
+dwh_performance_staging
+
+
+
+ a| 
+dwh_ports
+
+
+
+ a| 
+dwh_reports
+
+
+
+ a| 
+dwh_sa_staging
+
+
+
+ a| 
+
+
+
+ a| 
+
+
+
+ a| 
+
+|===
++
+Les schémas où les tables personnalisées sont exclues de la sauvegarde incluent les éléments suivants :
+
++
+|===
+
+
+ a| 
+schéma_information
+
+
+
+ a| 
+acquisition
+
+
+
+ a| 
+modèle_cloud
+
+
+
+ a| 
+données_hôte
+
+
+
+ a| 
+innodb
+
+
+
+ a| 
+inventaire
+
+
+
+ a| 
+inventaire_privé
+
+
+
+ a| 
+temps_inventaire
+
+
+
+ a| 
+journaux
+
+
+
+ a| 
+gestion
+
+
+
+ a| 
+mysql
+
+
+
+ a| 
+nas
+
+
+
+ a| 
+performances
+
+
+
+ a| 
+schéma_performances
+
+
+
+ a| 
+vues_de_performances
+
+
+
+ a| 
+SANscreen
+
+
+
+ a| 
+frotter
+
+
+
+ a| 
+garantie de service
+
+
+
+ a| 
+testez
+
+
+
+ a| 
+tmp
+
+
+
+ a| 
+atelier
+
+
+
+ a| 
+
+
+
+ a| 
+
+
+
+ a| 
+
+|===
++
+Dans toute sauvegarde lancée manuellement, un `.zip` le fichier contenant les fichiers suivants est créé :
+
++
+** Une sauvegarde quotidienne `.zip` Fichier, qui contient les définitions de rapport Cognos
+** Une sauvegarde de rapports `.zip` Fichier, qui contient tous les rapports de Cognos, y compris ceux du répertoire Mes dossiers
+** Un fichier de sauvegarde de base de données Data Warehouse en plus des sauvegardes manuelles, que vous pouvez effectuer à tout moment, Cognos crée une sauvegarde quotidienne (générée automatiquement chaque jour dans un fichier appelé `DailyBackup.zip`) qui inclut les définitions de rapport. La sauvegarde quotidienne inclut les dossiers et les paquets supérieurs livrés avec le produit. Le répertoire Mes dossiers et tous les répertoires que vous créez en dehors des dossiers supérieurs du produit ne sont pas inclus dans la sauvegarde Cognos.
+
+
++
+[NOTE]
+====
+En raison de la façon dont Insight nomme les fichiers dans le `.zip` fichier, certains programmes de décompression indiquent que le fichier est vide lors de son ouverture. Aussi longtemps que le `.zip` le fichier a une taille supérieure à 0 et ne se termine pas par un `.bad` extension, le `.zip` le fichier est valide. Vous pouvez ouvrir le fichier à l'aide d'un autre programme de décompression tel que 7-Zip ou WinZip®.
+
+====
+

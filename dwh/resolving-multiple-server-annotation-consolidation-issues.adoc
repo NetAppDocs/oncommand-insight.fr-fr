@@ -1,0 +1,39 @@
+---
+permalink: dwh/resolving-multiple-server-annotation-consolidation-issues.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La vue consolidation des annotations de la vue Dépannage de l"entrepôt de données affiche un tableau contenant tous les types d"annotations disponibles et les types d"objet auxquels ils peuvent être appliqués.' 
+---
+= Résolution de plusieurs problèmes de consolidation d'annotations de serveur
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La vue consolidation des annotations de la vue Dépannage de l'entrepôt de données affiche un tableau contenant tous les types d'annotations disponibles et les types d'objet auxquels ils peuvent être appliqués.
+
+
+
+== Description de la tâche
+
+La consolidation des valeurs d'annotation est basée sur la valeur du Type d'annotation. Une matrice de stockage peut avoir deux valeurs de niveau différentes, chacune provenant d'un connecteur différent. Ainsi, si dans un connecteur il y a un niveau défini par le nom Gold et dans un second connecteur, un niveau est défini avec le nom goldy, ces informations apparaissent dans Data Warehouse comme deux niveaux distincts.
+
+Comme certains types d'annotation permettent l'affectation de plusieurs valeurs d'annotation à un même objet, Data Warehouse permet aux objets (par exemple, « hôte ») d'avoir plusieurs valeurs d'annotation qui leur sont attribuées (par exemple, « data Center 1 » et « data Center 2 » peuvent être affectés au même hôte).
+
+Les fonctions d'annotation des tiers sur les volumes diffèrent quelque peu des tables d'annotation générales. L'environnement peut contenir un très grand nombre de volumes et leur affichage dans l'entrepôt de données peut affecter la facilité d'utilisation des informations. Par conséquent, la vue Annotations consolidation affiche uniquement les volumes auxquels plusieurs valeurs de niveau sont affectées, ainsi que le stockage contenant chacun de ces volumes.
+
+
+
+== Étapes
+
+. Connectez-vous au portail Data Warehouse à l'adresse `+https://hostname/dwh+`, où `hostname` Est le nom du système sur lequel l'entrepôt de données OnCommand Insight est installé.
+. Dans le volet de navigation de gauche, cliquez sur *Dépannage*.
+. Dans la section *consolidation des annotations*, cliquez sur *Afficher* dans la ligne de l'objet.
++
+Voici un exemple d'annotations pour Data_Center :
+
++
+image::../media/oci-dwh-troubleshooting-annotations-gif.gif[Dépanner la consolidation des annotations]
+
+

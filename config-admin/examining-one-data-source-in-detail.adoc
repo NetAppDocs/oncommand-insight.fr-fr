@@ -1,0 +1,52 @@
+---
+permalink: config-admin/examining-one-data-source-in-detail.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Si vous constatez qu"une source de données a échoué ou ralenti, vous pouvez consulter un résumé détaillé des informations relatives à cette source de données pour déterminer la cause du problème. Les sources de données présentant des conditions nécessitant votre attention sont signalées par un cercle rouge continu.' 
+---
+= Examen détaillé d'une source de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous constatez qu'une source de données a échoué ou ralenti, vous pouvez consulter un résumé détaillé des informations relatives à cette source de données pour déterminer la cause du problème. Les sources de données présentant des conditions nécessitant votre attention sont signalées par un cercle rouge continu.
+
+
+
+== Étapes
+
+. Dans la barre d'outils Insight, cliquez sur *Admin*.
++
+La liste *sources de données* s'ouvre. Toutes les sources de données répertoriées présentant des problèmes potentiels sont signalées par un cercle rouge continu. Les problèmes les plus graves sont en tête de liste.
+
+. Sélectionnez la source de données à l'origine du problème.
+. Cliquez sur le lien du nom de la source de données.
+. Sur la page de résumé de la source de données, vérifiez les informations dans l'une des sections suivantes :
++
+** *Chronologie des événements*
++
+Répertorie les événements liés à l'état actuel affiché dans la liste sources de données. Les événements de ce résumé sont affichés par périphérique. Les erreurs sont affichées en rouge. Vous pouvez positionner le pointeur de la souris sur les éléments de la ligne de temps pour afficher des informations supplémentaires.
+
+** *Dispositifs signalés par cette source de données*
++
+Répertorie les types de périphériques, leurs adresses IP et des liens vers des informations plus détaillées pour chaque périphérique.
+
+** *Changements signalés par cette source de données (3 dernières semaines)*
++
+Répertorie tous les périphériques ajoutés ou supprimés ou qui ont été modifiés dans la configuration.
+
+
+
+. Après avoir examiné les informations relatives à la source de données, vous pouvez effectuer l'une de ces opérations à l'aide des boutons situés en haut de la page :
++
+** *Modifier* la description de la source de données pour corriger le problème.
+** *Sondage à nouveau* force le sondage à révéler si le problème était persistant ou intermittent.
+** *Reporter* l'interrogation de la source de données pendant 3, 7 ou 30 jours pour vous donner le temps de rechercher le problème et d'arrêter les messages d'avertissement.
+** *Installez un patch* sur la source de données pour corriger le problème.
+** Préparer un *rapport d'erreur* pour le support technique.
+** *Supprimer* la source de données de votre environnement de surveillance Insight.
+
+
+

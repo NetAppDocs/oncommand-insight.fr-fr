@@ -1,0 +1,26 @@
+---
+permalink: reporting/navigating-to-the-pre-defined-oncommand-insight-reports-and-dashboards.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Lorsque vous ouvrez le portail de rapports, le dossier contenu de l"équipe est le point de départ pour sélectionner le type d"informations dont vous avez besoin dans les rapports OnCommand Insight.' 
+---
+= Accès aux rapports OnCommand Insight prédéfinis
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsque vous ouvrez le portail de rapports, le dossier contenu de l'équipe est le point de départ pour sélectionner le type d'informations dont vous avez besoin dans les rapports OnCommand Insight.
+
+
+
+== Étapes
+
+. Dans le volet de navigation de gauche, cliquez sur *contenu de l'équipe* et sélectionnez la catégorie d'informations que vous souhaitez utiliser.
++
+image::../media/cognos-menu.gif[menu cognos]
+
+. Cliquez sur *Rapports* pour accéder aux rapports prédéfinis.
+. Cliquez sur *commencer*, *échantillons* ou *Tutoriels* pour apprendre à créer des rapports.
+

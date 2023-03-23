@@ -1,0 +1,38 @@
+---
+permalink: config-admin/modifying-annotation-rules.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez modifier une règle d"annotation pour modifier le nom de la règle, son annotation, la valeur de l"annotation ou la requête associée à la règle.' 
+---
+= Modification des règles d'annotation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez modifier une règle d'annotation pour modifier le nom de la règle, son annotation, la valeur de l'annotation ou la requête associée à la règle.
+
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur OnCommand Insigtweb.
+. Cliquez sur *gérer* et sélectionnez *règles d'annotation*.
++
+La page règles d'annotation affiche la liste des règles d'annotation existantes.
+
+. Recherchez la règle à modifier :
++
+** Sur la page règles d'annotation, vous pouvez filtrer les règles d'annotation en entrant une valeur dans la zone de filtre.
+** Cliquez sur un numéro de page pour parcourir les règles d'annotation par page s'il y a plus de règles que d'ajustement sur une page.
+
+
+. Effectuez l'une des opérations suivantes pour afficher la boîte de dialogue *Modifier la règle* :
++
+** Si vous vous trouvez sur la page règles d'annotation, placez le curseur sur la règle d'annotation et cliquez sur image:../media/edit-annotation-icon.gif[""].
+** Si vous vous trouvez sur une page de ressource, placez votre curseur sur l'annotation associée à la règle, placez votre curseur sur le nom de la règle lorsqu'elle s'affiche, puis cliquez sur le nom de la règle.
+
+
+. Effectuez les modifications requises et cliquez sur *Enregistrer*.
+

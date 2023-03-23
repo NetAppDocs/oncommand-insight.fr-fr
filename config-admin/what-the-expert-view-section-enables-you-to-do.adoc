@@ -1,0 +1,54 @@
+---
+permalink: config-admin/what-the-expert-view-section-enables-you-to-do.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La section vue Expert vous permet d"afficher les graphiques de performances d"une ressource en fonction de n"importe quel nombre de mesures applicables au cours d"une période donnée et d"ajouter des ressources associées pour comparer et comparer les performances des actifs et des actifs associés sur différentes périodes.' 
+---
+= Utilisation de la section vue avancée
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La section vue Expert vous permet d'afficher les graphiques de performances d'une ressource en fonction de n'importe quel nombre de mesures applicables au cours d'une période donnée et d'ajouter des ressources associées pour comparer et comparer les performances des actifs et des actifs associés sur différentes périodes.
+
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur Web de OnCommand Insight.
+. Recherchez une page de ressources en procédant de l'une des façons suivantes :
++
+** Dans la barre d'outils Insight, cliquez sur image:../media/icon-sanscreen-magnifying-glass-gif.gif[""], saisissez le nom de la ressource, puis sélectionnez la ressource dans la liste.
+** Cliquez sur *tableaux de bord*, sélectionnez *tableau de bord*, localisez un nom de ressource, puis cliquez dessus. La page ASSET s'affiche. Par défaut, le graphique de performances affiche deux mesures pour la période sélectionnée pour la page d'actifs. Par exemple, pour un stockage, le graphique de performances indique la latence et le nombre d'IOPS total par défaut. La section Ressources affiche le nom de la ressource et une section Ressources supplémentaires, qui vous permet de rechercher des ressources. En fonction de l'actif, vous pouvez également voir des actifs dans les sections Top corrélée, Top Contributor, greedy et Degraded.
+
+
+. Vous pouvez cliquer sur *Sélectionner les mesures à afficher* et sélectionner une mesure pour ajouter un graphique de performances pour une mesure.
++
+Un graphique de performances est ajouté pour la mesure sélectionnée. Le graphique affiche les données de la période sélectionnée. Vous pouvez modifier la période en cliquant sur une autre période dans le coin supérieur gauche de la page de la ressource.
+
++
+Vous pouvez répéter l'étape et cliquer sur pour effacer une mesure. Le tableau des performances de la mesure est supprimé.
+
+. Vous pouvez placer votre curseur sur le graphique et modifier les données métriques affichées en cliquant sur l'une des options suivantes, selon l'actif :
++
+** *Lire* ou *écrire*
+** **Tx**ou *Rx* *Total* est la valeur par défaut.
+
+
+. Vous pouvez faire glisser votre curseur sur les points de données du graphique pour voir comment la valeur de la mesure change au cours de la période sélectionnée.
+. Dans la section *Ressources*, vous pouvez effectuer l'une des opérations suivantes, le cas échéant, pour ajouter des ressources associées aux tableaux de performances :
++
+** Vous pouvez sélectionner une ressource associée dans les sections Top Corded, Top contributeurs, cupide ou Degraded pour ajouter des données de cette ressource au graphique de performances pour chaque mesure sélectionnée. Les actifs doivent présenter une corrélation ou une contribution minimale de 15 %.
++
+Après avoir sélectionné l'actif, un bloc de couleurs apparaît à côté de l'actif pour indiquer la couleur de ses points de données dans le graphique.
+
+** Pour tout actif affiché, vous pouvez cliquer sur le nom de l'actif pour afficher sa page d'actif, ou vous pouvez cliquer sur le pourcentage que l'actif met en corrélation ou contribue à l'actif de base pour afficher plus d'informations sur la relation entre les actifs et l'actif de base.
++
+Par exemple, si vous cliquez sur le pourcentage lié en regard d'une ressource en corrélation supérieure, un message d'information comparant le type de corrélation dont dispose la ressource avec la ressource de base s'affiche.
+
+** Si la section corrélation supérieure ne contient pas d'actif que vous souhaitez afficher dans un graphique de performances à des fins de comparaison, vous pouvez utiliser la case *Rechercher des actifs* de la section Ressources supplémentaires pour localiser d'autres actifs. Une fois que vous avez sélectionné une ressource, elle s'affiche dans la section Ressources supplémentaires. Lorsque vous ne souhaitez plus afficher d'informations sur l'actif, cliquez sur image:../media/trash-can-query.gif[""].
+
+
+

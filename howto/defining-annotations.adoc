@@ -1,0 +1,44 @@
+---
+permalink: howto/defining-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Lorsque vous personnalisez OnCommand Insight pour suivre les données en fonction des exigences de votre entreprise, vous pouvez définir des annotations spécialisées afin de fournir une vue d"ensemble de vos données : Par exemple, une annotation peut définir la fin de vie d"une ressource, ou le data Center dans lequel elle réside, ou un Tier de stockage définissant le coût par Go du stockage.' 
+---
+= Définition des annotations à utiliser avec la refacturation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsque vous personnalisez OnCommand Insight pour suivre les données en fonction des exigences de votre entreprise, vous pouvez définir des annotations spécialisées afin de fournir une vue d'ensemble de vos données : Par exemple, une annotation peut définir la fin de vie d'une ressource, ou le data Center dans lequel réside la ressource, ou un niveau de stockage définissant le coût par Go du stockage.
+
+
+
+== Description de la tâche
+
+L'exemple de rapport de refacturation de ce guide fournit des données pour le niveau de service et pour le niveau de niveau. Vous devez créer des annotations pour chaque niveau de service et de niveau, puis définir les coûts pour les niveaux de service et de niveau.
+
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur Web Insight
+. Cliquez sur *gérer* > *Annotations*
++
+La page d'annotations s'affiche.
+
+. Placez le curseur sur l'annotation niveau de service ou niveau, puis cliquez sur image:../media/edit-annotation-icon.gif[""].
++
+La boîte de dialogue Editer l'annotation s'affiche.
+
+. Cliquez sur *AJOUTER* pour ajouter de nouveaux niveaux et coûts.
++
+Dans l'exemple de rapport, les noms de niveau et de niveau de service utilisent l'analogie en métaux précieux de Gold, Sliver et Bronze. Vous pouvez utiliser n'importe quelle convention de dénomination choisie par votre organisation, par exemple, niveau 1, niveau 2, suprême.
+
+. Entrez les valeurs des niveaux Gold-Fast, Gold, Silver et Bronze, ainsi que les coûts associés à chacun d'eux.
++
+Les valeurs que vous entrez définissent le coût par Go pour le stockage utilisé par les applications. Le coût du niveau de service peut être le coût de la prestation du service ou le prix réel du service au consommateur. Ces coûts seront indiqués dans le rapport Chargeback.
+
+. Cliquez sur *Enregistrer* lorsque vous avez terminé.
+

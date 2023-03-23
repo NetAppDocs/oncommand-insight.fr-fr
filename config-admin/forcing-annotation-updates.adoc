@@ -1,0 +1,29 @@
+---
+permalink: config-admin/forcing-annotation-updates.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Si vous avez modifié les annotations et que vous souhaitez les utiliser immédiatement dans les rapports, utilisez l"une des options forcer l"annotation.' 
+---
+= Forcer la mise à jour des annotations
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous avez modifié les annotations et que vous souhaitez les utiliser immédiatement dans les rapports, utilisez l'une des options forcer l'annotation.
+
+
+
+== Étapes
+
+. Dans l'interface utilisateur Web, cliquez sur *Admin* et sélectionnez *Dépannage*.
+. Au bas de la page, cliquez sur le lien *Dépannage avancé*.
+. Cliquez sur l'onglet *actions*.
+. Sélectionnez l'une des options suivantes :
++
+** *Mettre à jour les annotations DWH* pour forcer la mise à jour des annotations dans l'entrepôt de données à utiliser pour les rapports.
+** *Mettre à jour les annotations DWH (y compris supprimé)* pour forcer une mise à jour des annotations (y compris les objets supprimés) dans l'entrepôt de données à utiliser pour les rapports.
+
+
+

@@ -1,0 +1,16 @@
+---
+permalink: howto/examining-the-details-of-the-storage-pool.html 
+sidebar: sidebar 
+keywords: vm 
+summary: 'La page d"accueil du pool de stockage affiche le même pic d"IOPS que celui observé sur les ressources associées. Dans la section Ressources, vous pouvez voir que cette page d"accueil de pool de stockage est liée au volume de l"application de voyage. Cliquez sur le volume pour ouvrir la page d"accueil du volume.' 
+---
+= Examinez le pool de stockage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La page d'accueil du pool de stockage affiche le même pic d'IOPS que celui observé sur les ressources associées. Dans la section Ressources, vous pouvez voir que cette page d'accueil de pool de stockage est liée au volume de l'application de voyage. Cliquez sur le volume pour ouvrir la page d'accueil du volume.
+
+image::../media/storage-pool-landing-page.gif[page d'accueil du pool de stockage]

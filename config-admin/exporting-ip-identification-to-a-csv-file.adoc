@@ -1,0 +1,49 @@
+---
+permalink: config-admin/exporting-ip-identification-to-a-csv-file.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez exporter les identifications de périphériques IP existantes à partir d"Insight à l"aide de la fonction résolution de périphérique. Vous pouvez exporter une identification de périphérique pour la modifier, puis l"importer à nouveau dans Insight afin de pouvoir l"utiliser pour identifier les périphériques similaires à ceux de l"identification exportée.' 
+---
+= Exportation de l'identification de périphérique IP vers un fichier CSV
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez exporter les identifications de périphériques IP existantes à partir d'Insight à l'aide de la fonction résolution de périphérique. Vous pouvez exporter une identification de périphérique pour la modifier, puis l'importer à nouveau dans Insight afin de pouvoir l'utiliser pour identifier les périphériques similaires à ceux de l'identification exportée.
+
+
+
+== Description de la tâche
+
+Lorsque vous exportez une identification de périphérique IP vers un fichier CSV, le fichier contient les informations suivantes dans l'ordre indiqué :
+
+|===
+
+
+ a| 
+Adresse
+
+
+
+ a| 
+IP
+
+
+
+ a| 
+Nom
+
+|===
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur Web Insight.
+. Cliquez sur *gérer* > *résolution du périphérique*
+. Sélectionnez l'onglet *IP Identify*.
+. Sélectionnez le ou les périphériques IP dont vous souhaitez exporter l'identification.
+. Cliquez sur l'exportation image:../media/export-to-csv.gif[""] icône.
+. Choisissez si vous souhaitez ouvrir le fichier CSV ou enregistrer le fichier.
+

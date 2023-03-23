@@ -1,0 +1,34 @@
+---
+permalink: config-admin/cdot-landing-page-terminology-storage-node.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Termes s"appliquant aux objets ou aux références que vous pouvez trouver sur les pages d"accueil des ressources de nœud de stockage NetApp clustered Data ONTAP.' 
+---
+= Nœud de stockage clustered Data ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Termes s'appliquant aux objets ou aux références que vous pouvez trouver sur les pages d'accueil des ressources de nœud de stockage NetApp clustered Data ONTAP.
+
+
+
+== Terminologie relative aux nœuds de stockage clustered Data ONTAP
+
+Les termes suivants s'appliquent aux objets ou aux références disponibles sur les pages d'accueil des ressources du pool de stockage NetApp clustered Data ONTAP. Un grand nombre de ces termes s'appliquent également à d'autres collecteurs de données.
+
+* Stockage -- matrice de stockage de laquelle ce nœud fait partie. Obligatoire.
+* Partenaire HAUTE DISPONIBILITÉ : sur les plateformes sur lesquelles un nœud basculera vers un nœud et vers un autre nœud, il sera généralement visible ici.
+* State :- santé du nœud. Uniquement disponible lorsque la matrice est suffisamment saine pour être inventoriée par une source de données.
+* Model -- nom du modèle du nœud.
+* Version -- nom de version du périphérique.
+* Numéro de série -- le numéro de série du nœud.
+* Mémoire -- mémoire de base 2 si disponible.
+* Utilisation -- sur ONTAP, il s'agit d'un indice de contrainte de contrôleur provenant d'un algorithme propriétaire. À chaque sondage sur les performances, un nombre compris entre 0 et 100 % est indiqué, soit plus le conflit entre le disque WAFL, soit l'utilisation moyenne du CPU. Si vous observez des valeurs continues > 50 %, cela indique un sous-dimensionnement -- un contrôleur/nœud peut être trop petit ou pas assez de disques rotatifs pour absorber la charge de travail d'écriture.
+* IOPS -- dérivé directement des appels ZAPI ONTAP sur l'objet de nœud.
+* Latence -- dérivée directement des appels ZAPI ONTAP sur l'objet de nœud.
+* Débit -- dérivé directement des appels ZAPI ONTAP sur l'objet de nœud.
+* Processeurs -- nombre de processeurs.
+

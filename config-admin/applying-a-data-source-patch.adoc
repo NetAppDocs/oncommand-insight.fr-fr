@@ -1,0 +1,41 @@
+---
+permalink: config-admin/applying-a-data-source-patch.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les correctifs de source de données sont régulièrement disponibles et vous permettent de résoudre des problèmes avec une source de données existante, d"ajouter une source de données pour un nouveau fournisseur ou d"ajouter un nouveau modèle pour un fournisseur.' 
+---
+= Application d'un correctif de source de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les correctifs de source de données sont régulièrement disponibles et vous permettent de résoudre des problèmes avec une source de données existante, d'ajouter une source de données pour un nouveau fournisseur ou d'ajouter un nouveau modèle pour un fournisseur.
+
+
+
+== Avant de commencer
+
+Vous devez avoir obtenu le `.zip` fichier contenant la dernière source de données `.patch` fichiers du support technique.
+
+
+
+== Étapes
+
+. Dans la barre d'outils Insight, cliquez sur *Admin*.
+. Cliquez sur *Patches*.
+. Dans le bouton actions, sélectionnez *appliquer patch*.
+. Dans la boîte de dialogue *Apply data source patch*, cliquez sur *Browse* pour localiser le `.patch` fichier.
+. Vérifiez les types de sources de données *Patch name*, *Description* et *impactées*.
+. Si le correctif sélectionné est correct, cliquez sur *appliquer le correctif*.
++
+Si vous appliquez un correctif qui corrige des problèmes avec une source de données, toutes les sources de données du même type sont mises à jour avec le correctif et vous devez approuver le correctif. Les correctifs qui n'affectent pas les sources de données configurées sont automatiquement approuvés.
+
+
+
+
+
+== Une fois que vous avez terminé
+
+Si vous appliquez un correctif qui ajoute une source de données pour un nouveau fournisseur ou un nouveau modèle, vous devez ajouter la source de données après avoir appliqué le correctif.

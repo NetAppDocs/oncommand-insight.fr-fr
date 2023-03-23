@@ -1,0 +1,52 @@
+---
+permalink: dwh/restoring-and-upgrading-reports-for-versions-prior-to-6-3.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Si vous mettez à niveau une version d"Insight antérieure à la version 6.3, vous devez restaurer manuellement vos artéfacts de reporting.' 
+---
+= Restauration et mise à niveau des rapports pour les versions antérieures à 6.3
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous mettez à niveau une version d'Insight antérieure à la version 6.3, vous devez restaurer manuellement vos artéfacts de reporting.
+
+
+
+== Avant de commencer
+
+Suivez les instructions des rubriques « mise à niveau de l'entrepôt de données (DWH) » et « sauvegarde des rapports personnalisés et des artéfacts de rapport ».
+
+
+
+== Étapes
+
+. Pour restaurer les artéfacts de rapport des versions antérieures à la version 6.3, copiez le fichier Export Backup.zip que vous avez créé et stocké dans votre `<install>\cognos\c10_64\deployment` répertoire.
+. Ouvrez un navigateur et accédez à `http://<server>:<port>/reporting` pour le serveur et le port que vous avez utilisés lors de l'installation.
+. Entrez votre nom d'utilisateur et votre mot de passe, puis cliquez sur *connexion*.
+. Dans le menu *Launch*, sélectionnez *Insight Reporting Administration*.
+. Cliquez sur l'onglet *Configuration*.
++
+En raison des modifications apportées au modèle de données, les rapports des anciens packages peuvent ne pas s'exécuter et doivent être mis à niveau.
+
+. Cliquez sur *Administration du contenu*.
+. Cliquez sur le bouton *Nouvelle importation*.
+. Assurez-vous que l'archive que vous avez copiée dans le répertoire de déploiement (par exemple, `backup6.0.zip`) Est sélectionné et cliquez sur *Suivant*.
+. Si vous avez saisi un mot de passe pour protéger l'archive, entrez le mot de passe et cliquez sur *OK*.
+. Modifiez le nom `+Export...+` à `Import Backup` Et cliquez sur *Suivant*.
+. Cliquez sur l'icône en forme de crayon en regard du nom de chaque paquet et entrez un nouveau nom de cible si nécessaire. Par exemple, ajoutez un `_original` suffixe du nom existant. Cliquez ensuite sur *OK*.
+. Après avoir renommé les noms de paquets cibles pour tous les paquets, sélectionnez tous les dossiers bleus et cliquez sur *Suivant* pour continuer.
+. Acceptez toutes les valeurs par défaut.
+. Cliquez sur *Terminer*, puis sélectionnez *Exécuter*.
+. Vérifiez les détails de cette importation et cliquez sur *OK*.
+. Cliquez sur *Rafraîchir* pour afficher l'état de l'importation.
+. Cliquez sur *Fermer* une fois l'importation terminée.
+
+
+
+
+== Résultats
+
+Deux ensembles de packages apparaissent dans l'onglet dossiers publics. Par exemple, un avec un `7.0` suffixe (pour la version la plus récente) et un suffixe avec un `_original` (ou tout ce que vous avez saisi pendant la procédure de sauvegarde/restauration) suffixe qui contient vos anciens rapports. En raison des modifications apportées au modèle de données, les rapports des anciens packages peuvent ne pas s'exécuter et doivent être mis à niveau. Vos onglets de portail pointent maintenant vers la version actuelle des pages de portail.

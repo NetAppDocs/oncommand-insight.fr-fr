@@ -1,0 +1,36 @@
+---
+permalink: install-windows/testing-the-connectors.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Après la mise à niveau, vous souhaitez tester les connecteurs pour vous assurer que vous disposez d"une connexion entre l"entrepôt de données OnCommand Insight et le serveur OnCommand Insight.' 
+---
+= Test des connecteurs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Après la mise à niveau, vous souhaitez tester les connecteurs pour vous assurer que vous disposez d'une connexion entre l'entrepôt de données OnCommand Insight et le serveur OnCommand Insight.
+
+
+
+== Étapes
+
+. Connectez-vous au portail Data Warehouse à l'adresse `+https://fqdn/dwh+`.
+. Dans le volet de navigation de gauche, cliquez sur *connecteurs*.
+. Sélectionnez le premier connecteur.
++
+La page Modifier le connecteur s'affiche.
+
+. Cliquez sur *Test*.
+. Si le test réussit, cliquez sur *Fermer* ; si le test échoue, entrez le nom du serveur Insight dans le champ *Nom* et son adresse IP dans le champ *hôte* et cliquez sur *Test*.
+. Lorsque la connexion entre l'entrepôt de données et le serveur Insight est établie, cliquez sur *Enregistrer*.
++
+Si le problème ne se produit pas, vérifiez la configuration de la connexion et assurez-vous que le serveur Insight ne présente aucun problème.
+
+. Cliquez sur *Test*.
++
+Data Warehouse teste la connexion.
+
+

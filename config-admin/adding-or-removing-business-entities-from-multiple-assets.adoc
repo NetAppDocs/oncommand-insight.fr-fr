@@ -1,0 +1,39 @@
+---
+permalink: config-admin/adding-or-removing-business-entities-from-multiple-assets.html 
+sidebar: sidebar 
+keywords: bulk edit 
+summary: Vous pouvez affecter ou supprimer des entités métier de plusieurs actifs en utilisant une requête au lieu de devoir les affecter ou les supprimer manuellement. 
+---
+= Affectation d'entités commerciales à des entités commerciales ou suppression de plusieurs ressources
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez affecter ou supprimer des entités métier de plusieurs actifs en utilisant une requête au lieu de devoir les affecter ou les supprimer manuellement.
+
+
+
+== Avant de commencer
+
+Vous devez avoir déjà créé les entités métier que vous souhaitez ajouter aux ressources souhaitées.
+
+
+
+== Étapes
+
+. Créez une nouvelle requête ou ouvrez une requête existante.
+. Si vous le souhaitez, filtrez les actifs auxquels vous souhaitez ajouter des entités métier.
+. Sélectionnez les ressources souhaitées dans la liste ou cliquez sur image:../media/select-assets.gif[""] Pour sélectionner *tout*.
++
+Le bouton *actions* s'affiche.
+
+. Pour ajouter une entité métier aux actifs sélectionnés, cliquez sur image:../media/actions-button.gif[""]. Si le type d'actif sélectionné peut avoir des entités métier qui lui sont attribuées, vous verrez le choix de menu *Ajouter une entité métier*. Sélectionnez cette option.
+. Sélectionnez l'entité métier souhaitée dans la liste et cliquez sur *Enregistrer*.
++
+Toute nouvelle entité métier que vous attribuez remplace toutes les entités métier qui ont déjà été affectées à la ressource. L'affectation d'applications à des actifs remplacera également les entités métier affectées de la même manière. L'affectation d'entités commerciales à comme ressource peut également remplacer toutes les applications affectées à cette ressource.
+
+. Pour supprimer une entité métier affectée aux actifs, cliquez sur image:../media/actions-button.gif[""] Et sélectionnez *Supprimer l'entité commerciale*.
+. Sélectionnez l'entité métier souhaitée dans la liste et cliquez sur *Supprimer*.
+

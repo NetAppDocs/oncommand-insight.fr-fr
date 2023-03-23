@@ -1,0 +1,107 @@
+---
+permalink: config-admin/ibm-tivoli-monitoring-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Cette source de données est utilisée uniquement pour l"utilisation du système de fichiers. Il communique directement avec la base de données Tivoli Monitoring, également appelée Tivoli Monitoring Data Warehouse. Les bases de données Oracle et DB2 sont prises en charge.' 
+---
+= Source de données IBM Tivoli Monitoring
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cette source de données est utilisée uniquement pour l'utilisation du système de fichiers. Il communique directement avec la base de données Tivoli Monitoring, également appelée Tivoli Monitoring Data Warehouse. Les bases de données Oracle et DB2 sont prises en charge.
+
+
+
+== Message d'erreur Oracle
+
+[NOTE]
+====
+Ce collecteur de données n'est plus disponible depuis OnCommand Insight 7.3.11.
+
+====
+Si le SID spécifié génère le message d'erreur contenant « ORA-12154 » lors de la tentative de connexion, vérifiez à nouveau la configuration du service réseau de votre base de données Oracle. Si la configuration d'accès spécifie un nom d'hôte complet (par exemple, "NAMES.DEFAULT_DOMAIN"), essayez d'insérer le nom de service complet dans le champ SID. Un exemple simple serait la connexion à SID `testdb` Est défaillant et votre configuration Oracle spécifie un domaine de``company.com``. La chaîne suivante peut être utilisée à la place du SID de base pour tenter de se connecter : `testdb.company.com`.
+
+
+
+== Configuration
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+IP de la base de données Tivoli Monitoring
+ a| 
+Adresse IP ou nom de domaine complet du serveur Tivoli Monitoring
+
+
+
+ a| 
+Nom d'utilisateur
+ a| 
+Nom d'utilisateur du serveur Tivoli Monitoring
+
+
+
+ a| 
+Mot de passe
+ a| 
+Mot de passe du serveur Tivoli Monitoring
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Port de la base de données Tivoli Monitoring
+ a| 
+Port utilisé pour la base de données Tivoli Monitoring
+
+
+
+ a| 
+SID Oracle ou Nom de la base de données DB2
+ a| 
+ID du service d'écoute Oracle ou nom de la base de données DB2
+
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+Intervalle entre les sondages d'inventaire (60 minutes par défaut)
+
+
+
+ a| 
+Pilote de base de données à utiliser
+ a| 
+Choisissez le pilote de base de données à utiliser
+
+
+
+ a| 
+Protocole utilisé pour se connecter à la base de données
+ a| 
+Protocole utilisé pour se connecter à la base de données
+
+
+
+ a| 
+Schéma de base de données
+ a| 
+Entrez le schéma de la base de données
+
+|===

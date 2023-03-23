@@ -1,0 +1,52 @@
+---
+permalink: howto/servicenow-integration-install-python-and-libraries.html 
+sidebar: sidebar 
+keywords:  
+summary: Python peut être installé sur le serveur Insight, sur un hôte autonome ou sur une machine virtuelle. 
+---
+= Installez Python et les bibliothèques
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Python peut être installé sur le serveur Insight, sur un hôte autonome ou sur une machine virtuelle.
+
+
+
+== Étapes
+
+. Sur votre machine virtuelle ou votre hôte, téléchargez Python 3.6 ou version ultérieure.
+. Choisissez l'installation personnalisée et choisissez les options suivantes. Ces éléments sont nécessaires au bon fonctionnement du script de connecteur ou sont fortement recommandés.
++
+** Installer le lanceur pour tous les utilisateurs
+** Ajoutez Python AU CHEMIN
+** Installer pip (qui permet à Python d'installer d'autres paquets)
+** Installer tk/tcl et LE RALENTI
+** Installez la suite de tests Python
+** Installez le lanceur py pour tous les utilisateurs
+** Associer des fichiers à Python
+** Créer des raccourcis pour les applications installées
+** Ajoutez python aux variables d'environnement
+** Précompilation de la bibliothèque standard
+
+
+. Après l'installation de Python, installez les bibliothèques Python "requêtes" et "pnear". Exécutez la commande suivante : `python -m pip install requests pysnow`
++
+*REMARQUE :* cette commande peut échouer lorsque vous travaillez dans un environnement proxy. Pour contourner ce problème, vous devez télécharger manuellement chacune des bibliothèques Python et exécuter les demandes d'installation une par une et dans le bon ordre.
+
++
+La commande installe plusieurs fichiers.
+
+. Vérifiez que les bibliothèques Python sont correctement installées. Démarrez Python en utilisant l'une des méthodes suivantes :
++
+** Ouvrez une invite cmd et tapez `python`
+** Sous Windows, ouvrez *Démarrer* et choisissez *Python* > *python-<version>.exe*
+
+
+. À l'invite Python, tapez `modules`
++
+Python vous demandera d'attendre un moment pendant qu'il rassemble une liste de modules, qu'il affichera alors.
+
+

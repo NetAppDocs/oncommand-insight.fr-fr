@@ -1,0 +1,47 @@
+---
+permalink: dwh/scheduling-daily-builds.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Bien que vous puissiez créer manuellement Data Warehouse en utilisant le contrôle Build Now à tout moment, il est recommandé de planifier des builds automatiques, en définissant quand et à quelle fréquence construire la base de données Data Warehouse. Data Warehouse exécute une tâche de construction pour chaque connecteur et pour chaque magasin de données. Data Warehouse exécute un travail de construction pour chaque connecteur pour les licences et l"inventaire et tous les autres travaux de construction \(par exemple, capacité\) sont exécutés sur la base de données consolidée.' 
+---
+= Planification des builds quotidiens
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bien que vous puissiez créer manuellement Data Warehouse en utilisant le contrôle Build Now à tout moment, il est recommandé de planifier des builds automatiques, en définissant quand et à quelle fréquence construire la base de données Data Warehouse. Data Warehouse exécute une tâche de construction pour chaque connecteur et pour chaque magasin de données. Data Warehouse exécute un travail de construction pour chaque connecteur pour les licences et l'inventaire et tous les autres travaux de construction (par exemple, la capacité) sont exécutés sur la base de données consolidée.
+
+
+
+== Description de la tâche
+
+Chaque fois que l'entrepôt de données est construit, il effectue une tâche d'inventaire pour chaque connecteur. Une fois les tâches d'inventaire terminées, Data Warehouse exécute des tâches pour les dimensions, la capacité et les magasins de données restants.
+
+
+
+== Étapes
+
+. Connectez-vous au portail Data Warehouse à l'adresse `+https://hostname/dwh+`, où `hostname` Est le nom du système sur lequel l'entrepôt de données OnCommand Insight est installé.
+. Dans le volet de navigation de gauche, cliquez sur *Modifier le programme*.
++
+image::../media/oci-dwh-admin-schedule-gif.gif[Lien de planification DWH]
+
+. Dans la boîte de dialogue *Build Schedule*, cliquez sur *Edit* pour ajouter un nouveau planning.
++
+image::../media/oci-dwh-admin-schedule-edit-gif.gif[Modification de la planification DWH]
+
+. Choisissez la fréquence - hebdomadaire.
+. Choisissez l'heure pour chaque jour où vous souhaitez que le travail s'exécute.
+. Choisissez N/A pour les jours où vous ne souhaitez pas exécuter la compilation.
+. Pour activer le programme, sélectionnez *activé*.
++
+[NOTE]
+====
+Si vous ne cochez pas cette case, la génération d'horaires ne se produit pas.
+
+====
+. Cliquez sur *Enregistrer*.
+. Pour créer un entrepôt de données en dehors de la construction programmée automatique, cliquez sur *construire maintenant*.
+

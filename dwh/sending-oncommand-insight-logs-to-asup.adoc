@@ -1,0 +1,30 @@
+---
+permalink: dwh/sending-oncommand-insight-logs-to-asup.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez envoyer des journaux ASUP au support technique pour obtenir de l"aide lors de la résolution de problèmes. ASUP pour l"entrepôt de données est configuré pour s"exécuter automatiquement. Dans le portail Data Warehouse, vous pouvez désactiver le processus d"envoi automatique, choisir d"inclure une sauvegarde de la base de données Data Warehouse ou initier une transmission à ASUP. Lorsque vous demandez un rapport ASUP, la demande de rapport apparaît en tant que travail dans la page tâches du portail Data Warehouse.' 
+---
+= Envoi de journaux Insight à ASUP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez envoyer des journaux ASUP au support technique pour obtenir de l'aide lors de la résolution de problèmes. ASUP pour l'entrepôt de données est configuré pour s'exécuter automatiquement. Dans le portail Data Warehouse, vous pouvez désactiver le processus d'envoi automatique, choisir d'inclure une sauvegarde de la base de données Data Warehouse ou initier une transmission à ASUP. Lorsque vous demandez un rapport ASUP, la demande de rapport apparaît en tant que travail dans la page tâches du portail Data Warehouse.
+
+
+
+== Description de la tâche
+
+Le travail est géré par la file d'attente des travaux, de la même manière que pour d'autres travaux. Si un travail ASUP est déjà en attente ou en cours d'exécution, un message d'erreur s'affiche pour indiquer que la demande de rapport ASUP ne peut pas être ajoutée à la demande de travail, car la file d'attente contient des demandes en attente ou en cours d'exécution.
+
+
+
+== Étapes
+
+. Connectez-vous au portail Data Warehouse à l'adresse `+https://hostname/dwh+`, où `hostname` Est le nom du système sur lequel l'entrepôt de données OnCommand Insight est installé.
+. Dans le volet de navigation de gauche, cliquez sur *Dépannage*.
+. Dans la section *OnCommand Insight ASUP* de la page *Dépannage*, cliquez sur *Télécharger le rapport de dépannage DWH* pour récupérer le rapport de dépannage.
+. Pour envoyer le rapport au serveur OnCommand Insight répertorié comme premier connecteur de la page *connecteurs* du portail d'entrepôt de données, cliquez sur *Envoyer maintenant*.
+

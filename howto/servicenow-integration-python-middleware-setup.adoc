@@ -1,0 +1,51 @@
+---
+permalink: howto/servicenow-integration-python-middleware-setup.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Maintenant que Python et les bibliothèques nécessaires sont installés, vous pouvez configurer le connecteur du middleware pour qu"il communique avec OnCommand Insight et ServiceNow.' 
+---
+= Configurez le middleware Python
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Maintenant que Python et les bibliothèques nécessaires sont installés, vous pouvez configurer le connecteur du middleware pour qu'il communique avec OnCommand Insight et ServiceNow.
+
+
+
+== Étapes
+
+. Sur l'hôte ou la machine virtuelle sur lequel vous avez téléchargé le logiciel Connector, ouvrez une fenêtre cmd en tant qu'administrateur et passez à l' `\OCI2SNOW\` dossier.
+. Vous devez initialiser le script pour générer un fichier *config.ini* vide. Exécutez la commande suivante : `oci_snow_sync.pyz init`
+. Ouvrez le **config.ini**file dans un éditeur de texte et effectuez les modifications suivantes dans la section [OCI] :
++
+** Définissez *url* sur `https://<name.domain>` ou `https://<ip address>` Pour l'instance Insight.
+** Définissez *user* et *password* sur l'utilisateur Insight créé, par exemple OCI2SNOW.
+** Définissez *include_off_vm* sur *FALSE*
+
+
+. Dans la section [NEIGE], effectuez les modifications suivantes :
++
+** Définissez *instance* sur le nom de domaine complet ou l'adresse ip de votre instance ServiceNow
+** Définissez *User* et *Password* sur l'utilisateur du compte de service ServiceNow, par exemple, OCI2SNOW.
+** Sous *Field pour l'URL OCI*, définissez le champ *url* sur « u_OCI_url ». Ce champ est créé dans le cadre de l'ensemble de mise à jour de Connector OCI. Vous pouvez le modifier dans l'environnement client, mais dans ce cas, vous devez le modifier ici et dans ServiceNow. La meilleure pratique consiste à laisser ce champ tel quel.
+** Définissez le champ *filter_status* sur « installé, en stock ». Si vous avez un statut différent, vous devez le définir ici pour que tous les enregistrements correspondent aux enregistrements Insight avant de télécharger de nouveaux enregistrements. Dans la plupart des cas, ce champ doit rester inchangé.
+** Définissez **stale_status**sur « retiré ».
+
+
+. La section [Proxy] n'est requise que si vous utilisez un serveur proxy. Si vous devez utiliser cette section, vérifiez les paramètres suivants :
++
+** ;https = http://<host>:<port>[]
+** ;http = http://<host>:<port>[]
+** ;Include_oci = vrai
+** ;Include_Snow = vrai
+
+
+. Modifiez la section [Journal] uniquement si vous avez besoin d'informations de débogage plus détaillées.
+. Pour tester le connecteur, ouvrez une invite cmd en tant qu'administrateur et passez au dossier \OCI2SNOW. Exécutez la commande suivante : `oci_snow_sync.pyz test`
++
+Les détails sont visibles dans le `logs\` dossier.
+
+

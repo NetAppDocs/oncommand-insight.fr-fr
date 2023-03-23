@@ -1,0 +1,14 @@
+---
+permalink: howto/your-corporate-structure-setting-up-business-entities-and-applications.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La compréhension des éléments de votre structure d"entreprise vous aide à suivre l"utilisation des actifs et à générer des rapports sur les coûts.' 
+---
+= Structure de votre entreprise : configuration d'entités commerciales et d'applications
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La compréhension des éléments de votre structure d'entreprise vous aide à suivre l'utilisation des actifs et à générer des rapports sur les coûts.

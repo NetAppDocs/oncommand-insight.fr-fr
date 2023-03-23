@@ -1,0 +1,46 @@
+---
+permalink: howto/reporting-on-cloud-cost-data-task.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les données mensuelles sur le coût du cloud collectées dans Insight sont envoyées à l"entrepôt de données et sont disponibles dans le data warehouse Cloud Cost pour les utiliser dans des rapports.' 
+---
+= Reporting sur les données de coût du cloud dans Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les données mensuelles sur le coût du cloud collectées dans Insight sont envoyées à l'entrepôt de données et sont disponibles dans le data warehouse Cloud Cost pour les utiliser dans des rapports.
+
+
+
+== Avant de commencer
+
+Vous devez avoir configuré des sources de données pour collecter les données de coûts du cloud à partir d'AWS. Chaque utilisateur/compte facturable doit disposer d'une source de données distincte.
+
+Attendez au moins 36 heures pour que Insight commence à collecter des données.
+
+Laissez ETL s'exécuter au moins une fois après cette période pour envoyer les données à l'entrepôt de données.
+
+
+
+== Description de la tâche
+
+Une fois que vos données ont été collectées et envoyées à l'entrepôt de données, vous pouvez les afficher dans n'importe lequel des rapports préconfigurés ou créer des rapports personnalisés. Insight stocke les données dans sa propre zone de données sur le coût du cloud.
+
+Pour afficher vos données de coût du cloud dans l'un des rapports préconfigurés :
+
+
+
+== Étapes
+
+. Ouvrez le reporting Insight de l'une des méthodes suivantes :
++
+** Cliquez sur l'icône Reporting Portal image:../media/oci-reporting-portal-icon.gif[""] Dans l'interface utilisateur Web du serveur Insight ou dans l'interface utilisateur Data Warehouse.
+** Lancez le reporting directement en saisissant l'URL suivante : `https://<dwh_server_name\>:9300/p2pd/servlet/dispatch` ou `https://<dwh_server_name\>:9300/bi (7.3.3 and later)`
+
+
+. Une fois connecté à Reporting, cliquez sur *dossiers publics* et sélectionnez *coût du Cloud*.
+. Vous pouvez afficher vos données de facturation AWS dans les rapports disponibles situés dans le dossier *coût du Cloud* ou créer votre propre rapport personnalisé à l'aide de la fonction *datamart de coût du Cloud* disponible dans le dossier *Packages*.
+

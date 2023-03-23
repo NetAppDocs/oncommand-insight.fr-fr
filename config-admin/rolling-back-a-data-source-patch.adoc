@@ -1,0 +1,40 @@
+---
+permalink: config-admin/rolling-back-a-data-source-patch.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Si un correctif de source de données ne fonctionne pas comme prévu, vous pouvez le restaurer. La restauration d"un correctif le supprime et restaure la version précédente telle qu"elle était avant l"application de ce correctif.' 
+---
+= Restauration d'un correctif de source de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si un correctif de source de données ne fonctionne pas comme prévu, vous pouvez le restaurer. La restauration d'un correctif le supprime et restaure la version précédente telle qu'elle était avant l'application de ce correctif.
+
+
+
+== Étapes
+
+. Dans la barre d'outils Insight, cliquez sur *Admin*.
+. Cliquez sur *Patches*.
+. Dans *Patches actuellement en cours de révision*, cliquez sur le nom lié du patch qui semble échouer.
+. Sur la page correctifs de la source de données, examinez les informations suivantes :
++
+** *Résumé* décrit le moment où le correctif a été appliqué, les sources de données affectées et les commentaires sur le correctif de votre part ou d'autres membres de votre équipe.
+** *Sources de données concernées* répertorie toutes les sources de données faisant l'objet d'un correctif et inclut une comparaison de l'état avant et après l'application de correctifs.
+
+
+. Pour afficher les détails d'une source de données qui ne traite pas correctement le correctif, cliquez sur le lien *Name*.
++
+.. Vérifiez les informations récapitulatives.
+.. Consultez le *Chronogramme des événements* pour voir toutes les données de configuration ou de performances susceptibles d'affecter cette source de données.
+
+
+. Si vous avez conclu que le correctif ne sera pas réussi, cliquez sur la flèche de retour du navigateur pour revenir à la page de résumé des correctifs.
+. Cliquez sur *Retour arrière* pour supprimer ce correctif.
++
+Si vous connaissez un correctif différent qui est plus susceptible d'être réussi, cliquez sur *remplacer le patch* et téléchargez le nouveau patch.
+
+

@@ -1,0 +1,14 @@
+---
+permalink: config-admin/managing-annotation-types.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight fournit certains types d"annotation par défaut, tels que le cycle de vie des ressources \(anniversaire ou fin de vie\), l"emplacement du bâtiment ou du data Center et le niveau, que vous pouvez personnaliser pour afficher dans vos rapports. Vous pouvez définir des valeurs pour les types d"annotation par défaut ou créer vos propres types d"annotation personnalisés. Vous pouvez modifier ces valeurs ultérieurement.' 
+---
+= Gestion des types d'annotation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight fournit certains types d'annotations par défaut, comme le cycle de vie des ressources (date d'anniversaire ou fin de vie), l'emplacement du bâtiment ou du data Center et le niveau, que vous pouvez personnaliser pour afficher dans vos rapports. Vous pouvez définir des valeurs pour les types d'annotation par défaut ou créer vos propres types d'annotation personnalisés. Vous pouvez modifier ces valeurs ultérieurement.

@@ -1,0 +1,26 @@
+---
+permalink: install-linux/validating-the-rau-installation.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Pour valider l"installation correcte de l"unité d"acquisition distante, vous pouvez afficher l"état des unités d"acquisition distantes connectées à votre serveur.' 
+---
+= Validation de l'installation de l'unité d'acquisition distante
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour valider l'installation correcte de l'unité d'acquisition distante, vous pouvez afficher l'état des unités d'acquisition distantes connectées à votre serveur.
+
+
+
+== Étapes
+
+. Dans la barre d'outils Insight, cliquez sur *Admin*.
+. Cliquez sur *unités d'acquisition*.
+. Vérifiez que la nouvelle unité d'acquisition à distance a été enregistrée correctement et qu'elle a un état connecté.
++
+Si ce n'est pas le cas, vous devez contacter le support technique.
+
+

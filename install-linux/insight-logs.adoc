@@ -1,0 +1,16 @@
+---
+permalink: install-linux/insight-logs.html 
+sidebar: sidebar 
+keywords:  
+summary: Insight fournit de nombreux fichiers journaux pour vous aider dans la recherche et le dépannage. Les journaux disponibles sont répertoriés dans le répertoire des journaux. Vous pouvez utiliser un outil de surveillance des journaux, tel que BareTail, pour afficher tous les journaux en même temps. 
+---
+= Journaux Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insight fournit de nombreux fichiers journaux pour vous aider dans la recherche et le dépannage. Les journaux disponibles sont répertoriés dans le répertoire des journaux. Vous pouvez utiliser un outil de surveillance des journaux, tel que BareTail, pour afficher tous les journaux en même temps.
+
+Les fichiers journaux se trouvent dans le `/var/log/netapp/oci/wildfly/` répertoire. Les journaux d'acquisition se trouvent dans le `/var/log/netapp/oci/acq` répertoire. Les fichiers de données se trouvent dans `/var/lib/netapp/oci`.

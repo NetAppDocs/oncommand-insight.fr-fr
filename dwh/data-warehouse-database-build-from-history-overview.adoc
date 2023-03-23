@@ -1,0 +1,28 @@
+---
+permalink: dwh/data-warehouse-database-build-from-history-overview.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez créer la base de données de l"entrepôt de données à l"aide des données historiques de votre serveur OnCommand Insight. L"entrepôt de données extrait les données des serveurs OnCommand Insight et construit les magasins de données de l"entrepôt de données en fonction du planning de génération à partir de l"historique.' 
+---
+= Création de la base de données Data Warehouse à partir de la présentation de l'historique
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez créer la base de données de l'entrepôt de données à l'aide des données historiques de votre serveur OnCommand Insight. L'entrepôt de données extrait les données des serveurs OnCommand Insight et construit les magasins de données de l'entrepôt de données en fonction du planning de génération à partir de l'historique.
+
+Cette option ne nécessite pas de licence spéciale et les données d'inventaire sont incluses dans la version. Toutefois, pour générer des informations sur la capacité, les licences OnCommand Insight Plan et OnCommand Insight Perform sont requises.
+
+Si un build (de l'historique ou actuel) a déjà été effectué, le build ne peut pas être effectué aux dates antérieures au dernier travail. Cela signifie que si vous effectuez une construction en cours, vous ne pouvez pas construire à partir de l'historique. Plus précisément, si vous avez effectué des builds à partir de l'historique qui s'est terminé le 1er janvier 2012, vous ne pouvez pas effectuer de build sur l'année 2011.
+
+Si la création de l'historique ne comprend pas un jour ou deux des processus ETL qui ont échoué, n'essayez pas de construire l'historique pendant seulement ces quelques jours. Les données historiques sont pour des périodes plus longues et un ou deux jours ne vont pas changer les tendances de manière significative. Si vous voulez reconstruire à partir de l'historique, reconstruisez l'historique entier.
+
+La vue générer à partir de l'historique affiche tous les travaux de construction de tous les connecteurs. Par exemple, la vue peut afficher une tâche d'inventaire pour chaque connecteur, une tâche de capacité de port pour chaque génération et une tâche d'annotations.
+
+Avant de configurer la génération à partir de l'historique, les opérations suivantes doivent être effectuées :
+
+* Les connecteurs doivent être configurés.
+* Les annotations doivent être saisies dans OnCommand Insight et peuvent être mises à jour manuellement à l'aide de l'option *forcer la mise à jour des annotations pour DWH* dans l'ancien portail OnCommand Insight ou seront automatiquement mises à jour 15 minutes après leur définition.
+

@@ -1,0 +1,33 @@
+---
+permalink: reporting/how-to-plan-the-results-of-your-custom-report.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Avant d"ouvrir les outils de conception de rapport, vous pouvez planifier les résultats souhaités dans le rapport. Avec les outils de création de rapports, vous pouvez facilement créer des rapports et peut ne pas avoir besoin de beaucoup de planification. Cependant, il est bon d"obtenir un bon sens de la part du demandeur de rapport sur les exigences du rapport.' 
+---
+= Comment planifier les résultats de votre rapport personnalisé
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'ouvrir les outils de conception de rapport, vous pouvez planifier les résultats souhaités dans le rapport. Avec les outils de création de rapports, vous pouvez facilement créer des rapports et peut ne pas avoir besoin de beaucoup de planification. Cependant, il est bon d'obtenir un bon sens de la part du demandeur de rapport sur les exigences du rapport.
+
+* Identifiez la question que vous souhaitez répondre. Par exemple :
++
+** Quelle est la capacité restante ?
+** Quels sont les coûts de refacturation par unité commerciale ?
+** Quelle est la capacité par niveau pour s'assurer que les unités commerciales sont alignées sur le niveau de stockage approprié ?
+** Comment puis-je prévoir les besoins en énergie et en climatisation ? (Ajoutez des métadonnées personnalisées en ajoutant des annotations aux ressources.)
+
+
+* Identifiez les éléments de données dont vous avez besoin pour prendre en charge une réponse.
+* Identifiez les relations entre les données que vous voulez voir dans la réponse. N'incluez pas de relations illogiques dans votre question, par exemple, « Je veux voir les ports qui se rapportent à la capacité ».
+* Identifier tous les calculs nécessaires sur les données.
+* Déterminez les types de filtrage nécessaires pour limiter les résultats.
+* Déterminez si vous devez utiliser des données actuelles ou historiques.
+* Déterminez si vous devez définir des privilèges d'accès sur les rapports pour limiter les données à des publics spécifiques.
+* Identifier la manière dont le rapport sera distribué. Par exemple, doit-il être envoyé par e-mail à un horaire fixe ou inclus dans la zone du dossier contenu de l'équipe ?
+* Déterminez qui sera responsable du rapport. Cela peut affecter la complexité de la conception.
+* Créer une maquette du rapport.
+

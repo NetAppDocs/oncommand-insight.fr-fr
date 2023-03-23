@@ -1,0 +1,31 @@
+---
+permalink: howto/analyzing-your-infrastructure.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les procédures décrites dans cette rubrique sont celles que vous pouvez utiliser pour effectuer une analyse de parties de l"infrastructure de votre environnement. Les étapes, les vues et les données que vous rassemblez dans cet exercice utilisent des objets de calcul virtuel comme exemple. L"analyse des autres ressources de votre environnement suivra des étapes similaires en utilisant des compteurs pertinents pour chaque ressource spécifique. L"objectif de cet exercice est de vous familiariser avec les nombreuses options offertes par Insight pour contrôler et comprendre les caractéristiques des ressources de votre data Center.' 
+---
+= Analyse de votre infrastructure
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les procédures décrites dans cette rubrique sont celles que vous pouvez utiliser pour effectuer une analyse de parties de l'infrastructure de votre environnement. Les étapes, les vues et les données que vous rassemblez dans cet exercice utilisent des objets de calcul virtuel comme exemple. L'analyse des autres ressources de votre environnement suivra des étapes similaires en utilisant des compteurs pertinents pour chaque ressource spécifique. L'objectif de cet exercice est de vous familiariser avec les nombreuses options offertes par Insight pour contrôler et comprendre les caractéristiques des ressources de votre data Center.
+
+
+
+== Description de la tâche
+
+Voici quelques-unes des actions que vous pouvez effectuer pour analyser l'état de votre infrastructure :
+
+* Observez le comportement d'un objet au fil du temps
+* Comparez les mesures d'un objet aux mesures des 10 principaux objets similaires
+* Comparer les numéros des objets
+* Comparer les 10 principaux objets par rapport à la moyenne
+* Comparez les mesures A et B pour de nombreux objets pour montrer des catégories et des anomalies
+* Comparer une plage d'objets à d'autres objets
+* Utilisez une expression pour afficher les mesures non disponibles dans l'interface utilisateur Web
+
+
+Vous pouvez créer toutes ces vues d'objets de votre infrastructure dans un tableau de bord à l'aide de widgets pour chaque analyse effectuée. Les tableaux de bord peuvent être enregistrés pour vous permettre d'accéder rapidement aux données actuelles de votre infrastructure.

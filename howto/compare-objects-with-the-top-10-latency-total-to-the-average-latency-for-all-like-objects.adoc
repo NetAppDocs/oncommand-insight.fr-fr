@@ -1,0 +1,53 @@
+---
+permalink: howto/compare-objects-with-the-top-10-latency-total-to-the-average-latency-for-all-like-objects.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous pouvez comparer les machines virtuelles avec la latence totale du top 10 à la latence totale moyenne pour identifier celles qui sont extrêmement hors de la plage moyenne. Ces informations peuvent aider à prendre des décisions pour équilibrer les charges de travail sur les machines virtuelles. 
+---
+= Comparez les objets avec les 10 principaux totaux de latence à la latence moyenne pour tous les objets similaires
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez comparer les machines virtuelles avec la latence totale du top 10 à la latence totale moyenne pour identifier celles qui sont extrêmement hors de la plage moyenne. Ces informations peuvent aider à prendre des décisions pour équilibrer les charges de travail sur les machines virtuelles.
+
+
+
+== Étapes
+
+. Ajoutez un widget avec un graphique de zone empilée au nouveau tableau de bord : *widget* > *graphique de zone empilée*
++
+.. Définissez le périphérique par défaut sur machine virtuelle : cliquez sur *Storage* > *Virtual machine* > *latence total*
++
+Le widget affiche le graphique des temps de latence totaux, pour toutes les VM, pour 24 heures dans un graphique des zones empilées.
+
+.. Créez un deuxième affichage dans ce widget qui affiche la moyenne totale de latence pour toutes les machines virtuelles : *widget* > *graphique linéaire*
+.. Définissez le périphérique par défaut sur machine virtuelle : cliquez sur *machine virtuelle* > *latence-total*
++
+Le widget affiche le total de latence pour la période de 24 heures par défaut à l'aide d'un graphique en courbes.
+
+.. Cliquez sur *X* dans la barre *Roll up* et sélectionnez *Afficher* > *Top* > *10*
+
+
++
+Le système affiche les 10 principales VM en fonction de la latence totale.
+
+. Pour comparer la latence totale moyenne pour toutes les machines virtuelles aux 10 opérations d'entrée/sortie par seconde les plus populaires, procédez comme suit :
++
+.. Cliquez sur *+Ajouter*
+.. Remplacez le périphérique par défaut par la machine virtuelle : cliquez sur *Storage* > *Virtual machine* > *IOPS total*
+.. Cliquez sur *X* dans la barre *Roll up* et sélectionnez *Afficher* > *Top* > *10*
+
+
++
+Le système affiche une latence élevée pour les 10 objets et affiche la latence moyenne dans un graphique en courbes.
+
++
++ image::../media/analytics-top10-avg.gif[]
+
++
++ la latence moyenne est de 1.6 ms, tandis que dans le top 10, les machines virtuelles ont une latence supérieure à 200 ms.
+
+

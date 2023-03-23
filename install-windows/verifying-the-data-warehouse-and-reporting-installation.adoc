@@ -1,0 +1,92 @@
+---
+permalink: install-windows/verifying-the-data-warehouse-and-reporting-installation.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Après une installation réussie de l"entrepôt de données OnCommand Insight, vous devez vous assurer que tous les services DWH et Reporting sont disponibles dans vos services Microsoft Windows.' 
+---
+= Vérification de l'installation Data Warehouse et Reporting
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Après une installation réussie de l'entrepôt de données OnCommand Insight, vous devez vous assurer que tous les services DWH et Reporting sont disponibles dans vos services Microsoft Windows.
+
+
+
+== Étapes
+
+. Dans le menu Démarrer de Windows, sélectionnez menu:panneau de configuration[système et sécurité > Outils d'administration > Services].
+. Assurez-vous que les entrées suivantes apparaissent dans la liste des services :
++
+|===
+
+
+| Nom / État | Description 
+
+
+ a| 
+*Serveur SANscreen / en cours d'exécution*
+ a| 
+Le serveur DWH OnCommand Insight
+
+
+
+ a| 
+*MySQL / running*
+ a| 
+Base de données SQL OnCommand Insight
+
+
+
+ a| 
+*IBM Cognos / en cours d'exécution*
+ a| 
+IBM Cognos Content Database
+
+
+
+ a| 
+*DB2- DB2COPY1 - DB2-0 / EN COURS D'EXÉCUTION*
+ a| 
+Gérer les bases de données DB2
+
+
+
+ a| 
+*DB2 Governor (DB2COPY1) / non en cours d'exécution*
+ a| 
+Collecte des statistiques pour les applications connectées aux bases de données DB2.
+
+
+
+ a| 
+*Serveur de licences DB2 (DB2COPY1) / non en cours d'exécution*
+ a| 
+Contrôle la conformité des licences DB2.
+
+
+
+ a| 
+*DB2 Management Service (DB2COPY1) / en cours d'exécution*
+ a| 
+Gère les entrées de registre DB2 pour assurer leur compatibilité avec les versions antérieures de la copie DB2.
+
+
+
+ a| 
+*DB2 Remote Command Server (DB2COPY1) / en cours d'exécution*
+ a| 
+Prend en charge l'exécution de commandes DB2 à distance.
+
+
+
+ a| 
+*IBM Secure Shell Server pour Windows / ne fonctionne pas*
+ a| 
+IBM Secure Shell Server pour Windows
+
+|===
+

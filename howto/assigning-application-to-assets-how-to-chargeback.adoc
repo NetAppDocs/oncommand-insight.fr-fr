@@ -1,0 +1,14 @@
+---
+permalink: howto/assigning-application-to-assets-how-to-chargeback.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Après avoir défini vos applications, vous devez les associer à des ressources spécifiques. Vous pouvez utiliser une méthode ad hoc simple pour appliquer une application à un actif. Les utilisateurs qui souhaitent appliquer des applications en bloc doivent utiliser une méthode de requête pour identifier les ressources qu"ils souhaitent affecter à une application.' 
+---
+= Affectation d'applications aux ressources
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Après avoir défini vos applications, vous devez les associer à des ressources spécifiques. Vous pouvez utiliser une méthode ad hoc simple pour appliquer une application à un actif. Les utilisateurs qui souhaitent appliquer des applications en bloc doivent utiliser une méthode de requête pour identifier les ressources qu'ils souhaitent affecter à une application.

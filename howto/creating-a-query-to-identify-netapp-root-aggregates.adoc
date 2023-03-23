@@ -1,0 +1,36 @@
+---
+permalink: howto/creating-a-query-to-identify-netapp-root-aggregates.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les requêtes fournissent une recherche granulaire, en fonction des critères sélectionnés par l"utilisateur. Une requête vous permet de rechercher des volumes internes dans votre environnement contenant l"agrégat racine NetApp.' 
+---
+= Création d'une requête permettant d'identifier les agrégats racine NetApp dans votre environnement
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les requêtes fournissent une recherche granulaire, en fonction des critères sélectionnés par l'utilisateur. Une requête vous permet de rechercher des volumes internes dans votre environnement contenant l'agrégat racine NetApp.
+
+
+
+== Étapes
+
+. Dans l'interface utilisateur web de OnCommand Insight, créez une requête pour identifier les agrégats racine NetApp dans votre environnement : *requêtes* > *Nouvelle requête* > *Sélectionner un type de ressource*
+. Cliquez sur *Pool de stockage*
+. Entrer le nom de l'agrégat root
++
+Cet exemple utilise "`aggr0`" pour le nom. Lors de la création d'un agrégat, seules les exigences suivantes concernant le nom doivent être respectées :
+
++
+** Il doit commencer par une lettre ou un trait de soulignement (_).
+** Il ne peut contenir que des lettres, des chiffres et des traits de soulignement.
+** Elle peut comporter 250 caractères maximum. Dans la plupart des cas, l'agrégat est nommé aggr0, aggr_0, ou quelque chose de similaire. Cela peut impliquer un processus itératif pour identifier tous les agrégats racines NetApp de votre environnement.
+
+
+. Cliquez sur *Enregistrer* et entrez un nom pour la nouvelle requête.
++
+Comme mentionné précédemment, il peut s'agir d'un processus itératif et nécessite plusieurs requêtes pour identifier tous les agrégats racines NetApp.
+
+

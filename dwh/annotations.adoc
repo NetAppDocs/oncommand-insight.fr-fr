@@ -1,0 +1,40 @@
+---
+permalink: dwh/annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les annotations fournissent une méthode de définition des informations relatives aux objets de votre environnement, puis vous permettent de suivre les objets en fonction de l"annotation. Par exemple, vous pouvez ajouter des annotations de bâtiment ou de numéro d"étage aux périphériques de votre environnement, puis créer une requête qui renvoie tous les périphériques du premier étage d"un data Center.' 
+---
+= Ce que vous pouvez faire en utilisant les annotations
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les annotations fournissent une méthode de définition des informations relatives aux objets de votre environnement, puis vous permettent de suivre les objets en fonction de l'annotation. Par exemple, vous pouvez ajouter des annotations de bâtiment ou de numéro d'étage aux périphériques de votre environnement, puis créer une requête qui renvoie tous les périphériques du premier étage d'un data Center.
+
+Par ailleurs, vous pouvez examiner tous les périphériques d'un data Center ou d'une entité business spécifique et déterminer quelle entité business utilise le stockage le plus de niveau 1. Pour ce faire, vous attribuez un centre de données, une entité commerciale ou une annotation de niveau au terminal à l'aide de l'interface utilisateur Web de OnCommand Insight. Vous pouvez ensuite placer les annotations définies par l'utilisateur sélectionnées dans OnCommand Insight dans l'entrepôt de données. Vous voulez faire ceci pour voir les valeurs d'annotation attribuées aux objets apparaissent dans vos rapports personnalisés.
+
+Vous pouvez spécifier les annotations définies par l'utilisateur qui se propagent à Data Warehouse. Les annotations sont ajoutées sous forme de colonnes supplémentaires à la table d'objets dans l'inventaire et à la table de dimensions appropriée dans les magasins de données. Lorsque vous mettez à jour les annotations sur les ressources à l'aide de l'interface utilisateur de OnCommand Insight et que vous lancez ou attendez la prochaine version de l'entrepôt de données, les résultats s'affichent dans les tableaux suivants :
+
+* dwh_inventory.valeur_annotation
+* dwh_inventory.object_to_annotation
+
+
+S'assurer que les annotations saisies dans OnCommand Insight sont incluses dans l'entrepôt de données nécessite les principaux processus suivants :
+
+* Avant d'importer des annotations dans l'entrepôt de données, vous devez vous assurer qu'elles sont préparées dans OnCommand Insight.
++
+Pour ce faire, vous pouvez exécuter manuellement l'option *Dépannage* > *forcer la mise à jour des annotations pour l'entrepôt de données* ou attendre le prochain processus d'exécution des données transitoires planifiées. Lorsque vous forcez la mise à jour des annotations, vous forcez le serveur OnCommand Insight à calculer et à placer les données transitoires (telles que les valeurs d'annotation) dans les tables de base de données afin que le processus ETL de l'entrepôt de données puisse lire les données. La mise à jour des données d'annotations se produit automatiquement toutes les quinze minutes ; cependant, vous pouvez forcer cette mise à jour à se produire plus fréquemment.
+
+* Vous importez ensuite des annotations dans Data Warehouse en utilisant l'option Data Warehouse**Annotations**.
+* Si vous souhaitez inclure des annotations dans les rapports que vous créez à l'aide des outils de création de rapports du portail de rapports OnCommand Insight, vous devez mettre à jour le modèle de métadonnées de rapport OnCommand Insight.
+
+
+Lorsque vous mettez à niveau Data Warehouse, la tâche d'annotations s'exécute automatiquement pendant le processus de restauration de la base de données. Le travail d'annotations s'exécute également automatiquement au démarrage de WildFly.
+
+[NOTE]
+====
+WildFly est un serveur d'applications sur lequel le code Java OnCommand Insight s'exécute et est nécessaire à la fois pour le serveur OnCommand Insight et pour l'entrepôt de données.
+
+====

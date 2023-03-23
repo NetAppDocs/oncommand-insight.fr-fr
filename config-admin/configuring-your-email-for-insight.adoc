@@ -1,0 +1,39 @@
+---
+permalink: config-admin/configuring-your-email-for-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Si vos utilisateurs souhaitent recevoir des rapports Insight dans leurs comptes de messagerie, vous devez configurer votre serveur de messagerie pour activer cette fonctionnalité. 
+---
+= Configuration de votre messagerie pour Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vos utilisateurs souhaitent recevoir des rapports Insight dans leurs comptes de messagerie, vous devez configurer votre serveur de messagerie pour activer cette fonctionnalité.
+
+
+
+== Étapes
+
+. Dans la barre d'outils Insight, cliquez sur *Admin* et sélectionnez *Notifications*.
+. Faites défiler jusqu'à la section *Email* de la page.
+. Dans la zone *Server*, entrez le nom de votre serveur SMTP dans votre organisation, identifié à l'aide d'un nom d'hôte ou d'une adresse IP (_nnn.nnn.nnn_ format).
++
+Si vous spécifiez un nom d'hôte, assurez-vous que ce nom peut être résolu via DNS.
+
+. Dans la zone *Nom d'utilisateur*, entrez votre nom d'utilisateur.
+. Dans la zone *Mot de passe*, entrez le mot de passe d'accès au serveur de messagerie, requis uniquement si votre serveur SMTP est protégé par un mot de passe. Il s'agit du même mot de passe que celui que vous utilisez pour vous connecter à l'application qui vous permet de lire votre courrier électronique. Si un mot de passe est requis, vous devez le saisir une deuxième fois pour vérification.
+. Dans la zone *adresse e-mail de l'expéditeur*, entrez le compte de messagerie de l'expéditeur qui sera identifié comme expéditeur dans tous les rapports OnCommand Insight.
++
+Ce compte doit être un compte de messagerie valide au sein de votre organisation.
+
+. Dans la zone *Signature de l'e-mail*, entrez le texte que vous souhaitez insérer dans chaque e-mail envoyé.
+. Dans la zone destinataires, cliquez sur image:../media/add-email-recipient-icon.gif[""], Entrez une adresse e-mail et cliquez sur *OK*.
++
+Pour modifier une adresse e-mail, sélectionnez-la et cliquez sur image:../media/edit-recipient-icon.gif[""]. Pour supprimer une adresse e-mail, sélectionnez-la et cliquez sur image:../media/delete-recipient-icon.gif[""].
+
+. Pour envoyer un e-mail de test à des destinataires spécifiés, cliquez sur image:../media/test-email-icon.gif[""].
+. Cliquez sur *Enregistrer*.
+

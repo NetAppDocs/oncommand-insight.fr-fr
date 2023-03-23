@@ -1,0 +1,85 @@
+---
+permalink: config-admin/about-oncommand-insight-anomaly-detection.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight inclut une fonctionnalité d"analytique de détection d"anomalies du machine learning qui fournit une visibilité sur l"infrastructure d"une application et identifie les anomalies de performance avant qu"elles ne deviennent des interruptions de service.' 
+---
+= Fonctionnement de la détection d'anomalies OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight inclut une fonctionnalité d'analytique de détection d'anomalies du machine learning qui fournit une visibilité sur l'infrastructure d'une application et identifie les anomalies de performance avant qu'elles ne deviennent des interruptions de service.
+
+L'analyse des anomalies vous aide à identifier la plage de charges de travail normales d'une application et vous informe lorsque les modifications de performances sont en dehors des niveaux attendus. Le moteur de détection des anomalies des applications analyse les indicateurs de performance recueillis par Insight et identifie les anomalies dans l'infrastructure applicative.
+
+Utilisez la détection des anomalies pour effectuer les tâches suivantes :
+
+* Identifiez les changements significatifs dans le comportement de l'infrastructure applicative
+* Suivi d'une application sur l'ensemble de la pile et sur plusieurs compteurs
+* Diagnostiquez la cause des événements récurrents périodiques dans une charge de travail applicative
+* Fournir un ensemble plus complet d'informations par rapport aux données des compteurs de performances utilisant des valeurs de seuil statiques
+* Surveillez en mode réactif amélioré, avec une vue de bout en bout de la topologie et la capacité de se concentrer sur les comportements les plus anormaux.
+
+
+Le moteur de détection des anomalies utilise les données Insight pour l'analyse des applications. Lors du premier démarrage de la surveillance, le moteur d'analyse peut ingérer jusqu'à 14 jours de données d'historique des performances. Les données sont collectées pendant des semaines, voire des mois, fournissant des données plus précises sur une ressource donnée. Les données incluent les totaux des compteurs suivants :
+
+|===
+
+
+| Objets | Compteur 
+
+
+ a| 
+VM
+ a| 
+Latence, IOPS
+
+
+
+ a| 
+Hyperviseur
+ a| 
+Taux d'utilisation du processeur, IOPS
+
+
+
+ a| 
+Port de périphérie
+ a| 
+Crédit BB zéro
+
+
+
+ a| 
+Nœud de stockage
+ a| 
+Latence, utilisation, IOPS
+
+
+
+ a| 
+Volumétrie
+ a| 
+Latence, IOPS
+
+
+
+ a| 
+Volume interne
+ a| 
+Latence, IOPS
+
+
+
+ a| 
+Pool de stockage
+ a| 
+IOPS, utilisation
+
+|===
+Les données collectées par le moteur de détection des anomalies sont archivées lorsque l'archivage des données de performance est activé sur le serveur Insight. Reportez-vous à la page intégrité du système pour déterminer si l'archivage est activé.
+
+Le moteur de détection des anomalies s'exécute sur un serveur distinct du serveur Insight. Elle peut être configurée sur une machine physique ou une machine virtuelle. Pour plus d'informations, reportez-vous au Guide d'installation de OnCommand Insight pour Windows ou Linux.

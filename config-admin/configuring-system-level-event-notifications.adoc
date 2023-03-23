@@ -1,0 +1,37 @@
+---
+permalink: config-admin/configuring-system-level-event-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight prend en charge les notifications d"événements au niveau du système, tels que les pannes d"unité d"acquisition ou les erreurs de source de données. Pour recevoir des notifications, vous devez configurer Insight pour envoyer des e-mails lorsqu"un ou plusieurs de ces événements se produisent.' 
+---
+= Configuration des notifications d'événements au niveau du système
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight prend en charge les notifications d'événements au niveau du système, tels que les pannes d'unité d'acquisition ou les erreurs de source de données. Pour recevoir des notifications, vous devez configurer Insight pour envoyer des e-mails lorsqu'un ou plusieurs de ces événements se produisent.
+
+
+
+== Avant de commencer
+
+Vous devez avoir configuré les destinataires des e-mails pour recevoir des notifications dans *Admin* > *Notifications* > *méthodes d'envoi*.
+
+
+
+== Étapes
+
+. Cliquez sur *Admin* > *Notifications*.
+. Cliquez sur *Evénements*.
+. Dans la section *événements d'alerte système* E-mail, sélectionnez le niveau de gravité (*Avertissement et supérieur* ou *critique*) pour la notification, ou choisissez *ne pas envoyer* si vous ne souhaitez pas recevoir de notifications d'événements de niveau système.
+. Cliquez sur *Enregistrer*.
+. Cliquez sur *Admin* > *alertes système* pour configurer les alertes elles-mêmes.
+. Pour ajouter une nouvelle alerte, cliquez sur *+Ajouter* et donnez à l'alerte un *Nom* unique. Vous pouvez également cliquer sur l'icône de droite pour *modifier* une alerte existante.
+. Choisissez le *Type d'événement* sur lequel vous souhaitez être averti, par exemple _défaillance de l'unité d'acquisition_.
+. Choisissez un intervalle *Snooze* pour supprimer les notifications sur les événements en double du type sélectionné pour l'intervalle de temps sélectionné. Si vous sélectionnez _Never_, vous recevrez des notifications répétées une fois par minute jusqu'à ce que l'événement ne se produise plus.
+. Choisissez une *gravité* (Avertissement ou critique) pour la notification d'événement.
+. Les notifications par e-mail seront envoyées par défaut à la liste mondiale des destinataires par e-mail, ou vous pouvez cliquer sur le lien fourni pour remplacer la liste globale et envoyer des notifications à des destinataires spécifiques.
+. Cliquez sur Enregistrer pour ajouter l'alerte.
+

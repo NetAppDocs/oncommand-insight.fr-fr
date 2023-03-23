@@ -1,0 +1,43 @@
+---
+permalink: install-windows/verifying-new-oncommand-insight-services.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Une fois l"installation terminée, vérifiez que les services des composants Insight fonctionnent sur votre serveur.' 
+---
+= Vérification des nouveaux services Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Une fois l'installation terminée, vérifiez que les services des composants Insight fonctionnent sur votre serveur.
+
+
+
+== Étapes
+
+. Pour afficher la liste des services actuellement en cours d'utilisation :
++
+.. Cliquez sur le bouton *Démarrer*.
+.. Cliquez sur *Exécuter*.
+.. Tapez ce qui suit :
++
+`cmd`
+
+.. Appuyez sur entrée.
+.. Tapez ce qui suit dans la fenêtre *invite de commande* :
++
+`net start`
+
+
+
+. Vérifiez les services Insight suivants dans la liste :
++
+** *Serveur SANscreen*
+** *SANscreen Acq* (le processus d'acquisition)
+** *MySQL* (base de données Insight SQL)
+** *Elasticsearch* (magasin de données pour les données Insight) si ces services ne s'affichent pas dans la liste, contactez le support technique.
+
+
+

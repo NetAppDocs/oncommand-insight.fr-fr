@@ -1,0 +1,36 @@
+---
+permalink: faq/oci-faq-netapp-storage-iops.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Cette FAQ répond aux questions les plus courantes sur la façon dont les valeurs d"IOPS sont dérivées des systèmes de stockage Data ONTAP.' 
+---
+= IOPS de stockage Data ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cette FAQ répond aux questions les plus courantes sur la façon dont les valeurs d'IOPS sont dérivées des systèmes de stockage Data ONTAP.
+
+
+
+== Comment les IOPS du stockage sont-elles dérivées des systèmes de stockage Data ONTAP
+
+* Les IOPS au niveau des baies de stockage sont agrégées à partir des IOPS des volumes internes
+* Les IOPS au niveau du nœud de stockage incluent les opérations de métadonnées
+* Les IOPS au niveau du pool de stockage excluent les opérations d'exploitation de métadonnées ; ne mesurent que les disques
+* Les IOPS internes au niveau du volume incluent les opérations de lecture et d'écriture + les autres opérations d'exploitation
+
+
+
+
+== Question : Comment les IOPS de l'agrégat peuvent-elles parfois être supérieures aux IOPS du nœud ?
+
+Avant cdot 8.3.1 Node IOPS sont constitués de protocole IOPS. En cdot 8.3.1. et plus tard, ils sont constitués de mesures des composants du système. Ils incluent uniquement les demandes de données, les demandes qui passent par la porte d'entrée, mais n'incluent pas les tâches back-end telles que les miroirs Snapshot, la déduplication, etc. En revanche, ces tâches produisent des IOPS de disque, ce qui permet d'agréger les IOPS. Il est donc possible que les IOPS de l'agrégat soient supérieures à celles du nœud.
+
+
+
+== Question - Comment les métadonnées ou autres opérations sont-elles calculées
+
+Autres opérations = Total - (lecture + écriture)

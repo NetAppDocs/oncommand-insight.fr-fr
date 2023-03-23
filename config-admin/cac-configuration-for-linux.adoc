@@ -1,0 +1,24 @@
+---
+permalink: config-admin/cac-configuration-for-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Certaines modifications sont nécessaires pour activer le contrôle d"accès aux appels sur un serveur OnCommand Insight Linux.' 
+---
+= Activation de CAC sur un serveur Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Certaines modifications sont nécessaires pour activer le contrôle d'accès aux appels sur un serveur OnCommand Insight Linux.
+
+
+
+== Étapes
+
+. Accédez à `/opt/netapp/oci/conf/`
+. Modifier `wildfly.properties` et modifiez la valeur de `CLIENT_AUTH_ENABLED` Sur « vrai »
+. Importez le « certificat racine » qui existe sous `/opt/netapp/oci/wildfly/standalone/configuration/server.keystore`
+. Redémarrez le serveur
+

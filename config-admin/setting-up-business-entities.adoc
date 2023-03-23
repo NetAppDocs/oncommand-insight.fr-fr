@@ -1,0 +1,43 @@
+---
+permalink: config-admin/setting-up-business-entities.html 
+sidebar: sidebar 
+keywords:  
+summary: Après avoir conçu la hiérarchie des entités métier pour votre société, vous pouvez configurer des applications, puis associer les entités métier aux applications. Ce processus crée la structure des entités métier dans votre base de données OnCommand Insight. 
+---
+= Création d'entités commerciales
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Après avoir conçu la hiérarchie des entités métier pour votre société, vous pouvez configurer des applications, puis associer les entités métier aux applications. Ce processus crée la structure des entités métier dans votre base de données OnCommand Insight.
+
+
+
+== Description de la tâche
+
+L'association d'applications à des entités commerciales est facultative ; cependant, il s'agit d'une meilleure pratique.
+
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur Web Insight.
+. Cliquez sur *gérer* et sélectionnez *entités commerciales*.
++
+La page entités commerciales s'affiche.
+
+. Cliquez sur image:../media/add-annotation-icon.gif[""] pour commencer à construire une nouvelle entité.
++
+La boîte de dialogue *Ajouter une entité métier* s'affiche.
+
+. Pour chaque niveau d'entité (locataire, secteur d'activité, entité commerciale et projet), vous pouvez effectuer l'une des opérations suivantes :
++
+** Cliquez sur la liste de niveau d'entité et sélectionnez une valeur.
+** Saisissez une nouvelle valeur et appuyez sur entrée.
+** Laissez la valeur de niveau d'entité N/A si vous ne souhaitez pas utiliser le niveau d'entité pour l'entité métier.
+
+
+. Cliquez sur *Enregistrer*.
+

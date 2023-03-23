@@ -1,0 +1,40 @@
+---
+permalink: dwh/managing-jobs.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez afficher la liste des tâches en cours et leur état. Le premier job d"un cycle de construction est en caractères gras. La génération effectuée par Data Warehouse pour chaque connecteur et pour chaque magasin de données est considérée comme une tâche.' 
+---
+= Gestion des travaux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez afficher la liste des tâches en cours et leur état. Le premier job d'un cycle de construction est en caractères gras. La génération effectuée par Data Warehouse pour chaque connecteur et pour chaque magasin de données est considérée comme une tâche.
+
+
+
+== Description de la tâche
+
+Vous pouvez annuler tout travail en attente que vous avez planifié ou commencé. Vous pouvez également effacer l'historique des tâches exécutées précédemment. Vous pouvez effacer l'historique des travaux qui ne sont pas en attente, en cours d'exécution ou en cours d'abandon. Vous pouvez effacer tout l'historique ou tout l'historique sauf les 24 heures précédentes pour supprimer toutes les entrées sauf celles du dernier jour.
+
+Vous pouvez afficher des informations sur les types de travaux suivants : licence, pré-inventaire, stock, Post-inventaire, Dimensions, Préparation des Dataarts, capacité, ports, efficacité du stockage, utilisation du système de fichiers, Performance, notification d'état de tâche, création d'historique, annotations dynamiques, retrait de connecteur, Construction, téléphone et maintenance ignorés.
+
+Une tâche de maintenance s'exécute chaque semaine et utilise les outils MySQL pour optimiser la base de données.
+
+
+
+== Étapes
+
+. Connectez-vous au portail Data Warehouse à l'adresse `+https://hostname/dwh+`, où `hostname` Est le nom du système sur lequel l'entrepôt de données OnCommand Insight est installé.
+. Dans le volet de navigation de gauche, cliquez sur *travaux*.
++
+image::../media/oci-dwh-admin-jobs-gif.gif[DWH Menu principal lien tâches]
+
++
+Si l'état en attente apparaît, un lien d'annulation apparaît.
+
+. Pour annuler un travail en attente, cliquez sur *annuler*.
+. Pour supprimer l'historique du travail, cliquez sur *All* ou *All sauf Last 24h*.
+

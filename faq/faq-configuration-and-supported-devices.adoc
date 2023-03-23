@@ -1,0 +1,68 @@
+---
+permalink: faq/faq-configuration-and-supported-devices.html 
+sidebar: sidebar 
+keywords:  
+summary: Cette FAQ répond aux questions les plus courantes sur la configuration OnCommand Insight et les périphériques pris en charge. 
+---
+= Configuration et périphériques pris en charge
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cette FAQ répond aux questions les plus courantes sur la configuration OnCommand Insight et les périphériques pris en charge.
+
+
+
+== OCI modifie-t-il mon environnement ?
+
+Non OCI est un outil en lecture seule qui collecte des informations sur votre environnement. OCI ne modifie jamais vos ressources ou configurations.
+
+
+
+== Quels sont les accès de niveau d'autorisation dont OCI a besoin pour mes périphériques ?
+
+Dans la plupart des cas où le périphérique le prend en charge, un accès en lecture seule est tout ce qui est nécessaire. Certaines solutions n'autorisent pas l'accès en lecture seule et requièrent donc les autorisations élevées appropriées.
+
+
+
+== À quelle fréquence OCI collecte-t-il des informations ?
+
+OCI collecte généralement des données de performance toutes les 5 minutes et effectue la découverte de constructions logiques et physiques toutes les ½ heures OCI définit les intervalles d'interrogation par défaut en fonction des meilleures pratiques et de l'évolutivité recommandées, mais permet à l'utilisateur de contrôler totalement ces intervalles.
+
+
+
+== Quel est l'impact du logiciel OCI sur mon environnement ?
+
+Les communications IP sans agent, hors bande et passives d'OCI contribuent à réduire au minimum la configuration, la maintenance et l'impact sur l'écosystème du data Center. L'équipe de développement des performances d'OCI prend des mesures très strictes pour minimiser tout impact sur les performances du data Center lors des activités de contrôle de la performance elle-même. L'impact est considéré comme négligeable dans les environnements d'exploitation normaux et peut être détendu ou resserré dans des plateformes technologiques hautement utilisées ou sous-performantes. Pour plus d'informations, reportez-vous au Guide d'installation de OnCommand Insight.
+
+
+
+== Comment puis-je répertorier tous les hôtes/machines virtuelles dans OCI ?
+
+Le complément de widgets OCI et les possibilités de liste de requêtes peuvent être utilisés pour fournir des listes de styles d'inventaire pour les actifs de data Center. Les listes des machines virtuelles jusqu'aux piles de disques et de nombreuses constructions entre elles peuvent toutes être mises à disposition pour les requêtes, les widgets, les tableaux de bord et les rapports d'entrepôts de données, et sont accessibles via l'API RESTful.
+
+
+
+== OCI fournit-il le même type de prise en charge pour les hôtes non hyperviseurs associés (c.-à-d. les serveurs physiques) ?
+
+Les hyperviseurs tels que VMware fournissent des informations détaillées sur les hôtes ESXI et les machines virtuelles qui leur sont associées. Pour les serveurs physiques, OCI collecte les metrics jusqu'au HBA hôte. OCI utilise une méthode unique de détection des serveurs physiques à l'aide d'une technologie en attente de brevet. Une fois le stockage et/ou les commutateurs découverts, les noms d'hôtes des serveurs physiques figurent dans les informations d'alias de structure. OCI sélectionne ces noms d'hôte, les compare dans DNS et transfère automatiquement les hôtes dans OCI. Cette technique réduit considérablement le besoin de mises à jour manuelles des entrées et de maintenance de l'inventaire des outils.
+
+
+
+== OCI fournit-il la même profondeur (parité) de périphérique dans des environnements hétérogènes ?
+
+Il existe différents degrés de standardisation, de similarité et de nomenclature au sein des plateformes et des technologies des fournisseurs tiers. OCI tente de normaliser les informations de capacité et de performance dans une structure cohérente. Certaines mesures de capacité et de performance sont fournies de manière native depuis les compteurs de l'appareil, tels que les IOPS, la latence et la capacité brute. Lorsque les compteurs ne sont pas fournis, OCI peut tenter de résumer les valeurs (par exemple, en totaliser les IOPS ou les capacités des volumes sous-jacents). Dans les cas où aucune des deux n'est disponible, OCI tente d'extraire les valeurs des mesures à travers plusieurs algorithmes de calcul. OCI fournit une fonctionnalité d'intégration SNMP générique qui inclut des metrics supplémentaires qui ne sont pas actuellement collectés par OCI.
+
+
+
+== OCI prend-il en charge les switchs Fibre Channel ?
+
+Oui. En plus de collecter les données de vos ressources de stockage, OCI acquiert également des données d'inventaire et de performance des commutateurs Cisco, Brocade et QLogic dans votre environnement.
+
+
+
+== Les vues topologiques de l'ensemble de l'infrastructure sont-elles disponibles ? Le logiciel OCI affiche-t-il une « visibilité de bout en bout » ?
+
+Oui. OCI détecte et mappe de manière dynamique les constructions logiques et physiques et offre une vue topologique interactive de bout en bout du calcul, des fabrics, des virtualisateurs et du stockage interne. Les icônes de topologie permettent de parcourir rapidement les ressources affectées et d'identifier les charges de travail et les violations dans les environnements de stockage partagé.

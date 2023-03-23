@@ -1,0 +1,41 @@
+---
+permalink: install-windows/uninstalling-the-data-warehouse-software.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous devez désinstaller le logiciel Data Warehouse avant de pouvoir effectuer la mise à niveau. 
+---
+= Désinstallation du logiciel Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez désinstaller le logiciel Data Warehouse avant de pouvoir effectuer la mise à niveau.
+
+
+
+== Avant de commencer
+
+Si vous avez apporté des modifications aux rapports que vous souhaitez conserver, il est essentiel de créer une sauvegarde avant de désinstaller Data Warehouse. La désinstallation de Data Warehouse supprime définitivement toutes les données collectées précédemment et supprime tous les rapports, y compris les rapports nouvellement créés ou modifiés.
+
+
+
+== Étapes
+
+. Connectez-vous au serveur Data Warehouse.
+. Vérifiez que toutes les fenêtres Insight du serveur sont fermées.
+. Pour désinstaller à l'aide du panneau de configuration :
++
+.. Ouvrez *Désinstaller un programme* à partir du panneau de commande et sélectionnez l'application OnCommand Insight à supprimer. Cliquez sur *Désinstaller* et suivez les invites.
+.. Sélectionnez l'application IBM DB2 à supprimer. Cliquez sur *Désinstaller* et suivez les invites.
+.. Supprimez le dossier d'installation DB2 (par exemple _C:\Program Files\IBM\DB2_) pour supprimer complètement la base de données DB2.
+
+
+. Pour désinstaller à l'aide du script fourni :
++
+.. Accédez au dossier _<download location>\OCI_dwh_uninstall\_ et exécutez le script _uninstall_OCI_dwh.bat_.
+
+
+. Redémarrez le serveur.
+

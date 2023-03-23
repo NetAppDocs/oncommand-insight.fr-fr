@@ -1,0 +1,18 @@
+---
+permalink: reporting/colors-used-in-data-model-elements.html 
+sidebar: sidebar 
+keywords:  
+summary: Les couleurs des éléments de modèle de données ont des indications différentes. 
+---
+= Couleurs utilisées dans les éléments de modèle de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les couleurs des éléments de modèle de données ont des indications différentes.
+
+* Actifs jaunes : représentent les mesures.
+* Actifs non jaunes : représentent des attributs. Ces valeurs ne sont pas agrégées.
+

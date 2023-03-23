@@ -1,0 +1,29 @@
+---
+permalink: config-admin/acquisition-unit-status.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"écran unité d"acquisition permet d"afficher toutes les unités d"acquisition, y compris l"état et les erreurs présentes.' 
+---
+= État de l'unité d'acquisition
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'écran unité d'acquisition permet d'afficher toutes les unités d'acquisition, y compris l'état et les erreurs présentes.
+
+L'état des unités d'acquisition Insight connectées à votre serveur s'affiche dans le tableau *Admin* > *unités d'acquisition*. Ce tableau affiche les informations suivantes pour chaque unité d'acquisition :
+
+* *Nom*
+* *IP*
+* *Status* est l'état de fonctionnement de l'unité d'acquisition.
+* **Dernier rapporté ** affiche la dernière fois qu'une source de données est connectée à l'unité d'acquisition signalée.
+* *Remarque* affiche une note entrée par l'utilisateur relative à l'au.
+
+
+Si une unité d'acquisition de la liste présente un problème, le champ État affiche un cercle rouge avec de brèves informations sur le problème. Vous devez étudier tout problème d'unité d'acquisition, car il est probable qu'il affecte la collecte des données.
+
+Pour redémarrer une unité d'acquisition, placez le pointeur de la souris sur l'unité et cliquez sur le bouton _redémarrer l'unité d'acquisition_ qui apparaît.
+
+Pour ajouter une note de texte, placez le pointeur de la souris sur une unité d'acquisition et cliquez sur le bouton _Ajouter une note_ qui s'affiche. Seule la note saisie le plus récemment est affichée.

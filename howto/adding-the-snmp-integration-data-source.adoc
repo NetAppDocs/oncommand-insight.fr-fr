@@ -1,0 +1,66 @@
+---
+permalink: howto/adding-the-snmp-integration-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La source de données SNMP d"intégration fournit des propriétés de configuration SNMP communes semblables aux autres sources de données SNMP incluses avec les sources de données OnCommand Insight pour Brocade et Cisco.' 
+---
+= Création d'une source de données d'intégration SNMP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La source de données SNMP d'intégration fournit des propriétés de configuration SNMP communes semblables aux autres sources de données SNMP incluses avec les sources de données OnCommand Insight pour Brocade et Cisco.
+
+
+
+== Avant de commencer
+
+Pour utiliser correctement la source de données SNMP d'intégration à collecter, les conditions suivantes doivent être remplies :
+
+* Vous devez avoir déjà importé un pack d'intégration que vous utiliserez pour cette source de données SNMP.
+* Tous les périphériques cibles partagent les mêmes informations d'identification.
+* Tous les périphériques cibles implémentent les objets SNMP référencés par le pack d'intégration configuré.
+
+
+
+
+== Description de la tâche
+
+Pour créer une source de données d'intégration SNMP, choisissez le fournisseur « intégration » et le modèle « SNMP » dans l'assistant de création de la source de données.
+
+
+
+== Étapes
+
+. Dans l'interface utilisateur Web de OnCommand Insight, cliquez sur *Admin* > *sources de données*
+. Cliquez sur *+Ajouter*
+. Entrez un nom pour la source de données
+. Pour fournisseur, sélectionnez *intégration*
+. Pour modèle, sélectionnez *SNMP*
++
+image::../media/add-integration-ds.gif[ajoutez des d intégration]
+
+. Pour que collecter, cochez *intégration*
++
+Il s'agit du seul package sur cette source de données et est vérifié par défaut :
+
+. Cliquez sur *Configuration*
+. Entrez les adresses IP des systèmes à partir desquels vous souhaitez collecter des données SNMP
+. Sélectionnez un pack d'intégration SNMP importé
+. Définissez l'intervalle d'interrogation de l'intégration
+. Sélectionnez la version SNMP
+. Entrez la chaîne de communauté SNMP
++
+Pour SNMP V1 et V2.
+
+. Ajoutez le nom d'utilisateur et le mot de passe pour les systèmes à partir duquel vous allez collecter des données.
++
+Pour SNMP V3.
+
+. Cliquez sur *Configuration avancée*
++
+Les paramètres par défaut de la configuration avancée s'affichent. Apportez les modifications nécessaires à ces paramètres.
+
+

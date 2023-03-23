@@ -1,0 +1,16 @@
+---
+permalink: howto/setting-up-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez configurer Insight pour envoyer des notifications sur des événements déclencheurs tels que des règles de performance, des chemins globaux ou des violations de capacité via e-mail, SNMP ou Syslog. Vous pouvez également configurer Insight pour envoyer des notifications par e-mail sur des événements au niveau du système, tels que des erreurs de source de données ou des pannes d"unité d"acquisition.' 
+---
+= Configuration des notifications
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez configurer Insight pour envoyer des notifications sur des événements déclencheurs tels que des règles de performance, des chemins globaux ou des violations de capacité via e-mail, SNMP ou Syslog. Vous pouvez également configurer Insight pour envoyer des notifications par e-mail sur des événements au niveau du système, tels que des erreurs de source de données ou des pannes d'unité d'acquisition.
+
+Ce sont des instructions de base. Pour plus d'informations sur les notifications, reportez-vous à la section Configuration et administration d'Insight > Configuration et administration d'Insight.

@@ -1,0 +1,55 @@
+---
+permalink: config-admin/modifying-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez modifier le nom, la description ou les valeurs d"une annotation ou supprimer une annotation que vous ne souhaitez plus utiliser.' 
+---
+= Modification des annotations
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez modifier le nom, la description ou les valeurs d'une annotation ou supprimer une annotation que vous ne souhaitez plus utiliser.
+
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur OnCommand Insigtweb.
+. Cliquez sur *gérer* et sélectionnez *Annotations*.
++
+La page Annotations s'affiche.
+
+. Placez le curseur sur l'annotation à modifier et cliquez sur image:../media/edit-recipient-icon.gif[""].
++
+La boîte de dialogue *Modifier l'annotation* s'affiche.
+
+. Vous pouvez apporter les modifications suivantes à une annotation :
++
+.. Modifiez le nom, la description ou les deux.
++
+Notez toutefois que vous pouvez entrer un maximum de 255 caractères pour le nom et la description, et que vous ne pouvez pas modifier le type d'une annotation. En outre, pour les annotations au niveau du système, vous ne pouvez pas modifier le nom ou la description ; cependant, vous pouvez ajouter ou supprimer des valeurs si l'annotation est un type de liste.
+
++
+[NOTE]
+====
+Si une annotation personnalisée est publiée dans l'entrepôt de données et que vous la renommez, vous perdrez les données historiques.
+
+====
+.. Pour ajouter une autre valeur à une annotation de type liste, cliquez sur image:../media/add-annotation-icon.gif[""].
+.. Pour supprimer une valeur d'une annotation de type liste, cliquez sur image:../media/trash-can-query.gif[""].
++
+Vous ne pouvez pas supprimer une valeur d'annotation si cette valeur est associée à une annotation contenue dans une règle d'annotation, une requête ou une règle de performance.
+
+
+
+. Cliquez sur *Enregistrer* lorsque vous avez terminé.
+
+
+
+
+== Une fois que vous avez terminé
+
+Si vous allez utiliser des annotations dans l'entrepôt de données, vous devez forcer une mise à jour des annotations dans l'entrepôt de données. Reportez-vous au _Guide d'administration de l'entrepôt de données OnCommand Insight_.

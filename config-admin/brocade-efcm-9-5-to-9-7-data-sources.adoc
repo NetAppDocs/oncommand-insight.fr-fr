@@ -1,0 +1,140 @@
+---
+permalink: config-admin/brocade-efcm-9-5-to-9-7-data-sources.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight utilise la source de données Brocade Enterprise Fabric Connectivity Manager \(EFCM\) pour découvrir l"inventaire des commutateurs Brocade EFCM. Insight prend en charge les versions EFCM 9.5, 9.6 et 9.7.' 
+---
+= Source de données Brocade Enterprise Fabric Connectivity Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight utilise la source de données Brocade Enterprise Fabric Connectivity Manager (EFCM) pour détecter l'inventaire des commutateurs Brocade EFCM. Insight prend en charge les versions EFCM 9.5, 9.6 et 9.7.
+
+
+
+== De formation
+
+[NOTE]
+====
+Ce collecteur de données n'est pas disponible à partir de OnCommand Insight 7.3.11.
+
+====
+* Adresse réseau ou nom de domaine complet pour le serveur EFCM
+* La version EFCM doit être 9.5, 9.6 ou 9.7
+* Adresse IP du serveur EFCM
+* Nom d'utilisateur et mot de passe en lecture seule pour le serveur EFCM
+* Accès validé au commutateur Connectrix par Telnet à partir du serveur Insight, en utilisant le nom d'utilisateur et le mot de passe en lecture seule sur le port 51512
+
+
+
+
+== Configuration
+
+|===
+
+
+| *Champ* | *Description* 
+
+
+ a| 
+Serveur EFC
+ a| 
+Adresse IP ou nom de domaine complet du serveur EFC
+
+
+
+ a| 
+Nom d'utilisateur
+ a| 
+Nom d'utilisateur du commutateur
+
+
+
+ a| 
+Mot de passe
+ a| 
+Mot de passe utilisé pour le commutateur
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| *Champ* | *Description* 
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+Intervalle entre les sondages d'inventaire (15 minutes par défaut)
+
+
+
+ a| 
+Nom de la structure
+ a| 
+Nom de la structure à signaler par la source de données EFCM. Laissez vide pour signaler le nom de la structure comme WWN.
+
+
+
+ a| 
+Port de communication
+ a| 
+Port utilisé pour la communication avec le commutateur
+
+
+
+ a| 
+Activer le recouvrement
+ a| 
+Sélectionnez cette option pour activer l'acquisition lors de la réception d'une interruption SNMP à partir du périphérique. Si vous sélectionnez Activer le recouvrement, vous devez également activer SNMP.
+
+
+
+ a| 
+Temps minimum entre les recouvrements (s)
+ a| 
+Temps minimum entre les tentatives d'acquisition déclenchées par des interruptions (par défaut 15 secondes)
+
+
+
+ a| 
+Zonesets inactifs
+ a| 
+Liste séparée par des virgules des zonesets inactifs sur lesquels effectuer l'acquisition, en plus d'effectuer l'acquisition sur les ensembles de zones actives
+
+
+
+ a| 
+NIC à utiliser
+ a| 
+Spécifiez quelle interface réseau doit être utilisée sur le RAU lors de la génération de rapports sur les périphériques SAN
+
+
+
+ a| 
+Exclure les périphériques
+ a| 
+Liste de noms d'unités séparés par des virgules à inclure ou exclure de l'interrogation
+
+
+
+ a| 
+Utilisez le surnom du commutateur EFCM comme nom du commutateur Insight
+ a| 
+Sélectionnez cette option pour utiliser le surnom du commutateur EFCM comme nom du commutateur Insight
+
+
+
+ a| 
+Intervalle d'interrogation des performances (s)
+ a| 
+Intervalle entre les sondages de performances (300 secondes par défaut)
+
+|===

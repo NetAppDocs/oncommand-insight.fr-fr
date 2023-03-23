@@ -1,0 +1,72 @@
+---
+permalink: config-admin/creating-performance-policies.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous créez des stratégies de performances pour définir des seuils qui déclenchent des alertes pour vous informer des problèmes liés aux ressources de votre réseau. Par exemple, vous pouvez créer une règle de performance qui vous alerte lorsque l"utilisation totale des pools de stockage est supérieure à 60 %.' 
+---
+= Création de règles de performance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous créez des stratégies de performances pour définir des seuils qui déclenchent des alertes pour vous informer des problèmes liés aux ressources de votre réseau. Par exemple, vous pouvez créer une règle de performance qui vous alerte lorsque l'utilisation totale des pools de stockage est supérieure à 60 %.
+
+
+
+== Étapes
+
+. Ouvrez OnCommand Insight dans votre navigateur.
+. Sélectionnez *gérer* > *politiques de performances*.
++
+La page règles de performance s'affiche.image:../media/performance-policies-page.gif[""]
+
++
+Les règles sont organisées par objet et sont évaluées dans l'ordre dans lequel elles apparaissent dans la liste pour cet objet.
+
+. Cliquez sur *Ajouter une nouvelle stratégie*.
++
+La boîte de dialogue Ajouter une stratégie s'affiche.
+
+. Dans le champ *Policy name*, entrez un nom pour la stratégie.
++
+Vous devez utiliser un nom différent de tous les autres noms de stratégie pour l'objet. Par exemple, vous ne pouvez pas avoir deux politiques nommées « latence » pour un volume interne. Vous pouvez toutefois avoir une règle de « latence » pour un volume interne et une autre règle de « latence » pour un volume différent. La meilleure pratique consiste à toujours utiliser un nom unique pour n'importe quelle règle, quel que soit le type d'objet.
+
+. Dans la liste *appliquer aux objets de type*, sélectionnez le type d'objet auquel la stratégie s'applique.
+. Dans la liste *avec annotation*, sélectionnez un type d'annotation, le cas échéant, et entrez une valeur pour l'annotation dans la zone *valeur* pour appliquer la règle uniquement aux objets qui ont cet ensemble d'annotations particulier.
+. Si vous avez sélectionné *Port* comme type d'objet, dans la liste *connecté à*, sélectionnez le port auquel il est connecté.
+. Dans la liste *appliquer après une fenêtre de*, sélectionnez lorsqu'une alerte est émise pour indiquer une violation de seuil.
++
+L'option première occurrence déclenche une alerte lorsqu'un seuil est dépassé sur le premier échantillon de données. Toutes les autres options déclenchent une alerte lorsque le seuil est franchi une fois et est traversé en continu pendant au moins la durée spécifiée.
+
+. Dans la liste *avec gravité*, sélectionnez la gravité de la violation.
+. Par défaut, des alertes par e-mail sur les violations de stratégie sont envoyées aux destinataires de la liste de messagerie globale. Vous pouvez remplacer ces paramètres afin que les alertes d'une stratégie donnée soient envoyées à des destinataires spécifiques.
++
+** Cliquez sur le lien pour ouvrir la liste des destinataires, puis cliquez sur le bouton *+* pour ajouter des destinataires. Les alertes de violation pour cette stratégie seront envoyées à tous les destinataires de la liste.
+
+
+. Cliquez sur le lien *any* dans la section *Create ALERT si l'une des situations suivantes est vraie* pour contrôler le déclenchement des alertes :
++
+** *tous*
++
+Il s'agit du paramètre par défaut qui crée des alertes lorsque l'un des seuils associés à une règle est dépassé.
+
+** *tous*
++
+Ce paramètre crée une alerte lorsque tous les seuils d'une règle sont dépassés. Lorsque vous sélectionnez *All*, le premier seuil que vous créez pour une stratégie de performances est appelé règle primaire. Vous devez vous assurer que le seuil de la règle principale est la violation dont vous êtes le plus préoccupé par la stratégie de performances.
+
+
+
+. Dans la section *Créer une alerte IF*, sélectionnez un compteur de performances et un opérateur, puis entrez une valeur pour créer un seuil.
+. Cliquez sur *Ajouter un seuil* pour ajouter d'autres seuils.
+. Pour supprimer un seuil, cliquez sur l'icône de la corbeille.
+. Cochez la case *Arrêter le traitement d'autres stratégies si une alerte est générée* si vous souhaitez que la stratégie arrête le traitement lorsqu'une alerte se produit.
++
+Par exemple, si vous avez quatre règles pour les datastores et que la deuxième règle est configurée pour arrêter le traitement lorsqu'une alerte se produit, les troisième et quatrième règles ne sont pas traitées tant qu'une violation de la deuxième règle est active.
+
+. Cliquez sur *Enregistrer*.
++
+La page règles de performance s'affiche, et la règle de performance s'affiche dans la liste des règles pour le type d'objet.
+
+

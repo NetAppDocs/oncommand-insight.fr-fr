@@ -1,0 +1,159 @@
+---
+permalink: config-admin/ibm-ds-cli-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La source de données IBM DS \(CLI\) ne prend en charge que les périphériques DS6xxx et DS8xxx. Les périphériques DS3xxx, DS4xxx et DS5xxx sont pris en charge par la source de données NetApp E-Series. Consultez le tableau de prise en charge des sources de données Insight pour connaître les modèles et les versions de micrologiciel pris en charge.' 
+---
+= Source de données IBM DS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La source de données IBM DS (CLI) prend uniquement en charge les périphériques DS6xxx et DS8xxx. Les périphériques DS3xxx, DS4xxx et DS5xxx sont pris en charge par la source de données NetApp E-Series. Consultez le tableau de prise en charge des sources de données Insight pour connaître les modèles et les versions de micrologiciel pris en charge.
+
+
+
+== Terminologie
+
+OnCommand Insight acquiert les informations d'inventaire suivantes à partir de la source de données IBM DS. Pour chaque type de ressource acquis par Insight, la terminologie la plus courante utilisée pour cette ressource est indiquée. Lors de l'affichage ou du dépannage de cette source de données, gardez à l'esprit la terminologie suivante :
+
+|===
+
+
+| Terme du fournisseur/modèle | Terme Insight 
+
+
+ a| 
+Module de lecteur de disque
+ a| 
+Disque
+
+
+
+ a| 
+Image stockage
+ a| 
+Stockage
+
+
+
+ a| 
+Pool d'extension
+ a| 
+Pool de stockage
+
+
+
+ a| 
+Volume du bloc fixe
+ a| 
+Volumétrie
+
+|===
+[NOTE]
+====
+Il s'agit uniquement de mappages terminologiques courants et peuvent ne pas représenter tous les cas pour cette source de données.
+
+====
+
+
+== De formation
+
+* Adresse IP de chaque matrice DS
+* Le nom d'affichage du stockage est facultatif et cosmétique uniquement
+* Nom d'utilisateur et mot de passe en lecture seule sur chaque baie DS
+* Logiciel tiers installé sur le serveur Insight : IBM dscli
+* Validation de l'accès : exécution `dscli` commandes utilisant le nom d'utilisateur et le mot de passe
+* Configuration minimale requise pour les ports : 80, 443 et 1750
+
+
+
+
+== Configuration
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Stockage DS
+ a| 
+Adresse IP ou nom de domaine complet de l'hôte de stockage DS
+
+
+
+ a| 
+Nom d'utilisateur
+ a| 
+Nom utilisé pour l'interface de ligne de commande DS
+
+
+
+ a| 
+Mot de passe
+ a| 
+Mot de passe utilisé pour l'interface de ligne de commande DS
+
+
+
+ a| 
+Chemin d'accès de l'exécutable dscli.exe
+ a| 
+Chemin complet vers le ``dscli.exe``informatique.
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+Intervalle entre les sondages d'inventaire (40 minutes par défaut)
+
+
+
+ a| 
+Nom d'affichage du stockage
+ a| 
+Nom de la baie de stockage IBM DS
+
+
+
+ a| 
+Périphériques d'exclusion d'inventaire
+ a| 
+Liste des numéros de série des périphériques séparés par des virgules à exclure de la collecte des stocks
+
+
+
+ a| 
+Intervalle d'interrogation des performances (s)
+ a| 
+Intervalle entre les sondages de performances (300 secondes par défaut)
+
+
+
+ a| 
+Type de filtre de performances
+ a| 
+Inclure : données collectées uniquement à partir des périphériques de la liste. Exclure : aucune donnée de ces périphériques n'est collectée
+
+
+
+ a| 
+Liste des périphériques de filtre de performances
+ a| 
+Liste séparée par des virgules d'ID de périphérique à inclure ou exclure de la collecte de performances
+
+|===

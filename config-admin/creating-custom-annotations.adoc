@@ -1,0 +1,105 @@
+---
+permalink: config-admin/creating-custom-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Ces annotations vous permettent d"ajouter des données personnalisées spécifiques à l"entreprise qui correspondent aux ressources de votre entreprise. Même si OnCommand Insight propose un ensemble d"annotations par défaut, vous pouvez voir les données de différentes manières. Les données contenues dans des annotations personnalisées complètent les données déjà recueillies sur les périphériques, telles que le fabricant du commutateur, le nombre de ports et les statistiques de performance. Les données que vous ajoutez à l"aide d"annotations ne sont pas découvertes par Insight.' 
+---
+= Création d'annotations personnalisées
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ces annotations vous permettent d'ajouter des données personnalisées spécifiques à l'entreprise qui correspondent aux ressources de votre entreprise. Même si OnCommand Insight propose un ensemble d'annotations par défaut, vous pouvez voir les données de différentes manières. Les données contenues dans des annotations personnalisées complètent les données déjà recueillies sur les périphériques, telles que le fabricant du commutateur, le nombre de ports et les statistiques de performance. Les données que vous ajoutez à l'aide d'annotations ne sont pas découvertes par Insight.
+
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur Web Insight.
+. Cliquez sur *gérer* et sélectionnez *Annotations*.
++
+La page Annotations affiche la liste des annotations.
+
+. Cliquez sur image:../media/add-annotation-icon.gif[""].
++
+La boîte de dialogue *Ajouter une annotation* s'affiche.
+
+. Entrez un nom et une description dans les champs *Nom* et *Description*.
++
+Ces champs peuvent comporter jusqu'à 255 caractères.
+
++
+[NOTE]
+====
+Noms d'annotation commençant ou se terminant par un point « ». ne sont pas pris en charge.
+
+====
+. Cliquez sur *Type*, puis sélectionnez l'une des options suivantes qui représente le type de données autorisé dans cette annotation :
++
+** Booléen
++
+Cela crée une liste déroulante avec les choix de oui et non Par exemple, l'annotation "`Direct attached`" est booléenne.
+
+** Date
++
+Ceci crée un champ contenant une date. Par exemple, si l'annotation est une date, sélectionnez cette option.
+
+** Liste
++
+Ceci peut créer l'une des situations suivantes :
+
++
+*** Liste déroulante fixe
++
+Lorsque d'autres personnes sont affectées à ce type d'annotation sur un périphérique, elles ne peuvent pas ajouter de valeurs supplémentaires à la liste.
+
+*** Liste déroulante flexible
++
+Si vous sélectionnez l'option *Ajouter de nouvelles valeurs à la volée* lorsque vous créez cette liste, lorsque d'autres personnes attribuent ce type d'annotation à un périphérique, elles peuvent ajouter d'autres valeurs à la liste.
+
+
+
+** Nombre
++
+Cela crée un champ dans lequel l'utilisateur qui affecte l'annotation peut entrer un nombre. Par exemple, si le type d'annotation est ""Floor""", l'utilisateur peut sélectionner la valeur Type de ""number"" et entrer le numéro d'étage.
+
+** Texte
++
+Cela crée un champ qui permet le texte libre. Par exemple, vous pouvez entrer « langue » comme type d'annotation, sélectionner « texte » comme type de valeur et entrer une langue comme valeur.
+
+
+
++
+[NOTE]
+====
+Après avoir défini le type et enregistré vos modifications, vous ne pouvez pas modifier le type de l'annotation. Si vous devez modifier le type, vous devez supprimer l'annotation et en créer une nouvelle.
+
+====
+. Si vous sélectionnez **List**comme type d'annotation, procédez comme suit :
++
+.. Sélectionnez *Ajouter de nouvelles valeurs à la volée* si vous souhaitez pouvoir ajouter des valeurs supplémentaires à l'annotation sur une page de ressources, ce qui crée une liste flexible.
++
+Par exemple, supposons que vous vous trouvez sur une page d'actifs et que l'actif comporte l'annotation City avec les valeurs Detroit, Tampa et Boston. Si vous avez sélectionné l'option *Ajouter de nouvelles valeurs à la volée*, vous pouvez ajouter des valeurs supplémentaires à la ville comme San Francisco et Chicago directement sur la page de la ressource au lieu de devoir aller à la page Annotations pour les ajouter. Si vous ne choisissez pas cette option, vous ne pouvez pas ajouter de nouvelles valeurs d'annotation lors de l'application de l'annotation. Cela crée une liste fixe.
+
+.. Entrez une valeur et un nom dans les champs *valeur* et *Description*.
+.. Cliquez surimage:../media/edit-annotation-dialog-box-add-icon.gif[""] pour ajouter des valeurs supplémentaires.
+.. Cliquez sur image:../media/trash-can-query.gif[""] pour supprimer une valeur.
+
+
+. Cliquez sur *Enregistrer*.
++
+Vos annotations apparaissent dans la liste de la page Annotations.
+
+
+
+
+
+== Une fois que vous avez terminé
+
+Dans l'interface utilisateur Web, l'annotation est immédiatement disponible. Pour utiliser l'annotation dans le client Java, vous devez redémarrer tout client Java en cours d'exécution avant de pouvoir appliquer l'annotation. Si vous ajoutez ou modifiez des valeurs d'annotation, ou si vous supprimez un type d'annotation, vous n'avez pas besoin de redémarrer le client Java.
+
+*Informations connexes*
+
+link:importing-and-exporting-user-data.md#["Importation et exportation des données utilisateur"]

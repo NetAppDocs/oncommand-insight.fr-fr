@@ -1,0 +1,14 @@
+---
+permalink: config-admin/using-queries.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les requêtes vous permettent de surveiller et de dépanner votre réseau en recherchant les ressources de votre environnement à un niveau granulaire en fonction des critères sélectionnés par l"utilisateur \(annotations et mesures de performances\). En outre, les règles d"annotation, qui attribuent automatiquement des annotations aux ressources, nécessitent une requête.' 
+---
+= Interrogation des ressources
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les requêtes vous permettent de surveiller et de dépanner votre réseau en recherchant les ressources de votre environnement à un niveau granulaire, en fonction de critères sélectionnés par l'utilisateur (annotations et mesures de performances). En outre, les règles d'annotation, qui attribuent automatiquement des annotations aux ressources, nécessitent une requête.

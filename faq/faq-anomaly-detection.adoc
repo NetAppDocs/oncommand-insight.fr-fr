@@ -1,0 +1,142 @@
+---
+permalink: faq/faq-anomaly-detection.html 
+sidebar: sidebar 
+keywords:  
+summary: Cette FAQ répond aux questions les plus courantes sur la détection des anomalies dans OnCommand Insight. 
+---
+= Détection des anomalies
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cette FAQ répond aux questions les plus courantes sur la détection des anomalies dans OnCommand Insight.
+
+
+
+== Qu'est-ce qu'une anomalie?
+
+Les anomalies concernent les événements de changement des performances en termes d'IOPS, de latence, d'utilisation, de crédits tampon à tampon et de CPU qui ne sont pas conformes aux modèles observés précédemment et aux modèles attendus. La détection d'anomalies d'OCI cible une infrastructure applicative qui assure le service de l'application, en recherchant des modifications dans les modèles et comportements de traitement. Ces modèles de traitement cycliques incluent l'historique des « flux et transactions » en termes de performance des charges de travail pendant les heures d'activité et les week-ends. Le moteur de détection des anomalies d'OCI utilise l'intelligence du machine learning pour établir un modèle de base « normal » et détecte quand une application définie s'écarte du comportement attendu.
+
+
+
+== Comment fonctionne la détection des anomalies dans OCI ?
+
+La détection d'anomalies du logiciel OCI est une approche de surveillance proactive qui exploite l'intelligence du machine learning sur la base d'informations historiques. Sa capacité à détecter les anomalies de performance émergentes bien plus tôt que les seuils classiques offre davantage de temps aux administrateurs pour discuter, planifier et résoudre les problèmes avant qu'ils n'affectent les SLO d'application ou les services de data Center.
+
+Insight détecte et mappe automatiquement l'ensemble de la pile d'infrastructure sur laquelle l'application est prise en charge, depuis les ressources de calcul jusqu'à la structure de commutation et aux ressources de stockage. OCI collecte les principaux compteurs de performances, y compris les IOPS, la latence, les informations sur les nœuds, l'utilisation des pools de stockage, le processeur de l'hyperviseur, Et BB Credit Zero pour chaque ressource, puis transmet ces données au moteur de détection des anomalies pour les utiliser dans l'analyse des anomalies applicatives. Les résultats des anomalies sont mis à jour deux fois par heure et sont disponibles sur le tableau de bord des applications, les pages d'accueil des applications et à l'aide du widget de table de requêtes. Le score d'anomalie s'effectue ressource par ressource, compteur par compteur et un score d'importance global est attribué à l'ensemble de l'infrastructure applicative.
+
+
+
+== Quelles versions d'OCI prennent en charge la détection d'anomalies ?
+
+La détection des anomalies est prise en charge pour OCI 7.2 et versions ultérieures.
+
+
+
+== À combien d'applications OCI peut-il permettre la détection des anomalies ?
+
+OCI prend en charge la surveillance de 48 applications stratégiques.
+
+
+
+== Combien de moteurs de détection d'anomalies (ADE) peuvent être déployés ?
+
+Un moteur de détection des anomalies par serveur opérationnel OCI.
+
+
+
+== Puis-je déployer des moteurs de détection d'anomalies supplémentaires si j'ai plus de 48 applications ?
+
+Oui, OCI prend actuellement en charge le couplage d'un moteur de détection d'anomalies par serveur OCI. Dans des environnements de serveurs OCI multiples, des moteurs de détection des anomalies et des serveurs opérationnels OCI peuvent être déployés de manière « appariée ». Chaque serveur n'aurait une visibilité que sur ses applications avec des fonctionnalités de détection des anomalies activées.
+
+
+
+== Existe-t-il des limites d'évolutivité pour la taille d'un cluster/groupe d'applications ?
+
+Voici les recommandations générales de l'ingénierie OCI pour un fonctionnement et une évolutivité optimaux grâce aux fonctionnalités de détection des anomalies d'Insight : un moteur de détection des anomalies est pris en charge par serveur Insight. Jusqu'à 48 applications peuvent être surveillées dans OCI. Les infrastructures applicatives peuvent comprendre jusqu'à 4000 objets. Un manque de ressources réduit l'échelle globale.
+
+
+
+== Quelles sont les licences OCI requises pour la détection des anomalies ?
+
+L'analyse de détection des anomalies nécessite à la fois des licences Discover et Perform.
+
+
+
+== Combien de temps faut-il pour commencer à détecter les anomalies et voir les résultats ?
+
+Les résultats du score d'anomalie apparaîtront dans les 2-3 heures qui suivent l'activation de la surveillance de l'application.
+
+
+
+== Combien de temps dois-je attendre avant d'utiliser les résultats de manière opérationnelle ?
+
+La qualité et la précision des résultats du moteur de détection d'anomalies s'améliorent au fil du temps (semaines, mois, trimestre, etc.). L'évaluation cyclique (périodicité) commence généralement vers la troisième semaine. Pour les modèles qui durent plus longtemps (par ex. tous les mois), le moteur doit observer les événements répétés avant de régler les scores d'anomalie.
+
+
+
+== Combien de temps le moteur de détection d'anomalies conserve-t-il son apprentissage ?
+
+Le moteur de détection des anomalies est très efficace dans la façon dont il stocke les informations d'apprentissage. L'apprentissage statistique peut être mesuré en mois pour les comportements anormaux des objets. Il n'y a pas de « restention » comme on le pense habituellement avec les jeux de données typiques d'Insight. Le moteur de détection des anomalies apprend et stocke les données qui sont déterminées « d'une manière « négligeable » dans le temps et vieillit les données insignifiantes lorsque cela est nécessaire. Ce mécanisme augmente considérablement sa durée d'apprentissage et réduit à la fois les ressources nécessaires au stockage des données et le temps nécessaire à l'exécution des analyses
+
+
+
+== Si je active la détection des anomalies aujourd'hui, est-il possible de me dire quelles anomalies se sont produites la semaine dernière ?
+
+Non. Lors de l'initialisation de la détection des anomalies, le serveur Insight charge les données de performances existantes depuis le serveur Insight afin d'améliorer la compréhension des applications surveillées et de leur infrastructure par les moteurs de détection des anomalies. Des anomalies ne seront pas fournies sur les données de performances « préexistantes » ingérées. Les anomalies ne seront signalées que sur les nouvelles données entrantes, puisqu'elles seront analysées par rapport aux données préexistantes. Les anomalies nouvellement détectées commencent à s'afficher en quelques heures seulement.
+
+
+
+== Comment les scores d'anomalies sont-ils calculés ?
+
+Chaque score d'anomalie des applications est calculé à partir d'une synthèse des divers scores des ressources individuelles. Le moteur de détection des anomalies s'appuie sur plus de 30 algorithmes et formules complexes pour la détermination des anomalies et les scores fournis. Les utilisateurs pourraient comparer ce type de technique de notation d'analyse à des scores médicaux similaires tels que l'indice de masse corporelle (IMC) composé de nombreuses variables et mesures (poids, âge, taille, densité, etc.).
+
+
+
+== Que représentent chacune des barres bleues ?
+
+Chaque bloc de 3 barres représente une ressource et sa plage de signification des anomalies. Plus les barres sont bleues, plus le changement de comportement observé est important. Un clic sur les blocs révèle la signification (de l'anomalie), la ressource individuelle et les compteurs.
+
+
+
+== Pourquoi les scores des ressources individuelles ne sont-ils pas à la hauteur du score total de l'application ?
+
+Chaque ressource est évaluée individuellement en fonction de son écart dans le comportement observé. L'importance de la notation des ressources individuelles joue un rôle dans la notation totale de l'application, mais elle peut également inclure d'autres facteurs analytiques et mathématiques.
+
+
+
+== Puis-je configurer la détection des anomalies pour surveiller des entités commerciales ou des objets avec des annotations attribuées ?
+
+Aujourd'hui, la détection des anomalies ne peut être activée que sur des applications définies. Tous les objets pouvant être affectés à une application (machines virtuelles, hyperviseurs, serveurs, volumes et volumes internes) peuvent être regroupés et surveillés.
+
+
+
+== OCI peut-il fournir une notification pour les scores d'anomalies élevés ?
+
+Oui, vous pouvez créer des règles de performance des applications basées sur le score d'anomalie de l'application. Le dépassement des seuils définis dans la règle déclenche des alertes qui vous informent des problèmes liés aux ressources de votre application.
+
+
+
+== Que se passe-t-il lorsque je désactive la détection des anomalies sur mon application ?
+
+Toutes les informations apprises (anomalie historique) pour l'infrastructure applicative sont effacées du moteur de détection des anomalies. Tous les résultats de la détection des anomalies sont effacés de la base de données opérationnelle Insight.
+
+
+
+== Quand dois-je utiliser des seuils statiques ?
+
+Les seuils statiques sont parfaitement adaptés aux alertes basées sur les meilleures pratiques relatives aux limites de ressources d'infrastructure ainsi qu'à l'identification de la durée de l'événement. Ils facilitent également la gestion des niveaux de service et alertent les différentes mesures de compteur d'erreurs telles que les réinitialisations de lien, les rejets de classe 3 et la perte de synchronisation.
+
+
+
+== Quels sont les plans visant à inclure d'autres indicateurs dans la détection des anomalies ?
+
+Le modèle et les algorithmes d'apprentissage machine d'Anomaly continueront d'être améliorés ou ajustés à mesure que de nouvelles données statistiques, les commentaires des utilisateurs et l'amélioration des produits seront disponibles.
+
+
+
+== Les résultats d'anomalie sont-ils disponibles dans l'entrepôt de données (DWH) ?
+
+Les résultats d'anomalie d'aujourd'hui ne sont pas envoyés (ETL-ed) à l'entrepôt de données OCI. Les utilisateurs peuvent localiser les résultats sur la page d'accueil de l'application OCI ou dans les widgets de table de requête définis par l'utilisateur.

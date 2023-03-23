@@ -1,0 +1,56 @@
+---
+permalink: config-admin/exporting-fc-identification-to-a-csv-file.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez exporter les identifications de périphériques Fibre Channel existantes vers un fichier CSV à partir de la fonction de résolution de périphérique OnCommand Insight. Vous pouvez exporter une identification de périphérique afin de la modifier, puis l"importer à nouveau dans Insight, où elle est ensuite utilisée pour identifier les périphériques similaires à ceux qui correspondent à l"origine à l"identification exportée.' 
+---
+= Exportation des identifications de périphériques Fibre Channel vers un fichier CSV
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez exporter les identifications de périphériques Fibre Channel existantes vers un fichier CSV à partir de la fonction de résolution de périphérique OnCommand Insight. Vous pouvez exporter une identification de périphérique afin de la modifier, puis l'importer à nouveau dans Insight, où elle est ensuite utilisée pour identifier les périphériques similaires à ceux qui correspondent à l'origine à l'identification exportée.
+
+
+
+== Description de la tâche
+
+Ce scénario peut être utilisé lorsque les périphériques ont des attributs similaires qui peuvent être facilement édités dans le fichier CSV, puis réimportés dans le système.
+
+Lorsque vous exportez une identification de périphérique Fibre Channel vers un fichier CSV, le fichier contient les informations suivantes dans l'ordre indiqué :
+
+|===
+
+
+ a| 
+WWN
+
+
+
+ a| 
+IP
+
+
+
+ a| 
+Nom
+
+
+
+ a| 
+Type
+
+|===
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur Web Insight.
+. Cliquez sur *gérer* > *résolution du périphérique*
+. Sélectionnez l'onglet *FC Identify*.
+. Sélectionnez le ou les périphériques Fibre Channel dont vous souhaitez exporter l'identification.
+. Cliquez sur l'exportation image:../media/export-to-csv.gif[""] icône.
+. Choisissez si vous souhaitez ouvrir le fichier CSV ou enregistrer le fichier.
+

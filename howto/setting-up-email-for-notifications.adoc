@@ -1,0 +1,42 @@
+---
+permalink: howto/setting-up-email-for-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: Insight peut envoyer des notifications par e-mail sur les événements déclencheurs, tels que les violations des règles de performances. 
+---
+= Configuration des e-mails pour les notifications
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insight peut envoyer des notifications par e-mail sur les événements déclencheurs, tels que les violations des règles de performances.
+
+
+
+== Description de la tâche
+
+Pour configurer les notifications par e-mail, procédez comme suit :
+
+
+
+== Étapes
+
+. Cliquez sur *Admin* > *Notifications* et allez à la section *E-mail*.
+. Dans la zone *Server*, entrez le nom de votre serveur SMTP. Vous pouvez entrer un nom de domaine complet ou une adresse IP.
+. Entrez votre nom d'utilisateur SMTP et votre mot de passe (si requis par votre serveur SMTP).
+. Dans la zone *adresse e-mail de l'expéditeur*, entrez le compte de messagerie de l'expéditeur qui sera identifié comme expéditeur dans les notifications.
++
+Ce compte doit être un compte de messagerie valide au sein de votre organisation.
+
+. Dans la zone *Signature de l'e-mail*, saisissez le texte que vous souhaitez insérer dans chaque e-mail envoyé.
+. Dans la zone *destinataires*, cliquez sur image:../media/add-email-recipient-icon.gif[""]Pour saisir une adresse e-mail, puis cliquez sur *OK*.
+. Cliquez sur *Enregistrer*.
++
+Pour modifier ou supprimer une adresse e-mail, ou pour envoyer un e-mail test, sélectionnez l'adresse et cliquez sur le bouton approprié qui s'affiche.
+
++
+Notez que vous pouvez configurer Insight pour envoyer des notifications par e-mail en cas de violation de règle de performances spécifique à des individus ou des groupes spécifiques. Par exemple, vous pouvez envoyer des violations de ressources cloud à un groupe et des événements d'hôte physique à un autre. Accédez à *Manage* > *Performance policies* pour configurer des notifications de stratégie individuelles.
+
+

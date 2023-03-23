@@ -1,0 +1,45 @@
+---
+permalink: config-admin/analyzing-slow-pc-performance.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Si vous recevez des appels d"utilisateurs du réseau qui se plaignent que leurs ordinateurs fonctionnent lentement, vous devez analyser les performances de l"hôte et identifier les ressources affectées.' 
+---
+= Analyse des performances PC lentes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous recevez des appels d'utilisateurs du réseau qui se plaignent que leurs ordinateurs fonctionnent lentement, vous devez analyser les performances de l'hôte et identifier les ressources affectées.
+
+
+
+== Avant de commencer
+
+Dans cet exemple, l'appelant a donné le nom d'hôte.
+
+
+
+== Étapes
+
+. Ouvrez Insight dans votre navigateur.
+. Entrez le nom d'hôte dans la zone *Rechercher les actifs* et cliquez sur le nom d'hôte dans les résultats de la recherche.
++
+La _page_ressource_ de la ressource s'ouvre.
+
+. Sur la page d'inventaire de l'hôte, examinez les graphiques de performances au centre de la page. Vous pouvez afficher différents types de données en plus des options latence et Op E/S par sec généralement présélectionnées. Cochez les cases correspondant aux autres types de données, tels que débit, mémoire, processeur ou débit IP, selon le type de périphérique.
+. Pour afficher une description d'un point sur un graphique, placez le pointeur de la souris sur le point.
+. Vous pouvez également modifier la plage horaire avec la sélection en haut de la page pour qu'elle soit de 3 heures à 7 jours ou toutes les données disponibles.
+. Examinez la liste des *principales ressources corrélées* pour voir s'il existe d'autres ressources avec le même modèle d'activité que la ressource de base.
++
+La première ressource de la liste est toujours la ressource de base.
+
++
+.. Cliquez sur un pourcentage lié en regard d'une ressource corrélée pour voir si le modèle d'activité corrélée concerne les IOPS ou le CPU pour la ressource de base et une autre ressource.
+.. Cochez la case d'une ressource corrélée pour ajouter ses données aux graphiques de performances.
+.. Cliquez sur le nom lié de la ressource corrélée pour afficher sa page d'inventaire.
+
+
+. Pour une machine virtuelle, comme dans cet exemple, recherchez le pool de stockage dans les *meilleures ressources corrélées* et cliquez sur le nom du pool de stockage.
+

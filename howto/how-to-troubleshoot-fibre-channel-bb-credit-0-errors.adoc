@@ -1,0 +1,68 @@
+---
+permalink: howto/how-to-troubleshoot-fibre-channel-bb-credit-0-errors.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Fibre Channel utilise des crédits tampon à tampon \(BB credits\) pour contrôler le flux de transmission. La valeur de crédit est décrémentée lorsqu"une trame est envoyée depuis un port et que la valeur de crédit est réapprovisionnée lorsque le port reçoit une réponse. Si les crédits BB dans le port ne sont pas réapprovisionnés, le débit de transmission peut être affecté. Les ports ont besoin de mémoire, ou tampons, pour stocker temporairement les trames jusqu"à ce qu"elles soient assemblées dans l"ordre et livrées. Le nombre de tampons est le nombre de trames qu"un port peut stocker et est appelé crédit tampon.' 
+---
+= Dépannage des erreurs de crédit BB Fibre Channel 0
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Fibre Channel utilise des crédits tampon à tampon (crédits BB) pour contrôler le flux de transmission. La valeur de crédit est décrémentée lorsqu'une trame est envoyée depuis un port et que la valeur de crédit est réapprovisionnée lorsque le port reçoit une réponse. Si les crédits BB dans le port ne sont pas réapprovisionnés, le débit de transmission peut être affecté. Les ports ont besoin de mémoire, ou tampons, pour stocker temporairement les trames jusqu'à ce qu'elles soient assemblées dans l'ordre et livrées. Le nombre de tampons est le nombre de trames qu'un port peut stocker et est appelé crédit tampon.
+
+Comme les crédits disponibles pour un port donné approchent du zéro, une erreur avertit que le port cessera de recevoir les transmissions lorsque le zéro est atteint et ne reprendra pas tant que les crédits BB ne seront pas réapprovisionnés.
+
+Les règles de performances Insight vous permettent de définir des seuils pour les metrics de port suivants.
+
+|===
+
+
+ a| 
+BB crédit zéro - Rx
+
+
+
+ a| 
+Nombre de fois que le nombre de crédits tampon-tampon reçus est passé à zéro au cours de la période d'échantillonnage
+
+
+
+ a| 
+BB crédit zéro - Tx
+
+
+
+ a| 
+Nombre de fois que le nombre de crédits tampon-tampon de transmission est passé à zéro au cours de la période d'échantillonnage
+
+
+
+ a| 
+Crédit BB zéro - Total
+
+
+
+ a| 
+Nombre de fois que ce port a dû arrêter la transmission parce que le port connecté était à court de crédits à fournir
+
+
+
+ a| 
+Durée zéro crédit BB - Tx
+
+
+
+ a| 
+Temps en millisecondes pendant lequel le crédit Tx BB était égal à zéro pendant l'intervalle d'échantillonnage
+
+|===
+Les erreurs de crédit BB peuvent être causées par certains des scénarios suivants :
+
+* Si une implémentation donnée a un pourcentage élevé de trames FC de tailles nettement inférieures à la taille maximale, alors plus de BB_Credits peuvent être nécessaires.
+* Modifications de la charge de travail de votre environnement susceptibles d'affecter les ports ou les périphériques qui y sont connectés, tels que les nœuds de stockage.
+
+
+Vous pouvez utiliser les pages de ressources de la structure, du commutateur et du port pour surveiller votre environnement Fibre Channel. Les pages d'actifs de port présentent des informations récapitulatives sur la ressource, sa topologie (le périphérique et ses connexions), les graphiques de performances et les tableaux des ressources associées. Lors du dépannage des problèmes de Fibre Channel, le tableau des performances de chaque ressource de port est utile car il indique le trafic pour le port contributeur supérieur sélectionné. Les pages d'actifs de port affichent également des mesures de crédit tampon à tampon et des erreurs de port dans ce graphique. Insight affiche un graphique de performances distinct pour chaque mesure.

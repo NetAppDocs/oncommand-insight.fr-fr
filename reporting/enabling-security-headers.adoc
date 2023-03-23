@@ -1,0 +1,26 @@
+---
+permalink: reporting/enabling-security-headers.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les en-têtes HTTP peuvent être configurés pour améliorer la sécurité globale de l"application Web Cognos Analytics.' 
+---
+= Activation des en-têtes de sécurité
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les en-têtes HTTP peuvent être configurés pour améliorer la sécurité globale de l'application Web Cognos Analytics.
+
+Pour ajouter les en-têtes de réponse :
+
+* Connectez-vous à l'interface utilisateur Cognos Analytics et accédez à *gérer \-> Configuration \-> système \-> Paramètres avancés*
+* Ajoutez la clé/valeur suivante et appliquez :
++
+** Clé : `BIHeaderFilter.responseHeaders`
+** Valeur : `[{"name":"X-FRAME-OPTIONS","value":"SAMEORIGIN"},{"name":"X-XSS-Protection","value":"1"},{"name":"X-Content-Type-Options","value":"nosniff"}]`
+
+
+* Actualisez votre navigateur pour activer les en-têtes.
+

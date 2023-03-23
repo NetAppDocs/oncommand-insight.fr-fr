@@ -1,0 +1,39 @@
+---
+permalink: config-admin/what-the-violations-section-enables-you-to-do.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La section violations vous permet d"afficher et de gérer les violations qui se produisent sur votre réseau à la suite d"une stratégie de performances attribuée à un actif.' 
+---
+= Utilisation de la section violations
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La section violations vous permet d'afficher et de gérer les violations qui se produisent sur votre réseau à la suite d'une stratégie de performances attribuée à un actif.
+
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur Web de OnCommand Insight.
+. Recherchez une page de ressources en procédant de l'une des façons suivantes :
++
+** Dans la barre d'outils Insight, cliquez sur image:../media/icon-sanscreen-magnifying-glass-gif.gif[""], saisissez le nom de la ressource, puis sélectionnez la ressource dans la liste.
+** Cliquez sur *tableaux de bord*, sélectionnez *tableau de bord*, localisez un nom de ressource, puis cliquez dessus. La page ASSET s'affiche. La section violations affiche l'heure à laquelle la violation s'est produite et une description du seuil qui a été franchi, ainsi qu'un lien hypertexte vers l'actif sur lequel la violation s'est produite (par exemple « 2 violations fir ds-30 avec latence - Total > 50 »).
+
+
+. Vous pouvez effectuer l'une des tâches facultatives suivantes :
++
+** Utilisez la zone *filter* pour afficher uniquement les violations spécifiques.
+** Cliquez sur un numéro de page pour parcourir les violations par page s'il y a plus de cinq violations dans le tableau.
+** Modifiez l'ordre de tri des colonnes d'un tableau en les classant par ordre croissant (flèche vers le haut) ou décroissant (flèche vers le bas) en cliquant sur la flèche dans l'en-tête de colonne.
+** Cliquez sur le nom de la ressource dans une description pour afficher sa page de ressource ; un cercle rouge indique les problèmes nécessitant une investigation plus approfondie.
++
+Vous pouvez cliquer sur la stratégie de performances, qui affiche la boîte de dialogue Modifier la stratégie, pour examiner la stratégie de performances et apporter des modifications à la stratégie si nécessaire.
+
+** Cliquez sur image:../media/delete-icon.gif[""] supprimer une violation de la liste si vous déterminez que le problème n'est plus une cause de préoccupation.
+
+
+

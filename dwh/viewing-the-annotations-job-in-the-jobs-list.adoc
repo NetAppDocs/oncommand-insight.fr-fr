@@ -1,0 +1,22 @@
+---
+permalink: dwh/viewing-the-annotations-job-in-the-jobs-list.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez afficher le travail Annotations dans la liste travaux et appliquer les modifications d"annotation aux magasins de données Data Warehouse.' 
+---
+= Affichage du travail Annotations dans la liste travaux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez afficher le travail Annotations dans la liste travaux et appliquer les modifications d'annotation aux magasins de données Data Warehouse.
+
+
+
+== Étapes
+
+. Connectez-vous en tant qu'administrateur à Data Warehouse Portal à l'adresse `+https://hostname/dwh+`, où `hostname` Est le nom du système sur lequel l'entrepôt de données OnCommand Insight est installé.
+. Dans le volet de navigation de gauche, cliquez sur *travaux*.
+

@@ -1,0 +1,30 @@
+---
+permalink: config-admin/using-annotations-to-monitor-your-environment.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Lorsque vous personnalisez OnCommand Insight pour suivre les données en fonction des besoins de votre entreprise, vous pouvez définir des notes spécialisées, appelées annotations, et les affecter à vos ressources. Par exemple, vous pouvez annoter les ressources avec des informations telles que la fin de vie des ressources, le data Center, l"emplacement du bâtiment, le niveau de stockage ou le niveau de service volume.' 
+---
+= Utilisation des annotations pour surveiller votre environnement
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsque vous personnalisez OnCommand Insight pour suivre les données en fonction des besoins de votre entreprise, vous pouvez définir des notes spécialisées, appelées _annotations_, et les affecter à vos ressources. Par exemple, vous pouvez annoter les ressources avec des informations telles que la fin de vie des ressources, le data Center, l'emplacement du bâtiment, le niveau de stockage ou le niveau de service volume.
+
+L'utilisation d'annotations pour vous aider à contrôler votre environnement comprend les tâches de haut niveau suivantes :
+
+* Création ou modification de définitions pour tous les types d'annotation.
+* Affichage des pages ASSET et association de chaque ressource à une ou plusieurs annotations.
++
+Par exemple, si un bien est loué et que le bail expire dans un délai de deux mois, vous pouvez appliquer une annotation de fin de vie à l'actif. Cela permet d'éviter que d'autres personnes n'utilisent cette ressource pendant une période prolongée.
+
+* Création de règles pour appliquer automatiquement des annotations à plusieurs ressources du même type.
+* Utilisation de l'utilitaire d'importation d'annotations pour importer des annotations.
+* Filtrer les ressources par leurs annotations.
+* Regroupement des données dans des rapports en fonction des annotations et génération de ces rapports.
++
+Pour plus d'informations sur les rapports, reportez-vous au _Guide de création de rapports OnCommand Insight_.
+
+

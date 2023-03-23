@@ -1,0 +1,84 @@
+---
+permalink: config-admin/red-hat-rhev-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La source de données Red Hat Enterprise Virtualization \(REST\) collecte des informations sur les instances RHEV via HTTPS.' 
+---
+= Source de données Red Hat (RHEV)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La source DE données RED Hat Enterprise Virtualization (REST) collecte des informations sur les instances RHEV via HTTPS.
+
+
+
+== De formation
+
+* Adresse IP du serveur RHEV sur le port 443 via l'API REST
+* Nom d'utilisateur et mot de passe en lecture seule
+* RHEV version 3.0+
+
+
+
+
+== Configuration
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Adresse IP du serveur RHEV
+ a| 
+Adresse IP ou nom de domaine complet du serveur RHEV
+
+
+
+ a| 
+Nom d'utilisateur
+ a| 
+Nom d'utilisateur du serveur RHEV
+
+
+
+ a| 
+Mot de passe
+ a| 
+Mot de passe utilisé pour le serveur RHEV
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Port de communication HTTPS
+ a| 
+Port utilisé pour la communication HTTPS vers RHEV
+
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+Intervalle entre les sondages d'inventaire (20 minutes par défaut)
+
+
+
+ a| 
+Délai de connexion (s)
+ a| 
+Délai d'expiration de la connexion (par défaut : 60 secondes)
+
+|===

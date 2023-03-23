@@ -1,0 +1,35 @@
+---
+permalink: howto/examining-the-greedy-resource.html 
+sidebar: sidebar 
+keywords: greedy,degraded 
+summary: 'Cliquez sur le volume interne identifié comme ressource gourmande pour ouvrir la page d"accueil du volume cdot_Boston:SP1:vol_01.' 
+---
+= Examiner la ressource cupide
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cliquez sur le volume interne identifié comme ressource gourmande pour ouvrir la page d'accueil du volume cdot_Boston:SP1:vol_01.
+
+Remarque dans le résumé détaillé, ce volume interne est une ressource pour une autre application (Travel Booking) et bien que contenue dans un pool de stockage différent se trouve sur le même nœud que le volume interne pour Exchange 2016 (cdot_Boston_N1)
+
+image::../media/cdot-boston-sp1-part1.gif[cdot boston sp1 partie 1]
+
+image::../media/cdot-boston-sp1-part2.gif[cdot boston sp1 partie 2]
+
+La page d'accueil affiche :
+
+* Volume interne associé à une application réservation de voyage.
+* Un nouveau pool de stockage est identifié dans les ressources corrélées.
+* Le volume interne d'origine que vous avez examiné (cdot_Boston:SP2:vol_01) est identifié comme étant « dégradé ».
+* Dans le graphique de performance, l'application présente un profil de latence stable et connaît un pic d'IOPS environ au même moment que nous constatons un pic de latence sur l'application Exchange.
++
+Ce qui peut indiquer que le pic de latence sur l'application Exchange est probablement dû au pic d'IOPS sur ce volume.
+
+
+
+À droite des graphiques de la section ressource, notez la ressource dégradée corrélée qui est le volume interne Exchange 2016 (cdot_Boston:SP2:vol_01). Cliquez sur la case à cocher pour inclure le volume interne dégradé dans les graphiques de performances. L'alignement des deux graphiques de performances montre que les pics de latence et d'IOPS se produisent quasiment à la fois. Cela nous indique que nous voulons mieux comprendre l'application réservation de voyage. Nous devons comprendre pourquoi l'application connaît un pic d'IOPS aussi long.
+
+L'examen du pool de stockage associé à l'application Travel Booking peut identifier les raisons pour lesquelles l'application connaît un pic d'IOPS. Cliquez sur cdot_Boston:SP1 pour afficher la page d'accueil du pool de stockage.

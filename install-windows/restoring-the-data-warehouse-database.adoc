@@ -1,0 +1,55 @@
+---
+permalink: install-windows/restoring-the-data-warehouse-database.html 
+sidebar: sidebar 
+keywords:  
+summary: Lorsque vous sauvegardez la base de données Data Warehouse, Data Warehouse crée un fichier .zip que vous pouvez utiliser ultérieurement pour restaurer cette même base de données. 
+---
+= Restauration de la base de données Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsque vous sauvegardez la base de données Data Warehouse, Data Warehouse crée un `.zip` fichier que vous pouvez utiliser ultérieurement pour restaurer cette même base de données.
+
+
+
+== Description de la tâche
+
+Lorsque vous restaurez la base de données Data Warehouse, vous pouvez également restaurer les informations de compte utilisateur à partir de la sauvegarde. Les tables de gestion des utilisateurs sont utilisées par le moteur de rapport Data Warehouse dans une installation Data Warehouse uniquement.
+
+
+
+== Étapes
+
+. Connectez-vous au portail Data Warehouse à l'adresse `+https://fqdn/dwh+`.
+. Dans le volet de navigation de gauche, cliquez sur *Sauvegarder/Restaurer*.
+. Dans la section *Restaurer la base de données et les rapports*, cliquez sur *Parcourir* et localisez le `.zip` Fichier contenant la sauvegarde de l'entrepôt de données.
+. Il est recommandé de laisser les deux options suivantes sélectionnées :
++
+** *Restaurer la base de données*
++
+Inclut les paramètres Data Warehouse, les magasins de données, les connexions et les informations de compte utilisateur.
+
+** *Restaurer les rapports*
++
+Inclut les rapports personnalisés, les rapports prédéfinis, les modifications apportées aux rapports prédéfinis que vous avez effectués et les paramètres de rapport que vous avez définis dans Reporting Connection.
+
+
+
+. Cliquez sur *Restaurer*.
++
+Ne quittez pas l'état de restauration. Si vous le faites, l'état de la restauration ne s'affiche plus et vous ne recevez aucune indication lorsque l'opération de restauration est terminée.
+
+. Pour vérifier le processus de mise à niveau, consultez le `dwh_upgrade.log` fichier, qui se trouve à l'emplacement suivant : `<install directory>\SANscreen\wildfly\standalone\log`.
++
+Une fois le processus de restauration terminé, un message apparaît juste en dessous du bouton *Restaurer*. Si le processus de restauration a réussi, le message indique que le processus a réussi. Si le processus de restauration échoue, le message indique l'exception spécifique qui s'est produite à l'origine de l'échec. Dans ce cas, contactez le support technique et fournissez-lui `dwh_upgrade.log` fichier. Si une exception se produit et que l'opération de restauration échoue, la base de données d'origine est automatiquement réinitialisée.
+
++
+[NOTE]
+====
+Si l'opération de restauration échoue avec le message ""échec de la mise à niveau du magasin de contenu cognos"", restaurez la base de données Data Warehouse sans ses rapports (base de données uniquement) et utilisez vos sauvegardes de rapport XML pour importer vos rapports.
+
+====
+

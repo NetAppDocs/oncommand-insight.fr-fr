@@ -1,0 +1,167 @@
+---
+permalink: config-admin/huawei-oceanstor-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight utilise la source de données Huawei OceanStor \(REST/HTTPS\) pour détecter l"inventaire du stockage Huawei OceanStor.' 
+---
+= Source de données Huawei OceanStor
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight utilise la source de données Huawei OceanStor (REST/HTTPS) pour détecter l'inventaire du stockage Huawei OceanStor.
+
+
+
+== Terminologie
+
+OnCommand Insight obtient les informations suivantes sur l'inventaire et les performances du système Huawei OceanStor. Pour chaque type d'actif acquis par OnCommand Insight, la terminologie la plus courante utilisée pour cette ressource est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :
+
+|===
+
+
+| Terme du fournisseur/modèle | Terme OnCommand Insight 
+
+
+ a| 
+Pool de stockage
+ a| 
+Pool de stockage
+
+
+
+ a| 
+Système de fichiers
+ a| 
+Volume interne
+
+
+
+ a| 
+Contrôleur
+ a| 
+Nœud de stockage
+
+
+
+ a| 
+Port FC (mappé)
+ a| 
+Carte de volume
+
+
+
+ a| 
+Initiateur FC hôte (mappé)
+ a| 
+Masque de volume
+
+
+
+ a| 
+Partage NFS/CIFS
+ a| 
+Partagez
+
+
+
+ a| 
+Partagez
+ a| 
+Nœud cible iSCSI
+
+
+
+ a| 
+Initiateur de liaison iSCSI
+ a| 
+Nœud initiateur iSCSI
+
+
+
+ a| 
+Disque
+ a| 
+Disque
+
+
+
+ a| 
+LUN
+ a| 
+Volumétrie
+
+|===
+
+
+== De formation
+
+Les conditions suivantes sont requises pour configurer et utiliser ce collecteur de données :
+
+* Adresse IP du périphérique
+* Informations d'identification permettant d'accéder au gestionnaire de périphériques OceanStor
+* Le port 8088 doit être disponible
+
+
+
+
+== Configuration
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Adresse IP de l'hôte OceanStor
+ a| 
+Adresse IP ou nom de domaine complet du OceanStor Device Manager
+
+
+
+ a| 
+Nom d'utilisateur
+ a| 
+Nom utilisé pour se connecter à OceanStor Device Manager
+
+
+
+ a| 
+Mot de passe
+ a| 
+Mot de passe utilisé pour se connecter à OceanStor Device Manager
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| Champ | Description 
+
+
+ a| 
+Port TCP
+ a| 
+Port TCP utilisé pour se connecter à OceanStor Device Manager (par défaut 8088 )
+
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+Intervalle entre les sondages d'inventaire (60 minutes par défaut)
+
+
+
+ a| 
+Délai de connexion (s)
+ a| 
+Délai d'expiration de la connexion (par défaut : 60 secondes)
+
+|===

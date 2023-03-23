@@ -1,0 +1,41 @@
+---
+permalink: install-windows/increasing-cognos-memory.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Avant de restaurer la base de données Data Warehouse, vous devez augmenter l"allocation Java pour Cognos de 768 Mo à 2048 Mo pour réduire le temps de génération des rapports.' 
+---
+= Augmentation de la mémoire Cognos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de restaurer la base de données Data Warehouse, vous devez augmenter l'allocation Java pour Cognos de 768 Mo à 2048 Mo pour réduire le temps de génération des rapports.
+
+
+
+== Étapes
+
+. Ouvrez une fenêtre d'invite de commande en tant qu'administrateur sur le serveur Data Warehouse.
+. Accédez au `disk drive:\install directory\SANscreen\cognos\c10_64\bin64` répertoire.
+. Tapez la commande suivante : `cogconfigw`
++
+La fenêtre Configuration IBM Cognos s'affiche.
+
++
+[NOTE]
+====
+L'application de raccourci IBM Cognos Configuration pointe vers `disk drive:\Program Files\SANscreen\cognos\c10_64\bin64\cognosconfigw.bat`. Si Insight est installé dans le répertoire Program Files (espace entre), qui est le répertoire par défaut, au lieu de ProgramFiles (pas d'espace), le `.bat` le fichier ne fonctionnera pas. Si cela se produit, cliquez avec le bouton droit de la souris sur le raccourci de l'application et modifiez-le `cognosconfigw.bat` à `cognosconfig.exe` pour corriger le raccourci.
+
+====
+. Dans le volet de navigation de gauche, développez *Environnement*, développez *IBM Cognos services*, puis cliquez sur *IBM Cognos*.
+. Sélectionnez *mémoire maximale pour Tomcat en Mo* et remplacez 768 Mo par 2048 Mo.
+. Dans la barre d'outils Configuration IBM Cognos, cliquez sur image:../media/cognos-save-icon.gif[""](Enregistrer).
++
+Un message d'information s'affiche pour vous informer des tâches que Cognos effectue.
+
+. Cliquez sur *Fermer*.
+. Dans la barre d'outils Configuration IBM Cognos, cliquez sur image:../media/cognos-stop-icon.gif[""](Arrêt).
+. Dans la barre d'outils Configuration IBM Cognos, cliquez sur image:../media/cognos-start-icon.gif[""](Démarrage).
+

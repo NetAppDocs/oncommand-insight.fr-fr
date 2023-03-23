@@ -1,0 +1,14 @@
+---
+permalink: config-admin/monitoring-your-environment.html 
+sidebar: sidebar 
+keywords:  
+summary: Insight vous aide à anticiper les problèmes dans votre environnement et à les résoudre rapidement. 
+---
+= Contrôle de votre environnement
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insight vous aide à anticiper les problèmes dans votre environnement et à les résoudre rapidement.

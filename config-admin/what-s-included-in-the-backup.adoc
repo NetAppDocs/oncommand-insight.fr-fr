@@ -1,0 +1,52 @@
+---
+permalink: config-admin/what-s-included-in-the-backup.html 
+sidebar: sidebar 
+keywords:  
+summary: Des sauvegardes hebdomadaires et à la demande peuvent être utilisées pour résoudre les problèmes ou migrer. 
+---
+= Éléments inclus dans la sauvegarde
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Des sauvegardes hebdomadaires et à la demande peuvent être utilisées pour résoudre les problèmes ou migrer.
+
+La sauvegarde hebdomadaire ou à la demande comprend les éléments suivants :
+
+* Données d'inventaire
+* Données de performances (si elles sont sélectionnées pour être incluses dans la sauvegarde)
+* Sources de données et paramètres de source de données
+* Packs d'intégration
+* Unités d'acquisition à distance
+* Unités de surveillance Ethernet
+* Paramètres ASUP/proxy
+* Paramètres d'emplacement de sauvegarde
+* Paramètres d'emplacement d'archivage
+* Paramètres de notification
+* Scores et dispositifs de détection des anomalies
+* Paramètres de l'application de détection des anomalies
+* Utilisateurs
+* Règles de performance
+* Entités commerciales et applications
+* Règles et paramètres de résolution du périphérique
+* Tableaux de bord et widgets
+* Tableaux de bord et widgets personnalisés de la page des ressources
+* Requêtes
+* Annotations et règles d'annotation
+
+
+La sauvegarde hebdomadaire ne comprend pas :
+
+* Paramètres de l'outil de sécurité/informations du coffre-fort (sauvegardés via un processus CLI distinct)
+* Journaux (peuvent être enregistrés dans un fichier .zip à la demande)
+* Données de performances (si cette option n'est pas sélectionnée pour être incluse dans la sauvegarde)
+* Licences
+
+
+[NOTE]
+====
+Si vous choisissez d'inclure les données de performances à la sauvegarde, les données des sept derniers jours sont sauvegardées. Les données restantes seront dans l'archive si cette fonction est activée.
+
+====

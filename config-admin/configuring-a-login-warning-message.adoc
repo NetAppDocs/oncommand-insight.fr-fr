@@ -1,0 +1,42 @@
+---
+permalink: config-admin/configuring-a-login-warning-message.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight permet aux administrateurs de définir un message texte personnalisé qui s"affiche lorsque les utilisateurs se connectent.' 
+---
+= Définition d'un message d'avertissement de connexion
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight permet aux administrateurs de définir un message texte personnalisé qui s'affiche lorsque les utilisateurs se connectent.
+
+
+
+== Étapes
+
+. Pour définir le message dans le serveur OnCommand Insight :
++
+.. Accédez au menu:Admin[Dépannage > Dépannage avancé > Paramètres avancés].
+.. Saisissez votre message de connexion dans la zone de texte.
+.. Cochez la case *le client affiche le message d'avertissement de connexion*.
+.. Cliquez sur *Enregistrer*.
++
+Le message s'affiche lors de la connexion pour tous les utilisateurs.
+
+
+
+. Pour définir le message dans l'entrepôt de données (DWH) et le reporting (Cognos) :
++
+.. Accédez à *informations système* et cliquez sur l'onglet *Avertissement de connexion*.
+.. Saisissez votre message de connexion dans la zone de texte.
+.. Cliquez sur *Enregistrer*.
++
+Le message s'affiche lors de la connexion à DWH et Cognos Reporting pour tous les utilisateurs.
+
+
+
+

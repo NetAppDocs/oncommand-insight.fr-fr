@@ -1,0 +1,55 @@
+---
+permalink: howto/custom-dashboards.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight 7.3 inclut des fonctionnalités améliorées de tableau de bord personnalisé qui offrent aux utilisateurs une vue opérationnelle des données importantes pour eux et fournissent une vue centralisée de ces données. 
+---
+= Création de tableaux de bord personnalisés
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 7.3 inclut des fonctionnalités améliorées de tableau de bord personnalisé qui offrent aux utilisateurs une vue opérationnelle des données importantes pour eux et fournissent une vue centralisée de ces données.
+
+OnCommand Insight offre aux utilisateurs la flexibilité de créer des vues opérationnelles sur les données d'infrastructure des plateformes INFORMATIQUES, en vous permettant de créer des tableaux de bord personnalisés avec un grand nombre de widgets, chacun offrant une grande flexibilité d'affichage et de transcription de vos données. Dans ce guide, nous allons créer un exemple de tableau de bord pour mettre en évidence les performances des machines virtuelles.
+
+Ce mode d'emploi ne doit servir qu'à titre d'exemple et ne couvre pas tous les scénarios possibles. Les concepts et les étapes qu'il contient peuvent être utilisés pour créer vos propres tableaux de bord personnalisés afin de mettre en évidence les données spécifiques à vos besoins spécifiques.
+
+*Aperçu*
+
+Pour créer un tableau de bord personnalisé, vous avez l'une des méthodes suivantes :
+
+* *Tableaux de bord* > *+Nouveau tableau de bord*
+* *Tableaux de bord* > *Afficher tous les tableaux de bord* et cliquer sur *+Ajouter*
+
+
+L'écran Nouveau tableau de bord comporte plusieurs commandes :
+
+* *Sélecteur d'heure* : permet d'afficher les données du tableau de bord pour une période comprise entre 3 heures et 90 jours à l'aide du sélecteur de plage de dates personnalisé. Vous pouvez choisir de remplacer cette plage de temps globale dans des widgets individuels.
+* *Bouton Edit* : la sélection de "`on`" active le mode Edit, qui vous permet d'apporter des modifications au tableau de bord. Les nouveaux tableaux de bord s'ouvrent par défaut en mode d'édition.
+* *Bouton Save* : permet d'enregistrer, de renommer ou de supprimer le tableau de bord.
+* *Variable* bouton : des variables peuvent être ajoutées aux tableaux de bord. La modification de la variable met à jour tous vos widgets à la fois. Pour plus d'informations sur les variables, voir link:custom-dashboard-concepts.md#["Concepts de tableau de bord personnalisé"]
+* *Widget*, qui vous permet d'ajouter un nombre quelconque de tableaux, de graphiques ou d'autres widgets au tableau de bord.
+
+
+Les widgets peuvent être redimensionnés et déplacés vers différentes positions dans le tableau de bord pour vous fournir une vue optimale de vos données selon vos besoins actuels.
+
+*Types de widget*
+
+Vous pouvez choisir parmi les types de widget suivants :
+
+*Widget Table* : tableau affichant les données en fonction des filtres et des colonnes que vous choisissez. Les données de table peuvent être combinées dans des groupes qui peuvent être réduits et développés.
+
+*Diagrammes de ligne, de spline, de surface, de surface empilée* : il s'agit de widgets de graphique de séries chronologiques sur lesquels vous pouvez afficher les performances et d'autres données au fil du temps.
+
+*Widget valeur unique* : widget permettant d'afficher une valeur unique qui peut être dérivée directement d'un compteur ou calculée à l'aide d'une requête ou d'une expression. Par exemple, vous pouvez afficher la somme des IOPS totales de tous les systèmes de stockage de votre environnement sous la forme d'une seule valeur en haut de votre tableau de bord.
+
+*Graphique à barres* : graphique permettant d'afficher les valeurs 5, 10, 20 ou 50 supérieures ou inférieures.
+
+*Graphique de boîte* : tracé des valeurs min, max, médiane et de la plage entre le quartile inférieur et le quartile supérieur des données dans un seul graphique.
+
+*Graphique Scatter* : trace les données associées en points, par exemple, les IOPS et la latence. Dans cet exemple, vous constaterez rapidement les ressources présentant une latence élevée et un faible nombre d'IOPS.
+
+De plus, vous pouvez choisir un certain nombre de widgets hérités. Dans la liste déroulante *Widgets*, sélectionnez **Afficher plus...**pour voir ces widgets.

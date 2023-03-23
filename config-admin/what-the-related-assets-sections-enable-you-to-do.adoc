@@ -1,0 +1,56 @@
+---
+permalink: config-admin/what-the-related-assets-sections-enable-you-to-do.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La section Ressources associées vous permet d"afficher les ressources associées à l"actif de base. Chaque actif associé est affiché dans un tableau avec les statistiques pertinentes pour l"actif. Vous pouvez exporter les informations sur les actifs, afficher les statistiques sur les actifs dans les graphiques de performances de la vue experte ou afficher un graphique qui affiche uniquement les statistiques des ressources associées.' 
+---
+= À l'aide de la section Ressources associées
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La section Ressources associées vous permet d'afficher les ressources associées à l'actif de base. Chaque actif associé est affiché dans un tableau avec les statistiques pertinentes pour l'actif. Vous pouvez exporter les informations sur les actifs, afficher les statistiques sur les actifs dans les graphiques de performances de la vue experte ou afficher un graphique qui affiche uniquement les statistiques des ressources associées.
+
+
+
+== Étapes
+
+. Connectez-vous à l'interface utilisateur Web de OnCommand Insight.
+. Recherchez une page de ressources en procédant de l'une des façons suivantes :
++
+** Dans la barre d'outils Insight, cliquez sur image:../media/icon-sanscreen-magnifying-glass-gif.gif[""], saisissez le nom de la ressource, puis sélectionnez la ressource dans la liste.
+** Cliquez sur *tableaux de bord*, sélectionnez *tableau de bord*, localisez un nom de ressource, puis cliquez dessus. La page ASSET s'affiche.
+
+
+. Pour contrôler l'affichage des actifs dans le tableau :
++
+** Cliquez sur le nom d'une ressource pour afficher sa page de ressource.
+** Utilisez la case *filter* pour afficher uniquement des actifs spécifiques.
+** Cliquez sur un numéro de page pour parcourir les ressources par page s'il y a plus de cinq ressources dans le tableau.
+** Modifiez l'ordre de tri des colonnes d'un tableau en les classant par ordre croissant (flèche vers le haut) ou décroissant (flèche vers le bas) en cliquant sur la flèche dans l'en-tête de colonne.
+** Ajoutez une ressource associée à un graphique de performances dans la section vue Expert en plaçant votre curseur sur la ressource associée et en cliquant sur image:../media/add-to-expert-view-graph.gif[""].
+
+
+. Pour exporter les informations affichées dans le tableau vers un `.CSV` fichier :
++
+.. Cliquez sur image:../media/export-to-csv.gif[""].
+.. Cliquez sur *Ouvrir avec*, puis sur *OK* pour ouvrir le fichier avec Microsoft Excel et l'enregistrer à un emplacement spécifique, ou cliquez sur *Enregistrer le fichier* puis sur *OK* pour enregistrer le fichier dans votre dossier Téléchargements.
++
+Tous les attributs d'objet pour les colonnes actuellement sélectionnées pour l'affichage sont exportés dans le fichier. Seuls les attributs des colonnes affichées seront exportés. Notez que seules les 10,000 premières lignes de la table sont exportées.
+
+
+
+. Pour afficher les informations sur les ressources associées dans un graphique sous le tableau, cliquez sur image:../media/show-as-chart.gif[""] et effectuez l'une des opérations suivantes :
++
+** Cliquez sur *Read*,*Write* ou *Total* pour modifier les données de mesure affichées. *Total* est la valeur par défaut.
+** Cliquez sur image:../media/pencil-icon-landing-page-be.gif[""] pour sélectionner une autre mesure.
+** Cliquez sur image:../media/change-chart-type-icon.gif[""] pour modifier le type de graphique. *Graphique linéaire* est la valeur par défaut.
+** Déplacez votre curseur sur les points de données du graphique pour voir comment la valeur de la mesure change sur la période sélectionnée pour chaque actif associé.
+** Cliquez sur une ressource associée dans la légende du graphique pour l'ajouter ou la supprimer du graphique.
+** Cliquez sur un numéro de page dans le tableau des ressources associées pour afficher les autres ressources connexes dans le graphique.
+** Cliquez sur image:../media/close-chart-icon.gif[""] pour fermer la carte.
+
+
+

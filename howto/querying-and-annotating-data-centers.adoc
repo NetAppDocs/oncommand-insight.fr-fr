@@ -1,0 +1,39 @@
+---
+permalink: howto/querying-and-annotating-data-centers.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous utilisez des requêtes pour associer vos annotations aux ressources appropriées de votre environnement. Dans cet exemple, nous allons associer les annotations Data Center aux ressources sélectionnées. 
+---
+= Interrogation et annotation des centres de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous utilisez des requêtes pour associer vos annotations aux ressources appropriées de votre environnement. Dans cet exemple, nous allons associer les annotations Data Center aux ressources sélectionnées.
+
+Lors de l'acquisition d'une source de données, Insight rassemble (entre autres informations) les noms de chaque ressource qu'il découvre. Dans cet exemple, nous supposons que toutes vos baies de stockage aient été nommées en fonction du data Center dans lequel elles résident, par exemple « `SLV_NN_<label>' » pour les baies résidant à Sunnyvale. Les requêtes Insight simplifient l'annotation de ces ressources.
+
+* Connectez-vous à Insight en tant qu'utilisateur avec des autorisations d'administration
+* Sélectionnez *requêtes* > *+Nouvelle requête*
+* Faites défiler le champ *Rechercher...* et sélectionnez *stockage*. Une liste de toutes vos matrices de stockage s'affiche.
+* Dans le champ de filtre *Name*, tapez "`SLV`" et cliquez sur le image:../media/check-box-ok.gif[""] (Ou appuyez sur entrée). La liste des résultats de la requête est maintenant mise à jour pour afficher uniquement les tableaux qui contiennent la chaîne "`VL`".
+* Lors du filtrage, vous pouvez utiliser l'un des caractères suivants, seuls ou combinés, pour affiner votre recherche dans n'importe quelle zone de texte de la page requête :
++
+** Un astérisque vous permet de rechercher tout. Par exemple, « vol*rhel » affiche les actifs commençant par « vol » et se terminant par « rhel ».
+** Le point d'interrogation permet de rechercher un nombre spécifique de caractères. Par exemple, le filtrage de "SLV-PRD??-S12" affiche SVL-PRD12-S12, SVL-PRD13-S12, etc.
+** L'opérateur OU vous permet de spécifier plusieurs entités. Par exemple, « FAS2240 OU CX600 OU FAS3270 » recherche plusieurs modèles de stockage.
+
+
+* Sélectionnez les baies de stockage que vous souhaitez associer à ce data Center. Lorsque tous les tableaux souhaités sont sélectionnés, cliquez sur le bouton *actions* et sélectionnez *Modifier l'annotation*.
+* Dans la boîte de dialogue *Ajouter une annotation*, sélectionnez l'annotation *Data Center*.
+* Choisissez la *valeur* souhaitée, par exemple, "`DC1_SVL`".
+* Cliquez sur *Enregistrer*.
+* Si la colonne Centre de données n'est pas visible sur la page des résultats de la requête, sélectionnez-la en cliquant sur le bouton *Columns* et en sélectionnant *Data Center*.
+* Si vous le souhaitez, vous pouvez enregistrer la requête pour une utilisation ultérieure en cliquant sur le bouton *Enregistrer* dans le coin supérieur droit de la page requête et en lui donnant un nom unique et explicite. Par exemple, « `matrices de stockage - data Center SVL' ».
+
+
+Si vous souhaitez associer l'annotation "`VL`" à d'autres actifs, créez une nouvelle requête et suivez ces étapes pour chaque type de ressource que vous désirez.
+
+Répétez ces étapes pour les ressources de chacun de vos data centers.

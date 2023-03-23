@@ -1,0 +1,57 @@
+---
+permalink: howto/custom-dashboard-queries-and-filters.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La requête dans un widget de tableau de bord est un outil puissant de gestion de l"affichage de vos données. Voici quelques points à noter sur les requêtes de widget.' 
+---
+= Requêtes et filtres du widget du tableau de bord
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La requête dans un widget de tableau de bord est un outil puissant de gestion de l'affichage de vos données. Voici quelques points à noter sur les requêtes de widget.
+
+Certains widgets peuvent avoir jusqu'à cinq requêtes. Chaque requête trace son propre ensemble de lignes ou de graphiques dans le widget. La configuration de l'agrégation, du regroupement, des résultats supérieurs/inférieurs, etc. Sur une requête n'affecte pas les autres requêtes du widget.
+
+Vous pouvez cliquer sur l'icône œil pour masquer temporairement une requête. L'affichage du widget est automatiquement mis à jour lorsque vous masquez ou affichez une requête. Cela vous permet de vérifier les données affichées pour les requêtes individuelles au fur et à mesure de la création de votre widget.
+
+Les types de widget suivants peuvent avoir plusieurs requêtes :
+
+* Graphique de zone
+* Graphique de zone empilée
+* Graphique en courbes
+* Graphique de spline
+* Widget à valeur unique
+
+
+Les types de widget restants ne peuvent avoir qu'une seule requête :
+
+* Tableau
+* Graphique à barres
+* Tracé de zone
+* Tracé de dispersion
+
+
+
+
+== Filtrage dans les requêtes de tableau de bord
+
+Vous pouvez filtrer à l'aide de l'une des options suivantes pour affiner votre recherche dans n'importe quel *champ de texte* de la requête :
+
+* Un astérisque vous permet de rechercher tout. Par exemple : `vol*rhel` affiche toutes les ressources commençant par « vol » et se terminant par « rhel ».
+* Le point d'interrogation permet de rechercher un nombre spécifique de caractères. Par exemple : `BOS-PRD??-S12` Affiche BOS-PRD12-S12, BOS-PRD13-S12, etc.
+* L'opérateur OU vous permet de spécifier plusieurs entités. Par exemple : `FAS2240 OR CX600 OR FAS3270` identification des nombreux modèles de stockage
+* L'opérateur NOT permet d'exclure du texte des résultats de la recherche. Par exemple : `NOT EMC*` Trouve tout ce qui ne commence pas par « EMC ». Vous pouvez utiliser `NOT *` pour afficher les champs contenant des valeurs nulles.
+
+
+Si vous placez une chaîne de filtre entre deux guillemets, Insight traite tout entre le premier et le dernier devis comme une correspondance exacte. Tous les caractères spéciaux ou opérateurs situés dans les guillemets seront traités comme des littéraux. Par exemple, le filtrage de "`*`" renvoie des résultats qui sont un astérisque littéral ; l'astérisque ne sera pas traité comme un caractère générique dans ce cas. Les opérateurs ET, OU, et NON SERONT également traités comme des chaînes littérales lorsqu'ils sont entourés de guillemets doubles.
+
+
+
+== Identification des objets renvoyés par des requêtes et des filtres
+
+Les objets renvoyés par des requêtes et des filtres ressemblent à ceux affichés dans l'illustration suivante. Les objets avec des « balises » qui leur sont attribués sont des annotations, tandis que les objets sans balises sont des compteurs de performance ou des attributs d'objet.
+
+image::../media/query-filter-objects.gif[interroger les objets de filtre]

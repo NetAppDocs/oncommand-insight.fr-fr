@@ -1,0 +1,40 @@
+---
+permalink: config-admin/managing-patches.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez vérifier l"état actuel de tous les correctifs de source de données appliqués à votre réseau. Si vous souhaitez effectuer une action sur un correctif, vous pouvez cliquer sur le nom lié dans les correctifs actuellement sous la table de révision.' 
+---
+= Gestion des correctifs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez vérifier l'état actuel de tous les correctifs de source de données appliqués à votre réseau. Si vous souhaitez effectuer une action sur un correctif, vous pouvez cliquer sur le nom lié dans les correctifs actuellement sous la table de révision.
+
+
+
+== Avant de commencer
+
+Vous devez avoir déjà téléchargé et installer au moins un correctif.
+
+
+
+== Étapes
+
+. Dans la barre d'outils Insight, cliquez sur *Admin*.
+. Cliquez sur *Patches*.
++
+Si aucun correctif n'est installé, le tableau des correctifs actuellement en cours de révision est vide.
+
+. Dans *patches actuellement en cours de révision*, vérifiez l'état des patches de source de données actuellement appliqués.
+. Pour examiner les détails associés à un patch spécifique, cliquez sur le nom lié du patch.
+. Pour le correctif sélectionné, vous pouvez cliquer sur l'une des options suivantes pour exécuter l'action suivante sur le correctif :
++
+** *Approve patch* valide le correctif aux sources de données.
+** *Rollback* supprime le patch.
+** *Remplacer patch* vous permet de sélectionner un patch différent pour ces sources de données.
+
+
+

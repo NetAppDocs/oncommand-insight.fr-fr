@@ -1,0 +1,33 @@
+---
+permalink: config-admin/additional-data.html 
+sidebar: sidebar 
+keywords: landing 
+summary: 'Des données supplémentaires peuvent être affichées dans des widgets personnalisables sur chaque page de ressource. La personnalisation de la page d"une ressource applique la personnalisation aux pages pour tous les actifs de ce type.' 
+---
+= Page de ressources personnalisable
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Des données supplémentaires peuvent être affichées dans des widgets personnalisables sur chaque page de ressource. La personnalisation de la page d'une ressource applique la personnalisation aux pages pour tous les actifs de ce type.
+
+Vous pouvez personnaliser les widgets de page de ressources en effectuant les actions suivantes :
+
+. Ajoutez un widget à la page
+. Créez une requête ou une expression pour le widget afin de présenter les données souhaitées
+. Choisissez un filtre si vous le souhaitez
+. Choisissez une méthode de cumul ou de regroupement
+. Enregistrez le widget
+. Répétez l'opération pour tous les widgets souhaités
+. Enregistrez la page de la ressource
+
+
+Vous pouvez également ajouter des variables à la page de ressources personnalisées qui peuvent être utilisées pour affiner davantage vos données présentées dans des widgets. Outre les variables régulières, chaque type de ressource peut utiliser un ensemble de variables « $this » pour identifier rapidement les ressources directement liées à la ressource actuelle, par exemple, toutes les machines virtuelles hébergées par le même hyperviseur qui héberge la machine virtuelle actuelle.
+
+Cette page de ressource personnalisée est unique pour chaque utilisateur ainsi que pour chaque type de ressource. Par exemple, si l'utilisateur A crée une page d'inventaire personnalisée pour une machine virtuelle, cette page personnalisée s'affiche pour n'importe quelle page d'inventaire de machine virtuelle, pour cet utilisateur.
+
+Les utilisateurs peuvent uniquement afficher, modifier ou supprimer des pages de ressources personnalisées qu'ils créent.
+
+Les pages de ressources personnalisées ne sont pas incluses dans la fonctionnalité d'exportation/importation d'Insight.

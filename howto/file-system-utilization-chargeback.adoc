@@ -1,0 +1,38 @@
+---
+permalink: howto/file-system-utilization-chargeback.html 
+sidebar: sidebar 
+keywords:  
+summary: La refacturation des systèmes de fichiers est toujours effectuée du point de vue du stockage. Les baies de stockage associées aux machines virtuelles annotées pour un groupe de ressources de calcul particulier seront incluses dans les rapports de refacturation pour ce groupe de ressources. 
+---
+= Facturation interne et reporting des systèmes de fichiers
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La refacturation des systèmes de fichiers est toujours effectuée du point de vue du stockage. Les baies de stockage associées aux machines virtuelles annotées pour un groupe de ressources de calcul particulier seront incluses dans les rapports de refacturation pour ce groupe de ressources.
+
+
+
+== Avant de commencer
+
+Toutes les machines virtuelles que vous souhaitez inclure dans la refacturation de l'utilisation du système de fichiers doivent être annotées avec le nom de groupe de ressources de calcul approprié. Les baies de stockage associées à ces machines virtuelles doivent être annotées avec les annotations de niveau appropriées. Le CÉC de l'entrepôt de données doit avoir eu lieu après la mise en place de ces annotations.
+
+
+
+== Étapes
+
+. Ouvrez généralement un navigateur sur votre serveur de rapports `https://<host or IP>:9300/p2pd``http://<host or IP\>:9300/bi (7.3.3 or later)` et connectez-vous.
+. Choisissez le package *File System Utilization* et créez un nouveau rapport.
++
+image::../media/fs-util-pkg.gif[groupe utilitaire]
+
+. Faites glisser et déposez des éléments de votre ou vos magasins de données pour créer votre rapport.
++
+L'exemple ci-dessous est un rapport très simple. Vous pouvez créer des rapports complexes basés sur les besoins spécifiques de votre entreprise.
+
++
+image::../media/fs-simple-rpt.gif[fs simple rpt]
+
+

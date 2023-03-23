@@ -1,0 +1,156 @@
+---
+permalink: config-admin/pure-storage-flasharray-http-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La source de données Pure Storage FlashArray \(HTTP\) est utilisée pour collecter des informations à partir de la baie Flash Pure Storage. Insight prend en charge la collecte des inventaires et des performances.' 
+---
+= Source de données Pure Storage FlashArray
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La source de données Pure Storage FlashArray (HTTP) est utilisée pour collecter des informations à partir de la baie Flash Pure Storage. Insight prend en charge la collecte des inventaires et des performances.
+
+
+
+== Terminologie
+
+OnCommand Insight acquiert les informations d'inventaire suivantes à partir de la source de données Pure Storage FlashArray. Pour chaque type de ressource acquis par Insight, la terminologie la plus courante utilisée pour cette ressource est indiquée. Lors de l'affichage ou du dépannage de cette source de données, gardez à l'esprit la terminologie suivante :
+
+|===
+
+
+| Terme du fournisseur/modèle | Terme Insight 
+
+
+ a| 
+Disque (SSD)
+ a| 
+Disque
+
+
+
+ a| 
+Baie
+ a| 
+Stockage
+
+
+
+ a| 
+Contrôleur
+ a| 
+Nœud de stockage
+
+
+
+ a| 
+Volumétrie
+ a| 
+Volumétrie
+
+
+
+ a| 
+Port
+ a| 
+Port
+
+
+
+ a| 
+Mappage de LUN (hôte, groupe d'hôtes, port cible)
+ a| 
+Carte de volume, masque de volume
+
+|===
+[NOTE]
+====
+Il s'agit uniquement de mappages terminologiques courants et peuvent ne pas représenter tous les cas pour cette source de données.
+
+====
+
+
+== De formation
+
+* Adresse IP du système de stockage
+* Nom d'utilisateur et mot de passe du compte Administrateur du système Pure Storage.
+* Port requis : HTTP/HTTPS 80/443
+
+
+
+
+== Configuration
+
+|===
+
+
+| *Champ* | *Description* 
+
+
+ a| 
+Hôte FlashArray
+ a| 
+Adresse IIP ou nom de domaine complet de FlashArray Management Server
+
+
+
+ a| 
+Nom d'utilisateur
+ a| 
+Nom d'utilisateur de FlashArray Management Server
+
+
+
+ a| 
+Mot de passe
+ a| 
+Mot de passe pour FlashArray Management Server
+
+|===
+
+
+== Configuration avancée
+
+|===
+
+
+| *Champ* | *Description* 
+
+
+ a| 
+Type de connexion
+ a| 
+Serveur de gestion
+
+
+
+ a| 
+Port TCP
+ a| 
+Port TCP utilisé pour se connecter à FlashArray Server (valeur par défaut 443 )
+
+
+
+ a| 
+Délai de connexion (s)
+ a| 
+Délai d'expiration de la connexion (par défaut : 60 secondes)
+
+
+
+ a| 
+Intervalle d'interrogation des stocks (min)
+ a| 
+Intervalle entre les sondages d'inventaire (60 minutes par défaut)
+
+
+
+ a| 
+Intervalle d'interrogation des performances (s)
+ a| 
+Intervalle entre les sondages de performances (par défaut 300 secondes)
+
+|===

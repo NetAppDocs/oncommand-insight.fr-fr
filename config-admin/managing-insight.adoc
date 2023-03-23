@@ -1,0 +1,42 @@
+---
+permalink: config-admin/managing-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight contrôle votre environnement et vous permet de rechercher les problèmes potentiels avant qu"un problème ne soit signalé. Le tableau de bord des ressources fournit des diagrammes circulaires récapitulatifs, des graphiques thermiques pour les IOPS et un graphique interactif des 10 principaux pools de stockage utilisés.' 
+---
+= Gestion d'Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight contrôle votre environnement et vous permet de rechercher les problèmes potentiels avant qu'un problème ne soit signalé. Le tableau de bord des ressources fournit des diagrammes circulaires récapitulatifs, des graphiques thermiques pour les IOPS et un graphique interactif des 10 principaux pools de stockage utilisés.
+
+
+
+== Étapes
+
+. Ouvrez le tableau de bord Insight **Assets** et déplacez votre curseur sur les diagrammes circulaires pour examiner la distribution des actifs dans ces trois graphiques :
++
+** Capacité par fournisseur affiche la capacité brute totale de stockage de chaque fournisseur.
+** La capacité par Tier indique la capacité utilisable totale pour chaque Tier de stockage.
+** Le graphique à secteurs ports de commutateur indique les fabricants de ports et le pourcentage de ports utilisés.
+
+
+. Afficher *faits sur votre environnement* pour afficher des informations sur la capacité utilisée de votre environnement, l'efficacité de la capacité, les ressources FC consommées et les statistiques de l'infrastructure virtuelle.
+. Placez votre curseur sur une barre de pool de stockage dans le graphique *Top 10 des pools utilisés* pour afficher la capacité utilisée et inutilisée du pool de stockage.
+. Cliquez sur un nom de ressource apparaissant en gros texte (ce qui indique que la ressource a des problèmes) dans la carte thermique *Storage IOP* pour afficher une page résumant l'état actuel de cette ressource.
+. Dans le coin inférieur droit du tableau de bord *Assets*, cliquez sur un nom de ressource apparaissant en gros texte (ce qui indique que la ressource a des problèmes) dans la carte thermique *Virtual machine IOPS* pour afficher une page résumant l'état actuel de la ressource.
+. Dans la barre d'outils Insight, cliquez sur *Admin*.
+. Noter toutes les zones présentant des cercles rouges pleins.
++
+Dans l'interface utilisateur OnCommand Insigtweb, les problèmes potentiels sont signalés par un cercle rouge continu.
+
+. Cliquez sur *sources de données* pour examiner une liste de toutes les sources de données surveillées.
++
+Examinez toute source de données avec une colonne *Status* contenant un message avec un cercle rouge continu et un *impact* répertorié comme élevé ou Moyen. Elles sont en haut de la table. Les problèmes liés à ces sources de données affectent une partie importante de votre réseau, que vous devez résoudre.
+
+. Cliquez sur *unités d'acquisition* pour noter l'état de chaque adresse IP exécutant Insight et redémarrer une unité d'acquisition, si nécessaire
+. Cliquez sur *Health* pour afficher la surveillance de haut niveau des instances des serveurs Insight.
+

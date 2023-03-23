@@ -1,0 +1,24 @@
+---
+permalink: howto/custom-dashboard-group-by.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les données d"un widget de tableau peuvent être regroupées par n"importe quel attribut disponible, ce qui vous permet d"afficher une vue d"ensemble de vos données et d"en explorer les données pour plus de détails. Les mesures de la table sont rassemblées pour faciliter l"affichage dans chaque ligne réduite.' 
+---
+= Regroupement dans des widgets de tableau
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les données d'un widget de tableau peuvent être regroupées par n'importe quel attribut disponible, ce qui vous permet d'afficher une vue d'ensemble de vos données et d'en explorer les données pour plus de détails. Les mesures de la table sont rassemblées pour faciliter l'affichage dans chaque ligne réduite.
+
+Les widgets de tableau vous permettent de regrouper vos données en fonction des attributs que vous avez définis. Par exemple, vous pouvez souhaiter que votre tableau affiche le nombre total d'IOPS du stockage, regroupées par data centers dans lesquels ces stockages résident. Vous pouvez également afficher un tableau des machines virtuelles regroupées en fonction de l'hyperviseur qui les héberge. Dans la liste, vous pouvez développer chaque groupe pour afficher les ressources de ce groupe.
+
+Le regroupement n'est disponible que dans le type de widget *Table*.
+
+
+
+== Synthèse des données de performance
+
+Si vous incluez une colonne pour les données de performances (par exemple, _IOPS - Total_) dans un widget de tableau, lorsque vous choisissez de regrouper les données, vous pouvez alors choisir une méthode de synthèse pour cette colonne. La méthode de défilement par défaut consiste à afficher la _moyenne_ des données sous-jacentes dans la ligne du groupe. ou peut également choisir d'afficher les valeurs _sum_, _minimum_ ou _maximum_ des données.

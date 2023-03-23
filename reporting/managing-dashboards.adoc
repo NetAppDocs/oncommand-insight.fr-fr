@@ -1,0 +1,20 @@
+---
+permalink: reporting/managing-dashboards.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight propose des groupements de rapports sous la forme de tableaux de bord dynamiques afin d"afficher différentes vues des données relatives à un problème de gestion spécifique. Pour plus d"informations, cliquez sur des éléments dans les tableaux de bord.' 
+---
+= Gestion des tableaux de bord
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight propose des groupements de rapports sous la forme de tableaux de bord dynamiques afin d'afficher différentes vues des données relatives à un problème de gestion spécifique. Pour plus d'informations, cliquez sur des éléments dans les tableaux de bord.
+
+À propos de cette tâche les tableaux de bord regroupent des informations sur un sujet d'intérêt et fournissent les fonctionnalités dynamiques suivantes :
+
+Cliquez sur les éléments du graphique pour régénérer les graphiques présentant plus de détails pour les éléments sélectionnés. Liens vers d'autres rapports et informations plus détaillées. Si vous disposez d'un tableau de bord favori, vous pouvez lui ajouter un onglet à l'aide de l'une des méthodes suivantes :
+
+Ajoutez l'onglet Tableau de bord à partir des dossiers publics. Ajoutez l'onglet Tableau de bord à partir des Préférences utilisateur.

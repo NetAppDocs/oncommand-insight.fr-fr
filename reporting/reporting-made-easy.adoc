@@ -1,0 +1,38 @@
+---
+permalink: reporting/reporting-made-easy.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez générer des rapports prédéfinis à partir du portail de rapports OnCommand Insight, les envoyer par e-mail à d"autres utilisateurs et même les modifier. Plusieurs rapports vous permettent de filtrer par périphérique, entité commerciale ou niveau. Les outils de création de rapports utilisent IBM Cognos comme fondation et vous donnent de nombreuses options de présentation de données.' 
+---
+= Création de rapports simplifiée
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez générer des rapports prédéfinis à partir du portail de rapports OnCommand Insight, les envoyer par e-mail à d'autres utilisateurs et même les modifier. Plusieurs rapports vous permettent de filtrer par périphérique, entité commerciale ou niveau. Les outils de création de rapports utilisent IBM Cognos comme fondation et vous donnent de nombreuses options de présentation de données.
+
+* Les rapports prédéfinis OnCommand Insight indiquent votre inventaire, votre capacité de stockage, votre refacturation, vos performances, votre efficacité du stockage, et les données de coût du cloud. Vous pouvez modifier ces rapports prédéfinis et enregistrer vos modifications.
+
+
+Les données de rapport disponibles sont contrôlées par plusieurs éléments, notamment :
+
+* Accédez au portail de rapports OnCommand Insight, défini par les rôles.
+* La configuration de l'entrepôt de données de OnCommand, qui stocke les données des rapports.
+
+
+Vous pouvez générer des rapports sous différents formats, notamment HTML, PDF, CSV, XML, Et Excel.
+
+OnCommand Insight s'adapte aux différentes entités en matière de création de rapports grâce à la possibilité d'associer des utilisateurs aux entités commerciales. Grâce à cette fonction, les administrateurs peuvent séparer les données ou les rapports en fonction des attributs d'un utilisateur ou de son affiliation.
+
+[NOTE]
+====
+À partir de la version 11.1.2 de Cognos, les URL de déclaration ne sont pas considérées comme « stables » et sont susceptibles d'être modifiées. Si vous avez ajouté des URL de rapport aux signets, ces derniers risquent d'échouer. Vous trouverez plus d'informations ici : http://queryvision.com/ibm-analytics-11-x-urls-they-are-a-changing/[]
+
+====
+[NOTE]
+====
+OnCommand Insight ne prend pas en charge les tableaux de bord créés à l'aide de packages dans IBM Cognos, sauf si la nouvelle fonctionnalité de module de données est utilisée.
+
+====

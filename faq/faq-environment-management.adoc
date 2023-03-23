@@ -1,0 +1,20 @@
+---
+permalink: faq/faq-environment-management.html 
+sidebar: sidebar 
+keywords:  
+summary: Cette FAQ répond aux questions les plus courantes sur la gestion des environnements OnCommand Insight. 
+---
+= Gestion de votre environnement
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cette FAQ répond aux questions les plus courantes sur la gestion des environnements OnCommand Insight.
+
+
+
+== Puis-je donner accès à OCI à un utilisateur spécifique, tout en limitant la vue à certaines ressources uniquement (par exemple SVM et volumes connexes, VM, serveurs) ?
+
+OCI fournit un accès basé sur des rôles. Par exemple, l'accès au reporting est contrôlé via le reporting Data Warehouse d'OCI. Les rapports peuvent être planifiés, envoyés par e-mail au format PDF, HTML ou CSV, ou encore à un partage de fichiers ou même à une URL exigeant l'authentification de l'utilisateur avant de les afficher. L'accès basé sur l'utilisateur est accordé sous la forme d'administrateurs, d'utilisateurs et d'invités. La prise en charge d'Active Directory/ldap est également disponible.

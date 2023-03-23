@@ -1,0 +1,93 @@
+---
+permalink: dwh/viewing-hosts-and-adapters-consolidation-issues.html 
+sidebar: sidebar 
+keywords:  
+summary: Les données signalées pour les hôtes et les cartes associées sont dérivées du magasin de données Inventory. 
+---
+= Affichage des problèmes de consolidation des hôtes et des adaptateurs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les données signalées pour les hôtes et les cartes associées sont dérivées du magasin de données Inventory.
+
+
+
+== Étapes
+
+. Connectez-vous au portail Data Warehouse à l'adresse `+https://hostname/dwh+`, où `hostname` Est le nom du système sur lequel l'entrepôt de données OnCommand Insight est installé.
+. Dans le volet de navigation à gauche, cliquez sur *Dépannage*.
+. Dans la section *consolidation du châssis*, cliquez sur *hôtes et adaptateurs*.
++
+[NOTE]
+====
+La configuration présentée dans cet exemple n'est pas une configuration valide. Les connecteurs principal et disponible sur localhost suggèrent que le serveur Insight et DWH sont tous deux installés sur le même serveur. L'objectif de cet exemple est de vous familiariser avec la table de consolidation.
+
+====
++
+image::../media/oci-dwh-admin-troubleshooting-hostsandadapters-gif.gif[Regroupement de châssis hôtes et adaptateurs]
+
++
+Pour tous les hôtes et cartes, il existe une ligne pour chaque connecteur qui leur indique, ainsi que le connecteur principal à partir duquel l'hôte et l'adaptateur sont pris. Pour les hôtes et les cartes uniquement, un hôte signalé par un connecteur peut avoir ses cartes signalées par un connecteur différent.
+
++
+Vous pouvez également voir l'heure de modification OnCommand Insight d'un hôte/adaptateur pour chaque connecteur. Ce paramètre vous permet de détecter si une mise à jour s'est produite dans OnCommand Insight pour l'hôte/l'adaptateur et si le même hôte/adaptateur a été mis à jour dans d'autres serveurs OnCommand Insight.
+
+. Vous pouvez également filtrer les données dans cette vue en tapant une partie du texte et en cliquant sur *Filtrer*. Pour effacer le filtre, supprimez le texte dans la zone *filtre* et cliquez sur *filtre*. Vous pouvez filtrer par nom d'hôte, adresse IP de l'hôte, WWN de l'adaptateur ou ID d'objet OnCommand Insight.
++
+Le filtre est sensible à la casse.
+
+. Passez en revue les données suivantes :
++
+** *GUID d'hôte*
++
+Identificateur unique global pour ce type de périphérique consolidé (hôtes)
+
+** *Nom d'hôte*
++
+Nom de l'hôte consolidé tel qu'il apparaît dans l'entrepôt de données
+
+** *IP hôte*
++
+Adresse IP de l'hôte consolidé
+
+** *GUID de l'adaptateur*
++
+Identificateur unique global de l'adaptateur hôte
+
+** *Adaptateur WWN*
++
+WWN de la carte hôte
+
+** *Connecteur principal*
++
+Nom du connecteur OnCommand Insight qui était la source réelle des données
+
+** *Connecteurs disponibles*
++
+Tous les connecteurs OnCommand Insight sur lesquels réside l'hôte / l'adaptateur consolidé
+
+** *ID Insight*
++
+ID OnCommand Insight de l'hôte/adaptateur consolidé pour le connecteur de génération de rapports approprié
+
+** *Insight change Time*
++
+Lorsqu'une mise à jour s'est produite dans OnCommand Insight pour l'hôte/la carte et lorsque le même hôte/la même carte a été mise à jour dans d'autres serveurs OnCommand Insight
+
+
+
+. Pour obtenir des détails sur le connecteur, cliquez sur le connecteur.
++
+Vous pouvez voir les informations suivantes pour le connecteur :
+
++
+** Nom d'hôte
+** La dernière fois qu'une tâche Data Warehouse a été exécutée sur ce connecteur
+** La dernière fois qu'un changement a été reçu de ce connecteur
+** Version du serveur OnCommand Insight pointée par ce connecteur
+
+
+

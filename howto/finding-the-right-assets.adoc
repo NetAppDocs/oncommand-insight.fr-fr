@@ -1,0 +1,78 @@
+---
+permalink: howto/finding-the-right-assets.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les ressources Insight que vous pouvez référencer dans les filtres de widget et les recherches varient d"un type de ressource à l"autre.' 
+---
+= Meilleure pratique : trouver les bonnes ressources
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les ressources Insight que vous pouvez référencer dans les filtres de widget et les recherches varient d'un type de ressource à l'autre.
+
+Dans les tableaux de bord, le type d'actif autour duquel vous créez votre widget détermine les autres compteurs de type d'actif pour lesquels vous pouvez filtrer ou ajouter une colonne. Tenez compte des éléments suivants lors de la création de votre widget :
+
+|===
+
+
+| Ce type/compteur d'actifs : | Peut être filtré pour sous ces actifs : 
+
+
+ a| 
+Ordinateur virtuel
+ a| 
+VMDK
+
+
+
+ a| 
+Datastore(s)
+ a| 
+VolumeVMDK interne
+
+Ordinateur virtuel
+
+Volumétrie
+
+
+
+ a| 
+Hyperviseur
+ a| 
+Ordinateur virtuel
+
+
+
+ a| 
+Est un hyperviseur
+ a| 
+Hôte
+
+
+
+ a| 
+Hôte(s)
+ a| 
+Volume VolumeVolume interne
+
+
+
+ a| 
+Cluster
+ a| 
+HostVirtual machine
+
+
+
+ a| 
+Structure
+ a| 
+Port
+
+|===
+Cette liste n'est pas exhaustive.
+
+Meilleure pratique : si vous filtrez pour un type de ressource particulier qui n'apparaît pas dans la liste, essayez de créer votre requête autour d'un autre type de ressource.

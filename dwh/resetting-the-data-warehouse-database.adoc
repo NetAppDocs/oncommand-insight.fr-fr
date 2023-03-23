@@ -1,0 +1,42 @@
+---
+permalink: dwh/resetting-the-data-warehouse-database.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez supprimer le contenu des magasins de données Data Warehouse et supprimer tous les connecteurs configurés. Vous pouvez le faire si une installation ou une mise à niveau ne s"est pas terminée correctement et si la base de données Data Warehouse a été laissée dans un état intermédiaire. Vous pouvez également supprimer uniquement le modèle de données Inventory ou Cognos Reporting.' 
+---
+= Réinitialisation de la base de données Data Warehouse ou du serveur de rapports
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez supprimer le contenu des magasins de données Data Warehouse et supprimer tous les connecteurs configurés. Vous pouvez le faire si une installation ou une mise à niveau ne s'est pas terminée correctement et si la base de données Data Warehouse a été laissée dans un état intermédiaire. Vous pouvez également supprimer uniquement le modèle de données Inventory ou Cognos Reporting.
+
+
+
+== Étapes
+
+. Connectez-vous au portail Data Warehouse à l'adresse `+https://hostname/dwh+`, où `hostname` Est le nom du système sur lequel l'entrepôt de données OnCommand Insight est installé.
+. Dans le volet de navigation de gauche, cliquez sur *Réinitialiser la base de données DWH*.
+. Cliquez sur l'une des options suivantes :
++
+** *Réinitialiser la base de données DWH*
++
+Ceci supprime le contenu de tous les magasins de données Data Warehouse et de tous les connecteurs configurés et place l'entrepôt de données à l'état installé par défaut sans aucune configuration personnalisée. Vous pouvez choisir cette option, par exemple, si vous avez modifié vos serveurs connectés, mais que vous avez restauré accidentellement une autre base de données Data Warehouse sur votre serveur et que vous devez revenir à l'état installé par défaut. Cela ne supprime pas les rapports. (Les rapports sont enregistrés dans le magasin de contenu Cognos.)
+
+** *Réinit. Inventaire seulement*
++
+Ceci supprime uniquement le contenu du modèle de données d'inventaire. Cela ne supprime aucune donnée d'historique.
+
+** *Réinitialiser le contenu du rapport*
++
+Ceci réinitialise le contenu du serveur de rapports. Ceci supprime tous les rapports personnalisés que vous pouvez avoir. Sauvegardez vos rapports avant de choisir cette option.
+
+
+
++
+Un message d'avertissement s'affiche.
+
+. Pour continuer, cliquez sur *Oui*.
+

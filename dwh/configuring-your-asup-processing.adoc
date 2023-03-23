@@ -1,0 +1,25 @@
+---
+permalink: dwh/configuring-your-asup-processing.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Tous les produits NetApp sont dotés de fonctionnalités automatisées pour fournir un support optimal permettant de résoudre les problèmes rencontrés dans votre environnement. ASUP envoie régulièrement des informations prédéfinies et spécifiques au support client. Par défaut, ASUP est activé pour l"entrepôt de données. Toutefois, vous pouvez le désactiver si vous ne souhaitez plus envoyer ces informations.' 
+---
+= Désactivation des transmissions ASUP automatiques
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Tous les produits NetApp sont dotés de fonctionnalités automatisées pour fournir un support optimal permettant de résoudre les problèmes rencontrés dans votre environnement. ASUP envoie régulièrement des informations prédéfinies et spécifiques au support client. Par défaut, ASUP est activé pour l'entrepôt de données. Toutefois, vous pouvez le désactiver si vous ne souhaitez plus envoyer ces informations.
+
+
+
+== Étapes
+
+. Dans le volet de navigation de gauche, cliquez sur *Dépannage*.
+. Cliquez sur *Désactiver* pour empêcher ASUP d'envoyer un rapport quotidien.
++
+Un message indique qu'ASUP est désactivé.
+
+

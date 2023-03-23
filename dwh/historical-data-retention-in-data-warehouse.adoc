@@ -1,0 +1,243 @@
+---
+permalink: dwh/historical-data-retention-in-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les données sont conservées dans l"entrepôt de données selon un calendrier. Au fur et à mesure que les données vieillissent, la conservation des enregistrements est réduite.' 
+---
+= Comment les données historiques sont conservées dans Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les données sont conservées dans l'entrepôt de données selon un calendrier. Au fur et à mesure que les données vieillissent, la conservation des enregistrements est réduite.
+
+Data Warehouse conserve les données historiques en fonction des magasins de données et de la granularité des données, comme indiqué dans le tableau suivant.
+
+|===
+
+
+| Un data Mart | Objet mesuré | Granularité | Durée de conservation 
+
+
+ a| 
+Marts de performance
+ a| 
+Volumes et volumes internes
+ a| 
+Horaire
+ a| 
+14 jours
+
+
+
+ a| 
+Marts de performance
+ a| 
+Volumes et volumes internes
+ a| 
+Tous les jours
+ a| 
+13 mois
+
+
+
+ a| 
+Marts de performance
+ a| 
+Client supplémentaire
+ a| 
+Horaire
+ a| 
+13 mois
+
+
+
+ a| 
+Marts de performance
+ a| 
+Hôte
+ a| 
+Horaire
+ a| 
+13 mois
+
+
+
+ a| 
+Marts de performance
+ a| 
+Performances du commutateur pour le port
+ a| 
+Horaire
+ a| 
+5 semaines
+
+
+
+ a| 
+Marts de performance
+ a| 
+Performances de commutateur pour l'hôte, le stockage et les bandes
+ a| 
+Horaire
+ a| 
+13 mois
+
+
+
+ a| 
+Marts de performance
+ a| 
+Nœud de stockage
+ a| 
+Horaire
+ a| 
+14 jours
+
+
+
+ a| 
+Marts de performance
+ a| 
+Nœud de stockage
+ a| 
+Tous les jours
+ a| 
+13 mois
+
+
+
+ a| 
+Marts de performance
+ a| 
+Performances des VM
+ a| 
+Horaire
+ a| 
+14 jours
+
+
+
+ a| 
+Marts de performance
+ a| 
+Performances des VM
+ a| 
+Tous les jours
+ a| 
+13 mois
+
+
+
+ a| 
+Marts de performance
+ a| 
+Performances de l'hyperviseur
+ a| 
+Horaire
+ a| 
+14 jours
+
+
+
+ a| 
+Marts de performance
+ a| 
+Performances de l'hyperviseur
+ a| 
+Tous les jours
+ a| 
+13 mois
+
+
+
+ a| 
+Marts de performance
+ a| 
+Performances de VMDK
+ a| 
+Horaire
+ a| 
+14 jours
+
+
+
+ a| 
+Marts de performance
+ a| 
+Performances de VMDK
+ a| 
+Tous les jours
+ a| 
+13 mois
+
+
+
+ a| 
+Marts de performance
+ a| 
+Performances des disques
+ a| 
+Horaire
+ a| 
+14 jours
+
+
+
+ a| 
+Marts de performance
+ a| 
+Performances des disques
+ a| 
+Tous les jours
+ a| 
+13 mois
+
+
+
+ a| 
+Marts de capacité
+ a| 
+Tous (sauf volumes individuels)
+ a| 
+Tous les jours
+ a| 
+13 mois
+
+
+
+ a| 
+Marts de capacité
+ a| 
+Tous (sauf volumes individuels)
+ a| 
+Représentant mensuel
+ a| 
+14 mois et plus
+
+
+
+ a| 
+Marts d'inventaire
+ a| 
+Volumes individuels
+ a| 
+État actuel
+ a| 
+1 jour (ou jusqu'au prochain CÉC)
+
+|===
+Au bout de 13 mois (configurable), Data Warehouse ne conserve qu'un enregistrement par mois au lieu d'un enregistrement par jour pour les données de capacité, de performances et de ressources dans les tableaux d'information suivants :
+
+* Tableau des informations sur la refacturation (dwh_capacity.chargeback_fact)
+* Table d'information sur l'utilisation du système de fichiers (dwh_fs_util.fs_util_FACT)
+* Table de faits hôte (dwh_sa.sa_Host_FACT)
+* Tableau d'information sur la capacité du volume interne (dwh_capacity.internal_volume_capacity_fact)
+* Tableau des ports (dwh_ports.ports_FACT)
+* Tableau d'informations sur la capacité qtree (dwh_Capacity.qtree_Capacity_fact)
+* Tableau des informations sur la capacité du pool de stockage et de stockage (dwh_Capacity.Storage_and_Storage_pool_Capacity_Fact)
+* Table de données Volume Capacity (dwh_Capacity.vm_Capacity_FACT)
+* Tableaux d'information sur les performances quotidiennes des nœuds de stockage (Storage_node_Hourly_performance_Fact) et des nœuds de stockage (Storage_node_Daily_performance_Fact)
+

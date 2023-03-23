@@ -1,0 +1,25 @@
+---
+permalink: config-admin/bundling-logs-for-support.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Lors de la résolution d"un problème avec le logiciel Insight, vous pouvez rapidement générer un fichier zip \(au format « gz »\) des journaux et enregistrements d"acquisition à envoyer au support client NetApp.' 
+---
+= Regrouper les journaux pour le support
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lors de la résolution d'un problème avec le logiciel Insight, vous pouvez rapidement générer un fichier zip (au format « gz ») des journaux et des enregistrements d'acquisition à envoyer au support client NetApp.
+
+
+
+== Étapes
+
+. Dans la barre d'outils Insight, cliquez sur *Admin*.
+. Cliquez sur *Dépannage*.
+. Dans la section Envoyer / collecter des données, cliquez sur *journaux de harnais*.
+. Cliquez sur *Enregistrer le fichier*.
+. Cliquez sur *OK*.
+

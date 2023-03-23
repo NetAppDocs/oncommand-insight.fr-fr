@@ -1,0 +1,68 @@
+---
+permalink: dwh/issue-resolution-with-autosupport-asup.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez envoyer des journaux ASUP au support technique pour obtenir de l"aide lors de la résolution de problèmes. ASUP pour l"entrepôt de données est configuré pour s"exécuter automatiquement. Dans Data Warehouse Portal, vous pouvez désactiver le processus d"envoi automatique, choisir d"inclure une sauvegarde de la base de données Data Warehouse ou initier une transmission à ASUP.' 
+---
+= Résolution des problèmes avec ASUP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez envoyer des journaux ASUP au support technique pour obtenir de l'aide lors de la résolution de problèmes. ASUP pour l'entrepôt de données est configuré pour s'exécuter automatiquement. Dans Data Warehouse Portal, vous pouvez désactiver le processus d'envoi automatique, choisir d'inclure une sauvegarde de la base de données Data Warehouse ou initier une transmission à ASUP.
+
+Les informations des journaux sont transmises au support technique via le protocole HTTPS. Aucune donnée n'est transmise via ASUP, à moins que vous ne la configuriez pour la première fois sur Insight Server.
+
+L'entrepôt de données envoie les journaux au serveur OnCommand Insight qui est le premier connecteur répertorié dans la page connecteurs du portail de l'entrepôt de données. Le processus automatique envoie les fichiers suivants :
+
+* Les journaux Data Warehouse, qui comprennent les éléments suivants :
++
+** boot.log (y compris les sauvegardes)
+** dwh.log (y compris les sauvegardes telles que dwh.log.1)
+** dhw_troubleshoot.log
+** dwh_upgrade.log (y compris les sauvegardes)
+** WildFly.log (y compris les sauvegardes)
+** ldap.log (y compris les sauvegardes)
+** Vidage SQL de la base de données de gestion Data Warehouse
+** mysql : my.cnf, .err et les journaux de requêtes lentes
+** état innodb complet
+
+
+* Les journaux Cognos, qui incluent les éléments suivants :
++
+** cognos-logs.zip
++
+Contient les fichiers journaux Cognos du `<install>\cognos\c10_64\logs` répertoire. Il contient également les journaux générés par Cognos ainsi que le fichier OnCommand InsightAP.log qui contient toute la journalisation des utilisateurs se connectant à et hors de la génération de rapports OnCommand Insight.
+
+** DailyBackup.zip
++
+Contient la sauvegarde des artéfacts de rapport dans les dossiers publics. Le contenu de Mes dossiers n'est pas inclus dans ce.
+
+** conos_``version``_``site name``_content_store.zip
++
+Contient une sauvegarde complète de Cognos Content Store.
+
+
+
+
+
+Vous pouvez générer un rapport de dépannage manuellement. Le fichier .zip du rapport de dépannage contient les informations suivantes sur l'entrepôt de données :
+
+* boot.log (y compris les sauvegardes)
+* dwh.log (y compris les sauvegardes telles que dwh.log.1)
+* dwh_upgrade.log (y compris les sauvegardes)
+* wildfly.log (y compris les sauvegardes)
+* ldap.log (y compris les sauvegardes)
+* Vidage des fichiers dans c:\Program Files\SANscreen\Wildfly\standalone\log\dwh\
+* Vidage SQL de la base de données de gestion Data Warehouse
+* mysql : my.cnf, .err et les journaux de requêtes lentes
+* état innodb complet
+
+
+[NOTE]
+====
+ASUP n'envoie pas automatiquement une sauvegarde de la base de données OnCommand Insight au support technique.
+
+====

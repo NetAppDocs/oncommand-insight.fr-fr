@@ -1,0 +1,263 @@
+---
+permalink: config-admin/advanced-asset-search-techniques-new.html 
+sidebar: sidebar 
+keywords:  
+summary: Plusieurs techniques de recherche peuvent être utilisées pour rechercher des données ou des objets dans votre environnement surveillé. 
+---
+= Techniques de recherche avancées
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Plusieurs techniques de recherche peuvent être utilisées pour rechercher des données ou des objets dans votre environnement surveillé.
+
+
+
+== Recherche avec caractères génériques
+
+Vous pouvez effectuer une recherche par caractère générique à l'aide du caractère *. Par exemple, _applic*n_ renverra l'application.
+
+
+
+== Expressions utilisées dans la recherche
+
+Une phrase est un groupe de mots entouré de guillemets doubles ; par exemple, « PAW VNX LUN 5 ». Vous pouvez utiliser des guillemets doubles pour rechercher des documents contenant des espaces dans leurs noms ou attributs.
+
+
+
+== Opérateurs booléens
+
+A l'aide d'opérateurs booléens, vous pouvez combiner plusieurs termes pour former une requête plus complexe.
+
+* *OU*
++
+** L'opérateur OR est l'opérateur de conjonction par défaut.
++
+S'il n'y a pas d'opérateur booléen entre deux termes, l'opérateur OR est utilisé.
+
+** L'opérateur OR lie deux termes et trouve un document correspondant si l'un des termes existe dans un document.
++
+Par exemple, « stockage OU netapp » recherche des documents contenant « stockage » ou « netapp ».
+
+** Des notes élevées sont attribuées aux documents qui correspondent à la plupart des termes.
+
+
+* *ET*
++
+Vous pouvez utiliser l'opérateur AND pour rechercher des documents dans lesquels les deux termes de recherche existent dans un seul document. Par exemple, « aurora ET netapp » recherche des documents qui contiennent à la fois « stockage » et « netapp ».
+
++
+Vous pouvez utiliser le symbole && au lieu du mot ET.
+
+* *NON*
++
+Lorsque vous utilisez L'opérateur NOT, tous les documents contenant le terme après NE sont pas exclus des résultats de la recherche. Par exemple, « stockage NOT netapp » recherche les documents qui contiennent uniquement « stockage » et non « netapp ».
+
++
+Vous pouvez utiliser le symbole ! Au lieu du mot PAS.
+
+
+
+
+
+== Recherche de préfixe et de suffixe
+
+* Dès que vous commencez à taper une chaîne de recherche, le moteur de recherche effectue une recherche de préfixe et de suffixe pour trouver la meilleure correspondance.
+* Les correspondances exactes reçoivent un score supérieur à celui d'une correspondance de préfixe ou de suffixe. Le score est calculé en fonction de la distance entre le terme recherché et le résultat réel de la recherche. Par exemple, nous avons trois stockages: «aurora», «aurora1» et «aunora11». La recherche de « aur » renvoie les trois stockages. Cependant, le résultat de la recherche pour « aurora » aura le score le plus élevé car il a la distance la plus proche de la chaîne de recherche du préfixe.
+* Le moteur de recherche recherche recherche également les termes dans l'ordre inverse, ce qui vous permet d'effectuer une recherche de suffixe. Par exemple, lorsque vous tapez « 345 » dans la zone de recherche, le moteur de recherche recherche recherche « 345 ».
+* La recherche n'est pas sensible à la casse.
+
+
+
+
+== Recherche à l'aide de termes indexés
+
+Les recherches qui correspondent à davantage de termes indexés entraînent des scores plus élevés.
+
+La chaîne de recherche est divisée en termes de recherche séparés par espace. Par exemple, la chaîne de recherche « `stockage aurora netapp' » est divisée en trois mots-clés : « stockage », « aurora » et « netapp ». La recherche s'effectue à l'aide des trois termes. Les documents qui correspondent à la plupart de ces termes auront le score le plus élevé. Plus vous fournissez d'informations, mieux les résultats de recherche sont nombreux. Par exemple, vous pouvez rechercher un stockage par son nom et son mode.
+
+L'interface utilisateur affiche les résultats de la recherche dans les différentes catégories, avec les trois meilleurs résultats par catégorie. Si vous n'avez pas trouvé de document attendu, vous pouvez inclure plus de termes dans la chaîne de recherche pour améliorer les résultats de la recherche.
+
+Le tableau suivant fournit une liste de termes indexés qui peuvent être ajoutés à la chaîne de recherche.
+
+|===
+
+
+| Catégorie | Termes indexés 
+
+
+ a| 
+Stockage
+ a| 
+* « stockage »
+* nom
+* fournisseur
+* modèle
+
+
+
+
+ a| 
+Poolde stockage
+ a| 
+* « réserve de stockage »
+* nom
+* nom du stockage
+* Adresses IP du stockage
+* numéro de série du stockage
+* fournisseur de stockage
+* modèle de stockage
+* noms de tous les volumes internes associés
+* noms de tous les disques associés
+
+
+
+
+ a| 
+Volume interne
+ a| 
+* « volume interne »
+* nom
+* nom du stockage
+* Adresses IP du stockage
+* numéro de série du stockage
+* fournisseur de stockage
+* modèle de stockage
+* nom du pool de stockage
+* noms de tous les partages associés
+* noms de toutes les applications et entités commerciales associées
+
+
+
+
+ a| 
+Volumétrie
+ a| 
+* « volume »
+* nom
+* étiquette
+* noms de tous les volumes internes
+* nom du pool de stockage
+* nom du stockage
+* Adresses IP du stockage
+* numéro de série du stockage
+* fournisseur de stockage
+* modèle de stockage
+
+
+
+
+ a| 
+Nœud de stockage
+ a| 
+* « `storagenode`"
+* nom
+* nom du stockage
+* Adresses IP du stockage
+* numéro de série du stockage
+* fournisseur de stockage
+* modèle de stockage
+
+
+
+
+ a| 
+Hôte
+ a| 
+* « hôte »
+* nom
+* Adresses IP
+* noms de toutes les applications et entités commerciales associées
+
+
+
+
+ a| 
+Datastore
+ a| 
+* « entrepôt de données »
+* nom
+* IP du centre virtuel
+* noms de tous les volumes
+* noms de tous les volumes internes
+
+
+
+
+ a| 
+Ordinateurs virtuels
+ a| 
+* « virtualmachine »
+* nom
+* Nom DNS
+* Adresses IP
+* nom de l'hôte
+* Adresses IP de l'hôte
+* noms de tous les datastores
+* noms de toutes les applications et entités commerciales associées
+
+
+
+
+ a| 
+Commutateurs (standard et NPV)
+ a| 
+* « sorcière »
+* Adresse IP
+* wwn
+* nom
+* numéro de série
+* modèle
+* ID de domaine
+* nom de la structure
+* wwn de la structure
+
+
+
+
+ a| 
+Client supplémentaire
+ a| 
+* « application »
+* nom
+* locataire
+* secteur d'activité
+* unité commerciale
+* projet
+
+
+
+
+ a| 
+Bande
+ a| 
+* « bande »
+* Adresse IP
+* nom
+* numéro de série
+* fournisseur
+
+
+
+
+ a| 
+Port
+ a| 
+* « port »
+* wwn
+* nom
+
+
+
+
+ a| 
+Structure
+ a| 
+* « fabric »
+* wwn
+* nom
+
+
+|===

@@ -1,0 +1,31 @@
+---
+permalink: howto/servicenow-integration-install-update-set.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Dans le cadre de l"intégration entre ServiceNow et OnCommand Insight, vous devez installer un Update Set, qui charge les données préconfigurées dans ServiceNow afin de fournir au connecteur des champs et des tableaux spécifiques pour l"extraction et le chargement des données.' 
+---
+= Installer le jeu de mises à jour
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dans le cadre de l'intégration entre ServiceNow et OnCommand Insight, vous devez installer un Update Set, qui charge les données préconfigurées dans ServiceNow afin de fournir au connecteur des champs et des tableaux spécifiques pour l'extraction et le chargement des données.
+
+
+
+== Étapes
+
+. Accédez au tableau des mises à jour à distance dans ServiceNow en recherchant « « jeux de mises à jour récupérés ».
+. Cliquez sur *Importer le jeu de mises à jour à partir de XML*.
+. Le jeu de mises à jour se trouve dans le fichier .zip de connecteur Python précédemment téléchargé sur votre lecteur local (dans notre exemple, le `C:\OCI2SNOW` ) dans le `\update_sets` sous-dossier. Cliquez sur *choisir un fichier* et sélectionnez le fichier .xml dans ce dossier. Cliquez sur *Upload*.
+. Une fois le jeu de mises à jour chargé, ouvrez-le et cliquez sur *Prévisualiser le jeu de mises à jour*.
++
+Si des erreurs sont détectées, vous devez les corriger avant de pouvoir valider le jeu de mises à jour.
+
+. S'il n'y a pas d'erreur, cliquez sur *Commit Update Set*.
++
+Une fois la mise à jour validée, elle s'affiche sur la page *mises à jour système* > *mettre à jour les sources*.
+
+

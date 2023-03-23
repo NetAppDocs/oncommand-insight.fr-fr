@@ -1,0 +1,45 @@
+---
+permalink: howto/configuring-servicenow-for-integration.html 
+sidebar: sidebar 
+keywords:  
+summary: 'L"intégration de ServiceNow à Insight nécessite plusieurs tâches de configuration.' 
+---
+= Configuration de ServiceNow pour l'intégration
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'intégration de ServiceNow à Insight nécessite plusieurs tâches de configuration.
+
+
+
+== Description de la tâche
+
+Les tâches suivantes doivent être effectuées lors de l'intégration de ServiceNow avec Insight :
+
+Côté ServiceNow :
+
+* Améliorer le rôle
+* Installer les ensembles de mises à jour
+* Configurer les utilisateurs
+
+
+Côté Insight :
+
+* Ajoutez l'utilisateur ServiceNow
+
+
+Côté connecteur Python :
+
+* Installez Python
+* Installez des bibliothèques supplémentaires
+* Initialiser le connecteur
+* Modifiez le fichier config.ini
+* Tester le connecteur
+* Synchroniser le connecteur
+* Planifier l'exécution de la tâche quotidienne
+
+
+Chacun de ces éléments est expliqué plus en détail dans les sections suivantes.

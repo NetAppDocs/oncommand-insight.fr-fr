@@ -1,0 +1,37 @@
+---
+permalink: config-admin/restoring-the-insight-database.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Pour restaurer votre base de données Insight à partir d"un fichier de sauvegarde vérifié, utilisez les options de dépannage. Cette opération remplace entièrement vos données OnCommand Insight actuelles.' 
+---
+= Restauration de la base de données Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour restaurer votre base de données Insight à partir d'un fichier de sauvegarde vérifié, utilisez les options de dépannage. Cette opération remplace entièrement vos données OnCommand Insight actuelles.
+
+
+
+== Avant de commencer
+
+**Meilleure pratique : **avant de restaurer votre base de données OnCommand Insight, utilisez le processus de sauvegarde manuelle pour créer une copie de la base de données actuelle. Vérifiez le fichier de sauvegarde que vous prévoyez de restaurer. Assurez-vous que la sauvegarde contient bien les fichiers que vous souhaitez restaurer.
+
+
+
+== Étapes
+
+. Dans la barre d'outils Insight, cliquez sur *Admin*.
+. Cliquez sur *Dépannage*.
++
+image::../media/oci-7-backup-restore-gif.gif[sauvegarde et restauration]
+
+. Dans la section Restaurer une base de données, sélectionnez le fichier de sauvegarde à restaurer dans le menu *Sélectionner une sauvegarde*.
+. Cliquez sur *Restaurer*.
+. Dans l'avertissement indiquant que toutes les données seront remplacées, cliquez sur *OK*
++
+L'état de l'activité de restauration s'affiche sur la page de restauration.
+
+

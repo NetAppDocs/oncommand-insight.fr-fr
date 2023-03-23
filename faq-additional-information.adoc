@@ -1,0 +1,50 @@
+---
+permalink: faq/faq-additional-information.html 
+sidebar: sidebar 
+keywords: redhat,Linux 
+summary: Où puis-je trouver des informations supplémentaires ? 
+---
+= Informations supplémentaires
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Où puis-je trouver des informations supplémentaires concernant OnCommand Insight ?
+
+
+
+== Prise en charge de la source de données
+
+Vous trouverez des informations sur les sources de données prises en charge par Insight dans la matrice de prise en charge des sources de données OnCommand Insight. Vous serez invité à vous connecter à l'aide de vos identifiants du site de support NetApp.
+
+link:https://mysupport.netapp.com/api/content-service/staticcontents/content/products/oncommandinsight/DatasourceSupportMatrix_7.3.x.pdf["Matrice de prise en charge des sources de données OnCommand Insight"]Matrice de prise en charge des versions actuelles de OnCommand Insight prises en charge.
+
+
+
+== Assistance
+
+link:https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp (IMT)"]Décrit les périphériques et plates-formes pris en charge par OnCommand Insight.
+
+link:https://mysupport.netapp.com/site/products/all/details/oncommand-insight/guideme-tab["Résolution des problèmes assistée par NetApp"]La résolution assistée de problèmes comprend du contenu technique, des ressources pratiques et des étapes de résolution de problèmes organisées par produits, fonctionnalités et tâches. Le chat vous permet de résoudre rapidement les problèmes sans ouvrir de dossier ni appeler le support technique.
+
+La base de connaissances NetApp vous permet d'accéder à des articles techniques sur la gestion et l'administration des produits. Un petit sous-ensemble de la base de connaissances est à la disposition du public. Un utilisateur enregistré a accès à un plus grand nombre d'articles de la base de connaissances technique.
+
+NetApp Global Services Contacts Contactez votre centre de support régional.
+
+
+
+== NetApp
+
+Téléchargement de NetApp Storefront à partir d'une vaste collection de modèles de rapports, de packs de solutions, de collecteurs de données et d'exemples de scripts pour OnCommand Insight.
+
+Vidéos OnCommand Insight Regardez des vidéos sur divers sujets de notre liste de lecture vidéo sur les produits OnCommand Insight.
+
+Discussions de la communauté Insight Participez à la discussion de OnCommand Insight.
+
+
+
+== Autre
+
+IBM Cognos Documentation pour IBM Cognos sur le Web.

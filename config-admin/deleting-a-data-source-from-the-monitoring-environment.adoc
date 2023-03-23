@@ -1,0 +1,29 @@
+---
+permalink: config-admin/deleting-a-data-source-from-the-monitoring-environment.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Si vous avez supprimé une source de données de votre environnement, vous devez également la supprimer de l"environnement de surveillance OnCommand Insight.' 
+---
+= Suppression d'une source de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous avez supprimé une source de données de votre environnement, vous devez également la supprimer de l'environnement de surveillance OnCommand Insight.
+
+
+
+== Étapes
+
+. Dans la barre d'outils Insight, cliquez sur *Admin*.
++
+La liste sources de données s'ouvre.
+
+. Sélectionnez la source de données à supprimer.
+. Cliquez sur le nom de la source de données liée.
+. Vérifiez les informations de la source de données sélectionnée sur la page de résumé pour vous assurer qu'elle est bien celle que vous souhaitez supprimer.
+. Cliquez sur *Supprimer*.
+. Cliquez sur *OK* pour confirmer l'opération.
+

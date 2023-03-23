@@ -1,0 +1,14 @@
+---
+permalink: dwh/multiple-server-chassis-consolidation-issues.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez afficher les connecteurs qui signalent les hôtes et les adaptateurs, les commutateurs SAN et les matrices de stockage. Vous pouvez également voir les différents connecteurs qui signalent un objet et identifier le connecteur principal, qui est le connecteur choisi pour l"objet.' 
+---
+= Problèmes de consolidation de châssis de serveurs multiples
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez afficher les connecteurs qui signalent les hôtes et les adaptateurs, les commutateurs SAN et les matrices de stockage. Vous pouvez également voir les différents connecteurs qui signalent un objet et identifier le connecteur principal, qui est le connecteur choisi pour l'objet.

@@ -1,0 +1,21 @@
+---
+permalink: config-admin/testing-the-data-source-configuration.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Lorsque vous ajoutez une source de données, vous pouvez vérifier l"exactitude de la configuration pour communiquer avec le périphérique avant d"enregistrer ou de mettre à jour cette source de données.' 
+---
+= Test de la configuration de la source de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsque vous ajoutez une source de données, vous pouvez vérifier l'exactitude de la configuration pour communiquer avec le périphérique avant d'enregistrer ou de mettre à jour cette source de données.
+
+Lorsque vous cliquez sur le bouton *Test* dans l'assistant de source de données, la communication avec le périphérique spécifié est vérifiée. Le test produit l'un des résultats suivants :
+
+* RÉUSSI : la source de données est configurée correctement.
+* AVERTISSEMENT : les tests étaient incomplets, probablement en raison d'une temporisation pendant le traitement ou d'une acquisition non en cours d'exécution.
+* ÉCHEC : la source de données, telle que configurée, ne peut pas communiquer avec le périphérique spécifié. Vérifiez vos paramètres de configuration et testez à nouveau.
+

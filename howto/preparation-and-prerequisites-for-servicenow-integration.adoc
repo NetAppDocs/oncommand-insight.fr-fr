@@ -1,0 +1,67 @@
+---
+permalink: howto/preparation-and-prerequisites-for-servicenow-integration.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Avant l"intégration, les conditions préalables et les préparations nécessaires doivent être remplies pour ServiceNow, Insight et le connecteur de middleware Python.' 
+---
+= Préparation et conditions préalables à l'intégration de Service Now
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant l'intégration, les conditions préalables et les préparations nécessaires doivent être remplies pour ServiceNow, Insight et le connecteur de middleware Python.
+
+
+
+== Flux de travail recommandé
+
+Le workflow suivant est vivement recommandé lors de l'intégration de ServiceNow avec Insight :
+
+. Déployez d'abord le connecteur de middleware Python dans votre instance de développement.
+. Une fois que vous avez confirmé que tous les défauts ont été identifiés et corrigés dans votre instance de développement, déployez le connecteur dans votre instance de test/étape.
+. Une fois que vous avez confirmé le bon fonctionnement de votre instance de transfert, déployez le connecteur dans votre instance de production.
+
+
+Si des problèmes sont détectés au cours de l'une de ces étapes, suivez les étapes de restauration et désactivez le connecteur, puis résolvez le problème et redéployez.
+
+
+
+== Conditions préalables générales :
+
+* Vous pouvez utiliser un hôte autonome ou une machine virtuelle (recommandé) ou l'hôte/machine virtuelle du serveur Insight pour héberger le connecteur de middleware python.
+* Il est fortement recommandé de sauvegarder le serveur production Insight et de le déployer sur une instance de développement.
+* ServiceNow doit détecter avec précision les serveurs dans la CMDB.
+* Ces informations doivent permettre de détecter précisément vos environnements de stockage et de calcul.
+* Ports 443 et 80 vers l'instance Insight Server et ServiceNow.
+
+
+
+
+== Prérequis pour ServiceNow :
+
+* Il est fortement recommandé d'utiliser une instance de développement/test.
+* Autorisation de charger des ensembles de mises à jour ServiceNow.
+* Autorisation de créer des utilisateurs.
+* ServiceNow version Jakarta ou ultérieure
+
+
+
+
+== Prérequis d'Insight :
+
+* Il est fortement recommandé d'utiliser une instance de développement/test.
+* Autorisation de créer des utilisateurs (autorisations d'administration).
+* Insight version 7.3.1 ou ultérieure est pris en charge. Pour tirer le meilleur parti d'Insight, utilisez la dernière version.
+
+
+
+
+== Pré-requis pour Python middleware Connector :
+
+* Python version 3.6 ou supérieure installé.
+* Lors de l'installation de Python, cochez la case pour activer tous les utilisateurs. Python est alors défini pour les emplacements d'installation d'applications standard.
+* Lors de l'installation de Python, cochez la case pour permettre au programme d'installation de mettre à jour le chemin. Sinon, vous devrez mettre à jour le chemin manuellement.
+* Téléchargez les bibliothèques Python *pysnow* et *Requests*.
+

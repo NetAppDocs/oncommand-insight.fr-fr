@@ -1,0 +1,30 @@
+---
+permalink: install-linux/migrating-from-windows-to-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Pour utiliser Insight sur Linux lorsque vous disposez déjà d"une installation Windows, vous devez effectuer une migration. Vous devez effectuer cette procédure sur les composants du serveur Insight et de Data Warehouse.' 
+---
+= Migration de Windows vers Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour utiliser Insight sur Linux lorsque vous disposez déjà d'une installation Windows, vous devez effectuer une migration. Vous devez effectuer cette procédure sur les composants du serveur Insight et de Data Warehouse.
+
+
+
+== Étapes
+
+. Sauvegardez votre installation Insight actuelle sur votre serveur.
++
+Pour plus d'informations sur la sauvegarde de la base de données OCI, reportez-vous au _Guide de configuration et d'administration de OnCommand Insight.
+
+. Installez Insight pour Linux.
+. Restaurez la base de données pour votre version précédente.
++
+Pour plus d'informations sur la restauration de la base de données OCI, reportez-vous au _Guide de configuration et d'administration de OnCommand Insight.
+
+. Désinstallez votre version précédente d'Insight pour Windows.
+

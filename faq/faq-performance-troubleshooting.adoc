@@ -1,0 +1,62 @@
+---
+permalink: faq/faq-performance-troubleshooting.html 
+sidebar: sidebar 
+keywords:  
+summary: Cette FAQ répond aux questions les plus courantes sur la résolution des problèmes de performances OnCommand Insight. 
+---
+= Résolution des problèmes de performances
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cette FAQ répond aux questions les plus courantes sur la résolution des problèmes de performances OnCommand Insight.
+
+
+
+== Comment puis-je créer une liste de toutes les ressources gourmandes de mon environnement ?
+
+Les analyses de corrélation du logiciel OCI permettent d'identifier les ressources gourmandes et peu performantes pour un chemin de service donné. L'analyse générée par la fonction de corrélation est effectuée en temps réel pendant la visualisation de chaque objet. L'analyse proposée réduit considérablement le temps nécessaire au dépannage des problèmes de performances et à l'identification de l'origine des problèmes. L'exploration des violations générées des règles de performance définies constitue un point d'entrée à la découverte des ressources gourmandes ou dégradées. Les fonctionnalités de détection des anomalies du logiciel OCI peuvent également être utilisées comme une approche plus proactive pour identifier les ressources gourmandes ou dégradées de l'infrastructure applicative avant qu'elles ne perturbent les services. Les widgets et les tableaux de bord qui utilisent les dernières fonctionnalités de requête permettent de filtrer, trier et visualiser les ressources avec des valeurs d'IOPS (gourmandes), d'utilisation ou de latence supérieures à celles attendues.
+
+
+
+== OCI peut-il vous permettre de diagnostiquer les problèmes de performance à un seul emplacement ?
+
+Oui. Le dépannage des problèmes de performance dans OCI peut être abordé de plusieurs façons. OCI dispose de plusieurs méthodes d'alerte. Les alertes SNMP, Syslog et envoyées par e-mail sont couramment utilisées. Les alertes envoyées par e-mail permettent aux utilisateurs de cliquer et de lancer rapidement les ressources affectées dans OCI. Une fenêtre de recherche globale permet aux administrateurs de saisir simplement un nom de ressource pour commencer à analyser la situation.
+
+Le tableau de bord des violations d'OCI permet aux utilisateurs de hiérarchiser les efforts en fonction du nombre d'événements, de la durée et de l'heure. Différents types d'alertes sont par exemple la latence, les IOPS, l'utilisation, la gravité, l'unité commerciale ou même l'application associée.
+
+Les analyses de corrélation d'OCI aident les administrateurs à comparer les objets associés aux ressources impactées et à déterminer leur impact sur les IOPS, la latence, l'utilisation, le processeur et les crédits BB.
+
+Les dernières avancées d'OCI en matière de détection des anomalies et de surveillance ethernet offrent une approche plus agressive et proactive pour détecter les comportements déviants des ressources avant qu'elles ne deviennent des interruptions ou des pannes de service.
+
+La technologie de requête et les tableaux de bord widget d'OCI permettent de définir des détails précis dans des vues organisées qui ciblent les zones problématiques du Datacenter.
+
+
+
+== OCI peut-il être utile pour les migrations de mes données 7-mode vers cdot ?
+
+Oui, OCI fournit des informations précieuses pour répondre aux demandes des workloads existants et valider la post-migration. Le rôle du logiciel OCI dans la modernisation des data centers actuels permet de réaliser des simulations de gestion des changements, de planifier l'optimisation avant migration et de définir le Tier de service approprié. OCI collecte et met en corrélation sans effort l'impact commercial sur des milliers de partages NFS et des chemins Fibre Channel dans des environnements multifournisseurs, en quelques clics seulement. De la migration aux mises à jour technologiques, OCI facilite les migrations fiables et correctement dimensionnées, tout en limitant les interruptions des services non planifiées.
+
+
+
+== Dans quelle mesure la surveillance des performances d'OCI est-elle « en temps réel » ?
+
+OCI est considéré comme * en temps quasi réel * pour la gestion des data centers sur site et dans le cloud hybride. Bien que l'interrogation des sources de données puisse être configurée pour se produire plus souvent, la plupart des utilisateurs ne bénéficient pas d'avantages analytiques significatifs en raison d'un intervalle de collecte des performances de la plupart des périphériques de moins de 5 minutes. Une collecte plus fréquente peut entraîner une charge inutile sur les objets gérés et les analyses effectuées. Bien entendu, dans certains cas, une collecte plus granulaire peut être nécessaire. Heureusement, OCI offre une flexibilité totale, notamment un inventaire configurable des périphériques et des intervalles d'interrogation des performances, afin de répondre aux besoins spécifiques de votre environnement de data Center.
+
+
+
+== Pourquoi mon « Total » est-il différent de mon « lecture » et de mon « écriture » ?
+
+Dans certains cas, vous pouvez remarquer que le _Total_ d'un compteur n'est pas égal à la somme de _reads_ plus _writes_ pour ce compteur. Cela pourrait se produire dans quelques cas.
+
+*IOPS* : outre les opérations de lecture et d'écriture, une baie de stockage ou un autre actif traite les opérations internes non liées au flux de données de la charge de travail. On les appelle parfois « système », « métadonnées » ou simplement « autres » opérations et on peut les attribuer à des processus internes tels que les snapshots, la déduplication ou la réaffectation de l'espace. Dans ce cas, pour déterminer la quantité d'opérations système pour un actif donné, soustrayez la somme des opérations _Read_ et _Write_ IOPS du _Total_ IOPS. La somme des IOPS de lecture et d'écriture correspond au total des IOPS directement liées à votre flux de données.
+
+*Latence* : le temps de réponse total (latence) d'une opération peut parfois être signalé comme _moins que_ le temps de réponse en écriture, car le temps de réponse total est une moyenne pondérée dans le temps. Les charges de travail d'E/S se composent souvent d'opérations de lecture et d'écriture plus importantes, avec des latences plus importantes généralement observées en écriture. Par exemple, si une charge de travail a effectué 10 opérations de lecture avec une latence moyenne de 5 ms et 5 opérations d'écriture avec une latence moyenne de 10 ms, la latence moyenne pondérée totale sera calculée comme le nombre de lectures multiplié par la latence de lecture moyenne, Plus le nombre d'écritures multiplié par la latence d'écriture moyenne, divisée par le nombre total d'opérations d'E/S, par exemple (10 * 5 + 5 * 10) / (10 + 5) = 6,33 ms.
+
+
+
+== Pourquoi OCI et OCUM affichent-ils des valeurs différentes pour l'espace dépassé ?
+
+Le concept d'espace « provisionné » dans OnCommand Unified Manager (OCUM) peut inclure des limites de croissance automatique auxquelles FlexVols (volumes internes OnCommand Insight) peuvent s'étendre. La « capacité » d'OCI ne reflète pas ces limites de croissance automatique. Par conséquent, dans un environnement où il existe des FlexVols pour le gain automatique, la capacité provisionnée OCUM dépasse le total « capacité surallouée » du niveau de stockage OCI. La différence entre la capacité FlexVols et leur capacité de croissance automatique est la différence.
