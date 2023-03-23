@@ -69,7 +69,6 @@
   <block id="a93bc0a57623c2facaa010825c808507" category="paragraph"><block ref="a93bc0a57623c2facaa010825c808507" category="inline-link-rx"></block></block>
   <block id="44255ed683c528ba0c41166a56d37b96" category="summary">OnCommand Insight simplifie la gestion opérationnelle des infrastructures IT hybrides pour les environnements sur site et dans les clouds publics et privés.</block>
   <block id="086156bc9cbd8e4be148e68dde15c618" category="doc">Documentation OnCommand Insight</block>
-  <block id="6e33917dd8d71a6016eadb83a546533f" category="paragraph">OnCommand Insight est une solution unique qui permet de gérer et d'analyser les ressources interdomaines et multifournisseurs sur l'ensemble des réseaux, du stockage et des serveurs dans des environnements physiques et virtuels.</block>
   <block id="8cc762b4a3f6f2951567f77120563288" category="summary">Où puis-je trouver des informations supplémentaires ?</block>
   <block id="092bf78f9c97ba171b8232ddff585392" category="doc">Informations supplémentaires</block>
   <block id="258f2022b13e94f3f3017d53dbaf5b48" category="paragraph">Où puis-je trouver des informations supplémentaires concernant OnCommand Insight ?</block>
@@ -8206,4 +8205,5 @@
   <block id="135cca1b87ae0b4a874f6d6184055603" category="sidebar">Observez le comportement d'un objet au fil du temps</block>
   <block id="a8ccc3b97766b616055316a691052a65" category="sidebar">Comparez la latence totale d'un objet à la latence totale des 10 principaux objets</block>
   <block id="1e6ff685c4fea5f20ae54d736f584efe" category="sidebar">Personnalisation du format de sortie et de l'envoi d'un rapport</block>
+  <block id="782e478a3967380e548c616b53e48fa3" category="paragraph">OnCommand Insight est une solution unique qui permet de gérer et d'analyser les ressources interdomaines et multifournisseurs sur l'ensemble des réseaux, du stockage et des serveurs dans des environnements physiques et virtuels. Optimisez votre infrastructure en dimensionnant correctement vos opérations pour répondre aux besoins de l'entreprise grâce à Insight. Et vous pouvez aisément prévoir et planifier vos achats. Il réduit également les risques lors des migrations technologiques complexes, telles que la migration vers un cloud hybride, en identifiant les charges de travail candidates à la migration vers le cloud. Avec Insight, vous pouvez gérer l'infrastructure IT en tant que service de bout en bout en intégrant les ressources dans l'ensemble de la chaîne de livraison des services IT de l'entreprise.</block>
 </blocks>
