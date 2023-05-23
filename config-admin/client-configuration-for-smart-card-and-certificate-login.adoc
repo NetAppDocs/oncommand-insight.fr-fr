@@ -35,9 +35,9 @@ Pour obtenir les instructions les plus récentes sur les cartes CAC et les certi
 
 Les exigences de configuration client courantes sont les suivantes :
 
-* Installation d'un middleware de carte à puce, tel qu'ActivClient (voir http://militarycac.com/activclient.htm)[]
-* Modification du navigateur IE (voir http://militarycac.com/files/Making_AKO_work_with_Internet_Explorer_color.pdf)[]
-* Modification du navigateur Firefox (voir https://militarycac.com/firefox2.htm)[]
+* Installation d'un middleware de carte à puce, tel qu'ActivClient (voir
+* Modification du navigateur IE (voir
+* Modification du navigateur Firefox (voir
 
 
 Les étapes de configuration supplémentaires incluent les éléments suivants :

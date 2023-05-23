@@ -17,7 +17,7 @@ En cas de problème avec l'installation d'Insight, en tant que client de support
 
 == Avant de commencer
 
-À l'aide de votre adresse e-mail d'entreprise, vous devez vous inscrire en tant que client d'assistance pour obtenir des services d'assistance en ligne. L'enregistrement s'effectue via le site du support (http://support.netapp.com)[].
+À l'aide de votre adresse e-mail d'entreprise, vous devez vous inscrire en tant que client d'assistance pour obtenir des services d'assistance en ligne. L'enregistrement s'effectue via le site du support .
 
 
 
