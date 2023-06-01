@@ -8205,6 +8205,42 @@
   <block id="135cca1b87ae0b4a874f6d6184055603" category="sidebar">Observez le comportement d'un objet au fil du temps</block>
   <block id="a8ccc3b97766b616055316a691052a65" category="sidebar">Comparez la latence totale d'un objet à la latence totale des 10 principaux objets</block>
   <block id="1e6ff685c4fea5f20ae54d736f584efe" category="sidebar">Personnalisation du format de sortie et de l'envoi d'un rapport</block>
-  <block id="782e478a3967380e548c616b53e48fa3" category="paragraph">OnCommand Insight est une solution unique qui permet de gérer et d'analyser les ressources interdomaines et multifournisseurs sur l'ensemble des réseaux, du stockage et des serveurs dans des environnements physiques et virtuels. Optimisez votre infrastructure en dimensionnant correctement vos opérations pour répondre aux besoins de l'entreprise grâce à Insight. Et vous pouvez aisément prévoir et planifier vos achats. Il réduit également les risques lors des migrations technologiques complexes, telles que la migration vers un cloud hybride, en identifiant les charges de travail candidates à la migration vers le cloud. Avec Insight, vous pouvez gérer l'infrastructure IT en tant que service de bout en bout en intégrant les ressources dans l'ensemble de la chaîne de livraison des services IT de l'entreprise.</block>
   <block id="9a94b99275970f0f82451969eeccb836" category="sidebar">HDS Ops Center</block>
+  <block id="8020d56a67ade967a3254ada824b1406" category="summary">Configuration du collecteur de données HDS Ops Center.</block>
+  <block id="edfa0366cb6c25de6aa46576a0e54251" category="doc">Collecteur de données Hitachi Ops Center</block>
+  <block id="317ca49a534ef6dc0317a60fdf058fef" category="paragraph">Ce collecteur de données utilise la suite intégrée d'applications d'Hitachi Ops Center pour accéder aux données d'inventaire et de performances de plusieurs périphériques de stockage. Pour la découverte des stocks et de la capacité, l'installation du centre d'exploitation doit inclure les composants « Services communs » et « Administrateur ». Pour la collecte des performances, vous devez également avoir déployé « Analyzer ».</block>
+  <block id="aa274d02dd5bbca295ce4b6cd3594c6d" category="paragraph">OnCommand Insight acquiert les informations d'inventaire suivantes à partir de ce collecteur de données. Pour chaque type d'actif acquis, la terminologie la plus utilisée pour ce bien est indiquée. Lors de l'affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l'esprit :</block>
+  <block id="5c6ab1284b6b7a5a7102854a969c99be" category="cell">Systèmes de stockage</block>
+  <block id="6fa6e2299a829e04bba19b10e38dc56c" category="cell">Groupes de parité</block>
+  <block id="7f47ab518e59deb2aed009c3db49ddbd" category="cell">Pool de stockage (RAID), groupes de disques</block>
+  <block id="88bda324c3afff84ed43de6af0cfdc82" category="cell">Pool de stockage (fin, SNAP)</block>
+  <block id="b539957d5ac5efa3c17ecf122d0aef01" category="cell">Groupes de parité externes</block>
+  <block id="8d574b46d24459c09062877c134e14a5" category="cell">Storage Pool(interne), groupes de disques</block>
+  <block id="08aa09e012efb5b185b38b15d4ded675" category="cell">Nœud de stockage → nœud de contrôleur → port</block>
+  <block id="a18b5712dface3f20bce7750886350d3" category="cell">Groupes d'hôtes</block>
+  <block id="5b52c3da7acdc6837b619fa0e7beb98b" category="cell">Mappage de volume et masquage</block>
+  <block id="b4a20e3a6be7e6cd6f8e3dcdd45cb2a8" category="cell">Paires de volume</block>
+  <block id="561b06d0d233f84983c474e6cd225d20" category="paragraph">Remarque : il s'agit uniquement de mappages terminologiques communs et peuvent ne pas représenter tous les cas pour ce collecteur de données.</block>
+  <block id="ea9460ea7afc9634eafcb42137ae3f7b" category="paragraph">Vous devez disposer des éléments suivants pour collecter les données de stock :</block>
+  <block id="d96f025cc7db5db06dd47e78c55d8f1e" category="list-text">Adresse IP ou nom d'hôte du serveur Ops Center hébergeant le composant « Common Services »</block>
+  <block id="8281bdee16e3d690812d635a332bd2cf" category="list-text">Compte utilisateur root/sysadmin et mot de passe existant sur tous les serveurs hébergeant les composants Ops Center. HDS n'a pas implémenté de prise en charge des API REST pour l'utilisation par les utilisateurs LDAP/SSO jusqu'à Ops Center 10.8+</block>
+  <block id="fdfceedcfadaa8fc4e641a9271ff7595" category="section-title">Exigences en matière de performances</block>
+  <block id="8f2fd5a7846dd234e704c033378310ab" category="paragraph">Les exigences suivantes doivent être respectées pour collecter les données de performance :</block>
+  <block id="d3a405c96e9fcea92b0929c28b531e59" category="list-text">Le module HDS Ops Center « Analyzer » doit être installé</block>
+  <block id="e71e6bc0f8f44471c52859083251c1b7" category="list-text">Les baies de stockage doivent alimenter le module « analyseur » Ops Center</block>
+  <block id="8f4ab816532074b60c2865f1089b6d38" category="cell">Adresse IP du centre d'opérations Hitachi</block>
+  <block id="211ba4facc37bc8a85949c753a2fcfbd" category="cell">Adresse IP ou nom de domaine complet du serveur Ops Center hébergeant le composant "Common Services"</block>
+  <block id="8db0f231405345684c1dab98cc049f52" category="cell">Nom d'utilisateur pour le serveur Ops Center.</block>
+  <block id="18bf6f2c111fb8ac2dbe99d3445cbadd" category="cell">Mot de passe utilisé pour le serveur Ops Center.</block>
+  <block id="bc742a3b20c159bc11ea844e4d798e34" category="cell">HTTPS (port 443) est l'option par défaut</block>
+  <block id="d394f4a37cee9ff0a48907bfdacc4a9f" category="cell">Remplacer le port TCP</block>
+  <block id="cd5f584259d833ff583a4824164dfbc3" category="cell">Spécifiez le port à utiliser si ce n'est pas le port par défaut</block>
+  <block id="4908467e27b4191d95f9c906a4d8dcd3" category="cell">Intervalle entre les sondages d'inventaire. La valeur par défaut est 40.</block>
+  <block id="07570853d28c7dc0401130aea747f9fb" category="cell">Indiquez si vous souhaitez inclure ou exclure la liste des matrices ci-dessous lors de la collecte des données.</block>
+  <block id="e245ed75c6b828ee4ae338a39e57c9bc" category="cell">Filtrer la liste des périphériques</block>
+  <block id="0f6a3a02976086b90f48da7e5992aa82" category="cell">Liste séparée par des virgules des numéros de série de périphérique à inclure ou exclure</block>
+  <block id="7cde90d1aea7fffbc619c41625a35c52" category="cell">Intervalle entre les sondages de performances. La valeur par défaut est 300.</block>
+  <block id="5ea8c0bc0f3ff2ad5a8ecd87179c69f1" category="inline-link-macro">Matrice de prise en charge du Data Collector</block>
+  <block id="b13fdf15118fa90916588b42c9eab20f" category="paragraph">Pour plus d'informations, consultez le <block ref="d34993add17c6dd464dba2ccd7f99cbb" category="inline-link-macro-rx"></block> ou dans le <block ref="6bcd41b5488d3cd417d31b80921f5af9" category="inline-link-macro-rx"></block>.</block>
+  <block id="16d15d3f29508a543513f5bccddd527e" category="paragraph">OnCommand Insight est une solution unique qui permet de gérer et d'analyser les ressources interdomaines et multifournisseurs sur l'ensemble des réseaux, du stockage et des serveurs dans des environnements physiques et virtuels. Optimisez votre infrastructure en dimensionnant correctement vos opérations pour répondre aux besoins de l'entreprise grâce à Insight. Et vous pouvez aisément prévoir et planifier vos achats. Il réduit également les risques lors des migrations technologiques complexes, telles que la migration vers un cloud hybride, en identifiant les charges de travail candidates à la migration vers le cloud. Avec Insight, vous pouvez gérer l'infrastructure IT en tant que service de bout en bout en intégrant les ressources dans l'ensemble de la chaîne de livraison des services IT de l'entreprise.</block>
 </blocks>
