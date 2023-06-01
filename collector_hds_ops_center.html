@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head class="at-element-marker">
-  <title>Nœud de stockage E-Series</title>
+  <title>Collecteur de données Hitachi Ops Center</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Nœud de stockage E-Series" />
+  <meta property="og:title" content="Collecteur de données Hitachi Ops Center" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/fr-fr/oncommand-insight/config-admin/e-series-landing-page-terminology-storage-node.html" />
-	<meta property="og:description" content="Termes s"appliquant aux objets ou aux références figurant sur les pages d"accueil des ressources de nœuds de stockage NetApp E-Series." />
+	<meta property="og:url" content="https://docs.netapp.com/fr-fr/oncommand-insight/collector_hds_ops_center.html" />
+	<meta property="og:description" content="Configuration du collecteur de données HDS Ops Center." />
   <meta property="og:image" content="https://docs.netapp.com/fr-fr/oncommand-insight/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Termes s"appliquant aux objets ou aux références figurant sur les pages d"accueil des ressources de nœuds de stockage NetApp E-Series.">
-  <meta name="keywords" content=" "><!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Configuration du collecteur de données HDS Ops Center.">
+  <meta name="keywords" content=" data collector, Hitachi Ops Center"><!-- Icons -->
   <link rel="icon" href="/fr-fr/oncommand-insight/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -32,17 +32,17 @@
   <link rel="stylesheet" href="/fr-fr/oncommand-insight/css/landing-page.css" type="text/css">
   <link rel="stylesheet" href="/fr-fr/oncommand-insight/css/tabbed-blocks.css" type="text/css">
   <!-- Canonical url -->
-  <link rel="canonical" href="https://docs.netapp.com/fr-fr/oncommand-insight/config-admin/e-series-landing-page-terminology-storage-node.html" />
-  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/oncommand-insight/config-admin/e-series-landing-page-terminology-storage-node.html" />
-  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/oncommand-insight/config-admin/e-series-landing-page-terminology-storage-node.html" />
-  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/oncommand-insight/config-admin/e-series-landing-page-terminology-storage-node.html" />
-  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/oncommand-insight/config-admin/e-series-landing-page-terminology-storage-node.html" />
-  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/oncommand-insight/config-admin/e-series-landing-page-terminology-storage-node.html" />
-  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/oncommand-insight/config-admin/e-series-landing-page-terminology-storage-node.html" />
-  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/oncommand-insight/config-admin/e-series-landing-page-terminology-storage-node.html" />
-  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/oncommand-insight/config-admin/e-series-landing-page-terminology-storage-node.html" />
-  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/oncommand-insight/config-admin/e-series-landing-page-terminology-storage-node.html" />
-  <link rel="alternate" hreflang="it" href="https://docs.netapp.com/it-it/oncommand-insight/config-admin/e-series-landing-page-terminology-storage-node.html" />
+  <link rel="canonical" href="https://docs.netapp.com/fr-fr/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="it" href="https://docs.netapp.com/it-it/oncommand-insight/collector_hds_ops_center.html" />
   <link rel='stylesheet' href='/fr-fr/oncommand-insight/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
     function addAdobeLaunch(adobeId) {
       var head = document.getElementsByTagName('head')[0];
@@ -177,7 +177,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/oncommand-insight.fr-fr/issues/new?template=new-from-page.yml&page-url=https://docs.netapp.com/fr-fr/oncommand-insight/config-admin/e-series-landing-page-terminology-storage-node.html&page-title=Nœud de stockage E-Series" class="page-nav-contribute-link" role="button"><img src="/fr-fr/oncommand-insight/images/discuss-sm.svg" alt="" class="github-icon" />Demander de modifier un document</a><a target="_blank" href="https://github.com/NetAppDocs/oncommand-insight/blob/main/config-admin/e-series-landing-page-terminology-storage-node.adoc" class="page-nav-contribute-link" role="button"><img src="/fr-fr/oncommand-insight/images/edit-sm.svg" alt="" class="github-icon" />Modifier sur GitHub</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/fr-fr/oncommand-insight/images/article-sm.svg" alt="" class="github-icon" />Guide des contributeurs</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/oncommand-insight.fr-fr/issues/new?template=new-from-page.yml&page-url=https://docs.netapp.com/fr-fr/oncommand-insight/collector_hds_ops_center.html&page-title=Collecteur de données Hitachi Ops Center" class="page-nav-contribute-link" role="button"><img src="/fr-fr/oncommand-insight/images/discuss-sm.svg" alt="" class="github-icon" />Demander de modifier un document</a><a target="_blank" href="https://github.com/NetAppDocs/oncommand-insight/blob/main/config-admin/collector_hds_ops_center.adoc" class="page-nav-contribute-link" role="button"><img src="/fr-fr/oncommand-insight/images/edit-sm.svg" alt="" class="github-icon" />Modifier sur GitHub</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/fr-fr/oncommand-insight/images/article-sm.svg" alt="" class="github-icon" />Guide des contributeurs</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">SUR CETTE PAGE</div>
@@ -297,23 +297,23 @@
       </div>
 
       <ul class="custom-dropdown-menu"><li>
-          <a href="https://docs.netapp.com/fr-fr/oncommand-insight/config-admin/e-series-landing-page-terminology-storage-node.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
+          <a href="https://docs.netapp.com/fr-fr/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/us-en/oncommand-insight/config-admin/e-series-landing-page-terminology-storage-node.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+          <a href="https://docs.netapp.com/us-en/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">English</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/ja-jp/oncommand-insight/config-admin/e-series-landing-page-terminology-storage-node.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+          <a href="https://docs.netapp.com/ja-jp/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/ko-kr/oncommand-insight/config-admin/e-series-landing-page-terminology-storage-node.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+          <a href="https://docs.netapp.com/ko-kr/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/zh-cn/oncommand-insight/config-admin/e-series-landing-page-terminology-storage-node.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+          <a href="https://docs.netapp.com/zh-cn/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/zh-tw/oncommand-insight/config-admin/e-series-landing-page-terminology-storage-node.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+          <a href="https://docs.netapp.com/zh-tw/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/de-de/oncommand-insight/config-admin/e-series-landing-page-terminology-storage-node.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+          <a href="https://docs.netapp.com/de-de/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/es-es/oncommand-insight/config-admin/e-series-landing-page-terminology-storage-node.html" target="_self"><span translate="no" class="notranslate">Español</span></a>
+          <a href="https://docs.netapp.com/es-es/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">Español</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/it-it/oncommand-insight/config-admin/e-series-landing-page-terminology-storage-node.html" target="_self"><span translate="no" class="notranslate">Italiano</span></a>
+          <a href="https://docs.netapp.com/it-it/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">Italiano</span></a>
         </li></ul>
     </div>
     <!-- End Language Selector -->
@@ -2368,6 +2368,8 @@
             Source de données HDS HiCommand Device Manager
           </a>
           
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
 
 
 
@@ -2383,6 +2385,8 @@
   
 
 
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
 
 
 
@@ -2470,8 +2474,6 @@
 
 
 
-    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
-  
 
 
         </li>
@@ -7136,7 +7138,7 @@
       data-pdf-exists="true" 
       data-pdf-filename="HDS Ops Center"
       data-li-level="5#" 
-      class=" "
+      class="  active "
     ><a class="na-navbar-padding" href="/fr-fr/oncommand-insight/collector_hds_ops_center.html">
         HDS Ops Center
       </a></li><li 
@@ -7164,7 +7166,7 @@
       data-pdf-exists="true" 
       data-pdf-filename="HDS Ops Center"
       data-li-level="4#" 
-      class=" "
+      class="  active "
     ><a class="na-navbar-padding" href="/fr-fr/oncommand-insight/collector_hds_ops_center.html">
         HDS Ops Center
       </a></li><li 
@@ -7350,7 +7352,7 @@
       data-pdf-exists="true" 
       data-pdf-filename="Nœud de stockage E-Series"
       data-li-level="5#" 
-      class="  active "
+      class=" "
     ><a class="na-navbar-padding" href="/fr-fr/oncommand-insight/config-admin/e-series-landing-page-terminology-storage-node.html">
         Nœud de stockage E-Series
       </a></li></ul></li><li 
@@ -9791,14 +9793,14 @@
     </div>
   </span>
 </div><div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Nœud de stockage E-Series</h1>
+  <h1 class="n-doc__component-detail-heading">Collecteur de données Hitachi Ops Center</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2023-03-23 20:47:03 +0000">03/23/2023</time>
+    <time datetime="2023-06-01 18:09:17 +0000">06/01/2023</time>
     
   
 
@@ -9811,55 +9813,179 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>Termes s&#8217;appliquant aux objets ou aux références figurant sur les pages d&#8217;accueil des ressources de nœuds de stockage NetApp E-Series.</p>
+<p>Ce collecteur de données utilise la suite intégrée d&#8217;applications d&#8217;Hitachi Ops Center pour accéder aux données d&#8217;inventaire et de performances de plusieurs périphériques de stockage. Pour la découverte des stocks et de la capacité, l&#8217;installation du centre d&#8217;exploitation doit inclure les composants « Services communs » et « Administrateur ». Pour la collecte des performances, vous devez également avoir déployé « Analyzer ».</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="terminologie-relative-aux-nœuds-de-stockage-e-series">Terminologie relative aux nœuds de stockage E-Series</h2>
+<h2 id="terminologie">Terminologie</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Les termes suivants s&#8217;appliquent aux objets ou aux références disponibles sur les pages d&#8217;accueil des ressources du pool de stockage NetApp E-Series. Un grand nombre de ces termes s&#8217;appliquent également à d&#8217;autres collecteurs de données.</p>
+<p>OnCommand Insight acquiert les informations d&#8217;inventaire suivantes à partir de ce collecteur de données. Pour chaque type d&#8217;actif acquis, la terminologie la plus utilisée pour ce bien est indiquée. Lors de l&#8217;affichage ou du dépannage de ce collecteur de données, gardez la terminologie suivante à l&#8217;esprit :</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Terme du fournisseur/modèle</th>
+<th class="tableblock halign-left valign-top">Terme OnCommand Insight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Systèmes de stockage</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stockage</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Volumétrie</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Volumétrie</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Groupes de parité</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pool de stockage (RAID), groupes de disques</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Disque</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Disque</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pool de stockage</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pool de stockage (fin, SNAP)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Groupes de parité externes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Storage Pool(interne), groupes de disques</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Port</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nœud de stockage → nœud de contrôleur → port</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Groupes d&#8217;hôtes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mappage de volume et masquage</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Paires de volume</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Synchronisation du stockage</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Remarque : il s&#8217;agit uniquement de mappages terminologiques communs et peuvent ne pas représenter tous les cas pour ce collecteur de données.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="exigences-dinventaire">Exigences d&#8217;inventaire</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Vous devez disposer des éléments suivants pour collecter les données de stock :</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Stockage&#8201;&#8212;&#8201;matrice de stockage de laquelle ce nœud fait partie. Obligatoire.</p>
+<p>Adresse IP ou nom d&#8217;hôte du serveur Ops Center hébergeant le composant « Common Services »</p>
 </li>
 <li>
-<p>Partenaire HAUTE DISPONIBILITÉ : sur les plateformes sur lesquelles un nœud basculera vers un nœud et vers un autre nœud, il sera généralement visible ici.</p>
-</li>
-<li>
-<p>State :- santé du nœud. Uniquement disponible lorsque la matrice est suffisamment saine pour être inventoriée par une source de données.</p>
-</li>
-<li>
-<p>Model&#8201;&#8212;&#8201;nom du modèle du nœud.</p>
-</li>
-<li>
-<p>Version&#8201;&#8212;&#8201;nom de version du périphérique.</p>
-</li>
-<li>
-<p>Numéro de série&#8201;&#8212;&#8201;le numéro de série du nœud.</p>
-</li>
-<li>
-<p>Mémoire&#8201;&#8212;&#8201;mémoire de base 2 si disponible.</p>
-</li>
-<li>
-<p>Utilisation&#8201;&#8212;&#8201;l&#8217;utilisation n&#8217;est pas disponible pour le moment pour les baies NetApp E-Series.</p>
-</li>
-<li>
-<p>IOPS&#8201;&#8212;&#8201;calculé en additionnant toutes les IOPS des volumes appartenant exclusivement à ce nœud.</p>
-</li>
-<li>
-<p>Latence : nombre représentant la latence ou le temps de réponse standard de l&#8217;hôte sur ce contrôleur. Les informations exploitables calculent la moyenne pondérée en IOPS à partir des volumes appartenant exclusivement à ce nœud.</p>
-</li>
-<li>
-<p>Débit&#8201;&#8212;&#8201;nombre représentant le débit piloté par l&#8217;hôte sur ce contrôleur. Calculé en additionnant l&#8217;ensemble du débit des volumes appartenant exclusivement à ce nœud.</p>
-</li>
-<li>
-<p>Processeurs&#8201;&#8212;&#8201;nombre de processeurs.</p>
+<p>Compte utilisateur root/sysadmin et mot de passe existant sur tous les serveurs hébergeant les composants Ops Center. HDS n&#8217;a pas implémenté de prise en charge des API REST pour l&#8217;utilisation par les utilisateurs LDAP/SSO jusqu&#8217;à Ops Center 10.8+</p>
 </li>
 </ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="exigences-en-matière-de-performances">Exigences en matière de performances</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Les exigences suivantes doivent être respectées pour collecter les données de performance :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Le module HDS Ops Center « Analyzer » doit être installé</p>
+</li>
+<li>
+<p>Les baies de stockage doivent alimenter le module « analyseur » Ops Center</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="configuration">Configuration</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Champ</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adresse IP du centre d&#8217;opérations Hitachi</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adresse IP ou nom de domaine complet du serveur Ops Center hébergeant le composant "Common Services"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nom d&#8217;utilisateur</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nom d&#8217;utilisateur pour le serveur Ops Center.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mot de passe</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mot de passe utilisé pour le serveur Ops Center.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="configuration-avancée">Configuration avancée</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Champ</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Type de connexion</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTTPS (port 443) est l&#8217;option par défaut</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Remplacer le port TCP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Spécifiez le port à utiliser si ce n&#8217;est pas le port par défaut</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Intervalle d&#8217;interrogation des stocks (min)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Intervalle entre les sondages d&#8217;inventaire. La valeur par défaut est 40.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Choisissez 'exclure' ou 'inclure' pour spécifier une liste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indiquez si vous souhaitez inclure ou exclure la liste des matrices ci-dessous lors de la collecte des données.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Filtrer la liste des périphériques</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Liste séparée par des virgules des numéros de série de périphérique à inclure ou exclure</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Intervalle d&#8217;interrogation des performances (s)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Intervalle entre les sondages de performances. La valeur par défaut est 300.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Pour plus d&#8217;informations, consultez le <a href="concept_requesting_support.html">"Assistance"</a> ou dans le <a href="https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf">"Matrice de prise en charge du Data Collector"</a>.</p>
 </div>
 </div>
 </div>
