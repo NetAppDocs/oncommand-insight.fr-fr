@@ -25,6 +25,6 @@ Il est possible que le produit actuel consomme des ressources matérielles suppl
 * Java 8 pour l'interface utilisateur Java de OnCommand Insight.
 +
 
-NOTE: OnCommand Insight inclut une licence Oracle payante pour Java se 8. Les clients n'ont pas à acheter de licences Java se 8 supplémentaires. Cette licence couvre l'utilisation de Java se 8 avec tous les composants OCI. Reportez-vous à la http://docs.netapp.com/oci-73/topic/com.netapp.ndc.notices/GUID-93BE9A1E-D79E-4A97-87A2-4DBE31372A16.html["Avis"] pour plus de détails.
+NOTE: OnCommand Insight inclut une licence Oracle payante pour Java se 8. Les clients n'ont pas à acheter de licences Java se 8 supplémentaires. Cette licence couvre l'utilisation de Java se 8 avec tous les composants OCI. Reportez-vous à la link:legal-notices.html["Avis"] pour plus de détails.
 
 
