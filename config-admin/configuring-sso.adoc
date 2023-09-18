@@ -20,6 +20,8 @@ Les administrateurs peuvent configurer le serveur OnCommand Insight pour l'accè
 ====
 SSO est disponible pour l'interface utilisateur Web Insight Server uniquement. SSO n'est pas disponible pour les composants Data Warehouse, Reporting ou Java client UI.
 
+OnCommand Insights prend uniquement en charge l'authentification SSO avec *Azure Active Directory*.
+
 ====
 
 
