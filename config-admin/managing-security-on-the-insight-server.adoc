@@ -28,9 +28,14 @@ Vous utilisez le `securityadmin` outil de gestion de la sécurité :
 == Étapes
 
 . Effectuez une connexion à distance au serveur Insight.
-. Démarrez l'outil d'administration de la sécurité en mode interactif : `securityadmin -i`
+. Démarrez l'outil d'administration de la sécurité en mode interactif :
++
+** Vitres - `C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i`
+** Linux : `/bin/oci-securityadmin.sh -i`
 +
 Le système demande des informations d'identification de connexion.
+
+
 
 . Entrez le nom d'utilisateur et le mot de passe d'un compte avec les informations d'identification « Admin ».
 . Sélectionnez *serveur*.
@@ -55,8 +60,6 @@ Restaure la sauvegarde zip du coffre-fort créé. Une fois restaurées, tous les
 [NOTE]
 ====
 La restauration peut être utilisée pour synchroniser les mots de passe et les clés sur plusieurs serveurs, par exemple : - Modifier la clé de cryptage du serveur sur un serveur - Créer une sauvegarde du coffre-fort - Restaurer la sauvegarde du coffre-fort sur le second serveur
-
-+
 
 ====
 ** *Changer la clé de cryptage*
@@ -85,22 +88,23 @@ Modifiez le mot de passe des comptes internes utilisés par Insight. Les options
 
 
 
-+
+
+
 [NOTE]
 ====
 Certains comptes doivent être synchronisés lorsque les mots de passe sont modifiés. Par exemple, si vous modifiez le mot de passe de l'utilisateur 'acquisition' sur le serveur, vous devez modifier le mot de passe de l'utilisateur 'acquisition' sur LAU, RAU et DWH pour qu'il corresponde. De même, lorsque vous modifiez des mots de passe, vous devez sauvegarder votre nouvelle configuration de sécurité afin de pouvoir la restaurer après une mise à niveau ou une installation.
 
 ====
-+
-** *Rétablir les valeurs par défaut*
+* *Rétablir les valeurs par défaut*
 +
 Réinitialise les clés et les mots de passe aux valeurs par défaut. Les valeurs par défaut sont celles fournies lors de l'installation.
 
-** *Quitter*
+* *Quitter*
 +
 Quittez le `securityadmin` outil.
 
++
+.. Choisissez l'option que vous souhaitez modifier et suivez les invites.
 
 
-. Choisissez l'option que vous souhaitez modifier et suivez les invites.
 

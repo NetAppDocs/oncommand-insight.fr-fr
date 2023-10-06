@@ -34,9 +34,14 @@ Vous utilisez le `securityadmin` outil de gestion de la sécurité :
 == Étapes
 
 . Effectuez une connexion à distance au serveur Insight.
-. Démarrez l'outil d'administration de la sécurité en mode interactif (-i).
+. Démarrez l'outil d'administration de la sécurité en mode interactif :
++
+** Vitres - `C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i`
+** Linux : `/bin/oci-securityadmin.sh -i`
 +
 Le système demande des informations d'identification de connexion.
+
+
 
 . Entrez le nom d'utilisateur et le mot de passe d'un compte avec les informations d'identification « Admin ».
 . Sélectionnez *unité d'acquisition locale* pour reconfigurer la configuration de sécurité de l'unité d'acquisition locale.
@@ -61,8 +66,6 @@ Restaure la sauvegarde zip du coffre-fort créé. Une fois restaurées, tous les
 [NOTE]
 ====
 Restore peut être utilisé pour synchroniser les mots de passe et les clés sur plusieurs serveurs, par exemple : - Modifier les clés de cryptage sur LE LAU - Créer une sauvegarde du coffre-fort - Restaurer la sauvegarde du coffre-fort sur chacun des Raus
-
-+
 
 ====
 ** *Changer les clés de cryptage*

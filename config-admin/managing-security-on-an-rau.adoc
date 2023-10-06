@@ -25,10 +25,6 @@ Vous utilisez le `securityadmin` outil de gestion de la sécurité :
 
 Un scénario de mise à jour de la configuration de sécurité pour LE LAU, RAU est de mettre à jour le mot de passe utilisateur 'acquisition' lorsque le mot de passe de cet utilisateur a été modifié sur le serveur. Tous les Raus, et LE LAU utilisent le même mot de passe que celui de l'utilisateur d'acquisition du serveur pour communiquer avec le serveur.
 
-[NOTE]
-====
-
-====
 L'utilisateur 'acquisition' n'existe que sur le serveur Insight. Le RAU ou LAU se connecte en tant qu'utilisateur lorsqu'il se connecte au serveur.
 
 Procédez comme suit pour gérer les options de sécurité d'une unité RAU :
@@ -38,9 +34,14 @@ Procédez comme suit pour gérer les options de sécurité d'une unité RAU :
 == Étapes
 
 . Effectuez une connexion à distance au serveur exécutant la RAU
-. Démarrez l'outil d'administration de la sécurité en mode interactif : `Windows - C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i``Linux - /bin/oci-securityadmin.sh -i`
+. Démarrez l'outil d'administration de la sécurité en mode interactif :
++
+** Vitres - `C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i`
+** Linux : `/bin/oci-securityadmin.sh -i`
 +
 Le système demande des informations d'identification de connexion.
+
+
 
 . Entrez le nom d'utilisateur et le mot de passe d'un compte avec les informations d'identification « Admin ».
 +
@@ -64,8 +65,6 @@ Restaure la sauvegarde zip du coffre-fort créé. Une fois restaurées, tous les
 [NOTE]
 ====
 La restauration peut être utilisée pour synchroniser les mots de passe et les clés sur plusieurs serveurs, par exemple : - Modifier les clés de cryptage sur un serveur - Créer une sauvegarde du coffre-fort - Restaurer la sauvegarde du coffre-fort sur le second serveur
-
-+
 
 ====
 ** *Changer les clés de cryptage*
