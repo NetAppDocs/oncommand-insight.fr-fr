@@ -21,6 +21,11 @@ Pour valider l'installation correcte de l'unité d'acquisition distante, vous po
 . Cliquez sur *unités d'acquisition*.
 . Vérifiez que la nouvelle unité d'acquisition à distance a été enregistrée correctement et qu'elle a un état connecté.
 +
-Si ce n'est pas le cas, vous devez contacter le support technique.
+Si le statut n'est pas connecté, essayez de redémarrer le service. Connectez-vous au système de l'unité d'acquisition distante et exécutez la commande suivante :
+
++
+ oci-service.sh restart acquisition
++
+S'il ne se connecte toujours pas, contactez le support technique.
 
 
