@@ -2,7 +2,7 @@
 permalink: config-admin/configuring-sso.html 
 sidebar: sidebar 
 keywords:  
-summary: 'L"authentification unique \(SSO\) permet aux utilisateurs de votre organisation d"utiliser OnCommand Insight sans avoir besoin d"un compte spécial.' 
+summary: 'L"authentification unique (SSO) permet aux utilisateurs de votre organisation d"utiliser OnCommand Insight sans avoir besoin d"un compte spécial.' 
 ---
 = Configuration de l'authentification unique (SSO)
 :allow-uri-read: 
