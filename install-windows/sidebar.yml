@@ -22,10 +22,6 @@ entries:
     url: "/install-windows/data-warehouse-and-reporting-server-requirements.html"
   - title: Configuration requise pour le serveur de l'unité d'acquisition à distance
     url: "/install-windows/remote-acquisition-unit-server-requirements.html"
-  - title: Exigences en matière de détection des anomalies
-    url: "/install-windows/anomaly-detection-requirements.html"
-  - title: Configuration requise pour l'interface utilisateur Java Insight
-    url: "/install-windows/insight-java-ui-requirements.html"
   - title: Navigateurs pris en charge par OnCommand Insight
     url: "/install-windows/insight-browser-support.html"
 - title: Instructions d'installation de Insight
@@ -49,10 +45,6 @@ entries:
       url: "/install-windows/verifying-the-rau-service.html"
     - title: Validation de l'installation de l'unité d'acquisition distante
       url: "/install-windows/validating-the-rau-installation.html"
-  - title: Installation du logiciel de détection des anomalies
-    url: "/install-windows/installing-the-anomaly-detection-software.html"
-  - title: Installation d'une unité de surveillance Ethernet
-    url: "/install-windows/installing-an-ethernet-monitoring-unit-linux.html"
   - title: Vérification de l'installation
     url: "/install-windows/checking-the-installation.html"
     entries:
@@ -112,8 +104,6 @@ entries:
       url: "/install-windows/back-up-the-security-configuration.html"
     - title: Mise à niveau des serveurs d'unités d'acquisition à distance
       url: "/install-windows/upgrading-remote-acquisition-servers.html"
-    - title: Mise à niveau du moteur de détection des anomalies
-      url: "/install-windows/upgrading-the-anomaly-detection-engine.html"
   - title: Exécution des tâches post-mise à niveau
     url: "/install-windows/completing-post-upgrade-tasks.html"
     entries:
@@ -151,5 +141,3 @@ entries:
     url: "/install-windows/uninstalling-the-data-warehouse-software.html"
   - title: Désinstallation du logiciel de l'unité d'acquisition distante
     url: "/install-windows/uninstalling-the-remote-acquisition-unit-software.html"
-  - title: Désinstallation du moteur de détection des anomalies
-    url: "/install-windows/uninstalling-the-anomaly-detection-engine-linux.html"

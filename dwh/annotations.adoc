@@ -27,7 +27,7 @@ S'assurer que les annotations saisies dans OnCommand Insight sont incluses dans 
 +
 Pour ce faire, vous pouvez exécuter manuellement l'option *Dépannage* > *forcer la mise à jour des annotations pour l'entrepôt de données* ou attendre le prochain processus d'exécution des données transitoires planifiées. Lorsque vous forcez la mise à jour des annotations, vous forcez le serveur OnCommand Insight à calculer et à placer les données transitoires (telles que les valeurs d'annotation) dans les tables de base de données afin que le processus ETL de l'entrepôt de données puisse lire les données. La mise à jour des données d'annotations se produit automatiquement toutes les quinze minutes ; cependant, vous pouvez forcer cette mise à jour à se produire plus fréquemment.
 
-* Vous importez ensuite des annotations dans Data Warehouse en utilisant l'option Data Warehouse**Annotations**.
+* Vous importez ensuite des annotations dans Data Warehouse en utilisant l'option entrepôt de données **Annotations**.
 * Si vous souhaitez inclure des annotations dans les rapports que vous créez à l'aide des outils de création de rapports du portail de rapports OnCommand Insight, vous devez mettre à jour le modèle de métadonnées de rapport OnCommand Insight.
 
 

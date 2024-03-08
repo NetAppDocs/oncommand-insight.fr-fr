@@ -165,7 +165,9 @@ Il n'y a pas d'espace entre les options et leurs valeurs.
 ====
 Les mots-clés suivants sont réservés et empêchent les utilisateurs de les spécifier comme noms d'annotation : - application - priorité_application - locataire - ligne_de_métier - unité_commerciale - des erreurs de projet sont générées si vous essayez d'importer un type d'annotation à l'aide d'un des mots-clés réservés. Si vous avez créé des noms d'annotations à l'aide de ces mots clés, vous devez les modifier pour que l'utilitaire d'importation fonctionne correctement.
 
+====
 +
 
-====
+NOTE: L'utilitaire d'importation d'annotations nécessite Java 8 ou Java 11. Assurez-vous que l'une de ces installations est installée avant d'exécuter l'utilitaire d'importation. Il est recommandé d'utiliser la dernière version d'OpenJDK 11.
+
 

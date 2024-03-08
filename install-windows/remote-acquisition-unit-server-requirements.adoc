@@ -2,7 +2,7 @@
 permalink: install-windows/remote-acquisition-unit-server-requirements.html 
 sidebar: sidebar 
 keywords: redhat 
-summary: 'Vous devez installer une unité d"acquisition à distance \(RAU\) pour acquérir des informations à partir de périphériques SAN situés derrière un pare-feu, sur un site distant, sur un réseau privé ou dans des segments de réseau différents. Avant d"installer le RAU, assurez-vous que votre environnement est conforme aux exigences du système d"exploitation RAU, du processeur, de la mémoire et de l"espace disque.' 
+summary: 'Vous devez installer une unité d"acquisition à distance (RAU) pour acquérir des informations à partir de périphériques SAN situés derrière un pare-feu, sur un site distant, sur un réseau privé ou dans différents segments de réseau. Avant d"installer le RAU, assurez-vous que votre environnement est conforme aux exigences du système d"exploitation RAU, du processeur, de la mémoire et de l"espace disque.' 
 ---
 = Configuration requise pour le serveur de l'unité d'acquisition à distance
 :allow-uri-read: 
@@ -22,7 +22,7 @@ Vous devez installer une unité d'acquisition à distance (RAU) pour acquérir d
  a| 
 Système d'exploitation
  a| 
-Un ordinateur exécutant Microsoft Windows Server 2012, 2012 R2, 2016 ou 2019 64 bits avec le dernier Service Pack
+Un ordinateur exécutant Microsoft Windows Server 2016, 2019 ou 2022 64 bits, avec le dernier Service Pack.
 
 
 

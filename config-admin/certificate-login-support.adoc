@@ -15,8 +15,6 @@ OnCommand Insight prend en charge l'utilisation de cartes à puce (CAC) et de ce
 
 Après avoir configuré le système pour prendre en charge le contrôle d'admission des appels et les certificats, la navigation vers une nouvelle session de OnCommand Insight entraîne l'affichage d'une boîte de dialogue native qui fournit à l'utilisateur une liste de certificats personnels à choisir. Ces certificats sont filtrés en fonction de l'ensemble des certificats personnels émis par les autorités de certification approuvées par le serveur OnCommand Insight. Le plus souvent, il y a un seul choix. Par défaut, Internet Explorer ignore cette boîte de dialogue s'il n'y a qu'une seule option.
 
-Pour le client Java, une boîte de dialogue personnalisée s'affiche avec tous les certificats personnels, quel que soit l'émetteur.
-
 [NOTE]
 ====
 Pour les utilisateurs CAC, les cartes à puce contiennent plusieurs certificats, dont un seul peut correspondre à l'autorité de certification approuvée. Le certificat CAC pour `identification` doit être utilisé.

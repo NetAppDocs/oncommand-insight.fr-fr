@@ -17,7 +17,7 @@ Cette FAQ répond aux questions les plus courantes sur la résolution des probl�
 
 == Comment puis-je créer une liste de toutes les ressources gourmandes de mon environnement ?
 
-Les analyses de corrélation du logiciel OCI permettent d'identifier les ressources gourmandes et peu performantes pour un chemin de service donné. L'analyse générée par la fonction de corrélation est effectuée en temps réel pendant la visualisation de chaque objet. L'analyse proposée réduit considérablement le temps nécessaire au dépannage des problèmes de performances et à l'identification de l'origine des problèmes. L'exploration des violations générées des règles de performance définies constitue un point d'entrée à la découverte des ressources gourmandes ou dégradées. Les fonctionnalités de détection des anomalies du logiciel OCI peuvent également être utilisées comme une approche plus proactive pour identifier les ressources gourmandes ou dégradées de l'infrastructure applicative avant qu'elles ne perturbent les services. Les widgets et les tableaux de bord qui utilisent les dernières fonctionnalités de requête permettent de filtrer, trier et visualiser les ressources avec des valeurs d'IOPS (gourmandes), d'utilisation ou de latence supérieures à celles attendues.
+Les analyses de corrélation du logiciel OCI permettent d'identifier les ressources gourmandes et peu performantes pour un chemin de service donné. L'analyse générée par la fonction de corrélation est effectuée en temps réel pendant la visualisation de chaque objet. L'analyse proposée réduit considérablement le temps nécessaire au dépannage des problèmes de performances et à l'identification de l'origine des problèmes. L'exploration des violations générées des règles de performance définies constitue un point d'entrée à la découverte des ressources gourmandes ou dégradées. Les widgets et les tableaux de bord qui utilisent les dernières fonctionnalités de requête permettent de filtrer, trier et visualiser les ressources avec des valeurs d'IOPS (gourmandes), d'utilisation ou de latence supérieures à celles attendues.
 
 
 
@@ -28,8 +28,6 @@ Oui. Le dépannage des problèmes de performance dans OCI peut être abordé de 
 Le tableau de bord des violations d'OCI permet aux utilisateurs de hiérarchiser les efforts en fonction du nombre d'événements, de la durée et de l'heure. Différents types d'alertes sont par exemple la latence, les IOPS, l'utilisation, la gravité, l'unité commerciale ou même l'application associée.
 
 Les analyses de corrélation d'OCI aident les administrateurs à comparer les objets associés aux ressources impactées et à déterminer leur impact sur les IOPS, la latence, l'utilisation, le processeur et les crédits BB.
-
-Les dernières avancées d'OCI en matière de détection des anomalies et de surveillance ethernet offrent une approche plus agressive et proactive pour détecter les comportements déviants des ressources avant qu'elles ne deviennent des interruptions ou des pannes de service.
 
 La technologie de requête et les tableaux de bord widget d'OCI permettent de définir des détails précis dans des vues organisées qui ciblent les zones problématiques du Datacenter.
 

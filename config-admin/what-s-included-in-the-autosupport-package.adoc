@@ -20,13 +20,10 @@ Le pack AutoSupport comprend les éléments suivants :
 * Sources de données et paramètres de source de données
 * Packs d'intégration
 * Unités d'acquisition à distance
-* Unités de surveillance Ethernet
 * Paramètres ASUP/proxy
 * Paramètres d'emplacement de sauvegarde
 * Paramètres d'emplacement d'archivage
 * Paramètres de notification
-* Scores et dispositifs de détection des anomalies
-* Paramètres de l'application de détection des anomalies
 * Utilisateurs
 * Règles de performance
 * Entités commerciales et applications

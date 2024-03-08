@@ -2,7 +2,7 @@
 permalink: install-linux/oncommand-insight-installation-instructions.html 
 sidebar: sidebar 
 keywords:  
-summary: 'L"installation nécessite l"installation de plusieurs composants OnCommand Insight, d"Insight Server, d"entrepôt de données et de détection d"anomalie.' 
+summary: 'L"installation nécessite l"installation de plusieurs composants OnCommand Insight, Insight Server et Data Warehouse.' 
 ---
 = Instructions d'installation de Insight
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'L"installation nécessite l"installation de plusieurs composants OnCom
 
 
 [role="lead"]
-L'installation nécessite l'installation de plusieurs composants OnCommand Insight, d'Insight Server, d'entrepôt de données et de détection d'anomalie.
+L'installation nécessite l'installation de plusieurs composants OnCommand Insight, Insight Server et Data Warehouse.
 
 L'installation comprend les tâches principales suivantes :
 
@@ -20,7 +20,6 @@ L'installation comprend les tâches principales suivantes :
 * Installation des licences
 * Vous pouvez également installer DWH et Reporting (doit être installé sur une machine ou une machine virtuelle distincte). La création de rapports nécessite Microsoft Windows.)
 * En option, l'installation d'une unité d'acquisition à distance (RAU), qui acquiert des informations à partir des ressources de votre périphérique qui résident derrière un pare-feu, se trouve sur un site distant ou se trouve sur un réseau privé
-* Installation facultative du moteur de détection des anomalies (doit être installé sur une machine ou une machine virtuelle distincte).
 
 
 Après l'installation, vous devez configurer Insight pour acquérir des informations sur votre environnement. Les tâches requises sont décrites dans le _Guide de configuration et d'administration de OnCommand Insight_.

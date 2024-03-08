@@ -94,12 +94,6 @@ Vos annotations apparaissent dans la liste de la page Annotations.
 
 
 
-
-
-== Une fois que vous avez terminé
-
-Dans l'interface utilisateur Web, l'annotation est immédiatement disponible. Pour utiliser l'annotation dans le client Java, vous devez redémarrer tout client Java en cours d'exécution avant de pouvoir appliquer l'annotation. Si vous ajoutez ou modifiez des valeurs d'annotation, ou si vous supprimez un type d'annotation, vous n'avez pas besoin de redémarrer le client Java.
-
 *Informations connexes*
 
 link:importing-and-exporting-user-data.md#["Importation et exportation des données utilisateur"]

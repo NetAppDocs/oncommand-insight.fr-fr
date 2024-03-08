@@ -102,7 +102,7 @@ Client supplémentaire
  a| 
 Oui.
  a| 
-Pas de données ou de graphiques de performances ; pas de widgets liés à la détection des anomalies
+Pas de données ou de graphiques de performances
 
 
 

@@ -39,7 +39,6 @@ Des pare-feu logiciels peuvent être installés sur les serveurs Insight. Les «
 * Unités d'acquisition à distance cherchant à se connecter au serveur Insight
 * Serveurs OCI DWH avec connecteurs sur ce serveur Insight.
 * Toutes les interactions de programmation avec l'API REST Insight
-* Moteur de détection des anomalies cherchant à obtenir les données de performances Insight pour le rendu des informations d'anomalie
 
 
 Nous recommandons à tous ceux qui souhaitent implémenter le pare-feu au niveau de l'hôte Insight Server d'autoriser l'accès HTTPS à tous les blocs IP du réseau d'entreprise.

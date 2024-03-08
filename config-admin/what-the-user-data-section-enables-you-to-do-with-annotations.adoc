@@ -37,7 +37,7 @@ La boîte de dialogue Ajouter une annotation s'affiche.
 
 . Cliquez sur *Enregistrer*.
 +
-L'annotation est attribuée à la ressource. Vous pouvez filtrer ultérieurement les ressources par annotation à l'aide d'une requête. Si vous souhaitez regrouper des actifs par annotations, vous devez utiliser l'interface utilisateur Java.
+L'annotation est attribuée à la ressource. Vous pouvez filtrer ultérieurement les ressources par annotation à l'aide d'une requête.
 
 . Si vous souhaitez modifier la valeur de l'annotation après l'avoir attribuée, cliquez sur image:../media/change-annotation-value.gif[""] et sélectionnez une autre valeur.
 +

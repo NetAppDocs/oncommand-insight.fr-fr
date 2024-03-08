@@ -34,12 +34,6 @@ Vous pouvez associer des applications aux ressources suivantes : hôtes, machine
 +
 Après avoir défini une application, la page applications affiche le nom de l'application, sa priorité et, le cas échéant, l'entité métier associée à l'application.
 
-+
-[NOTE]
-====
-Si le moteur de détection des anomalies est installé, la page Tableau de bord des applications affiche également un score d'anomalie pour l'application. Pour plus d'informations sur l'installation et la configuration du moteur de détection d'anomalies, reportez-vous au _Guide de configuration et d'administration de OnCommand Insight_.
-
-====
 . Cliquez sur *Ajouter*.
 +
 La boîte de dialogue Ajouter une application s'affiche.

@@ -125,7 +125,7 @@ Cela signifie que si vos administrateurs Active Directory poussent les certifica
 
 ** Java et Mozilla Firefox ont leurs propres magasins de certificats.
 +
-Si vos administrateurs système n'automatisent pas l'ingestion des certificats CA dans les magasins de certificats approuvés de ces applications, l'utilisation du client Insight Java ou du navigateur Firefox peut continuer à générer des avertissements de certificat en raison d'un certificat non approuvé, même lorsque le certificat auto-signé a été remplacé. La mise en place de la chaîne de certificats de votre organisation dans la trustore est une exigence supplémentaire.
+Si vos administrateurs système n'automatisent pas l'ingestion des certificats CA dans les magasins de certificats approuvés de ces applications, l'utilisation du navigateur Firefox peut continuer à générer des avertissements de certificat en raison d'un certificat non approuvé, même lorsque le certificat auto-signé a été remplacé. La mise en place de la chaîne de certificats de votre organisation dans la trustore est une exigence supplémentaire.
 
 
 

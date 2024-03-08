@@ -45,28 +45,6 @@ Traitement des données d'inventaire
 
 
  a| 
-Moteur de détection des anomalies
- a| 
-Capacité du moteur
- a| 
-Nombre d'applications surveillées pour la détection d'une anomalie
- a| 
-Nombre et pourcentage d'applications surveillées sur 48 applications possibles.
-
-
-
- a| 
-Moteur de détection des anomalies
- a| 
-État du moteur
- a| 
-État du moteur de détection des anomalies
- a| 
-« OK » si aucune erreur n'est détectée, sinon affiche des informations sur toute erreur trouvée. Voir la `prelert.log` pour plus d'informations.
-
-
-
- a| 
 DWH
  a| 
 Sauvegarde
@@ -263,12 +241,4 @@ Sauvegarde hebdomadaire
 « OK » si la sauvegarde hebdomadaire est activée, sinon affiche « sauvegarde hebdomadaire non activée ».
 
 |===
-+
-[NOTE]
-====
-Si le moteur de détection d'anomalies affiche une erreur, voir `prelert.log` Fichier à l'emplacement suivant pour plus d'informations : - Windows : `disk drive:\install directory\SANscreen\Wildfly\Standalone\Logs`- Linux : `/var/log/netapp/oci/wildfly/`
-
-+
-
-====
 
