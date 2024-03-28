@@ -44,4 +44,8 @@ https://www.netapp.com/us/legal/privacypolicy/index.aspx[]
 
 Les fichiers de notification fournissent des informations sur les droits d'auteur et les licences de tiers utilisés dans le logiciel NetApp.
 
-https://library.netapp.com/ecm/ecm_download_file/ECMLP2683210["Avis pour OnCommand Insight 7.3"^]
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2887138["Avis pour OnCommand Insight 7.3.15"^]
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2882721["Avis pour OnCommand Insight 7.3.14"^]
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2881199["Avis pour OnCommand Insight 7.3.13"^]
