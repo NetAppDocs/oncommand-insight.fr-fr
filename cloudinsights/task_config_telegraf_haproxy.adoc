@@ -1,0 +1,263 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_haproxy.html 
+keywords: telegraf, installation, install, haproxy 
+summary: Configuration du collecteur de données HABProxy 
+---
+= Collecteur de données HAProxy
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights utilise ce collecteur de données pour recueillir des mesures auprès de HABProxy.
+
+
+
+== Installation
+
+. Dans *observabilité > Collectors*, cliquez sur *+Data Collector*. Choisissez HASProxy.
++
+Sélectionnez le système d'exploitation ou la plate-forme sur laquelle l'agent Telegraf est installé.
+
+. Si vous n'avez pas déjà installé un agent pour la collecte ou si vous souhaitez installer un agent pour un autre système d'exploitation ou plate-forme, cliquez sur _Afficher les instructions_ pour développer le link:task_config_telegraf_agent.html["Installation de l'agent"] instructions.
+. Sélectionnez la clé d'accès de l'agent à utiliser avec ce collecteur de données. Vous pouvez ajouter une nouvelle clé d'accès à l'agent en cliquant sur le bouton * + clé d'accès à l'agent*. Meilleure pratique : utilisez une clé d'accès d'agent différente uniquement lorsque vous souhaitez regrouper des collecteurs de données, par exemple, par OS/plate-forme.
+. Suivez les étapes de configuration pour configurer le collecteur de données. Les instructions varient en fonction du type de système d'exploitation ou de plate-forme utilisé pour collecter des données.
+
+
+image:HAProxyDCConfigLinux.png["Configuration HABProxy"]
+
+
+
+== Configuration
+
+Le plug-in de Telegraf pour HAProxy repose sur l'activation des statistiques HAProxy. Il s'agit d'une configuration intégrée dans HAProxy, mais elle n'est pas prête à l'emploi. Lorsqu'il est activé, HAProxy expose un noeud final HTML qui peut être affiché sur votre navigateur ou gratté pour extraction de l'état de toutes les configurations HAProxy.
+
+
+
+=== Compatibilité :
+
+La configuration a été développée par HAProxy version 1.9.4.
+
+
+
+=== Configuration :
+
+Pour activer les statistiques, modifiez votre fichier de configuration hproxy et ajoutez les lignes suivantes après la section « attaques », en utilisant votre propre utilisateur/mot de passe et/ou URL de proxy :
+
+[listing]
+----
+stats enable
+stats auth myuser:mypassword
+stats uri  /haproxy?stats
+----
+Voici un exemple de fichier de configuration simplifié avec des statistiques activées :
+
+[listing]
+----
+global
+  daemon
+  maxconn 256
+
+defaults
+  mode http
+  stats enable
+  stats uri /haproxy?stats
+  stats auth myuser:mypassword
+  timeout connect 5000ms
+  timeout client 50000ms
+  timeout server 50000ms
+
+frontend http-in
+  bind *:80
+  default_backend servers
+
+frontend http-in9080
+  bind *:9080
+  default_backend servers_2
+
+backend servers
+  server server1 10.128.0.55:8080 check ssl verify none
+  server server2 10.128.0.56:8080 check ssl verify none
+
+backend servers_2
+  server server3 10.128.0.57:8080 check ssl verify none
+  server server4 10.128.0.58:8080 check ssl verify none
+----
+Pour obtenir des instructions complètes et à jour, reportez-vous au link:https://cbonte.github.io/haproxy-dconv/1.8/configuration.html#4-stats%20enable["Documentation HABProxy"].
+
+
+
+== Objets et compteurs
+
+Les objets suivants et leurs compteurs sont collectés :
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Objet : | Identifiants : | Attributs : | Points de données : 
+
+
+| HAVANCHAproxy frontal | Espace de noms
+Adresse
+Proxy | IP du nœud
+Nom du nœud
+ID proxy
+Mode
+ID de processus
+Limite de débit des sessions
+ID du serveur
+Limite de sessions
+État | Octets dans
+Octets sortis
+Accès au cache
+Recherches de cache
+Octets de compression contournés
+Octets de compression dans
+Sortie des octets de compression
+Réponses de compression
+Débit de connexion
+Débit de connexion max
+Total des connexions
+Demandes refusées par la règle de connexion
+Demandes refusées par des questions de sécurité
+Réponses refusées par des questions de sécurité
+Demandes refusées par la règle de session
+Demande des erreurs
+Réponses 1xx
+Réponses 2xx
+Réponses 3xx
+Réponses 4xx
+Réponses 5xx
+Réponses autres
+Demandes interceptées
+Taux de sessions
+Taux de sessions max
+Taux de demandes
+Taux max. Des demandes
+Total des demandes
+Sessions
+Nombre max. De sessions
+Total des sessions
+Les demandes sont réécrites 
+
+
+| Serveur HAProxy | Espace de noms
+Adresse
+Proxy
+Serveur | IP du nœud
+Nom du nœud
+Vérifiez l'heure de fin
+Vérifiez la configuration de l'automne
+Vérifiez la valeur d'intégrité
+Vérifier la configuration de montée
+Vérifier l'état
+ID proxy
+Heure de la dernière modification
+Heure de la dernière session
+Mode
+ID de processus
+ID du serveur
+État
+Poids | Serveurs actifs
+Serveurs de sauvegarde
+Octets dans
+Octets sortis
+Cochez Downs
+Échec de la vérification
+Le client est abandonné
+Connexions
+Temps moyen de connexion
+Temps d'arrêt total
+Réponses refusées
+Erreurs de connexion
+Erreurs de réponse
+Réponses 1xx
+Réponses 2xx
+Réponses 3xx
+Réponses 4xx
+Réponses 5xx
+Réponses autres
+Total du serveur sélectionné
+File d'attente actuelle
+Max. De la file d'attente
+Durée moyenne de la file d'attente
+Sessions par seconde
+Nombre max. De sessions par seconde
+Réutilisation des connexions
+Temps de réponse moyen
+Sessions
+Nombre max. De sessions
+Abandon du transfert de serveur
+Total des sessions
+Durée moyenne totale des sessions
+Demande des correctifs
+Demandes de nouvelles tentatives
+Les demandes sont réécrites 
+
+
+| Système back-end HANProxy | Espace de noms
+Adresse
+Proxy | IP du nœud
+Nom du nœud
+ID proxy
+Heure de la dernière modification
+Heure de la dernière session
+Mode
+ID de processus
+ID du serveur
+Limite de sessions
+État
+Poids | Serveurs actifs
+Serveurs de sauvegarde
+Octets dans
+Octets sortis
+Accès au cache
+Recherches de cache
+Cochez Downs
+Le client est abandonné
+Octets de compression contournés
+Octets de compression dans
+Sortie des octets de compression
+Réponses de compression
+Connexions
+Temps moyen de connexion
+Temps d'arrêt total
+Demandes refusées par des questions de sécurité
+Réponses refusées par des questions de sécurité
+Erreurs de connexion
+Erreurs de réponse
+Réponses 1xx
+Réponses 2xx
+Réponses 3xx
+Réponses 4xx
+Réponses 5xx
+Réponses autres
+Total du serveur sélectionné
+File d'attente actuelle
+Max. De la file d'attente
+Durée moyenne de la file d'attente
+Sessions par seconde
+Nombre max. De sessions par seconde
+Total des demandes
+Réutilisation des connexions
+Temps de réponse moyen
+Sessions
+Nombre max. De sessions
+Abandon du transfert de serveur
+Total des sessions
+Durée moyenne totale des sessions
+Demande des correctifs
+Demandes de nouvelles tentatives
+Les demandes sont réécrites 
+|===
+
+
+== Dépannage
+
+Pour plus d'informations, consultez le link:concept_requesting_support.html["Assistance"] page.

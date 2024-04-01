@@ -1,0 +1,194 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_elasticsearch.html 
+keywords: telegraf, installation, install, ElasticSearch 
+summary: Configuration du collecteur de données Elasticsearch 
+---
+= Collecteur de données Elasticsearch
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights utilise ce collecteur de données pour collecter des mesures à partir du service Elasticsearch.
+
+. Dans *observabilité > Collectors*, cliquez sur *+Data Collector*. Choisissez Elasticsearch.
++
+Sélectionnez le système d'exploitation ou la plate-forme sur laquelle l'agent Telegraf est installé.
+
+. Si vous n'avez pas déjà installé un agent pour la collecte ou si vous souhaitez installer un agent pour un autre système d'exploitation ou plate-forme, cliquez sur _Afficher les instructions_ pour développer le link:task_config_telegraf_agent.html["Installation de l'agent"] instructions.
+. Sélectionnez la clé d'accès de l'agent à utiliser avec ce collecteur de données. Vous pouvez ajouter une nouvelle clé d'accès à l'agent en cliquant sur le bouton * + clé d'accès à l'agent*. Meilleure pratique : utilisez une clé d'accès d'agent différente uniquement lorsque vous souhaitez regrouper des collecteurs de données, par exemple, par OS/plate-forme.
+. Suivez les étapes de configuration pour configurer le collecteur de données. Les instructions varient en fonction du type de système d'exploitation ou de plate-forme utilisé pour collecter des données.
+
+
+image:ElasticsearchDCConfigLinux.png["Configuration d'Elasticsearch"]
+
+
+
+== Configuration
+
+Vous trouverez des informations dans le link:https://www.elastic.co/guide/index.html["Documentation relative à Elasticsearch"].
+
+
+
+== Objets et compteurs
+
+Les objets suivants et leurs compteurs sont collectés :
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Objet : | Identifiants : | Attributs : | Points de données : 
+
+
+| Cluster Elasticsearch | Espace de noms
+Cluster | IP du nœud
+Nom du nœud
+État du cluster | Nombre de nœuds principaux
+Nombre total de nœuds
+Données du système de fichiers disponibles (octets)
+Fichiers libres (octets)
+Total des données du système de fichiers (octets)
+Threads JVM
+Les processus affectés par le système d'exploitation
+Processeurs disponibles pour le système d'exploitation
+OS Mem Free (octets)
+OS Mem gratuit
+Total EM OS (octets)
+OS Mem utilisé (octets)
+OS Mem utilisé
+Processeur de traitement
+Taille de fin des indices (octets)
+Nombre d'indices
+Index nombre de documents
+Index documents supprimés
+Index suppression des données de champ
+Taille de la mémoire des données du champ d'index (octets)
+Nombre de cache de requête d'index
+Taille du cache des index
+Nombre de segments d'index
+Index segments valeurs doc mémoire (octets)
+Index Indice de Shards Index primaires moyenne
+Index indices Shards Index primaires Max
+Index indices Shards Index primaires min
+Index Shards Index Replication AVG
+Index Shards Index Replication Max
+Index Shards Index réplication min
+Indices Shards moy
+Indices Shards Max
+Indices Shards primaires
+Index Shards Replication
+Indices Shards Total
+Taille du magasin d'index (octets) 
+
+
+| Nœud Elasticsearch | Espace de noms
+Cluster
+ID de nœud ES
+IP du nœud ES
+Nœud ES | ID de zone | Apprentissage machine activé
+Mémoire d'apprentissage machine
+Nombre max. De tâches ouvertes d'apprentissage machine
+X-Pack installé
+Taille estimée de la comptabilité des disjoncteurs (octets)
+Taille de la limite comptable des disjoncteurs (octets)
+Coûts indirects comptables brise-roches
+Déclenchement de la comptabilité Breakers
+Taille estimée des données de champ des disjoncteurs (octets)
+Taille limite des données du champ Breakers (octets)
+Frais généraux de données de terrain des disjoncteurs
+Déclenchement des données de terrain des disjoncteurs
+Taille de stimulation en vol des disjoncteurs (octets)
+Taille limite en vol des disjoncteurs (octets)
+Brise-roches en vol
+Disjoncteurs en vol déclenché
+Taille estimée du parent des disjoncteurs (octets)
+Taille limite parent des disjoncteurs (octets)
+Frais généraux des disjoncteurs parents
+Disjoncteurs parent déclenché
+Taille estimée de la demande de disjoncteurs (octets)
+Taille limite de demande de disjoncteurs (octets)
+Frais généraux de demande de disjoncteurs
+Demande de disjoncteurs déclenchée
+Données du système de fichiers disponibles (octets)
+Fichiers libres (octets)
+Total des données du système de fichiers (octets)
+Système de fichiers IO Stats périphériques Ops
+Systèmes de fichiers IO Stats périphériques Read (Ko)
+Système de fichiers IO Stats périphériques Read Ops
+Système de fichiers IO Stats périphériques Erite (kb)
+Opérations d'écriture des unités d'E/S de système de fichiers
+Opérations totales des statistiques d'E/S du système de fichiers
+Statistiques d'E/S du système de fichiers - lecture totale (Ko)
+Opérations de lecture des statistiques d'E/S du système de fichiers
+Écriture totale des statistiques d'E/S du système de fichiers (Ko)
+Opérations d'écriture des statistiques d'E/S du système de fichiers
+Estimation de l'utilisation la plus faible disponible du système de fichiers (octets)
+Total estimation de la moins-utilisation du système de fichiers (octets)
+Disque utilisé le moins utilisé du système de fichiers
+Estimation de l'utilisation la plus disponible du système de fichiers (octets)
+Total estimation de l'utilisation la plus utilisée du système de fichiers (octets)
+Disque utilisé le plus utilisé pour l'utilisation du système de fichiers
+Total disponible du système de fichiers (octets)
+Total libre du système de fichiers (octets)
+Total du système de fichiers (octets)
+Taille de fin des indices (octets)
+Index nombre de documents
+Index documents supprimés
+Index suppression des données de champ
+Taille de la mémoire des données du champ d'index (octets)
+Indices rinçage périodique
+Index Flush Total
+Index temps total de vidage
+Les indices sont à jour
+Index GET existe heure
+Index GET existe Total
+Index obtenir Total
+Index indexation Supprimer le total
+Index Index Index Index Total
+Index Indexing Noop Update Total
+Index temps d'accélération de l'indexation
+HTTP courant ouvert
+Total HTTP ouvert
+Nombre direct de pools de mémoire tampon JVM
+Nombre actuel de classes JVM chargées
+Comptage de l'ancienne collection de collecteurs GC JVM
+JVM Mem Heap validé (octets)
+Charge moyenne du CPU du système d'exploitation : 15 M.
+PROCESSEUR DU SYSTÈME D'EXPLOITATION
+OS Mem Free (octets)
+Permutation libre du système d'exploitation (octets)
+Processeur de traitement
+Total processeur de traitement
+Descripteurs de fichier maximum de processus
+Total virtuel du mém. De processus (octets)
+Analyse du pool de threads active
+Analyse du pool de threads terminée
+Analyse du pool de threads la plus grande
+File d'attente d'analyse du pool de threads
+Analyse de pool de threads rejetée
+Pool de threads analyser les threads
+La carte d'extraction du pool de threads a démarré actif
+La carte d'extraction du pool de threads a démarré
+La carte de récupération de pool de threads a commencé le plus grand
+File d'attente démarrée de l'extraction de la réserve de threads
+La carte d'extraction du pool de threads a démarré rejetée
+Shads de démarrage de l'extraction de pool de threads
+Réserve de threads Fetch Shard Store actif
+Le magasin de la réserve de threads est terminé
+Transport RX (par seconde)
+Octets RX de transport (par seconde)
+Serveur de transport ouvert
+Transport TX (par seconde)
+Transport octets TX (par seconde) 
+|===
+
+
+== Dépannage
+
+Pour plus d'informations, consultez le link:concept_requesting_support.html["Assistance"] page.

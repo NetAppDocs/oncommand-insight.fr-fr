@@ -1,0 +1,95 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_dcos.html 
+keywords: telegraf, installation, install, dcos 
+summary: configuration dco 
+---
+= Data Collector DC/OS
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights utilise ce collecteur de données pour recueillir des mesures à partir du DC/OS.
+
+
+
+== Installation
+
+. Dans *observabilité > Collectors*, cliquez sur *+Data Collector*. Choisissez *DC/OS*.
++
+Si vous n'avez pas configuré un agent pour la collecte, vous êtes invité à le faire link:task_config_telegraf_agent.html["installez un agent"] dans votre environnement.
+
++
+Si un agent est déjà configuré, sélectionnez le système d'exploitation ou la plate-forme approprié et cliquez sur *Continuer*.
+
+. Suivez les instructions de l'écran Configuration du DC/OS pour configurer le collecteur de données. Les instructions varient en fonction du type de système d'exploitation ou de plate-forme utilisé pour collecter des données.
+
+
+
+
+== Configuration
+
+Les informations de configuration sont disponibles dans le https://docs.mesosphere.com["Documentation DC/OS"].
+
+
+
+== Objets et compteurs
+
+Les objets suivants et leurs compteurs sont collectés :
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Objet | Identifiants | Attributs | Points de données 
+
+
+| dco_node | dco_container
+dco_app | cluster
+nom d'hôte
+chemin (champs du système de fichiers uniquement)
+interface (champs réseau uniquement)
+id_conteneur
+nom_de_la_tâche | disponibilité du système (flottement)
+cœurs_cpu (flottant)
+total_cpu (flottant)
+cpu_user (flottant)
+système_cpu (flottant)
+cpu_idle (flottement)
+cpu_wait (flottement)
+charge_1 min (flottement)
+charge_5min (flottement)
+charge_15 min (flottement)
+nombre_d'octets_total_capacité_système_fichiers (int)
+nombre_d'octets_utilisés_capacité_du_système_fichiers (int)
+filesystem_capacity_free_bytes (int)
+filesystem_inode_total (flottant)
+filesystem_inode_used (float)
+filesystem_inode_free (float)
+memory_total_octets (int)
+memory_free_bytes (int)
+memory_buffers_bytes (int)
+memory_cached_bytes (int)
+swap_total_octets (int)
+swap_free_bytes (int)
+swap_used_bytes (int)
+network_in_bytes (int)
+network_out_bytes (int)
+network_in_packets (float)
+network_out_packets (float)
+network_in_dest (flottement)
+network_out_dest (flottement)
+network_in_errors (float)
+network_out_errors (float)
+process_count (flottement) 
+|===
+
+
+== Dépannage
+
+Vous trouverez des informations supplémentaires dans le link:concept_requesting_support.html["Assistance"] page.

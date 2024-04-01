@@ -1,0 +1,114 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_jvm.html 
+keywords: telegraf, installation, install, jvm 
+summary: Configuration du collecteur de données JVM 
+---
+= Collecteur de données JVM
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights utilise ce collecteur de données pour collecter des mesures à partir de JVM.
+
+
+
+== Installation
+
+. Dans *observabilité > Collectors*, cliquez sur *+Data Collector*. Choisissez JVM.
++
+Sélectionnez le système d'exploitation ou la plate-forme sur laquelle l'agent Telegraf est installé.
+
+. Si vous n'avez pas déjà installé un agent pour la collecte ou si vous souhaitez installer un agent pour un autre système d'exploitation ou plate-forme, cliquez sur _Afficher les instructions_ pour développer le link:task_config_telegraf_agent.html["Installation de l'agent"] instructions.
+. Sélectionnez la clé d'accès de l'agent à utiliser avec ce collecteur de données. Vous pouvez ajouter une nouvelle clé d'accès à l'agent en cliquant sur le bouton * + clé d'accès à l'agent*. Meilleure pratique : utilisez une clé d'accès d'agent différente uniquement lorsque vous souhaitez regrouper des collecteurs de données, par exemple, par OS/plate-forme.
+. Suivez les étapes de configuration pour configurer le collecteur de données. Les instructions varient en fonction du type de système d'exploitation ou de plate-forme utilisé pour collecter des données.
+
+
+image:JVMDCConfigLinux.png["Configuration JVM"]
+
+
+
+== Configuration
+
+Vous trouverez des informations dans le link:https://docs.oracle.com/javase/specs/jvms/se12/html/index.html["Documentation JVM"].
+
+
+
+== Objets et compteurs
+
+Les objets suivants et leurs compteurs sont collectés :
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Objet : | Identifiants : | Attributs : | Points de données : 
+
+
+| JVM | Espace de noms
+JVM | Architecture du système d'exploitation
+Nom du système d'exploitation
+Version du système d'exploitation
+Spécification d'exécution
+Fournisseur de spécification d'exécution
+Version de spécification d'exécution
+Continuité
+Nom du VM d'exécution
+Fournisseur de VM d'exécution
+Version de la machine virtuelle d'exécution
+Nom du nœud
+IP du nœud | Classe chargée
+Total de la classe chargée
+Classe déchargée
+Mémoire Heap validée
+Init. Tas mémoire
+Mémoire tas utilisé Max
+Mémoire Heap utilisée
+Mémoire non Heap validée
+Mémoire non Heap Init
+Mémoire non Heap Max
+Mémoire non Heap utilisée
+Objets mémoire en attente de finalisation
+Processeurs du système d'exploitation disponibles
+Taille de la mémoire virtuelle validée par le système d'exploitation
+Taille de la mémoire physique libre du système d'exploitation
+Taille de l'espace de permutation libre du système d'exploitation
+Nombre maximal de descripteurs de fichier du système d'exploitation
+Nombre de descripteurs de fichier ouvert du système d'exploitation
+Charge du processeur du système d'exploitation
+Temps processeur du système d'exploitation
+Charge CPU du système d'exploitation
+Charge moyenne du système d'exploitation
+Taille totale de la mémoire physique du système d'exploitation
+Taille de l'espace de permutation total du système d'exploitation
+Nombre de threads Daemon
+Nombre de pics de filetage
+Nombre de threads
+Nombre total de threads démarrés
+Nombre de copies de collecte du collecteur d'ordures
+Heure de collecte des copies du collecteur d'ordures
+Nombre de collecte de marques de balayage du collecteur d'ordures
+Heure de collecte des marques de balayage du collecteur d'ordures
+Compte de collecte de l'ancienne génération du collecteur d'ordures G1
+Garbage Collector G1 Old Generation Collection Time
+Garbage Collector G1 Young Generation Collection Count
+Garbage Collector G1 Young Generation Collection Time
+Compteur de collecte de repères simultanés du collecteur d'ordures
+Heure de collecte de la marque de balayage simultanée du collecteur d'ordures
+Nombre de collectes parallèles du collecteur d'ordures
+Heure de collecte parallèle du collecteur d'ordures
+Compteur de collecte des marques de reprise parallèles du collecteur de déchets
+Temps de collecte de marque de reprise parallèle du collecteur de déchets
+Nombre de collecte de récupération de récupération de récupération parallèle du collecteur d'ordures
+Heure de récupération du balayage parallèle du collecteur d'ordures 
+|===
+
+
+== Dépannage
+
+Pour plus d'informations, consultez le link:concept_requesting_support.html["Assistance"] page.

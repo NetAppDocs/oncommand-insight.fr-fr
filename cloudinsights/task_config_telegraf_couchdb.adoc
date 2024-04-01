@@ -1,0 +1,87 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_couchdb.html 
+keywords: telegraf, installation, install, couchdb 
+summary: Configuration du collecteur de données CouchDB 
+---
+= Collecteur de données CouchDB
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights utilise ce collecteur de données pour recueillir des mesures à partir de CouchDB.
+
+
+
+== Installation
+
+. Dans *observabilité > Collectors*, cliquez sur *+Data Collector*. Choisissez CouchDB.
++
+Sélectionnez le système d'exploitation ou la plate-forme sur laquelle l'agent Telegraf est installé.
+
+. Si vous n'avez pas déjà installé un agent pour la collecte ou si vous souhaitez installer un agent pour un autre système d'exploitation ou plate-forme, cliquez sur _Afficher les instructions_ pour développer le link:task_config_telegraf_agent.html["Installation de l'agent"] instructions.
+. Sélectionnez la clé d'accès de l'agent à utiliser avec ce collecteur de données. Vous pouvez ajouter une nouvelle clé d'accès à l'agent en cliquant sur le bouton * + clé d'accès à l'agent*. Meilleure pratique : utilisez une clé d'accès d'agent différente uniquement lorsque vous souhaitez regrouper des collecteurs de données, par exemple, par OS/plate-forme.
+. Suivez les étapes de configuration pour configurer le collecteur de données. Les instructions varient en fonction du type de système d'exploitation ou de plate-forme utilisé pour collecter des données.
+
+
+image:CouchDBDCConfigLinux.png["Configuration CouchDB"]
+
+
+
+== Configuration
+
+Vous trouverez des informations dans le link:http://docs.couchdb.org/en/stable/["Documentation CouchDB"].
+
+
+
+== Objets et compteurs
+
+Les objets suivants et leurs compteurs sont collectés :
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Objet : | Identifiants : | Attributs : | Points de données : 
+
+
+| CouchDB | Espace de noms
+Serveur | Nom du nœud
+IP du nœud | Accès au cache d'authentification
+Mémoire cache d'authentification non réussie
+Lectures de base de données
+Écritures de base de données
+Bases de données Ouvrir
+Ouvrez les fichiers OS
+Temps de demande max
+Temps de demande min
+Méthodes de demande httpd Copier
+Méthodes de demande httpd Supprimer
+Méthodes de requête httpd Get
+En-tête méthodes de demande httpd
+Méthodes de demande httpd Post
+Méthodes de demande httpd PUT
+Codes d'état 200
+Codes d'état 201
+Codes d'état 202
+Codes d'état 301
+Codes d'état 304
+Codes d'état 400
+Codes d'état 401
+Codes d'état 403
+Codes d'état 404
+Codes d'état 405
+Codes d'état 409
+Codes d'état 412
+Codes d'état 500 
+|===
+
+
+== Dépannage
+
+Pour plus d'informations, consultez le link:concept_requesting_support.html["Assistance"] page.

@@ -1,0 +1,93 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_postgresql.html 
+keywords: telegraf, installation, install, postgresql 
+summary: Configuration du collecteur de données PostgreSQL 
+---
+= Collecteur de données PostgreSQL
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights utilise ce collecteur de données pour recueillir des mesures auprès de PostgreSQL.
+
+
+
+== Installation
+
+. Dans *observabilité > Collectors*, cliquez sur *+Data Collector*. Choisissez PostgreSQL.
++
+Sélectionnez le système d'exploitation ou la plate-forme sur laquelle l'agent Telegraf est installé.
+
+. Si vous n'avez pas déjà installé un agent pour la collecte ou si vous souhaitez installer un agent pour un autre système d'exploitation ou plate-forme, cliquez sur _Afficher les instructions_ pour développer le link:task_config_telegraf_agent.html["Installation de l'agent"] instructions.
+. Sélectionnez la clé d'accès de l'agent à utiliser avec ce collecteur de données. Vous pouvez ajouter une nouvelle clé d'accès à l'agent en cliquant sur le bouton * + clé d'accès à l'agent*. Meilleure pratique : utilisez une clé d'accès d'agent différente uniquement lorsque vous souhaitez regrouper des collecteurs de données, par exemple, par OS/plate-forme.
+. Suivez les étapes de configuration pour configurer le collecteur de données. Les instructions varient en fonction du type de système d'exploitation ou de plate-forme utilisé pour collecter des données.
+
+
+image:PostgreSQLDCConfigLinux.png["Configuration PostgreSQL"]
+
+
+
+== Configuration
+
+Vous trouverez des informations dans le link:https://www.postgresql.org/docs/["Documentation PostgreSQL"].
+
+
+
+== Objets et compteurs
+
+Les objets suivants et leurs compteurs sont collectés :
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Objet : | Identifiants : | Attributs : | Points de données : 
+
+
+| Serveur PostgreSQL | Espace de noms
+Base de données
+Serveur | Nom du nœud
+IP du nœud | Tampons alloués
+Arrière des tampons
+Met en mémoire tampon la synchronisation des fichiers back-end
+Points de contrôle des tampons
+Tampons propres
+Heure de synchronisation des points de contrôle
+Heure d'écriture des points de contrôle
+Demandes de points de contrôle
+Points de contrôle temporisés
+Nettoyage écrit max 
+
+
+| Base de données PostgreSQL | Espace de noms
+Base de données
+Serveur | OID de base de données
+Nom du nœud
+IP du nœud | Temps de lecture des blocs
+Bloque la durée d'écriture
+Blocks Hits
+Lectures de blocs
+Conflits
+Verrous morts
+Numéro de client
+Octets des fichiers temporaires
+Numéro des fichiers temporaires
+Lignes supprimées
+Lignes extraites
+Lignes insérées
+Lignes renvoyées
+Lignes mises à jour
+Transactions validées
+Transactions avec agrégation 
+|===
+
+
+== Dépannage
+
+Pour plus d'informations, consultez le link:concept_requesting_support.html["Assistance"] page.
