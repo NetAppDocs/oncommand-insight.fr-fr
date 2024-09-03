@@ -75,9 +75,9 @@ OnCommand Unified Manager fonctionne au niveau de la couche de « gestion des p�
 
 
 
-== Qu'est-ce que le CÉC secondaire OnCommand Insight est mentionné sur la boutique d'automatisation ?
+== Qu'est-ce que le CÉC secondaire OnCommand Insight?
 
-L'exigence ETL secondaire référencée dans certains téléchargements de rapports OnCommand Insight Automation Storefront fait référence à une implémentation de services professionnels développée utilisée pour invoquer des ETL (extraction, transformation et chargement) supplémentaires de données capturées, pour les placer dans l'entrepôt de données OnCommand Insight.
+Le « CÉC secondaire » fait référence à une implémentation de services professionnels développée utilisée pour invoquer des opérations d'extraction, de transformation et de chargement (ETL) supplémentaires de données capturées, pour être stockées dans l'entrepôt de données OnCommand Insight.
 
 L'objectif principal du processus ETL secondaire est de prérécupérer les données de « lot », ce qui permet aux rapports plus complexes de générer plus rapidement ou d'être planifiés pour une exécution quotidienne.
 
