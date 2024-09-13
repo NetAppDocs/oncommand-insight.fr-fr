@@ -1,0 +1,16 @@
+---
+permalink: config-admin/reference_data_collector_support_matrix.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La matrice de prise en charge du Data Collector (Data Source) fournit des informations sur les collecteurs de données pris en charge.' 
+---
+= Matrice de prise en charge des collecteurs de données OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La matrice de prise en charge des collecteurs de données fournit des références pour les collecteurs de données pris en charge par OCI , y compris des informations sur les fournisseurs et les modèles.
+
+Cette page est un espace réservé.
