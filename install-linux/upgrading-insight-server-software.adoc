@@ -13,6 +13,13 @@ summary: Vous pouvez vérifier les mises à jour du serveur OnCommand Insight ap
 [role="lead"]
 Vous pouvez vérifier les mises à jour du serveur OnCommand Insight après vous être connecté au serveur.
 
+[NOTE]
+====
+Il est fortement recommandé de sauvegarder le coffre-fort et la base de données avant de mettre OnCommand Insight à niveau.
+
+Reportez-vous aux link:../config-admin\/security-management.html["Outil SecurityAdmin"] instructions pour plus d'informations sur le coffre-fort.
+
+====
 
 
 == Étapes

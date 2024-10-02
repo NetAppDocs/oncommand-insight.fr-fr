@@ -1,17 +1,17 @@
 ---
-permalink: config-admin/security-management.html 
+permalink: config-admin/securityadmin-tool.html 
 sidebar: sidebar 
 keywords: SecurityAdmin, security, password, keystore, truststore, trustore, 
 summary: 'L"outil SecurityAdmin de OnCommand Insight comprend des fonctionnalités qui permettent aux environnements Insight de fonctionner avec une sécurité améliorée, notamment le cryptage, le hachage de mot de passe et la possibilité de modifier les mots de passe des utilisateurs internes et les paires de clés qui chiffrent et déchiffrent les mots de passe.' 
 ---
-= Sécurité des données Insight
+= Outil SecurityAdmin
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-OnCommand Insight fournit des fonctionnalités qui permettent aux environnements Insight de fonctionner avec une sécurité renforcée. Ces fonctionnalités comprennent le cryptage, le hachage de mot de passe et la possibilité de modifier les mots de passe des utilisateurs internes et les paires de clés qui chiffrent et déchiffrent les mots de passe. Vous pouvez gérer ces fonctionnalités sur tous les serveurs de l'environnement Insight à l'aide de l'outil SecurityAdmin.
+OnCommand Insight fournit des fonctionnalités qui permettent aux environnements Insight de fonctionner avec une sécurité renforcée. Ces fonctionnalités comprennent le cryptage, le hachage de mot de passe et la possibilité de modifier les mots de passe des utilisateurs internes et les paires de clés qui chiffrent et déchiffrent les mots de passe. Vous pouvez gérer ces fonctionnalités sur tous les serveurs de l'environnement Insight à l'aide de *SecurityAdmin Tool*.
 
 
 
@@ -105,6 +105,8 @@ Créez un fichier zip contenant le coffre-fort. Le chemin relatif vers les fichi
 * acq/conf/vault/*
 
 
+Notez qu'il est fortement recommandé de sauvegarder le coffre-fort chaque fois que vous sauvegardez une base de données OnCommand Insight.
+
 
 
  a| 
@@ -124,9 +126,8 @@ Ceci peut être utilisé lorsque le coffre-fort et l'installation ne sont pas co
 
 
  a| 
-modifier-mot-de-passe-magasin-confiance
  a| 
-Modifiez le mot de passe utilisé pour un magasin de confiance et stockez le nouveau mot de passe dans le coffre-fort. Le mot de passe actuel du magasin de confiance doit être « connu ».
+Changer-confiance-mot-de-passe-magasin modifiez le mot de passe utilisé pour un magasin de confiance et stockez le nouveau mot de passe dans le coffre-fort. Le mot de passe actuel du magasin de confiance doit être « connu ».
 
 
 
@@ -207,29 +208,6 @@ Créez un nouveau coffre-fort vide (qui aura des clés différentes de celles du
 |===
 
 
-=== Commandes masquées
-
-L'outil sa fournit les commandes suivantes qui ne nécessitent pas d'authentification mais qui apportent des modifications coordonnées à l'installation.
-
-[cols="25a,75a"]
-|===
-
-
- a| 
-mise à niveau des clés de liste (serveur)
- a| 
-Si l'utilisateur ne s'est pas authentifié, authentifiez-le à l'aide du compte _interne et du mot de passe dans le coffre-fort actuel. Remplacez ensuite le coffre-fort actuel par le coffre-fort dans le fichier de sauvegarde et effectuez les actions coordonnées.
-
-
-
- a| 
-mise à niveau (acquisition)
- a| 
-Remplacez le coffre-fort actuel par le coffre-fort dans le fichier de sauvegarde et effectuez les actions coordonnées.
-
-|===
-
-
 == Actions coordonnées
 
 
@@ -243,30 +221,30 @@ Remplacez le coffre-fort actuel par le coffre-fort dans le fichier de sauvegarde
  a| 
 _interne
  a| 
-Mettre à jour le hachage du mot de passe pour l'utilisateur dans la base de données
+mettre à jour le hachage du mot de passe pour l'utilisateur dans la base de données
 
 
 
  a| 
 acquisition
  a| 
-Mettre à jour le hachage du mot de passe pour l'utilisateur dans la base de données
+mettre à jour le hachage du mot de passe pour l'utilisateur dans la base de données
 
-Si le coffre-fort d'acquisition est présent, mettez également à jour l'entrée dans le coffre-fort d'acquisition
+si le coffre-fort d'acquisition est présent, mettez également à jour l'entrée dans le coffre-fort d'acquisition
 
 
 
  a| 
 dwh_interne
  a| 
-Mettre à jour le hachage du mot de passe pour l'utilisateur dans la base de données
+mettre à jour le hachage du mot de passe pour l'utilisateur dans la base de données
 
 
 
  a| 
 cognos_admin
  a| 
-Mettre à jour le hachage du mot de passe pour l'utilisateur dans la base de données
+mettre à jour le hachage du mot de passe pour l'utilisateur dans la base de données
 
 Si DWH et Windows, mettez à jour SANscreen/cognos/analytics/configuration/SANscreenAP.properties pour définir la propriété cognos.admin sur le mot de passe.
 
@@ -322,21 +300,21 @@ Exécutez SQL pour mettre à jour le mot de passe utilisateur dans l'instance My
  a| 
 keystore_password
  a| 
-Réécrivez le magasin de clés avec le nouveau mot de passe : Wildfly/standalone/configuration/Server.keystore
+réécrivez le magasin de clés avec le nouveau mot de passe : wildfly/standalone/configuration/server.keystore
 
 
 
  a| 
 truststore_password
  a| 
-Réécrivez le magasin de clés avec le nouveau mot de passe : Wildfly/standalone/configuration/Server.trustore
+réécrivez le magasin de clés avec le nouveau mot de passe : wildfly/standalone/configuration/server.trustore
 
 
 
  a| 
 mot_de_passe_clé
  a| 
-Réécrivez le magasin de clés avec le nouveau mot de passe : Wildfly/standalone/configuration/sso.jks
+réécrivez le magasin de clés avec le nouveau mot de passe : wildfly/standalone/configuration/sso.jks
 
 
 
@@ -364,7 +342,7 @@ Aucune
  a| 
 truststore_password
  a| 
-Réécrivez le magasin de clés avec le nouveau mot de passe (s'il existe) - acq/conf/cert/client.keystore
+réécrivez le magasin de clés avec le nouveau mot de passe (s'il existe) - acq/conf/cert/client.keystore
 
 |===
 

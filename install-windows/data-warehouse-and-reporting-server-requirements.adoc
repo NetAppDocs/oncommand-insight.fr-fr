@@ -60,7 +60,7 @@ Disques durs de 300 Go 8 cœurs
  a| 
 Système d'exploitation
  a| 
-Un ordinateur exécutant Microsoft Windows Server 2016, 2019 ou 2022 64 bits, avec le dernier Service Pack.
+Un ordinateur exécutant Microsoft Windows Server 2016, 2019 ou 2022 64 bits, avec le dernier Service Pack. Windows .NET Framework version 3.5 doit être installé avant OnCommand Insight.
 
 
 

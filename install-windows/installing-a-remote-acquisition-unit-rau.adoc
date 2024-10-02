@@ -41,6 +41,7 @@ Le port d'acquisition par défaut est 443, mais il a peut-être été modifié l
 ** *OnCommand Insight* *Nom ou adresse du serveur* - nom d'hôte ou adresse IP permettant d'identifier le serveur OnCommand Insight. Le RAU utilise ce nom/IP pour ouvrir une liaison de communication avec le serveur. Si vous spécifiez un nom d'hôte, assurez-vous qu'il peut être résolu via DNS.
 ** *Nom de l'unité d'acquisition* - nom unique qui identifie l'unité RAU.
 ** *OnCommand Insight Secured Remote acquisition Port (HTTPS)* - Port utilisé par les unités d'acquisition distantes pour envoyer des informations de modification d'environnement au serveur OnCommand Insight. Ce paramètre doit correspondre à la valeur saisie lors de l'installation du serveur OnCommand Insight et doit être identique sur tous les serveurs Raus.
+** Entrez le mot de passe de l'utilisateur _acquisition_.
 
 
 . Vérifiez vos sélections. Cliquez sur *Retour* pour revenir en arrière et apporter des modifications. Cliquez sur *Suivant*.
@@ -55,3 +56,24 @@ Attendez la fin de l'installation. Cela devrait prendre environ 5 à 10 minutes.
 == Une fois que vous avez terminé
 
 Une fois l'installation terminée, une dernière fenêtre s'affiche. Cliquez sur la case *Démarrer le service d'acquisition à distance* pour démarrer la RAU, puis cliquez sur *Terminer* pour terminer cette opération.
+
+Si vos données commencent à acquérir, vous êtes tous définis ; vous n'avez pas besoin de synchroniser le serveur et l'unité RAU comme indiqué ci-dessous.
+
+
+
+== Synchroniser le serveur et RAU
+
+
+IMPORTANT: Si l'acquisition des données ne commence pas après l'installation de l'unité d'acquisition distante, synchronisez l'unité RAU avec le serveur OnCommand Insight. Voici la procédure à suivre :
+
+. Sur le système du serveur OnCommand Insight, démarrez l'outil *SecurityAdmin* en mode interactif
++
+ securityadmin -i
+. Remplacez le mot de passe de l'utilisateur _acquisition_ de l'Insight Server par un mot de passe de votre choix. *Notez ce mot de passe* comme vous le souhaitez ci-dessous.
+. Redémarrez le serveur/LAU.
+. Sur le système d'unité d'acquisition à distance (RAU), démarrez l'outil *SecurityAdmin* en mode interactif. Vous aurez besoin du mot de passe que vous avez noté à l'étape 2 ci-dessus.
++
+ securityadmin -i
+. Remplacez le mot de passe de l'utilisateur _acquisition_ par le mot de passe utilisé à l'étape 2.
+. Redémarrez l'unité RAU.
+

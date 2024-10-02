@@ -12,4 +12,4 @@ summary:
 
 Les notes de mise à jour de OnCommand Insight sont disponibles en dehors du Centre de documentation. Vous serez invité à vous connecter à l'aide de vos identifiants du site de support NetApp.
 
-link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2652943["Notes de version .PDF"^] (s'ouvre dans une nouvelle fenêtre)
+link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3328664["Notes de version .PDF"^] (s'ouvre dans une nouvelle fenêtre)

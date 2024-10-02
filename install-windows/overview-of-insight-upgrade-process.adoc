@@ -13,6 +13,13 @@ summary: 'Avant de commencer à mettre à niveau Insight, il est important de co
 [role="lead"]
 Avant de commencer à mettre à niveau Insight, il est important de comprendre le processus de mise à niveau. Le processus de mise à niveau est le même pour la plupart des versions d'Insight.
 
+[NOTE]
+====
+*Vous devez sauvegarder le coffre-fort* avant de mettre à niveau OnCommand Insight.
+
+Pour plus d'informations, reportez-vous aux link:../config-admin\/security-management.html["Outil SecurityAdmin"]instructions.
+
+====
 Le processus de mise à niveau d'Insight inclut les tâches générales suivantes :
 
 * Téléchargement des packages d'installation

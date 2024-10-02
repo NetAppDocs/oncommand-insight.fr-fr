@@ -13,6 +13,13 @@ summary: 'Après la mise à niveau du logiciel Insight Server, vous devez mettre
 [role="lead"]
 Après la mise à niveau du logiciel Insight Server, vous devez mettre à niveau votre logiciel d'acquisition à distance.
 
+[NOTE]
+====
+Il est fortement recommandé de sauvegarder le coffre-fort et la base de données avant de mettre à niveau DWH.
+
+Reportez-vous aux link:../config-admin\/security-management.html["Outil SecurityAdmin"] instructions pour plus d'informations sur le coffre-fort.
+
+====
 
 
 == Étapes

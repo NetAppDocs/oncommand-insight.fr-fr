@@ -23,78 +23,8 @@ Vous utilisez le `securityadmin` outil de gestion de la sécurité :
 * Linux : `/bin/oci-securityadmin.sh`
 
 
-Un scénario de mise à jour de la configuration de sécurité pour LE LAU, RAU est de mettre à jour le mot de passe utilisateur 'acquisition' lorsque le mot de passe de cet utilisateur a été modifié sur le serveur. Tous les Raus, et LE LAU utilisent le même mot de passe que celui de l'utilisateur d'acquisition du serveur pour communiquer avec le serveur.
+Un scénario de mise à jour de la configuration de sécurité pour le LAU/RAU consiste à mettre à jour le mot de passe utilisateur d'acquisition lorsque le mot de passe de cet utilisateur a été modifié sur le serveur. Le LAU et tous les Raus utilisent le même mot de passe que celui de l'utilisateur d'acquisition du serveur pour communiquer avec le serveur.
 
 L'utilisateur 'acquisition' n'existe que sur le serveur Insight. Le RAU ou LAU se connecte en tant qu'utilisateur lorsqu'il se connecte au serveur.
 
-Procédez comme suit pour gérer les options de sécurité d'une unité RAU :
-
-
-
-== Étapes
-
-. Effectuez une connexion à distance au serveur exécutant la RAU
-. Démarrez l'outil d'administration de la sécurité en mode interactif :
-+
-** Vitres - `C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i`
-** Linux : `/bin/oci-securityadmin.sh -i`
-+
-Le système demande des informations d'identification de connexion.
-
-
-
-. Entrez le nom d'utilisateur et le mot de passe d'un compte avec les informations d'identification « Admin ».
-+
-Le système affiche le menu de l'unité RAU.
-
-+
-** *Sauvegarde*
-+
-Crée un fichier zip de sauvegarde du coffre-fort contenant tous les mots de passe et clés et place le fichier à un emplacement spécifié par l'utilisateur ou aux emplacements par défaut suivants :
-
-+
-*** Vitres - `C:\Program Files\SANscreen\backup\vault`
-*** Linux : `/var/log/netapp/oci/backup/vault`
-
-
-** *Restaurer*
-+
-Restaure la sauvegarde zip du coffre-fort créé. Une fois restaurées, tous les mots de passe et clés sont rétablis dans les valeurs existantes au moment de la création de la sauvegarde.
-
-+
-[NOTE]
-====
-La restauration peut être utilisée pour synchroniser les mots de passe et les clés sur plusieurs serveurs, par exemple : - Modifier les clés de cryptage sur un serveur - Créer une sauvegarde du coffre-fort - Restaurer la sauvegarde du coffre-fort sur le second serveur
-
-====
-** *Changer les clés de cryptage*
-+
-Modifiez les clés de cryptage RAU utilisées pour crypter ou décrypter les mots de passe du terminal.
-
-+
-[NOTE]
-====
-Lorsque vous modifiez des clés de cryptage, vous devez sauvegarder votre nouvelle configuration de sécurité afin de pouvoir la restaurer après une mise à niveau ou une installation.
-
-====
-** *Mettre à jour le mot de passe*
-+
-Modifier le mot de passe du compte utilisateur « acquisition ».
-
-+
-[NOTE]
-====
-Certains comptes doivent être synchronisés lorsque les mots de passe sont modifiés. Par exemple, si vous modifiez le mot de passe de l'utilisateur 'acquisition' sur le serveur, vous devez modifier le mot de passe de l'utilisateur 'acquisition' sur LAU, RAU et DWH pour qu'il corresponde. De même, lorsque vous modifiez des mots de passe, vous devez sauvegarder votre nouvelle configuration de sécurité afin de pouvoir la restaurer après une mise à niveau ou une installation.
-
-====
-** *Rétablir les valeurs par défaut*
-+
-Réinitialise les clés de cryptage et les mots de passe aux valeurs par défaut. Les valeurs par défaut sont celles fournies lors de l'installation.
-
-** *Quitter*
-+
-Quittez le `securityadmin` outil.
-
-
-
-
+Pour plus d'informations, reportez-vous aux link:../config-admin\/security-management.html["Outil SecurityAdmin"]instructions.

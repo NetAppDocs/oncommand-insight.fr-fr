@@ -51,7 +51,7 @@ Pour Linux, modifiez le `clientAuth` paramètre dans `/opt/netapp/oci/scripts/wi
 . Ajoutez des autorités de certification (CA) au magasin de données :
 +
 .. Dans une fenêtre de commande, accédez à `..\SANscreen\wildfly\standalone\configuration`.
-.. Utilisez le `keytool` Utilitaire permettant de répertorier les autorités de certification approuvées : `C:\Program Files\SANscreen\java64\bin\keytool.exe -list -keystore server.trustore -storepass changeit`
+.. Utilisez `keytool` l'utilitaire pour répertorier les autorités de certification de confiance : `C:\Program Files\SANscreen\java64\bin\keytool.exe -list -keystore server.trustore -storepass <password>` + consultez link:../config-admin/securityadmin-tool.html["Admin sécurité"]la documentation pour plus d'informations sur la définition ou la modification du mot de passe de Server_trustore.
 +
 Le premier mot de chaque ligne indique l'alias de l'autorité de certification.
 

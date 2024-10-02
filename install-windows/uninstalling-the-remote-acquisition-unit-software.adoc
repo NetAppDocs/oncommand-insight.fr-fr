@@ -13,6 +13,13 @@ summary: 'Vous devez désinstaller la version existante du logiciel de l"unité 
 [role="lead"]
 Vous devez désinstaller la version existante du logiciel de l'unité d'acquisition distante avant de pouvoir mettre à niveau vers une nouvelle version. Vous devez effectuer cette tâche sur tous les serveurs d'unités d'acquisition distants de votre environnement.
 
+[NOTE]
+====
+*Il est fortement recommandé de sauvegarder le coffre-fort* avant de désinstaller OnCommand Insight. *Vous devez sauvegarder le coffre-fort* si vous allez mettre à niveau OnCommand Insight.
+
+Pour plus d'informations, reportez-vous aux link:../config-admin\/security-management.html["Outil SecurityAdmin"]instructions.
+
+====
 
 
 == Étapes

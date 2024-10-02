@@ -38,17 +38,20 @@ Pour obtenir les instructions les plus récentes sur les cartes CAC et les certi
 . Ajoutez des autorités de certification (AC) au magasin de certificats Cognos.
 +
 .. Dans une fenêtre de commande, accédez à `..\SANscreen\cognos\analytics\configuration\certs\`
-.. Utilisez le `keytool` Utilitaire permettant de répertorier les autorités de certification approuvées : `..\..\ibm-jre\jre\bin\keytool.exe -list -keystore CAMKeystore.jks -storepass NoPassWordSet`
+.. Utilisez `keytool` l'utilitaire pour répertorier les autorités de certification de confiance : `..\..\ibm-jre\jre\bin\keytool.exe -list -keystore CAMKeystore.jks -storepass <password>
+
+
 +
 Le premier mot de chaque ligne indique l'alias de l'autorité de certification.
 
++
 .. S'il n'existe aucun fichier approprié, fournissez un fichier de certificat d'autorité de certification, généralement un `.pem` fichier.
 .. Pour inclure les autorités de certification du client avec des autorités de certification OnCommand Insight approuvées, rendez-vous sur `..\SANscreen\cognos\analytics\configuration\certs\`.
 .. Utilisez le `keytool` utilitaire d'importation de `.pem` fichier : `..\..\ibm-jre\jre\bin\keytool.exe -importcert -keystore CAMKeystore.jks -alias my_alias -file 'path/to/my.pem' -v -trustcacerts`
 +
-`my_alias` Est généralement un alias qui identifie facilement l'autorité de certification dans le``keytool -list`` fonctionnement.
+`my_alias` Est généralement un alias qui identifie facilement l'autorité de certification dans l'``keytool -list``opération.
 
-.. Lorsque vous êtes invité à saisir un mot de passe, entrez `NoPassWordSet`.
+.. Lorsque vous êtes invité à entrer un mot de passe, entrez le mot de passe du fichier _/SANscreen/bin/cognos_info.dat_.
 .. Réponse `yes` lorsque vous êtes invité à approuver le certificat.
 
 

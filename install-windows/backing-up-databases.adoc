@@ -13,4 +13,11 @@ summary: 'Avant de procéder à la mise à niveau, vous devez sauvegarder les ba
 [role="lead"]
 Avant de procéder à la mise à niveau, vous devez sauvegarder les bases de données Data Warehouse et OnCommand Insight. La mise à niveau nécessite une sauvegarde de la base de données Data Warehouse afin que vous puissiez restaurer la base de données ultérieurement au cours du processus de mise à niveau. La mise à niveau d'Insight sur place sauvegarde la base de données. Toutefois, il est conseillé de sauvegarder cette base de données avant de procéder à la mise à niveau dans le cadre des meilleures pratiques.
 
+[NOTE]
+====
+*Vous devez sauvegarder le coffre-fort* avant de mettre à niveau OnCommand Insight.
+
+Pour plus d'informations, reportez-vous aux link:../config-admin\/security-management.html["Outil SecurityAdmin"]instructions.
+
+====
 Pour éviter de générer des rapports erronés, vous devez sauvegarder la base de données Data Warehouse avant de sauvegarder la base de données Insight. En outre, si vous disposez d'un environnement de test, il est recommandé de vous assurer que vous pouvez restaurer la sauvegarde avant de poursuivre la mise à niveau.

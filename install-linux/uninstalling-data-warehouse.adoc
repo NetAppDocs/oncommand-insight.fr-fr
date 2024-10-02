@@ -13,6 +13,13 @@ summary: Vous pouvez désinstaller Data Warehouse si nécessaire.
 [role="lead"]
 Vous pouvez désinstaller Data Warehouse si nécessaire.
 
+[NOTE]
+====
+*Il est fortement recommandé de sauvegarder le coffre-fort* avant de désinstaller OnCommand Insight.
+
+Pour plus d'informations, reportez-vous aux link:../config-admin\/security-management.html["Outil SecurityAdmin"]instructions.
+
+====
 
 
 == Avant de commencer

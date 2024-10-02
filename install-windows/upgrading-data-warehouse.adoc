@@ -21,29 +21,33 @@ La mise à niveau en ligne n'est pas prise en charge par l'entrepôt de données
 
 [NOTE]
 ====
-Lors de la mise à niveau de DWH, le dossier contenant la sauvegarde du coffre-fort _securityadmin_ Tool est supprimé. Il est fortement recommandé de sauvegarder le coffre-fort avant de mettre à niveau DWH. Pour référence, les dossiers de coffre-fort par défaut sont les suivants :
+*Vous devez sauvegarder le coffre-fort* avant de mettre à niveau DWH.
 
-* Dossier du coffre-fort (coffres-forts en cours d'utilisation):``%SANSCREEN_HOME%\wildfly\standalone\configuration\vault``
-* Sauvegardes de coffre-fort : `%SANSCREEN_HOME%\backup\vault`
-
-
-Voir http://ie-docs.rtp.openeng.netapp.com/oci-73_ram/topic/com.netapp.doc.oci-acg/GUID-E3351676-2088-4767-AAB5-CB1D8476291C.html?resultof=%22%76%61%75%6c%74%22%20["Gestion de la sécurité dans l'entrepôt de données"] pour en savoir plus.
+Pour plus d'informations, reportez-vous aux link:../config-admin\/security-management.html["Outil SecurityAdmin"]instructions.
 
 ====
 
 
 == Étapes
 
+Lors de la mise à niveau de l'entrepôt de données, vous devez effectuer les actions suivantes :
+
+. Après avoir installé DWH 7.3.16, restaurez le coffre-fort et la base de données dans l'ordre suivant :
++
+.. Coffre-fort
+.. Base de données
+
+
 . Connectez-vous au serveur DWH à l'aide d'un compte disposant des autorisations d'administrateur local Windows.
 . Sauvegardez la base de données DWH et les rapports à l'aide de l'interface du portail DWH.
-. Sauvegardez la configuration de sécurité si le serveur utilise une configuration de sécurité autre que celle par défaut.
+. Sauvegardez le coffre-fort. Voir la link:../config-admin/security-management.html["Admin sécurité"] documentation.
 . Désinstallez le logiciel DWH du serveur.
 . Redémarrez le serveur pour supprimer des composants de la mémoire.
 . Installez la nouvelle version de DWH sur le serveur.
 +
 L'installation dure environ 2 heures. Il est recommandé de laisser toutes les valeurs par défaut sélectionnées.
 
-. Restaurez la configuration de sécurité non par défaut sur le serveur DWH.
+. Restaurez le coffre-fort sur le serveur DWH.
 . Restaurez la base de données DWH sur le serveur.
 
 

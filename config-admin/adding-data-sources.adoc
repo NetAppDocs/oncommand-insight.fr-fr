@@ -67,7 +67,7 @@ Pour la plupart des sources de données, ces options seront Inventory and Perfor
 |===
 . Cliquez sur le lien *Configuration* et entrez les informations de configuration de base requises pour la source de données avec le type de collecte de données sélectionné.
 . Si ce type de source de données nécessite généralement des informations plus détaillées pour la configurer sur votre réseau, cliquez sur le lien *Configuration avancée* pour entrer des informations supplémentaires.
-. Pour plus d'informations sur la configuration ou la configuration avancée requise ou disponible pour votre source de données spécifique, reportez-vous au link:vendor-specific-data-source-reference.md#["Référence de source de données propre au fournisseur"].
+. Pour plus de détails sur la configuration ou les informations de configuration avancées requises ou disponibles pour votre source de données spécifique, reportez-vous au link:vendor-specific-data-source-reference.html["Référence de source de données propre au fournisseur"].
 . Cliquez sur le lien *Test* pour vous assurer que la source de données est correctement configurée.
 . Cliquez sur *Enregistrer*.
 

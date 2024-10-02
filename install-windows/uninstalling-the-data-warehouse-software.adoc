@@ -13,6 +13,13 @@ summary: Vous devez désinstaller le logiciel Data Warehouse avant de pouvoir ef
 [role="lead"]
 Vous devez désinstaller le logiciel Data Warehouse avant de pouvoir effectuer la mise à niveau.
 
+[NOTE]
+====
+*Il est fortement recommandé de sauvegarder le coffre-fort* avant de désinstaller OnCommand Insight. *Vous devez sauvegarder le coffre-fort* si vous allez mettre à niveau OnCommand Insight.
+
+Pour plus d'informations, reportez-vous aux link:../config-admin\/security-management.html["Outil SecurityAdmin"]instructions.
+
+====
 
 
 == Avant de commencer

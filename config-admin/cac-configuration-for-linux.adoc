@@ -13,12 +13,14 @@ summary: 'Certaines modifications sont nécessaires pour activer le contrôle d"
 [role="lead"]
 Certaines modifications sont nécessaires pour activer le contrôle d'accès aux appels sur un serveur OnCommand Insight Linux.
 
+L'autorité de certification racine doit être importée dans le magasin de confiance.
+
 
 
 == Étapes
 
 . Accédez à `/opt/netapp/oci/conf/`
 . Modifier `wildfly.properties` et modifiez la valeur de `CLIENT_AUTH_ENABLED` Sur « vrai »
-. Importez le « certificat racine » qui existe sous `/opt/netapp/oci/wildfly/standalone/configuration/server.keystore`
+. Importez le « certificat racine » qui existe sous `/opt/netapp/oci/wildfly/standalone/configuration/server.truststore`
 . Redémarrez le serveur
 

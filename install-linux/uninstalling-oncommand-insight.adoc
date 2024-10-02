@@ -13,4 +13,11 @@ summary: Vous pouvez désinstaller les composants OnCommand Insight si nécessai
 [role="lead"]
 Vous pouvez désinstaller les composants OnCommand Insight si nécessaire. Vous devez désinstaller les composants OnCommand Insight séparément.
 
+[NOTE]
+====
+*Il est fortement recommandé de sauvegarder le coffre-fort* avant de désinstaller OnCommand Insight.
+
+Pour plus d'informations, reportez-vous aux link:../config-admin\/security-management.html["Outil SecurityAdmin"]instructions.
+
+====
 Chaque composant est désinstallé séparément.

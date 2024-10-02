@@ -31,7 +31,7 @@ L'avertissement de certification n'a aucun impact sur la facilité d'utilisation
 
 . Répertoriez le contenu du magasin de clés : `C:\Program Files\SANscreen\java64\bin>keytool.exe -list -v -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore"`
 +
-Lorsque vous êtes invité à saisir un mot de passe, entrez `changeit`.
+Pour plus d'informations sur la définition ou la modification du mot de passe de la base de stockage de clés, reportez-vous à link:../config-admin/securityadmin-tool.html["Admin sécurité"]la documentation.
 
 +
 Il doit y avoir au moins un certificat dans le magasin de clés, `ssl certificate`.

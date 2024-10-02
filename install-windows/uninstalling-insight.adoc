@@ -13,6 +13,13 @@ summary: Vous pouvez désinstaller le serveur OnCommand Insight si nécessaire.
 [role="lead"]
 Vous pouvez désinstaller le serveur OnCommand Insight si nécessaire.
 
+[NOTE]
+====
+*Il est fortement recommandé de sauvegarder le coffre-fort* avant de désinstaller OnCommand Insight.
+
+Pour plus d'informations, reportez-vous aux link:../config-admin\/security-management.html["Outil SecurityAdmin"]instructions.
+
+====
 
 
 == Avant de commencer

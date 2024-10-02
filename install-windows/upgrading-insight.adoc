@@ -19,6 +19,13 @@ Une fois toutes les tâches préalables terminées, vous vous connectez au serve
 
 Le package d'installation d'Insight doit être situé sur le serveur.
 
+[NOTE]
+====
+*Vous devez sauvegarder le coffre-fort* avant de mettre à niveau OnCommand Insight.
+
+Pour plus d'informations, reportez-vous aux link:../config-admin\/security-management.html["Outil SecurityAdmin"]instructions.
+
+====
 
 
 == Étapes

@@ -100,8 +100,6 @@ entries:
       - title: Conservation des paramètres Cognos personnalisés lors d'une mise à
           niveau de Data Warehouse
         url: "/install-windows/preserving-custom-settings-when-upgrading-data-warehouse.html"
-    - title: Sauvegarde de la configuration de sécurité
-      url: "/install-windows/back-up-the-security-configuration.html"
     - title: Mise à niveau des serveurs d'unités d'acquisition à distance
       url: "/install-windows/upgrading-remote-acquisition-servers.html"
   - title: Exécution des tâches post-mise à niveau

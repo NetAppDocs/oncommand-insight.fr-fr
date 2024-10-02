@@ -12,3 +12,11 @@ summary: 'Vous devez désinstaller les anciennes versions du logiciel Data Wareh
 
 [role="lead"]
 Vous devez désinstaller les anciennes versions du logiciel Data Warehouse et Remote acquisition pour installer les nouvelles versions. Vous devez le faire avant de tenter de mettre à niveau l'un de ces composants. Le logiciel du serveur Insight est désinstallé lors de la mise à niveau sur place.
+
+[NOTE]
+====
+*Il est fortement recommandé de sauvegarder le coffre-fort* avant de désinstaller OnCommand Insight. *Vous devez sauvegarder le coffre-fort* si vous allez mettre à niveau OnCommand Insight.
+
+Pour plus d'informations, reportez-vous aux link:../config-admin\/security-management.html["Outil SecurityAdmin"]instructions.
+
+====

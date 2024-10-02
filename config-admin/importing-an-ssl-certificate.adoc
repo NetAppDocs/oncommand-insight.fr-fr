@@ -25,7 +25,9 @@ Vous devez vous assurer que votre système répond au niveau de bit minimum requ
 
 [NOTE]
 ====
-Avant de tenter d'effectuer cette procédure, vous devez sauvegarder le système existant `server.keystore` et nommez la sauvegarde `server.keystore.old`. Corrompre ou endommager le `server.keystore` Le fichier peut rendre le serveur Insight inutilisable après le redémarrage du serveur Insight. Si vous créez une sauvegarde, vous pouvez revenir à l'ancien fichier en cas de problème.
+Il est fortement recommandé de sauvegarder le coffre-fort avant la mise à niveau.
+
+Reportez-vous aux link:../config-admin\/security-management.html["Outil SecurityAdmin"] instructions pour plus d'informations sur le coffre-fort et la gestion des mots de passe.
 
 ====
 
@@ -34,10 +36,6 @@ Avant de tenter d'effectuer cette procédure, vous devez sauvegarder le système
 
 . Créez une copie du fichier de stockage de clés d'origine : `cp c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore.old`
 . Répertoriez le contenu du magasin de clés : `C:\Program Files\SANscreen\java64\bin\keytool.exe -list -v -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore"`
-+
-.. Lorsque vous êtes invité à saisir un mot de passe, entrez `changeit`.
-
-
 +
 Le système affiche le contenu du magasin de clés. Il doit y avoir au moins un certificat dans le magasin de clés, `"ssl certificate"`.
 

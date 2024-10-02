@@ -55,3 +55,24 @@ Pour les environnements utilisant la traduction d'adresses réseau ou la traduct
 Après avoir répondu à toutes les invites, l'installation commence et devrait prendre environ 10 minutes, selon les applications installées.
 
 
+
+Si vos données commencent à acquérir, vous êtes tous définis ; vous n'avez pas besoin de synchroniser le serveur et l'unité RAU comme indiqué ci-dessous.
+
+
+
+== Synchroniser le serveur et RAU
+
+
+IMPORTANT: Si l'acquisition des données ne commence pas après l'installation de l'unité d'acquisition distante, synchronisez l'unité RAU avec le serveur OnCommand Insight. Voici la procédure à suivre :
+
+. Sur le système du serveur OnCommand Insight, démarrez l'outil *SecurityAdmin* en mode interactif
++
+ securityadmin -i
+. Remplacez le mot de passe de l'utilisateur _acquisition_ de l'Insight Server par un mot de passe de votre choix. *Notez ce mot de passe* comme vous le souhaitez ci-dessous.
+. Redémarrez le serveur/LAU.
+. Sur le système d'unité d'acquisition à distance (RAU), démarrez l'outil *SecurityAdmin* en mode interactif. Vous aurez besoin du mot de passe que vous avez noté à l'étape 2 ci-dessus.
++
+ securityadmin -i
+. Remplacez le mot de passe de l'utilisateur _acquisition_ par le mot de passe utilisé à l'étape 2.
+. Redémarrez l'unité RAU.
+

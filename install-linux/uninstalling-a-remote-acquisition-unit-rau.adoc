@@ -13,6 +13,13 @@ summary: 'Vous pouvez désinstaller une unité d"acquisition à distance lorsque
 [role="lead"]
 Vous pouvez désinstaller une unité d'acquisition à distance lorsque vous n'en avez plus besoin.
 
+[NOTE]
+====
+*Il est fortement recommandé de sauvegarder le coffre-fort* avant de désinstaller OnCommand Insight.
+
+Pour plus d'informations, reportez-vous aux link:../config-admin\/security-management.html["Outil SecurityAdmin"]instructions.
+
+====
 
 
 == Étapes

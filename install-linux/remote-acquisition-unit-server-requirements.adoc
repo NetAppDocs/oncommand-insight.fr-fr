@@ -24,9 +24,9 @@ Système d'exploitation
  a| 
 Un ordinateur exécutant une version sous licence de l'une des versions suivantes, qui n'exécute aucun autre logiciel au niveau de l'application :
 
-* Red Hat Enterprise Linux 7.3, 7.4, 7.5, 7.6, 7.7 7.8, 7.9, 8.1, 8.2, 8.3, 8.4, 8.5, 8.8, 9.2
-* CentOS 7.2, 7.5, 7.6, 7.7, 7.8, 7.9, CentOS 8 Stream, CentOS 9 Stream
-* Oracle Enterprise Linux 7.5, 7.6, 7.7, 7.8, 7.9 8.1, 8.2, 8.3, 8.4, 8.5, 8.8
+* Red Hat Enterprise Linux 7.9, 8.10 et 9.4
+* CentOS 8 Stream, CentOS 9 Stream
+* Oracle Enterprise Linux 7.9, 8.10 et 9.4
 
 
 Un serveur dédié est recommandé.

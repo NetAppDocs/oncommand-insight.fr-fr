@@ -45,6 +45,14 @@ Vérifiez le numéro de version du fichier d'installation ; le numéro de versio
 +
 `sudo ./oci-dwh-<version>-linux-x86_64/oci-install.sh`
 
++
+Lors de l'installation d'Insight Server ou de Data Warehouse sur CentOS 9 Stream, Red Hat Enterprise Linux 9.4 ou Oracle Linux 9.4, vous devez d'abord passer au répertoire contenant le fichier d'installation, puis exécuter la commande install à l'aide de l'option de ligne de commande "--install-mysql-dépendances" :
+
++
+....
+cd /tmp/oci-7.3.16.1.297-linux-x86_64
+sudo ./oci-install.sh --install-mysql-dependencies
+....
 . Lisez le contrat de licence, acceptez-le et suivez les invites.
 
 
@@ -53,3 +61,23 @@ Vérifiez le numéro de version du fichier d'installation ; le numéro de versio
 == Résultats
 
 Après avoir répondu à toutes les invites, l'installation commence et devrait prendre environ 10 minutes, selon les applications installées.
+
+
+
+== Synchroniser le serveur et DWH
+
+
+IMPORTANT: Après avoir installé l'entrepôt de données, vous devez *synchroniser* l'entrepôt de données avec le serveur OnCommand Insight. Voici la procédure à suivre :
+
+. Sur le système du serveur OnCommand Insight, démarrez l'outil *SecurityAdmin* en mode interactif
++
+ securityadmin -i
+. Remplacez le mot de passe des utilisateurs _Inventory_ et _dwh_Internal_ par celui de votre choix. *Notez ces mots de passe* comme vous les aurez requis ci-dessous.
+. Redémarrez le service DWH
+. Sur *chaque connecteur*, démarrez l'outil *SecurityAdmin* en mode interactif. Vous aurez besoin des mots de passe que vous avez indiqués à l'étape 2 ci-dessus.
++
+ securityadmin -i
+. Remplacez les mots de passe des utilisateurs _Inventory_ et _dwh_Internal_ par les mots de passe utilisés à l'étape 2.
+. Redémarrez les services sur les connecteurs.
+. Ajoutez les connecteurs à DWH en utilisant les mots de passe pour _Inventory_ et _dwh_Internal_ users de l'étape 2
+

@@ -15,6 +15,17 @@ Après la mise à niveau du logiciel Insight Server, vous devez mettre à niveau
 
 
 
+== Description de la tâche
+
+[NOTE]
+====
+Il est fortement recommandé de sauvegarder le coffre-fort et la base de données avant de mettre à niveau DWH.
+
+Reportez-vous aux link:../config-admin\/security-management.html["Outil SecurityAdmin"] instructions pour plus d'informations sur le coffre-fort.
+
+====
+
+
 == Étapes
 
 . Connectez-vous au serveur d'entrepôt de données (DWH) à l'aide d'un compte avec des privilèges sudo.

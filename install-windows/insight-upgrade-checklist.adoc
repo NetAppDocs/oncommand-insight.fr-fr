@@ -17,6 +17,13 @@ Vous pouvez utiliser les listes de contrôle fournies pour enregistrer votre pro
 
 == Liste de contrôle pour la préparation de la mise à niveau (obligatoire)
 
+[NOTE]
+====
+*Vous devez sauvegarder le coffre-fort* avant de mettre à niveau OnCommand Insight.
+
+Pour plus d'informations, reportez-vous aux link:../config-admin\/security-management.html["Outil SecurityAdmin"]instructions.
+
+====
 |===
 
 

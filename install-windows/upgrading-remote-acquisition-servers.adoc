@@ -21,11 +21,19 @@ Une fois toutes les tâches préalables terminées, vous pouvez vous connecter a
 * Le package d'installation OnCommand Insight doit se trouver sur le serveur.
 
 
+[NOTE]
+====
+Vous devez sauvegarder le coffre-fort avant la mise à niveau.
+
+Reportez-vous aux link:../config-admin\/security-management.html["Outil SecurityAdmin"] instructions pour plus d'informations sur le coffre-fort.
+
+====
 
 
 == Étapes
 
 . Connectez-vous au serveur d'unité d'acquisition distant à l'aide d'un compte disposant des autorisations d'administrateur local Windows.
+. Sauvegardez le coffre-fort.
 . Recherchez le pack d'installation d'Insight (`RAU-x64-version_number-build_number.msi`) À l'aide de l'Explorateur Windows et double-cliquez dessus.
 +
 L'assistant d'installation OnCommand Insight s'affiche.

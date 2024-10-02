@@ -56,7 +56,6 @@
   <block id="b1ff5704b48e42d700d43961dd415064" category="doc">Marques commerciales</block>
   <block id="a93bc0a57623c2facaa010825c808507" category="paragraph"><block ref="a93bc0a57623c2facaa010825c808507" category="inline-link-rx"></block></block>
   <block id="44255ed683c528ba0c41166a56d37b96" category="summary">OnCommand Insight simplifie la gestion opérationnelle des infrastructures IT hybrides pour les environnements sur site et dans les clouds publics et privés.</block>
-  <block id="086156bc9cbd8e4be148e68dde15c618" category="doc">Documentation OnCommand Insight</block>
   <block id="db5eb84117d06047c97c9a0191b5fffe" category="section-title">Assistance</block>
   <block id="85bb29b6974d74c0f5e52c1e2c5e5b9e" category="summary">Le serveur OnCommand Insight est installé à l'aide de la ligne de commande.</block>
   <block id="376a187b7d9e2058cf562785bebc5f68" category="doc">Installation du serveur OnCommand Insight</block>
@@ -1622,7 +1621,6 @@
   <block id="82b48650bef5d4cf1577fa4ab65da01b" category="list-text">Si l'utilisateur DB2 est un utilisateur _local_, vous devez disposer des éléments suivants :</block>
   <block id="e5c91feeac6b579e37af50aa512238f2" category="list-text">Nom d'utilisateur et mot de passe de l'utilisateur qui sera utilisé comme utilisateur DB2. Si cet utilisateur n'existe pas, l'installation le créera.</block>
   <block id="ffc4c51a24ebf1f8f5efd3f5e4a1c095" category="list-text">[REMARQUE]</block>
-  <block id="0c2e9b6e6aa7cb3ddda85f78acec808e" category="paragraph">Le nom d'utilisateur DB2 ainsi que le nom de connexion Windows ont les restrictions suivantes : * les caractères valides sont les suivants : 'a' à 'Z'; 'a' à 'z'; '0' à '9'; '#'; '@'; '_'; '!'; '('; ')'; '{'; '}'; '-'; et '.'. * Si vous utilisez les caractères spéciaux '!'; '('; ')'; '{'; '}'; '-'; et '.' vous devez utiliser toutes les lettres majuscules pour le nom d'utilisateur. * Le premier caractère de la chaîne doit être un caractère alphabétique, @, # ou $; il ne peut pas être un nombre ou les séquences de lettres _SYS_, _DBM_, ou _IBM_ * il ne peut pas dépasser 128 octets. * Il ne peut pas être UTILISATEURS, ADMINISTRATEURS, INVITÉS, PUBLIC, LOCAL ou tout mot réservé SQL.</block>
   <block id="738522fddc75560e280b30db3e0be296" category="list-text">L'utilisateur DB2 ne peut pas être le même que l'utilisateur exécutant l'installation.</block>
   <block id="f181c0f7be710a9dbf18b4428db454ce" category="list-text">Connectez-vous au serveur Data Warehouse à l'aide d'un compte disposant de privilèges d'administrateur.</block>
   <block id="f31255441841d799ec9583c33ef9aad2" category="list-text">Téléchargez le fichier .zip Data Warehouse with Reporting et extrayez les fichiers dans un dossier d'installation.</block>
@@ -1770,7 +1768,6 @@
   <block id="e78b597a7f3a4a98338cff74f8dff14b" category="paragraph">Votre système doit respecter le niveau de cryptage minimum (1024 bits).</block>
   <block id="3938a7dd369f5b456fecfdcd1f016fc5" category="paragraph">L'avertissement de certification n'a aucun impact sur la facilité d'utilisation du système. À l'invite du message, vous pouvez indiquer que vous comprenez le risque, puis vous pouvez utiliser Insight.</block>
   <block id="87fa78fb7919c373e3a41005a63c6a39" category="list-text">Répertoriez le contenu du magasin de clés :<block ref="76a629a352cbae035ab5cecf567da259" prefix=" " category="inline-code"></block></block>
-  <block id="759804645d00adff9eb773aec5bd4f1a" category="paragraph">Lorsque vous êtes invité à saisir un mot de passe, entrez<block ref="b91cd1a54781790beaa2baf741fa6789" prefix=" " category="inline-code"></block>.</block>
   <block id="2a70d3160efbf7dd3904037d4b71c31c" category="paragraph">Il doit y avoir au moins un certificat dans le magasin de clés,<block ref="2f14d50daa934408ff667debf9d977e9" prefix=" " category="inline-code"></block>.</block>
   <block id="7fb8516ecde4c6bc0884f96d8fc8465c" category="list-text">Supprimez le<block ref="2f14d50daa934408ff667debf9d977e9" prefix=" " category="inline-code"></block>:<block ref="e61120ef06034f84c392d9467d17eb01" prefix=" " category="inline-code"></block></block>
   <block id="a3676dff8aa4c49d4b7945bf09c3492b" category="list-text">Générer une nouvelle clé :<block ref="df6cc6b33f3bb26a2b192edba739e691" prefix=" " category="inline-code"></block></block>
@@ -1797,19 +1794,13 @@
   <block id="0e633d8f24d81b8d2903e5bd108cd160" category="summary">Une fois toutes les tâches préalables terminées, vous pouvez vous connecter au serveur Data Warehouse et exécuter le package d'installation pour terminer la mise à niveau.</block>
   <block id="0ff090b1b1a60051c892dcd3504847a3" category="doc">Mise à niveau de Data Warehouse</block>
   <block id="37c99511f0256de4a77204d84a119ba7" category="paragraph">La mise à niveau en ligne n'est pas prise en charge par l'entrepôt de données (DWH). Procédez comme suit pour effectuer une mise à niveau vers la nouvelle version du logiciel DWH.</block>
-  <block id="d063dfe18619a883025d6dd40f8fc195" category="paragraph">Lors de la mise à niveau de DWH, le dossier contenant la sauvegarde du coffre-fort _securityadmin_ Tool est supprimé. Il est fortement recommandé de sauvegarder le coffre-fort avant de mettre à niveau DWH. Pour référence, les dossiers de coffre-fort par défaut sont les suivants :</block>
-  <block id="c9a69c0764bcfc70f9b9e4b3c3b1364e" category="list-text">Dossier du coffre-fort (coffres-forts en cours d'utilisation):<block ref="95be2c10e53cc73f6028d2d5d12cdd62" prefix="" category="inline-code"></block></block>
-  <block id="79f560a2ab2d6eec57f476895256dd3c" category="list-text">Sauvegardes de coffre-fort :<block ref="d649d842d7b9b318e0432437a926bfb0" prefix=" " category="inline-code"></block></block>
   <block id="2a376bb95e9f9290d451675ea81a6d26" category="inline-link">Gestion de la sécurité dans l'entrepôt de données</block>
-  <block id="bcb31d6b2e54004f6d43f5fd9ec172b4" category="paragraph">Voir<block ref="7f3370a6df5397120827b2e0fbf9e0aa" category="inline-link-rx"></block> pour en savoir plus.</block>
   <block id="63dd4f2a28008d836776c7fd306628a7" category="list-text">Connectez-vous au serveur DWH à l'aide d'un compte disposant des autorisations d'administrateur local Windows.</block>
   <block id="617fe155bd7ad7f894fcada029768f82" category="list-text">Sauvegardez la base de données DWH et les rapports à l'aide de l'interface du portail DWH.</block>
-  <block id="7e49ef41446de457f8fa42c4ec7d3def" category="list-text">Sauvegardez la configuration de sécurité si le serveur utilise une configuration de sécurité autre que celle par défaut.</block>
   <block id="dd4ae90cccfad505a78c8fc8d40afb6e" category="list-text">Désinstallez le logiciel DWH du serveur.</block>
   <block id="9fa12f171ca52b6f6a596cf63d280bde" category="list-text">Redémarrez le serveur pour supprimer des composants de la mémoire.</block>
   <block id="8ff1c2354dd0ca69214eb647dc050bdc" category="list-text">Installez la nouvelle version de DWH sur le serveur.</block>
   <block id="52948cc8a9826727670f3245e5603390" category="paragraph">L'installation dure environ 2 heures. Il est recommandé de laisser toutes les valeurs par défaut sélectionnées.</block>
-  <block id="babb1a298f24ef83f173464efcfca407" category="list-text">Restaurez la configuration de sécurité non par défaut sur le serveur DWH.</block>
   <block id="de6386722d9194dda29f674626b32883" category="list-text">Restaurez la base de données DWH sur le serveur.</block>
   <block id="34ee46f5c70d35071cf5854b32f2322d" category="paragraph">Après la mise à niveau, vous devez restaurer la base de données Data Warehouse, qui peut prendre autant de temps ou plus longtemps que la mise à niveau.</block>
   <block id="aba05ad896ee451e78ad11ae6d00a6e0" category="paragraph">Lors d'une mise à niveau de OnCommand Insight, il n'est pas rare qu'un client passe à un autre serveur Insight. Si vous avez modifié votre serveur Insight, après avoir restauré la base de données de l'entrepôt de données, les connecteurs existants pointent vers l'adresse IP ou le nom d'hôte du serveur précédent. Il est recommandé de supprimer le connecteur et d'en créer un nouveau afin d'éviter d'éventuelles erreurs.</block>
@@ -2496,13 +2487,10 @@
   <block id="92f45190ae635c18a35e9c2d3dfd1167" category="paragraph">Cette procédure concerne les systèmes exécutant OnCommand Insight 7.3.10 et versions ultérieures.</block>
   <block id="5201bc8ef38b5c0be4c3b4f97fb13fbe" category="list-text">Ajoutez des autorités de certification (AC) au magasin de certificats Cognos.</block>
   <block id="eb205e993122b3f2203a7c7a20bf073c" category="list-text">Dans une fenêtre de commande, accédez à<block ref="47d51740945d7f9a7ac85ac6fd415da5" prefix=" " category="inline-code"></block></block>
-  <block id="b2c4b25f4381e1a2cd49e9e1ead8160d" category="list-text">Utilisez le<block ref="64392b8d1e3ba08576d89af33ed6cea9" prefix=" " category="inline-code"></block> Utilitaire permettant de répertorier les autorités de certification approuvées :<block ref="e03d7ecc74f3841b2314c5e23c98d8ad" prefix=" " category="inline-code"></block></block>
   <block id="0b8f9c9ddf524d6e7dc0504b71ac3edf" category="paragraph">Le premier mot de chaque ligne indique l'alias de l'autorité de certification.</block>
   <block id="0039da7e48c7ac5da9e2716e042b994c" category="list-text">S'il n'existe aucun fichier approprié, fournissez un fichier de certificat d'autorité de certification, généralement un<block ref="bdf46f9562b038d0163af0feba0b1dfa" prefix=" " category="inline-code"></block> fichier.</block>
   <block id="982a29a9fbe3bfee5b2fb69d0a49639c" category="list-text">Pour inclure les autorités de certification du client avec des autorités de certification OnCommand Insight approuvées, rendez-vous sur<block ref="47d51740945d7f9a7ac85ac6fd415da5" prefix=" " category="inline-code"></block>.</block>
   <block id="4069d49531ab9cf349fe6a1261c62384" category="list-text">Utilisez le<block ref="64392b8d1e3ba08576d89af33ed6cea9" prefix=" " category="inline-code"></block> utilitaire d'importation de<block ref="bdf46f9562b038d0163af0feba0b1dfa" prefix=" " category="inline-code"></block> fichier :<block ref="8cd647637e0ddc46a5d7164ef93cccaf" prefix=" " category="inline-code"></block></block>
-  <block id="b422d680d6e0078b27e59604791cfd1a" category="paragraph"><block ref="65a076030818b385ff494c6bc4ba5707" prefix="" category="inline-code"></block> Est généralement un alias qui identifie facilement l'autorité de certification dans le<block ref="ffada47d849d7cba2ebbf32039b9a430" prefix="" category="inline-code"></block> fonctionnement.</block>
-  <block id="f9ebeb58036bdcd031f9e46fb45e5856" category="list-text">Lorsque vous êtes invité à saisir un mot de passe, entrez<block ref="9c8299cfba19467458d7048c5fa7d7d9" prefix=" " category="inline-code"></block>.</block>
   <block id="ea05d2b7f408bf3d2b54f17dbc610ecf" category="list-text">Réponse<block ref="a6105c0a611b41b08f1209506350279e" prefix=" " category="inline-code"></block> lorsque vous êtes invité à approuver le certificat.</block>
   <block id="57defb40c798f71ed1024d2b21c6f07d" category="list-text">Pour activer le mode CAC, procédez comme suit :</block>
   <block id="f74186972938597a7faf9b5564793524" category="list-text">Configurez la page de déconnexion CAC en procédant comme suit :</block>
@@ -2675,8 +2663,6 @@
   <block id="36677f555f88873d5fa38e3cc19f0042" category="paragraph">Vous devez connaître les attributs d'utilisateur et de groupe qui ont été configurés pour Insight dans votre domaine LDAP.</block>
   <block id="48969889af4dc8a9fd201f6c24ead314" category="paragraph">OnCommand Insight prend en charge LDAP et LDAPS via le serveur Microsoft Active Directory. D'autres implémentations LDAP peuvent fonctionner, mais n'ont pas été qualifiées à Insight. Cette procédure suppose que vous utilisez Microsoft Active Directory version 2 ou 3 LDAP (Lightweight Directory Access Protocol).</block>
   <block id="2d53cded4163b6580d04629b69121b81" category="paragraph">Les utilisateurs LDAP s'affichent avec les utilisateurs définis localement dans la liste *Admin* &gt; menu:Setup[Users].</block>
-  <block id="f5a20139a00a267882fc16a454c41976" category="list-text">Faites défiler jusqu'à la section LDAP, comme illustré ici.</block>
-  <block id="b386d7a46a1b497f4df55bf480b671e7" category="image-alt">configuration ldap</block>
   <block id="577f29802170304954a82cc36b337db7" category="list-text">Cliquez sur *Activer LDAP* pour autoriser l'authentification et l'autorisation de l'utilisateur LDAP.</block>
   <block id="0281ad4452eb507038954f4f6039eb56" category="list-text">Renseignez les champs suivants :</block>
   <block id="044f9074bf19b6016ad5acab23764bb9" category="list-text"><block ref="d8504c66dbb60123fbbf5e2f16a8d866" prefix="" category="inline-code"></block>: Insight accepte une liste séparée par des virgules d'URL LDAP. Insight tente de se connecter aux URL fournies sans valider le protocole LDAP.</block>
@@ -2857,31 +2843,7 @@
   <block id="89b807c612a641b6b17572be567a7bed" category="list-text">Qtree</block>
   <block id="b19292cad601553e06435e12582db069" category="list-text">Ordinateur virtuel</block>
   <block id="84b0309095a6646558293a3507208c1e" category="list-text">Membre de la zone</block>
-  <block id="b0d9596ea0f6d1971a480d38a91d404f" category="summary">La version 7.3.1 de OnCommand Insight a introduit des fonctions de sécurité qui permettent aux environnements Insight de fonctionner avec une sécurité renforcée. Les fonctionnalités comprennent des améliorations au cryptage, le hachage des mots de passe et la possibilité de modifier les mots de passe et les paires de clés d'utilisateur internes qui cryptent et décryptent les mots de passe. Vous pouvez gérer ces fonctionnalités sur tous les serveurs de l'environnement Insight.</block>
   <block id="dc396a5c16ffc81f2bf1b9cf04d3be22" category="doc">Sécurité des données Insight</block>
-  <block id="e5b8c26769a57497cd0405722a44be63" category="paragraph">L'installation par défaut d'Insight inclut une configuration de sécurité dans laquelle tous les sites de votre environnement partagent les mêmes clés et les mêmes mots de passe par défaut. Pour protéger vos données sensibles, NetApp vous recommande de modifier les clés par défaut et le mot de passe utilisateur acquisition après une installation ou une mise à niveau.</block>
-  <block id="a5edb97398e7d5a08c2891c614679390" category="paragraph">Les mots de passe cryptés de la source de données sont stockés dans la base de données Insight Server. Le serveur dispose d'une clé publique et crypte les mots de passe lorsqu'un utilisateur les saisit dans une page de configuration de source de données WebUI. Le serveur ne dispose pas des clés privées requises pour décrypter les mots de passe de la source de données stockés dans la base de données du serveur. Seules les unités d'acquisition (LAU, RAU) possèdent la clé privée de la source de données requise pour décrypter les mots de passe de la source de données.</block>
-  <block id="5b167c00b4cea056d00dede9ae3aafbd" category="section-title">Génération de nouvelles clés sur les serveurs</block>
-  <block id="cf564c8539cb7d07e82c41ca1029e242" category="paragraph">L'utilisation de clés par défaut introduit une vulnérabilité de sécurité dans votre environnement. Par défaut, les mots de passe des sources de données sont stockés et cryptés dans la base de données Insight. Elles sont chiffrées à l'aide d'une clé commune à toutes les installations d'Insight. Dans une configuration par défaut, une base de données Insight envoyée à NetApp inclut des mots de passe qui pourraient théoriquement être déchiffrés par NetApp.</block>
-  <block id="d056987cec9890c85832108da69770a9" category="section-title">Modification du mot de passe utilisateur acquisition</block>
-  <block id="47abfd3cf84087bb168f3e87acb39d14" category="paragraph">L'utilisation du mot de passe utilisateur « acquisition » par défaut introduit une vulnérabilité de sécurité dans votre environnement. Toutes les unités d'acquisition utilisent l'utilisateur « acquisition » pour communiquer avec le serveur. Raus avec des mots de passe par défaut peut théoriquement se connecter à n'importe quel serveur Insight en utilisant des mots de passe par défaut.</block>
-  <block id="f24e839c52e7d6d17545ee4e29f7db51" category="section-title">Mise à niveau et installation</block>
-  <block id="f34f4da3ecad57724d33e1e38e93e1e3" category="paragraph">Lorsque votre système Insight contient des configurations de sécurité autres que celles par défaut (vous avez changé ou changé de mot de passe), vous devez sauvegarder vos configurations de sécurité. L'installation de nouveaux logiciels ou, dans certains cas, la mise à niveau de logiciels restaure la configuration de sécurité par défaut de votre système. Lorsque votre système revient à la configuration par défaut, vous devez restaurer la configuration non par défaut pour que le système fonctionne correctement.</block>
-  <block id="93e58e098991c399f4036e7af54296ce" category="section-title">La gestion des clés dans un environnement complexe de fournisseurs de services</block>
-  <block id="a9f2795724ac1c91c875ccbb39563f71" category="paragraph">Un fournisseur de services peut héberger plusieurs clients OnCommand Insight qui recueillent des données. Ces clés protègent les données des clients contre tout accès non autorisé par plusieurs clients sur le serveur Insight. Les données de chaque client sont protégées par des paires de clés spécifiques.</block>
-  <block id="b865cef7b2e92d726dab264f22b65ee0" category="paragraph">Cette implémentation d'Insight peut être configurée comme indiqué dans l'illustration suivante.</block>
-  <block id="f7f76e72928d6658590ed09068349de5" category="image-alt">clés de fournisseur de services</block>
-  <block id="e17c564bef82a445472b60526984525f" category="paragraph">Vous devez créer des clés individuelles pour chaque client dans cette configuration. Le client A nécessite des clés identiques pour les deux Raus. Le client B nécessite un seul jeu de clés.</block>
-  <block id="84506c8c4172ce240cb523f8e603d4d9" category="paragraph">Procédure à suivre pour modifier les clés de cryptage du client A :</block>
-  <block id="130ba24391a7e8d255b15a3bc20c53f7" category="list-text">Effectuez une connexion à distance au serveur hébergeant RAU1.</block>
-  <block id="ba0c922884b29460fe3aef86d29c4a68" category="list-text">Démarrez l'outil d'administration de la sécurité.</block>
-  <block id="5e07c6a1670364591b29c61684e35b54" category="list-text">Sélectionnez Modifier la clé de cryptage pour remplacer les clés par défaut.</block>
-  <block id="a4eb7815a237bffec6505f82290f791f" category="list-text">Sélectionnez Sauvegarder pour créer un fichier zip de sauvegarde de la configuration de sécurité.</block>
-  <block id="52da3b25df090851fd140ca0af278d66" category="list-text">Effectuez une connexion à distance au serveur hébergeant RAU2.</block>
-  <block id="51a6c5dff40e98caca0a271e985752e5" category="list-text">Copiez le fichier zip de sauvegarde de la configuration de sécurité dans RAU2.</block>
-  <block id="9e0731f37e1329ffa666fa8b7460ae74" category="list-text">Restaurez la sauvegarde de sécurité de RAU1 vers le serveur actuel.</block>
-  <block id="4d33e3aa37cb0836888bcf79a725a358" category="paragraph">Procédure à suivre pour modifier les clés de cryptage du client B :</block>
-  <block id="d3af6fb93f78e32b00be499e32e1e130" category="list-text">Effectuez une connexion à distance au serveur hébergeant RAU3.</block>
   <block id="d8a518871baf1a0cd13c201007b16ce9" category="summary">Vous pouvez définir des entités métier pour assurer le suivi des données de votre environnement et générer des rapports à un niveau plus granulaire. La section données utilisateur d'une page de ressource vous permet de modifier l'entité métier affectée à un actif ou de supprimer une entité métier d'un actif.</block>
   <block id="8006e257f93db5b1937f59f9c35fa5ce" category="doc">Utilisation de la section données utilisateur pour affecter ou modifier des entités métier</block>
   <block id="bca860382cbf07c7fcc904e21ff880bc" category="list-text">Cliquez sur *tableaux de bord*, sélectionnez *tableau de bord*, localisez un nom de ressource, puis cliquez dessus. La page ASSET s'affiche.</block>
@@ -3193,22 +3155,7 @@
   <block id="a7b579a25b5d41da716ab5133bb4ef4c" category="paragraph">Vous utilisez le<block ref="4924cdf1992856713a11ebac184ceb81" prefix=" " category="inline-code"></block> outil de gestion de la sécurité :</block>
   <block id="ae5ec4adfd829d0ce42eda85f1bf19f3" category="list-text">Vitres -<block ref="09b50f27173fab90f2f09515f3322532" prefix=" " category="inline-code"></block></block>
   <block id="6d43f414975e3172b0e6b0387f3c9660" category="list-text">Linux :<block ref="9363a944a51c65486664aed0f6e192fa" prefix=" " category="inline-code"></block></block>
-  <block id="2d805e40f048f8ac5921fd582a426f41" category="list-text">Effectuez une connexion à distance au serveur Data Warehouse.</block>
-  <block id="1e0243d49be54f99f7eef9855a7cee80" category="paragraph">Le système demande des informations d'identification de connexion.</block>
-  <block id="445ee2e4288af83712e4c04825cf6c34" category="list-text">Entrez le nom d'utilisateur et le mot de passe d'un compte avec les informations d'identification « Admin ».</block>
-  <block id="c10f995fef645bfed0597a66f5e22e68" category="paragraph">Le système affiche le menu d'administration de la sécurité pour l'entrepôt de données :</block>
-  <block id="ad52c55c1186c01cd67df056c7652971" category="list-text">*Sauvegarde*</block>
-  <block id="71f2ec507a9f990be82fc7e46457e674" category="paragraph">Crée un fichier zip de sauvegarde du coffre-fort contenant tous les mots de passe et clés et place le fichier à un emplacement spécifié par l'utilisateur ou à l'emplacement par défaut :</block>
-  <block id="653705cc37796eb20b95b4ae6be0fddd" category="list-text">Vitres -<block ref="6185ae679572d880e43ae94bee7ccc80" prefix=" " category="inline-code"></block></block>
-  <block id="4b2062bd7a4f4632199a058501a407d8" category="list-text">Linux :<block ref="43fa4273f6caa83af83378022c88b9b6" prefix=" " category="inline-code"></block></block>
-  <block id="aa1ec7cb01562da3b2fe6b08d32a8cc3" category="list-text">*Restaurer*</block>
-  <block id="0de47ee5de6bc6440821ee27a42c53ee" category="paragraph">Restaure la sauvegarde zip du coffre-fort créé. Une fois restaurées, tous les mots de passe et clés sont rétablis dans les valeurs existantes au moment de la création de la sauvegarde.</block>
-  <block id="08416cac58e00534d1fb6a4e51841b7b" category="paragraph">La restauration peut être utilisée pour synchroniser les mots de passe et les clés sur plusieurs serveurs, par exemple : - Modifier les clés de cryptage sur un serveur - Créer une sauvegarde du coffre-fort - Restaurer la sauvegarde du coffre-fort sur le second serveur</block>
   <block id="26b17225b626fb9238849fd60eabdf60" category="paragraph">+</block>
-  <block id="cbe69276a5f8ac6078226b78fe8b77ce" category="list-text">*Changer les clés de cryptage*</block>
-  <block id="278bad3681be22ad49e66628599c98f0" category="paragraph">Modifiez la clé de cryptage DWH utilisée pour crypter ou décrypter des mots de passe tels que les mots de passe de connecteur et les mots de passe SMPT.</block>
-  <block id="6452df111f6cd67c3e3dc44b19723518" category="list-text">*Mettre à jour le mot de passe*</block>
-  <block id="8f0abb8a69f3f76fdbc929fb22e81382" category="paragraph">Modifier le mot de passe d'un compte utilisateur spécifique.</block>
   <block id="bb0ec0d040c15cc1966364daaddca611" category="list-text">_interne</block>
   <block id="b61259ea2cb15785f049428a202b425f" category="list-text">cognos_admin</block>
   <block id="3be8160fe30b74ee9ca2c935eddc1392" category="list-text">dwh</block>
@@ -3216,11 +3163,6 @@
   <block id="4ee3992cf2c1e96c768a535eeea0c754" category="list-text">dwhuser</block>
   <block id="85cf4e6d42a71e693fd780c8b29accdd" category="list-text">hôtes</block>
   <block id="63a9f0ea7bb98050796b649e85481845" category="list-text">racine</block>
-  <block id="880f53fa156a5ea863c6fb04deffc34f" category="paragraph">Lorsque vous modifiez les mots de passe dwhuser, hosts, Inventory ou root, vous avez la possibilité d'utiliser le hachage de mot de passe SHA-256. Cette option nécessite que tous les clients accédant aux comptes utilisent des connexions SSL.</block>
-  <block id="77428ceb24ba07e196166065585704a4" category="list-text">*Rétablir les valeurs par défaut*</block>
-  <block id="c6b61342182772ead8b800863ecfda6e" category="paragraph">Réinitialise les clés de cryptage et les mots de passe aux valeurs par défaut. Les valeurs par défaut sont celles fournies lors de l'installation.</block>
-  <block id="444316a65f8562dac9ea2de5bb9d051e" category="list-text">*Quitter*</block>
-  <block id="64c20389c59e3bc6de8e4bcdfcbd89f2" category="paragraph">Quittez le<block ref="4924cdf1992856713a11ebac184ceb81" prefix=" " category="inline-code"></block> outil.</block>
   <block id="4cb0b7445e1c297bb70f124559ad7756" category="summary">Les clients qui ont des environnements sécurisés doivent communiquer avec le service client NetApp pour résoudre les problèmes qui surviennent sans compromettre les informations de leur base de données. Les utilitaires OnCommand Insight Scrub vous permettent de configurer un dictionnaire complet de mots-clés et de modèles afin que vous puissiez « nettoyer » les données sensibles et envoyer des fichiers de nettoyage au support client.</block>
   <block id="a944fd102cd4cbadee81a2a72ba90a2d" category="doc">Nettoyage des données pour transfert vers le support</block>
   <block id="682c65a39f3cea50bfcf4b1a70c38862" category="list-text">Dans l'interface utilisateur Web, cliquez sur *Admin* et sélectionnez *Dépannage*.</block>
@@ -3527,12 +3469,6 @@
   <block id="d681be6d9db8fc40c143215eeb1b37d4" category="list-text">Pour modifier les informations d'un utilisateur, sélectionnez-le dans la liste et cliquez sur le symbole *Modifier le compte utilisateur* à droite de la description de l'utilisateur.</block>
   <block id="57be1d1b72d1c40a6cfeb399920c4f25" category="list-text">Pour supprimer un utilisateur du système OnCommand Insight, sélectionnez-le dans la liste et cliquez sur *Supprimer le compte utilisateur* à droite de la description de l'utilisateur.</block>
   <block id="1f950ca38f02b58cfb6ffef3012dc064" category="paragraph">Lorsqu'un utilisateur se connecte à OnCommand Insight, le serveur tente d'abord de s'authentifier via LDAP, si LDAP est activé. Si OnCommand Insight ne parvient pas à localiser l'utilisateur sur le serveur LDAP, il recherche dans la base de données Insight locale.</block>
-  <block id="5b62ed1f83211ba9dbc7165c0752bb25" category="doc">Configuration de Cognos pour la connexion par carte à puce et certificat (OnCommand Insight 7.3.5 à 7.3.9)</block>
-  <block id="ad1486be0e9286cf5d22e5662176ff2f" category="paragraph">Cette procédure concerne les systèmes exécutant OnCommand Insight 7.3.5 à 7.3.9.</block>
-  <block id="6a3873737d5a703cbec7b6a984173b3f" category="list-text">Utilisez le<block ref="64392b8d1e3ba08576d89af33ed6cea9" prefix=" " category="inline-code"></block> Utilitaire permettant de répertorier les autorités de certification approuvées :<block ref="e5a2f1030b7553cb67ebd30f5475a53b" prefix=" " category="inline-code"></block></block>
-  <block id="d8f089dd97205aad8edc4408ae64729a" category="list-text">Utilisez le<block ref="64392b8d1e3ba08576d89af33ed6cea9" prefix=" " category="inline-code"></block> utilitaire d'importation de<block ref="bdf46f9562b038d0163af0feba0b1dfa" prefix=" " category="inline-code"></block> fichier :<block ref="a24502edd714c6709b0187bc9498872e" prefix=" " category="inline-code"></block></block>
-  <block id="417929fd03cad0c1f483099ef8b451df" category="list-text">Pour activer le mode CAC, exécutez<block ref="18ae016acb7b801873619b542d263ab6" prefix=" " category="inline-code"></block></block>
-  <block id="58f139f85104244104dd2daea57992d4" category="list-text">Pour désactiver le mode CAC, exécutez<block ref="65e443b2598053db6bcae11524de03a4" prefix=" " category="inline-code"></block></block>
   <block id="d2cc523695a5e8edc4222762156c4d33" category="summary">Les stratégies de sécurité peuvent vous obliger à modifier les mots de passe dans votre environnement OnCommand Insight. Certains mots de passe d'un serveur existent sur un serveur différent dans l'environnement, ce qui nécessite que vous modifiiez le mot de passe sur les deux serveurs. Par exemple, lorsque vous modifiez le mot de passe de l'utilisateur « Inventory » sur le serveur Insight Server, vous devez faire correspondre le mot de passe de l'utilisateur « Inventory » sur le connecteur du serveur Data Warehouse configuré pour ce serveur Insight Server.</block>
   <block id="cec508381cd38c96e79a8afc25d4e84d" category="doc">Modification des mots de passe des utilisateurs internes OnCommand Insight</block>
   <block id="1d3c1d99933fd99c6104a83115c4e035" category="paragraph">Les stratégies de sécurité peuvent vous obliger à modifier les mots de passe dans votre environnement OnCommand Insight. Certains mots de passe d'un serveur existent sur un serveur différent dans l'environnement, ce qui nécessite que vous modifiiez le mot de passe sur les deux serveurs. Par exemple, lorsque vous modifiez le mot de passe utilisateur « Inventory » sur le serveur Insight Server, vous devez faire correspondre le mot de passe utilisateur « Inventory » sur le connecteur du serveur Data Warehouse configuré pour ce serveur Insight Server.</block>
@@ -3798,17 +3734,10 @@
   <block id="7c2bb576d2bdb3fddcede284c8193594" category="list-text">IOPS : somme des IOPS de tous les disques qui fournissent la capacité à ce pool de stockage.</block>
   <block id="2874762702c5c98a83b2476d88a9e3a7" category="list-text">Débit : somme du débit de tous les disques contribuant à la capacité de ce pool de stockage.</block>
   <block id="2937cf5b3aef73d7472d5d30890503fa" category="summary">Vous pouvez ajouter des certificats SSL pour activer l'authentification et le chiffrement améliorés pour votre environnement Data Warehouse et Cognos.</block>
-  <block id="0852b1df73bb603bbbf65c6fb1857cf9" category="doc">Importation de certificats SSL signés par une autorité de certification pour Cognos et DWH (Insight 7.3.5 à 7.3.9)</block>
-  <block id="29d91b457177c87c568f8d8b5f924dc5" category="paragraph">Cette procédure concerne les systèmes exécutant OnCommnand Insight 7.3.5 à 7.3.9.</block>
   <block id="b1e2f6e60ca5aed248bcdc5d43a46f5e" category="paragraph">Vous devez disposer de privilèges d'administrateur pour effectuer cette procédure.</block>
-  <block id="7ccf81f1fe3427be9a03ba44ffecfc08" category="list-text">Créer une sauvegarde de<block ref="814293a559d07f9e68fdaac355b60ba3" prefix=" " category="inline-code"></block>.</block>
-  <block id="35ada12dd772fa49b03b8ab77f0484f0" category="list-text">Créez une sauvegarde des dossiers « certs » et « csk » sous<block ref="b3ef8fa79390a864881fbf6e020e783c" prefix=" " category="inline-code"></block>.</block>
   <block id="4e812eea5e14ed776139fecf8cc776c4" category="list-text">Générez une demande de cryptage de certificat à partir de Cognos. Dans une fenêtre Admin CMD, exécutez :</block>
   <block id="e45cdd8cf68764615646b754671dc0f1" category="list-text">cd<block ref="83057408c302951ae258fd581bb40e7a" prefix=" " category="inline-code"></block></block>
-  <block id="eaf037ade57806ae5c506d61363fc0b3" category="list-text"><block ref="66fbeece7438b76844e23002747f5abb" prefix="" category="inline-code"></block></block>
   <block id="ebf05b7ddf62a8eb95aa44e58615c6b9" category="list-text">Ouvrez le<block ref="02f76d3b63494cdd808b9bd651c9c0b8" prefix=" " category="inline-code"></block> classez et copiez le contenu généré.</block>
-  <block id="16df5dac47cf83db8220ac4d764c6c99" category="list-text">Envoyez encryptRequest.csr à l'autorité de certification (CA) pour obtenir un certificat SSL.</block>
-  <block id="7a3f0b10a655d33b1b863d6879282742" category="paragraph">Assurez-vous d'ajouter des attributs supplémentaires tels que `SAN:dns=FQDN (par exemple, hostname.netapp.com)`" pour ajouter le SubjectAltName). Google Chrome version 58 et ultérieure se plaint si le SubjectAltName est absent du certificat.</block>
   <block id="35943023e14122f48d800c7e4c6b9a3b" category="list-text">Téléchargez les certificats de chaîne en incluant le certificat racine en utilisant le format PKCS7</block>
   <block id="a9b3d80ef8f35dbfd79a1a88fe4e30ed" category="paragraph">Ceci téléchargera le fichier fqdn.p7b</block>
   <block id="79cfa9a142978793fd5b4b88fcc033d4" category="list-text">Obtenez un certificat au format .p7b auprès de votre autorité de certification. Utilisez un nom qui le marque comme certificat pour le serveur Web Cognos.</block>
@@ -3818,27 +3747,16 @@
   <block id="705abfcffb7e56b92380fcb069c55e26" category="list-text">Cliquez avec le bouton droit de la souris sur CA racine &gt; toutes les tâches &gt; Exporter.</block>
   <block id="a0ecbbc4f239a9e8db7144a1221a67bd" category="list-text">Sélectionnez sortie Base64.</block>
   <block id="53e3047826118cc0d9c73551780732ca" category="list-text">Entrez un nom de fichier identifiant celui-ci comme certificat racine.</block>
-  <block id="2a6f79a205d5596c0c69f9a2e4064a4a" category="list-text">Répétez les étapes 8a à 8c pour exporter tous les certificats séparément dans des fichiers .cer.</block>
   <block id="bb736f20e611d5e6c1af52246bc6c86d" category="list-text">Nommez les fichiers intermediateX.cer et cognos.cer.</block>
   <block id="1bbd5e28bd81a79111348e198d0878b0" category="list-text">Ignorez cette étape si vous n'avez qu'un seul certificat CA, sinon fusionnez root.cer et intermediateX.cer en un seul fichier.</block>
-  <block id="46b2c642f1a2058e235bc04cc6907984" category="list-text">Ouvrez intermediate.cer avec le Bloc-notes et copiez le contenu.</block>
-  <block id="58c4900fac7b8fcbf67daf95de91f5f3" category="list-text">Ouvrez root.cer avec le Bloc-notes et enregistrez le contenu à partir de 9a.</block>
-  <block id="2352c70fbc5653d3a12dfcb10489b8ec" category="list-text">Enregistrez le fichier sous CA.cer.</block>
   <block id="aec660d6840076874d3a831e453282cc" category="list-text">Importez les certificats dans le magasin de clés Cognos à l'aide de l'invite Admin CMD :</block>
   <block id="0ce1060a3fbe5eddae7e8c8add40c26c" category="list-text">cd « Program Files\sanscreen\cognos\analytics\bin »</block>
-  <block id="69108880ddac3f744816fd308054d24b" category="list-text">ThirdPartyCertificateTool.bat -Java:local -i -T -r c:\temp\CA.cer</block>
-  <block id="e9235d19fe071e12c01b5cd56f1da098" category="paragraph">Cela va définir CA.cer comme autorité de certification racine.</block>
-  <block id="0d153f36463b00d3b0632778773f2920" category="list-text">ThirdPartyCertificateTool.bat -Java:local -i -e -r c:\temp\cognos.cer -t c:\temp\CA.cer</block>
-  <block id="b2d3112a307dfa5d9f0a457cbbb5c4ee" category="paragraph">Ceci définit Cognos.cer comme certificat de cryptage signé par CA.cer.</block>
   <block id="878dd328a326af64c673d31f2b112978" category="list-text">Ouvrez la configuration IBM Cognos.</block>
   <block id="986315603422cbcfeab3c771a468c7ba" category="list-text">Sélectionnez Configuration locale-&gt; sécurité --&gt; cryptographie --&gt; Cognos</block>
   <block id="b94acbb57403cfcc401cd53a69326355" category="list-text">Modifier « utiliser une autorité de certification tierce ? » Sur vrai.</block>
   <block id="25812ed1432cfe46632186b5957ebe26" category="list-text">Enregistrez la configuration.</block>
   <block id="b95654abc76791ffe05131877717f64e" category="list-text">Redémarrez Cognos</block>
   <block id="8c56e576029e9e5d76102044606eb747" category="list-text">Exportez le dernier certificat Cognos dans cognos.crt à l'aide de l'invite Admin CMD :</block>
-  <block id="f47ab624eb68bba4772ca7ef7e41232e" category="list-text">« D:\Program Files\SANscreen\Java\bin\keytool.exe » -exportcert -file « c:\temp\cognos.crt » -keystore « D:\Program Files\SANscreen\cognos\analytics\configuration\certs\CAMKeystore » -storetype PKCS12 -storepass NoPassSet alias WordSet</block>
-  <block id="91f0b2ee4b1e2130ca4bff1ba9891d0c" category="list-text">Importez « c:\temp\cognos.crt » dans dwh trustore pour établir une communication SSL entre Cognos et DWH, à l'aide de la fenêtre d'invite Admin CMD.</block>
-  <block id="81905a43907532ef79f98ac8ccafdc24" category="list-text">« D:\Program Files\SANscreen\Java\bin\keytool.exe » -importcert -file « c:\temp\cognos.crt » -keystore « D:\Program Files\SANscreen\Wildfly\standalone\configuration\Server.trustore » -storepass changeit -alias cogoscert</block>
   <block id="43dc6e8c48223839666ca75fb264d5f4" category="list-text">Redémarrez le service SANscreen.</block>
   <block id="7dd4c634d9ba6f8d676f941ff5c8ec44" category="list-text">Effectuez une sauvegarde de DWH pour vous assurer que DWH communique avec Cognos.</block>
   <block id="ea55f00450fedf0179bc94daa9b90d45" category="summary">Si vos utilisateurs souhaitent recevoir des rapports Insight dans leurs comptes de messagerie, vous devez configurer votre serveur de messagerie pour activer cette fonctionnalité.</block>
@@ -4052,7 +3970,6 @@
   <block id="1eb6b3f1bf5afffed975d2dfa2c01e0f" category="summary">Vous pouvez ajouter des certificats SSL pour activer l'authentification et le cryptage améliorés afin d'améliorer la sécurité de votre environnement OnCommand Insight.</block>
   <block id="813a61b4e43a1832a3809c259191c6e1" category="doc">Importation de certificats SSL</block>
   <block id="ba1fbbc5012eec189f464eca8296aa73" category="paragraph">Vous devez vous assurer que votre système répond au niveau de bit minimum requis (1024 bits).</block>
-  <block id="aae848401088feb6b8aa9894d6585335" category="paragraph">Avant de tenter d'effectuer cette procédure, vous devez sauvegarder le système existant<block ref="05364f7aae12c726f9af42a871f5b60a" prefix=" " category="inline-code"></block> et nommez la sauvegarde<block ref="61363c0cacd338825dad409c1184c3e9" prefix=" " category="inline-code"></block>. Corrompre ou endommager le<block ref="05364f7aae12c726f9af42a871f5b60a" prefix=" " category="inline-code"></block> Le fichier peut rendre le serveur Insight inutilisable après le redémarrage du serveur Insight. Si vous créez une sauvegarde, vous pouvez revenir à l'ancien fichier en cas de problème.</block>
   <block id="c029130dc962300877364a150006824d" category="list-text">Créez une copie du fichier de stockage de clés d'origine :<block ref="46db7096175255d5a3762f893f4d8f2c" prefix=" " category="inline-code"></block></block>
   <block id="2b6a52f66555f674ee57e0f8d1fc81eb" category="list-text">Répertoriez le contenu du magasin de clés :<block ref="26f05ce16727b477426b38de07bd5ba7" prefix=" " category="inline-code"></block></block>
   <block id="d9f7fb022f0b8569b4c23eb03db6aae2" category="paragraph">Le système affiche le contenu du magasin de clés. Il doit y avoir au moins un certificat dans le magasin de clés,<block ref="d33bec22cdb583bf5a7a870effeda2bf" prefix=" " category="inline-code"></block>.</block>
@@ -4140,18 +4057,6 @@
   <block id="c75f28f938445a4ae759bd64830aee18" category="summary">L'outil securityadmin vous permet de gérer les options de sécurité sur le serveur Insight. La gestion de la sécurité inclut la modification des mots de passe, la génération de nouvelles clés, l'enregistrement et la restauration des configurations de sécurité que vous créez ou la restauration des configurations par défaut.</block>
   <block id="166ace9389f2989154d4edf8ca669668" category="doc">Gestion de la sécurité sur le serveur Insight</block>
   <block id="d71586f0584584e73897bf02e9802afa" category="paragraph">Le<block ref="4924cdf1992856713a11ebac184ceb81" prefix=" " category="inline-code"></block> Cet outil vous permet de gérer les options de sécurité sur le serveur Insight. La gestion de la sécurité inclut la modification des mots de passe, la génération de nouvelles clés, l'enregistrement et la restauration des configurations de sécurité que vous créez ou la restauration des configurations par défaut.</block>
-  <block id="34466f85207045ded27b393581889d20" category="list-text">Effectuez une connexion à distance au serveur Insight.</block>
-  <block id="4b2f543780a949ab3938618b76a6aeb5" category="list-text">Sélectionnez *serveur*.</block>
-  <block id="15cf432cc55f528ff3c57c6406d8bcd4" category="paragraph">Les options de configuration de serveur suivantes sont disponibles :</block>
-  <block id="55ef7bc8b50b24453b764be4b80da043" category="paragraph">Crée un fichier zip de sauvegarde du coffre-fort contenant tous les mots de passe et clés et place le fichier à un emplacement spécifié par l'utilisateur ou aux emplacements par défaut suivants :</block>
-  <block id="563224b05777d494f82277d419c03919" category="paragraph">La restauration peut être utilisée pour synchroniser les mots de passe et les clés sur plusieurs serveurs, par exemple : - Modifier la clé de cryptage du serveur sur un serveur - Créer une sauvegarde du coffre-fort - Restaurer la sauvegarde du coffre-fort sur le second serveur</block>
-  <block id="91cebb71bb14bbae4a5bc93a40e9901c" category="list-text">*Changer la clé de cryptage*</block>
-  <block id="a2871ee9dd2334ada20e4a66d013317d" category="paragraph">Modifiez la clé de cryptage du serveur utilisée pour crypter ou décrypter les mots de passe des utilisateurs proxy, les mots de passe des utilisateurs SMTP, les mots de passe des utilisateurs LDAP, etc.</block>
-  <block id="e2c5eaab8769cb6a8fa50dc9141e2625" category="paragraph">Lorsque vous modifiez des clés de cryptage, vous devez sauvegarder votre nouvelle configuration de sécurité afin de pouvoir la restaurer après une mise à niveau ou une installation.</block>
-  <block id="59b3762c2272ae8512fb2c7c9e46ec69" category="paragraph">Modifiez le mot de passe des comptes internes utilisés par Insight. Les options suivantes sont affichées :</block>
-  <block id="b2b29733f57d043399a6cf94cb33bccc" category="paragraph">Certains comptes doivent être synchronisés lorsque les mots de passe sont modifiés. Par exemple, si vous modifiez le mot de passe de l'utilisateur 'acquisition' sur le serveur, vous devez modifier le mot de passe de l'utilisateur 'acquisition' sur LAU, RAU et DWH pour qu'il corresponde. De même, lorsque vous modifiez des mots de passe, vous devez sauvegarder votre nouvelle configuration de sécurité afin de pouvoir la restaurer après une mise à niveau ou une installation.</block>
-  <block id="3a58172ddfaf6eb80d7e23f6fbb03c6f" category="paragraph">Réinitialise les clés et les mots de passe aux valeurs par défaut. Les valeurs par défaut sont celles fournies lors de l'installation.</block>
-  <block id="fa91c17face4c440ea85ac0631602948" category="list-text">Choisissez l'option que vous souhaitez modifier et suivez les invites.</block>
   <block id="a67de20a047be39323adc8c1f82babea" category="summary">La source de données HDS NAS \(HNAS\) est une source de données d'inventaire et de configuration permettant de prendre en charge la détection des clusters HDS NAS. Insight prend en charge la détection des partages NFS et CIFS, des systèmes de fichiers \(Insight Internal volumes\) et des étendues \(Insight Storage pools\).</block>
   <block id="0936fac4487635497099193277449acc" category="doc">Source de données HDS NAS (HNAS)</block>
   <block id="a8d9462962878f53a1ffb96587e6ac80" category="paragraph">La source de données HDS NAS (HNAS) est une source de données d'inventaire et de configuration permettant la détection des clusters HDS NAS. Insight prend en charge la découverte des partages NFS et CIFS, des systèmes de fichiers (volumes internes Insight) et des étendues (pools de stockage Insight).</block>
@@ -4200,7 +4105,6 @@
   <block id="a1cfdaff350bf06f6ba975cd592472fc" category="paragraph">Pour la plupart des sources de données, ces options seront Inventory and Performance. Le stock est toujours sélectionné par défaut et ne peut pas être désélectionné. Notez que certaines sources de données peuvent avoir des options différentes. Les options de collecte que vous sélectionnez modifient les champs disponibles dans les sections Configuration et Configuration avancée.</block>
   <block id="f7642adc1bc7f9503c780db24ec41ac6" category="list-text">Cliquez sur le lien *Configuration* et entrez les informations de configuration de base requises pour la source de données avec le type de collecte de données sélectionné.</block>
   <block id="d6d94de2956e4579e7edadf35832ba56" category="list-text">Si ce type de source de données nécessite généralement des informations plus détaillées pour la configurer sur votre réseau, cliquez sur le lien *Configuration avancée* pour entrer des informations supplémentaires.</block>
-  <block id="bf22aff674e838a4d9407d625fb8349c" category="list-text">Pour plus d'informations sur la configuration ou la configuration avancée requise ou disponible pour votre source de données spécifique, reportez-vous au <block ref="3d3141ba472fdd3aa41cb4fe5fbe64e3" category="inline-link-macro-rx"></block>.</block>
   <block id="9f2c56b8c47763f8c44055863b959886" category="list-text">Cliquez sur le lien *Test* pour vous assurer que la source de données est correctement configurée.</block>
   <block id="a14b9738cdec9e6d515e07fc282fa7c3" category="summary">Pour résoudre les problèmes d'équilibrage, utilisez les pages de ressources pour identifier les problèmes et identifier les volumes de grande capacité sous-utilisés.</block>
   <block id="2517f08cdc93369a7bf14b1419e6c88a" category="doc">Équilibrer les ressources réseau</block>
@@ -4812,14 +4716,7 @@
   <block id="d94838b2dfffb3c008f39a72c3186fc8" category="summary">L'outil securityadmin vous permet de gérer les options de sécurité sur Raus. Vous devrez peut-être sauvegarder ou restaurer une configuration de coffre-fort, modifier les clés de cryptage ou mettre à jour les mots de passe des unités d'acquisition.</block>
   <block id="d969be87e8535562a9e12a2651976423" category="doc">Gestion de la sécurité sur un RAU</block>
   <block id="9cd06773848a6fa21bbf5d50dac47783" category="paragraph">Le<block ref="4924cdf1992856713a11ebac184ceb81" prefix=" " category="inline-code"></block> L'outil vous permet de gérer les options de sécurité sur Raus. Vous devrez peut-être sauvegarder ou restaurer une configuration de coffre-fort, modifier les clés de cryptage ou mettre à jour les mots de passe des unités d'acquisition.</block>
-  <block id="14a2f8df100130ed2c4c65381ad1f78e" category="paragraph">Un scénario de mise à jour de la configuration de sécurité pour LE LAU, RAU est de mettre à jour le mot de passe utilisateur 'acquisition' lorsque le mot de passe de cet utilisateur a été modifié sur le serveur. Tous les Raus, et LE LAU utilisent le même mot de passe que celui de l'utilisateur d'acquisition du serveur pour communiquer avec le serveur.</block>
   <block id="00423cc856c14e656de8197ab4f7b0c7" category="paragraph">L'utilisateur 'acquisition' n'existe que sur le serveur Insight. Le RAU ou LAU se connecte en tant qu'utilisateur lorsqu'il se connecte au serveur.</block>
-  <block id="b203bcf2ebd0e6a2f7f04e51f9f7d217" category="paragraph">Procédez comme suit pour gérer les options de sécurité d'une unité RAU :</block>
-  <block id="3dcdd199a29b8039d55b7143b058621e" category="list-text">Effectuez une connexion à distance au serveur exécutant la RAU</block>
-  <block id="71eaf8160af50ef968d94d2e57c0fad0" category="paragraph">Le système affiche le menu de l'unité RAU.</block>
-  <block id="b363b82f1d4de8a1415903d93788f7ee" category="list-text">*Changer les clés de cryptage*</block>
-  <block id="6e9398f20fdab74346ae99fabdca3285" category="paragraph">Modifiez les clés de cryptage RAU utilisées pour crypter ou décrypter les mots de passe du terminal.</block>
-  <block id="5eb23cf8af1fa4acc187083ab93c9427" category="paragraph">Modifier le mot de passe du compte utilisateur « acquisition ».</block>
   <block id="febf200b4322023deae044f089881ec2" category="summary">Ce collecteur de données prend en charge Hitachi Content Platform \(HCP\) à l'aide de l'API HCP Management.</block>
   <block id="70ea222f664797981b68bd7929e53c36" category="doc">Source de données Hitachi Content Platform (HCP)</block>
   <block id="70751eb50dc631e5b8d4123b7b34e201" category="paragraph">Ce collecteur de données prend en charge la plate-forme de contenu Hitachi (HCP) à l'aide de l'API de gestion HCP.</block>
@@ -5117,7 +5014,6 @@
   <block id="cd0cd481ab3a655f12a8d54db1cc60b5" category="paragraph">Pour Linux, modifiez le<block ref="13492faf172bcfc7922257dad8668f43" prefix=" " category="inline-code"></block> paramètre dans<block ref="008b3285c122976090969cd0ec1843e6" prefix=" " category="inline-code"></block></block>
   <block id="af6d592858b78cf912002d9361ac3beb" category="list-text">Ajoutez des autorités de certification (CA) au magasin de données :</block>
   <block id="7615ffec011c31dcec23147fd3533cda" category="list-text">Dans une fenêtre de commande, accédez à<block ref="29a1fa40c043f8b2d1b25c898535b565" prefix=" " category="inline-code"></block>.</block>
-  <block id="b1fcc1a8e4b3047b60cee8567948bd13" category="list-text">Utilisez le<block ref="64392b8d1e3ba08576d89af33ed6cea9" prefix=" " category="inline-code"></block> Utilitaire permettant de répertorier les autorités de certification approuvées :<block ref="4fe1421e06e5ee8361541221f6421246" prefix=" " category="inline-code"></block></block>
   <block id="2dcb4844e5c071891007c1193a31c8a4" category="list-text">Si nécessaire, fournissez un fichier de certificat d'autorité de certification, généralement un<block ref="bdf46f9562b038d0163af0feba0b1dfa" prefix=" " category="inline-code"></block> fichier. Pour inclure les autorités de certification du client avec les autorités de certification de l'entrepôt de données approuvées, rendez-vous sur<block ref="29a1fa40c043f8b2d1b25c898535b565" prefix=" " category="inline-code"></block> et utiliser le<block ref="64392b8d1e3ba08576d89af33ed6cea9" prefix=" " category="inline-code"></block> commande d'importation :<block ref="c119dcaf9531cfff7d609c9e46fba309" prefix=" " category="inline-code"></block></block>
   <block id="871591fee3f48c92bb25faa70cb99001" category="paragraph">My_alias est généralement un alias qui identifie facilement l'autorité de certification dans le<block ref="ffada47d849d7cba2ebbf32039b9a430" prefix="" category="inline-code"></block> fonctionnement.</block>
   <block id="04281f6ce0f312df4a11799797e6013b" category="list-text">Sur le serveur OnCommand Insight, le<block ref="da35e257d259856481d737aea8d8f5cd" prefix=" " category="inline-code"></block> Le fichier doit être modifié en mettant à jour VERIFY-client sur « REQUEST » dans <block ref="9ff9416c4e4d8ca052fe5d50a2470f1e" prefix="" category="inline-code"></block>Pour activer CAC. Connectez-vous au serveur Insight et exécutez la commande appropriée :</block>
@@ -5879,18 +5775,11 @@
   <block id="d583cd7f7e3baff42ff71463f16bc96e" category="doc">Activation de CAC sur un serveur Linux</block>
   <block id="13f1d05bfa964366894291106828f0ce" category="list-text">Accédez à<block ref="0db27be7d832f6bf803cef010ff1f881" prefix=" " category="inline-code"></block></block>
   <block id="6566a1d8e4c8cdfb230692e295750c59" category="list-text">Modifier<block ref="eb25af2e1ab5aeb27466e91fe1b2a0e1" prefix=" " category="inline-code"></block> et modifiez la valeur de<block ref="e51a81598765ad00e232814c42bd5af4" prefix=" " category="inline-code"></block> Sur « vrai »</block>
-  <block id="d6c81735d862f14e66894edd8dda777d" category="list-text">Importez le « certificat racine » qui existe sous<block ref="d007259da2865337d68e24fa472455d9" prefix=" " category="inline-code"></block></block>
   <block id="38ea074c6a7bf70a529654f12bedb968" category="list-text">Redémarrez le serveur</block>
   <block id="1beb570b523e1b14bbcba521de505673" category="summary">L'outil securityadmin vous permet de gérer les options de sécurité de l'utilisateur d'acquisition local \(LAU\). La gestion de la sécurité inclut la gestion des clés et des mots de passe, l'enregistrement et la restauration des configurations de sécurité que vous créez ou restaurez aux paramètres par défaut.</block>
   <block id="0a03d1757c591cb47b67e3867b2aa573" category="doc">Gestion de la sécurité sur l'unité d'acquisition locale</block>
   <block id="1843d0ce10aa71f1d72edd6683f93064" category="paragraph">Le<block ref="4924cdf1992856713a11ebac184ceb81" prefix=" " category="inline-code"></block> L'outil vous permet de gérer les options de sécurité de l'utilisateur d'acquisition local (LAU). La gestion de la sécurité inclut la gestion des clés et des mots de passe, l'enregistrement et la restauration des configurations de sécurité que vous créez ou restaurez aux paramètres par défaut.</block>
   <block id="70ba259bdcb1df4b8b8840343db3ba72" category="paragraph">Vous devez avoir<block ref="21232f297a57a5a743894a0e4a801fc3" prefix=" " category="inline-code"></block> privilèges permettant d'effectuer des tâches de configuration de la sécurité.</block>
-  <block id="bf598265068097bdfb964fb65b464993" category="list-text">Sélectionnez *unité d'acquisition locale* pour reconfigurer la configuration de sécurité de l'unité d'acquisition locale.</block>
-  <block id="3efa8859202eff1b280ec70c247e9ef0" category="paragraph">Les options suivantes sont affichées :</block>
-  <block id="db48c1af350671c4ffd32d01200d5950" category="paragraph">Restore peut être utilisé pour synchroniser les mots de passe et les clés sur plusieurs serveurs, par exemple : - Modifier les clés de cryptage sur LE LAU - Créer une sauvegarde du coffre-fort - Restaurer la sauvegarde du coffre-fort sur chacun des Raus</block>
-  <block id="58fad370faf96d43acd14616d579f6ec" category="paragraph">Modifiez les clés de cryptage au utilisées pour crypter ou décrypter les mots de passe des périphériques.</block>
-  <block id="2df04d24bac801c2f370c45144ff5275" category="paragraph">Réinitialise le mot de passe de l'utilisateur d'acquisition et les clés de cryptage de l'utilisateur d'acquisition sur les valeurs par défaut. Les valeurs par défaut sont celles fournies lors de l'installation.</block>
-  <block id="f37f463d204520f26facfb587ab3bf4d" category="list-text">Choisissez l'option que vous souhaitez configurer et suivez les invites.</block>
   <block id="66ad42ef324e4a338153e7c79d95cd88" category="summary">Si vous souhaitez suivre les données associées à des applications spécifiques s'exécutant dans votre environnement, vous devez définir ces applications.</block>
   <block id="75dd729d790e03fe77ed31cea6363b6e" category="doc">Définition des applications</block>
   <block id="197cbdbf26b402d599e24441ba7c4695" category="paragraph">Si vous souhaitez associer l'application à une entité métier, vous devez avoir déjà créé l'entité métier.</block>
@@ -5919,7 +5808,6 @@
   <block id="c8089a8df7595a4fab897fbfe485958b" category="doc">Importation de certificats SSL signés par une autorité de certification pour Cognos et DWH (Insight 7.3.10 et versions ultérieures)</block>
   <block id="fbc2e92f488b538993235e930b7abed8" category="list-text">Arrêtez Cognos à l'aide de l'outil de configuration IBM Cognos. Fermer Cognos.</block>
   <block id="3c679ad3118a4c7b190c283a80108c8c" category="list-text">Créer des sauvegardes du<block ref="94c8e860bd90030ce45ae786086cac4c" prefix=" " category="inline-code"></block> et<block ref="bdb4a4c3d0a76ee18c228d514d2663cc" prefix=" " category="inline-code"></block> dossiers.</block>
-  <block id="09f9080c307e2f189d54af906222d568" category="list-text"><block ref="7d8132fdc3e6480c84b673f9c948d6fe" prefix="" category="inline-code"></block>. Note: Ici -H et -i sont d'ajouter subjectAltNames comme dns et ipaddress.</block>
   <block id="9ddbf610c95141dba3ed9de859fa95b0" category="list-text">Entrez le contenu encryptRequest.csr et générez un certificat à l'aide du portail de signature CA.</block>
   <block id="8db03d886eeeeb6eb3b6d331e6004c48" category="list-text">Répétez les étapes 8a à 8e pour exporter tous les certificats séparément dans des fichiers .cer.</block>
   <block id="db08e08014684cfec73faa9091198d8e" category="list-text">Ouvrez root.cer avec le Bloc-notes et copiez le contenu.</block>
@@ -5929,13 +5817,10 @@
   <block id="84758b76692c1a050bb911ed51e8d7e1" category="list-text">ThirdPartyCertificateTool.bat -Java:local -i -T -r c:\temp\intermediate.cer</block>
   <block id="2f974e01b4e622fe5e539e69cd5f9c0a" category="list-text">ThirdPartyCertificateTool.bat -Java:local -i -e -r c:\temp\cognos.cer -t c:\temp\chain.cer</block>
   <block id="aba482300e89f2e5cab6b4cb223ed66d" category="list-text">cd « C:\Program Files\SANscreen »</block>
-  <block id="d51fc478c365d9bd74642f2f59eb529c" category="list-text">java\bin\keytool.exe -exportcert -file c:\temp\cognos.crt -keystore cognos\analytics\configuration\certs\CAMKeystore -storetype PKCS12 -storepass NoPassWordSet -alias Encryption</block>
   <block id="c63d59e29cf4a9a513c004c3b5e084be" category="list-text">Sauvegardez le serveur DWH trustore sur<block ref="408e9dd44ff5640fabf1789189a07111" prefix="" category="inline-code"></block></block>
   <block id="4fe9dd3b32678cb639ea9abfb204a508" category="list-text">Importez « c:\temp\cognos.crt » dans DWH trustore pour établir une communication SSL entre Cognos et DWH, à l'aide de la fenêtre d'invite Admin CMD.</block>
-  <block id="0f165eb515190e541c662b5967dd1b8a" category="list-text">java\bin\keytool.exe -importcert -file c:\temp\cognos.crt -keystore wildfly\standalone\configuration\server.trustore -storepass changeit -alias cogoss3rdca</block>
   <block id="c9741e3b3e74716b8c9613221854aa35" category="list-text">Les étapes suivantes doivent être effectuées même lorsque seul le "sl certificate" est modifié et que les certificats Cognos par défaut restent inchangés. Dans le cas contraire, Cognos peut se plaindre du nouveau certificat SANscreen ou être incapable de créer une sauvegarde DWH.</block>
   <block id="e8ba5f55a101af092f5ca9c99bea6b11" category="list-text"><block ref="938aedb3a3fd09be07b8169818365184" prefix="" category="inline-code"></block></block>
-  <block id="12e082f8ede249b1858467b8cf265806" category="list-text"><block ref="282da95d430f5cd271b5f9389680d324" prefix="" category="inline-code"></block></block>
   <block id="ad390e013d70b00f6a8405b84de5b7ce" category="list-text"><block ref="8921f04fcd8dfd2b6cb1b73ccdc1aeae" prefix="" category="inline-code"></block></block>
   <block id="42fa9dd065c22b2a00c691f0626b6a51" category="paragraph">Généralement, ces étapes sont effectuées dans le cadre du processus d'importation de certificat Cognos décrit dans<block ref="abc22bdd3ec6e1b77dc5dad16d618be3" category="inline-link-rx"></block></block>
   <block id="edf11a102e8133ea06a706fb4297ea9b" category="summary">La source de données EMC RecoverPoint collecte les informations d'inventaire à partir du stockage EMC RecoverPoint. Pour la configuration, la source de données requiert l'adresse IP des processeurs de stockage ainsi qu'un nom d'utilisateur et un mot de passe en lecture seule.</block>
@@ -7813,15 +7698,10 @@
   <block id="e245ed75c6b828ee4ae338a39e57c9bc" category="cell">Filtrer la liste des périphériques</block>
   <block id="0f6a3a02976086b90f48da7e5992aa82" category="cell">Liste séparée par des virgules des numéros de série de périphérique à inclure ou exclure</block>
   <block id="7cde90d1aea7fffbc619c41625a35c52" category="cell">Intervalle entre les sondages de performances. La valeur par défaut est 300.</block>
-  <block id="16d15d3f29508a543513f5bccddd527e" category="paragraph">OnCommand Insight est une solution unique qui permet de gérer et d'analyser les ressources interdomaines et multifournisseurs sur l'ensemble des réseaux, du stockage et des serveurs dans des environnements physiques et virtuels. Optimisez votre infrastructure en dimensionnant correctement vos opérations pour répondre aux besoins de l'entreprise grâce à Insight. Et vous pouvez aisément prévoir et planifier vos achats. Il réduit également les risques lors des migrations technologiques complexes, telles que la migration vers un cloud hybride, en identifiant les charges de travail candidates à la migration vers le cloud. Avec Insight, vous pouvez gérer l'infrastructure IT en tant que service de bout en bout en intégrant les ressources dans l'ensemble de la chaîne de livraison des services IT de l'entreprise.</block>
-  <block id="1cb3ec988e29678c641cba59564947b3" category="list-text">Démarrez l'outil d'administration de la sécurité en mode interactif :</block>
-  <block id="f098be646546d6fe2a75059a01c330f7" category="list-text">Vitres -<block ref="6fc3ad2c3aa4e51a6e001ff98a533c91" prefix=" " category="inline-code"></block></block>
-  <block id="a8b0a56b2ae62eec476aea5806960a1a" category="list-text">Linux :<block ref="7e8977b89fc4dcb2507a133fc2b8b1fe" prefix=" " category="inline-code"></block></block>
   <block id="f648cec7948633bd979fd848cdf2369a" category="paragraph">Si le statut n'est pas connecté, essayez de redémarrer le service. Connectez-vous au système de l'unité d'acquisition distante et exécutez la commande suivante :</block>
   <block id="ddf4df92bd698540e3e452308e7fb41e" category="paragraph">S'il ne se connecte toujours pas, contactez le support technique.</block>
   <block id="e276ba2c5bd80694669009690b87bf11" category="summary">Normalement, une mise à niveau doit être effectuée sur tous les serveurs Insight \(serveur Insight, serveur Data Warehouse, unité d'acquisition distante.\). Vous devez toujours consulter les notes de version pour connaître les conditions de mise à niveau requises pour une nouvelle version de OnCommand Insight.</block>
   <block id="19a851f5755b0da57262c1e741895d63" category="paragraph">En règle générale, une mise à niveau doit être effectuée sur tous les serveurs Insight (serveur Insight, serveur Data Warehouse, unité d'acquisition à distance). Vous devez toujours consulter les notes de version pour connaître les conditions de mise à niveau requises pour une nouvelle version de OnCommand Insight.</block>
-  <block id="4639e803c16722ca949a12d75760ea9e" category="paragraph">Un ordinateur exécutant Microsoft Windows Server 2016, 2019 ou 2022 64 bits, avec le dernier Service Pack.</block>
   <block id="24eb1f52641cde599dfde45198fa8072" category="image-alt">architecture d'oci 2024</block>
   <block id="5921e1ea45be7b6035711356c873b5d7" category="summary">L'installation nécessite l'installation de plusieurs composants OnCommand Insight, notamment Insight Server, Data Warehouse et Reporting.</block>
   <block id="1ff027229c4cca8959bcd6dfaae4b428" category="paragraph">L'installation nécessite l'installation de plusieurs composants OnCommand Insight, notamment Insight Server, Data Warehouse et Reporting.
@@ -7833,12 +7713,8 @@ L'installation comprend les tâches principales suivantes :</block>
   <block id="6a3a0531aeb37d13c9f75dc09613fbf5" category="list-text">Le client vous permet de vous connecter à Insight et d'afficher les différentes pages.</block>
   <block id="b790ca7a49082e3bbad9cfbf5ececf5e" category="list-text">Vous importez ensuite des annotations dans Data Warehouse en utilisant l'option entrepôt de données **Annotations**.</block>
   <block id="a822ae654536d773f803970c634e3b9b" category="paragraph">Les analyses de corrélation du logiciel OCI permettent d'identifier les ressources gourmandes et peu performantes pour un chemin de service donné. L'analyse générée par la fonction de corrélation est effectuée en temps réel pendant la visualisation de chaque objet. L'analyse proposée réduit considérablement le temps nécessaire au dépannage des problèmes de performances et à l'identification de l'origine des problèmes. L'exploration des violations générées des règles de performance définies constitue un point d'entrée à la découverte des ressources gourmandes ou dégradées. Les widgets et les tableaux de bord qui utilisent les dernières fonctionnalités de requête permettent de filtrer, trier et visualiser les ressources avec des valeurs d'IOPS (gourmandes), d'utilisation ou de latence supérieures à celles attendues.</block>
-  <block id="b73694a08aa1e17986f7d2ef7a7619a7" category="list-text">Red Hat Enterprise Linux 7.3, 7.4, 7.5, 7.6, 7.7 7.8, 7.9, 8.1, 8.2, 8.3, 8.4, 8.5, 8.8, 9.2</block>
-  <block id="604712f524f66ebbf730593255d579b0" category="list-text">CentOS 7.2, 7.5, 7.6, 7.7, 7.8, 7.9, CentOS 8 Stream, CentOS 9 Stream</block>
-  <block id="ca69e87e6021e18fe43c490a1c0bff02" category="list-text">Oracle Enterprise Linux 7.5, 7.6, 7.7, 7.8, 7.9 8.1, 8.2, 8.3, 8.4, 8.5, 8.8</block>
   <block id="1767cf140ccb13b28bdcc76c42d20028" category="summary">L'installation nécessite l'installation de plusieurs composants OnCommand Insight, Insight Server et Data Warehouse.</block>
   <block id="91d2987029cf3cc4274c5eb4680b41dc" category="inline-link-macro">Notes de version .PDF</block>
-  <block id="4a72f4d610aba1b283b741c8990f9bb9" category="paragraph"><block ref="698989a8d25ebae051898deae3187b3f" category="inline-link-macro-rx"></block> (s'ouvre dans une nouvelle fenêtre)</block>
   <block id="a025a7deda19d8febe29b4915330a80f" category="inline-link">Avis pour OnCommand Insight 7.3.15</block>
   <block id="3c68b49692fae1f44d5bcc3f3ff40570" category="paragraph"><block ref="3c68b49692fae1f44d5bcc3f3ff40570" category="inline-link-rx"></block></block>
   <block id="1eeac4787b3b9277406496e9c0b0460d" category="inline-link">Avis pour OnCommand Insight 7.3.14</block>
@@ -7849,8 +7725,976 @@ L'installation comprend les tâches principales suivantes :</block>
   <block id="bcc7ff777637bae2501eae2f8ccdf7d1" category="paragraph">Le « CÉC secondaire » fait référence à une implémentation de services professionnels développée utilisée pour invoquer des opérations d'extraction, de transformation et de chargement (ETL) supplémentaires de données capturées, pour être stockées dans l'entrepôt de données OnCommand Insight.</block>
   <block id="85dd174d18eb0c4d3fd90177f2a31485" category="paragraph">Les fonctionnalités d'intégration d'OCI avec les technologies CMDB, de facturation et d'orchestration tierces sont un atout majeur de sa réussite, et WFA ne fait pas exception. Les services professionnels de NetApp ont mené à bien un certain nombre d'intégrations, existantes avec les workflows WFA et OCI .</block>
   <block id="b220d44db6780bcb3edb81b057ad8db8" category="paragraph">Oui, plusieurs rapports sont fournis avec OCI et de nombreux autres sont disponibles dans notre catalogue des services professionnels, selon le cas d'utilisation. Le module Data Warehouse est également fourni avec une suite d'outils de création de rapports Cognos qui permettent aux utilisateurs de créer leurs propres rapports.</block>
-  <block id="082d4fc1b30e86ee41f3aee683450d1e" category="summary">La matrice de prise en charge du Data Collector (Data Source) fournit des informations sur les collecteurs de données pris en charge.</block>
-  <block id="2fcf0efc6b86f1c82038c0503c617ffb" category="doc">Matrice de prise en charge des collecteurs de données OnCommand Insight</block>
   <block id="0509ce941df7b1b926535ae26a759985" category="paragraph">La matrice de prise en charge des collecteurs de données fournit des références pour les collecteurs de données pris en charge par OCI , y compris des informations sur les fournisseurs et les modèles.</block>
-  <block id="929760a91ec2d785d90375c3e050830f" category="paragraph">Cette page est un espace réservé.</block>
+  <block id="e02add3ccfa86a470efa7415246067a9" category="list-text">Pour plus de détails sur la configuration ou les informations de configuration avancées requises ou disponibles pour votre source de données spécifique, reportez-vous au <block ref="59373d0a89c40649d3ee53d53ab5a38f" category="inline-link-macro-rx"></block>.</block>
+  <block id="ab94f02b0631499dec8037230ab3518a" category="paragraph">L'autorité de certification racine doit être importée dans le magasin de confiance.</block>
+  <block id="e5ce20a31a5beea280ce04b7668728a0" category="list-text">Importez le « certificat racine » qui existe sous<block ref="3cdc96550e37f1c3727be8e83177120f" prefix=" " category="inline-code"></block></block>
+  <block id="20cf835c7c753bc7471956cba9df4d50" category="list-text">Utilisez<block ref="64392b8d1e3ba08576d89af33ed6cea9" prefix=" " category="inline-code"></block> l'utilitaire pour répertorier les autorités de certification de confiance : `..\..\ibm-jre\jre\bin\keytool.exe -list -keystore CAMKeystore.jks -storepass &lt;password&gt;</block>
+  <block id="c73796fc3543b4d5fdf7766794712240" category="paragraph"><block ref="65a076030818b385ff494c6bc4ba5707" prefix="" category="inline-code"></block> Est généralement un alias qui identifie facilement l'autorité de certification dans l'<block ref="ffada47d849d7cba2ebbf32039b9a430" prefix="" category="inline-code"></block>opération.</block>
+  <block id="d55fdd9cf0b801f47efa1dfb7b6096a8" category="list-text">Lorsque vous êtes invité à entrer un mot de passe, entrez le mot de passe du fichier _/SANscreen/bin/cognos_info.dat_.</block>
+  <block id="0fc4772928dee56703274ac83cde4b97" category="list-text">Faites défiler jusqu'à la section LDAP.</block>
+  <block id="140321aacc59af1f6d7147e034bb6ff0" category="inline-link-macro">Admin sécurité</block>
+  <block id="fdc721eb3636a0d919ba3b3e137298d2" category="list-text">Utilisez<block ref="64392b8d1e3ba08576d89af33ed6cea9" prefix=" " category="inline-code"></block> l'utilitaire pour répertorier les autorités de certification de confiance :<block ref="e3581997c9499fad09cd579802e19c6f" prefix=" " category="inline-code"></block> + consultez <block ref="639f828649b90c889f7b9b1be3c612f3" category="inline-link-macro-rx"></block>la documentation pour plus d'informations sur la définition ou la modification du mot de passe de Server_trustore.</block>
+  <block id="e1d0a3ae68ae3bf3d33e364e211c1847" category="paragraph">Il est fortement recommandé de sauvegarder le coffre-fort avant la mise à niveau.</block>
+  <block id="06e93fcb3c37a2437f4b2d3bc4750cf3" category="inline-link-macro">Outil SecurityAdmin</block>
+  <block id="aaedaf8de404408dfc5c58a248ce4df8" category="paragraph">Reportez-vous aux <block ref="56b8f1713db5748cf5088e9f00373784" category="inline-link-macro-rx"></block> instructions pour plus d'informations sur le coffre-fort et la gestion des mots de passe.</block>
+  <block id="b1a9597f50cfc5ac72202879c8ba0ebd" category="list-text"><block ref="2c5f7023f44aca5ed1d54393aeda8d58" prefix="" category="inline-code"></block>. Note: Ici -H et -i sont d'ajouter subjectAltNames comme dns et ipaddress.</block>
+  <block id="873030c1c6f2a3ef4592c3124ed9f7d4" category="list-text">Pour &lt;password&gt;, utilisez le mot de passe du fichier _/SANscreen/bin/cognos_info.dat_.</block>
+  <block id="72db37934e519dd4c7324755370dcb51" category="list-text">java\bin\keytool.exe -exportcert -file c:\temp\cognos.crt -keystore cognos\analytics\configuration\certs\CAMKeystore -storetype PKCS12 -storepass &lt;password&gt; -alias Encryption</block>
+  <block id="c25809f5f5ac01b2cd6f66e083c09dce" category="list-text">java\bin\keytool.exe -importcert -file c:\temp\cognos.crt -keystore wildfly\standalone\configuration\server.trustore -storepass &lt;password&gt; -alias cogoss3rdca</block>
+  <block id="17987e84a830ab282250a7de4d24c42b" category="list-text"><block ref="534186b52de0dfeaacf1a17522ecfaa6" prefix="" category="inline-code"></block></block>
+  <block id="7e28f18027bb8b7955aa0f5c1f7bcfd6" category="paragraph">Un scénario de mise à jour de la configuration de sécurité pour le LAU/RAU consiste à mettre à jour le mot de passe utilisateur d'acquisition lorsque le mot de passe de cet utilisateur a été modifié sur le serveur. Le LAU et tous les Raus utilisent le même mot de passe que celui de l'utilisateur d'acquisition du serveur pour communiquer avec le serveur.</block>
+  <block id="c362e7d28fcfb1f75731ab591137e8f5" category="paragraph">Pour plus d'informations, reportez-vous aux <block ref="56b8f1713db5748cf5088e9f00373784" category="inline-link-macro-rx"></block>instructions.</block>
+  <block id="b4f08df4574ab6e4ba50db6c96c2ea6c" category="paragraph">Pour plus d'informations, reportez-vous à la <block ref="639f828649b90c889f7b9b1be3c612f3" category="inline-link-macro-rx"></block>documentation.</block>
+  <block id="cd83da6b8675e2660027f1d689252b6f" category="summary">La matrice de prise en charge du Data Collector contient des informations détaillées sur les collecteurs de données pris en charge.</block>
+  <block id="5eaa66f8965be015a154e7d05c5858d1" category="doc">Matrice de prise en charge du Data Collector OCI</block>
+  <block id="42dcbfa5bf86ee5b5b8828619d00cc03" category="section-title">HP Enterprise 3PAR / Alletra 9000 / stockage Primera StoreServ</block>
+  <block id="4511f2a211688512da3a86b3400de7ff" category="paragraph">Modèles et versions pris en charge par ce collecteur de données :</block>
+  <block id="25ac429f9072293d27a836ee2a148f47" category="cell">Modèles</block>
+  <block id="798084429970e88fa1f49f12b5f60f32" category="cell">Versions du micrologiciel</block>
+  <block id="be209ca84bff62cc8606dc71a055f326" category="cell">HPE_3PAR 20450 HPE_3PAR 7200 HPE_3PAR 7400 HPE_3PAR 7440C HPE_3PAR 7450C HPE_3PAR 8200 HPE_3PAR 8400 HPE_3PAR 8440 HPE_3PAR 8450 HPE_3PAR 324 HP_3PAR 8440 HP_3PAR 7200C HP_3PAR 7400 HP_3PAR 7400C HP_3PAR 7450C HP_3PAR 8200 HP_3PAR 7200 3PAR 3 3PAR 3 HP_3PAR 3 3PAR 3 3PAR 3 3PAR 3_3PAR 3_3PAR 3_3PAR 3_3PAR 3</block>
+  <block id="b2f66a81e1101f8f0d811f862dabe2bd" category="cell">3.2.2 (MU2) 3.2.2 (MU4) 3.2.2 (MU6) 3.3.1 (MU2) 3.3.1 (MU5) 4.4.1 Type de version : version de support standard</block>
+  <block id="e9f6271a49020907aa1e305c5f6b83d2" category="paragraph">Produits pris en charge par ce collecteur de données :</block>
+  <block id="deb10517653c255364175796ace3553f" category="cell">Solution NetApp</block>
+  <block id="14c3221394982b060bb874fd101a4564" category="cell">Fonction/attribut</block>
+  <block id="ec53a8c4f07baed5d8825072c89799be" category="cell">État</block>
+  <block id="9209f3fbacc56941a634acaf4243d473" category="cell">Protocole utilisé</block>
+  <block id="092bf78f9c97ba171b8232ddff585392" category="cell">Informations supplémentaires</block>
+  <block id="01baf36bbdfd6958a8f4fa68b8eb9138" category="cell">bases</block>
+  <block id="28a9f0e91de2ca9a5a927953fb10813a" category="cell">Groupe de périphériques</block>
+  <block id="5bd958f78294c57d3763204b3b3a3f5d" category="cell">Mise en œuvre</block>
+  <block id="765553e6c7ac8592c389acb9878a050a" category="cell">SSH</block>
+  <block id="32b772638ff99c31326af82c9279e67b" category="cell">ID de gestion du stockage</block>
+  <block id="466b98ca0f38bd8bf2260246c91f6882" category="cell">Écart</block>
+  <block id="87ac67e16fa6efcc775b8fda5acedb4e" category="cell">Capacité (Go)</block>
+  <block id="10fd66f5b4802aee3a88de2a537a57b4" category="cell">Capacité utilisée</block>
+  <block id="2b6ab62cf39a19f857f0b90ab838d72b" category="cell">ID du disque</block>
+  <block id="0575ba8b3de2a093ac1c8f7999f6d53e" category="cell">Identifie de manière unique ce disque dans la matrice</block>
+  <block id="ce5bf551379459c1c61d2a204061c455" category="cell">Emplacement</block>
+  <block id="727f68bbe2be673442f7254cc743874c" category="cell">Où ce disque est physiquement situé dans la matrice</block>
+  <block id="a3b822e9b7fc9153f5593ec750cb7443" category="cell">Taux de transfert potentiel</block>
+  <block id="bbbabdbe1b262f75d99d62880b953be1" category="cell">Rôle</block>
+  <block id="e82b09d21eb2198b167d4cd2ed715b06" category="cell">Enum. Rôle</block>
+  <block id="1095759d6c7aa0d1db5fda4002f00aee" category="cell">énumération pour le rôle de disque</block>
+  <block id="91ce008b7da13548c83365a5eb07e063" category="cell">Temps de recherche</block>
+  <block id="78cf8ce506d5cd24bcd85ed03795e147" category="cell">Numéro de série</block>
+  <block id="44877c6aa8e93fa5a91c9361211464fb" category="cell">Vitesse</block>
+  <block id="fc104690076528afbc53ac5662460473" category="cell">Vitesse du disque (tours/min)</block>
+  <block id="25d76dffbdd21f5c4232e06c05f6d009" category="cell">Enum. État</block>
+  <block id="83e3f416507dce818d217481ca80faef" category="cell">énumération de l'état du disque</block>
+  <block id="5b194842a4d9add55bd76ba48403b3cc" category="cell">Saisissez Enum</block>
+  <block id="ac785707bd747db037410e29a975bcfa" category="cell">enumération pour le type de disque</block>
+  <block id="4059b0251f66a18cb56f544728796875" category="cell">Info</block>
+  <block id="0696b0b7a79fe810767fc56d100fe9be" category="cell">Nom de l'API</block>
+  <block id="938e0f491e66c780a2d952df0fccdf90" category="cell">Version de l'API</block>
+  <block id="0c158178daa0ba003e3212e295331f88" category="cell">Nom de la source de données</block>
+  <block id="2ea3b0f6afbc5d22bca6c482c0bf54ca" category="cell">ID émetteur</block>
+  <block id="66dd8dbc40f1ea2184689ce0298fbc4e" category="cell">IP de l'affichage</block>
+  <block id="fe602599e3d257924db1f762dc597c27" category="cell">Échec de la capacité brute</block>
+  <block id="77ca1f32dd520c4ac24f6c1d12ecda48" category="cell">Capacité brute des disques défaillants (somme de tous les disques en panne)</block>
+  <block id="cefc4f7cbc8c34762e0f76703e7e174e" category="cell">Famille</block>
+  <block id="854ad18980f79dfec85984afdddd270f" category="cell">La famille de stockage peut être CLARiiON, Symmetrix, et al</block>
+  <block id="c0bd7654d5b278e65f21cf4e9153fdb4" category="cell">Fabricant</block>
+  <block id="2ed1a976c9964840b559b27516a0638e" category="cell">Version du microcode</block>
+  <block id="17a88204bd7aca01d277ef859ea3d6ad" category="cell">Capacité brute totale</block>
+  <block id="4aaedf1d727682cdc9f916b585dda8a0" category="cell">Capacité brute totale (somme de tous les disques de la baie)</block>
+  <block id="94f8c4a3d192d67e7ae1dc89ef993dee" category="cell">Capacité brute disponible</block>
+  <block id="5f74db3052fd919ac2aa53259ceb1aef" category="cell">Capacité brute des disques de spare (somme de tous les disques de spare)</block>
+  <block id="615e6f9baca5553d44683a098d342b70" category="cell">Virtualisation</block>
+  <block id="86e8565005314e436f24af8cba43b1d6" category="cell">S'agit-il d'un dispositif de virtualisation du stockage ?</block>
+  <block id="fa4665ac784c14b8a22483b7f6707e27" category="cell">Taille de la mémoire</block>
+  <block id="9cf97098128022e09338f8348db15517" category="cell">Mémoire du périphérique en Mo</block>
+  <block id="59b8ad678543d433553b003eefaa7040" category="cell">Nombre de processeurs</block>
+  <block id="22a26f0cddb017301f2eef7f1a420f34" category="cell">Processeur du périphérique</block>
+  <block id="46a2a41cc6e552044816a2d04634545d" category="cell">État</block>
+  <block id="3ff0e3a48b615548aefce755e33941c3" category="cell">texte libre décrivant l'état du périphérique</block>
+  <block id="5a54d9ad87f7c4c1c70c8f05b9515d5a" category="cell">UUID</block>
+  <block id="15b37d252d8bcabdb3f2521c97c579fe" category="cell">Disponibilité</block>
+  <block id="a4863ea80556e361b3125fe070e9df7b" category="cell">temps en millisecondes</block>
+  <block id="34b6cd75171affba6957e308dcbd92be" category="cell">Version</block>
+  <block id="2130b56fc79fc38dbed55257839c0261" category="cell">version logicielle</block>
+  <block id="d09bf209749e39ff2ede8ce60732a80d" category="cell">Hiérarchisation automatique</block>
+  <block id="7522b70f3d9423171e4d16ec9436fb41" category="cell">indique si ce pool de stockage participe à la hiérarchisation automatique avec d'autres pools</block>
+  <block id="0baf5eb0e862ee9c1202a8b191166ded" category="cell">Compression activée</block>
+  <block id="e9b7203a999246d2da22b52301324aaa" category="cell">Est activé pour la compression sur le pool de stockage</block>
+  <block id="8a78a23b30fd79b77d26a6d6c4c6c250" category="cell">Économies de compression</block>
+  <block id="be4e14b8a3b1e8180c8545c12f6040d7" category="cell">rapport entre les économies réalisées grâce à la compression en pourcentage</block>
+  <block id="5e43f93d85eaafc2d3f7f57a2e46cd56" category="cell">capacité allouée aux données</block>
+  <block id="2256535d3f3b1535d221b91123140e3e" category="cell">Déduplication activée</block>
+  <block id="7f53a412e8e28b995426c2954734537f" category="cell">Déduplication activée sur le pool de stockage</block>
+  <block id="926f6258ce260652ef8ea5eb22445140" category="cell">Économies de déduplication</block>
+  <block id="ee395fb91b64d2a3e6e8534a6976ea62" category="cell">rapport entre les économies de déduplication et par pourcentage</block>
+  <block id="779e06394f4a280166f19617e8ef5717" category="cell">Inclure dans la capacité DWH</block>
+  <block id="3a02997589ec83b551ece558ef97b541" category="cell">Une façon de contrôler les pools de stockage intéressants dans DWH Capacity</block>
+  <block id="2b827ed06bc12e2efe951fbc13ff7d7a" category="cell">Autre capacité allouée</block>
+  <block id="304bad0dc54522eb48374fb8085f80ae" category="cell">Capacité allouée à d'autres (et non des données)</block>
+  <block id="9820087cff724c72b84cf4ba97cccba2" category="cell">Autre UsedCapacity (Mo)</block>
+  <block id="a584b894d429df1d9d8b6be8c5d5f84c" category="cell">Toute capacité autre que les données et les snapshots</block>
+  <block id="5c04c311b8d47b29e194b80bd5dec946" category="cell">Capacité sur disque physique (Mo)</block>
+  <block id="96a760e0b89761d5937ae358ad54fa70" category="cell">utilisé comme capacité brute pour le pool de stockage</block>
+  <block id="72f740f92483312ab6d77576d8d634e7" category="cell">Indique si StoragePool est un groupe raid</block>
+  <block id="69f7c7260db3f3676fa20c26d9f677f4" category="cell">Rapport brut/utilisable</block>
+  <block id="561174cd7b73365c927e26c69290af7b" category="cell">ratio pour la conversion de la capacité utilisable en capacité brute</block>
+  <block id="f10475ef438ec27ff53b1f5ce5e4f5d8" category="cell">Redondance</block>
+  <block id="19d5328f000eee28a48d38d51304b69f" category="cell">Niveau de redondance</block>
+  <block id="5c189e243f3c3d270f8331ed3069ff41" category="cell">Capacité allouée des snapshots</block>
+  <block id="53ef105c874917210c0b7bec0abda492" category="cell">Capacité allouée des snapshots en Mo</block>
+  <block id="ea63b5fcdb2e53e942ad81740e394f67" category="cell">ID du pool de stockage</block>
+  <block id="aa11c5ffe4ee508de4c8ca0c5cde4469" category="cell">Provisionnement fin pris en charge</block>
+  <block id="229422b70dca17f2c6301fa414a25d77" category="cell">Si ce volume interne prend en charge le provisionnement fin pour la couche de volume en haut de celui-ci</block>
+  <block id="c3deac8aaa20a4b31e33cf86b037734e" category="cell">Capacité totale allouée</block>
+  <block id="63adb36ab4a3c0299517ab6ec2edf4f0" category="cell">Capacité totale en Mo</block>
+  <block id="039d028e03e2c91a871ca192320fbcb5" category="cell">Niveau du fournisseur</block>
+  <block id="c39607a954bffa3e032ae2bf60acb194" category="cell">Nom des niveaux propre au fournisseur</block>
+  <block id="650be61892bf690026089544abbd9d26" category="cell">Mode</block>
+  <block id="5e9947436adc8d80ab9d1c9975d5d8db" category="cell">Enum. Mode</block>
+  <block id="bc4c28b83b9ed203ab891d609f17e4b7" category="cell">Stockage source</block>
+  <block id="6b381cadf674c5e31b229c76f56806c5" category="cell">Volume source</block>
+  <block id="ca7e5ad61236641a7f04e889c2ab6e11" category="cell">Enum. État</block>
+  <block id="97ba585b67bdc69a079ed75dd7163fa9" category="cell">Stockage cible</block>
+  <block id="f21d65d3a928c0db51da67287c43c4b9" category="cell">Volume cible</block>
+  <block id="e7e767d7c0e58b16e57d3ab16150db80" category="cell">De déduplication</block>
+  <block id="b8b5c171014cb310fa65ec6785b97294" category="cell">technologie qui entraîne l'évolution de l'efficacité du stockage</block>
+  <block id="fb901972cfa1afe064d32b4c05f2ff39" category="cell">Identifiant de stratégie AutoTier</block>
+  <block id="0bfdc9533ba547dab2174aed9a384d5a" category="cell">Identifiant de règle de niveau dynamique</block>
+  <block id="6fb0356357126364e18f856cc191b3c3" category="cell">Capacité utilisée de la copie Snapshot en Mo</block>
+  <block id="31722a69be06f07fc75bdff8b5958447" category="cell">Provisionnement fin</block>
+  <block id="d708a286e3d4444a9f20700ea8640b98" category="cell">Nom de la lun backend</block>
+  <block id="766c0fe3ad87081ffdeef77065e37ec8" category="cell">Contrôleur de protocole</block>
+  <block id="b7492de4589c7d8f07e7da32a0a223a6" category="cell">Port de stockage</block>
+  <block id="5a97b31fff9341e11e86fc37c7199905" category="cell">Réf. Volume</block>
+  <block id="4bf26b373e3485c1f2c7e36eda8409dc" category="cell">IP de stockage</block>
+  <block id="f4c2282d259612648709a5e6695b3367" category="cell">Alias WWN</block>
+  <block id="75f0e4b043129fbf3599caefccfc08e4" category="cell">Alias de l'hôte</block>
+  <block id="677fc7835e7f805a8a48251a08740e89" category="cell">Type d'objet</block>
+  <block id="112cb92cc34886188271993bb7a5d78d" category="cell">Lecture IOPS</block>
+  <block id="cfc2491ccb7efa580470e9e15a712369" category="cell">SMI-S</block>
+  <block id="14731a54eec6457016b47123d8481edf" category="cell">Nombre d'IOPS de lecture sur le disque</block>
+  <block id="a8246d471a59bb08ec552486b5292669" category="cell">Total d'IOPS</block>
+  <block id="3cc1e0b40beae2563f380e8f7f638a32" category="cell">Écriture d'IOPS</block>
+  <block id="bb149a60e36dad22aec22d6ee2620af0" category="cell">ID du serveur</block>
+  <block id="6e2a30781aae73d2fdb531dd3deaab69" category="cell">Débit de lecture</block>
+  <block id="41225d13580edd01f087f6228c4ce952" category="cell">Débit total</block>
+  <block id="974ef3646531975170c261484b1f44cb" category="cell">Taux total moyen des disques (lecture et écriture sur tous les disques) en Mo/s.</block>
+  <block id="a69a10df6f8fca20d2c7092ffe2fed67" category="cell">Débit d'écriture</block>
+  <block id="3858ac252c453bdf36d3377f80b2f344" category="cell">Utilisation de la lecture</block>
+  <block id="7be81de33ef4384b7e08bb7cd0525ef3" category="cell">Total d'utilisation</block>
+  <block id="e8294a34b4111104ecdc994cad4468f7" category="cell">Utilisation, écriture</block>
+  <block id="09fa205aa96346c175da1d1c720425ee" category="cell">Capacité provisionnée</block>
+  <block id="e09dc7945acb6ec6caf41c962f679916" category="cell">Capacité brute</block>
+  <block id="207e174801113bba5afa048ccd3450bf" category="cell">Capacité totale</block>
+  <block id="55b4d6e594a778dccfba1b621b6ac69f" category="cell">Rapport de capacité de surengagement</block>
+  <block id="41f4349e91623a39e15201514a6a4d1d" category="cell">Signalé comme une série chronologique</block>
+  <block id="7ac6531007710c9596adc8f86cc5de5b" category="cell">Rapport de capacité utilisé</block>
+  <block id="4ca822ed3d79a8f15adfdf558f76d750" category="cell">Autre capacité totale</block>
+  <block id="e0fe12387c323b3816613907a8523851" category="cell">Rapport de capacité utilisé des snapshots</block>
+  <block id="55ddb309e8913781ccee9a736dde14b8" category="cell">Taux de réussite du cache lecture</block>
+  <block id="f74d9997389745b9983fd5c8886e52ef" category="cell">Taux de réussite total du cache</block>
+  <block id="e0c3105158d48c3101e0436a4ae39f97" category="cell">Écriture du taux de réussite du cache</block>
+  <block id="63ea93e1ce3302d0fd815a6e21633d6d" category="cell">Ratio capacité écrit</block>
+  <block id="090b0c879856b100a039fbd3b638aefc" category="cell">Latence lecture</block>
+  <block id="9dc36323a98f40d0712abb1421a27a8c" category="cell">Latence Total</block>
+  <block id="396f6e005d87a7682425e02ad210c68f" category="cell">Écriture de latence</block>
+  <block id="2289d8987af1125d5fc0824cdc3c8b55" category="cell">Rapport de blocage partiel</block>
+  <block id="384350a63e0acea0fd7702a8daf98980" category="cell">Écriture en attente</block>
+  <block id="d747293035c6735343764948d4bd3bbd" category="cell">nombre total d'écritures en attente</block>
+  <block id="efc565e62bb45e0104d2d4bad32b3470" category="paragraph">API de gestion utilisées par ce collecteur de données :</block>
+  <block id="db974238714ca8de634a7ce1d083a14f" category="cell">API</block>
+  <block id="f7b7c5fc8e97bd9344908a9e06ffb8f0" category="cell">Protocole de la couche de transport utilisé</block>
+  <block id="80c1c169c1569d11d926649ef6b0d58c" category="cell">Ports entrants utilisés</block>
+  <block id="4a35fe6891ff0a0b0cbe899182979e18" category="cell">Ports sortants utilisés</block>
+  <block id="7dc1884c0b2d9fc56cd8ead683e1263f" category="cell">Prend en charge l'authentification</block>
+  <block id="a9fc775cf77354c7e37cf46fde0f6af1" category="cell">Nécessite uniquement des informations d'identification en lecture seule</block>
+  <block id="cc647acd83f1f121497c1991fa0465bd" category="cell">Prend en charge le cryptage</block>
+  <block id="238b12b0efaecb41b39f86004d5195db" category="cell">Compatible pare-feu (ports statiques)</block>
+  <block id="1b408cbb511380911f5ca7833a3a6234" category="cell">3PAR SMI-S</block>
+  <block id="e6b75b0a590239501ffe6bf717b345e2" category="cell">HTTP/HTTPS</block>
+  <block id="490dfc6d7d3cc195f6f1635fd47aaa22" category="cell">5988/5989</block>
+  <block id="b326b5062b2f0e69046810717534cb09" category="cell">vrai</block>
+  <block id="7c66134758a1231967900b1324c83c0e" category="cell">CLI 3PAR</block>
+  <block id="b6d767d2f8ed5d21a44b0e5886680cb9" category="cell">22</block>
+  <block id="68934a3e9455fa72420237eb05902327" category="cell">faux</block>
+  <block id="e58c27818bf68b1f92513ad4f99972c4" category="inline-xref">Haut de la page</block>
+  <block id="9bf2c4cb7192740e06519a5e67f22e59" category="paragraph"><block ref="5166de7f06aaa174e185aec47426a1b7" category="inline-xref-macro-rx"></block></block>
+  <block id="7d964a677df15c513f1f0dee98d77997" category="section-title">Amazon AWS EC2</block>
+  <block id="d1d0848fd9db162d999c32260709d8f8" category="paragraph">Versions API :</block>
+  <block id="fca305053b0aa4da40eb77c13c037773" category="list-text">1 octobre 2014</block>
+  <block id="0e8433f9a404f1f3ba601c14b026d321" category="cell">HTTPS</block>
+  <block id="98e2b78df17d18343b3f029c6d14db05" category="cell">MOID</block>
+  <block id="aebf756f0ff50a1552ea668ebd31c9d6" category="cell">OID</block>
+  <block id="ca417e12e3bdfd0126be45ef198553cb" category="cell">Capacité provisionnée</block>
+  <block id="f24cffc45d091c87ed86a42b52b19b64" category="cell">IP de Virtual Center</block>
+  <block id="6e7dbf028148fab3225cd97fcd186266" category="cell">ID d'abonnement</block>
+  <block id="0dbae4d42c7a0db53e2eb32adee12892" category="cell">Nom du cluster</block>
+  <block id="30918b15e18157fe9435be642839add5" category="cell">Nom du Data Center</block>
+  <block id="22c77b61a6a867305a47252585060a95" category="cell">OID de l'hôte</block>
+  <block id="32e6b9c4da8267329fa570562ff34246" category="cell">OID du datastore</block>
+  <block id="21b124e71fb11c8753f19ce8c09f3427" category="cell">Est payant</block>
+  <block id="110328389a2fc9dd5d71bd86cb615879" category="cell">Est Snapshot</block>
+  <block id="61251ec3a7d52d61e900f50b2271561a" category="cell">Virtualmachine</block>
+  <block id="15344adfc5b282a3d50b6918399d0654" category="cell">Nom DNS</block>
+  <block id="88bb8f64504972894412a78dc8066f47" category="cell">État du client</block>
+  <block id="fef48b3b39a9c7cdf35ffca8bf736a75" category="cell">IPS</block>
+  <block id="b82a8e736139293b9409cd1434dc167d" category="cell">État de l'alimentation</block>
+  <block id="5b65d74a2272925557041c5bc6442645" category="cell">Heure de changement d'état</block>
+  <block id="5eef2922bee262fba019bc051ab7de8c" category="cell">Processeurs</block>
+  <block id="2bea05c5b856292ae6634abc6331d573" category="cell">Type d'instance</block>
+  <block id="04a8949e5e2cc1fd98f41b4ba15a5cf5" category="cell">Heure de lancement</block>
+  <block id="11906e0c1d7f348c995bb659ce6d0927" category="cell">De matériel</block>
+  <block id="cac10293b035526c606491e65647ae22" category="cell">IPS public</block>
+  <block id="fe11e14b29ee1462bdb7764b3ba2f4bd" category="cell">Groupes de sécurité</block>
+  <block id="700bf8a021afc03cba62fc9286a1b84f" category="cell">Disque de Virtualmachine</block>
+  <block id="12ce533069f943e5411e292fd08a3e24" category="cell">ID objet virtualDisk</block>
+  <block id="52b61fd70f0cf5f931258444ab0dbfc6" category="cell">OID de Virtualmachine</block>
+  <block id="0437eec9c1ba5909642a99ee90c5a546" category="cell">Système d'exploitation hôte</block>
+  <block id="f5c4fb0ae637f3624271d22521cf38d0" category="cell">Description de l'API</block>
+  <block id="d8b121a18158a4aa57f05dc106c8a568" category="cell">Clé d'émetteur</block>
+  <block id="1bab32ec3987612a69115ca8ffc764a2" category="cell">API EC2</block>
+  <block id="13f3cf8c531952d72e5847c4183e6910" category="cell">443</block>
+  <block id="cc4856057eb6a162f1fd9a2b32c845e0" category="section-title">Commutateurs Fibre Channel Brocade</block>
+  <block id="93624c502e61ead83624a6d129a224e2" category="cell">184.0 Brocade 200E Brocade 300E Brocade 4024 8 Brocade 4100 Brocade 4900 Brocade 5000 Brocade 5100 Brocade 6510 Brocade 5480 Brocade 7800 Brocade 5300 Brocade 6520 Brocade 6505 Brocade 7840 Brocade DCX8510-4 Brocade DCX8510-8 Brocade G610 Brocade G620 Brocade G630 Brocade M5424 Brocade intégrée M6505 Brocade va-40FC Brocade X6-4 Brocade XX7-8 Brocade</block>
+  <block id="96b1f5e8666564e3b72c20bdcfe5fbfd" category="cell">v5.3.0a v6.1.0c v6.1.0h v6.2.1b v6.2.2b v6.2.2f v6.2.2g v6.3.2b v6.4.1b v6.4.v6.4.2a v7.0.2b1 v7.0 01 857687 01</block>
+  <block id="22b991799b8241e1ade0192865f9b429" category="cell">Entrée du serveur de nom FC</block>
+  <block id="f8696d8889d2d13a878e3b5aa8768789" category="cell">ID FC</block>
+  <block id="53c6fd08130593d1c56a7122fc0d697e" category="cell">WWN du port NX</block>
+  <block id="a226f89d9ef4e309dc8360113cea166b" category="cell">WWN du port physique</block>
+  <block id="7a942a50f198aee542fc21ef74f505c5" category="cell">WWN du port du commutateur</block>
+  <block id="1638bbd4664fd745118d95786b7e37b9" category="cell">Saisie manuelle</block>
+  <block id="5b565cd8e56007724018b6130825f1ec" category="cell">VSAN activé</block>
+  <block id="efd2d501d8f05f2dead3b0712e9062e7" category="cell">VSANId</block>
+  <block id="058a5a6c4d66e33827b6904af7c82631" category="cell">Structure physique IVR</block>
+  <block id="3b3f04a2e159b7475f64b7082793ab63" category="cell">WWN du châssis IVR</block>
+  <block id="557d0c8c8a409800c957ceb06cd331a8" category="cell">Liste séparée par des virgules des WWN de châssis IVR activés</block>
+  <block id="638510a219f4b13657f8558372e4b3f3" category="cell">WWN de châssis IVR le plus bas</block>
+  <block id="ff5d0564392a7810bd2c76c027640222" category="cell">Identifiant du fabric IVR</block>
+  <block id="5c74550adebd1e0f0f8cb8e2fd349689" category="cell">WWN du châssis</block>
+  <block id="129ce9ff43c56238a6184da12b2a5b4e" category="cell">ID de domaine</block>
+  <block id="1b753d520e7631f0c67566896bc0c4af" category="cell">Version du micrologiciel</block>
+  <block id="a2b26c184457aca773727ab033fa1c81" category="cell">Changer de rôle</block>
+  <block id="83176e03baeaf345bbc1f330296ccf5d" category="cell">État du commutateur</block>
+  <block id="87812b62c0fb71cfab318fad368a467e" category="cell">Statut du commutateur</block>
+  <block id="1ea52f26e7e0ce08e462f87f5e35096c" category="cell">Lame</block>
+  <block id="af7b9d395234a1a9e4739a824ccf3439" category="cell">FC4 Protocole</block>
+  <block id="0b385e8b872fe691ffa60477bfb5582a" category="cell">Type GBIC</block>
+  <block id="5c5f06440fcb85cd5c8cfafe32e34b78" category="cell">Généré</block>
+  <block id="6648b733058a8095d076f0e828779bb3" category="cell">WWN du nœud</block>
+  <block id="874c17fcc02b3cd3252fff9f890062f7" category="cell">Obligatoire pour signaler avec portID si WWN n'est pas présent</block>
+  <block id="de2ee10f18740433fc508e3d7dcb902c" category="cell">ID de port</block>
+  <block id="b81dbdcd51802845e275c5bd54d84e17" category="cell">Numéro de port</block>
+  <block id="90d80b71e6e4515405d0541b58077671" category="cell">Vitesse du port</block>
+  <block id="1a08875a2acb1c5d8ea92d08b8ae7f94" category="cell">Etat du port</block>
+  <block id="0e2f87274b5b4af9b5c551ac2c59591a" category="cell">État du port</block>
+  <block id="bd9f125b279a19f0d5b7f09c7d793d35" category="cell">Type de port</block>
+  <block id="67d9811eca3cd8616bde82d3a5ac9108" category="cell">État brut du port</block>
+  <block id="78fc8e61b09d5906dc9183099ee4d95b" category="cell">Vitesse brute en gigabits</block>
+  <block id="c9b9a99303707d3ef0f72b2766c4f7c6" category="cell">Connectivité inconnue</block>
+  <block id="44e62798eee2e3551f748a95428b45f7" category="cell">Gérer URL</block>
+  <block id="b5143ddf44325b4014285e2362e6d2eb" category="cell">Nom de la zone</block>
+  <block id="b0e58b956c7a5c807a6627c29f3da471" category="cell">Fonctionnalités de segmentation</block>
+  <block id="0aca422762b0cf0426ab0c433c9443b0" category="cell">Configuration active</block>
+  <block id="5973510ea863952ac60299cc0a18fc10" category="cell">Nom de la configuration</block>
+  <block id="28189d45e939e4dd0e85a1e076edf8c8" category="cell">Données de port</block>
+  <block id="de9e687c272e4633df94c3a7f92c295c" category="cell">BB crédit zéro reçu</block>
+  <block id="305af65222ed3fff91f5c8bcdfe17162" category="cell">SNMP</block>
+  <block id="f0d6bd96c9f84add944df8d5060dd505" category="cell">Total du crédit BB zéro</block>
+  <block id="9e877574819be34335e4842ad03c3463" category="cell">BB crédit zéro transmis</block>
+  <block id="4ba93ddbedc42074f8c866cdb853d32b" category="cell">BB crédit zéro MS transmis</block>
+  <block id="9ebd189a2535b5c5f077bac84cb548af" category="cell">Erreurs de port classe 3 ignorer</block>
+  <block id="984512a4632a2dac603a9939a93b9bf3" category="cell">Erreurs de port CRC</block>
+  <block id="625217f8f44ee63daf196b073a5d207b" category="cell">Erreurs de port Enc in</block>
+  <block id="5c394e06e1a337867eb1585523e7df4d" category="cell">PortErrors.encoOut</block>
+  <block id="940c7770350bceaced3c9719f011e9c4" category="cell">Erreur de port - trame longue</block>
+  <block id="97764bd9d14500421402a118e910080b" category="cell">Erreurs de port dues à une longue trame</block>
+  <block id="2c98b48ffd85ac841ee9bad35b47a9ee" category="cell">Trame courte d'erreur de port</block>
+  <block id="40cf1a82ffecefa301e97b88ef2d2516" category="cell">Erreurs de port dues à une courte trame</block>
+  <block id="3e75235453f258867730103a9181b6f2" category="cell">Erreurs de port échec de liaison</block>
+  <block id="1b753dba9291c3ba4813c8947aca51e7" category="cell">Échec de la liaison des erreurs de port</block>
+  <block id="46d31f6595967a81ce62461fd617a430" category="cell">Erreurs de port Link Reset Rx</block>
+  <block id="361b3853018aaa4301398bbc054ea961" category="cell">Erreur de port transmission de la liaison Réinitialiser</block>
+  <block id="a0fc5d7e3524d0afb46f31eedf0b6d78" category="cell">Erreur de port due à la réinitialisation de la liaison</block>
+  <block id="560df5fb1590844a55a48814b462dd79" category="cell">Erreur de port perte de signal</block>
+  <block id="c36ab3da3727266f0ca30c59fc733c86" category="cell">Pertes de signal d'erreurs de port</block>
+  <block id="e84b3dabdd74420138d318a1361b6bbf" category="cell">Erreur de port perte de synchronisation</block>
+  <block id="7a42895ca113258204c11197d4362517" category="cell">Erreur de port : perte de synchronisation</block>
+  <block id="ba2c2322bca1effdb5ec6a239eb1cab1" category="cell">Erreur de port : délai d'annulation de la transmission</block>
+  <block id="1795f08a1e40ddad6681ae8682fa9ac7" category="cell">Dépassement du délai d'erreur de port</block>
+  <block id="647a8ab49c869d21aff22c9c5b440750" category="cell">Nombre total d'erreurs de port</block>
+  <block id="557885d8fdc0fa05f3a759a1030aa216" category="cell">Nombre total d'erreurs de port</block>
+  <block id="95842224e67f548b32cf6a40694bc93c" category="cell">Fréquence de trame de trafic</block>
+  <block id="66ecba979e4c0593a85349db952d786b" category="cell">Fréquence de trame de trafic totale</block>
+  <block id="279f963d0e306688793ef38fc2b904e8" category="cell">Taille moyenne des images</block>
+  <block id="0ae25e87a8bc8dc203c30a2f42f7bb84" category="cell">Taille moyenne des trames du trafic</block>
+  <block id="d50bacde9fff9c8cdc3cb6b8f211ce2a" category="cell">Images TX</block>
+  <block id="68af77c90ab8d6ca116b64a27598df5e" category="cell">taille moyenne des trames de trafic</block>
+  <block id="e50f84c8ec3b271bcb58e11a44e38a6b" category="cell">Taux de trafic reçu</block>
+  <block id="d4d9c6e406b7849c3f27d6ef4b56c383" category="cell">Taux de trafic total</block>
+  <block id="1cbc66743e29ca6f88d0254ed7d3c4cf" category="cell">Vitesse de transmission du trafic</block>
+  <block id="8a5f03924fbc02859be696012a68088a" category="cell">Utilisation reçue du trafic</block>
+  <block id="84eb7a551425ddf565e7d2512276c051" category="cell">Utilisation totale du trafic</block>
+  <block id="1233fa55158f486f5bbd29842c06ea60" category="cell">Utilisation totale du trafic</block>
+  <block id="46fd3cae12922cb0a543e2871c723eef" category="cell">Utilisation de la transmission du trafic</block>
+  <block id="2f53549a73098820cf8cf4ea9ac78731" category="cell">Brocade SNMP</block>
+  <block id="b11e9b395b002d7acc96aa829b6a73d5" category="cell">SNMPv1, SNMPv2, SNMPv3</block>
+  <block id="bd4c9ab730f5513206b999ec0d90d1fb" category="cell">161</block>
+  <block id="1d5c153f4cffcf41dfd2e4aa0265af22" category="cell">Brocade SSH</block>
+  <block id="9a7ce4f20c6c7386dec1aa36308cd937" category="cell">Assistant de configuration de la source de données</block>
+  <block id="1589c0dc03c78d7945ff3f4a2b07995e" category="section-title">Brocade Network Advisor HTTP</block>
+  <block id="ab9f6c2ae40ccefa9530dc4a81811de5" category="list-text">14.4.5</block>
+  <block id="652cae0b6c479d32c012a2cbd2a6cb76" category="cell">HTTP/S</block>
+  <block id="901555fb06e346cb065ceb9808dcfc25" category="cell">port</block>
+  <block id="e7ae8eefc55ebbce4c2ae493458c9511" category="cell">API REST Brocade Network Advisor</block>
+  <block id="c59814c5745505a7a040fa82a314dad7" category="cell">80/443</block>
+  <block id="bf2e398e4b4a71557453fba2eb1e54fe" category="section-title">Commutateurs de structure Cisco MDS &amp; Nexus</block>
+  <block id="22f4f7caad65f669da61310e4a0b68ed" category="cell">8978-E16 DS-C9124-2-K9 DS-C9124-K9 DS-C9134-K9 DS-C9140-K9 DS-C9148-16P-K9 DS-C9148-32P-K9 DS-C9148</block>
+  <block id="399d36f28a6c93897d3c991798f2dde2" category="cell">5.2 5.2 6.2 13 15 6.2 21 6.2 3 6.2 7.1 7.3 11 7.3 7 8.1 8.4 8.4 8.4(N1) 4.1 5.2 6.2 6.2 6.2 19 6.2 29 6.2 9 4 7.3 7.3 7 7.3 8.3 8.4 8.4 8.4(3a) 5.2 5.2 6.2 6.2 17 6.2 23 6.2 33 6.2 7.3 7.3 13 7.3 8 8.3 8.4 8.4(1a) 5.0(3)N2(3.13e) 5.0(3)N2(4.04i) 5.0(3)N2(4.13j) 5.0(3)N2(4.21k) 5.2(1) 3.2(8)N2(5.0 8.4 8.5 9.2 9.3 9.3 9.3 9.4</block>
+  <block id="0d1da8be32a393e6c2b527cbe79d7cf8" category="cell">Type de domaineID</block>
+  <block id="502996d9790340c5fd7b86a5b93b1c9f" category="cell">Priorité</block>
+  <block id="a49b6b6027788b76ff58b7cd4e63deca" category="cell">SANRoute activé</block>
+  <block id="2a50fa6a5b65a9aa453fd3fc17cc446c" category="cell">Indique si ce châssis est activé pour le routage SAN (IVR, etc...)</block>
+  <block id="9b001c69726efc0b7ef4876759a01874" category="cell">Type de zone</block>
+  <block id="99c08ecdd2c144c31f173cc2dc42a473" category="cell">Comportement de zonage par défaut</block>
+  <block id="65dc23b0f9ac642bd4a4e92889ef4321" category="cell">Contrôle de fusion</block>
+  <block id="5e87a04e84bfa9d81110bc491cf552b8" category="cell">Le protocole SNMP de Cisco</block>
+  <block id="4bfaedd3a71f4a6c68e4ed7389df4540" category="cell">SNMPv1 (Inventaire uniquement), SNMPv2, SNMPv3</block>
+  <block id="32b206e1063dfaad6a69643c2c618aa3" category="section-title">EMC Celerra (SSH)</block>
+  <block id="de59f22877fe91479b1b9396ade48c15" category="cell">NSX VG8 VNX5600</block>
+  <block id="781715a0725450baff4f0a1835500f43" category="cell">5.5.38-1 7.1.76-4 7.1.79-8 8.1.9-184</block>
+  <block id="633890c55ebb7bc068a1f71cc7393584" category="cell">Est InternalVolume</block>
+  <block id="b0de63e7254b90535555e3dfe56db445" category="cell">que le partage de fichiers représente un volume interne (volume netapp) ou s'agit-il d'un qtree/dossier au sein du volume interne</block>
+  <block id="2c1e5a2720eac64f3d4d8db2e0b74299" category="cell">Est partagé</block>
+  <block id="9f2110e50837733c09310ef1a135a67e" category="cell">Si ce fichier est associé à des partages</block>
+  <block id="078f367ea2c7fdd337cff739053aab32" category="cell">Chemin du maillage de fichiers</block>
+  <block id="9185a09f2d37fe701cd8a5943b5d411d" category="cell">ID de qtree</block>
+  <block id="890a88bf28a33e8270139db6976bce9b" category="cell">id unique du qtree</block>
+  <block id="6fec124be964bb040691707e2ee32714" category="cell">ID du volume interne</block>
+  <block id="94a5a2c33ed1d620b31389632e2b5e4f" category="cell">heure du dernier snapshot</block>
+  <block id="975531451dc05d1682bfc7214f98167d" category="cell">Nombre de snapshots sur les volumes internes</block>
+  <block id="169b63f90579c0f402545a5cc83b258b" category="cell">Capacité totale utilisée (Mo)</block>
+  <block id="be9410f3cad94c178de8d816e9198b0d" category="cell">placez le support pour la capacité utilisée comme lu à partir de l'appareil</block>
+  <block id="fb0687dda0660191a80307ec79e09fb3" category="cell">Stockage virtuel</block>
+  <block id="a0b99bd1d68e1faa3edab368a3ec5344" category="cell">Stockage virtuel propriétaire (vfiler)</block>
+  <block id="71676bb324ac0415565369fda6598f49" category="cell">Limite de capacité matérielle de quota (Mo)</block>
+  <block id="6bc07b9c218b1efa55e76439b3569378" category="cell">Quantité maximale d'espace disque autorisée pour la cible de quota</block>
+  <block id="bde0336211a8279916dd97405ba427e8" category="cell">Limite de capacité logicielle de quota (Mo)</block>
+  <block id="09e3298c457b3cb7128262f566cab4cd" category="cell">Quota UsedCapacity</block>
+  <block id="3607e421c70ec935f3c65f70672cb7f5" category="cell">Espace en Mo actuellement utilisé</block>
+  <block id="2d660b8d906a87b150358e2df39cf41f" category="cell">Limite de capacité matérielle (Mo)</block>
+  <block id="2369b6d14ce1678bd1248db2ff073a53" category="cell">Quantité max d'espace disque autorisée pour la cible de quota (limite Hard)</block>
+  <block id="87410105ab181f9c334dbc2dcba33319" category="cell">ID de quota</block>
+  <block id="65d4def37f3da33dac02cac374cde985" category="cell">id unique du quota</block>
+  <block id="9c0cdbce9f0e7b49f7dae66bad6b4f2b" category="cell">Limite de capacité souple (Mo)</block>
+  <block id="384c24d6c249c5e68c5b0978f76707c4" category="cell">Limite de fichier logiciel</block>
+  <block id="1c2890a632792b1c162a5862d41695be" category="cell">Nombre max. De fichiers autorisés pour la cible du quota</block>
+  <block id="837cef41bfefeb54c062084189798feb" category="cell">Fichiers utilisés</block>
+  <block id="db789bab8ce64172bc558e26815ced3d" category="cell">Nombre de fichiers actuellement utilisés</block>
+  <block id="2292efd59a9a10431f5772d186232d65" category="cell">Interfaces IP</block>
+  <block id="508c9c26fe33ed52db69e0a454b4842c" category="cell">Liste des adresses IP séparées par des virgules sur lesquelles ce partage est exposé</block>
+  <block id="b1f951a171927c73bd5dd6d97f98f017" category="cell">enumération pour le protocole de partage</block>
+  <block id="2b41a61f2dc6b55a9c5749a01055e1cf" category="cell">Partager l'initiateur</block>
+  <block id="ed5dea09095f671b801bee34ea28a319" category="cell">Autorisations</block>
+  <block id="b440fbb86ede4987364f36c681bd291c" category="cell">Autorisations pour ce partage particulier</block>
+  <block id="4e7efb3abf42438be66cc7eee11af885" category="cell">Nombre de processeurs</block>
+  <block id="2eb6f9c791d4456e610437be53a864bc" category="cell">Nombre de processeurs du stockage</block>
+  <block id="5d626be8921bba852f30e8f7b76b6c4f" category="cell">Celerra CLI</block>
+  <block id="6bffb0a09ef4822cf14de5c78f72857b" category="section-title">EMC CLARiiON (NaviCLI)</block>
+  <block id="3337a607cd5a33d6b8d3f27ce7da458d" category="cell">Versions API</block>
+  <block id="905b4a107a5dbff9d67d4c594c2bbaf0" category="cell">6.28 7.32 7.33</block>
+  <block id="3679cf38729d0b2d5fb7f21bee0c585f" category="cell">CX4-120 VNX5200 VNX5400 VNX5500 VNX5600 VNX5700 VNX5800 VNX7600 VNX8000</block>
+  <block id="a7da9cc47efa1078fdec8beeaa246b98" category="cell">04.28.000.5.008 05.32.000.5.218 05.32.000.5.219 05.32.000.5.221 05.32.000.5.249 05.33.009.5.155 05.33.009.5.184 05.33.009.5.186 05.33.009.5.218 05.33.009.5.231 05.33.009.5.238 05.33.021.5.256 05.33.021.5.266</block>
+  <block id="91af5705f16502125e8b2187e64202c0" category="cell">CLI</block>
+  <block id="03937134cedab9078be39a77ee3a48a0" category="cell">Groupe</block>
+  <block id="54821ac5da4d26f36fcf925593467491" category="cell">Nom de l'API du client</block>
+  <block id="8a1f02293377c1e0cbbc8658793f6e89" category="cell">Version de l'API client</block>
+  <block id="11617eafbdb7381c8096b2c1bb8435bf" category="cell">Canal réseau</block>
+  <block id="abd4328c725637aabedbd02d3b7ffd40" category="cell">Bidirectionnel</block>
+  <block id="607e8085710c8bd209a61cea07da5655" category="cell">ID source</block>
+  <block id="46e3f29921c5834939ac0d300fab994f" category="cell">ID cible</block>
+  <block id="cbcb113d072cf4437ec6292d80535ef7" category="cell">WWN du port de tuyauterie réseau</block>
+  <block id="1867075201f3fb264845a25c0e5e8514" category="cell">Terminal PE</block>
+  <block id="b718adec73e04ce3ec720dd11a06a308" category="cell">ID</block>
+  <block id="98bc7af02e50a3fd7d2ed494f54b3236" category="cell">SupportActive</block>
+  <block id="8b6e90e2ddb09ebe834a9bdae9fcf2ae" category="cell">Spécifié si le stockage prend en charge les configurations actif-actif</block>
+  <block id="fe387ce3e6ab6dac04ef1237179cf3c3" category="cell">Adresses de gestion</block>
+  <block id="45fad1b9543e44cd687799bdcd5647b4" category="cell">Groupe de disques</block>
+  <block id="b8b01d87cb13cbc4ecd1785226d0ce6e" category="cell">Type de groupe de disques</block>
+  <block id="03ee637c263451ac2520c7f758e64614" category="cell">Type de disque</block>
+  <block id="67c19e107de33cab7ea9a9db8bc9ccd2" category="cell">Non disponible</block>
+  <block id="2b20636173a684fa0d66246f2351348f" category="cell">Chemin de jonction</block>
+  <block id="b6755d218d5f4e1cef9cce9cc39aeda9" category="cell">Métadonnées</block>
+  <block id="1805b600d57126032f3deb62c8db3d38" category="cell">Drapeau indiquant si ce volume est un métavolume avec memeber ou non. Les métavolumes auront DiskGroup vide !</block>
+  <block id="78127ff99c24188bc6b9c434464f4075" category="cell">Source de réplica</block>
+  <block id="cc5a1935e52aa282b156d9a7294182e6" category="cell">Cible de réplica</block>
+  <block id="cd34b31ccabe859be97f3a96105215d5" category="cell">Membre du volume</block>
+  <block id="021da1b20f73dc252361a54d80497ef3" category="cell">Rang</block>
+  <block id="0a482f9333c7767e0ae44654c8b4a4ff" category="cell">Capacité des stockagePools</block>
+  <block id="648ac6f84fd11f680f4930e28dcc48db" category="cell">Capacité réservée des snapshots</block>
+  <block id="e33d9a21974ff6bdd21be69d55902b46" category="cell">CLI Navi</block>
+  <block id="a12becc8af138ab4fa60fa13e0d34585" category="cell">6389,2162,2163,443 (HTTPS)/80 (HTTP)</block>
+  <block id="61d005913edc6d572aca506d0732d8e2" category="section-title">EMC Data Domain (SSH)</block>
+  <block id="c2b7ab2b71d8af9d21b097b7d99383f2" category="cell">DD2500 DD4200 DD4500 DD6300 DD670 DD6800 DD6900 DD6300 DD6400 DD690</block>
+  <block id="f6d0d377b5a9d77b54dfe8d384213a3d" category="cell">5.4.6.0-503967 5.5.0.9-471508 5.5.2.1-486308 6.1.0.5-567091 6.2.1.30-663869 6.2.1.50-680189 7.10.1.15-1078832 7.10.1.20-1090468 7.2.0.70-686759 7.6.5.25-1078970.4.0-1017976 7.7.5.11-1046187 7.7.0.40-691389 7.7</block>
+  <block id="bfa1b9a3bb0e99995951ed53583f13d1" category="cell">ID fournisseur</block>
+  <block id="2974ee84ee6098a6cbbb0a39f3ed689a" category="cell">Interface de ligne de commande Data Domain</block>
+  <block id="1044c8fb5028d43ba6ecf95164980347" category="section-title">EMC ECS</block>
+  <block id="c8f63ecaff5e983a2441126a241c4cfa" category="cell">ECS</block>
+  <block id="6b52f5e131d52c96decb1fc3b071f7cf" category="cell">3.6.1.3 3.7.0.6 3.8.0.6 3.8.1.1</block>
+  <block id="ce8c80d09164befdcf723e3f912cd2ac" category="cell">ID de groupe de disques</block>
+  <block id="dd54739e5dea73dc878745af033f6163" category="cell">id unique du groupe de disques</block>
+  <block id="47b75ba86bc9631012976f9c3bbab804" category="cell">API REST EMC ECS</block>
+  <block id="e1c3c69291771830d53f0b78396c9230" category="section-title">Dell EMC Isilon / PowerScale (CLI)</block>
+  <block id="3fc9bd539901c7e4306f381f959a37d8" category="cell">A200 A2000 A300 A3000 F800 H400 H500 H500-4U-Single-128 Go-1x1GE-2x10GE SFP+-30 To-1638 Go SSD H700 NL400 NL410 Traceback (dernier appel) : X210 X400 sudo python</block>
+  <block id="2b469675f5b546f0cdf848162fcb2347" category="cell">9.2.1.12 9.4.0.14 9.4.0.17 9.5.0.7 v8.0.0.6 v8.0.0.7</block>
+  <block id="4ba8649862a0113bf0990d4564064285" category="cell">Type de groupe de disquette du fournisseur</block>
+  <block id="cd4221ee8d901dbd43eb91164d6bcf33" category="cell">désignation du fournisseur du type de groupe de disques</block>
+  <block id="fae8f9203bd2bb47a79ab914ec61fbf6" category="cell">La limite Hard fichiers</block>
+  <block id="0b58a9de9e72a27fa77f5c4ffb8ecb0d" category="cell">nombre max. de fichiers autorisés pour la cible du quota</block>
+  <block id="3804f025b9b768ee6db8fd73a054573a" category="cell">Seuil (Mo)</block>
+  <block id="ab8085175a91a88968fcb56b8c76f8c8" category="cell">Seuil d'espace disque, pour la cible de quota</block>
+  <block id="f98f7d98c1fa7ae100310b74cd66f715" category="cell">Cible utilisateur/groupe</block>
+  <block id="eef3a0a4949a4e576b78bb29a4108562" category="cell">cible utilisateur/groupe ce quota fait référence à</block>
+  <block id="2e24a64f661bb25d79cdb67855a0d38d" category="cell">Données du nœud de stockage</block>
+  <block id="0e9aedb63e1a465880ff2335f6d74111" category="cell">Nombre d'IOPS de lecture sur le système de fichiers</block>
+  <block id="2c76507d67249ac88a39439b3555ca8e" category="cell">Écriture IOPS du système de fichiers</block>
+  <block id="0bbf52d1fa8d04665f971a021a8ce244" category="cell">Débit de lecture des fichiers</block>
+  <block id="d558759d6341204145804b0ba70193e2" category="cell">Débit du système de fichiers</block>
+  <block id="911d26b7250324e4f58bb2fec8a90659" category="cell">Écriture du débit du système de fichiers</block>
+  <block id="58ebcd17c13c92b031d8870f4360619f" category="cell">Isilon (SSH</block>
+  <block id="45a62a8ae256e48199c3cb271a260e21" category="section-title">EMC PowerStore REST</block>
+  <block id="fd8ecac2685ead441e9d0c2556ab928d" category="cell">PowerStore 1000T PowerStore 5000T PowerStore 5200T</block>
+  <block id="3cc6fe4598e9d1e1781040405de305e2" category="cell">2.1.1.1 3.2.1.0 3.5.0.2</block>
+  <block id="c56b3ac48cc041e08ee5d9a2fd6e1869" category="cell">Portail réseau ISCSI</block>
+  <block id="d608f7deedb1f7b2cae3f33a7f6d4ea7" category="cell">Port d'écoute</block>
+  <block id="d259c7823c18eb4275c4915fd55026f0" category="cell">NIC</block>
+  <block id="bf75904763807babb09d285ee835a969" category="cell">Groupe de portail réseau ISCSI</block>
+  <block id="908e7f9cb0e20c9f71415d5be8757f2b" category="cell">Nom du groupe de portails</block>
+  <block id="cc2881e470592a79eb5c1a24c29f7d51" category="cell">Balise de groupe de portail</block>
+  <block id="a34f9f23d9e8b4ed126e13d3308c1397" category="cell">Nœud ISCSI</block>
+  <block id="b42e7e9f43276548d600d26ad21cd252" category="cell">Nom du nœud</block>
+  <block id="86a8fb3f5dbc54a1ddb9e4e66ada2915" category="cell">UUID de nœud partenaire</block>
+  <block id="b4f161c8fe26c799d33016c385f6fb33" category="cell">UUID de la paire HA</block>
+  <block id="4f7de25ed8f099cc30aa75bbb3b896de" category="cell">Numéro de série parent</block>
+  <block id="70eda6cf3169df9e5c7a4f47825c9328" category="cell">QoS - règle</block>
+  <block id="b231f764525753f8a789f224b1d6ab55" category="cell">Masquage requis</block>
+  <block id="2123eb0a47bc255b754144805d4b079a" category="cell">Autres IOPS</block>
+  <block id="2f4b1075fd1ed28c7acb3b13c46bba1c" category="cell">API REST D'EMC POWERSTORE</block>
+  <block id="94b28c491047940f499bb7ba2258992e" category="section-title">EMC RecoverPoint (HTTP)</block>
+  <block id="78814f3852ff02a5c06c73000467afca" category="cell">RecoverPoint</block>
+  <block id="9c3f39564ec6f80a2727d380d706f8a1" category="cell">5.1.SP3.P1(g.69) 5.1.SP4.HF1(h. 86) 5.1.SP4.P1(h. 89)</block>
+  <block id="5ea93ac7e9175685461a3aa7ecd6678d" category="cell">API REST RecoverPoint</block>
+  <block id="305f24249d52ff8168d1b27f40c147f2" category="section-title">CLI EMC Symmetrix</block>
+  <block id="6af15b7baefa3b0c5e3779145fcc9bbd" category="cell">V10.0.0.0 V10.0.0.3 V10.0.1.0 V10.0.1.3 V10.1.0.0 V10.1.0.3 V8.3.0.6 V9.1.0.15 V9.2.0.0 V9.2.3.0 V9.2.3.4 V9.2.4.6 V9.2.4.1 V9.2.4.2 V9.2.3.6</block>
+  <block id="9927ac700ae81f7aa4517e72e2535b60" category="cell">PMax8000 PowerMax_2000 PowerMax_8000 VMAX-1 VMAX250F VMAX40K VMAXX450F VMAX950F</block>
+  <block id="48429764e647937ee7f575fbacb95ce4" category="cell">5876.286.194 5978.714.714 6 5978.714.714(16F40000) Build 115 5978.479.479 34 5978.714.714 61 5978.714.714(175A0000) Build 372 5978.711.711 542 5978.714.714 49 5978.714.714 85(175A0000) Build 179 5978.711.711(175A0000) Build 205 5978.711.711(175A0000) Build 239 5978.711.711(175A0000) Build 365 5978.711.711(175A0000) Build 374 5978.711.711(175A0000) Build 448 5978.711.711(175A0000) Build 539 5978.711.711(484 5978.711.711</block>
+  <block id="def09fa4a833717d38298eb37c861af8" category="cell">Chiffrées</block>
+  <block id="ce160a2c5bc8a350f1079c835c90b0b6" category="cell">Mappage de nœuds ISCSI</block>
+  <block id="9d7b69b0af6ffadea4bba899938aadcc" category="cell">OID de groupe de portail</block>
+  <block id="6781eef4befd1d5fc37df3b788fa547d" category="cell">Session ISCSI</block>
+  <block id="a9e4f9871a7943bdd69da7576c5b7f12" category="cell">IPS d'initiateur</block>
+  <block id="1aa5596463d9bafd2ae1ae5bac9ff997" category="cell">OID initiateur</block>
+  <block id="e217d6d936cda7d607db07da027830bb" category="cell">Connexions maximales</block>
+  <block id="6467cf1c40321da62630b970f5b881f5" category="cell">Nombre de connexions</block>
+  <block id="2fae32629d4ef4fc6341f1751b405e45" category="cell">Sécurité</block>
+  <block id="69a35504044cfa0ed20e3f78fb1fb666" category="cell">Description de l'API client</block>
+  <block id="931eb3a8b95aeb16cb0dd2a81318ac65" category="cell">Limite souple (Mo)</block>
+  <block id="8c7a7a3c946f66f41d757534affbea7b" category="cell">taille de volume logique définie lors des opérations de création ou de redimensionnement de volume</block>
+  <block id="11c692a68a660cc9a1641a4fb8f71b5a" category="cell">Taille de disque</block>
+  <block id="d5dddc416db33cf2559e34680d27cc85" category="cell">Liste séparée par des virgules des tailles de disque (Go)</block>
+  <block id="a83c1eefc7fca7514ddc960021a3dc7f" category="cell">liste séparée par des virgules des vitesses de disque (tr/min)</block>
+  <block id="5640ee4b2a998e5e30c09401c3dd4542" category="cell">Mainframe</block>
+  <block id="d90da70f094acaecf15768c7e27d2b06" category="cell">Indique si ce volume est un volume mainframe</block>
+  <block id="d4e2713d1b1725a1592f9268589f990d" category="cell">Snapshot</block>
+  <block id="716db86e78c842ddd6593c2c0b2ddc02" category="cell">Capacité écrite</block>
+  <block id="97163465f980ded0b72ef8474de095c4" category="cell">Capacité totale écrite sur ce volume par un hôte en Mo</block>
+  <block id="b61c79f1934bc51262894507a720552e" category="cell">IOPS limite de QoS</block>
+  <block id="06252d2ae9b132eed353887bd3eb817e" category="cell">Limite QUALITÉ de service MBIT/S</block>
+  <block id="642252a0528a1c6c2ffa4dac60cf3fd0" category="cell">Groupes de stockage</block>
+  <block id="1f2784105a791fa003743c4b56191bda" category="cell">Cylindres</block>
+  <block id="ff7b5fce5e9223c087cecbbb4beb0b6a" category="cell">symcli</block>
+  <block id="65f2a94c8c2d56d5b43a1a3d9d811102" category="cell">2707</block>
+  <block id="2291f088bb6260a7b8f29b4966d2ee58" category="cell">Symmetrix SMI-S</block>
+  <block id="48ffcee6e99f3e10a7e5934acb136202" category="section-title">REST Dell Unisphere</block>
+  <block id="2140f68a5e813b23e3ed99035c12ad77" category="cell">V10.0.1.3 V10.1.0.1 V10.1.0.5 V10.1.0.6 V9.2.4.7 V9.2.4.9</block>
+  <block id="982593940190cf8a127d1195a43bf5e3" category="cell">Powermax_2000 PowerMax_2500 PowerMax_8000 PowerMax_8500 VMAX250F VMAX950F</block>
+  <block id="819f94f49486aca85161e2e9f6e1a9f6" category="cell">5978.714.714 5978.714.714 build 6 5978.714.714 build 61 5978.714.714 build 85 6079.225.0 build 127 6079.225.0 build 216</block>
+  <block id="37fee28dbf15d67e74df4abbebeb7e6c" category="cell">Pourcentage de capacité utile effective utilisée</block>
+  <block id="248a2ada600649dd9a0defecae5a2871" category="cell">API Dell Unisphere</block>
+  <block id="68c87bc16048b7ab1db3119e879590f7" category="section-title">EMC VNX (SSH)</block>
+  <block id="6f0150f6bda53e72513ad8effe98c4ca" category="cell">VNX5300 VNX5400 VNX5800 VNX7500</block>
+  <block id="e62f7556fc1a8035de4e80088e736cd7" category="cell">05.32.000.5.219 05.32.000.5.221 05.32.000.5.225 05.33.009.5.186</block>
+  <block id="f043a08758706c0551863a8b0cfc84cd" category="cell">VNX SSH ET CLI</block>
+  <block id="d805560a2796d5cb8d0b7d6d581b5c63" category="section-title">EMC VNXe &amp; Unity Unisphere (interface de ligne de commande)</block>
+  <block id="71c9ab6051a4f60bf01939123024d1b4" category="cell">Unity 300 Unity 300F Unity 350F Unity 450F Unity 480F Unity 550F Unity 600 Unity 600F Unity 650F Unity 680 Unity 680F Unity 880 Unity 880F VNX83200</block>
+  <block id="d78e0c85358e3eede907cae5cc16f76e" category="cell">3.1.17.10223906 4.2.3.9670635 4.5.1.0.5.001 5.0.2.0.5.009 5.0.6.0.5.008 5.0.7.0.5.008 5.1.0.0.5.394 5.1.2.0.5.007 5.1.3.0.5.003 5.2.1.0.5.013 5.2.2.0.5.004 5.3.0.0.5.120 5.3.1.0.5.008 5.4.0.0.5.094</block>
+  <block id="68d13764f7761df0def3e72de99042be" category="cell">Interface de ligne de commande VNXe et Unisphere</block>
+  <block id="0d0679d541823c0d0d5fa3f8521a681e" category="section-title">EMC VPLEX</block>
+  <block id="9a82bc7d59b7ff440c08c1e56c857ad4" category="cell">VPLEX</block>
+  <block id="e2470fc943626398a4be6fe59a2eaf3d" category="cell">6.1.0.00.00.23 6.1.0.01.00.13 6.1.0.02.00.04</block>
+  <block id="6b46051fc6711bf70599ead288d0a90a" category="cell">CLI EMC VPLEX</block>
+  <block id="dfaab1339734d2399b253d2c86d08a0a" category="cell">API EMC VPLEX</block>
+  <block id="cecc3b667dcb6cfacfe39e7910093e18" category="section-title">EMC XtremIO (HTTP)</block>
+  <block id="69c001b217de573c82cf8578ff6f1040" category="cell">4.2.2 6.2.1 6.3.1 6.3.2 6.3.3 6.4.0</block>
+  <block id="468fc1373903310d88ae31e4eeb9b4ab" category="cell">1 Bricks &amp; 48 To 1X20 To 2 Bricks &amp; 251 To 2X20 To 3 Bricks &amp; 283 To 4 Bricks &amp; 503 To 4X10 To 6X20 To 8X20 To</block>
+  <block id="9f75d4a885a98f9c3fe18c9ab89ed5df" category="cell">4.0.25-27 4.0.31-11 6.1.0-99_X2 6.2.1-36_X2 6.3.3-8_X2 6.4.0-36_HOTFIX_2_X2</block>
+  <block id="6cacc8dd39dbd60947aaa200f1f574d4" category="cell">API REST D'EMC XTREMIO</block>
+  <block id="3f0ca6a8202a9018ed738eb7d458ac5a" category="section-title">NetApp E-Series</block>
+  <block id="f126b7f2b049166c2d39449dcb500a62" category="cell">2650 2660 2704 2806 5600 5700</block>
+  <block id="3265d2905304f935373714af719b637b" category="cell">8.10.15.0 8.20.11.60 8.20.16.0 8.20.5.60 8.40.0.3 8.40.60.2 8.63.0.2 8.72.0.0 8.72.1.0 8.72.2.0 8.73.0.0 8.74.2.0</block>
+  <block id="ab7c13788cae2eff01d1255b815725d7" category="cell">RMI</block>
+  <block id="40391a3671202eba588cf010846ee33e" category="cell">Taille du cache</block>
+  <block id="113c69aaaeb7806c3953bbc1398afc81" category="cell">Taille du cache du périphérique en Mo</block>
+  <block id="52df6fad58380f14b532f856eb5bbe65" category="cell">Capacité totale des données</block>
+  <block id="245fcf2da08337a16deae97b9417f373" category="cell">API SANtricity</block>
+  <block id="b136ef5f6a01d816991fe3cf7a6ac763" category="cell">TCP</block>
+  <block id="f3856c7e096c52f1bcea0e237cd6f33a" category="section-title">HDS HCP (HTTPS)</block>
+  <block id="de9af54682ac41397db654efb63c031a" category="cell">Plate-forme de contenu Hitachi</block>
+  <block id="3c3391fc45e72a6f0195417bf2ce7325" category="cell">9.6.2.37 9.6.3.33</block>
+  <block id="8ba5a01a291075248a9fb648699c4b8b" category="cell">API REST HCP HDS</block>
+  <block id="38f629170ac3ab74b9d6d2cc411c2f3c" category="cell">9090</block>
+  <block id="a2099e963cf5983d81dc9e12f00afe22" category="section-title">HiCommand Device Manager</block>
+  <block id="8a99f92e59830576b68c91e6dba83cee" category="cell">8.6.4 8.7.7 8.8.1 8.8.3 8.8.5</block>
+  <block id="a801c37f75b6b5ed10b33986ebd061d7" category="cell">D850XS HM700 HM800M R800</block>
+  <block id="d48e406b479d93758c78beee9a7a9c07" category="cell">0988/J-W DKC:73-03-83-00/00 DKC:80-05-87/00-83 DKC:06-68/00-80-03 DKC:40/00-73-50-83 SVP:05-40/00-05 SVP:48-83-92 SVP:00/00-06-52-40/00 SVP:69-05-54-40/00</block>
+  <block id="054d32c5203253d8f851a6d5a2c67159" category="cell">API XML HDS</block>
+  <block id="2f412c240cac35e48beb96e1bb550342" category="cell">Exportation/CLI</block>
+  <block id="b173eaa0fda50923922975250a698acd" category="cell">Utilitaire d'exportation (USPV) / CLI SNM (AMS)</block>
+  <block id="fa88c9439486746e95052c570d09f290" category="cell">API XML HiCommand Device Manager</block>
+  <block id="d0fb963ff976f9c37fc81fe03c21ea7b" category="cell">2001</block>
+  <block id="b47d5567b66b2c2d7d44a9625a934052" category="section-title">HDS HNAS (INTERFACE DE LIGNE DE COMMANDE)</block>
+  <block id="380ac4f5660ae29cc852c55b754ebddc" category="cell">G600 HNAS 4100</block>
+  <block id="dff0343d645943dce6998b082754f125" category="cell">14.6.7520,04</block>
+  <block id="18b2b0426959c6ff5ef1e2b73137cb5c" category="cell">CLI HDS HNAS</block>
+  <block id="ea126fc7094292a7eafddaa5f79bc629" category="section-title">HPE Nimble / Alletra 6000 Storage</block>
+  <block id="6654c734ccab8f440ff0825eb443dc7f" category="cell">v1</block>
+  <block id="3966e057d0a5cb9788b48ba20ffbf4fa" category="cell">AF40 AF80 HF60</block>
+  <block id="03e3e88be74aaa3f38e615e799313064" category="cell">5.0.3.100-575430-opt 5.2.1.600-841103-opt</block>
+  <block id="4261623eb364ceabdf81868a93e8d685" category="cell">Capacité réservée</block>
+  <block id="0c35f4ba2a30997ea5cf014a5ae58b0e" category="cell">Capacité réservée en Mo</block>
+  <block id="d7576ac715ac6cef050f42e555aa9b5b" category="cell">API REST HP NIMBLE</block>
+  <block id="2a10665525774fa2501c2c8c4985ce61" category="cell">5392</block>
+  <block id="d8a9c0973aff634fea36b1ea1a3021a2" category="section-title">Huawei OceanStor (REST/HTTPS)</block>
+  <block id="daa86c896d1feda9065084ee252f1665" category="cell">5500 V3 6800 V3</block>
+  <block id="9a6aa29fd187e7afc2a2d0a9a18deed1" category="cell">V300R006C50</block>
+  <block id="b99d9e6339c66107303cc64a9c47c625" category="cell">API REST Huawei OceanStor</block>
+  <block id="172ef5a94b4dd0aa120c6878fc29f70c" category="cell">8088</block>
+  <block id="6a56cccbc57bc9da92069fa8f49c91f9" category="cell">API REST OceanStor Performance Huawei</block>
+  <block id="f10ebf10385784ef6c531e432c6747e5" category="section-title">IBM SVC (CLI)</block>
+  <block id="86af96ee37735363f259f7abb729148d" category="cell">2076-112 2076-124 2076-12F 2076-212 2076-224 2076-24F 2076-24G 2076-524 2076-624 2076-724 2076-824 2077-24F 2077-324 4657-924 4662-6H2 9840-AE1 9843-AE2 9843-AE3 SVC</block>
+  <block id="a3d52e580e4ab7687ee57476e2daec20" category="cell">1.5.2.5 1.6.1.0 1.6.1.5 7.8.1.11 7.8.1.13 7.8.1.5 7.8.1.7 7.8.1.8 8.1.3.5 8.1.3.6 8.2.1.11 8.2.1.8 8.3.1.2 8.3.1.5 8.4.0.10 8.4.0.11 8.5.0.10 8.5.0.11 8.5.0.12 8.5.0.9 8.5.3.1 8.6.0.4</block>
+  <block id="0f151f12e5bfc4508260d20ebc5fef43" category="cell">Utilise FlashPools</block>
+  <block id="03a52eb6b4bc772c112d1ab81b7dc2f0" category="cell">Indiquez si ce pool de stockage utilise des pools Flash(spécifique à NetApp)</block>
+  <block id="98921133d10fbdb0fb6dbb7b2648befe" category="cell">Tête</block>
+  <block id="d761a5c8d00a0bbb8fb068e3b40c9011" category="cell">Spécifier la tête (dans netapp) pour ce volume</block>
+  <block id="59c3fdf35bd621ae2f98d332917d6736" category="cell">Type de protection</block>
+  <block id="139fddbdd4b220cf12dda59ee49de66d" category="cell">CLI IBM SVC</block>
+  <block id="64ca9f1efd950d3e7815f291e83db0ae" category="section-title">Infinidat Box (HTTP)</block>
+  <block id="6d1d2854ec462e15deca14be6686ff85" category="cell">F4304 F4304T F6260 F6306</block>
+  <block id="d95e4febba151013d97682a0fb1e75ab" category="cell">7.1.14.0</block>
+  <block id="47f7060be7cf2bba280a7fc28fd9a923" category="cell">API REST Infinidat</block>
+  <block id="bbc2d665b02dc421c5c756db4b973610" category="section-title">Microsoft Hyper-V</block>
+  <block id="84aeb1b1950c32a3a3160dc01316df5c" category="cell">WMI</block>
+  <block id="c973e90dcaabd088ed09204eebc51539" category="cell">Datastore NASShare</block>
+  <block id="464c14d5afd04fff34472bb910adf7b1" category="cell">OID de partage NAS</block>
+  <block id="3958f022a586f518094cdaf34fdfae01" category="cell">Hôte NASShare</block>
+  <block id="2c1a8654e21b67728f6c336c3b91e12e" category="cell">Lecture seule</block>
+  <block id="a8b85b40ef2419a77a5e70cf586e3aa2" category="cell">Nom du disque</block>
+  <block id="703fb2898407d085357b23bdb7f1b113" category="cell">TID</block>
+  <block id="a3d81d0c8a84b8e7c42bc0b9fa52ec60" category="cell">Partage NAS</block>
+  <block id="8c17213787bc78306b39f40f1dbc835a" category="cell">Capacité allouée en Mo</block>
+  <block id="6836645ccd02142158d4728891212ead" category="cell">IP de fichier</block>
+  <block id="fe71f46c6d162e0131e562bccca8ecdb" category="cell">Nom de fichier</block>
+  <block id="a0abbb0e17a1f7467715d55f2fdc0f0c" category="cell">Chemin du partage</block>
+  <block id="63fa3e20a1bed688a270c9994bbc3445" category="cell">Pour qu'un HvNasShare soit associé à une part</block>
+  <block id="4d3d769b812b6faa6b76e1a8abaece2d" category="cell">Actif</block>
+  <block id="04c1c356a348ae7fd4935ea0da26992b" category="cell">OID de LUN</block>
+  <block id="a4d0b620c1f9b7b9a2a9dfe5851669a6" category="cell">WWPN du port hôte</block>
+  <block id="d45b73e93937e9b5293e7ffbfab1a57c" category="cell">WWPN du port de stockage</block>
+  <block id="5de66cbc1db9ca5996d0a960b59125b5" category="cell">Capacité utilisée pour le reporting (Mo)</block>
+  <block id="8fa17b6ff7c88b22b8e94f51617bbc07" category="cell">Nombre de processeurs hôtes</block>
+  <block id="821fe7ee7ddce033a9ddbaa8730df557" category="cell">Vitesse du processeur de l'hôte</block>
+  <block id="43cf09ab2a067f468a044680309f9307" category="cell">Domaine hôte</block>
+  <block id="c54a4bffd8280b8d11dbfb5482b80aed" category="cell">Mémoire installée sur l'hôte</block>
+  <block id="ec7a2166da937e7ec019a165ca1c13aa" category="cell">Modèle hôte</block>
+  <block id="035896890f7fd31777ca1c1621d1374e" category="cell">Nombre de NIC</block>
+  <block id="8e094ad099d692bf5b0eae0e8bc7d7d7" category="cell">Vitesse de la carte réseau</block>
+  <block id="1cf34a855e141c48fbc42273e5748ab9" category="cell">Type de plate-forme</block>
+  <block id="3d265b4e1eeef0ddf17881fa003b18cc" category="cell">PowerShell</block>
+  <block id="24b362b50a44247426c15810b2e0631e" category="cell">WS-Management</block>
+  <block id="293c9ea246ff9985dc6f62a650f78986" category="cell">HTTP</block>
+  <block id="fccc64972a9468a11f125cadb090e89e" category="cell">5985</block>
+  <block id="7f1de29e6da19d22b51c68001e7e0e54" category="cell">135</block>
+  <block id="a61a9c39243f1f0af5e6bc0eee7e4206" category="section-title">Mode NetApp 7</block>
+  <block id="3170522648367d21423b781343eec922" category="cell">1.12 1.17 1.19 1.20 1.21</block>
+  <block id="dd5a6a5261f4cafaff719e41bab30adf" category="cell">FAS2220 FAS2240-2 FAS2240-4 FAS2554 FAS3210 FAS3250 FAS6240 FAS8040 FAS8060 N6070</block>
+  <block id="24c7dfcc75fd0f1ecd372a97902be14f" category="cell">8.1.1 7-mode 8.1.4P6 7-mode 8.2.3P2 7-mode 8.2.3P3 7-mode 8.2.3P6 8.2-mode 8.2.4P4 7-mode 7.4P5 7-mode 8.2.5P3 7-mode 8.2.5P5 7-mode 8.2P4 Data ONTAP 7-mode 7.3.3 Data ONTAP version 7.3.4</block>
+  <block id="fa97f6975c9b94a252d204cd22159ff4" category="cell">Fonctionnalité</block>
+  <block id="82e3d407504f0d6040bbcb3cf5e0cee8" category="cell">Sous licence</block>
+  <block id="019d1ca7d50cc54b995f60d456435e87" category="cell">Utilisé</block>
+  <block id="b2630c1a73e14e07d89019b761a85bf7" category="cell">Les robinets sont-ils activés</block>
+  <block id="1a9879ab1b221052d644c9c0beba7553" category="cell">Si les verrous opportunistes sont activés sur FileShare</block>
+  <block id="d5b3f55cf578ad75b136acb2a4d422df" category="cell">Type de sécurité</block>
+  <block id="8af35792f5b036ab613422b4a458459e" category="cell">Informations sur la sécurité ISCSI</block>
+  <block id="0c15c885a2f36acea55c932a2207ebcb" category="cell">Type d'authentification</block>
+  <block id="d1baccf8234b8c4892c1176f3891aec8" category="cell">Nom de nœud initiateur</block>
+  <block id="bb4030467d037406ead663537c543b8c" category="cell">Nom de nœud cible</block>
+  <block id="a05dae5ed3d2ab9186ed568f63301748" category="cell">ID de session d'initiateur</block>
+  <block id="635cd18aa82d7ae6eda148146e93d860" category="cell">ID de session cible</block>
+  <block id="a41f92b40ec03a010f2ac82c94ba6f89" category="cell">Cloner Sourc</block>
+  <block id="fd1440d605649ff0f097f69b98c6f54a" category="cell">nom du volume interne source</block>
+  <block id="2121c770d8948a4d648bb9ab2e622cbb" category="cell">Dernier accès au volume connu</block>
+  <block id="6945317d8b0db275e1b767843815fe73" category="cell">Garantie d'espace</block>
+  <block id="58c14dfec007748adfcfd9d7798f2a82" category="cell">Stratégie Guatantee d'espace (fichier, volume ou aucun)</block>
+  <block id="f514d8a6a16e40f4a76fc4e5f293283f" category="cell">Capacité totale économisée par clone en Mo</block>
+  <block id="4e49e73a98ae8193e1399cec9caf9e4f" category="cell">Volume interne source</block>
+  <block id="58cfc3b89daf19c66b2ecbbb3462d99b" category="cell">Volume interne cible</block>
+  <block id="f55f6181900936e07234ac7b41933273" category="cell">Oplocks</block>
+  <block id="3a2f864765dcc20e6d83754d6808e471" category="cell">Indique si les verrous opportunistes sont activés sur le qtree</block>
+  <block id="5d4eed453fc4bdbbfcfb8af4661c2dbf" category="cell">Style de sécurité</block>
+  <block id="b5fd99e8a0fdd5d8b695bcb0d14579ad" category="cell">Style de sécurité du répertoire : unix, ntfs ou mixte</block>
+  <block id="120097aae43f642350aa4ea6b7db5bbc" category="cell">Nombre total de lectures de disque remplacé</block>
+  <block id="b25d1f10591ecf26b3978de4f3228bc7" category="cell">NetApp 7 mode ZAPI</block>
+  <block id="837e5317f8f1d06276bea49ab62e99d9" category="cell">ZAPI</block>
+  <block id="9faca164fbcd544d1981957d0b4e8fef" category="section-title">NetApp clustered Data ONTAP versions 8.1 et supérieures</block>
+  <block id="8011ed7b5d788e1d891ec1545b90163f" category="cell">AFF-A150 AFF-A200 AFF-A220 AFF-A250 AFF-A300 AFF-A400 AFF-A700 AFF-A700s AFF-A800 AFF-A900 AFF-C190 AFF-C250 AFF-C400 AFF-C800 AFF8040 AFF8040 AFF8040 CDvM200 DM5100F FAS2240-2 FAS2520 FAS2552 FAS2554 FAS2620 FAS2650 FAS2720 FAS2750 FAS3250 FAS500f FAS6220 FAS 8040 FAS 8040 FAS8200 FAS8300 FAS8700 FAS9000 FAS9500 FASDvM300</block>
+  <block id="cb92ca5a52bfdd4e95ead03336b58688" category="cell">8.2 9.15.1.3P5 8.2 9.12.1.4P3 8.3 9.14.1.1P2 8.3.2 8.3.2P12 8.3.2P5 8.3.2P8 9.1.0 9.1.0P15 9.1.0P19 9.1.0P2 9.1.0P20 9.10.1P11 9.10.1P12 9.10.1P12 9.1 9.3 9.3 9.3 9.4 9.4 9.5.0 9.5 9.5 9.5 9.7 9.7 9.7 9.7 9.7 9.7 9.7 9.7 9.8 9.8 9.8 9.8 9.8 9.8 9.8 9.8 9.8 9.8 9.8 9.9 9.9 9.9 9.9 9.9 9.9 9.9</block>
+  <block id="69938172a08f678d3f5416c37c342593" category="cell">Mot-clé entrant</block>
+  <block id="15b72b6d740e99dbf49a92f1e130bb31" category="cell">Mot clé sortant</block>
+  <block id="6dd181b66104328be632f9193563f2a1" category="cell">Éligibilité à Flash Pool</block>
+  <block id="3730a8f51f1477ec133a27a39eb1038f" category="cell">Si le volume interne peut participer à la mise en cache hybride</block>
+  <block id="dc3a382f5cbca87a35fdc4deba8f8826" category="cell">Règles de QoS adaptative</block>
+  <block id="0be8406951cdfda82f00f79328cf4efc" category="cell">Commentaire</block>
+  <block id="ac56726c6a22130ed1fe9f64c6315a34" category="cell">état : commentaire libre décrivant le svm</block>
+  <block id="23ce9725e955780387f54c0d83eea722" category="cell">ID de groupe</block>
+  <block id="28974c2c793e780427dfb571b26443e6" category="cell">Nom du groupe</block>
+  <block id="f965d4cc285124f2f3a3cd9e6da27e63" category="cell">Limite QoS brute</block>
+  <block id="370d3b539e9e26d82380fec431804da0" category="cell">Indique si ce stockage est un cluster</block>
+  <block id="41790c6e5a05b27da6f3e809724f8c38" category="cell">Économies de comptionactivées</block>
+  <block id="341a7ed392b3acf42503f54b89dd0954" category="cell">Pourcentage d'utilisation de la licence</block>
+  <block id="900eec7e211843c41dcd66956d0bc396" category="cell">QOS attendre</block>
+  <block id="23a83856d88ced986d392a149164b32d" category="cell">Temps d'attente total qos</block>
+  <block id="3663f05a29b6539b77860da6ca259231" category="cell">Limite stricte de quota</block>
+  <block id="603de9381d1a7234baaca06cda3e6dea" category="cell">Limite stricte de quota de capacité</block>
+  <block id="387d72402ae248356930194964bdfa8b" category="cell">Limite souple de quota</block>
+  <block id="e4f6684ad98e9b133ae9741729a084ea" category="cell">Limite logicielle de quota de capacité</block>
+  <block id="1467ebf61cb3c2b832448a89003897e8" category="cell">Nombre total de fichiers</block>
+  <block id="096fbdc80c146b3b29d148259155197a" category="cell">Fraction réservée (incluse dans la capacité de données allouée)</block>
+  <block id="5522aeccb55610d8b86a0a1a766a57ca" category="cell">Compression SavingsPercent.total</block>
+  <block id="07cd5b48617414af21268990f0ec4794" category="cell">Espace total de compaction</block>
+  <block id="f490bbfe1c6761ba2e315375e05f67cd" category="cell">Total des économies en termes de compression</block>
+  <block id="41d5b2ba273c2ea7c2cebca8fcd494f7" category="cell">Gain d'espace grâce à la compression</block>
+  <block id="dd870e838b8b6020497c58ab3e520037" category="cell">Déduplication SavingsPercent.total</block>
+  <block id="5fe5faada3d804e4f4e45d8af43d6858" category="cell">Gain d'espace pour la déduplication</block>
+  <block id="759a84c731a74f1d5a0ff967d1a26377" category="cell">Espace de stockage d'objets espace physique utilisé</block>
+  <block id="0977007191b72def27e12c414b52f929" category="cell">Espace de stockage d'objets espace référencé</block>
+  <block id="d0ef851de9d11c9d5222fcdc81d24047" category="cell">Espace de stockage objet espace SIS enregistré</block>
+  <block id="a5fed773013bf44d7fc3c090dba7be01" category="cell">Espace de stockage d'objets utilisé</block>
+  <block id="502de0ca02b6a1c74a8a9c374793c768" category="cell">API NetApp ONTAP</block>
+  <block id="e90757a1a3f3e8a4b40daae00fcc1b61" category="section-title">NetApp SolidFire 8.1+</block>
+  <block id="3821d5dceb53966d31f954947ec2170a" category="cell">H410S-1 SF19210 SF2405 SF38410 SF4805 FC0025 FCN001 H410S-0 H610S-1 SF19210 SF2405 SF38410 SF4805</block>
+  <block id="1a35e8c09351f41df4e7b89bfff9101e" category="cell">11.1.0.72 11.3.1.5 12.3.0.958 12.3.1.103 12.3.2.3 12.5.0.897 12.7.0.380 9.3.0.40</block>
+  <block id="af0a5cd61b6efca604f162ab970d4ecf" category="cell">Identifiant de compte</block>
+  <block id="5d55785a871474b5490ecc8da433a32d" category="cell">Nom du compte</block>
+  <block id="642a34dc59e1f45b52246e81378e86e6" category="cell">IOPS en rafale</block>
+  <block id="7816688caa253ba9627537f17066fb4c" category="cell">qos minimale pour les IOPS</block>
+  <block id="e2448c89743cd1dd4759858e0b83ae4f" category="cell">API REST SolidFire</block>
+  <block id="cdae224de44c7ca9779763280e90b457" category="section-title">NetApp StorageGRID (HTTPS)</block>
+  <block id="9b421b4d46417a513776e234031691c1" category="cell">Webscale</block>
+  <block id="2139eefbe1e1266190a11745e239faf7" category="cell">11.6.0.11 11.6.0.7 11.7.0.4 11.7.0.8 11.8.0.5 3.1 3.4 3.5 4.0</block>
+  <block id="ebf7787778d7d227624dbcac732c76cf" category="cell">GuidKey 1</block>
+  <block id="0ada6fe3d2dceaa115002ac5f86da4d3" category="cell">GuidKey1 est implicite pour tous les objets dont la clé GUID n'a pas changé depuis OCI version 7.3.5.</block>
+  <block id="b7362eb6c4fb4b475f8bd7ab576a4f17" category="cell">GuidKey 2</block>
+  <block id="c2bef82ea99d92562d5bdb34de727594" category="cell">GuidKey2 est implicite pour tous les objets dont la clé GUID n'a pas changé depuis OCI version 7.3.5.</block>
+  <block id="dfd2bfc8d7a5d7d3f94a57b772ffb204" category="cell">Métadonnées autorisées d'utilisation de la capacité des nœuds en Mo</block>
+  <block id="89669295cd8238d8ba8c5acc85f8f101" category="cell">Utilisation de la capacité totale des nœuds en Mo</block>
+  <block id="fc334056c2786b8f00e51787c80bc5bc" category="cell">Utilisation de la capacité des nœuds utilisable en Mo</block>
+  <block id="cfa57e411a32ae463c4d417e2f3bc066" category="cell">Utilisation de la capacité des nœuds utilisée en Mo</block>
+  <block id="1dd3a78893ed38f568415e1e82060632" category="cell">Utilisation de la capacité des nœuds métadonnées utilisées en Mo</block>
+  <block id="668445f09da337d276dc852bb6a0dbb3" category="cell">Nom du site</block>
+  <block id="af002e7b28db9eb92392e4a88668401e" category="cell">Métadonnées autorisées d'utilisation de la capacité des nœuds</block>
+  <block id="7bd9f4cba4d80556cefa4a2e36cd8388" category="cell">Utilisation totale de la capacité des nœuds</block>
+  <block id="98ca9d494ed0a7500119f4c81e753402" category="cell">Utilisation de la capacité des nœuds utilisable</block>
+  <block id="e3d522e209910662c18f5e32bd073eab" category="cell">Utilisation de la capacité des nœuds</block>
+  <block id="2e743137d5bf45f513a853852894e4e1" category="cell">Métadonnées utilisées dans l'utilisation de la capacité des nœuds</block>
+  <block id="f8e695a68b2cc6a03c28f54dfffb7e5d" category="cell">L'API REST de StorageGRID</block>
+  <block id="389f5255791b76256678f54d2aa8d9aa" category="section-title">Nutanix Storage (REST)</block>
+  <block id="68781df3a498f1f188a013211fb259ce" category="cell">HX3310 NX-8150-G5 HX3310 HX3321 HX5510 NX-8155-G6 NX-8155-G7 XC640-10 NOYAU XC740XD-12 XC740XD-12</block>
+  <block id="1e589a23680964317500d00ed5ac6278" category="cell">5.20.2.1 5.20.4.6 6.5.4 6.5.5 6.5.5.6 6.5.5.7 6.5.6.5 6.7.1.7 6.8 6.8.1</block>
+  <block id="5833254d196e4a1b64f41ef17f3948c3" category="cell">API REST de Nutanix</block>
+  <block id="a5a401d1937bde9ceea96e2345f7c9d8" category="section-title">Oracle ZFS (HTTPS)</block>
+  <block id="7cb44c5f6c555a4ff8cc04a4410ac83a" category="cell">Sun ZFS Storage 7330 Sun ZFS Storage 7420 Sun ZFS Storage 7430</block>
+  <block id="b9deb27d899f42c11abbd5e0a2a12968" category="cell">1-1.1 2013.06.05.7.28</block>
+  <block id="55799eddc9f10f989c2583f4b951cf96" category="cell">API REST ORACLE ZFS</block>
+  <block id="3b8a614226a953a8cd9526fca6fe9ba5" category="cell">215</block>
+  <block id="9425abd0b36053580d0284f0d9fbe9a2" category="section-title">Pure Storage FlashArray (HTTP)</block>
+  <block id="b1fa46190ece9bb0323ecd1d4628d15d" category="cell">DFSC1 FA-X20R3 FA-X50R2 FA-X70R3 FA-X70R4 FA-X90R2 FA-X90R3 FA-X90R4</block>
+  <block id="15104c0fffc9c5f6b0b8b88d0f6fc288" category="cell">6.1.21 6.3.1 6.3.10 6.3.9 6.5.1 6.5.2 6.5.4</block>
+  <block id="f7ade9e282e08c1d6d53cd5f4fc13a47" category="cell">API REST de Pure Storage</block>
+  <block id="0ad0d30d976e28ead46bff59a349da08" category="section-title">VMware vSphere (services Web)</block>
+  <block id="1d048c5d8ff43dd47a2fa58a37940547" category="cell">VMware vCenter Server 6.7.0 22509732 7.0.1 build-1750787 20504362 6.7.0 17491160 VMware vCenter Server 6.7.0 19832280 6.7.0 22509751 build-3252642 VMware vCenter Server 18485185 build-4180647 VMware vCenter Server 6.7.0 build-6.7.0 VMware vCenter Server 6.5.0 build-9451637 VMware vCenter Server 7515524 build-22499743 VMware vCenter Server 6.5.0 build-6.5.0 VMware vCenter Server 6.5.0 build-19757181 VMware vCenter Server 18711281 build-18499837 VMware vCenter Server 6.5.0 build-6.5.0 6.5.0 build VMware vCenter Server 10964411 build 17994927 build VMware vCenter Server 9313458 build 6.5.0 build VMware vCenter Server 6.0.0 build 6.0.0 build 5318200 build VMware vCenter Server 4541947 build 14510545 build 6.0.0 build 13638472 build VMware vCenter Server 6.0.0 6.0.0 5.5.0 build 9911218 16046713 19299595 build VMware vCenter Server 5.5.0 build 5.5.0 build 5.5.0 build 6.7.0</block>
+  <block id="32a17b9c6b3373bcd5a29ae9bcc5c1b9" category="cell">VMware vCenter Server 8.0.2 23929136 8.0.3 build-19234570 23504390 8.0.3 24091160 VMware vCenter Server 8.0.2 23319993 8.0.2 24022515 build-19717403 VMware vCenter Server 22385739 build-20051473 VMware vCenter Server 8.0.2 build-8.0.1 VMware vCenter Server 8.0.1 build-23525738 VMware vCenter Server 22742005 build-22368047 VMware vCenter Server 8.0.1 build-8.0.1 VMware vCenter Server 7.0.3 build-24026615 VMware vCenter Server 23788036 build-22837322 VMware vCenter Server 7.0.3 build-7.0.3 7.0.3 build VMware vCenter Server 21784236 build 22357613 build VMware vCenter Server 21477706 build 7.0.3 build VMware vCenter Server 7.0.3 build 7.0.3 build 21290409 build VMware vCenter Server 20990077 build 20845200 build 7.0.3 build 20395099 build VMware vCenter Server 7.0.3 7.0.3 7.0.3 build 20150588 24005165 22617221 build VMware vCenter Server 7.0.3 build 7.0.3 build 7.0.3 build 8.0.2</block>
+  <block id="2c10282d2a9ce8be1576d7af8091d09e" category="cell">Services Web</block>
+  <block id="51359e8b51c63b87d50cb1bab73380e2" category="cell">Politique</block>
+  <block id="584f8eaacb1a0c605080be390dd2c14a" category="cell">UUID de volume</block>
+  <block id="daadad26e1c264cad9b4346b69b75269" category="cell">API REST de VMware</block>
+  <block id="c2e4da331d79257f0f92e53caf4b0b54" category="summary">L'outil SecurityAdmin de OnCommand Insight comprend des fonctionnalités qui permettent aux environnements Insight de fonctionner avec une sécurité améliorée, notamment le cryptage, le hachage de mot de passe et la possibilité de modifier les mots de passe des utilisateurs internes et les paires de clés qui chiffrent et déchiffrent les mots de passe.</block>
+  <block id="fafc7945f92d3381a67db94f300e92f4" category="paragraph">OnCommand Insight fournit des fonctionnalités qui permettent aux environnements Insight de fonctionner avec une sécurité renforcée. Ces fonctionnalités comprennent le cryptage, le hachage de mot de passe et la possibilité de modifier les mots de passe des utilisateurs internes et les paires de clés qui chiffrent et déchiffrent les mots de passe. Vous pouvez gérer ces fonctionnalités sur tous les serveurs de l'environnement Insight à l'aide de l'outil SecurityAdmin.</block>
+  <block id="24481711deaba6b074c5156c42fd694f" category="section-title">Qu'est-ce que l'outil SecurityAdmin ?</block>
+  <block id="924f7792a931faa39ba594a4a9a86ac9" category="paragraph">L'outil d'administration de la sécurité prend en charge les modifications apportées au contenu des coffres-forts ainsi que les modifications coordonnées apportées à l'installation de OnCommand Insight.</block>
+  <block id="a2b5dd694839ed854058dc9279795f10" category="paragraph">Les principales utilisations de l'outil SecurityAdmin sont *Backup* et *Restore* de la configuration de la sécurité (c'est-à-dire du coffre-fort) et des mots de passe. Par exemple, vous pouvez sauvegarder le coffre-fort sur une unité d'acquisition locale et le restaurer sur une unité d'acquisition distante, assurant ainsi la coordination des mots de passe dans l'ensemble de votre environnement. Ou si votre environnement comporte plusieurs serveurs OnCommand Insight, vous pouvez effectuer une sauvegarde du coffre-fort du serveur et le restaurer sur d'autres serveurs pour conserver les mêmes mots de passe. Ce ne sont que deux exemples de la façon dont SecurityAdmin peut être utilisé pour assurer la cohésion dans vos environnements.</block>
+  <block id="fb107e819ce3bcca51fb1b43301d69b4" category="paragraph">Il est fortement recommandé de *sauvegarder le coffre-fort* chaque fois que vous sauvegardez une base de données OnCommand Insight. Le non-respect de cette consigne peut entraîner une perte d'accès.</block>
+  <block id="c20fcaf12ecfe5147107594ab11e77ab" category="paragraph">L'outil fournit à la fois les modes *interactif* et *ligne de commande*.</block>
+  <block id="0cd2b1a6d3e6dfa77d0fb372d4501950" category="paragraph">De nombreuses opérations de l'outil SecurityAdmin modifient le contenu du coffre-fort et modifient également l'installation, en s'assurant que le coffre-fort et l'installation restent synchronisés.</block>
+  <block id="cabbc139b7f74771c47e3eb24d94c92b" category="paragraph">Par exemple :</block>
+  <block id="bd87b44c6be43f36f0038d22d487f75f" category="list-text">Lorsque vous modifiez le mot de passe d'un utilisateur Insight, l'entrée de l'utilisateur dans le tableau SANscreen.users est mise à jour avec le nouveau hachage.</block>
+  <block id="c438ccc0aca0db970bb13ebc0d134012" category="list-text">Lorsque vous modifiez le mot de passe d'un utilisateur MySQL, l'instruction SQL appropriée est exécutée pour mettre à jour le mot de passe de l'utilisateur dans l'instance MySQL.</block>
+  <block id="4db6b10d73a0fe37aef9ecf720e82980" category="paragraph">Dans certains cas, plusieurs modifications seront apportées à l'installation :</block>
+  <block id="147560103995f78fe048d9d60d6eb89e" category="list-text">Lorsque vous modifiez l'utilisateur MySQL dwh, en plus de mettre à jour le mot de passe dans la base de données MySQL, plusieurs entrées de registre pour ODBC seront également mises à jour.</block>
+  <block id="ceda6f3d804fada6f1ce0b50e99194a0" category="paragraph">Dans les sections suivantes, le terme « changements coordonnés » est utilisé pour décrire ces changements.</block>
+  <block id="3a43acde16fee20c3dfc667415e319dc" category="section-title">Modes d'exécution</block>
+  <block id="d03091e682aac9d91745bfcefeff7fcc" category="list-text">Fonctionnement normal/par défaut - le service serveur SANscreen doit être en cours d'exécution</block>
+  <block id="850095d037d0948beb9df744969f332c" category="paragraph">Pour le mode d'exécution par défaut, l'outil SecurityAdmin requiert que le service *SANscreen Server* soit en cours d'exécution. Le serveur est utilisé pour l'authentification et de nombreuses modifications coordonnées de l'installation sont effectuées en appelant le serveur.</block>
+  <block id="0cc4ce13c616a14debabba9d1d104720" category="list-text">Fonctionnement direct - le service serveur SANscreen peut être en cours d'exécution ou arrêté.</block>
+  <block id="25581e4e6d1eb4843e4813f1959dcaac" category="paragraph">Lorsqu'il est exécuté sur une installation d'OCI Server ou DWH, l'outil peut également être exécuté en mode « direct ». Dans ce mode, l'authentification et les modifications coordonnées sont effectuées à l'aide de la base de données. Le service serveur n'est pas utilisé.</block>
+  <block id="3688f4e6adeb2d0a0862005a883624aa" category="paragraph">Le fonctionnement est le même que le mode normal, à l'exception des cas suivants :</block>
+  <block id="8542576822630a806db5fac3df11524c" category="list-text">L'authentification est prise en charge uniquement pour les utilisateurs non administrateurs de domaine. (Utilisateurs dont le mot de passe et les rôles sont dans la base de données, et non LDAP).</block>
+  <block id="57c2a15f75aec51460e94c76d1e883ab" category="list-text">L'opération « remplacer les clés » n'est pas prise en charge.</block>
+  <block id="d9acdd4f362cbc48a7cf2cd17661735e" category="list-text">L'étape de re-chiffrement de la restauration du coffre-fort est ignorée.</block>
+  <block id="c2ce9f850c10b7e39485fe8235e59b64" category="list-text">Mode de récupération l'outil peut également être exécuté même si l'accès au serveur et à la base de données n'est pas possible (par exemple parce que le mot de passe racine dans le coffre-fort est incorrect).</block>
+  <block id="546243936cdf0dfafca1fb7186af3707" category="paragraph">Lorsqu'elle est exécutée dans ce mode, l'authentification n'est pas possible et, par conséquent, aucune opération avec une modification coordonnée de l'installation ne peut être effectuée.</block>
+  <block id="6d2f29045244dd26780e641f666933be" category="paragraph">Le mode de récupération peut être utilisé pour :</block>
+  <block id="a01f5c48bfc93da4ff4bc3ce24ddf5bf" category="list-text">déterminez les entrées du coffre-fort incorrectes (à l'aide de l'opération de vérification)</block>
+  <block id="125929c5a2da02ad2722f0e067328f01" category="list-text">remplacez le mot de passe root incorrect par la valeur correcte. (Ceci ne modifie pas le mot de passe. L'utilisateur doit saisir le mot de passe actuel.)</block>
+  <block id="e7661abd56f5e1cac72d4c48edf50c55" category="admonition">Si le mot de passe root du coffre-fort est incorrect et que le mot de passe n'est pas connu et qu'il n'y a pas de sauvegarde du coffre-fort avec le mot de passe root correct, l'installation ne peut pas être récupérée à l'aide de l'outil SecurityAdmin. La seule façon de récupérer l'installation est de réinitialiser le mot de passe de l'instance MySQL en suivant la procédure décrite à<block ref="627cd758a6ece2cd1ceb11c68b88335e" category="inline-link-rx"></block>. Après avoir effectué la procédure de réinitialisation, utilisez l'opération correct-stocké-password pour entrer le nouveau mot de passe dans le coffre-fort.</block>
+  <block id="c441ee50c88f6e5e3a7c69fc69dad8b8" category="section-title">Commandes</block>
+  <block id="9ff476002c0d40256cd7c48abffcddaa" category="section-title">Commandes non restreintes</block>
+  <block id="7809fe99fa50d9bece04a838f3bc9261" category="paragraph">Les commandes non restreintes modifient l'installation de manière coordonnée (sauf les magasins de confiance). Des commandes non restreintes peuvent être exécutées sans authentification de l'utilisateur.</block>
+  <block id="ee97be03cb04119af45014d815621ce1" category="paragraph">Commande</block>
+  <block id="3f2392c12884132a8a9aa7c8b6ce0749" category="paragraph">archivage sécurisé</block>
+  <block id="0c2902a04c4b5b9bbf08d798a67095b8" category="paragraph">Créez un fichier zip contenant le coffre-fort. Le chemin relatif vers les fichiers du coffre-fort correspond au chemin du coffre-fort par rapport à la racine d'installation.</block>
+  <block id="e86a04011378373ae8aaa17a0a872160" category="list-text">wildfly/standalone/configuration/vault/*</block>
+  <block id="ac160bd273fa0fe270ac067daba6c429" category="list-text">acq/conf/vault/*</block>
+  <block id="7966f77fe929ebfebd689aab0597d75b" category="paragraph">vérifiez-les-clés-par-défaut</block>
+  <block id="9534dd81ef5582ebfbb57cd41169a790" category="paragraph">Vérifiez si les clés du coffre-fort correspondent à celles du coffre-fort par défaut utilisé dans les instances antérieures à 7.3.16.</block>
+  <block id="4bf9a0a90e38ee241815ca1b01aa99c4" category="paragraph">mot de passe-stocké-correct</block>
+  <block id="66f6a4f7dbef6a7a1f9d2be2a4f858ca" category="paragraph">Remplacez un mot de passe (incorrect) stocké dans le coffre-fort par le mot de passe correct connu de l'utilisateur.</block>
+  <block id="74ef0789d1832e4c819703dda7c98f2e" category="paragraph">Ceci peut être utilisé lorsque le coffre-fort et l'installation ne sont pas cohérents. *Notez qu'il ne modifie pas le mot de passe réel dans l'installation.*</block>
+  <block id="7d64f9ee6b6f6ab531eadbc81689ed46" category="paragraph">modifier-mot-de-passe-magasin-confiance</block>
+  <block id="09a94f8774a554032cd91998b09618a0" category="paragraph">Modifiez le mot de passe utilisé pour un magasin de confiance et stockez le nouveau mot de passe dans le coffre-fort. Le mot de passe actuel du magasin de confiance doit être « connu ».</block>
+  <block id="56c050982c5ca87bda691b1c9d15efae" category="paragraph">vérifier-keystore</block>
+  <block id="097f375cea2c8a440fe39f083c070116" category="paragraph">vérifiez si les valeurs dans le coffre-fort sont correctes:</block>
+  <block id="fb3024d8fefd1e53cbe1132b30dbffec" category="list-text">Pour les utilisateurs d'OCI, le hachage du mot de passe correspond-t-il à la valeur de la base de données</block>
+  <block id="f3a8443d363adaf1cb028d974fd8f157" category="list-text">Pour les utilisateurs de MySQL, une connexion à la base de données peut-elle être établie</block>
+  <block id="c5fef5097c28f98b2c4a263f4cb6af6b" category="list-text">pour les magasins de clés, le magasin de clés peut-il être chargé et ses clés (le cas échéant) peuvent-elles être lues</block>
+  <block id="32d669c3d16ba0b0d381f2215b33b260" category="paragraph">touches de liste</block>
+  <block id="6a93b8ced68de9112f2c64b37fba49c0" category="paragraph">répertorier les entrées dans le coffre-fort (sans afficher la valeur stockée)</block>
+  <block id="adb18484fe4c62f5fe824acf38175e29" category="section-title">Commandes restreintes</block>
+  <block id="ed9478b8c7d12644d31daa3c8adf2486" category="paragraph">L'authentification est requise pour toute commande non masquée qui apporte des modifications coordonnées à l'installation :</block>
+  <block id="e02bf5a4ba466bf3da9f446df52a9aa0" category="paragraph">restauration-archivage-sauvegarde</block>
+  <block id="c8e975922bdac4c90a726de6bdfb96e1" category="paragraph">Remplace le coffre-fort actuel par le coffre-fort contenu dans le fichier de sauvegarde de coffre-fort spécifié.</block>
+  <block id="7954433c594c5d46b2087c7033cdf705" category="paragraph">Exécute toutes les actions coordonnées pour mettre à jour l'installation en fonction des mots de passe du coffre-fort restauré :</block>
+  <block id="88d1488822057a7a604eecdc330a5a15" category="list-text">Mettez à jour les mots de passe des utilisateurs de communication OCI</block>
+  <block id="23d208d89c9994831ed5d0fdcf0e91ab" category="list-text">Mettez à jour les mots de passe utilisateur MySQL, y compris root</block>
+  <block id="957bc4dd556b534e50b991527a653621" category="list-text">pour chaque magasin de clés, si le mot de passe du magasin de clés est « connu », mettez à jour le magasin de clés à l'aide des mots de passe du coffre-fort restauré.</block>
+  <block id="1ec6fcccedbc55e2ec526dffa5e42398" category="paragraph">Lorsqu'elle est exécutée en mode normal, elle lit également chaque valeur chiffrée de l'instance, la décrypte à l'aide du service de cryptage du coffre-fort actuel, la re-crypte à l'aide du service de cryptage du coffre-fort restauré et stocke la valeur de nouveau cryptage.</block>
+  <block id="67d7b3653a84429c75aafe9a54b3969a" category="paragraph">synchroniser-avec-coffre-fort</block>
+  <block id="5cd627ba3fd4133c452a368222c7c65b" category="paragraph">Exécute toutes les actions coordonnées pour mettre à jour l'installation en fonction des mots de passe utilisateur dans le coffre-fort restauré :</block>
+  <block id="8175ef68a46c42a8c01b459c4c94a693" category="list-text">Met à jour les mots de passe des utilisateurs de communication OCI</block>
+  <block id="de01963838cba896a8c44d5e98f43f49" category="list-text">Met à jour les mots de passe utilisateur MySQL, y compris root</block>
+  <block id="717c10b2cccb36ca57ed94c149694d2b" category="paragraph">changer-mot-de-passe</block>
+  <block id="d48ba6005553fb81b84c1507d6df4dc5" category="paragraph">Modifie le mot de passe dans le coffre-fort et exécute les actions coordonnées.</block>
+  <block id="e32f053a270ce75de0cd373763ae6765" category="paragraph">remplacer les clés</block>
+  <block id="e7bb93d208855f47af2340e13017c374" category="paragraph">Créez un nouveau coffre-fort vide (qui aura des clés différentes de celles du coffre-fort existant). Copiez ensuite les entrées du coffre-fort actuel dans le nouveau coffre-fort. Lit ensuite chaque valeur chiffrée de l'instance, la déchiffre à l'aide du service de cryptage du coffre-fort actuel, la recrypte à l'aide du service de cryptage du coffre-fort restauré et stocke la valeur re-chiffrée.</block>
+  <block id="da277c65c536be8c72a250c92f693a41" category="section-title">Commandes masquées</block>
+  <block id="0fc66a8aa174612af247def075a04ba7" category="paragraph">L'outil sa fournit les commandes suivantes qui ne nécessitent pas d'authentification mais qui apportent des modifications coordonnées à l'installation.</block>
+  <block id="2d4473cb05fdab03f65b0c638a2cedc7" category="paragraph">mise à niveau des clés de liste (serveur)</block>
+  <block id="857565320f4fdd719b08c608bc808ef6" category="paragraph">Si l'utilisateur ne s'est pas authentifié, authentifiez-le à l'aide du compte _interne et du mot de passe dans le coffre-fort actuel. Remplacez ensuite le coffre-fort actuel par le coffre-fort dans le fichier de sauvegarde et effectuez les actions coordonnées.</block>
+  <block id="d9a48d1bee1dba50a1a99a2a3f921d4d" category="paragraph">mise à niveau (acquisition)</block>
+  <block id="26df4bd2565e3ab79aadb7c745ca3cc4" category="paragraph">Remplacez le coffre-fort actuel par le coffre-fort dans le fichier de sauvegarde et effectuez les actions coordonnées.</block>
+  <block id="2551d0cb7270db218d0b7e7c7dc8ab26" category="section-title">Actions coordonnées</block>
+  <block id="77e1f3eb2652566d7476d1de697ec481" category="section-title">Coffre-fort du serveur</block>
+  <block id="cfd9b1303807d7e49ba7b2b9a4ecabee" category="paragraph">Mettre à jour le hachage du mot de passe pour l'utilisateur dans la base de données</block>
+  <block id="361ec13a5f187f231346e304b4067a43" category="paragraph">Si le coffre-fort d'acquisition est présent, mettez également à jour l'entrée dans le coffre-fort d'acquisition</block>
+  <block id="4007207a78dc953447b39d5de377c0a5" category="paragraph">Si DWH et Windows, mettez à jour SANscreen/cognos/analytics/configuration/SANscreenAP.properties pour définir la propriété cognos.admin sur le mot de passe.</block>
+  <block id="482c76686c82e7244a19e22e755a9d80" category="paragraph">Exécutez SQL pour mettre à jour le mot de passe utilisateur dans l'instance MySQL</block>
+  <block id="4eb319055356c6b6aeb21fc690217b7c" category="paragraph">Si DWH et Windows, mettez à jour le registre Windows pour définir les entrées liées ODBC suivantes sur le nouveau mot de passe :</block>
+  <block id="f584cc7b0ba43c1c1ead61326dec1108" category="list-text">HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ODBC\ODBC.INI\dwh_Capacity\PWD</block>
+  <block id="0d800cfcad900c18e9ba22544b4b9d54" category="list-text">HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ODBC\ODBC.INI\dwh_Capacity_Efficiency\PWD</block>
+  <block id="d7738dd18214804d875683004c0b64a8" category="list-text">HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ODBC\ODBC.INI\dwh_fs_util\PWD</block>
+  <block id="fdbc263e248c326dc38e99a2cf1b6665" category="list-text">HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ODBC\ODBC.INI\dwh_Inventory\PWD</block>
+  <block id="bdc07fe7dbe8ed49ed31a09f7dad266d" category="list-text">HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ODBC\ODBC.INI\dwh_performance\PWD</block>
+  <block id="77f615a4e17d811ab76424270b936583" category="list-text">HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ODBC\ODBC.INI\dwh_ports\PWD</block>
+  <block id="6afa37b0ec42aaeae5ef08abf685e304" category="list-text">HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ODBC\ODBC.INI\dwh_sa\PWD</block>
+  <block id="ea5c01cfeded0373466684ffa7540ad9" category="list-text">HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ODBC\ODBC.INI\dwh_Cloud_Cost\PWD</block>
+  <block id="67a231149410a304044f3cfd6b0a6db2" category="paragraph">keystore_password</block>
+  <block id="4bc6ba6e1ea4e3095c8572a422fd8b3a" category="paragraph">Réécrivez le magasin de clés avec le nouveau mot de passe : Wildfly/standalone/configuration/Server.keystore</block>
+  <block id="72a2c7fd864d00308db3c6635df87228" category="paragraph">truststore_password</block>
+  <block id="1f8e8e3df3446b7218d1657dcab033ac" category="paragraph">Réécrivez le magasin de clés avec le nouveau mot de passe : Wildfly/standalone/configuration/Server.trustore</block>
+  <block id="f7c0918660f6430dbef770010ecc8484" category="paragraph">mot_de_passe_clé</block>
+  <block id="1248a89eb361f717fa8867359b4e58ce" category="paragraph">Réécrivez le magasin de clés avec le nouveau mot de passe : Wildfly/standalone/configuration/sso.jks</block>
+  <block id="f657e815d9dcf268a4bef105ade09239" category="paragraph">cognos_archive</block>
+  <block id="6adf97f83acf6453d4a6a4b1070f3754" category="paragraph">Aucune</block>
+  <block id="4f2e3cdb3d13ec9c4707ab23431bebfd" category="section-title">Coffre-fort d'acquisition</block>
+  <block id="6157ac3dc9177ce38ba3c5041c55cb5e" category="paragraph">Réécrivez le magasin de clés avec le nouveau mot de passe (s'il existe) - acq/conf/cert/client.keystore</block>
+  <block id="f5ba0167bbeb7ae06f6f7ef19364be81" category="section-title">Exécution de l'outil d'administration de sécurité - ligne de commande</block>
+  <block id="c5388c58d9cf5715c279452471ea9d07" category="paragraph">La syntaxe pour exécuter l'outil sa en mode ligne de commande est la suivante :</block>
+  <block id="2a01d572b1447155c310cabafac3fae9" category="paragraph">Remarques :</block>
+  <block id="61621d6e6a5904d57a10f48e5f163077" category="list-text">L'option "-i" peut ne pas être présente sur la ligne de commande (car cela sélectionne le mode interactif).</block>
+  <block id="bc9fcf728869566e44855e721523dac8" category="list-text">pour les options "-s" et "-au" :</block>
+  <block id="1599e34b5acba2e47d213dba2791b6e5" category="list-text">"-s" n'est pas autorisé sur un RAU</block>
+  <block id="f4311c583942ac9ffba9730e5c539715" category="list-text">"-au" n'est pas autorisé sur DWH</block>
+  <block id="c43c7202e0823d859d6bed8196264427" category="list-text">si aucune n'est présente, alors</block>
+  <block id="a0c59297001cb92aa1c633f218e8f349" category="list-text">Le coffre-fort du serveur est sélectionné sur Server, DWH et Dual</block>
+  <block id="cf22f0469daffabd2485b9f44e1fe9e8" category="list-text">Le coffre-fort d'acquisition est sélectionné sur RAU</block>
+  <block id="1ce5595343a8b7b4ec9af8ba37fb690d" category="list-text">Les options -lu et -lp sont utilisées pour l'authentification utilisateur.</block>
+  <block id="c987bec6fc3a6c9e2ec24b49969659e6" category="list-text">Si &lt;user&gt; est spécifié et que &lt;password&gt; n'est pas, l'utilisateur est invité à entrer le mot de passe.</block>
+  <block id="76510b299b86f94495059752d5941f15" category="list-text">Si &lt;user&gt; n'est pas fourni et que l'authentification est requise, l'utilisateur est invité à entrer &lt;user&gt; et &lt;password&gt;.</block>
+  <block id="8459c050b6b6fc8d4145bfd2acb3e4f8" category="section-title">Commandes :</block>
+  <block id="c64518704ce0c0d5501a45763f464276" category="paragraph">Du stockage</block>
+  <block id="1c11c0e70f0bbc791b995b245df20557" category="paragraph">touches de vérification</block>
+  <block id="538ff02d861750d5e906497d6c083e55" category="paragraph">vérifier-keystore (serveur)</block>
+  <block id="ae26b3d8e556703291282149e3ae894f" category="paragraph">mise à niveau</block>
+  <block id="c71eac7efc7ed121bdd1236f30f700c6" category="paragraph">modifier le mot de passe (serveur)</block>
+  <block id="8de86aadfc3be699d54411a274578759" category="paragraph">modifier le mot de passe de l'utilisateur d'acquisition (acquisition)</block>
+  <block id="1ddbfb3c476a9f22c467fdbe5307d0c5" category="paragraph">change-password for truststore-_password (acquisition)</block>
+  <block id="97a42f32d6218c9efc6b7e8e66d36df4" category="paragraph">synchroniser-avec-vault (serveur)</block>
+  <block id="0dcd2b2640422c9c80852c57925efb32" category="section-title">Exécution de l'outil d'administration de sécurité - mode interactif</block>
+  <block id="29cf2908ca5f379b92a575644a1730da" category="section-title">Interactif - Menu principal</block>
+  <block id="2f11f79ed5521805fede323121b7c1a0" category="paragraph">Pour exécuter l'outil sa en mode interactif, entrez la commande suivante :</block>
+  <block id="d81a8b1485af8ae26373c16e0a1a338d" category="paragraph">Sur un serveur ou une installation double, SecurityAdmin invite l'utilisateur à sélectionner le serveur ou l'unité d'acquisition locale.</block>
+  <block id="618c7dfd7bce055496ff5bf990b774dd" category="paragraph">Nœuds de serveur et d'unité d'acquisition détectés ! Sélectionnez le nœud dont la sécurité doit être reconfigurée :</block>
+  <block id="ef63c9453a63806e56bbd63b7c483de3" category="paragraph">Sur DWH, "serveur" est automatiquement sélectionné. Sur un au distant, « unité d'acquisition » est automatiquement sélectionné.</block>
+  <block id="783023c9c9a58c635d4123c6a0db2115" category="section-title">Interactive - Server : récupération du mot de passe root</block>
+  <block id="6c47cb5a58faa78f22778e8736b964f1" category="paragraph">En mode serveur, l'outil SecurityAdmin vérifie d'abord que le mot de passe root enregistré est correct. Si ce n'est pas le cas, l'outil affiche l'écran de récupération du mot de passe racine.</block>
+  <block id="2fcecab4c0d98b1bc2a44f3836e4ee41" category="paragraph">Si l'option 1 est sélectionnée, l'utilisateur est invité à entrer le mot de passe correct.</block>
+  <block id="392d7384c90efcc73686da802c9ef0b1" category="paragraph">Si le mot de passe correct est saisi, le message suivant s'affiche.</block>
+  <block id="d61329ea4faeab01cb7e67634c3ec481" category="paragraph">Appuyez sur entrée pour afficher le menu sans restriction du serveur.</block>
+  <block id="7f6237a3417215b6c91252271a82059f" category="paragraph">Si le mot de passe saisi est incorrect, le message suivant s'affiche</block>
+  <block id="db76615d6e7f764656e86c7e81f224fe" category="paragraph">Appuyez sur ENTER pour revenir au menu de récupération.</block>
+  <block id="5f4742406a0d72457a29b71c7140a41f" category="paragraph">Si l'option 2 est sélectionnée, l'utilisateur est invité à fournir le nom d'un fichier de sauvegarde à partir duquel lire le mot de passe correct :</block>
+  <block id="e0475856c79cdf046ac9e6513d5cd707" category="paragraph">Si le mot de passe de la sauvegarde est correct, le message suivant s'affiche.</block>
+  <block id="98a833317dd5130c52277e8f174dc7fe" category="paragraph">Si le mot de passe de la sauvegarde est incorrect, le message suivant s'affiche</block>
+  <block id="1487fd45724473007a936f11adae2314" category="section-title">Interactive - serveur : mot de passe correct</block>
+  <block id="37b273773ee7bd70810f217e7a9ffa15" category="paragraph">L'action « Mot de passe correct » est utilisée pour modifier le mot de passe stocké dans le coffre-fort afin qu'il corresponde au mot de passe réel requis par l'installation. Cette commande est utile dans les situations où une modification de l'installation a été faite par quelque chose d'autre que l'outil securityadmin. Voici quelques exemples :</block>
+  <block id="4ed518c6ae9090ca3e3bf7e8ae1f4c7d" category="list-text">Le mot de passe d'un utilisateur SQL a été modifié par l'accès direct à MySQL.</block>
+  <block id="7ebee17ef573ce3eb86f5324e854c292" category="list-text">Un magasin de clés est remplacé ou le mot de passe d'un magasin de clés est modifié à l'aide de keytool.</block>
+  <block id="187f36be9d9b96c4e3c6f204e1b85384" category="list-text">Une base de données OCI a été restaurée et cette base de données a des mots de passe différents pour les utilisateurs internes</block>
+  <block id="0d301d181747910c6057a8f842672745" category="paragraph">« Mot de passe correct » invite d'abord l'utilisateur à sélectionner le mot de passe pour enregistrer la valeur correcte.</block>
+  <block id="edcfc85be46ae49241e7feba8d542c04" category="paragraph">Après avoir sélectionné l'entrée à corriger, l'utilisateur est invité à indiquer la façon dont il souhaite fournir la valeur.</block>
+  <block id="ed2c634d45c7705f94ea79eafa14d313" category="paragraph">Appuyez sur entrée pour revenir au menu sans restriction du serveur.</block>
+  <block id="0a3ba9d2f7dd4b62f3df19dc943f2224" category="section-title">Interactive - serveur : vérifiez le contenu du coffre-fort</block>
+  <block id="c0f144600747526e1e1194c63c237d72" category="paragraph">Vérifier le contenu du coffre-fort vérifiera si le coffre-fort a des clés qui correspondent au coffre-fort par défaut distribué avec les versions antérieures d'OCI et vérifiera si chaque valeur du coffre-fort correspond à l'installation.</block>
+  <block id="a33d8c33470037ad0770a1e61441a501" category="paragraph">Les résultats possibles pour chaque clé sont les suivants :</block>
+  <block id="e0aa021e21dddbd6d8cecec71e9cf564" category="cell">OK</block>
+  <block id="61adfbf67c89d6027fa2db838f0a346a" category="cell">La valeur du coffre-fort est correcte</block>
+  <block id="f0c49f49661670cb88d2fd060c4d6a68" category="cell">Non cochée</block>
+  <block id="b934ee13c03362b5aea035ba1ce5ee5f" category="cell">La valeur ne peut pas être vérifiée par rapport à l'installation</block>
+  <block id="f1b68d66337a81cfa0d2076171cba2a8" category="cell">MAUVAIS</block>
+  <block id="451080bcd3b3ee42293447137aa2fac2" category="cell">La valeur ne correspond pas à l'installation</block>
+  <block id="2aee0be2678ee90fd327cc186826438e" category="cell">Manquant</block>
+  <block id="a310d7f2bbc3684e225f942e74c52f49" category="cell">Une entrée attendue est manquante.</block>
+  <block id="9adc4826c27724c52257ee58ba5ccc48" category="section-title">Interactive - serveur : sauvegarde</block>
+  <block id="7408107be7b14b53678b404fbbb2cca5" category="paragraph">Backup demande le répertoire dans lequel le fichier zip de sauvegarde doit être stocké. Le répertoire doit déjà exister et le nom du fichier sera ServerSecurityBackup-yyyy-mm-DD-hh-mm.zip.</block>
+  <block id="0f1ad8d57fb8f844cd250faa41a34c0a" category="section-title">Interactive - serveur : connexion</block>
+  <block id="dfb7463320663c43bd972fbcd3bbe1e6" category="paragraph">L'action de connexion permet d'authentifier un utilisateur et d'accéder aux opérations qui modifient l'installation. L'utilisateur doit avoir admin Privileges. Lors de l'exécution avec le serveur, tout utilisateur administrateur peut être utilisé ; lors de l'exécution en mode direct, l'utilisateur doit être un utilisateur local plutôt qu'un utilisateur LDAP.</block>
+  <block id="e81c4e4f2b7b93b481e13a8553c2ae1b" category="paragraph">ou</block>
+  <block id="8eaf9ef3d0d9886712be7df83a77aa0c" category="paragraph">Si le mot de passe est correct et que l'utilisateur est un utilisateur admin, le menu restreint s'affiche.</block>
+  <block id="5bdfc68aa27707acf44bb373de39213f" category="paragraph">Si le mot de passe est incorrect, le message suivant s'affiche :</block>
+  <block id="f338a6313b14b9628630d6bca987caf8" category="paragraph">Si l'utilisateur n'est pas un administrateur, les informations suivantes s'affichent :</block>
+  <block id="6b2ffc79e0101d654da5639d0d1dc8c4" category="section-title">Interactive - serveur : menu restreint</block>
+  <block id="8149276739b6c73154fd1d323bcad81c" category="paragraph">Une fois l'utilisateur connecté, l'outil affiche le menu restreint.</block>
+  <block id="63efd71dcaca4449e7ae75ee20133427" category="section-title">Interactive - serveur : modification du mot de passe</block>
+  <block id="69cd23e17686429365aefb31d07e59b2" category="paragraph">L'action « Modifier le mot de passe » permet de modifier un mot de passe d'installation en une nouvelle valeur.</block>
+  <block id="571992f59aab8524ccec305c1799018d" category="paragraph">« Modifier le mot de passe » invite d'abord l'utilisateur à sélectionner le mot de passe à modifier.</block>
+  <block id="f491eb0ccbf368d2cd08088b9a7d0d18" category="paragraph">Après avoir sélectionné l'entrée à corriger, si l'utilisateur est un utilisateur MySQL, l'utilisateur sera invité à confirmer le hachage du mot de passe</block>
+  <block id="fe5b15f23ef6088e59026b05f6701e6b" category="paragraph">Ensuite, l'utilisateur est invité à entrer le nouveau mot de passe.</block>
+  <block id="61bee0b8670ca0bdbc7edadd40c26dad" category="paragraph">Si un mot de passe non vide est saisi, l'utilisateur est invité à confirmer le mot de passe.</block>
+  <block id="c4a8ee99179b38f1a2f5451ffb8a149b" category="paragraph">Si la modification échoue, l'erreur ou l'exception s'affiche.</block>
+  <block id="e449f4e704f39a497f888952122e2585" category="section-title">Interactive - serveur : restauration</block>
+  <block id="bc92c969762ef39bae8ae928724da625" category="section-title">Interactive - serveur : modification des clés de cryptage</block>
+  <block id="19f33616660061bc23f346cba60f4503" category="paragraph">L'action Modifier les clés de cryptage remplace la clé de cryptage utilisée pour crypter les entrées du coffre-fort et remplace la clé de cryptage utilisée pour le service de cryptage du coffre-fort. Comme la clé du service de chiffrement est modifiée, les valeurs cryptées dans la base de données sont à nouveau chiffrées ; elles sont lues, déchiffrées avec la clé actuelle, cryptées avec la nouvelle clé et enregistrées à nouveau dans la base de données.</block>
+  <block id="673b312876cda1cdbe7d52384286c6a8" category="paragraph">Cette action n'est pas prise en charge en mode direct car le serveur fournit l'opération de re-chiffrement pour certains contenus de base de données.</block>
+  <block id="f76a15a693d2ee1624a5670d358912b2" category="section-title">Interactive - serveur : installation fixe</block>
+  <block id="9996734f032e94e26b7aeedfacfd9618" category="paragraph">L'action réparer l'installation mettra à jour l'installation. Tous les mots de passe d'installation modifiables via l'outil securityadmin, à l'exception de root, seront définis sur les mots de passe du coffre-fort.</block>
+  <block id="01f1fc066eb323828cd02a194328a135" category="list-text">Les mots de passe des utilisateurs internes d'OCI seront mis à jour.</block>
+  <block id="f82b7e6175af66ae573f2dc57c4d5e6e" category="list-text">Les mots de passe des utilisateurs MySQL, sauf root, seront mis à jour.</block>
+  <block id="123c5baa329054786cbae85537d83cd8" category="list-text">Les mots de passe des keystores seront mis à jour.</block>
+  <block id="ed1043648922ebe34d579812230d4ae9" category="paragraph">L'action s'arrête à la première mise à jour ayant échoué et affiche l'erreur ou l'exception.</block>
+  <block id="bc96a907474ae52a206fb2c682dc20f3" category="paragraph">OnCommand Insight fournit des fonctionnalités qui permettent aux environnements Insight de fonctionner avec une sécurité renforcée. Ces fonctionnalités comprennent le cryptage, le hachage de mot de passe et la possibilité de modifier les mots de passe des utilisateurs internes et les paires de clés qui chiffrent et déchiffrent les mots de passe. Vous pouvez gérer ces fonctionnalités sur tous les serveurs de l'environnement Insight à l'aide de *SecurityAdmin Tool*.</block>
+  <block id="fcd61e12d9c614b4f8c25523ad9c74d1" category="list-text">Lorsque vous modifiez le mot de passe d'un utilisateur Insight, l'entrée de l'utilisateur dans le tableau SANscreen.users est mise à jour avec le nouveau hachage.</block>
+  <block id="f2994986d9a504d2179c8bc5a5690b4d" category="list-text">Lorsque vous modifiez le mot de passe d'un utilisateur MySQL, l'instruction SQL appropriée est exécutée pour mettre à jour le mot de passe de l'utilisateur dans l'instance MySQL.</block>
+  <block id="d2a7a0b806360ae571ec0a296013cfef" category="list-text">Lorsque vous modifiez l'utilisateur MySQL dwh, en plus de mettre à jour le mot de passe dans la base de données MySQL, plusieurs entrées de registre pour ODBC seront également mises à jour.</block>
+  <block id="72e847e65e699484797822ca6c1c0de6" category="paragraph">Notez qu'il est fortement recommandé de sauvegarder le coffre-fort chaque fois que vous sauvegardez une base de données OnCommand Insight.</block>
+  <block id="4d07594c4f15a8da01ce32c55072389f" category="paragraph">Changer-confiance-mot-de-passe-magasin modifiez le mot de passe utilisé pour un magasin de confiance et stockez le nouveau mot de passe dans le coffre-fort. Le mot de passe actuel du magasin de confiance doit être « connu ».</block>
+  <block id="a95d82e1c41b849937c0d448a844630f" category="paragraph">mettre à jour le hachage du mot de passe pour l'utilisateur dans la base de données</block>
+  <block id="27edb3c7b9345fbd153b2752e55d5711" category="paragraph">si le coffre-fort d'acquisition est présent, mettez également à jour l'entrée dans le coffre-fort d'acquisition</block>
+  <block id="51ef5306f1d5148fc79a299c50d29c27" category="paragraph">Si DWH et Windows, mettez à jour SANscreen/cognos/analytics/configuration/SANscreenAP.properties pour définir la propriété cognos.admin sur le mot de passe.</block>
+  <block id="63f727a2450b02966597bfbb98988bb4" category="paragraph">Exécutez SQL pour mettre à jour le mot de passe utilisateur dans l'instance MySQL</block>
+  <block id="ff8e7086cc2de7a2f0c1bc1f85d60264" category="paragraph">Si DWH et Windows, mettez à jour le registre Windows pour définir les entrées liées ODBC suivantes sur le nouveau mot de passe :</block>
+  <block id="388d36506504fc8f929f8ba22076ca9c" category="paragraph">réécrivez le magasin de clés avec le nouveau mot de passe : wildfly/standalone/configuration/server.keystore</block>
+  <block id="0b63d78600b7cedb76b75474be57d950" category="paragraph">réécrivez le magasin de clés avec le nouveau mot de passe : wildfly/standalone/configuration/server.trustore</block>
+  <block id="5a45e44e7d918459a9e780f30f69b5d8" category="paragraph">réécrivez le magasin de clés avec le nouveau mot de passe : wildfly/standalone/configuration/sso.jks</block>
+  <block id="334c4a4c42fdb79d7ebc3e73b517e6f8" category="paragraph">Aucune</block>
+  <block id="84ab1390367b94969a415b0eec06e7b8" category="paragraph">réécrivez le magasin de clés avec le nouveau mot de passe (s'il existe) - acq/conf/cert/client.keystore</block>
+  <block id="9b414bda987d15df42909b303d56c21d" category="list-text">Red Hat Enterprise Linux 7.9, 8.10 et 9.4</block>
+  <block id="e50db748240304d4cfbede78da08aec4" category="list-text">CentOS 8 Stream, CentOS 9 Stream</block>
+  <block id="c4a870ebe296bb24b9fa84c6ea622503" category="list-text">Oracle Enterprise Linux 7.9, 8.10 et 9.4</block>
+  <block id="fbd973a8f9f093b93a08bb0a70663f3c" category="paragraph">Si vos données commencent à acquérir, vous êtes tous définis ; vous n'avez pas besoin de synchroniser le serveur et l'unité RAU comme indiqué ci-dessous.</block>
+  <block id="28c5eaeb549f94ace5cd060f9dd81384" category="section-title">Synchroniser le serveur et RAU</block>
+  <block id="7c90fb6f7f51c1a71c726c9698bce32a" category="admonition">Si l'acquisition des données ne commence pas après l'installation de l'unité d'acquisition distante, synchronisez l'unité RAU avec le serveur OnCommand Insight. Voici la procédure à suivre :</block>
+  <block id="bd016306b8914bb607be4852fae2a0f6" category="list-text">Sur le système du serveur OnCommand Insight, démarrez l'outil *SecurityAdmin* en mode interactif</block>
+  <block id="6d86a770e4304d6aaa48ac58f5e0140d" category="list-text">Remplacez le mot de passe de l'utilisateur _acquisition_ de l'Insight Server par un mot de passe de votre choix. *Notez ce mot de passe* comme vous le souhaitez ci-dessous.</block>
+  <block id="9bb3dde49054b76ae38fbeb4c8c6d356" category="list-text">Redémarrez le serveur/LAU.</block>
+  <block id="07c1180292ae2ead0a4af77ffcb019bd" category="list-text">Sur le système d'unité d'acquisition à distance (RAU), démarrez l'outil *SecurityAdmin* en mode interactif. Vous aurez besoin du mot de passe que vous avez noté à l'étape 2 ci-dessus.</block>
+  <block id="f542801a545fd1fc1836b7b3622347f7" category="list-text">Remplacez le mot de passe de l'utilisateur _acquisition_ par le mot de passe utilisé à l'étape 2.</block>
+  <block id="5aa95547aca182d274bdd44507f20e6c" category="list-text">Redémarrez l'unité RAU.</block>
+  <block id="d0676ee83cf39ae1584e25555cb1d683" category="paragraph">Lors de l'installation d'Insight Server ou de Data Warehouse sur CentOS 9 Stream, Red Hat Enterprise Linux 9.4 ou Oracle Linux 9.4, vous devez d'abord passer au répertoire contenant le fichier d'installation, puis exécuter la commande install à l'aide de l'option de ligne de commande "--install-mysql-dépendances" :</block>
+  <block id="556be286023c494b4ead46bd9cf42c54" category="section-title">Synchroniser le serveur et DWH</block>
+  <block id="f1715130e2ab8a30bfa342f3c29b2c71" category="admonition">Après avoir installé l'entrepôt de données, vous devez *synchroniser* l'entrepôt de données avec le serveur OnCommand Insight. Voici la procédure à suivre :</block>
+  <block id="ee21dd6310c5d7ec86b60b0d3e41695d" category="list-text">Remplacez le mot de passe des utilisateurs _Inventory_ et _dwh_Internal_ par celui de votre choix. *Notez ces mots de passe* comme vous les aurez requis ci-dessous.</block>
+  <block id="1daa31f7a4eabf0fd0cae2fe11e47338" category="list-text">Redémarrez le service DWH</block>
+  <block id="7f5498bbfca2bdfbdbd1400c57650344" category="list-text">Sur *chaque connecteur*, démarrez l'outil *SecurityAdmin* en mode interactif. Vous aurez besoin des mots de passe que vous avez indiqués à l'étape 2 ci-dessus.</block>
+  <block id="ec40029c7ad896690cebde56b1680e55" category="list-text">Remplacez les mots de passe des utilisateurs _Inventory_ et _dwh_Internal_ par les mots de passe utilisés à l'étape 2.</block>
+  <block id="d53eee5d569fb3981f54c67770371bca" category="list-text">Redémarrez les services sur les connecteurs.</block>
+  <block id="d228a56d28f4653e598aed464f235e69" category="list-text">Ajoutez les connecteurs à DWH en utilisant les mots de passe pour _Inventory_ et _dwh_Internal_ users de l'étape 2</block>
+  <block id="d546555c6a30c4fbea07e66c7984206d" category="paragraph">Lors de l'installation d'Insight Server sur CentOS 9 Stream, Red Hat Enterprise Linux 9.4 ou Oracle Linux 9.4, vous devez d'abord passer au répertoire contenant le fichier d'installation, puis exécuter la commande install à l'aide de l'option de ligne de commande "--install-mysql-dépendances" :</block>
+  <block id="37c2dfb8cace655eac6a5639cf980999" category="list-text">Si vous installez une unité d'acquisition à distance (RAU), vous devez exécuter l'outil SecurityAdmin pour créer un mot de passe pour l'utilisateur _acquisition_. Vous aurez besoin de ce mot de passe lors de l'installation du RAU.</block>
+  <block id="03190541d75be4e1bbcc18d0f0bb9a10" category="paragraph">Remarque : si vous avez créé ce mot de passe, vous devez _ne_ pas_ synchroniser le serveur et RAU comme indiqué ci-dessous.</block>
+  <block id="6e113128f82182bec51d9c8979f79863" category="section-title">Synchroniser le serveur avec DWH et RAU</block>
+  <block id="7d0de06b1aad5e91edfb3d397cee1ee7" category="admonition">Après avoir installé l'unité d'acquisition distante et/ou l'entrepôt de données, vous devez *synchroniser* l'unité RAU/DWH avec le serveur OnCommand Insight. Suivez les étapes indiquées ci-dessous :</block>
+  <block id="fcc8aff5a678817c9c6afef006b2c9e6" category="inline-link-macro">Synchroniser Server et RAU (Windows)</block>
+  <block id="7d32aaac99d0982bc6ec0b80f2e6990b" category="paragraph"><block ref="7d32aaac99d0982bc6ec0b80f2e6990b" category="inline-link-macro-rx"></block></block>
+  <block id="4883de23712c1b05d689414cc44849f9" category="inline-link-macro">Synchroniser Server et DWH (Windows)</block>
+  <block id="ba987b792e0623cccc624f834b024b98" category="paragraph"><block ref="ba987b792e0623cccc624f834b024b98" category="inline-link-macro-rx"></block></block>
+  <block id="149f60bd179305a317402835c2891002" category="inline-link-macro">Synchroniser Server et RAU (Linux)</block>
+  <block id="ad8ddb78bb6177c56c947861d23146ed" category="paragraph"><block ref="ad8ddb78bb6177c56c947861d23146ed" category="inline-link-macro-rx"></block></block>
+  <block id="33a6201d8474785645f281a692ac82e5" category="inline-link-macro">Synchroniser Server et DWH (Linux)</block>
+  <block id="e1a153525090bb5df9764e66ac19ce8e" category="paragraph"><block ref="e1a153525090bb5df9764e66ac19ce8e" category="inline-link-macro-rx"></block></block>
+  <block id="316983aa9895dd8e35fcd5b48e4a7a90" category="paragraph">*Il est fortement recommandé de sauvegarder le coffre-fort* avant de désinstaller OnCommand Insight.</block>
+  <block id="849579c47ab1823b16776d0a355b4be1" category="paragraph">Il est fortement recommandé de sauvegarder le coffre-fort et la base de données avant de mettre à niveau DWH.</block>
+  <block id="832565378185c40200aab23901bde433" category="paragraph">Reportez-vous aux <block ref="56b8f1713db5748cf5088e9f00373784" category="inline-link-macro-rx"></block> instructions pour plus d'informations sur le coffre-fort.</block>
+  <block id="ad604f71fd0a5400125da5882931bba6" category="paragraph">Il est fortement recommandé de sauvegarder le coffre-fort et la base de données avant de mettre OnCommand Insight à niveau.</block>
+  <block id="9ec96f5b035d64254c469516cc613b61" category="paragraph">*Vous devez sauvegarder le coffre-fort* avant de mettre à niveau OnCommand Insight.</block>
+  <block id="7580db52e57590de6215c9feb5c69207" category="paragraph">Un ordinateur exécutant Microsoft Windows Server 2016, 2019 ou 2022 64 bits, avec le dernier Service Pack. Windows .NET Framework version 3.5 doit être installé avant OnCommand Insight.</block>
+  <block id="c70405d53133429bb49a9f6b4a9cb34d" category="list-text">Entrez le mot de passe de l'utilisateur _acquisition_.</block>
+  <block id="4eb419db6db4b5af065fb2e484bd6db8" category="paragraph">Le nom d'utilisateur DB2 ainsi que le nom de connexion Windows sont soumis aux restrictions suivantes : * les caractères valides sont les suivants : 'a' à 'Z'; 'a' à 'z'; '0' à '9'; '@'; '_'; '!'; '('; ')'; '{'; '}'; '-'; et '. * Si vous utilisez les caractères spéciaux '!'; '('; ')'; '{'; '}'; '-'; et '.' vous devez utiliser toutes les lettres majuscules pour le nom d'utilisateur. * Le premier caractère de la chaîne doit être un caractère alphabétique, @, # ou $; il ne peut pas être un nombre ou les séquences de lettres _SYS_, _DBM_, ou _IBM_ * il ne peut pas dépasser 128 octets. * Il ne peut pas être UTILISATEURS, ADMINISTRATEURS, INVITÉS, PUBLIC, LOCAL ou tout mot réservé SQL.</block>
+  <block id="101df74d76105947f477e9b77185354b" category="list-text">Redémarrez le service DWH.</block>
+  <block id="c0a9e4ae648c169469a95619517cf78e" category="admonition">Si vous mettez à niveau OnCommand Insight, vous devez *sauvegarder le coffre-fort avant de désinstaller ou de mettre à niveau* votre version actuelle.</block>
+  <block id="243b66ef9839ad7d30e21f0efd021d4b" category="list-text">Entrez un mot de passe administrateur. Confirmez le mot de passe.</block>
+  <block id="b0b399eebdd01b6e6ab71f881dbaa2f7" category="admonition">Après avoir installé l'unité d'acquisition distante et/ou l'entrepôt de données, vous devez synchroniser l'unité RAU/DWH avec le serveur OnCommand Insight. Suivez les étapes indiquées ci-dessous :</block>
+  <block id="c98c82e78c5842b5016938cb86d3827d" category="paragraph">Pour plus d'informations sur la définition ou la modification du mot de passe de la base de stockage de clés, reportez-vous à <block ref="639f828649b90c889f7b9b1be3c612f3" category="inline-link-macro-rx"></block>la documentation.</block>
+  <block id="16c0c6352f3d8748d685715041450c42" category="paragraph">*Il est fortement recommandé de sauvegarder le coffre-fort* avant de désinstaller OnCommand Insight. *Vous devez sauvegarder le coffre-fort* si vous allez mettre à niveau OnCommand Insight.</block>
+  <block id="68511dcbab1fc6bff009bd6a8ee5064b" category="paragraph">*Vous devez sauvegarder le coffre-fort* avant de mettre à niveau DWH.</block>
+  <block id="d0b07235f2e92645d555957ba7ea473a" category="paragraph">Lors de la mise à niveau de l'entrepôt de données, vous devez effectuer les actions suivantes :</block>
+  <block id="71df69ad4b3494fb23c538872b44f24f" category="list-text">Après avoir installé DWH 7.3.16, restaurez le coffre-fort et la base de données dans l'ordre suivant :</block>
+  <block id="5b70a213f150f01f0776fa9481ef2ddf" category="list-text">Coffre-fort</block>
+  <block id="e307db07b3975fef922a80d07455ee5e" category="list-text">Base de données</block>
+  <block id="1b02c1c739a838b5fb5ef9ec6b7e3943" category="list-text">Sauvegardez le coffre-fort. Voir la <block ref="1f5fba458b18bfe72dcdda5cec5a5573" category="inline-link-macro-rx"></block> documentation.</block>
+  <block id="e2306824bd82e866a3f829300760acd2" category="list-text">Restaurez le coffre-fort sur le serveur DWH.</block>
+  <block id="19352fc74f396de7952dae39763fff2f" category="paragraph">Vous devez sauvegarder le coffre-fort avant la mise à niveau.</block>
+  <block id="3b567ef0594052e743b39181ba1d8102" category="list-text">Sauvegardez le coffre-fort.</block>
+  <block id="0d0981a681077107b168ee4f75accde5" category="inline-link">Avis pour OnCommand Insight 7.3.16</block>
+  <block id="76e6c2273b68a166b06d0dae5dad5924" category="paragraph"><block ref="76e6c2273b68a166b06d0dae5dad5924" category="inline-link-rx"></block></block>
+  <block id="f7b7a1b1a856c7ac177e1c92c26b3afb" category="paragraph"><block ref="ae0b59332fa590490bf630696a44568c" category="inline-link-macro-rx"></block> (s'ouvre dans une nouvelle fenêtre)</block>
+  <block id="90264ebb70e49e99bceb1035bdcc8307" category="sidebar">Documentation OnCommand Insight</block>
+  <block id="5ea8c0bc0f3ff2ad5a8ecd87179c69f1" category="sidebar">Matrice de prise en charge du Data Collector</block>
+  <block id="b0430548e2edafebde6bfdf10cf93cc6" category="sidebar">Insight Security (outil SecurityAdmin)</block>
 </blocks>
