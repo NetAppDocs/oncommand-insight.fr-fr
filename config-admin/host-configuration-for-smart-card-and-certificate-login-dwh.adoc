@@ -24,6 +24,9 @@ Le nom commun (CN) stocké dans les PCA émises par le gouvernement est normalem
 
 
 
+
+NOTE: Si vous avez modifié les mots de passe _Server.keystore_ et/ou _Server.trustore_ à l'aide de link:../config-admin/security-management.html["admin sécurité"], redémarrez le service _SANscreen_ avant d'importer le certificat LDAP.
+
 [NOTE]
 ====
 Pour obtenir les instructions les plus récentes sur les cartes CAC et les certificats, consultez les articles suivants de la base de connaissances (connexion au support requise) :

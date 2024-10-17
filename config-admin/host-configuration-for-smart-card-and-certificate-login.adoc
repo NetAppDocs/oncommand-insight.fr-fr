@@ -21,6 +21,9 @@ Vous devez apporter des modifications à la configuration de l'hôte OnCommand I
 * Le LDAP `User principal account name` L'attribut doit correspondre au champ LDAP qui contient l'ID d'un utilisateur.
 
 
+
+NOTE: Si vous avez modifié les mots de passe _Server.keystore_ et/ou _Server.trustore_ à l'aide de link:../config-admin/security-management.html["admin sécurité"], redémarrez le service _SANscreen_ avant d'importer le certificat LDAP.
+
 [NOTE]
 ====
 Pour obtenir les instructions les plus récentes sur les cartes CAC et les certificats, consultez les articles suivants de la base de connaissances (connexion au support requise) :

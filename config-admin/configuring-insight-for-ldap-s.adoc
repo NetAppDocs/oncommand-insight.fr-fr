@@ -17,6 +17,9 @@ Avant de configurer Insight pour une utilisation avec LDAP ou LDAP sécurisé (L
 
 Pour tous les utilisateurs de Secure Active Directory (LDAPS, par exemple), vous devez utiliser le nom du serveur AD tel qu'il est défini dans le certificat. Vous ne pouvez pas utiliser l'adresse IP pour la connexion AD sécurisée.
 
+
+NOTE: Si vous avez modifié les mots de passe _Server.keystore_ et/ou _Server.trustore_ à l'aide de link:../config-admin/security-management.html["admin sécurité"], redémarrez le service _SANscreen_ avant d'importer le certificat LDAP.
+
 [NOTE]
 ====
 OnCommand Insight prend en charge le protocole LDAP et LDAPS via le serveur Microsoft Active Directory ou Azure AD. D'autres implémentations LDAP peuvent fonctionner, mais n'ont pas été qualifiées à Insight. Les procédures décrites dans ces guides supposent que vous utilisez Microsoft Active Directory version 2 ou 3 LDAP (Lightweight Directory Access Protocol).

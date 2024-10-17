@@ -25,6 +25,9 @@ Vous devez avoir effectué les tâches suivantes :
 * Attribuez les rôles d'utilisateur appropriés.
 
 
+
+NOTE: Si vous importez un certificat LDAP et que vous avez modifié les mots de passe _Server.keystore_ et/ou _Server.trustore_ à l'aide de link:../config-admin/security-management.html["admin sécurité"], redémarrez le service _SANscreen_ avant d'importer le certificat LDAP.
+
 [NOTE]
 ====
 Les meilleures pratiques en matière de sécurité exigent que les administrateurs configurent le système d'exploitation hôte pour empêcher la connexion interactive d'utilisateurs non-administrateurs/standard.

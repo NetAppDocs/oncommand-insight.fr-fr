@@ -23,6 +23,9 @@ Vous devez connaître les attributs d'utilisateur et de groupe qui ont été con
 Pour tous les utilisateurs de Secure Active Directory (LDAPS, par exemple), vous devez utiliser le nom du serveur AD tel qu'il est défini dans le certificat. Vous ne pouvez pas utiliser l'adresse IP pour la connexion AD sécurisée.
 
 
+NOTE: Si vous avez modifié les mots de passe _Server.keystore_ et/ou _Server.trustore_ à l'aide de link:../config-admin/security-management.html["admin sécurité"], redémarrez le service _SANscreen_ avant d'importer le certificat LDAP.
+
+
 
 == Description de la tâche
 
